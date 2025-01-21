@@ -9,7 +9,6 @@ export const data = {
     },
     {
       title: "Quizzes",
-      url: "/quiz",
       icon: CheckCheck,
       items: [
         {
@@ -40,7 +39,6 @@ export const data = {
     },
     {
       title: "Tests",
-      url: "/exams",
       icon: BookCheck,
       items: [
         {
@@ -63,7 +61,6 @@ export const data = {
     },
     {
       title: "Learning Paths",
-      url: "/roadmaps",
       icon: NotebookPen,
       items: [
         {

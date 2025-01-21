@@ -28,12 +28,19 @@ export default {
 					DEFAULT: 'var(--secondary)',
 					foreground: 'var(--secondary-foreground)'
 				},
+				tertiary: {
+					DEFAULT: 'var(--tertiary)',
+					foreground: 'var(--tertiary-foreground)'
+				},
 				muted: {
 					DEFAULT: 'var(--muted)',
 					foreground: 'var(--muted-foreground)'
 				},
 				accent: {
-					DEFAULT: 'var(--accent)',
+					'1': 'var(--accent-1)',
+					'2': 'var(--accent-2)',
+					'3': 'var(--accent-3)',
+					'4': 'var(--accent-4)',
 					foreground: 'var(--accent-foreground)'
 				},
 				destructive: {
@@ -51,14 +58,14 @@ export default {
 					'5': 'var(--chart-5)'
 				},
 				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
+					DEFAULT: 'var(--sidebar-background)',
+					foreground: 'var(--sidebar-foreground)',
+					primary: 'var(--sidebar-primary)',
+					'primary-foreground': 'var(--sidebar-primary-foreground)',
+					accent: 'var(--sidebar-accent)',
+					'accent-foreground': 'var(--sidebar-accent-foreground)',
+					border: 'var(--sidebar-border)',
+					ring: 'var(--sidebar-ring)'
 				}
 			},
 			fontFamily: {

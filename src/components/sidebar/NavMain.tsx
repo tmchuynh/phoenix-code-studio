@@ -1,80 +1,132 @@
 "use client";
 
-import { ChevronRight, type LucideIcon } from "lucide-react";
-
 import {
-    Collapsible,
-    CollapsibleContent,
-    CollapsibleTrigger,
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 import {
-    SidebarGroup,
-    SidebarGroupLabel,
-    SidebarMenu,
-    SidebarMenuAction,
-    SidebarMenuButton,
-    SidebarMenuItem,
-    SidebarMenuSub,
-    SidebarMenuSubButton,
-    SidebarMenuSubItem,
+  SidebarGroup,
+  SidebarGroupLabel,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarMenuSub,
+  SidebarMenuSubButton,
+  SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
+import { navItem, navSubItem } from "@/data/types";
+import { ChevronRight } from "lucide-react";
+import { useRouter } from "next/navigation";
+import React from "react";
 
-export function NavMain( {
-    items,
-    title
+export function NavMenuItem({
+  item,
+  itemKey,
+  isOpen,
+  onOpenChange,
 }: {
-    title: string;
-    items: {
-        title: string;
-        url: string;
-        icon: LucideIcon;
-        isActive?: boolean;
-        items?: {
-            title: string;
-            url: string;
-        }[];
-    }[];
-} ) {
-    return (
-        <SidebarGroup>
-            <SidebarGroupLabel>{title}</SidebarGroupLabel>
-            <SidebarMenu>
-                {items.map( ( item, index ) => (
-                    <Collapsible key={`${ item.title }__${ index }`} asChild defaultOpen={item.isActive}>
-                        <SidebarMenuItem>
-                            <SidebarMenuButton asChild tooltip={item.title}>
-                                <a href={item.url}>
-                                    <item.icon />
-                                    <span>{item.title}</span>
-                                </a>
-                            </SidebarMenuButton>
-                            {item.items?.length ? (
-                                <>
-                                    <CollapsibleTrigger asChild>
-                                        <SidebarMenuAction className="data-[state=open]:rotate-90">
-                                            <ChevronRight />
-                                            <span className="sr-only">Toggle</span>
-                                        </SidebarMenuAction>
-                                    </CollapsibleTrigger>
-                                    <CollapsibleContent>
-                                        <SidebarMenuSub>
-                                            {item.items?.map( ( subItem, index ) => (
-                                                <SidebarMenuSubItem key={`${ item.title }__${ index }`}>
-                                                    <SidebarMenuSubButton asChild>
-                                                        <a href={subItem.url}>
-                                                            <span>{subItem.title}</span>
-                                                        </a>
-                                                    </SidebarMenuSubButton>
-                                                </SidebarMenuSubItem>
-                                            ) )}
-                                        </SidebarMenuSub>
-                                    </CollapsibleContent>
-                                </>
-                            ) : null}
-                        </SidebarMenuItem>
-                    </Collapsible>
-                ) )}
-            </SidebarMenu>
-        </SidebarGroup>
-    );
+  item: navItem;
+  itemKey: string;
+  isOpen: boolean;
+  onOpenChange: (open: boolean) => void;
+}) {
+  const router = useRouter();
+
+  const handleClick = (url: string) => {
+    onOpenChange(false);
+
+    if (url) {
+      router.push(url);
+    }
+  };
+
+  return (
+    <SidebarMenuItem>
+      <Collapsible open={isOpen} onOpenChange={onOpenChange}>
+        <CollapsibleTrigger asChild>
+          <SidebarMenuButton
+            tooltip={item.title}
+            onClick={() => handleClick(item.url ? item.url : "")}
+            className="flex w-full items-center gap-2 p-2"
+            aria-controls="..."
+            aria-label={item.title}
+          >
+            <div className="flex items-center justify-between w-full">
+              <div className="flex items-center gap-2">
+                <span>
+                  <item.icon
+                    aria-hidden="true"
+                    aria-label={String(item.icon)}
+                  />
+                </span>
+                <span>{item.title}</span>
+              </div>
+              {item.items?.length ? (
+                <ChevronRight
+                  aria-hidden="true"
+                  aria-label="expand menu"
+                  className={`transition-transform duration-200 ease-in-out transform ${
+                    isOpen ? "rotate-90" : ""
+                  }`}
+                />
+              ) : null}
+            </div>
+          </SidebarMenuButton>
+        </CollapsibleTrigger>
+
+        {item.items?.length ? (
+          <CollapsibleContent>
+            <SidebarMenuSub>
+              {item.items.map((subItem: navSubItem, subIndex: number) => (
+                <SidebarMenuSubItem key={`${itemKey}_sub_${subIndex}`}>
+                  <SidebarMenuSubButton asChild>
+                    <a href={subItem.url}>
+                      <span>{subItem.title}</span>
+                    </a>
+                  </SidebarMenuSubButton>
+                </SidebarMenuSubItem>
+              ))}
+            </SidebarMenuSub>
+          </CollapsibleContent>
+        ) : null}
+      </Collapsible>
+    </SidebarMenuItem>
+  );
+}
+
+export function NavMain({
+  items,
+  title,
+  openItemKey,
+  setOpenItemKey,
+}: {
+  title: string;
+  items: navItem[];
+  openItemKey: string | null;
+  setOpenItemKey: React.Dispatch<React.SetStateAction<string | null>>;
+}) {
+  return (
+    <SidebarGroup>
+      <SidebarGroupLabel>{title}</SidebarGroupLabel>
+      <SidebarMenu>
+        {items.map((item, index) => {
+          const itemKey = `${title}_${item.title}__${index}`;
+          const isOpen = openItemKey === itemKey;
+
+          return (
+            <NavMenuItem
+              key={itemKey}
+              item={item}
+              itemKey={itemKey}
+              isOpen={isOpen}
+              onOpenChange={(open: boolean) => {
+                setOpenItemKey(open ? itemKey : null);
+              }}
+            />
+          );
+        })}
+      </SidebarMenu>
+    </SidebarGroup>
+  );
 }

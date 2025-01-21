@@ -12,10 +12,13 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarSeparator,
 } from "@/components/ui/sidebar";
 import { data } from "@/lib/constants";
 
 export function NavSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const [openItemKey, setOpenItemKey] = React.useState<string | null>(null);
+
   return (
     <Sidebar
       variant="inset"
@@ -34,7 +37,7 @@ export function NavSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <span className="truncate font-semibold">
                     Knowledge Knockout
                   </span>
-                  <span className="truncate text-xs">Enterprise</span>
+                  <span className="truncate text-xs slogan">Enterprise</span>
                 </div>
               </a>
             </SidebarMenuButton>
@@ -42,12 +45,28 @@ export function NavSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <NavMain title="Platforms" items={data.navMain} />
-        <NavMain title="Information" items={data.information} />
-        <NavMain title="For You" items={data.foryou} />
+        <NavMain
+          title="Platforms"
+          items={data.navMain}
+          openItemKey={openItemKey}
+          setOpenItemKey={setOpenItemKey}
+        />
+        <SidebarSeparator />
+        <NavMain
+          title="Information"
+          items={data.information}
+          openItemKey={openItemKey}
+          setOpenItemKey={setOpenItemKey}
+        />
+        <SidebarSeparator />
+        <NavMain
+          title="For You"
+          items={data.foryou}
+          openItemKey={openItemKey}
+          setOpenItemKey={setOpenItemKey}
+        />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
-      <SidebarFooter></SidebarFooter>
     </Sidebar>
   );
 }

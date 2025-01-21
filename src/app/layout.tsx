@@ -46,22 +46,17 @@ export default function RootLayout({
 
 const MainContent = ({ children }: { children: React.ReactNode }) => {
   const { isNotFound } = useNotFound();
-  const { open } = useSidebar();
+
+  // Hide sidebar and main content when 404 page is shown
   return (
     <>
-      {!isNotFound && (
-        <main>
+      {isNotFound && (
+        <>
           <NavSidebar />
-          <SidebarTrigger
-            className={
-              open
-                ? "py-10 pl-5 pr-4 sticky top-5 hover:border-none"
-                : "py-10 pl-10 pr-4 sticky top-5 hover:border-none"
-            }
-          />
-        </main>
+          <SidebarTrigger className="py-10 pl-9" />
+        </>
       )}
-      <main className="relative w-11/12 mx-auto py-10 pr-5">{children}</main>
+      <main className="relative w-9/12 mx-auto py-10">{children}</main>
     </>
   );
 };
