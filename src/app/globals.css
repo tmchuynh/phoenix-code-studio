@@ -2,20 +2,135 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
+
+body {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
+    --background: #ffffff;
+    --foreground: #0a0a0a;
+    --card: #ffffff;
+    --card-foreground: #0a0a0a;
+    --popover: #ffffff;
+    --popover-foreground: #0a0a0a;
+    --primary: #a1121e;
+    --primary-foreground: #ffffff;
+    --secondary: #f5e0e0;
+    --secondary-foreground: #0a0a0a;
+    --tertiary: #00796b;
+    --tertiary-foreground: #ffffff;
+    --muted: #f5e0e0;
+    --muted-foreground: #737373;
+    --accent: #f5e0e0;
+    --accent-foreground: #0a0a0a;
+    --accent-1: #ffcc80;
+    --accent-2: #ff80ab;
+    --accent-3: #80cbc4;
+    --accent-4: #c5cae9;
+    --destructive: #d42d34;
+    --destructive-foreground: #ffffff;
+    --border: #e0e0e0;
+    --input: #e0e0e0;
+    --ring: #0a0a0a;
+    --radius: 0.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.875rem;
+    --h3-font-size: 1.5rem;
+    --body-font-size: 1rem;
+    --line-height: 1.6;
+    --sidebar-background: #f9f9f9;
+    --sidebar-foreground: #424242;
+    --sidebar-primary: #1e1e1e;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #f4f4f4;
+    --sidebar-accent-foreground: #1e1e1e;
+    --sidebar-border: #e0e0e0;
+    --sidebar-ring: #6f42c1;
+  }
+
+  .dark {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #ffffff;
+    --card: #0a0a0a;
+    --card-foreground: #ffffff;
+    --popover: #0a0a0a;
+    --popover-foreground: #ffffff;
+    --primary: #ffffff;
+    --primary-foreground: #a1121e;
+    --secondary: #1c1c1c;
+    --secondary-foreground: #ffffff;
+    --tertiary: #004d40;
+    --tertiary-foreground: #ffffff;
+    --muted: #1c1c1c;
+    --muted-foreground: #a9a9a9;
+    --accent: #1c1c1c;
+    --accent-foreground: #ffffff;
+    --accent-1: #ffab40;
+    --accent-2: #f06292;
+    --accent-3: #26a69a;
+    --accent-4: #8c9eff;
+    --destructive: #8b1a1f;
+    --destructive-foreground: #ffffff;
+    --border: #1c1c1c;
+    --input: #1c1c1c;
+    --ring: #d81b60;
+    --sidebar-background: #1e1e1e;
+    --sidebar-foreground: #f4f4f4;
+    --sidebar-primary: #00796b;
+    --sidebar-primary-foreground: #ffffff;
+    --sidebar-accent: #121212;
+    --sidebar-accent-foreground: #f4f4f4;
+    --sidebar-border: #1e1e1e;
+    --sidebar-ring: #007bff;
+  }
+
+  body {
+    font-size: var(--body-font-size);
+    line-height: var(--line-height);
+    color: var(--foreground);
+    background-color: var(--background);
+  }
+
+  h1 {
+    font-size: var(--h1-font-size);
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+  }
+
+  h2 {
+    font-size: var(--h2-font-size);
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-size: var(--h3-font-size);
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--foreground);
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: var(--body-font-size);
+    line-height: var(--line-height);
+    color: var(--foreground);
+    margin-bottom: 1rem;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }

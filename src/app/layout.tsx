@@ -1,16 +1,13 @@
+import { NavSidebar } from "@/components/NavSidebar";
+import {
+  SidebarProvider,
+  SidebarTrigger,
+  useSidebar,
+} from "@/components/ui/sidebar";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { NotFoundProvider, useNotFound } from "./context/NotFoundContext";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,11 +21,35 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <NotFoundProvider>
+        <SidebarProvider>
+          <Providers>
+            <MainContent>{children}</MainContent>
+          </Providers>
+        </SidebarProvider>
+      </NotFoundProvider>
     </html>
   );
 }
+
+const MainContent = ({ children }: { children: React.ReactNode }) => {
+  const { isNotFound } = useNotFound();
+  const { open } = useSidebar();
+  return (
+    <>
+      {!isNotFound && (
+        <>
+          <NavSidebar />
+          <SidebarTrigger
+            className={
+              open
+                ? "py-10 pl-5 pr-4 sticky top-5 hover:border-none"
+                : "py-10 pl-10 pr-4 sticky top-5 hover:border-none"
+            }
+          />
+        </>
+      )}
+      <main className="relative w-11/12 mx-auto py-10 pr-5">{children}</main>
+    </>
+  );
+};
