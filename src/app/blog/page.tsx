@@ -1,23 +1,23 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { FC, useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useSidebar } from "@/components/ui/sidebar";
+import { blogs } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 import {
   FormControl,
   InputLabel,
   MenuItem,
-  Select,
   OutlinedInput,
+  Select,
   SelectChangeEvent,
 } from "@mui/material";
-import { blogs } from "@/lib/constants";
-import { useSidebar } from "@/components/ui/sidebar";
-import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
+import { FC, useEffect, useState } from "react";
 
 const BlogDisplayPage: FC = () => {
   const router = useRouter();
-  const { open, setOpen } = useSidebar();
+  const { open } = useSidebar();
 
   const [filteredBlogs, setFilteredBlogs] = useState(blogs);
   const [selectedTopics, setSelectedTopics] = useState<string[]>([]);

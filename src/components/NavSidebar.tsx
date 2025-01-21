@@ -12,7 +12,7 @@ import {
   SidebarMenuItem,
   SidebarSeparator,
 } from "@/components/ui/sidebar";
-import { data } from "@/lib/constants";
+import { menu } from "@/lib/constants";
 import { NavFooter } from "./sidebar/NavFooter";
 
 export function NavSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
@@ -49,18 +49,18 @@ export function NavSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarContent>
         <NavMain
           title="Services"
-          items={data.navMain}
+          items={menu.navMain}
           openItemKey={openItemKey}
           setOpenItemKey={setOpenItemKey}
         />
         <SidebarSeparator />
         <NavMain
           title="Information"
-          items={data.information}
+          items={menu.information}
           openItemKey={openItemKey}
           setOpenItemKey={setOpenItemKey}
         />
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
+        <NavSecondary items={menu.navSecondary} className="mt-auto" />
         <NavFooter />
       </SidebarContent>
     </Sidebar>
