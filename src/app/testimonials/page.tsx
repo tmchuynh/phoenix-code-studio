@@ -14,11 +14,11 @@ const TestimonialsPage: FC = () => {
 
       {/* Displaying testimonials dynamically */}
       <section className="my-8">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-wrap  gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="border p-6 rounded-lg shadow-lg text-center bg-white"
+              className="border p-6 rounded-lg shadow-lg text-center"
             >
               <img
                 src={testimonial.image}
@@ -29,7 +29,7 @@ const TestimonialsPage: FC = () => {
               <p className="text-lg text-gray-500 mb-4">
                 {testimonial.position}
               </p>
-              <blockquote className="italic text-lg text-gray-700">
+              <blockquote className="italic text-lg ">
                 "{testimonial.quote}"
               </blockquote>
             </div>

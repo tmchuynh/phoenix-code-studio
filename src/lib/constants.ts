@@ -284,3 +284,42 @@ export const testimonials = [
       "Absolutely amazing experience. The team was highly collaborative and delivered exactly what we needed, on time!",
   },
 ];
+
+export const blogs = [
+  {
+    title: "The Importance of User Experience in Web Design",
+    author: "John Doe",
+    date: "August 15, 2025",
+    topics: ["UX/UI Design", "Web Design"],
+    excerpt:
+      "User experience (UX) is one of the most important factors when designing a website. It directly impacts how users interact with your website, and ultimately affects conversion rates.",
+    slug: "/blog/importance-of-user-experience",
+  },
+  {
+    title: "How Tailwind CSS Can Speed Up Your Development Process",
+    author: "Jane Smith",
+    date: "July 10, 2025",
+    topics: ["CSS", "Frontend Development"],
+    excerpt:
+      "Tailwind CSS is a utility-first CSS framework that provides a highly customizable approach to building modern user interfaces. In this blog post, we'll explore how it can speed up your development process.",
+    slug: "/blog/how-tailwind-css-can-speed-up-your-development",
+  },
+  {
+    title: "The Future of JavaScript Frameworks",
+    author: "Michael Lee",
+    date: "June 5, 2025",
+    topics: ["JavaScript", "Web Development"],
+    excerpt:
+      "With the rapid evolution of JavaScript frameworks like React, Vue, and Angular, it's important to stay up-to-date with the latest trends. This article explores the future of JavaScript frameworks.",
+    slug: "/blog/future-of-javascript-frameworks",
+  },
+  {
+    title: "Why Accessibility Matters in Web Development",
+    author: "Sarah Kim",
+    date: "May 22, 2025",
+    topics: ["Web Accessibility", "UX/UI Design"],
+    excerpt:
+      "Accessibility should be a priority in every web development project. Ensuring that your website is usable by people with disabilities opens your content to a wider audience and improves user satisfaction.",
+    slug: "/blog/why-accessibility-matters",
+  },
+];
