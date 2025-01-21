@@ -1,13 +1,8 @@
 "use client";
-
 import { NavSidebar } from "@/components/NavSidebar";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import Head from "next/head";
-import {
-  SidebarProvider,
-  SidebarTrigger,
-  useSidebar,
-} from "@/components/ui/sidebar";
-import { NotFoundProvider, useNotFound } from "./context/NotFoundContext";
+import { NotFoundProvider } from "./context/NotFoundContext";
 import "./globals.css";
 import { Providers } from "./providers";
 
@@ -45,17 +40,10 @@ export default function RootLayout({
 }
 
 const MainContent = ({ children }: { children: React.ReactNode }) => {
-  const { isNotFound } = useNotFound();
-
-  // Hide sidebar and main content when 404 page is shown
   return (
     <>
-      {isNotFound && (
-        <>
-          <NavSidebar />
-          <SidebarTrigger className="py-10 pl-9" />
-        </>
-      )}
+      <NavSidebar />
+      <SidebarTrigger className="py-10 pl-9" />
       <main className="relative w-9/12 mx-auto py-10">{children}</main>
     </>
   );
