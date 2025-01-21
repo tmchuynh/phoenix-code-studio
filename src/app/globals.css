@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
 
 body {
-  font-family: "RedRose", sans-serif;
+  font-family: "Buda", sans-serif;
 }
 
 @layer base {
@@ -16,18 +16,18 @@ body {
     --card-foreground: #1f2937;
     --popover: #ffffff;
     --popover-foreground: #0a0a0a;
-    --primary: #a1121e;
+    --primary: #a60d29;
     --primary-foreground: #ffffff;
-    --secondary: #f5e0e0;
+    --secondary: #128367;
     --secondary-foreground: #0a0a0a;
-    --tertiary: #00796b;
+    --tertiary: #2d7322;
     --tertiary-foreground: #ffffff;
     --muted: #f5e0e0;
     --muted-foreground: #6b7280;
-    --accent-1: #ffcc80;
-    --accent-2: #ff80ab;
-    --accent-3: #86efac;
-    --accent-4: #f9a8d4;
+    --accent-1: #f24194;
+    --accent-2: #f28b0c;
+    --accent-3: #2669bf;
+    --accent-4: #63038c;
     --destructive: #d32f2f;
     --destructive-foreground: #ffffff;
     --border: #e0e0e0;
@@ -44,7 +44,7 @@ body {
     --h3-font-size: 1.5rem;
     --body-font-size: 1rem;
     --line-height: 1.6;
-    --sidebar-background: #f0f4f8;
+    --sidebar-background: #f8f9fc;
     --sidebar-foreground: #374151;
     --sidebar-primary: #334155;
     --sidebar-primary-foreground: #ffffff;
@@ -55,21 +55,20 @@ body {
   }
 
   .dark {
-    --background: #0a0a0a;
+    --background: #0d0d0d;
     --foreground: #ffffff;
     --card: #0a0a0a;
     --card-foreground: #ffffff;
     --popover: #0a0a0a;
     --popover-foreground: #ffffff;
-    --primary: #ffffff;
-    --primary-foreground: #a1121e;
-    --secondary: #1c1c1c;
+    --primary: #ed1905;
+    --primary-foreground: #ffffff;
+    --secondary: #f8b097;
     --secondary-foreground: #ffffff;
-    --tertiary: #004d40;
+    --tertiary: #abf8bb;
     --tertiary-foreground: #ffffff;
     --muted: #4a5568;
     --muted-foreground: #a0aec0;
-    --accent: #4f46e5;
     --accent-foreground: #ffffff;
     --accent-1: #ffa8b5;
     --accent-2: #b4c3ff;
@@ -85,13 +84,13 @@ body {
     --chart-3: #4caf50;
     --chart-4: #2196f3;
     --chart-5: #9c27b0;
-    --sidebar-background: #2d3748;
+    --sidebar-background: #121212;
     --sidebar-foreground: #edf2f7;
     --sidebar-primary: #1a202c;
     --sidebar-primary-foreground: #ffffff;
     --sidebar-accent: #4a5568;
     --sidebar-accent-foreground: #edf2f7;
-    --sidebar-border: #2d3748;
+    --sidebar-border: #bf1304;
     --sidebar-ring: #4f46e5;
   }
 
@@ -104,20 +103,18 @@ body {
   }
 
   h1 {
-    font-family: "BonaNovaSC_Bold", sans-serif;
+    font-family: "Notable", sans-serif;
+    letter-spacing: -2px;
     font-size: var(--h1-font-size);
-    font-weight: 700;
-    line-height: 1.3;
+    line-height: 1.5;
     color: var(--primary);
     margin-bottom: 0.75rem;
   }
 
   h2 {
-    font-family: "Buda", sans-serif;
+    font-family: "BonaNovaSC_Bold", sans-serif;
     font-size: var(--h2-font-size);
-    font-weight: 600;
     line-height: 1.4;
-    color: var(--tertiary);
     margin-bottom: 0.5rem;
   }
 

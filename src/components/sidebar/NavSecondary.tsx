@@ -24,7 +24,10 @@ export function NavSecondary({
       <SidebarGroupContent>
         <SidebarMenu>
           {items.map((item, index) => (
-            <SidebarMenuItem key={`${item.title}__${index}`}>
+            <SidebarMenuItem
+              key={`${item.title}__${index}`}
+              className="font-Buda tracking-wide"
+            >
               <SidebarMenuButton asChild size="sm">
                 <a href={item.url}>
                   <item.icon />

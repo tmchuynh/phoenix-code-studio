@@ -1,13 +1,11 @@
 "use client";
 import * as React from "react";
-import { Command } from "lucide-react";
 
 import { NavMain } from "@/components/sidebar/NavMain";
 import { NavSecondary } from "@/components/sidebar/NavSecondary";
 import {
   Sidebar,
   SidebarContent,
-  SidebarFooter,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
@@ -15,6 +13,7 @@ import {
   SidebarSeparator,
 } from "@/components/ui/sidebar";
 import { data } from "@/lib/constants";
+import { NavFooter } from "./sidebar/NavFooter";
 
 export function NavSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const [openItemKey, setOpenItemKey] = React.useState<string | null>(null);
@@ -28,16 +27,19 @@ export function NavSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton size="lg" asChild>
+            <SidebarMenuButton
+              size="xl"
+              asChild
+              className="hover:bg-transparent"
+            >
               <a href="/">
-                <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                  <Command className="size-4" />
-                </div>
-                <div className="grid flex-1 text-left text-sm leading-tight">
-                  <span className="truncate font-semibold">
-                    Knowledge Knockout
+                <div className="grid flex-1 text-left leading-tight w-full">
+                  <span className="font-semibold font-Buda text-lg text-primary">
+                    Crimson Lotus Creations
                   </span>
-                  <span className="truncate text-xs slogan">Enterprise</span>
+                  <span className="slogan tracking-wider text-lg text-secondary">
+                    Transforming Visions into Digital Elegance
+                  </span>
                 </div>
               </a>
             </SidebarMenuButton>
@@ -58,14 +60,8 @@ export function NavSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           openItemKey={openItemKey}
           setOpenItemKey={setOpenItemKey}
         />
-        <SidebarSeparator />
-        <NavMain
-          title="For You"
-          items={data.foryou}
-          openItemKey={openItemKey}
-          setOpenItemKey={setOpenItemKey}
-        />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
+        <NavFooter />
       </SidebarContent>
     </Sidebar>
   );

@@ -5,6 +5,7 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -80,15 +81,17 @@ export function NavMenuItem({
         {item.items?.length ? (
           <CollapsibleContent>
             <SidebarMenuSub>
-              {item.items.map((subItem: navItem, subIndex: number) => (
-                <SidebarMenuSubItem key={`${itemKey}_sub_${subIndex}`}>
-                  <SidebarMenuSubButton asChild>
-                    <a href={subItem.url}>
-                      <span>{subItem.title}</span>
-                    </a>
-                  </SidebarMenuSubButton>
-                </SidebarMenuSubItem>
-              ))}
+              <ScrollArea className="h-64">
+                {item.items.map((subItem: navItem, subIndex: number) => (
+                  <SidebarMenuSubItem key={`${itemKey}_sub_${subIndex}`}>
+                    <SidebarMenuSubButton asChild>
+                      <a href={subItem.url}>
+                        <span>{subItem.title}</span>
+                      </a>
+                    </SidebarMenuSubButton>
+                  </SidebarMenuSubItem>
+                ))}
+              </ScrollArea>
             </SidebarMenuSub>
           </CollapsibleContent>
         ) : null}
