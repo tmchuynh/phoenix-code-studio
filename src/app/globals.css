@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
 
 body {
-  font-family: "Inter", Arial, Helvetica, sans-serif;
+  font-family: "BonaNovaSC_Bold", Arial, Helvetica, sans-serif;
 }
 
 @layer base {
@@ -124,6 +124,70 @@ body {
     color: var(--foreground);
     margin-bottom: 1rem;
   }
+}
+
+@font-face {
+  font-family: "RampartOne";
+  src: url("/fonts/RampartOne-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SofiaSans";
+  src: url("/fonts/SofiaSansExtraCondensed-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ruthie";
+  src: url("/fonts/Ruthie-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RedRose";
+  src: url("/fonts/RedRose-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Notable";
+  src: url("/fonts/Notable-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Dosis";
+  src: url("/fonts/Dosis.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Corinthia";
+  src: url("/fonts/Corinthia-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Buda";
+  src: url("/fonts/Buda-Light.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BonaNovaSC_Bold";
+  src: url("/fonts/BonaNovaSC-Bold.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @layer base {
