@@ -15,7 +15,7 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
-import { navItem, navSubItem } from "@/data/types";
+import { navItem } from "@/lib/interfaces";
 import { ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import React from "react";
@@ -54,12 +54,14 @@ export function NavMenuItem({
           >
             <div className="flex items-center justify-between w-full">
               <div className="flex items-center gap-2">
-                <span>
-                  <item.icon
-                    aria-hidden="true"
-                    aria-label={String(item.icon)}
-                  />
-                </span>
+                {item.icon && (
+                  <span>
+                    <item.icon
+                      aria-hidden="true"
+                      aria-label={String(item.icon)}
+                    />
+                  </span>
+                )}
                 <span>{item.title}</span>
               </div>
               {item.items?.length ? (
@@ -78,7 +80,7 @@ export function NavMenuItem({
         {item.items?.length ? (
           <CollapsibleContent>
             <SidebarMenuSub>
-              {item.items.map((subItem: navSubItem, subIndex: number) => (
+              {item.items.map((subItem: navItem, subIndex: number) => (
                 <SidebarMenuSubItem key={`${itemKey}_sub_${subIndex}`}>
                   <SidebarMenuSubButton asChild>
                     <a href={subItem.url}>
