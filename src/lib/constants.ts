@@ -1,151 +1,153 @@
-import { BookCheck, Brain, ChartNoAxesCombined, CheckCheck, FolderClock, GraduationCap, LibraryBig, Medal, NotebookPen, Rocket, Send, Swords, Table2, TrendingUp } from "lucide-react";
+import { Send } from "lucide-react";
+import { FaCalendarCheck, FaInfoCircle, FaLaptop, FaMoneyBillAlt, FaPenAlt, FaQuestion, FaSignature } from "react-icons/fa";
+import { MdPeople } from "react-icons/md";
+import { IoBookSharp } from "react-icons/io5";
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
+
 
 export const data = {
   navMain: [
     {
-      title: "Flashcards",
-      url: "/flashcards",
-      icon: NotebookPen,
+      title: "About",
+      url: "/about",
+      icon: FaInfoCircle,
     },
     {
-      title: "Quizzes",
-      icon: CheckCheck,
+      title: "Website Services",
+      icon: FaLaptop,
       items: [
         {
-          title: "Software Engineering",
+          title: "Custom Website Design",
           url: "#",
         },
         {
-          title: "Pre Medical",
+          title: "eCommerce Development",
           url: "#",
         },
         {
-          title: "Business",
+          title: "Single-Page Applications (SPAs)",
           url: "#",
         },
         {
-          title: "Law",
+          title: "Database Management",
           url: "#",
         },
         {
-          title: "Entrepreneurship",
+          title: "User Interface (UI) Design",
           url: "#",
         },
         {
-          title: "Miscellaneous",
+          title: "User Experience (UX) Design",
+          url: "#",
+        },
+        {
+          title: "Wireframing & Prototyping",
+          url: "#",
+        },
+        {
+          title: "Authentication and Authorization",
+          url: "#",
+        },
+        {
+          title: "Domain Registration",
+          url: "#",
+        },
+        {
+          title: "Web Hosting Setup",
           url: "#",
         },
       ],
     },
     {
-      title: "Tests",
-      icon: BookCheck,
+      title: "Content Creation Services",
+      icon: FaPenAlt,
       items: [
         {
-          title: "Beginner Tests",
+          title: "Brand Storytelling",
           url: "#",
         },
         {
-          title: "Expert Tests",
+          title: "Website Copywriting",
           url: "#",
         },
         {
-          title: "Multiple Subject Tests",
+          title: "Product Guides/Manuals",
           url: "#",
         },
         {
-          title: "Timed Tests",
+          title: "Blog Writing",
           url: "#",
         },
-      ],
-    },
-    {
-      title: "Learning Paths",
-      icon: NotebookPen,
-      items: [
         {
-          title: "Full-Stack Web Development",
-          url: "/roadmaps/fullstack",
+          title: "Technical Writing",
+          url: "#",
         },
         {
-          title: "Front-end Development",
-          url: "/roadmaps/frontend",
+          title: "Online Courses",
+          url: "#",
         },
         {
-          title: "Back-end Development",
-          url: "/roadmaps/backend",
+          title: "eBook Creation",
+          url: "#",
         },
         {
-          title: "Pre Medical",
-          url: "/roadmaps/premed",
+          title: "FAQs",
+          url: "#",
         },
         {
-          title: "Business",
-          url: "/roadmaps/business",
+          title: "SEO Content Writing",
+          url: "#",
         },
         {
-          title: "Law",
-          url: "/roadmaps/law",
+          title: "Product Descriptions",
+          url: "#",
         },
         {
-          title: "Entrepreneurship",
-          url: "/roadmaps/entrepreneurship",
+          title: "Newsletters",
+          url: "#",
+        },
+        {
+          title: "Proposal Writing",
+          url: "#",
         },
       ],
     },
   ],
   information: [
     {
-      title: "Badges",
+      title: "FAQs",
       url: "/badges",
-      icon: Medal,
+      icon: FaQuestion,
     },
     {
-      title: "Current Challenges",
+      title: "Pricing",
+      url: "/badges",
+      icon: FaMoneyBillAlt,
+    },
+    {
+      title: "Payment Plans",
       url: "/challenges",
-      icon: Swords,
+      icon: FaCalendarCheck,
     },
     {
-      title: "Memory Techniques",
+      title: "Contracts",
       url: "#",
-      icon: Brain,
+      icon: FaSignature,
     },
     {
-      title: "Boost Your Confidence",
+      title: "Testimonials",
       url: "#",
-      icon: Rocket,
+      icon: MdPeople,
     },
     {
-      title: "Study Tips",
+      title: "Research",
       url: "#",
-      icon: LibraryBig,
+      icon: IoBookSharp,
     },
     {
-      title: "Mastering Complex Topics",
+      title: "Past Projects",
       url: "#",
-      icon: GraduationCap,
-    },
-    {
-      title: "Progress Reports",
-      url: "#",
-      icon: ChartNoAxesCombined,
-    },
-    {
-      title: "Example Insights",
-      url: "/mock_data",
-      icon: TrendingUp,
-    },
-  ],
-  foryou: [
-    {
-      title: "Leaderboards",
-      url: "/leaderboard",
-      icon: Table2,
-    },
-    {
-      title: "Score History",
-      url: "/scores",
-      icon: FolderClock,
+      icon: AiOutlineFundProjectionScreen,
     },
   ],
   navSecondary: [
