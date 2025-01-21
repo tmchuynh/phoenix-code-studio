@@ -5,6 +5,7 @@ import Head from "next/head";
 import { NotFoundProvider } from "./context/NotFoundContext";
 import "./globals.css";
 import { Providers } from "./providers";
+import BackToTop from "@/components/BackToTop";
 
 export default function RootLayout({
   children,
@@ -44,7 +45,10 @@ const MainContent = ({ children }: { children: React.ReactNode }) => {
     <>
       <NavSidebar />
       <SidebarTrigger className="py-10 pl-9" />
-      <main className="relative w-9/12 mx-auto py-10">{children}</main>
+      <main className="relative w-9/12 mx-auto py-10">
+        {children}
+        <BackToTop />
+      </main>
     </>
   );
 };

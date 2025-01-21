@@ -3,58 +3,43 @@ import { FaCalendarCheck, FaInfoCircle, FaLaptop, FaMoneyBillAlt, FaPenAlt, FaQu
 import { MdPeople } from "react-icons/md";
 import { IoBookSharp } from "react-icons/io5";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
+import { FAQ } from "./interfaces";
 
 
 export const data = {
   navMain: [
-    {
-      title: "About",
-      url: "/about",
-      icon: FaInfoCircle,
-    },
+
     {
       title: "Website Services",
       icon: FaLaptop,
       items: [
         {
           title: "Custom Website Design",
-          url: "#",
+          url: "/web/custom-website-design",
         },
         {
           title: "eCommerce Development",
-          url: "#",
+          url: "/web/e-commerce-design",
         },
         {
           title: "Single-Page Applications (SPAs)",
-          url: "#",
+          url: "/web/single-page-application",
         },
         {
           title: "Database Management",
-          url: "#",
+          url: "/web/database-management",
         },
         {
           title: "User Interface (UI) Design",
-          url: "#",
+          url: "/web/user-interface-design",
         },
         {
           title: "User Experience (UX) Design",
-          url: "#",
+          url: "/web/user-experience-design",
         },
         {
           title: "Wireframing & Prototyping",
-          url: "#",
-        },
-        {
-          title: "Authentication and Authorization",
-          url: "#",
-        },
-        {
-          title: "Domain Registration",
-          url: "#",
-        },
-        {
-          title: "Web Hosting Setup",
-          url: "#",
+          url: "/web/wireframing-prototyping",
         },
       ],
     },
@@ -64,97 +49,238 @@ export const data = {
       items: [
         {
           title: "Brand Storytelling",
-          url: "#",
+          url: "/content/brand-storytelling",
         },
         {
           title: "Website Copywriting",
-          url: "#",
+          url: "/content/website-copywriting",
         },
         {
           title: "Product Guides/Manuals",
-          url: "#",
+          url: "/content/product-guides-manuals",
         },
         {
           title: "Blog Writing",
-          url: "#",
+          url: "/content/blog-writing",
         },
         {
           title: "Technical Writing",
-          url: "#",
+          url: "/content/technical-writing",
         },
         {
           title: "Online Courses",
-          url: "#",
+          url: "/content/online-courses",
+        },
+        {
+          title: "Tutorial Creation",
+          url: "/content/tutorial-creation",
+        },
+        {
+          title: "Brochures and Flyers",
+          url: "/content/brochures-and-flyers",
+        },
+        {
+          title: "Training Manual and Onboarding Papers Creation",
+          url: "/content/training-manual-and-onboarding",
+        },
+        {
+          title: "Study Guide Creation",
+          url: "/content/study-guides",
         },
         {
           title: "eBook Creation",
-          url: "#",
-        },
-        {
-          title: "FAQs",
-          url: "#",
-        },
-        {
-          title: "SEO Content Writing",
-          url: "#",
-        },
-        {
-          title: "Product Descriptions",
-          url: "#",
+          url: "/content/e-book-creation",
         },
         {
           title: "Newsletters",
-          url: "#",
+          url: "/content/newsletters",
         },
         {
           title: "Proposal Writing",
-          url: "#",
+          url: "/content/proposal-writing",
         },
       ],
     },
-  ],
-  information: [
-    {
-      title: "FAQs",
-      url: "/badges",
-      icon: FaQuestion,
-    },
     {
       title: "Pricing",
-      url: "/badges",
+      url: "/pricing",
       icon: FaMoneyBillAlt,
     },
     {
       title: "Payment Plans",
-      url: "/challenges",
+      url: "/payment-plans",
       icon: FaCalendarCheck,
     },
     {
-      title: "Contracts",
-      url: "#",
-      icon: FaSignature,
+      title: "FAQs",
+      url: "/frequently-asked-questions",
+      icon: FaQuestion,
+    },
+  ],
+  information: [
+    {
+      title: "About",
+      url: "/about",
+      icon: FaInfoCircle,
     },
     {
       title: "Testimonials",
-      url: "#",
+      url: "/testimonials",
       icon: MdPeople,
     },
     {
-      title: "Research",
-      url: "#",
+      title: "Blog",
+      url: "/blog",
       icon: IoBookSharp,
     },
     {
       title: "Past Projects",
-      url: "#",
+      url: "/past-projects",
       icon: AiOutlineFundProjectionScreen,
+    },
+    {
+      title: "Contracts",
+      url: "/contracts",
+      icon: FaSignature,
     },
   ],
   navSecondary: [
     {
-      title: "Feedback",
-      url: "#",
+      title: "Contact Us",
+      url: "/contact-us",
       icon: Send,
     },
   ],
 };
+
+export const FAQs: FAQ[] = [
+  {
+    question: "What sets Crimson Lotus Creations apart?",
+    answer:
+      "At Crimson Lotus Creations, we seamlessly combine cultural sophistication with innovative technology to deliver digital experiences that are both highly functional and profoundly meaningful. Drawing inspiration from the lotus flower—a timeless emblem of growth and resilience—we craft designs that empower your business to flourish in the digital realm."
+  },
+  {
+    question: "What services do you offer?",
+    answer:
+      "We provide a range of web development services tailored to small businesses, including custom website creation, brand reimagining, and website makeovers. Our goal is to deliver modern, approachable designs that reflect your brand identity and resonate with your audience."
+  },
+  {
+    question: "Can you help with rebranding my business?",
+    answer:
+      "Absolutely! Our brand reimagining service focuses on refreshing your digital presence to better align with your evolving goals. From updating your logo and color palette to redesigning your website, we’ll ensure your brand feels fresh, cohesive, and impactful."
+  },
+  {
+    question: "Can you help with content creation for my website?",
+    answer:
+      "Yes! We offer comprehensive content creation services to ensure your website communicates effectively and engages your audience. Our team can craft clear and compelling messaging that aligns with your brand’s identity and goals. Whether you need persuasive copy for landing pages, informative blog posts to connect with your audience, or SEO-optimized content to improve visibility, we’ve got you covered. We tailor every piece of content to resonate with your target audience, drive engagement, and support your business objectives."
+  },
+  {
+    question: "Do you offer ongoing support after a project is completed?",
+    answer:
+      "Yes! We offer ongoing support and maintenance packages to ensure your website remains functional, secure, and up to date. We’re here to help as your business grows and evolves."
+  },
+  {
+    question: "How do you tailor your services for small businesses?",
+    answer:
+      "We understand the unique challenges small businesses face. That’s why we offer bespoke solutions designed to meet your specific goals, budget, and vision. Our team works closely with you to ensure every project is aligned with your needs and objectives."
+  },
+  {
+    question: "What does 'bespoke' mean in the context of your services?",
+    answer:
+      "In the context of our services, 'bespoke' means that every project is uniquely tailored to your specific needs and vision. We avoid using generic, one-size-fits-all templates. Instead, we focus on creating custom solutions that reflect your brand’s identity, align with your business goals, and resonate with your target audience. From design to functionality, every detail is crafted to ensure your digital presence is as unique as your business."
+  },
+  {
+    question: "What industries do you work with?",
+    answer:
+      "Although we focus on empowering small businesses, our expertise extends across diverse industries such as retail, hospitality, creative services, and more. No matter your field, we’re committed to delivering tailored digital solutions that meet your unique needs."
+  },
+  {
+    question: "How long does a typical project take?",
+    answer:
+      "Project timelines vary depending on the scope and complexity of the work. On average, website projects take between 6–10 weeks. We’ll provide a detailed timeline during our initial consultation to ensure clarity and alignment."
+  },
+
+  {
+    question: "How can I get started?",
+    answer:
+      "Getting started is easy! Simply reach out to us via our contact form or email, and we’ll schedule a consultation to discuss your vision, goals, and how we can bring them to life."
+  }
+];
+
+export const paymentPlans = [
+  {
+    title: "Basic Plan",
+    description: "Ideal for small projects or businesses just getting started. Pay as you go with flexible terms.",
+    details: [
+      "Pay per service or milestone",
+      "Monthly payments available",
+      "Up to 3 months payment term"
+    ],
+    buttonLabel: "Learn More & Get Started",
+    route: "/contact"
+  },
+  {
+    title: "Standard Plan",
+    description: "Perfect for medium-sized projects, providing more flexible payment terms and installments.",
+    details: [
+      "Split payments into 3-6 installments",
+      "Priority support during the project",
+      "Up to 6 months payment term"
+    ],
+    buttonLabel: "Learn More & Get Started",
+    route: "/contact"
+  },
+  {
+    title: "Premium Plan",
+    description: "For large-scale, ongoing projects requiring continuous work and support. Flexible and extended payment options.",
+    details: [
+      "Monthly retainer payments",
+      "Up to 12-month payment terms",
+      "Full service including ongoing support"
+    ],
+    buttonLabel: "Learn More & Get Started",
+    route: "/contact"
+  },
+  {
+    title: "Custom Plan",
+    description: "Tailored payment options based on the complexity and size of your project. We can create a custom plan to fit your budget.",
+    details: [
+      "Flexible payment terms based on project scope",
+      "Options for ongoing support and scaling",
+      "Up to 24 months term based on agreement"
+    ],
+    buttonLabel: "Learn More & Get Started",
+    route: "/contact"
+  }
+];
+
+export const testimonials = [
+  {
+    name: "John Doe",
+    position: "CEO, Tech Innovators",
+    image: "/images/john-doe.jpg",
+    quote:
+      "This service helped us transform our business. The team was fantastic, and the results exceeded our expectations!",
+  },
+  {
+    name: "Sarah Smith",
+    position: "Founder, Creative Solutions",
+    image: "/images/sarah-smith.jpg",
+    quote:
+      "A professional and reliable partner. The process was smooth, and the final product truly captures our vision.",
+  },
+  {
+    name: "Michael Lee",
+    position: "CTO, NextGen Technologies",
+    image: "/images/michael-lee.jpg",
+    quote:
+      "The quality of work and attention to detail was exceptional. We saw a noticeable improvement in user engagement.",
+  },
+  {
+    name: "Emma Johnson",
+    position: "Marketing Director, Bright Horizons",
+    image: "/images/emma-johnson.jpg",
+    quote:
+      "Absolutely amazing experience. The team was highly collaborative and delivered exactly what we needed, on time!",
+  },
+];

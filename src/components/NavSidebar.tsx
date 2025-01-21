@@ -48,7 +48,7 @@ export function NavSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain
-          title="Platforms"
+          title="Services"
           items={data.navMain}
           openItemKey={openItemKey}
           setOpenItemKey={setOpenItemKey}

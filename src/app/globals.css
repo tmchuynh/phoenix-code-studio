@@ -16,11 +16,11 @@ body {
     --card-foreground: #1f2937;
     --popover: #ffffff;
     --popover-foreground: #0a0a0a;
-    --primary: #a60d29;
+    --primary: #c11c5b;
     --primary-foreground: #ffffff;
     --secondary: #128367;
-    --secondary-foreground: #0a0a0a;
-    --tertiary: #2d7322;
+    --secondary-foreground: #ffffff;
+    --tertiary: #b56e04;
     --tertiary-foreground: #ffffff;
     --muted: #f5e0e0;
     --muted-foreground: #6b7280;
@@ -43,10 +43,10 @@ body {
     --h2-font-size: 1.875rem;
     --h3-font-size: 1.5rem;
     --body-font-size: 1rem;
-    --line-height: 1.6;
+    --line-height: 1.5;
     --sidebar-background: #f8f9fc;
     --sidebar-foreground: #374151;
-    --sidebar-primary: #334155;
+    --sidebar-primary: #1e2938;
     --sidebar-primary-foreground: #ffffff;
     --sidebar-accent: #e2e8f0;
     --sidebar-accent-foreground: #374151;
@@ -61,11 +61,11 @@ body {
     --card-foreground: #ffffff;
     --popover: #0a0a0a;
     --popover-foreground: #ffffff;
-    --primary: #ed1905;
+    --primary: #ed056d;
     --primary-foreground: #ffffff;
-    --secondary: #f8b097;
-    --secondary-foreground: #ffffff;
-    --tertiary: #abf8bb;
+    --secondary: #36dac4;
+    --secondary-foreground: #0d0d0d;
+    --tertiary: #f8b097;
     --tertiary-foreground: #ffffff;
     --muted: #4a5568;
     --muted-foreground: #a0aec0;
@@ -104,17 +104,13 @@ body {
 
   h1 {
     font-family: "Notable", sans-serif;
-    letter-spacing: -2px;
     font-size: var(--h1-font-size);
-    line-height: 1.5;
-    color: var(--primary);
-    margin-bottom: 0.75rem;
+    color: var(--secondary);
   }
 
   h2 {
     font-family: "BonaNovaSC_Bold", sans-serif;
     font-size: var(--h2-font-size);
-    line-height: 1.4;
     margin-bottom: 0.5rem;
   }
 
@@ -122,7 +118,7 @@ body {
     font-family: "SofiaSans", sans-serif;
     font-size: var(--h3-font-size);
     font-weight: 600;
-    line-height: 1.5;
+    padding-top: 1rem;
     color: var(--foreground);
     margin-bottom: 0.5rem;
   }
