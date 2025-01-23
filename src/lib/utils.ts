@@ -8,5 +8,5 @@ export function cn( ...inputs: ClassValue[] ) {
 export const formatCurrency = ( value: number ) => {
   if ( isNaN( value ) ) return "$0.00";
 
-  return "$" + value.toLocaleString( undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 } );
+  return "$" + value.toLocaleString( undefined );
 };

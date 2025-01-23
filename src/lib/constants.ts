@@ -160,7 +160,7 @@ export const websiteServices = [
     details: "Our custom website design services focus on building websites tailored to your specific needs. We work with you to define the look, feel, and functionality of your site, ensuring that it delivers a seamless user experience and meets business objectives."
   },
   {
-    name: "E-Commerce Development",
+    name: "E-Commerce Site Development",
     startingPrice: 3500,
     info: "Develop a scalable e-commerce platform with integrated payment systems and user-friendly interfaces.",
     details: "We specialize in building e-commerce websites that provide a secure, fast, and user-friendly shopping experience. From product listings to checkout, we integrate the latest technologies and payment gateways to help your online store succeed."
@@ -178,13 +178,13 @@ export const websiteServices = [
     details: "Our database management services ensure that your data is stored, organized, and accessible. We design databases that can scale as your business grows, integrate real-time data, and ensure high levels of security to protect sensitive information."
   },
   {
-    name: "UI Design",
+    name: "User Interface Design",
     startingPrice: 1800,
     info: "Craft visually appealing, intuitive, and user-centered interfaces for a seamless experience.",
     details: "Our UI design services focus on creating visually attractive, user-friendly interfaces that promote ease of use. We ensure that your website or app provides an engaging and aesthetically pleasing experience to the user."
   },
   {
-    name: "UX Design",
+    name: "User Experience Design",
     startingPrice: 2200,
     info: "Enhance user experience through research, wireframing, and prototyping to solve real user problems.",
     details: "We focus on understanding user behavior and needs to create designs that simplify user interactions. Our UX design process includes user research, wireframing, prototyping, and usability testing to ensure that your website or app is easy to use and highly effective."
