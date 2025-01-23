@@ -9,7 +9,9 @@ const UXDesignServices: FC = () => {
 
   return (
     <main className="w-11/12 mx-auto py-6">
-      <h1 className="text-3xl font-bold text-center">UX Design Services</h1>
+      <h1 className="text-3xl font-bold text-center">
+        User Experience (UX) Design Services
+      </h1>
       <p className="text-center text-lg my-4">
         Delivering intuitive, user-friendly, and engaging experiences to delight
         your users and drive results.

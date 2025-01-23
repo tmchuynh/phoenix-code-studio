@@ -9,7 +9,9 @@ const UIDesignServices: FC = () => {
 
   return (
     <main className="w-11/12 mx-auto py-6">
-      <h1 className="text-3xl font-bold text-center">UI Design Services</h1>
+      <h1 className="text-3xl font-bold text-center">
+        User Interface (UI) Design Services
+      </h1>
       <p className="text-center text-lg my-4">
         Craft visually stunning and user-friendly interfaces that captivate and
         engage your audience.

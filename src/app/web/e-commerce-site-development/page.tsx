@@ -10,7 +10,7 @@ const EcommerceWebsite: FC = () => {
   return (
     <main className="w-11/12 mx-auto py-6">
       <h1 className="text-3xl font-bold text-center">
-        Custom eCommerce Website Development
+        Custom E-Commerce Website Development
       </h1>
       <p className="text-center text-lg my-4">
         Elevate your online store with a tailored eCommerce solution designed to

@@ -41,19 +41,21 @@ const ServicesPage: FC = () => {
         <div className="space-y-8">
           {websiteServices.map((service, index) => (
             <>
-              <div key={index} className="pb-3">
-                <h3 className="text-xl font-semibold text-primary">
-                  {service.name}
-                </h3>
-                <p className="mt-4">{service.details}</p>
-                <p className="mt-4">
-                  <strong>Starting at: </strong>
-                  {formatCurrency(service.startingPrice)}
-                </p>
+              <div key={index} className="flex items-end">
+                <div>
+                  <h3 className="text-xl font-semibold text-primary">
+                    {service.name}
+                  </h3>
+                  <p className="mt-4">{service.details}</p>
+                  <p className="mt-4">
+                    <strong>Starting at: </strong>
+                    {formatCurrency(service.startingPrice)}
+                  </p>
+                </div>
                 <Button
                   variant="secondary"
                   onClick={() => navigateToService(service.name)}
-                  className="mt-4 bg-secondary hover:bg-secondary-dark"
+                  className="m-0"
                 >
                   Learn More
                 </Button>
@@ -72,19 +74,21 @@ const ServicesPage: FC = () => {
         <div className="space-y-8">
           {contentCreationServices.map((service, index) => (
             <>
-              <div key={index} className="pb-3">
-                <h3 className="text-xl font-semibold text-primary">
-                  {service.name}
-                </h3>
-                <p className="mt-4">{service.details}</p>
-                <p className="mt-4">
-                  <strong>Starting at: </strong>
-                  {formatCurrency(service.startingPrice)}
-                </p>
+              <div key={index} className="flex items-end">
+                <div>
+                  <h3 className="text-xl font-semibold text-primary">
+                    {service.name}
+                  </h3>
+                  <p className="mt-4">{service.details}</p>
+                  <p className="mt-4">
+                    <strong>Starting at: </strong>
+                    {formatCurrency(service.startingPrice)}
+                  </p>
+                </div>
                 <Button
                   variant="secondary"
                   onClick={() => navigateToContent(service.name)}
-                  className="mt-4 bg-secondary rounded-md hover:bg-secondary-dark"
+                  className="m-0"
                 >
                   Learn More
                 </Button>
