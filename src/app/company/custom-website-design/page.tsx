@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { companySpecificServices } from "@/lib/constants";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
 
@@ -12,10 +13,19 @@ const CustomWebsite: FC = () => {
       <h1 className="text-3xl font-bold text-center">
         Custom Website Design Services
       </h1>
-      <p className="text-center text-lg my-4">
-        Crafting tailored websites that showcase your brand’s unique identity,
-        engage users, and drive results.
-      </p>
+      {companySpecificServices.map((service) => {
+        return (
+          <>
+            <div className="text-center text-lg my-4">
+              {service.name === "Custom Website Design" ? (
+                <div key={service.name}>
+                  <span className="mt-4">{service.details}</span>
+                </div>
+              ) : null}
+            </div>
+          </>
+        );
+      })}
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">
@@ -29,27 +39,27 @@ const CustomWebsite: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">Unique Branding:</span>{" "}
+            <span className="font-bold text-tertiary">Unique Branding:</span>{" "}
             Reflect your brand’s identity and values in every detail.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Tailored Functionality:
             </span>{" "}
             Features designed to meet your business needs, such as booking
             systems, product filters, or custom integrations.
           </li>
           <li>
-            <span className="font-bold text-secondary">Scalability:</span>{" "}
+            <span className="font-bold text-tertiary">Scalability:</span>{" "}
             Future-proof designs that adapt as your business grows.
           </li>
           <li>
-            <span className="font-bold text-secondary">SEO Optimization:</span>{" "}
+            <span className="font-bold text-tertiary">SEO Optimization:</span>{" "}
             Structured designs to improve your website’s visibility on search
             engines.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Enhanced User Experience:
             </span>{" "}
             Intuitive, accessible, and user-friendly interfaces for all
@@ -62,38 +72,38 @@ const CustomWebsite: FC = () => {
         <h2 className="text-2xl font-semibold">Our Process</h2>
         <ul className="list-decimal list-inside space-y-4">
           <li>
-            <span className="font-bold text-secondary">Consultation:</span> We
+            <span className="font-bold text-tertiary">Consultation:</span> We
             start by understanding your goals, brand, and audience.
           </li>
           <li>
-            <span className="font-bold text-secondary">Planning:</span> Develop
-            a detailed sitemap, wireframes, and a comprehensive strategy.
+            <span className="font-bold text-tertiary">Planning:</span> Develop a
+            detailed sitemap, wireframes, and a comprehensive strategy.
           </li>
           <li>
-            <span className="font-bold text-secondary">Design:</span> Craft
+            <span className="font-bold text-tertiary">Design:</span> Craft
             high-fidelity prototypes, incorporating your feedback at every
             stage.
           </li>
           <li>
-            <span className="font-bold text-secondary">Development:</span> Build
+            <span className="font-bold text-tertiary">Development:</span> Build
             a responsive, high-performance website using cutting-edge
             technologies.
           </li>
           <li>
-            <span className="font-bold text-secondary">Testing:</span> Rigorous
+            <span className="font-bold text-tertiary">Testing:</span> Rigorous
             testing for functionality, compatibility, speed, and accessibility.
           </li>
           <li>
-            <span className="font-bold text-secondary">Launch:</span> Deploy
-            your site with secure hosting and domain registration.
+            <span className="font-bold text-tertiary">Launch:</span> Deploy your
+            site with secure hosting and domain registration.
           </li>
           <li>
-            <span className="font-bold text-secondary">Ongoing Support:</span>{" "}
+            <span className="font-bold text-tertiary">Ongoing Support:</span>{" "}
             Offer continuous updates, maintenance, and improvements post-launch.
           </li>
         </ul>
         <p className="my-4">
-          <span className="font-bold text-secondary">Timeline:</span> Typical
+          <span className="font-bold text-tertiary">Timeline:</span> Typical
           projects take 4–8 weeks, depending on the complexity and scope of the
           website.
         </p>
@@ -110,50 +120,48 @@ const CustomWebsite: FC = () => {
         <h3 className="text-xl font-bold">Domain Registration</h3>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Domain Name Selection:
             </span>{" "}
             Collaborate with us to choose a domain that aligns with your brand.
           </li>
           <li>
-            <span className="font-bold text-secondary">Extensions:</span> (.com,
+            <span className="font-bold text-tertiary">Extensions:</span> (.com,
             .org, .net) customized to suit your industry and audience.
           </li>
           <li>
-            <span className="font-bold text-secondary">
-              Privacy Protection:
-            </span>{" "}
+            <span className="font-bold text-tertiary">Privacy Protection:</span>{" "}
             Safeguard your personal information.
           </li>
           <li>
-            <span className="font-bold text-secondary">Management:</span>{" "}
+            <span className="font-bold text-tertiary">Management:</span>{" "}
             Seamless renewals and updates for your domain.
           </li>
         </ul>
         <h3 className="text-xl font-bold">Web Hosting</h3>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">Managed Hosting:</span>{" "}
+            <span className="font-bold text-tertiary">Managed Hosting:</span>{" "}
             Enjoy stress-free hosting with regular updates and backups.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Optimized Performance:
             </span>{" "}
             Fast, secure servers for high-speed websites.
           </li>
           <li>
-            <span className="font-bold text-secondary">SSL Certificates:</span>{" "}
+            <span className="font-bold text-tertiary">SSL Certificates:</span>{" "}
             Enhance security and improve SEO rankings.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               99.9% Uptime Guarantee:
             </span>{" "}
             Ensure your website is always accessible.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Scalable Hosting Plans:
             </span>{" "}
             Flexible solutions to fit businesses of all sizes.
@@ -182,23 +190,24 @@ const CustomWebsite: FC = () => {
           Our pricing is customized based on your website’s features,
           complexity, and scope:
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-secondary">Basic Websites:</span>{" "}
-            Starting at $2,500 for a simple, informational website (5–10 pages).
-          </li>
-          <li>
-            <span className="font-bold text-secondary">Advanced Websites:</span>{" "}
-            Starting at $4,000 for custom functionality, integrations, and
-            dynamic content.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Hosting and Domain Packages:
-            </span>{" "}
-            Starting at $15/month.
-          </li>
-        </ul>
+        {companySpecificServices.map((service) => {
+          return (
+            <>
+              {service.name === "Custom Website Design" && (
+                <ul className="list-disc list-inside space-y-2">
+                  {service.pricingTiers.map((pricing) => (
+                    <li key={pricing.name}>
+                      <span className="font-bold text-tertiary">
+                        {pricing.name}:
+                      </span>
+                      <span className="pl-2">{pricing.info}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
+          );
+        })}
       </section>
 
       <section className="my-8">

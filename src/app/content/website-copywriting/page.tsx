@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
+import { contentCreationServices } from "@/lib/constants";
 
 const WebsiteCopywritingServices: FC = () => {
   const router = useRouter();
@@ -12,10 +13,19 @@ const WebsiteCopywritingServices: FC = () => {
       <h1 className="text-3xl font-bold text-center">
         Website Copywriting Services
       </h1>
-      <p className="text-center text-lg my-4">
-        Craft persuasive, engaging, and SEO-optimized copy that turns visitors
-        into loyal customers.
-      </p>
+      {contentCreationServices.map((service) => {
+        return (
+          <>
+            <div className="text-center text-lg my-4">
+              {service.name === "Website Copywriting" ? (
+                <div key={service.name}>
+                  <span className="mt-4">{service.details}</span>
+                </div>
+              ) : null}
+            </div>
+          </>
+        );
+      })}
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">
@@ -28,23 +38,23 @@ const WebsiteCopywritingServices: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">Boost Conversions:</span>{" "}
+            <span className="font-bold text-tertiary">Boost Conversions:</span>{" "}
             Persuasive copy motivates visitors to take action, whether it’s
             signing up, purchasing, or contacting you.
           </li>
           <li>
-            <span className="font-bold text-secondary">Enhance SEO:</span>{" "}
+            <span className="font-bold text-tertiary">Enhance SEO:</span>{" "}
             Optimized copy improves your search engine rankings and drives
             organic traffic.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Strengthen Brand Identity:
             </span>{" "}
             Communicate your unique voice and values effectively.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Improve User Experience:
             </span>{" "}
             Clear, concise copy helps visitors navigate your website with ease.
@@ -62,32 +72,32 @@ const WebsiteCopywritingServices: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">Homepage Copy:</span>{" "}
+            <span className="font-bold text-tertiary">Homepage Copy:</span>{" "}
             Captivate visitors and clearly communicate your value proposition.
           </li>
           <li>
-            <span className="font-bold text-secondary">About Page Copy:</span>{" "}
+            <span className="font-bold text-tertiary">About Page Copy:</span>{" "}
             Share your brand’s story, mission, and vision in a compelling way.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Service/Offer Page Copy:
             </span>{" "}
             Highlight your offerings with benefit-driven language that converts.
           </li>
           <li>
-            <span className="font-bold text-secondary">Landing Pages:</span>{" "}
+            <span className="font-bold text-tertiary">Landing Pages:</span>{" "}
             Create focused, high-converting pages for specific campaigns.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Product Descriptions:
             </span>{" "}
             Write engaging, SEO-friendly descriptions that showcase your
             products.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Call-to-Actions (CTAs):
             </span>{" "}
             Craft impactful CTAs that guide users toward desired actions.
@@ -99,30 +109,30 @@ const WebsiteCopywritingServices: FC = () => {
         <h2 className="text-2xl font-semibold">Our Process</h2>
         <ul className="list-decimal list-inside space-y-4">
           <li>
-            <span className="font-bold text-secondary">Discovery:</span>{" "}
+            <span className="font-bold text-tertiary">Discovery:</span>{" "}
             Understand your business, audience, and goals.
           </li>
           <li>
-            <span className="font-bold text-secondary">Research:</span> Conduct
+            <span className="font-bold text-tertiary">Research:</span> Conduct
             competitor analysis and keyword research to inform the copy.
           </li>
           <li>
-            <span className="font-bold text-secondary">Drafting:</span> Create
+            <span className="font-bold text-tertiary">Drafting:</span> Create
             clear, engaging, and optimized copy for your website.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Review and Feedback:
             </span>{" "}
             Collaborate with your team to refine the content.
           </li>
           <li>
-            <span className="font-bold text-secondary">Final Delivery:</span>{" "}
+            <span className="font-bold text-tertiary">Final Delivery:</span>{" "}
             Provide ready-to-publish copy tailored for your CMS or platform.
           </li>
         </ul>
         <p className="my-4">
-          <span className="font-bold text-secondary">Timeline:</span> Project
+          <span className="font-bold text-tertiary">Timeline:</span> Project
           timelines depend on the number of pages, complexity of the content,
           and SEO requirements. Typical timelines range from 1 to 3 weeks.
         </p>
@@ -149,26 +159,24 @@ const WebsiteCopywritingServices: FC = () => {
           Pricing is based on the number of pages, word count, and complexity of
           the content.
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-secondary">
-              Single Page (e.g., Home or About):
-            </span>{" "}
-            Starting at $300.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Multi-Page Projects (5+ pages):
-            </span>{" "}
-            Starting at $1,200.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Landing Pages or Campaign-Specific Pages:
-            </span>{" "}
-            Starting at $500 per page.
-          </li>
-        </ul>
+        {contentCreationServices.map((service) => {
+          return (
+            <>
+              {service.name === "Website Copywriting" && (
+                <ul className="list-disc list-inside space-y-2">
+                  {service.pricingTiers.map((pricing) => (
+                    <li key={pricing.name}>
+                      <span className="font-bold text-tertiary">
+                        {pricing.name}:
+                      </span>
+                      <span className="pl-2">{pricing.info}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
+          );
+        })}
       </section>
 
       <section className="my-8">

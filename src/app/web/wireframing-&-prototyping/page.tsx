@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
+import { websiteServices } from "@/lib/constants";
 
 const WireframingPrototypingServices: FC = () => {
   const router = useRouter();
@@ -12,10 +13,19 @@ const WireframingPrototypingServices: FC = () => {
       <h1 className="text-3xl font-bold text-center">
         Wireframing and Prototyping Services
       </h1>
-      <p className="text-center text-lg my-4">
-        Transform your ideas into interactive wireframes and prototypes that
-        bring your vision to life.
-      </p>
+      {websiteServices.map((service) => {
+        return (
+          <>
+            <div className="text-center text-lg my-4">
+              {service.name === "Wireframing & Prototyping" ? (
+                <div key={service.name}>
+                  <span className="mt-4">{service.details}</span>
+                </div>
+              ) : null}
+            </div>
+          </>
+        );
+      })}
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">
@@ -29,29 +39,29 @@ const WireframingPrototypingServices: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">Clarity:</span> Define
+            <span className="font-bold text-tertiary">Clarity:</span> Define
             layouts, content hierarchy, and navigation structure clearly.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Cost-Effective Iterations:
             </span>{" "}
             Identify and fix issues early, saving time and resources.
           </li>
           <li>
-            <span className="font-bold text-secondary">Collaboration:</span>{" "}
+            <span className="font-bold text-tertiary">Collaboration:</span>{" "}
             Enable better communication between stakeholders, designers, and
             developers.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               User-Centered Design:
             </span>{" "}
             Test designs with users to validate assumptions and improve
             functionality.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Accelerated Development:
             </span>{" "}
             Provide a clear blueprint for developers to build upon.
@@ -69,33 +79,33 @@ const WireframingPrototypingServices: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Low-Fidelity Wireframes:
             </span>{" "}
             Quick sketches to outline content layout and navigation.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               High-Fidelity Wireframes:
             </span>{" "}
             Detailed wireframes with precise design elements for a closer
             representation of the final product.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Interactive Prototypes:
             </span>{" "}
             Clickable prototypes that simulate real user interactions.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Usability Testing Prototypes:
             </span>{" "}
             Prototypes optimized for testing with users to gather actionable
             feedback.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Hand-Off Ready Designs:
             </span>{" "}
             Wireframes and prototypes complete with annotations for developers.
@@ -107,28 +117,28 @@ const WireframingPrototypingServices: FC = () => {
         <h2 className="text-2xl font-semibold">Our Process</h2>
         <ul className="list-decimal list-inside space-y-4">
           <li>
-            <span className="font-bold text-secondary">Discovery:</span> Gather
+            <span className="font-bold text-tertiary">Discovery:</span> Gather
             requirements, understand user needs, and define project goals.
           </li>
           <li>
-            <span className="font-bold text-secondary">Sketching:</span> Create
+            <span className="font-bold text-tertiary">Sketching:</span> Create
             rough wireframes to visualize ideas and structure.
           </li>
           <li>
-            <span className="font-bold text-secondary">Wireframing:</span> Build
+            <span className="font-bold text-tertiary">Wireframing:</span> Build
             detailed wireframes to establish layouts and content placement.
           </li>
           <li>
-            <span className="font-bold text-secondary">Prototyping:</span>{" "}
+            <span className="font-bold text-tertiary">Prototyping:</span>{" "}
             Develop interactive prototypes to simulate user interactions and
             workflows.
           </li>
           <li>
-            <span className="font-bold text-secondary">Testing:</span> Conduct
+            <span className="font-bold text-tertiary">Testing:</span> Conduct
             usability testing to validate the design and gather feedback.
           </li>
           <li>
-            <span className="font-bold text-secondary">Iteration:</span> Refine
+            <span className="font-bold text-tertiary">Iteration:</span> Refine
             designs based on insights from testing and feedback.
           </li>
         </ul>
@@ -159,27 +169,24 @@ const WireframingPrototypingServices: FC = () => {
           Our wireframing and prototyping services are tailored to meet your
           needs. Pricing depends on the complexity and scope of the project:
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-secondary">
-              Low-Fidelity Wireframes:
-            </span>{" "}
-            Starting at $1,500 for quick sketches outlining layout and
-            navigation.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              High-Fidelity Wireframes:
-            </span>{" "}
-            Starting at $2,000 for detailed designs closer to the final product.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Interactive Prototypes:
-            </span>{" "}
-            Starting at $2,500 for clickable, user-interactive mockups.
-          </li>
-        </ul>
+        {websiteServices.map((service) => {
+          return (
+            <>
+              {service.name === "Wireframing & Prototyping" && (
+                <ul className="list-disc list-inside space-y-2">
+                  {service.pricingTiers.map((pricing) => (
+                    <li key={pricing.name}>
+                      <span className="font-bold text-tertiary">
+                        {pricing.name}:
+                      </span>
+                      <span className="pl-2">{pricing.info}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
+          );
+        })}
       </section>
 
       <section className="my-8">

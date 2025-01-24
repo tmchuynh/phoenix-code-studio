@@ -1,6 +1,5 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { useSidebar } from "@/components/ui/sidebar";
 import { pastProjects } from "@/lib/constants";
 import { FC } from "react";
 

@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
+import { contentCreationServices } from "@/lib/constants";
 
 const ProductGuidesManualsServices: FC = () => {
   const router = useRouter();
@@ -12,10 +13,19 @@ const ProductGuidesManualsServices: FC = () => {
       <h1 className="text-3xl font-bold text-center">
         Product Guides and Manuals Writing Services
       </h1>
-      <p className="text-center text-lg my-4">
-        Simplify complex information with professionally written product guides
-        and manuals that educate and empower your audience.
-      </p>
+      {contentCreationServices.map((service) => {
+        return (
+          <>
+            <div className="text-center text-lg my-4">
+              {service.name === "Product Guides/Manuals" ? (
+                <div key={service.name}>
+                  <span className="mt-4">{service.details}</span>
+                </div>
+              ) : null}
+            </div>
+          </>
+        );
+      })}
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">
@@ -30,23 +40,23 @@ const ProductGuidesManualsServices: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Enhance User Experience:
             </span>{" "}
             Help customers navigate and utilize your product effectively.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Reduce Support Costs:
             </span>{" "}
             Minimize user errors and inquiries with clear documentation.
           </li>
           <li>
-            <span className="font-bold text-secondary">Build Trust:</span> Show
+            <span className="font-bold text-tertiary">Build Trust:</span> Show
             professionalism and attention to detail through high-quality guides.
           </li>
           <li>
-            <span className="font-bold text-secondary">Ensure Compliance:</span>{" "}
+            <span className="font-bold text-tertiary">Ensure Compliance:</span>{" "}
             Meet industry and regulatory documentation standards.
           </li>
         </ul>
@@ -62,37 +72,35 @@ const ProductGuidesManualsServices: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">User Manuals:</span>{" "}
+            <span className="font-bold text-tertiary">User Manuals:</span>{" "}
             Step-by-step instructions for setup, usage, and troubleshooting.
           </li>
           <li>
-            <span className="font-bold text-secondary">
-              Quick Start Guides:
-            </span>{" "}
+            <span className="font-bold text-tertiary">Quick Start Guides:</span>{" "}
             Concise, easy-to-digest instructions for rapid onboarding.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Technical Documentation:
             </span>{" "}
             In-depth, system-level documentation for technical users and
             developers.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               FAQs and Troubleshooting Guides:
             </span>{" "}
             Address common issues with clear, practical solutions.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Assembly and Installation Manuals:
             </span>{" "}
             Visual and written instructions for product assembly or
             installation.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Regulatory and Safety Manuals:
             </span>{" "}
             Ensure compliance with safety and industry standards.
@@ -104,32 +112,32 @@ const ProductGuidesManualsServices: FC = () => {
         <h2 className="text-2xl font-semibold">Our Process</h2>
         <ul className="list-decimal list-inside space-y-4">
           <li>
-            <span className="font-bold text-secondary">Discovery:</span>{" "}
+            <span className="font-bold text-tertiary">Discovery:</span>{" "}
             Understand your product, audience, and documentation requirements.
           </li>
           <li>
-            <span className="font-bold text-secondary">Content Planning:</span>{" "}
+            <span className="font-bold text-tertiary">Content Planning:</span>{" "}
             Outline the structure and key elements of the guide or manual.
           </li>
           <li>
-            <span className="font-bold text-secondary">Content Creation:</span>{" "}
+            <span className="font-bold text-tertiary">Content Creation:</span>{" "}
             Write clear, concise, and accurate content with supporting visuals.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Design and Formatting:
             </span>{" "}
             Ensure the document is visually appealing and aligned with your
             branding.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Review and Feedback:
             </span>{" "}
             Collaborate with your team to refine and finalize the content.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Delivery and Updates:
             </span>{" "}
             Provide the manual in multiple formats (PDF, print-ready, HTML) and
@@ -137,7 +145,7 @@ const ProductGuidesManualsServices: FC = () => {
           </li>
         </ul>
         <p className="my-4">
-          <span className="font-bold text-secondary">Timeline:</span> Project
+          <span className="font-bold text-tertiary">Timeline:</span> Project
           timelines depend on the manual's length, complexity, and audience.
           Typical projects take 2–6 weeks.
         </p>
@@ -165,26 +173,24 @@ const ProductGuidesManualsServices: FC = () => {
           Pricing is determined by the scope, length, and technical complexity
           of the manual.
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-secondary">
-              Quick Start Guides:
-            </span>{" "}
-            Starting at $750.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              User Manuals (10–20 pages):
-            </span>{" "}
-            Starting at $1,500.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Comprehensive Manuals (20+ pages):
-            </span>{" "}
-            Starting at $3,000.
-          </li>
-        </ul>
+        {contentCreationServices.map((service) => {
+          return (
+            <>
+              {service.name === "Product Guides/Manuals" && (
+                <ul className="list-disc list-inside space-y-2">
+                  {service.pricingTiers.map((pricing) => (
+                    <li key={pricing.name}>
+                      <span className="font-bold text-tertiary">
+                        {pricing.name}:
+                      </span>
+                      <span className="pl-2">{pricing.info}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
+          );
+        })}
       </section>
 
       <section className="my-8">

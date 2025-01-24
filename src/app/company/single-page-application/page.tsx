@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { companySpecificServices } from "@/lib/constants";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
 
@@ -12,10 +13,19 @@ const SPAServices: FC = () => {
       <h1 className="text-3xl font-bold text-center">
         Single Page Application (SPA) Development Services
       </h1>
-      <p className="text-center text-lg my-4">
-        Build fast, interactive, and user-friendly applications with our
-        tailored SPA solutions.
-      </p>
+      {companySpecificServices.map((service) => {
+        return (
+          <>
+            <div className="text-center text-lg my-4">
+              {service.name === "Single Page Application" ? (
+                <div key={service.name}>
+                  <span className="mt-4">{service.details}</span>
+                </div>
+              ) : null}
+            </div>
+          </>
+        );
+      })}
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">
@@ -29,30 +39,28 @@ const SPAServices: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">Faster Load Times:</span>{" "}
+            <span className="font-bold text-tertiary">Faster Load Times:</span>{" "}
             Initial loading is faster, with subsequent interactions handled
             dynamically.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Improved User Experience:
             </span>{" "}
             Seamless navigation without disruptive page reloads.
           </li>
           <li>
-            <span className="font-bold text-secondary">
-              Highly Interactive:
-            </span>{" "}
+            <span className="font-bold text-tertiary">Highly Interactive:</span>{" "}
             SPAs support real-time features and rich interactivity.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Cross-Platform Compatibility:
             </span>{" "}
             Works smoothly across devices and platforms.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Efficient Resource Usage:
             </span>{" "}
             Reduces server load with client-side rendering.
@@ -68,28 +76,28 @@ const SPAServices: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Custom SPA Development:
             </span>{" "}
             Build SPAs using modern frameworks like React, Angular, or Vue.
           </li>
           <li>
-            <span className="font-bold text-secondary">Responsive Design:</span>{" "}
+            <span className="font-bold text-tertiary">Responsive Design:</span>{" "}
             Create SPAs optimized for all devices, from desktops to mobile.
           </li>
           <li>
-            <span className="font-bold text-secondary">API Integration:</span>{" "}
+            <span className="font-bold text-tertiary">API Integration:</span>{" "}
             Seamlessly connect your SPA with RESTful or GraphQL APIs.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Real-Time Functionality:
             </span>{" "}
             Enable live updates and real-time interactions using WebSockets or
             similar technologies.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Progressive Web App (PWA) Transformation:
             </span>{" "}
             Convert your SPA into a PWA for offline support and enhanced
@@ -118,32 +126,32 @@ const SPAServices: FC = () => {
         <h2 className="text-2xl font-semibold">Our Process</h2>
         <ul className="list-decimal list-inside space-y-4">
           <li>
-            <span className="font-bold text-secondary">Consultation:</span>{" "}
+            <span className="font-bold text-tertiary">Consultation:</span>{" "}
             Understand your project requirements, audience, and objectives.
           </li>
           <li>
-            <span className="font-bold text-secondary">Planning:</span> Develop
-            a clear roadmap with wireframes and prototypes.
+            <span className="font-bold text-tertiary">Planning:</span> Develop a
+            clear roadmap with wireframes and prototypes.
           </li>
           <li>
-            <span className="font-bold text-secondary">Development:</span> Build
+            <span className="font-bold text-tertiary">Development:</span> Build
             your SPA using modern frameworks and technologies.
           </li>
           <li>
-            <span className="font-bold text-secondary">Testing:</span> Conduct
+            <span className="font-bold text-tertiary">Testing:</span> Conduct
             rigorous performance, usability, and security testing.
           </li>
           <li>
-            <span className="font-bold text-secondary">Deployment:</span> Launch
+            <span className="font-bold text-tertiary">Deployment:</span> Launch
             your SPA with optimized hosting solutions.
           </li>
           <li>
-            <span className="font-bold text-secondary">Support:</span> Provide
+            <span className="font-bold text-tertiary">Support:</span> Provide
             ongoing maintenance, updates, and enhancements.
           </li>
         </ul>
         <p className="my-4">
-          <span className="font-bold text-secondary">Timeline:</span> Most SPA
+          <span className="font-bold text-tertiary">Timeline:</span> Most SPA
           projects are completed within 4–8 weeks, depending on complexity and
           features.
         </p>
@@ -155,25 +163,25 @@ const SPAServices: FC = () => {
           Our pricing is based on the complexity and features of your SPA
           project. We offer flexible packages to suit businesses of all sizes:
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-secondary">Starter Package:</span>{" "}
-            $5,000 – Basic SPA with core features and responsive design.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">Growth Package:</span>{" "}
-            $10,000 – Advanced interactivity, API integration, and real-time
-            functionality.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Enterprise Package:
-            </span>{" "}
-            $15,000+ – Complex SPAs with PWA features, real-time updates, and
-            scalability for high-traffic platforms.
-          </li>
-        </ul>
         <p>Ongoing support and maintenance plans start at $200/month.</p>
+        {companySpecificServices.map((service) => {
+          return (
+            <>
+              {service.name === "Single Page Application" && (
+                <ul className="list-disc list-inside space-y-2">
+                  {service.pricingTiers.map((pricing) => (
+                    <li key={pricing.name}>
+                      <span className="font-bold text-tertiary">
+                        {pricing.name}:
+                      </span>
+                      <span className="pl-2">{pricing.info}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
+          );
+        })}
       </section>
 
       <section className="my-8">

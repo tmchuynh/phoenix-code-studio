@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
+import { contentCreationServices } from "@/lib/constants";
 
 const BlogWritingServices: FC = () => {
   const router = useRouter();
@@ -10,10 +11,19 @@ const BlogWritingServices: FC = () => {
   return (
     <main className="w-11/12 mx-auto py-6">
       <h1 className="text-3xl font-bold text-center">Blog Writing Services</h1>
-      <p className="text-center text-lg my-4">
-        Engage your audience and boost your online presence with expertly
-        crafted blog content.
-      </p>
+      {contentCreationServices.map((service) => {
+        return (
+          <>
+            <div className="text-center text-lg my-4">
+              {service.name === "Blog Writing" ? (
+                <div key={service.name}>
+                  <span className="mt-4">{service.details}</span>
+                </div>
+              ) : null}
+            </div>
+          </>
+        );
+      })}
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Why Blog Writing Matters</h2>
@@ -25,25 +35,25 @@ const BlogWritingServices: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Increase Visibility:
             </span>{" "}
             Blogs help improve your search engine rankings and attract organic
             traffic.
           </li>
           <li>
-            <span className="font-bold text-secondary">Build Authority:</span>{" "}
+            <span className="font-bold text-tertiary">Build Authority:</span>{" "}
             Showcase your expertise in your industry and position your brand as
             a thought leader.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Engage Your Audience:
             </span>{" "}
             Provide valuable, actionable insights that keep readers coming back.
           </li>
           <li>
-            <span className="font-bold text-secondary">Drive Conversions:</span>{" "}
+            <span className="font-bold text-tertiary">Drive Conversions:</span>{" "}
             Use blogs as part of your content marketing strategy to convert
             readers into customers.
           </li>
@@ -58,32 +68,26 @@ const BlogWritingServices: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">Topic Ideation:</span>{" "}
+            <span className="font-bold text-tertiary">Topic Ideation:</span>{" "}
             Generate engaging and relevant blog topics aligned with your
             audience’s interests.
           </li>
           <li>
-            <span className="font-bold text-secondary">SEO Optimization:</span>{" "}
+            <span className="font-bold text-tertiary">SEO Optimization:</span>{" "}
             Craft blogs optimized for search engines with strategic keywords.
           </li>
           <li>
-            <span className="font-bold text-secondary">
-              Industry Expertise:
-            </span>{" "}
+            <span className="font-bold text-tertiary">Industry Expertise:</span>{" "}
             Write content tailored to your specific niche, ensuring credibility
             and accuracy.
           </li>
           <li>
-            <span className="font-bold text-secondary">
-              Content Formatting:
-            </span>{" "}
+            <span className="font-bold text-tertiary">Content Formatting:</span>{" "}
             Deliver blogs formatted for readability, including subheadings,
             bullet points, and callouts.
           </li>
           <li>
-            <span className="font-bold text-secondary">
-              Regular Publishing:
-            </span>{" "}
+            <span className="font-bold text-tertiary">Regular Publishing:</span>{" "}
             Provide consistent blog content to maintain audience engagement.
           </li>
         </ul>
@@ -93,30 +97,30 @@ const BlogWritingServices: FC = () => {
         <h2 className="text-2xl font-semibold">Our Process</h2>
         <ul className="list-decimal list-inside space-y-4">
           <li>
-            <span className="font-bold text-secondary">Discovery:</span>{" "}
+            <span className="font-bold text-tertiary">Discovery:</span>{" "}
             Understand your brand, audience, and content goals.
           </li>
           <li>
-            <span className="font-bold text-secondary">Research:</span> Conduct
+            <span className="font-bold text-tertiary">Research:</span> Conduct
             in-depth research to identify trends and keywords in your industry.
           </li>
           <li>
-            <span className="font-bold text-secondary">Content Creation:</span>{" "}
+            <span className="font-bold text-tertiary">Content Creation:</span>{" "}
             Write engaging, informative, and SEO-friendly blogs.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Editing & Proofreading:
             </span>{" "}
             Ensure every blog is polished, accurate, and error-free.
           </li>
           <li>
-            <span className="font-bold text-secondary">Delivery:</span> Provide
+            <span className="font-bold text-tertiary">Delivery:</span> Provide
             ready-to-publish content or upload directly to your CMS.
           </li>
         </ul>
         <p className="my-4">
-          <span className="font-bold text-secondary">Timeline:</span> Blogs are
+          <span className="font-bold text-tertiary">Timeline:</span> Blogs are
           typically delivered within 3–7 business days, depending on complexity
           and word count.
         </p>
@@ -144,20 +148,24 @@ const BlogWritingServices: FC = () => {
           Factors that affect pricing include word count, complexity, and SEO
           requirements.
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-secondary">Single Blog Post:</span>{" "}
-            Starting at $200 for up to 500 words.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">Long-Form Blogs:</span>{" "}
-            Starting at $400 for 1,000+ words.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">Monthly Packages:</span>{" "}
-            Custom pricing for regular publishing (e.g., 4+ blogs per month).
-          </li>
-        </ul>
+        {contentCreationServices.map((service) => {
+          return (
+            <>
+              {service.name === "Blog Writing" && (
+                <ul className="list-disc list-inside space-y-2">
+                  {service.pricingTiers.map((pricing) => (
+                    <li key={pricing.name}>
+                      <span className="font-bold text-tertiary">
+                        {pricing.name}:
+                      </span>
+                      <span className="pl-2">{pricing.info}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
+          );
+        })}
       </section>
 
       <section className="my-8">

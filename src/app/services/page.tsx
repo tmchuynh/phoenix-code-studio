@@ -3,7 +3,11 @@
 import { FC } from "react";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
-import { websiteServices, contentCreationServices } from "@/lib/constants";
+import {
+  websiteServices,
+  contentCreationServices,
+  companySpecificServices,
+} from "@/lib/constants";
 import { formatCurrency } from "@/lib/utils";
 
 const ServicesPage: FC = () => {
@@ -25,35 +29,72 @@ const ServicesPage: FC = () => {
   return (
     <main className="w-11/12 mx-auto py-6">
       {/* Introduction Section */}
-      <section className="text-center my-16">
-        <h1 className="text-4xl font-bold text-primary">Our Services</h1>
+      <section className="text-center">
+        <h1 className="text-4xl font-bold">Our Services</h1>
         <p className="text-lg my-4">
           Explore the services we offer. Whether it's web development or content
           creation, we've got you covered.
         </p>
       </section>
 
-      {/* Website Services Section */}
+      {/* Company Services Section */}
       <section className="my-16">
-        <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
-          Website Services
+        <h2 className="text-3xl font-semibold text-center mb-6 text-tertiary">
+          Services for Companies
         </h2>
         <div className="space-y-8">
-          {websiteServices.map((service, index) => (
-            <>
-              <div key={index} className="flex items-end">
+          {companySpecificServices.map((service, index) => (
+            <div key={index}>
+              <div
+                key={service.name}
+                className="flex justify-between items-end pb-4"
+              >
                 <div>
                   <h3 className="text-xl font-semibold text-primary">
                     {service.name}
                   </h3>
-                  <p className="mt-4">{service.details}</p>
+                  <p className="mt-4">{service.info}</p>
                   <p className="mt-4">
                     <strong>Starting at: </strong>
                     {formatCurrency(service.startingPrice)}
                   </p>
                 </div>
                 <Button
-                  variant="secondary"
+                  onClick={() => navigateToService(service.name)}
+                  className="m-0"
+                >
+                  Learn More
+                </Button>
+              </div>
+              {index !== companySpecificServices.length - 1 && <hr />}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Website Services Section */}
+      <section className="my-16">
+        <h2 className="text-3xl font-semibold text-center mb-6 text-tertiary">
+          Website Services
+        </h2>
+        <div className="space-y-8">
+          {websiteServices.map((service, index) => (
+            <div key={index}>
+              <div
+                key={service.name}
+                className="flex justify-between items-end pb-4"
+              >
+                <div>
+                  <h3 className="text-xl font-semibold text-primary">
+                    {service.name}
+                  </h3>
+                  <p className="mt-4">{service.info}</p>
+                  <p className="mt-4">
+                    <strong>Starting at: </strong>
+                    {formatCurrency(service.startingPrice)}
+                  </p>
+                </div>
+                <Button
                   onClick={() => navigateToService(service.name)}
                   className="m-0"
                 >
@@ -61,32 +102,34 @@ const ServicesPage: FC = () => {
                 </Button>
               </div>
               {index !== websiteServices.length - 1 && <hr />}
-            </>
+            </div>
           ))}
         </div>
       </section>
 
       {/* Content Creation Services Section */}
       <section className="my-16">
-        <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
+        <h2 className="text-3xl font-semibold text-center mb-6 text-tertiary">
           Content Creation Services
         </h2>
         <div className="space-y-8">
           {contentCreationServices.map((service, index) => (
-            <>
-              <div key={index} className="flex items-end">
+            <div key={index}>
+              <div
+                key={service.name}
+                className="flex justify-between items-end pb-4"
+              >
                 <div>
                   <h3 className="text-xl font-semibold text-primary">
                     {service.name}
                   </h3>
-                  <p className="mt-4">{service.details}</p>
+                  <p className="mt-4">{service.info}</p>
                   <p className="mt-4">
                     <strong>Starting at: </strong>
                     {formatCurrency(service.startingPrice)}
                   </p>
                 </div>
                 <Button
-                  variant="secondary"
                   onClick={() => navigateToContent(service.name)}
                   className="m-0"
                 >
@@ -94,7 +137,7 @@ const ServicesPage: FC = () => {
                 </Button>
               </div>
               {index !== contentCreationServices.length - 1 && <hr />}
-            </>
+            </div>
           ))}
         </div>
       </section>

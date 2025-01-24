@@ -23,10 +23,12 @@ const PaymentPlansPage: FC = () => {
           {paymentPlans.map((plan, index) => (
             <Card
               key={index}
-              className="border p-2 h-full justify-between rounded-lg shadow-lg flex flex-col"
+              className="p-2 h-full justify-between rounded-lg shadow-md flex flex-col border-2 border-transparent hover:border-border"
             >
               <CardContent>
-                <h3 className="text-xl font-semibold mb-4">{plan.title}</h3>
+                <h3 className="text-xl font-semibold mb-4 text-primary">
+                  {plan.title}
+                </h3>
                 <p className="mb-4">{plan.description}</p>
                 <ul className="list-disc list-inside space-y-2">
                   {plan.details.map((detail, i) => (

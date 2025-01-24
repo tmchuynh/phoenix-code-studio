@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
+import { contentCreationServices } from "@/lib/constants";
 
 const BrochuresAndFlyersServices: FC = () => {
   const router = useRouter();
@@ -12,10 +13,19 @@ const BrochuresAndFlyersServices: FC = () => {
       <h1 className="text-3xl font-bold text-center">
         Brochures and Flyers Design Services
       </h1>
-      <p className="text-center text-lg my-4">
-        Create visually stunning and impactful brochures and flyers to captivate
-        your audience and elevate your brand.
-      </p>
+      {contentCreationServices.map((service) => {
+        return (
+          <>
+            <div className="text-center text-lg my-4">
+              {service.name === "Brochures and/or Flyers" ? (
+                <div key={service.name}>
+                  <span className="mt-4">{service.details}</span>
+                </div>
+              ) : null}
+            </div>
+          </>
+        );
+      })}
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">
@@ -28,23 +38,23 @@ const BrochuresAndFlyersServices: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Highlight Your Offerings:
             </span>{" "}
             Showcase your products or services clearly and concisely.
           </li>
           <li>
-            <span className="font-bold text-secondary">Drive Engagement:</span>{" "}
+            <span className="font-bold text-tertiary">Drive Engagement:</span>{" "}
             Capture attention with visually appealing designs.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Cost-Effective Marketing:
             </span>{" "}
             Distribute at events, in-store, or through mail to maximize reach.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Build Brand Identity:
             </span>{" "}
             Reinforce your brand’s values, colors, and messaging.
@@ -62,27 +72,27 @@ const BrochuresAndFlyersServices: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Custom Brochure Design:
             </span>{" "}
             Tailored designs in bi-fold, tri-fold, or multi-page formats.
           </li>
           <li>
-            <span className="font-bold text-secondary">Flyer Design:</span>{" "}
+            <span className="font-bold text-tertiary">Flyer Design:</span>{" "}
             One-page flyers optimized for promotions, events, or campaigns.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Content Development:
             </span>{" "}
             Engaging copywriting and content structuring for maximum impact.
           </li>
           <li>
-            <span className="font-bold text-secondary">Brand Integration:</span>{" "}
+            <span className="font-bold text-tertiary">Brand Integration:</span>{" "}
             Incorporate your brand’s colors, logo, and tone for a cohesive look.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Print-Ready Formats:
             </span>{" "}
             Deliver print-ready files (PDF, AI, or EPS) with high-quality
@@ -95,32 +105,32 @@ const BrochuresAndFlyersServices: FC = () => {
         <h2 className="text-2xl font-semibold">Our Process</h2>
         <ul className="list-decimal list-inside space-y-4">
           <li>
-            <span className="font-bold text-secondary">Discovery:</span>{" "}
+            <span className="font-bold text-tertiary">Discovery:</span>{" "}
             Understand your goals, target audience, and branding requirements.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Concept Development:
             </span>{" "}
             Create initial design concepts based on your preferences.
           </li>
           <li>
-            <span className="font-bold text-secondary">Design Execution:</span>{" "}
+            <span className="font-bold text-tertiary">Design Execution:</span>{" "}
             Develop visually appealing layouts with content and images.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Review and Revisions:
             </span>{" "}
             Collaborate with you to refine the design and ensure satisfaction.
           </li>
           <li>
-            <span className="font-bold text-secondary">Final Delivery:</span>{" "}
+            <span className="font-bold text-tertiary">Final Delivery:</span>{" "}
             Provide high-resolution, print-ready files in your preferred format.
           </li>
         </ul>
         <p className="my-4">
-          <span className="font-bold text-secondary">Timeline:</span> Most
+          <span className="font-bold text-tertiary">Timeline:</span> Most
           projects are completed within 3–7 business days, depending on
           complexity.
         </p>
@@ -147,28 +157,24 @@ const BrochuresAndFlyersServices: FC = () => {
           Pricing depends on the design complexity, format, and number of
           revisions.
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-secondary">Flyers (One Page):</span>{" "}
-            Starting at $150 per design.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">Bi-Fold Brochures:</span>{" "}
-            Starting at $300 per design.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Tri-Fold Brochures:
-            </span>{" "}
-            Starting at $400 per design.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Custom Multi-Page Brochures:
-            </span>{" "}
-            Starting at $600, based on page count and complexity.
-          </li>
-        </ul>
+        {contentCreationServices.map((service) => {
+          return (
+            <>
+              {service.name === "Brochures and/or Flyers" && (
+                <ul className="list-disc list-inside space-y-2">
+                  {service.pricingTiers.map((pricing) => (
+                    <li key={pricing.name}>
+                      <span className="font-bold text-tertiary">
+                        {pricing.name}:
+                      </span>
+                      <span className="pl-2">{pricing.info}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
+          );
+        })}
       </section>
 
       <section className="my-8">

@@ -35,7 +35,7 @@ export function NavSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <a href="/">
                 <div className="grid flex-1 text-left leading-tight w-full">
                   <span className="font-semibold font-Buda text-lg text-primary">
-                    Crimson Lotus Creations
+                    Phoenix Code Studio
                   </span>
                   <span className="slogan tracking-wider text-lg text-secondary">
                     Transforming Visions into Digital Elegance

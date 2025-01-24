@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
+import { contentCreationServices } from "@/lib/constants";
 
 const ProposalWritingServices: FC = () => {
   const router = useRouter();
@@ -12,10 +13,19 @@ const ProposalWritingServices: FC = () => {
       <h1 className="text-3xl font-bold text-center">
         Proposal Writing Services
       </h1>
-      <p className="text-center text-lg my-4">
-        Create compelling, professional proposals that win clients, contracts,
-        and funding.
-      </p>
+      {contentCreationServices.map((service) => {
+        return (
+          <>
+            <div className="text-center text-lg my-4">
+              {service.name === "Proposal Writing" ? (
+                <div key={service.name}>
+                  <span className="mt-4">{service.details}</span>
+                </div>
+              ) : null}
+            </div>
+          </>
+        );
+      })}
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Why Proposal Writing Matters</h2>
@@ -27,26 +37,22 @@ const ProposalWritingServices: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">
-              Win More Contracts:
-            </span>{" "}
+            <span className="font-bold text-tertiary">Win More Contracts:</span>{" "}
             Professionally written proposals increase your chances of success.
           </li>
           <li>
-            <span className="font-bold text-secondary">Save Time:</span> Let
+            <span className="font-bold text-tertiary">Save Time:</span> Let
             experts handle the writing while you focus on other priorities.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Impress Stakeholders:
             </span>{" "}
             Demonstrate professionalism and attention to detail with polished
             proposals.
           </li>
           <li>
-            <span className="font-bold text-secondary">
-              Tailored Messaging:
-            </span>{" "}
+            <span className="font-bold text-tertiary">Tailored Messaging:</span>{" "}
             Address your audience’s specific needs and concerns effectively.
           </li>
         </ul>
@@ -62,27 +68,25 @@ const ProposalWritingServices: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">
-              Business Proposals:
-            </span>{" "}
+            <span className="font-bold text-tertiary">Business Proposals:</span>{" "}
             Win clients with persuasive, professionally written proposals.
           </li>
           <li>
-            <span className="font-bold text-secondary">Grant Proposals:</span>{" "}
+            <span className="font-bold text-tertiary">Grant Proposals:</span>{" "}
             Secure funding with clear, compelling, and compliant grant
             applications.
           </li>
           <li>
-            <span className="font-bold text-secondary">Project Proposals:</span>{" "}
+            <span className="font-bold text-tertiary">Project Proposals:</span>{" "}
             Outline your project scope, goals, and deliverables effectively.
           </li>
           <li>
-            <span className="font-bold text-secondary">RFP Responses:</span>{" "}
+            <span className="font-bold text-tertiary">RFP Responses:</span>{" "}
             Respond to requests for proposals (RFPs) with tailored, high-impact
             submissions.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Partnership Proposals:
             </span>{" "}
             Forge partnerships with concise, value-driven messaging.
@@ -94,31 +98,31 @@ const ProposalWritingServices: FC = () => {
         <h2 className="text-2xl font-semibold">Our Process</h2>
         <ul className="list-decimal list-inside space-y-4">
           <li>
-            <span className="font-bold text-secondary">Discovery:</span>{" "}
+            <span className="font-bold text-tertiary">Discovery:</span>{" "}
             Understand your goals, audience, and proposal requirements.
           </li>
           <li>
-            <span className="font-bold text-secondary">Research:</span> Gather
+            <span className="font-bold text-tertiary">Research:</span> Gather
             supporting data, audience insights, and competitive analysis.
           </li>
           <li>
-            <span className="font-bold text-secondary">Drafting:</span> Write a
+            <span className="font-bold text-tertiary">Drafting:</span> Write a
             clear, persuasive proposal tailored to your objectives.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Review and Feedback:
             </span>{" "}
             Collaborate with you to refine and finalize the proposal.
           </li>
           <li>
-            <span className="font-bold text-secondary">Final Delivery:</span>{" "}
+            <span className="font-bold text-tertiary">Final Delivery:</span>{" "}
             Provide a polished, ready-to-submit proposal in the desired format
             (PDF, Word, etc.).
           </li>
         </ul>
         <p className="my-4">
-          <span className="font-bold text-secondary">Timeline:</span> The
+          <span className="font-bold text-tertiary">Timeline:</span> The
           timeline depends on the proposal’s complexity, length, and
           requirements. Typical projects range from 1 to 3 weeks.
         </p>
@@ -147,26 +151,24 @@ const ProposalWritingServices: FC = () => {
           Pricing is based on the complexity, length, and specific requirements
           of your proposal.
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-secondary">
-              Basic Proposals (e.g., 1-3 pages):
-            </span>{" "}
-            Starting at $500.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Comprehensive Proposals (e.g., 5-10 pages):
-            </span>{" "}
-            Starting at $1,500.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Grant Proposals or RFP Responses:
-            </span>{" "}
-            Starting at $2,000.
-          </li>
-        </ul>
+        {contentCreationServices.map((service) => {
+          return (
+            <>
+              {service.name === "Proposal Writing" && (
+                <ul className="list-disc list-inside space-y-2">
+                  {service.pricingTiers.map((pricing) => (
+                    <li key={pricing.name}>
+                      <span className="font-bold text-tertiary">
+                        {pricing.name}:
+                      </span>
+                      <span className="pl-2">{pricing.info}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
+          );
+        })}
       </section>
 
       <section className="my-8">

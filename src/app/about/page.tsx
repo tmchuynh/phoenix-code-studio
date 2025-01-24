@@ -10,11 +10,10 @@ const aboutUs = () => {
       <div>
         <h1>About Us</h1>
         <p>
-          At Crimson Lotus Creations, we blend cultural elegance with
-          cutting-edge technology to create bespoke digital experiences.
-          Inspired by the lotus flower—a symbol of growth, resilience, and
-          beauty—we specialize in helping small businesses flourish in the
-          digital world.
+          At Phoenix Code Studio, we blend cultural elegance with cutting-edge
+          technology to create bespoke digital experiences. Inspired by the
+          lotus flower—a symbol of growth, resilience, and beauty—we specialize
+          in helping small businesses flourish in the digital world.
         </p>
         <p>
           We offer tailored web development services, including custom website
@@ -25,19 +24,19 @@ const aboutUs = () => {
         </p>
         <p>
           Rooted in the values of excellence, creativity, and authenticity,
-          Crimson Lotus Creations is here to empower your business with a
-          digital presence that feels personal, professional, and inspiring.
-          Let’s work together to transform your online presence and help your
-          business bloom.
+          Phoenix Code Studio is here to empower your business with a digital
+          presence that feels personal, professional, and inspiring. Let’s work
+          together to transform your online presence and help your business
+          bloom.
         </p>
       </div>
       <SidebarSeparator className="bg-secondary" />
       <div className="py-3">
         <h2>Mission Statement</h2>
         <p>
-          At Crimson Lotus Creations, our mission is to empower small businesses
-          by transforming their digital presence into a bespoke reflection of
-          their unique brand identity. Rooted in the values of creativity,
+          At Phoenix Code Studio, our mission is to empower small businesses by
+          transforming their digital presence into a bespoke reflection of their
+          unique brand identity. Rooted in the values of creativity,
           authenticity, and cultural elegance, we craft modern and approachable
           web solutions that drive growth, foster connections, and help
           businesses thrive in an ever-evolving digital landscape.
@@ -145,13 +144,13 @@ const aboutUs = () => {
       <div className="py-3">
         <h2>Vision Statement</h2>
         <p>
-          At Crimson Lotus Creations, our vision is to revolutionize the way
-          small businesses establish their digital presence. We strive to
-          provide bespoke, impactful solutions that go beyond functionality,
-          capturing the unique identity, values, and aspirations of every client
-          we serve. By creating meaningful digital experiences, we aim to
-          empower businesses to connect with their audiences, foster growth, and
-          leave a lasting impact in an increasingly digital world.
+          At Phoenix Code Studio, our vision is to revolutionize the way small
+          businesses establish their digital presence. We strive to provide
+          bespoke, impactful solutions that go beyond functionality, capturing
+          the unique identity, values, and aspirations of every client we serve.
+          By creating meaningful digital experiences, we aim to empower
+          businesses to connect with their audiences, foster growth, and leave a
+          lasting impact in an increasingly digital world.
         </p>
         <p>
           We aspire to set a new benchmark in web development by seamlessly

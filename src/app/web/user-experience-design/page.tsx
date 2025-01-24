@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
+import { websiteServices } from "@/lib/constants";
 
 const UXDesignServices: FC = () => {
   const router = useRouter();
@@ -12,10 +13,19 @@ const UXDesignServices: FC = () => {
       <h1 className="text-3xl font-bold text-center">
         User Experience (UX) Design Services
       </h1>
-      <p className="text-center text-lg my-4">
-        Delivering intuitive, user-friendly, and engaging experiences to delight
-        your users and drive results.
-      </p>
+      {websiteServices.map((service) => {
+        return (
+          <>
+            <div className="text-center text-lg my-4">
+              {service.name === "User Experience Design" ? (
+                <div key={service.name}>
+                  <span className="mt-4">{service.details}</span>
+                </div>
+              ) : null}
+            </div>
+          </>
+        );
+      })}
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Why UX Design Matters</h2>
@@ -27,29 +37,27 @@ const UXDesignServices: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">
-              Improved Usability:
-            </span>{" "}
+            <span className="font-bold text-tertiary">Improved Usability:</span>{" "}
             Simplify navigation and interactions for users.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Enhanced Satisfaction:
             </span>{" "}
             Boost user engagement by solving real problems effectively.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Higher Conversion Rates:
             </span>{" "}
             Optimize your product to guide users toward desired actions.
           </li>
           <li>
-            <span className="font-bold text-secondary">Reduced Churn:</span>{" "}
+            <span className="font-bold text-tertiary">Reduced Churn:</span>{" "}
             Create experiences that keep users coming back.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Accessibility-First Approach:
             </span>{" "}
             Ensure inclusivity for users of all abilities.
@@ -65,29 +73,29 @@ const UXDesignServices: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">User Research:</span>{" "}
+            <span className="font-bold text-tertiary">User Research:</span>{" "}
             Conducting interviews, surveys, and usability testing to understand
             user needs and behaviors.
           </li>
           <li>
-            <span className="font-bold text-secondary">Journey Mapping:</span>{" "}
+            <span className="font-bold text-tertiary">Journey Mapping:</span>{" "}
             Visualizing user workflows and identifying pain points.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Wireframing & Prototyping:
             </span>{" "}
             Crafting low and high-fidelity designs to test and iterate on
             concepts.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Information Architecture:
             </span>{" "}
             Structuring content and navigation for clarity and ease of use.
           </li>
           <li>
-            <span className="font-bold text-secondary">Usability Testing:</span>{" "}
+            <span className="font-bold text-tertiary">Usability Testing:</span>{" "}
             Gathering feedback to refine designs and improve user satisfaction.
           </li>
         </ul>
@@ -97,33 +105,32 @@ const UXDesignServices: FC = () => {
         <h2 className="text-2xl font-semibold">Our Process</h2>
         <ul className="list-decimal list-inside space-y-4">
           <li>
-            <span className="font-bold text-secondary">Discovery:</span>{" "}
+            <span className="font-bold text-tertiary">Discovery:</span>{" "}
             Understanding your goals, audience, and challenges through research
             and analysis.
           </li>
           <li>
-            <span className="font-bold text-secondary">User Research:</span>{" "}
+            <span className="font-bold text-tertiary">User Research:</span>{" "}
             Gathering insights from users to guide design decisions.
           </li>
           <li>
-            <span className="font-bold text-secondary">Ideation:</span>{" "}
+            <span className="font-bold text-tertiary">Ideation:</span>{" "}
             Brainstorming solutions and creating user flows, wireframes, and
             prototypes.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Testing & Validation:
             </span>{" "}
             Conducting usability testing to validate assumptions and refine
             designs.
           </li>
           <li>
-            <span className="font-bold text-secondary">Delivery:</span>{" "}
-            Providing finalized designs with detailed documentation for
-            development teams.
+            <span className="font-bold text-tertiary">Delivery:</span> Providing
+            finalized designs with detailed documentation for development teams.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Iteration & Support:
             </span>{" "}
             Continuously improving the user experience based on feedback and
@@ -156,21 +163,24 @@ const UXDesignServices: FC = () => {
           Our pricing is customized based on your product’s complexity,
           features, and scope:
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-secondary">
-              User Research & Prototyping:
-            </span>{" "}
-            Starting at $3,500 for research, interviews, and prototyping.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Comprehensive UX Design:
-            </span>{" "}
-            Starting at $5,000 for end-to-end UX design, including user
-            research, prototyping, testing, and delivery.
-          </li>
-        </ul>
+        {websiteServices.map((service) => {
+          return (
+            <>
+              {service.name === "User Experience Design" && (
+                <ul className="list-disc list-inside space-y-2">
+                  {service.pricingTiers.map((pricing) => (
+                    <li key={pricing.name}>
+                      <span className="font-bold text-tertiary">
+                        {pricing.name}:
+                      </span>
+                      <span className="pl-2">{pricing.info}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
+          );
+        })}
       </section>
 
       <section className="my-8">

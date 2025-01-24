@@ -81,7 +81,7 @@ export function NavMenuItem({
         {item.items?.length ? (
           <CollapsibleContent>
             <SidebarMenuSub>
-              <ScrollArea className="h-64">
+              <ScrollArea className="h-48">
                 {item.items.map((subItem: navItem, subIndex: number) => (
                   <SidebarMenuSubItem key={`${itemKey}_sub_${subIndex}`}>
                     <SidebarMenuSubButton asChild>

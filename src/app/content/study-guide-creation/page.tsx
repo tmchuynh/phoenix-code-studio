@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
+import { contentCreationServices } from "@/lib/constants";
 
 const StudyGuideCreation: FC = () => {
   const router = useRouter();
@@ -12,10 +13,19 @@ const StudyGuideCreation: FC = () => {
       <h1 className="text-3xl font-bold text-center">
         Study Guide Creation Services
       </h1>
-      <p className="text-center text-lg my-4">
-        Simplify learning with expertly designed study guides tailored to meet
-        educational goals and learning styles.
-      </p>
+      {contentCreationServices.map((service) => {
+        return (
+          <>
+            <div className="text-center text-lg my-4">
+              {service.name === "Study Guide Creation" ? (
+                <div key={service.name}>
+                  <span className="mt-4">{service.details}</span>
+                </div>
+              ) : null}
+            </div>
+          </>
+        );
+      })}
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Why Study Guides Matter</h2>
@@ -27,22 +37,22 @@ const StudyGuideCreation: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Simplify Complex Topics:
             </span>{" "}
             Break down challenging concepts into manageable sections.
           </li>
           <li>
-            <span className="font-bold text-secondary">Enhance Retention:</span>{" "}
+            <span className="font-bold text-tertiary">Enhance Retention:</span>{" "}
             Use structured layouts and visual aids to reinforce learning.
           </li>
           <li>
-            <span className="font-bold text-secondary">Boost Confidence:</span>{" "}
+            <span className="font-bold text-tertiary">Boost Confidence:</span>{" "}
             Equip learners with tools to prepare effectively for exams or
             presentations.
           </li>
           <li>
-            <span className="font-bold text-secondary">Save Time:</span> Provide
+            <span className="font-bold text-tertiary">Save Time:</span> Provide
             ready-to-use materials for focused study sessions.
           </li>
         </ul>
@@ -56,32 +66,32 @@ const StudyGuideCreation: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Topic-Specific Study Guides:
             </span>{" "}
             Focused materials covering specific subjects or concepts.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Exam Preparation Guides:
             </span>{" "}
             Comprehensive resources tailored for standardized tests,
             certifications, or academic exams.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Flashcards and Summaries:
             </span>{" "}
             Condensed information for quick review and memorization.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Interactive Study Aids:
             </span>{" "}
             Digital guides with clickable elements and quizzes.
           </li>
           <li>
-            <span className="font-bold text-secondary">Custom Formats:</span>{" "}
+            <span className="font-bold text-tertiary">Custom Formats:</span>{" "}
             Guides in PDF, print-ready, or digital formats for e-learning
             platforms.
           </li>
@@ -92,36 +102,36 @@ const StudyGuideCreation: FC = () => {
         <h2 className="text-2xl font-semibold">Our Process</h2>
         <ul className="list-decimal list-inside space-y-4">
           <li>
-            <span className="font-bold text-secondary">Discovery:</span>{" "}
+            <span className="font-bold text-tertiary">Discovery:</span>{" "}
             Understand your subject, audience, and objectives for the study
             guide.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Content Development:
             </span>{" "}
             Research and write clear, accurate, and engaging content.
           </li>
           <li>
-            <span className="font-bold text-secondary">Design and Layout:</span>{" "}
+            <span className="font-bold text-tertiary">Design and Layout:</span>{" "}
             Format the guide with visuals, infographics, and user-friendly
             designs.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Review and Feedback:
             </span>{" "}
             Refine the guide based on your input to ensure accuracy and
             alignment with your goals.
           </li>
           <li>
-            <span className="font-bold text-secondary">Final Delivery:</span>{" "}
+            <span className="font-bold text-tertiary">Final Delivery:</span>{" "}
             Provide the guide in your desired format, ready for distribution or
             use.
           </li>
         </ul>
         <p className="my-4">
-          <span className="font-bold text-secondary">Timeline:</span> Most study
+          <span className="font-bold text-tertiary">Timeline:</span> Most study
           guides are completed within 1–3 weeks, depending on complexity and
           length.
         </p>
@@ -148,30 +158,24 @@ const StudyGuideCreation: FC = () => {
           Pricing depends on the subject, length, and level of customization
           required. We offer flexible packages to suit various needs.
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-secondary">
-              Basic Study Guides (5–10 pages):
-            </span>{" "}
-            Starting at $500.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Comprehensive Guides (10–30 pages):
-            </span>{" "}
-            Starting at $1,500.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Interactive Digital Guides:
-            </span>{" "}
-            Starting at $2,500.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">Flashcard Sets:</span>{" "}
-            Starting at $300.
-          </li>
-        </ul>
+        {contentCreationServices.map((service) => {
+          return (
+            <>
+              {service.name === "Study Guide Creation" && (
+                <ul className="list-disc list-inside space-y-2">
+                  {service.pricingTiers.map((pricing) => (
+                    <li key={pricing.name}>
+                      <span className="font-bold text-tertiary">
+                        {pricing.name}:
+                      </span>
+                      <span className="pl-2">{pricing.info}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
+          );
+        })}
       </section>
 
       <section className="my-8">

@@ -1,36 +1,51 @@
 import { Send } from "lucide-react";
-import { FaCalendarCheck, FaInfoCircle, FaLaptop, FaMoneyBillAlt, FaPenAlt, FaQuestion, FaSignature } from "react-icons/fa";
+import { FaBuilding, FaCalendarCheck, FaInfoCircle, FaLaptop, FaMapSigns, FaMoneyBillAlt, FaPenAlt, FaQuestion, FaSignature } from "react-icons/fa";
 import { MdPeople } from "react-icons/md";
 import { IoBookSharp } from "react-icons/io5";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { FAQ } from "./interfaces";
-
+import { BiWorld } from "react-icons/bi";
 
 export const menu = {
   navMain: [
+    {
+      title: "Services Overview",
+      url: "/services",
+      icon: BiWorld,
+    },
+    {
+      title: "Services for Companies",
+      icon: FaBuilding,
+      items: [
+        {
+          title: "Company Rebranding",
+          url: "/company/company-rebranding"
+        },
+        {
+          title: "Custom Website Design",
+          url: "/company/custom-website-design",
+        },
+        {
+          title: "E-Commerce Site Development",
+          url: "/company/e-commerce-site-development",
+        },
+        {
+          title: "Single-Page Applications (SPAs)",
+          url: "/company/single-page-application",
+        },
+        {
+          title: "Database Management",
+          url: "/company/database-management",
+        },
+      ]
+    },
     {
       title: "Website Services",
       icon: FaLaptop,
       items: [
         {
-          title: "Custom Website Design",
-          url: "/web/custom-website-design",
-        },
-        {
-          title: "eCommerce Development",
-          url: "/web/e-commerce-design",
-        },
-        {
-          title: "Single-Page Applications (SPAs)",
-          url: "/web/single-page-application",
-        },
-        {
-          title: "Database Management",
-          url: "/web/database-management",
-        },
-        {
-          title: "User Interface (UI) Design",
-          url: "/web/user-interface-design",
+          title: "SEO Optimization",
+          url: "/web/seo-optimization",
         },
         {
           title: "User Experience (UX) Design",
@@ -75,20 +90,20 @@ export const menu = {
           url: "/content/tutorial-creation",
         },
         {
-          title: "Brochures and Flyers",
-          url: "/content/brochures-and-flyers",
+          title: "Brochures & Flyers",
+          url: "/content/brochures-and-or-flyers",
         },
         {
-          title: "Training Manual and Onboarding Papers Creation",
-          url: "/content/training-manual-and-onboarding",
+          title: "Training Manual & Onboarding Papers Creation",
+          url: "/content/training-manual-and-onboarding-paperwork-creation",
         },
         {
           title: "Study Guide Creation",
-          url: "/content/study-guides",
+          url: "/content/study-guide-creation",
         },
         {
           title: "eBook Creation",
-          url: "/content/e-book-creation",
+          url: "/content/ebook-creation",
         },
         {
           title: "Newsletters",
@@ -154,490 +169,515 @@ export const menu = {
 
 export const websiteServices = [
   {
+    name: "User Experience Design",
+    startingPrice: 3500,
+    info: "We design intuitive, functional interfaces that prioritize usability and accessibility. Through user research, wireframing, prototyping, and testing, we create visually appealing designs that solve real user problems and deliver seamless, memorable experiences.",
+    details:
+      "Our UX design services focus on creating seamless and engaging user experiences. By conducting thorough research and usability testing, we deliver designs that simplify interactions and enhance effectiveness. Services include user research, wireframing, prototyping, and testing.",
+    pricingTiers: [
+      {
+        name: "User Research & Prototyping",
+        startingPrice: 3500,
+        info: "Starting at $3,500, this package covers user research, interviews, and detailed prototyping to understand and design for user needs."
+      },
+      {
+        name: "Comprehensive UX Design",
+        startingPrice: 5000,
+        info: "Starting at $5,000, this package includes end-to-end UX design, incorporating research, prototyping, usability testing, and final design delivery."
+      }
+    ]
+  },
+  {
+    name: "Wireframing & Prototyping",
+    startingPrice: 1000,
+    info: "Our wireframing and prototyping services bring your ideas to life while ensuring designs are user-friendly and practical. We create low-fidelity wireframes to map structure and navigation, and high-fidelity prototypes to simulate real interactions. These tools help you visualize and refine the user journey, saving time and ensuring functionality before development.",
+    details:
+      "We provide wireframing and prototyping services to help you visualize user interactions and refine design ideas before development begins. These tools are essential for identifying usability issues and ensuring an optimal user experience.",
+    pricingTiers: [
+      {
+        name: "Low-Fidelity Wireframes",
+        startingPrice: 1000,
+        info: "Starting at $1,000, these quick, basic sketches outline the layout and navigation of your site or app."
+      },
+      {
+        name: "High-Fidelity Wireframes",
+        startingPrice: 2000,
+        info: "Starting at $2,000, these detailed wireframes showcase user interface designs with a focus on usability and aesthetics."
+      },
+      {
+        name: "Interactive Prototypes",
+        startingPrice: 2500,
+        info: "Starting at $2,500, this tier provides clickable prototypes that simulate real user interactions for testing and validation."
+      }
+    ]
+  },
+  {
+    name: "SEO Optimization",
+    startingPrice: 1000,
+    info: "Our SEO optimization services boost your website’s visibility in search engines and drive organic traffic. Using strategies like keyword research, on-page optimization, content enhancement, and link-building, we help your site rank higher in search results. By staying current with search engine algorithms, we ensure you maintain a competitive edge in your industry.",
+    details:
+      "Our SEO optimization services focus on enhancing your website’s visibility in search engines. From keyword research to link-building, we implement effective techniques to drive organic traffic and improve your site's ranking and overall performance.",
+    pricingTiers: [
+      {
+        name: "SEO Audit",
+        startingPrice: 1000,
+        info: "Starting at $1,000, this audit evaluates your site's current SEO performance and identifies areas for improvement."
+      },
+      {
+        name: "On-Page SEO",
+        startingPrice: 1500,
+        info: "Starting at $1,500, this package optimizes on-page elements like meta tags, content, images, and internal linking for better rankings."
+      },
+      {
+        name: "Full SEO Package",
+        startingPrice: 3000,
+        info: "Starting at $3,000, this comprehensive package includes an SEO audit, on-page optimization, link-building, and performance tracking."
+      }
+    ]
+  }
+];
+
+export const companySpecificServices = [
+  {
+    name: "Company Rebranding",
+    startingPrice: 5000,
+    info: "Our comprehensive rebranding services are designed to give your company a fresh, modern identity that resonates with your audience and aligns with your business goals. We redefine your visual and strategic branding to help you stand out in a competitive market.",
+    details:
+      "Our rebranding services include a full strategy to redefine your brand image. From logo redesign to complete brand strategies, we ensure your company stands out and connects with your audience.",
+    pricingTiers: [
+      {
+        name: "Brand Identity Overhaul",
+        startingPrice: 5000,
+        info: "Starting at $5,000, this package includes a complete refresh of your brand identity, such as redesigning your logo, updating your color palette, and creating a cohesive visual design for all branding materials."
+      },
+      {
+        name: "Full Brand Strategy",
+        startingPrice: 8000,
+        info: "Starting at $8,000, this comprehensive package includes market research, target audience analysis, competitor benchmarking, and a brand messaging strategy to ensure consistent and effective communication."
+      },
+      {
+        name: "Brand Guidelines & Style Guide",
+        startingPrice: 3000,
+        info: "Starting at $3,000, we create detailed brand guidelines covering logo usage, typography, tone of voice, and visual design standards for consistent representation across all platforms."
+      },
+      {
+        name: "Website Rebranding",
+        startingPrice: 5000,
+        info: "Starting at $5,000, this service includes updating your website to align with your new branding, featuring refreshed visuals, layouts, and messaging to reflect your evolved identity."
+      }
+    ]
+  },
+  {
     name: "Custom Website Design",
     startingPrice: 2500,
-    info: "Create a unique, fully-responsive website that fits your brand and business goals.",
-    details: "Our custom website design services focus on building websites tailored to your specific needs. We work with you to define the look, feel, and functionality of your site, ensuring that it delivers a seamless user experience and meets business objectives.",
+    info: "We deliver custom website designs that perfectly align with your business goals and branding. Our websites are fully responsive, visually appealing, and optimized for an outstanding user experience.",
+    details:
+      "We specialize in creating custom websites that align with your brand and business objectives. From layout design to functionality, we ensure a seamless user experience.",
     pricingTiers: [
       {
         name: "Basic",
         startingPrice: 2500,
-        info: "A simple informational website with up to 5 pages."
+        info: "Starting at $2,500, this package provides an informational website with up to 5 pages. It’s perfect for small businesses or startups looking for a clean, professional online presence."
       },
       {
         name: "Advanced Websites",
         startingPrice: 4000,
-        info: "Starting at $4,000 for custom functionality, integrations, and dynamic content (up to 10 pages)."
+        info: "Starting at $4,000, this option is tailored for businesses requiring custom functionality, integrations, and dynamic content, featuring up to 10 pages."
       },
       {
         name: "Premium",
         startingPrice: 6500,
-        info: "A fully responsive website with advanced features and up to 20 pages."
+        info: "Starting at $6,500, this tier includes a feature-rich website with advanced functionalities, up to 20 pages, SEO optimization, and responsive design for an enhanced user experience."
       },
       {
         name: "Hosting and Domain Packages",
         startingPrice: 15,
-        info: "Starting at $15/month."
+        info: "Starting at $15/month, we offer reliable hosting and domain management to keep your website running smoothly and securely."
       }
     ]
   },
   {
     name: "E-Commerce Site Development",
     startingPrice: 3500,
-    info: "Develop a scalable e-commerce platform with integrated payment systems and user-friendly interfaces.",
-    details: "We specialize in building e-commerce websites that provide a secure, fast, and user-friendly shopping experience. From product listings to checkout, we integrate the latest technologies and payment gateways to help your online store succeed.",
+    info: "We design scalable, secure, and user-friendly e-commerce platforms that enhance customer experience, drive sales, and support your business growth with intuitive navigation, robust security, and seamless payment integration.",
+    details:
+      "We create e-commerce websites designed for security, scalability, and user satisfaction. From product pages to checkout systems, we provide the tools for a successful online store.",
     pricingTiers: [
       {
         name: "Starter Package",
-        startingPrice: 5000,
-        info: "Starting at $5,000 for a basic store setup with essential features."
+        startingPrice: 3500,
+        info: "Starting at $3,500, this package includes essential e-commerce features like product listings, a shopping cart, and a secure checkout system."
       },
       {
         name: "Growth Package",
-        startingPrice: 10000,
-        info: "Starting at $10,000 for advanced features like loyalty programs and custom integrations."
+        startingPrice: 5000,
+        info: "Starting at $5,000, this tier offers advanced features such as loyalty programs, custom integrations, and enhanced user experience elements."
       },
       {
         name: "Enterprise Package",
-        startingPrice: 15000,
-        info: "Starting at $15,000+ for complex stores with multi-vendor support, analytics, and more."
+        startingPrice: 10000,
+        info: "Starting at $10,000+, this package is tailored for large-scale e-commerce operations, offering multi-vendor support, analytics dashboards, and advanced scalability."
       },
       {
         name: "Monthly Hosting & Maintenance",
         startingPrice: 50,
-        info: "Starting at $50/month for hosting and maintenance."
+        info: "Starting at $50/month, this service includes ongoing hosting, security updates, and performance monitoring for your e-commerce platform."
       }
     ]
   },
   {
     name: "Single Page Application",
     startingPrice: 2000,
-    info: "Build a fast, interactive, and single-page application (SPA) with modern front-end technologies.",
-    details: "Our SPAs are designed to provide a fast and engaging user experience. By loading all necessary content dynamically without page reloads, we create smooth, fast interactions that improve user retention and performance.",
+    info: "We create dynamic, fast-loading single-page applications (SPAs) that offer seamless navigation, real-time updates, and exceptional performance, delivering an engaging and responsive user experience across all devices.",
+    details:
+      "We build SPAs designed for speed and interactivity. By loading content dynamically, our applications enhance user retention and deliver a seamless experience.",
     pricingTiers: [
       {
         name: "Starter Package",
-        startingPrice: 5000,
-        info: "Starting at $5,000 for a basic SPA with core features and responsive design."
+        startingPrice: 2000,
+        info: "Starting at $2,000, this package includes the development of a basic SPA with core features like responsive design and smooth navigation."
       },
       {
         name: "Growth Package",
-        startingPrice: 10000,
-        info: "Starting at $10,000 for advanced interactivity, API integration, and real-time functionality."
+        startingPrice: 7000,
+        info: "Starting at $7,000, this tier includes advanced interactivity, API integrations for real-time functionality, and dynamic content handling."
       },
       {
         name: "Enterprise Package",
-        startingPrice: 15000,
-        info: "Starting at $15,000+ for complex SPAs with PWA features, real-time updates, and scalability for high-traffic platforms."
+        startingPrice: 12000,
+        info: "Starting at $12,000+, this package offers a scalable SPA with Progressive Web App (PWA) capabilities, high-performance features, and real-time updates."
       },
       {
         name: "Ongoing Support & Maintenance",
         startingPrice: 200,
-        info: "Starting at $200/month for ongoing support and maintenance."
+        info: "Starting at $200/month, this service ensures your SPA remains updated, secure, and optimized for peak performance."
       }
     ]
   },
   {
     name: "Database Management",
     startingPrice: 1500,
-    info: "Ensure efficient management, scalability, and security of your data with custom database solutions.",
-    details: "Our database management services ensure that your data is stored, organized, and accessible. We design databases that can scale as your business grows, integrate real-time data, and ensure high levels of security to protect sensitive information.",
+    info: "Our database management services provide secure, scalable, and efficient solutions to store, organize, and access your data. Tailored to your needs, we ensure optimized performance, advanced security, and seamless scalability to support your business growth.",
+    details:
+      "Our database management services ensure that your data is stored, organized, and accessible. We design databases that can scale as your business grows, integrate real-time data, and ensure high levels of security to protect sensitive information.",
     pricingTiers: [
       {
         name: "Starter Package",
-        startingPrice: 3000,
-        info: "For small-scale database solutions, including basic relational data models and essential queries."
+        startingPrice: 1500,
+        info: "Starting at $1,500, this package is designed for small-scale database solutions, featuring secure data storage and basic relational models."
       },
       {
         name: "Growth Package",
-        startingPrice: 6500,
-        info: "For advanced features such as optimization, scalability solutions, and integration with external APIs."
+        startingPrice: 3000,
+        info: "Starting at $3,000, this option includes database optimization, API integrations, and scalability enhancements for growing businesses."
       },
       {
         name: "Enterprise Package",
         startingPrice: 10000,
-        info: "For complex, large-scale database solutions with multi-database management, custom migrations, and real-time data processing."
+        info: "Starting at $10,000, this package delivers large-scale database solutions with advanced features such as multi-database management and real-time data processing."
       },
       {
         name: "Database Management Plans",
         startingPrice: 100,
-        info: "For ongoing management, updates, and optimization."
-      }
-    ]
-  },
-  {
-    name: "User Interface Design",
-    startingPrice: 1800,
-    info: "Craft visually appealing, intuitive, and user-centered interfaces for a seamless experience.",
-    details: "Our UI design services focus on creating visually attractive, user-friendly interfaces that promote ease of use. We ensure that your website or app provides an engaging and aesthetically pleasing experience to the user.",
-    pricingTiers: [
-      {
-        name: "Custom UI Design",
-        startingPrice: 2000,
-        info: "Tailored user interfaces optimized for usability."
-      },
-      {
-        name: "Prototyping & Design Systems",
-        startingPrice: 1000,
-        info: "Prototyping and creating design systems for consistency across your application."
-      }
-    ]
-  },
-  {
-    name: "User Experience Design",
-    startingPrice: 2200,
-    info: "Enhance user experience through research, wireframing, and prototyping to solve real user problems.",
-    details: "We focus on understanding user behavior and needs to create designs that simplify user interactions. Our UX design process includes user research, wireframing, prototyping, and usability testing to ensure that your website or app is easy to use and highly effective.",
-    pricingTiers: [
-      {
-        name: "User Research & Prototyping",
-        startingPrice: 3500,
-        info: "Research, interviews, and prototyping."
-      },
-      {
-        name: "Comprehensive UX Design",
-        startingPrice: 5000,
-        info: "End-to-end UX design, including user research, prototyping, testing, and delivery."
-      }
-    ]
-  },
-  {
-    name: "Wireframing & Prototyping",
-    startingPrice: 1500,
-    info: "Visualize and test user interactions with wireframes and prototypes before development.",
-    details: "Wireframing and prototyping are essential steps in the design process. We build low-fidelity wireframes and high-fidelity prototypes that simulate real user interactions, helping you identify potential problems and improve usability before development begins.",
-    pricingTiers: [
-      {
-        name: "Low-Fidelity Wireframes",
-        startingPrice: 1500,
-        info: "Quick sketches outlining layout and navigation."
-      },
-      {
-        name: "High-Fidelity Wireframes",
-        startingPrice: 2000,
-        info: "Detailed designs closer to the final product."
-      },
-      {
-        name: "Interactive Prototypes",
-        startingPrice: 2500,
-        info: "Clickable, user-interactive mockups."
+        info: "Starting at $100/month, we provide ongoing database management, updates, monitoring, and performance tuning services."
       }
     ]
   }
 ];
 
+
 export const contentCreationServices = [
   {
     name: "Brand Storytelling",
     startingPrice: 2000,
-    info: "Create compelling stories that resonate with your audience and define your brand identity.",
+    info: "We create compelling narratives that define your brand identity and resonate with your audience. Through strategic storytelling, we connect your brand to your audience's emotions, fostering loyalty and trust.",
     details: "We help brands tell their unique stories, building a narrative that reflects your values, vision, and goals. Through strategic storytelling, we connect with your target audience on an emotional level, strengthening brand loyalty.",
     pricingTiers: [
       {
         name: "Core Narrative Development",
-        startingPrice: 2500,
-        info: "Starting at $2,500 to develop your brand's core story."
-      },
-      {
-        name: "Social Media Storytelling Packages",
-        startingPrice: 1500,
-        info: "Starting at $1,500 for social media content creation."
+        startingPrice: 2000,
+        info: "Starting at $2,500, this tier develops your brand's core story, highlighting your values, mission, and unique identity."
       },
       {
         name: "Comprehensive Storytelling Strategy",
         startingPrice: 5000,
-        info: "Starting at $5,000 for an in-depth storytelling strategy."
+        info: "Starting at $5,000, this option includes an in-depth storytelling strategy, complete with narrative frameworks, content plans, and audience engagement techniques."
       }
     ]
   },
   {
     name: "Website Copywriting",
     startingPrice: 1500,
-    info: "Write persuasive, SEO-friendly copy that effectively communicates your brand message.",
-    details: "We craft copy that is both engaging and optimized for search engines. Our website copywriting services ensure that your site communicates your message clearly while driving organic traffic through SEO best practices.",
+    info: "We write clear, persuasive, and SEO-optimized website content that effectively communicates your brand's message. Our copy is crafted to captivate visitors and drive organic traffic to your site.",
+    details: "Our copywriting services deliver tailored content that is both engaging and optimized for search engines. From homepage messaging to service descriptions, we ensure your website communicates effectively while boosting visibility.",
     pricingTiers: [
       {
         name: "Basic",
         startingPrice: 1500,
-        info: "Write up to 5 pages of optimized website copy."
+        info: "Starting at $1,500, this package includes copywriting for up to 5 pages with basic SEO optimization. Ideal for small or starter websites."
       },
       {
         name: "Standard",
         startingPrice: 2500,
-        info: "Create website copy for up to 10 pages with full SEO optimization."
+        info: "Starting at $2,500, this option provides SEO-optimized content for up to 10 pages, delivering a complete and professional web presence."
       },
       {
         name: "Premium",
         startingPrice: 4000,
-        info: "SEO-optimized copywriting for a complete website, including blog posts, product descriptions, and more."
+        info: "Starting at $4,000, this package offers comprehensive website copywriting, including blogs, product descriptions, and additional content, fully optimized for SEO."
       }
     ]
   },
   {
     name: "Product Guides/Manuals",
-    startingPrice: 1200,
-    info: "Create detailed, easy-to-understand product guides and manuals to assist customers.",
+    startingPrice: 750,
+    info: "We create detailed, user-friendly product guides and manuals that simplify complex information and ensure a positive customer experience. Our content is clear, precise, and designed for easy comprehension.",
     details: "Our product guides and manuals are designed to help users understand and get the most out of your products. We provide clear, step-by-step instructions and troubleshooting tips to ensure a positive user experience.",
     pricingTiers: [
       {
         name: "Quick Start Guides",
         startingPrice: 750,
-        info: "Essential product introduction guides."
+        info: "Starting at $750, these essential guides provide concise instructions to help users get started quickly with your product."
       },
       {
         name: "User Manuals (10–20 pages)",
         startingPrice: 1500,
-        info: "More detailed user manuals."
+        info: "Starting at $1,500, this tier includes detailed user manuals with step-by-step instructions, illustrations, and troubleshooting tips."
       },
       {
         name: "Comprehensive Manuals (20+ pages)",
         startingPrice: 3000,
-        info: "In-depth, comprehensive manuals."
+        info: "Starting at $3,000, these in-depth manuals cover all aspects of your product, offering comprehensive instructions and extensive troubleshooting resources."
       }
     ]
   },
   {
     name: "Blog Writing",
-    startingPrice: 500,
-    info: "Engage your audience and boost SEO with high-quality, informative blog posts.",
+    startingPrice: 200,
+    info: "We create engaging, informative blog posts that resonate with your audience while boosting your website's SEO. Our content is tailored to align with your brand voice, ensuring every post adds value and enhances your online presence.",
     details: "We write engaging and informative blog posts that keep your audience interested while improving your SEO. Our blog content is tailored to your brand voice, ensuring that every post is relevant and valuable to your readers.",
     pricingTiers: [
       {
         name: "Single Blog Post",
         startingPrice: 200,
-        info: "Up to 500 words."
+        info: "Starting at $200, this tier includes blog posts of up to 500 words. Perfect for concise, impactful updates and engaging content."
       },
       {
         name: "Long-Form Blogs",
-        startingPrice: 400,
-        info: "1,000+ words."
+        startingPrice: 500,
+        info: "Starting at $500, these blog posts exceed 1,000 words, providing in-depth analysis, detailed storytelling, or comprehensive insights."
       },
       {
         name: "Monthly Packages",
-        startingPrice: 800,
-        info: "Custom pricing for regular publishing (e.g., 4+ blogs per month)."
+        startingPrice: 1000,
+        info: "Starting at $1,000, ideal for businesses looking for consistent, high-quality content. Custom pricing applies for regular publishing, such as 4+ blogs per month."
       }
     ]
   },
   {
     name: "Technical Writing",
-    startingPrice: 2000,
-    info: "Write detailed and accurate technical documentation to explain complex concepts.",
+    startingPrice: 750,
+    info: "Our technical writing services transform complex information into clear, precise documentation. From software manuals to white papers, we ensure your technical content is both accurate and user-friendly.",
     details: "Our technical writing services focus on making complex information accessible. Whether it’s software documentation, user manuals, or technical reports, we ensure that the content is clear, precise, and easy to follow.",
     pricingTiers: [
       {
         name: "Short Guides or SOPs",
         startingPrice: 750,
-        info: "Short guides or standard operating procedures."
+        info: "Starting at $750, this tier includes short guides or standard operating procedures. Ideal for concise, structured instructions."
       },
       {
         name: "Comprehensive Manuals or Knowledge Bases",
-        startingPrice: 2000,
-        info: "Detailed manuals or knowledge bases."
+        startingPrice: 1500,
+        info: "Starting at $1,500, these detailed manuals or knowledge bases provide comprehensive, well-organized content for advanced topics."
       },
       {
         name: "API Documentation or White Papers",
         startingPrice: 3000,
-        info: "In-depth documentation or research papers."
+        info: "Starting at $3,000, this package delivers in-depth API documentation, technical reports, or white papers with extensive research and precise details."
       }
     ]
   },
   {
     name: "Online Courses",
-    startingPrice: 3000,
-    info: "Design and create interactive online courses with multimedia content to educate your audience.",
+    startingPrice: 2000,
+    info: "We design and develop interactive online courses that combine multimedia elements to educate and engage your audience effectively. Whether you're sharing expertise, training employees, or offering educational content, our courses are tailored to meet your goals and captivate learners.",
     details: "We help you create online courses that provide real value to your audience. From video tutorials to quizzes, we ensure your courses are engaging, informative, and structured in a way that enhances learning.",
     pricingTiers: [
       {
         name: "Short Courses (1–3 modules)",
-        startingPrice: 3000,
-        info: "1-3 module course."
+        startingPrice: 2000,
+        info: "Starting at $2,000, this tier includes 1–3 modules with core content, basic multimedia elements, and a streamlined structure ideal for concise learning experiences."
       },
       {
         name: "Medium-Length Courses (4–8 modules)",
-        startingPrice: 6000,
-        info: "4-8 module course."
+        startingPrice: 4500,
+        info: "Starting at $4,500, this option covers 4–8 modules with more in-depth content, expanded multimedia features, and additional learning tools like assessments and quizzes."
       },
       {
         name: "Comprehensive Courses (9+ modules)",
         startingPrice: 10000,
-        info: "9+ module course with multimedia and advanced content."
+        info: "Starting at $10,000, this package is ideal for 9+ module courses featuring advanced multimedia, detailed content, and interactive elements such as custom videos, animations, and complex quizzes."
       }
     ]
   },
   {
     name: "Tutorial Creation",
-    startingPrice: 1000,
-    info: "Develop step-by-step tutorials for your products or services to help users get the most out of them.",
+    startingPrice: 200,
+    info: "We create step-by-step tutorials designed to simplify complex tasks and help users achieve their goals. Our tutorials are clear, concise, and user-friendly, ensuring your audience can easily follow along and succeed.",
     details: "We create tutorials that break down complex tasks into manageable steps. Whether for software, hardware, or services, our tutorials ensure users can follow along easily and achieve their goals.",
     pricingTiers: [
       {
-        name: "Written Tutorials",
-        startingPrice: 300,
-        info: "Starting at $300 per guide (up to 1,000 words)."
-      },
-      {
-        name: "Video Tutorials",
-        startingPrice: 500,
-        info: "Starting at $500 per video (up to 3 minutes)."
-      },
-      {
-        name: "Interactive Tutorials",
-        startingPrice: 1000,
-        info: "Starting at $1,000 per module."
-      },
-      {
         name: "Quick Start Guides",
         startingPrice: 200,
-        info: "Starting at $200."
+        info: "Starting at $200, these guides provide an easy-to-follow introduction to your product or service, covering essential features and functionalities."
+      },
+      {
+        name: "Written Tutorials",
+        startingPrice: 350,
+        info: "Starting at $350 per guide (up to 1,000 words), these detailed written tutorials provide clear instructions, diagrams, and step-by-step guidance for more complex tasks."
       }
     ]
   },
   {
     name: "Brochures and/or Flyers",
-    startingPrice: 800,
-    info: "Design attention-grabbing brochures and flyers to market your products and services.",
+    startingPrice: 50,
+    info: "We design eye-catching brochures and flyers that effectively showcase your products and services. With a focus on clear messaging and impactful visuals, our designs help you stand out and leave a lasting impression.",
     details: "Our brochure and flyer design services help you market your products effectively. We focus on making sure your message is clear and the design stands out, giving your marketing materials maximum impact.",
     pricingTiers: [
       {
         name: "Flyers (One Page)",
-        startingPrice: 150,
-        info: "Starting at $150 per design."
+        startingPrice: 50,
+        info: "Starting at $50 per design, perfect for quick promotions or announcements. Includes a clean, professional layout and visually appealing graphics."
       },
       {
         name: "Bi-Fold Brochures",
-        startingPrice: 300,
-        info: "Starting at $300 per design."
+        startingPrice: 100,
+        info: "Starting at $100 per design, ideal for presenting more detailed information in a compact, foldable format. Includes high-quality design and layout."
       },
       {
         name: "Tri-Fold Brochures",
-        startingPrice: 400,
-        info: "Starting at $400 per design."
+        startingPrice: 150,
+        info: "Starting at $150 per design, these brochures offer ample space for organized content and visuals. Perfect for marketing campaigns that require detailed information and appealing design."
       },
       {
         name: "Custom Multi-Page Brochures",
-        startingPrice: 600,
-        info: "Starting at $600, based on page count and complexity."
+        startingPrice: 300,
+        info: "Starting at $300, tailored to your specific needs. These brochures can include multiple pages, custom layouts, and advanced designs, making them ideal for extensive product or service catalogs."
       }
     ]
   },
   {
     name: "Training Manual and Onboarding Paperwork Creation",
-    startingPrice: 1500,
-    info: "Develop comprehensive training materials and onboarding documents for new employees or clients.",
+    startingPrice: 500,
+    info: "We develop detailed and professional training materials and onboarding documents to streamline the onboarding process for employees, clients, or users. Our materials are designed to ensure clarity, engagement, and successful integration.",
     details: "We create thorough and easy-to-understand training manuals and onboarding paperwork. These documents help onboard new employees, clients, or users with the necessary information to succeed.",
     pricingTiers: [
       {
         name: "Basic Onboarding Documents",
         startingPrice: 500,
-        info: "Starting at $500."
+        info: "Starting at $500, this tier covers essential onboarding materials such as checklists, orientation guides, and introductory content tailored to your needs."
       },
       {
         name: "Training Manuals (10–20 pages)",
         startingPrice: 1500,
-        info: "Starting at $1,500."
+        info: "Starting at $1,500, this package includes detailed manuals with structured content, step-by-step instructions, and relevant visual aids for effective training."
       },
       {
         name: "Comprehensive Manuals (20–50 pages)",
         startingPrice: 3000,
-        info: "Starting at $3,000."
+        info: "Starting at $3,000, this option is ideal for extensive manuals that cover multiple aspects of training, onboarding, or operational guidelines. Includes in-depth explanations, examples, and advanced formatting."
       },
       {
         name: "Advanced Manuals with Multimedia",
         startingPrice: 5000,
-        info: "Starting at $5,000."
+        info: "Starting at $5,000, this package integrates multimedia elements such as videos, interactive content, and custom graphics to enhance engagement and understanding."
       }
     ]
   },
   {
     name: "Study Guide Creation",
-    startingPrice: 1000,
-    info: "Create detailed study guides to help students or professionals excel in their subjects.",
+    startingPrice: 500,
+    info: "We design and develop detailed study guides that empower students and professionals to excel in their subjects. Our guides are tailored to simplify complex concepts, enhance retention, and support effective learning strategies.",
     details: "We craft comprehensive study guides that help learners understand and retain critical information. Whether for academic or professional use, our study guides are designed to make complex material easy to grasp.",
     pricingTiers: [
       {
         name: "Basic Study Guides (5–10 pages)",
         startingPrice: 500,
-        info: "Starting at $500."
+        info: "Starting at $500, ideal for concise overviews or summaries. These guides provide essential information in a clear, structured format to aid quick understanding."
       },
       {
         name: "Comprehensive Guides (10–30 pages)",
         startingPrice: 1500,
-        info: "Starting at $1,500."
+        info: "Starting at $1,500, perfect for in-depth exploration of a subject. These guides include detailed explanations, examples, and diagrams for thorough understanding."
       },
       {
         name: "Interactive Digital Guides",
         startingPrice: 2500,
-        info: "Starting at $2,500."
+        info: "Starting at $2,500, these guides incorporate interactive elements such as clickable content, multimedia enhancements, and quizzes to engage learners more effectively."
       },
       {
         name: "Flashcard Sets",
         startingPrice: 300,
-        info: "Starting at $300."
+        info: "Starting at $300, ideal for quick revision and memorization. These sets include concise, focused content designed to reinforce key concepts."
       }
     ]
   },
   {
     name: "eBook Creation",
-    startingPrice: 2000,
-    info: "Write and design professional eBooks for educational, marketing, or content purposes.",
+    startingPrice: 2500,
+    info: "We specialize in crafting professional eBooks tailored for educational, marketing, or publishing needs. From compelling content to eye-catching design, our eBooks are created to engage readers and achieve your goals.",
     details: "Our eBook creation service combines writing and design expertise to deliver a professional, polished product. Whether for marketing, education, or publishing, we ensure your eBook is well-written and visually appealing.",
     pricingTiers: [
       {
         name: "Basic eBook",
-        startingPrice: 1500,
-        info: "Starting at $1,500 for content writing and design."
+        startingPrice: 2500,
+        info: "Starting at $2,500, this option includes content writing and professional design for a high-quality eBook that meets your needs."
       },
       {
         name: "Advanced eBook",
-        startingPrice: 2500,
-        info: "Starting at $2,500 with advanced formatting, detailed research, and multimedia enhancements."
+        startingPrice: 4500,
+        info: "Starting at $4,500, this package includes advanced formatting, in-depth research, and multimedia enhancements to create a comprehensive and engaging eBook."
       }
     ]
   },
   {
     name: "Newsletters",
-    startingPrice: 800,
-    info: "Design and write engaging newsletters to keep your audience informed and connected.",
+    startingPrice: 300,
+    info: "We create and design captivating newsletters to help you engage, inform, and connect with your audience. Whether you need a one-time newsletter or an ongoing series, our services ensure your communication is effective and visually appealing.",
     details: "Our newsletter services ensure you stay connected with your audience by providing valuable, timely content. We handle both the writing and design, ensuring that your newsletter stands out in inboxes.",
     pricingTiers: [
       {
         name: "Single Newsletter",
         startingPrice: 300,
-        info: "Starting at $300."
+        info: "Starting at $300, perfect for one-time updates or special announcements. Includes custom content creation and professional design to make a lasting impression."
       },
       {
         name: "Monthly Newsletter Packages",
         startingPrice: 800,
-        info: "Starting at $800 per month for up to 4 newsletters."
+        info: "Starting at $800 per month for up to 4 newsletters. Ideal for maintaining regular communication with your audience, with a focus on consistency and high-quality content."
       },
       {
         name: "Custom Plans",
-        startingPrice: 800,
-        info: "Tailored pricing for weekly or highly detailed newsletters."
+        startingPrice: 900,
+        info: "Starting at $900, tailored for weekly newsletters or highly detailed and customized content. Designed to meet your specific communication needs and audience engagement goals."
       }
     ]
   },
   {
     name: "Proposal Writing",
-    startingPrice: 1500,
-    info: "Craft well-structured and persuasive proposals to win new clients and projects.",
-    details: "We create detailed, persuasive proposals that increase your chances of winning clients and projects. Whether for business, academic, or government proposals, we ensure your document is compelling and professional.",
+    startingPrice: 500,
+    info: "Our proposal writing services help you communicate your ideas and goals clearly and persuasively. We create tailored, results-driven proposals to secure clients, win bids, or present compelling cases for funding, ensuring professionalism and strategic impact.",
+    details: "Our team specializes in creating professional, compelling proposals tailored to your needs. From business and academic to government projects, we enhance your chances of success with meticulously crafted documents.",
     pricingTiers: [
       {
-        name: "Basic Proposals (1-3 pages)",
+        name: "Standard Proposals (1-3 pages)",
         startingPrice: 500,
-        info: "Starting at $500."
+        info: "Starting at $500, this tier is ideal for short, focused proposals that require clear and concise communication."
       },
       {
-        name: "Comprehensive Proposals (5-10 pages)",
+        name: "In-Depth Proposals (5-10 pages)",
         startingPrice: 1500,
-        info: "Starting at $1,500."
-      },
-      {
-        name: "Grant Proposals or RFP Responses",
-        startingPrice: 2000,
-        info: "Starting at $2,000."
+        info: "Starting at $1,500, this tier is designed for comprehensive proposals that require detailed analysis, thorough research, and robust arguments."
       }
     ]
   }
@@ -646,9 +686,9 @@ export const contentCreationServices = [
 
 export const FAQs: FAQ[] = [
   {
-    question: "What sets Crimson Lotus Creations apart?",
+    question: "What sets Phoenix Code Studio apart?",
     answer:
-      "At Crimson Lotus Creations, we seamlessly combine cultural sophistication with innovative technology to deliver digital experiences that are both highly functional and profoundly meaningful. Drawing inspiration from the lotus flower—a timeless emblem of growth and resilience—we craft designs that empower your business to flourish in the digital realm."
+      "At Phoenix Code Studio, we seamlessly combine cultural sophistication with innovative technology to deliver digital experiences that are both highly functional and profoundly meaningful. Drawing inspiration from the lotus flower—a timeless emblem of growth and resilience—we craft designs that empower your business to flourish in the digital realm."
   },
   {
     question: "What services do you offer?",

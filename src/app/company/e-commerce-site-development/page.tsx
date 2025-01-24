@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { companySpecificServices } from "@/lib/constants";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
 
@@ -12,10 +13,19 @@ const EcommerceWebsite: FC = () => {
       <h1 className="text-3xl font-bold text-center">
         Custom E-Commerce Website Development
       </h1>
-      <p className="text-center text-lg my-4">
-        Elevate your online store with a tailored eCommerce solution designed to
-        fit your brand, engage your audience, and drive sales.
-      </p>
+      {companySpecificServices.map((service) => {
+        return (
+          <>
+            <div className="text-center text-lg my-4">
+              {service.name === "E-Commerce Site Development" ? (
+                <div key={service.name}>
+                  <span className="mt-4">{service.details}</span>
+                </div>
+              ) : null}
+            </div>
+          </>
+        );
+      })}
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">
@@ -28,31 +38,31 @@ const EcommerceWebsite: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">Unique Design:</span>{" "}
+            <span className="font-bold text-tertiary">Unique Design:</span>{" "}
             Stand out in a crowded market with a store designed to resonate with
             your brand.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Enhanced Shopping Experience:
             </span>{" "}
             Intuitive navigation, personalized recommendations, and fast
             checkout processes to boost conversion rates.
           </li>
           <li>
-            <span className="font-bold text-secondary">Advanced Features:</span>{" "}
+            <span className="font-bold text-tertiary">Advanced Features:</span>{" "}
             Implement custom product filters, inventory management, loyalty
             programs, and more.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Mobile Optimization:
             </span>{" "}
             Fully responsive designs to ensure a seamless shopping experience on
             all devices.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               SEO-Friendly Structure:
             </span>{" "}
             Built-in features to help your store rank higher and attract more
@@ -71,20 +81,20 @@ const EcommerceWebsite: FC = () => {
           </p>
           <ul className="list-disc list-inside space-y-2">
             <li>
-              <span className="font-bold text-secondary">
+              <span className="font-bold text-tertiary">
                 Dynamic Categories:
               </span>{" "}
               Create and manage product categories effortlessly.
             </li>
             <li>
-              <span className="font-bold text-secondary">
+              <span className="font-bold text-tertiary">
                 Custom Attributes:
               </span>{" "}
               Add unique attributes such as size, color, or material to your
               products.
             </li>
             <li>
-              <span className="font-bold text-secondary">
+              <span className="font-bold text-tertiary">
                 Bulk Import/Export:
               </span>{" "}
               Easily manage large product inventories with bulk operations.
@@ -120,36 +130,36 @@ const EcommerceWebsite: FC = () => {
         <h2 className="text-2xl font-semibold">Our Development Process</h2>
         <ul className="list-decimal list-inside space-y-4">
           <li>
-            <span className="font-bold text-secondary">Consultation:</span>{" "}
+            <span className="font-bold text-tertiary">Consultation:</span>{" "}
             Understanding your business, audience, and goals.
           </li>
           <li>
-            <span className="font-bold text-secondary">Planning:</span> Creating
+            <span className="font-bold text-tertiary">Planning:</span> Creating
             a roadmap, wireframes, and feature list.
           </li>
           <li>
-            <span className="font-bold text-secondary">Design:</span> Crafting
+            <span className="font-bold text-tertiary">Design:</span> Crafting
             unique and user-friendly interfaces.
           </li>
           <li>
-            <span className="font-bold text-secondary">Development:</span>{" "}
+            <span className="font-bold text-tertiary">Development:</span>{" "}
             Building your store using modern technologies.
           </li>
           <li>
-            <span className="font-bold text-secondary">Integration:</span>{" "}
-            Adding payment gateways, analytics, and third-party tools.
+            <span className="font-bold text-tertiary">Integration:</span> Adding
+            payment gateways, analytics, and third-party tools.
           </li>
           <li>
-            <span className="font-bold text-secondary">Testing:</span> Ensuring
+            <span className="font-bold text-tertiary">Testing:</span> Ensuring
             performance, security, and accessibility on all devices.
           </li>
           <li>
-            <span className="font-bold text-secondary">Launch & Support:</span>{" "}
+            <span className="font-bold text-tertiary">Launch & Support:</span>{" "}
             Deploying your site and offering ongoing assistance.
           </li>
         </ul>
         <p className="my-4">
-          <span className="font-bold text-secondary">Timeline:</span> Most
+          <span className="font-bold text-tertiary">Timeline:</span> Most
           projects are completed within 6–12 weeks, depending on complexity and
           features.
         </p>
@@ -172,25 +182,29 @@ const EcommerceWebsite: FC = () => {
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Pricing Tiers</h2>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-secondary">Starter Package:</span>{" "}
-            Starting at $5,000 for a basic store setup with essential features.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">Growth Package:</span>{" "}
-            Starting at $10,000 for advanced features like loyalty programs and
-            custom integrations.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Enterprise Package:
-            </span>{" "}
-            Starting at $15,000+ for complex stores with multi-vendor support,
-            analytics, and more.
-          </li>
-        </ul>
+        <p className="my-4">
+          Our pricing is customized based on your website’s features,
+          complexity, and scope:
+        </p>
         <p>Monthly hosting and maintenance plans start at $50/month.</p>
+        {companySpecificServices.map((service) => {
+          return (
+            <>
+              {service.name === "E-Commerce Site Development" && (
+                <ul className="list-disc list-inside space-y-2">
+                  {service.pricingTiers.map((pricing) => (
+                    <li key={pricing.name}>
+                      <span className="font-bold text-tertiary">
+                        {pricing.name}:
+                      </span>
+                      <span className="pl-2">{pricing.info}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
+          );
+        })}
       </section>
 
       <section className="my-8">

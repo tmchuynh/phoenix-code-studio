@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
+import { contentCreationServices } from "@/lib/constants";
 
 const OnlineCoursesServices: FC = () => {
   const router = useRouter();
@@ -12,10 +13,19 @@ const OnlineCoursesServices: FC = () => {
       <h1 className="text-3xl font-bold text-center">
         Online Courses Development Services
       </h1>
-      <p className="text-center text-lg my-4">
-        Create engaging, interactive, and impactful online courses designed to
-        educate and inspire your audience.
-      </p>
+      {contentCreationServices.map((service) => {
+        return (
+          <>
+            <div className="text-center text-lg my-4">
+              {service.name === "Online Courses" ? (
+                <div key={service.name}>
+                  <span className="mt-4">{service.details}</span>
+                </div>
+              ) : null}
+            </div>
+          </>
+        );
+      })}
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Why Online Courses Matter</h2>
@@ -27,22 +37,22 @@ const OnlineCoursesServices: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">Scalable Learning:</span>{" "}
+            <span className="font-bold text-tertiary">Scalable Learning:</span>{" "}
             Teach thousands of learners without geographic limitations.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Establish Authority:
             </span>{" "}
             Position yourself as an expert in your field with professional
             courses.
           </li>
           <li>
-            <span className="font-bold text-secondary">Generate Revenue:</span>{" "}
+            <span className="font-bold text-tertiary">Generate Revenue:</span>{" "}
             Monetize your expertise with paid courses.
           </li>
           <li>
-            <span className="font-bold text-secondary">Engage Audiences:</span>{" "}
+            <span className="font-bold text-tertiary">Engage Audiences:</span>{" "}
             Create interactive and personalized learning experiences.
           </li>
         </ul>
@@ -56,38 +66,38 @@ const OnlineCoursesServices: FC = () => {
         </p>
         <ul className="list-disc list-inside space-y-2">
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Course Planning and Structure:
             </span>{" "}
             Develop a detailed course outline with clear learning objectives.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Content Development:
             </span>{" "}
             Write engaging, well-researched course materials tailored to your
             audience.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Multimedia Creation:
             </span>{" "}
             Create video lectures, presentations, animations, and interactive
             quizzes.
           </li>
           <li>
-            <span className="font-bold text-secondary">LMS Integration:</span>{" "}
+            <span className="font-bold text-tertiary">LMS Integration:</span>{" "}
             Set up and manage your course on Learning Management Systems (LMS)
             like Teachable, Thinkific, or Moodle.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Assessments and Certifications:
             </span>{" "}
             Design quizzes, tests, and certificates for learner validation.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Course Optimization:
             </span>{" "}
             Analyze and refine courses based on user feedback and analytics.
@@ -99,43 +109,41 @@ const OnlineCoursesServices: FC = () => {
         <h2 className="text-2xl font-semibold">Our Process</h2>
         <ul className="list-decimal list-inside space-y-4">
           <li>
-            <span className="font-bold text-secondary">Discovery:</span>{" "}
+            <span className="font-bold text-tertiary">Discovery:</span>{" "}
             Understand your audience, goals, and subject matter.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Course Outline Creation:
             </span>{" "}
             Develop a structured plan, including modules, lessons, and
             activities.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Content Development:
             </span>{" "}
             Create engaging written, visual, and multimedia materials.
           </li>
           <li>
-            <span className="font-bold text-secondary">LMS Setup:</span> Upload
+            <span className="font-bold text-tertiary">LMS Setup:</span> Upload
             and organize your course materials on the desired platform.
           </li>
           <li>
-            <span className="font-bold text-secondary">
+            <span className="font-bold text-tertiary">
               Testing and Feedback:
             </span>{" "}
             Run test sessions to ensure usability, engagement, and learning
             outcomes.
           </li>
           <li>
-            <span className="font-bold text-secondary">
-              Launch and Support:
-            </span>{" "}
+            <span className="font-bold text-tertiary">Launch and Support:</span>{" "}
             Launch your course and provide ongoing support for updates and
             enhancements.
           </li>
         </ul>
         <p className="my-4">
-          <span className="font-bold text-secondary">Timeline:</span> The
+          <span className="font-bold text-tertiary">Timeline:</span> The
           timeline depends on the course length, complexity, and multimedia
           needs. Typical projects take 4–12 weeks.
         </p>
@@ -163,26 +171,24 @@ const OnlineCoursesServices: FC = () => {
           Pricing is based on the course length, complexity, and multimedia
           requirements.
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-secondary">
-              Short Courses (1–3 modules):
-            </span>{" "}
-            Starting at $3,000.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Medium-Length Courses (4–8 modules):
-            </span>{" "}
-            Starting at $6,000.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Comprehensive Courses (9+ modules with advanced multimedia):
-            </span>{" "}
-            Starting at $10,000.
-          </li>
-        </ul>
+        {contentCreationServices.map((service) => {
+          return (
+            <>
+              {service.name === "Online Courses" && (
+                <ul className="list-disc list-inside space-y-2">
+                  {service.pricingTiers.map((pricing) => (
+                    <li key={pricing.name}>
+                      <span className="font-bold text-tertiary">
+                        {pricing.name}:
+                      </span>
+                      <span className="pl-2">{pricing.info}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
+          );
+        })}
       </section>
 
       <section className="my-8">
