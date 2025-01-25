@@ -4,49 +4,52 @@ import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
 import { paymentPlans } from "@/lib/constants";
-import { Card, CardContent } from "@/components/ui/card";
 
 const PaymentPlansPage: FC = () => {
   const router = useRouter();
 
   return (
     <main className="w-11/12 mx-auto py-6">
-      <h1 className="text-3xl font-bold text-center">Our Payment Plans</h1>
-      <p className="text-center text-lg my-4">
-        Flexible payment options tailored to fit your budget and project needs.
-        Choose the plan that works best for you.
-      </p>
+      {/* Page Header */}
+      <header className="text-center mb-8">
+        <h1 className="text-3xl font-bold text-primary">Our Payment Plans</h1>
+        <p className="text-lg mt-4">
+          Flexible payment options tailored to fit your budget and project
+          needs. Choose the plan that works best for you.
+        </p>
+      </header>
 
-      {/* Displaying each plan dynamically */}
-      <section className="my-8">
-        <div className="grid md:grid-cols-2 gap-8">
-          {paymentPlans.map((plan, index) => (
-            <Card
-              key={index}
-              className="p-2 h-full justify-between rounded-lg shadow-md flex flex-col border-2 border-transparent hover:border-border"
-            >
-              <CardContent>
-                <h3 className="text-xl font-semibold mb-4 text-primary">
-                  {plan.title}
-                </h3>
-                <p className="mb-4">{plan.description}</p>
-                <ul className="list-disc list-inside space-y-2">
-                  {plan.details.map((detail, i) => (
-                    <li key={i}>{detail}</li>
-                  ))}
-                </ul>
-              </CardContent>
+      {/* Displaying each plan in a vertical layout similar to blogs */}
+      <section className="space-y-8">
+        {paymentPlans.map((plan, index) => (
+          <div key={index}>
+            <div className="flex flex-col w-full">
+              {/* Plan Title */}
+              <h3>{plan.title}</h3>
+
+              {/* Plan Description */}
+              <p className="text-lg mb-6">{plan.description}</p>
+
+              {/* Plan Details */}
+              <ul className="list-disc pl-6 space-y-2 text-lg">
+                {plan.details.map((detail, i) => (
+                  <li key={i}>{detail}</li>
+                ))}
+              </ul>
+
+              {/* Learn More Button */}
               <Button
-                variant="link"
+                className="m-7 w-2/3 mx-auto"
                 onClick={() => {
                   router.push(plan.route);
                 }}
               >
-                {plan.buttonLabel}
+                Learn More
               </Button>
-            </Card>
-          ))}
-        </div>
+            </div>
+            {index !== paymentPlans.length - 1 && <hr />}
+          </div>
+        ))}
       </section>
     </main>
   );

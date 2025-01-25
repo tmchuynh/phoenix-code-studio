@@ -50,7 +50,7 @@ const MainContent = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <NavSidebar />
-      <SidebarTrigger className="py-10 pl-9" />
+      <SidebarTrigger className="py-7 pl-9" />
       <main
         className={cn("relative w-11/12 mx-auto py-10 overflow-hidden", {
           "w-8/12": open,

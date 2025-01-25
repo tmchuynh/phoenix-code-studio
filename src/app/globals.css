@@ -45,15 +45,15 @@ body {
     --h2-font-size: 1.875rem;
     --h3-font-size: 1.5rem;
     --body-font-size: 1rem;
-    --line-height: 1.6;
+    --line-height: 1.5;
     --sidebar-background: #f7f7f7;
     --sidebar-foreground: #1a1a1a;
     --sidebar-primary: #d72638;
     --sidebar-primary-foreground: #ffffff;
-    --sidebar-accent: #ff6f3c;
-    --sidebar-accent-foreground: #ffffff;
+    --sidebar-accent: #fda484;
+    --sidebar-accent-foreground: #1a1a1a;
     --sidebar-border: #e2e8f0;
-    --sidebar-ring: #ffc93c;
+    --sidebar-ring: #d0cece96;
   }
 
   .dark {
@@ -91,10 +91,10 @@ body {
     --sidebar-foreground: #f5f5f5;
     --sidebar-primary: #d72638;
     --sidebar-primary-foreground: #ffffff;
-    --sidebar-accent: #ff6f3c;
+    --sidebar-accent: #303030;
     --sidebar-accent-foreground: #ffffff;
-    --sidebar-border: #292929;
-    --sidebar-ring: #ffc93c;
+    --sidebar-border: #2b2b2b;
+    --sidebar-ring: #efefef1b;
   }
 
   body {
@@ -106,6 +106,7 @@ body {
   h1 {
     font-family: "Notable", sans-serif;
     font-size: var(--h1-font-size);
+    margin-bottom: 1rem;
   }
 
   h2 {
@@ -122,11 +123,18 @@ body {
     margin-bottom: 0.5rem;
   }
 
+  h4 {
+    font-family: "RedRose", sans-serif;
+    letter-spacing: -0.71px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
   p {
     font-size: var(--body-font-size);
     line-height: var(--line-height);
     color: var(--foreground);
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
   }
 
   .slogan {

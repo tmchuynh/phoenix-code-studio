@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { useSidebar } from "@/components/ui/sidebar";
 import { pastProjects } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -19,9 +20,9 @@ const PastProjectsPage: FC = () => {
       <section className="my-8">
         <div className={"grid md:grid-cols-1 xl:grid-cols-2 gap-8"}>
           {pastProjects.map((project, index) => (
-            <div
+            <Card
               key={index}
-              className="border p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col justify-between"
+              className="border-2 border-transparent hover:border-border p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col justify-between"
             >
               <div>
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
@@ -93,7 +94,7 @@ const PastProjectsPage: FC = () => {
                   </Button>
                 )}
               </div>
-            </div>
+            </Card>
           ))}
         </div>
       </section>

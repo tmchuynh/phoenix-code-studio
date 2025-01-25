@@ -37,25 +37,25 @@ const FeaturedBlogs = () => {
             blog.featured && (
               <div
                 key={index}
-                className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground flex flex-col"
+                className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground flex flex-col justify-around"
               >
                 <div>
                   <h3 className="text-xl font-semibold text-center text-primary">
                     {blog.title}
                   </h3>
                   <h5 className="text-center text-xs">{blog.date}</h5>
-                  <p className="text-center mt-4">
-                    {open ? (
-                      <span className="whitespace-nowrap text-wrap overflow-hidden text-ellipsis">
-                        {isSmallScreen
-                          ? `${blog.excerpt.substring(0, 60)}...`
-                          : blog.excerpt}
-                      </span>
-                    ) : (
-                      <span>{blog.excerpt}</span>
-                    )}
-                  </p>
                 </div>
+                <p className="text-center mt-4">
+                  {open ? (
+                    <span className="whitespace-nowrap text-wrap overflow-hidden text-ellipsis">
+                      {isSmallScreen
+                        ? `${blog.excerpt.substring(0, 60)}...`
+                        : blog.excerpt}
+                    </span>
+                  ) : (
+                    <span>{blog.excerpt}</span>
+                  )}
+                </p>
                 <Button
                   variant={"outline"}
                   onClick={() => {

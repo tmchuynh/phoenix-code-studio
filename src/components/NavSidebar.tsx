@@ -20,9 +20,8 @@ export function NavSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 
   return (
     <Sidebar
-      variant="inset"
       {...props}
-      className="rounded-3xl shadow-md border hover:shadow-md"
+      className="shadow-md border border-sidebar-border hover:shadow-lg hover:ring-1 hover:ring-sidebar-ring"
     >
       <SidebarHeader>
         <SidebarMenu>
@@ -48,15 +47,15 @@ export function NavSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain
-          title="Services"
-          items={menu.navMain}
+          title="Information"
+          items={menu.information}
           openItemKey={openItemKey}
           setOpenItemKey={setOpenItemKey}
         />
         <SidebarSeparator />
         <NavMain
-          title="Information"
-          items={menu.information}
+          title="Services"
+          items={menu.navMain}
           openItemKey={openItemKey}
           setOpenItemKey={setOpenItemKey}
         />

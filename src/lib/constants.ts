@@ -1,5 +1,14 @@
 import { Send } from "lucide-react";
-import { FaBuilding, FaCalendarCheck, FaInfoCircle, FaLaptop, FaMapSigns, FaMoneyBillAlt, FaPenAlt, FaQuestion, FaSignature } from "react-icons/fa";
+import {
+  FaBuilding,
+  FaCalendarCheck,
+  FaInfoCircle,
+  FaLaptop,
+  FaMoneyBillAlt,
+  FaPenAlt,
+  FaQuestion,
+  FaSignature,
+} from "react-icons/fa";
 import { MdPeople } from "react-icons/md";
 import { IoBookSharp } from "react-icons/io5";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
@@ -747,8 +756,7 @@ export const paymentPlans = [
       "Monthly payments available",
       "Up to 3 months payment term"
     ],
-    buttonLabel: "Learn More & Get Started",
-    route: "/contact"
+    route: "/payment-plans/basic-plan"
   },
   {
     title: "Standard Plan",
@@ -758,8 +766,7 @@ export const paymentPlans = [
       "Priority support during the project",
       "Up to 6 months payment term"
     ],
-    buttonLabel: "Learn More & Get Started",
-    route: "/contact"
+    route: "/payment-plans/standard-plan"
   },
   {
     title: "Premium Plan",
@@ -769,8 +776,7 @@ export const paymentPlans = [
       "Up to 12-month payment terms",
       "Full service including ongoing support"
     ],
-    buttonLabel: "Learn More & Get Started",
-    route: "/contact"
+    route: "/payment-plans/premium-plan"
   },
   {
     title: "Custom Plan",
@@ -780,8 +786,7 @@ export const paymentPlans = [
       "Options for ongoing support and scaling",
       "Up to 24 months term based on agreement"
     ],
-    buttonLabel: "Learn More & Get Started",
-    route: "/contact"
+    route: "/payment-plans/custom-plan"
   }
 ];
 
@@ -790,7 +795,7 @@ export const testimonials = [
     name: "John Doe",
     featured: true,
     position: "CEO, Tech Innovators",
-    image: "/images/john-doe.jpg",
+    image: "/images/avatar-placeholder.jpg",
     quote:
       "This service helped us transform our business. The team was fantastic, and the results exceeded our expectations!",
   },
@@ -798,7 +803,7 @@ export const testimonials = [
     name: "Sarah Smith",
     featured: true,
     position: "Founder, Creative Solutions",
-    image: "/images/sarah-smith.jpg",
+    image: "/images/avatar-placeholder.jpg",
     quote:
       "A professional and reliable partner. The process was smooth, and the final product truly captures our vision.",
   },
@@ -806,7 +811,7 @@ export const testimonials = [
     name: "Michael Lee",
     featured: true,
     position: "CTO, NextGen Technologies",
-    image: "/images/michael-lee.jpg",
+    image: "/images/avatar-placeholder.jpg",
     quote:
       "The quality of work and attention to detail was exceptional. We saw a noticeable improvement in user engagement.",
   },
@@ -814,7 +819,7 @@ export const testimonials = [
     name: "Emma Johnson",
     featured: true,
     position: "Marketing Director, Bright Horizons",
-    image: "/images/emma-johnson.jpg",
+    image: "/images/avatar-placeholder.jpg",
     quote:
       "Absolutely amazing experience. The team was highly collaborative and delivered exactly what we needed, on time!",
   },
@@ -825,6 +830,7 @@ export const blogs = [
     title: "The Importance of User Experience in Web Design",
     author: "John Doe",
     date: "August 15, 2024",
+    img: "/images/blog-placeholder.jpg",
     featured: true,
     topics: ["Design", "Web Development"],
     excerpt:
@@ -835,6 +841,7 @@ export const blogs = [
     title: "How Tailwind CSS Can Speed Up Your Development Process",
     author: "Jane Smith",
     date: "July 10, 2023",
+    img: "/images/blog-placeholder.jpg",
     featured: false,
     topics: ["Web Development"],
     excerpt:
@@ -845,6 +852,7 @@ export const blogs = [
     title: "The Future of JavaScript Frameworks",
     author: "Michael Lee",
     date: "June 5, 2023",
+    img: "/images/blog-placeholder.jpg",
     featured: true,
     topics: ["JavaScript", "Web Development"],
     excerpt:
@@ -855,6 +863,7 @@ export const blogs = [
     title: "Why Accessibility Matters in Web Development",
     author: "Sarah Kim",
     date: "May 22, 2023",
+    img: "/images/blog-placeholder.jpg",
     featured: false,
     topics: ["Accessibility", "Design"],
     excerpt:
@@ -865,6 +874,7 @@ export const blogs = [
     title: "Decoding Blockchain: Exploring the World of Decentralized Systems",
     author: "Alex Johnson",
     date: "April 10, 2024",
+    img: "/images/blog-placeholder.jpg",
     featured: false,
     topics: ["Blockchain"],
     excerpt:
@@ -875,6 +885,7 @@ export const blogs = [
     title: "Demystifying Data Science: Transforming Data into Actionable Insights",
     author: "Emily Carter",
     date: "March 18, 2024",
+    img: "/images/blog-placeholder.jpg",
     featured: false,
     topics: ["Data Science", "Analytics"],
     excerpt:
@@ -885,6 +896,7 @@ export const blogs = [
     title: "Revolutionizing Connectivity: Innovations in IoT Development",
     author: "Samuel Green",
     date: "February 25, 2023",
+    img: "/images/blog-placeholder.jpg",
     featured: true,
     topics: ["IoT"],
     excerpt:
@@ -895,6 +907,7 @@ export const blogs = [
     title: "Creative Data Harvesting: The Wonders of Web Scraping",
     author: "Olivia Martin",
     date: "January 15, 2023",
+    img: "/images/blog-placeholder.jpg",
     featured: false,
     topics: ["Data Science", "Web Development"],
     excerpt:
@@ -905,6 +918,7 @@ export const blogs = [
     title: "Behind the Code: Insights into the World of Tech Startups",
     author: "David Lee",
     date: "December 5, 2024",
+    img: "/images/blog-placeholder.jpg",
     featured: false,
     topics: ["Entrepreneurship"],
     excerpt:
@@ -915,6 +929,7 @@ export const blogs = [
     title: "Navigating the Digital Revolution: Emerging Tech Trends",
     author: "Sophia White",
     date: "November 20, 2024",
+    img: "/images/blog-placeholder.jpg",
     featured: true,
     topics: ["Innovation"],
     excerpt:
@@ -925,6 +940,7 @@ export const blogs = [
     title: "Mastering User-Friendly Design: Gems of GUI Development",
     author: "Lucas Brown",
     date: "October 15, 2023",
+    img: "/images/blog-placeholder.jpg",
     featured: false,
     topics: ["Design", "Web Development"],
     excerpt:
@@ -935,6 +951,7 @@ export const blogs = [
     title: "From Startup Garage to Tech Giant: Stories of Tech Entrepreneurs",
     author: "Ethan Garcia",
     date: "August 5, 2024",
+    img: "/images/blog-placeholder.jpg",
     featured: false,
     topics: ["Entrepreneurship"],
     excerpt:

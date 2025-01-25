@@ -2,6 +2,7 @@
 import AboutSection from "@/components/AboutSection";
 import CallToAction from "@/components/CallToAction";
 import FeaturedBlogs from "@/components/FeaturedBlogs";
+import FeaturedProjects from "@/components/FeaturedProjects";
 import ServiceHighlights from "@/components/ServiceHighlights";
 import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
@@ -47,7 +48,7 @@ const WelcomePage: FC = () => {
       <CallToAction />
 
       {/* Featured Projects Section */}
-      <FeaturedBlogs />
+      <FeaturedProjects />
 
       {/* Testimonials Section */}
       <Testimonials />

@@ -368,28 +368,38 @@ const BlogDisplayPage: FC = () => {
           {currentArticles.map((blog, index) => (
             <div
               key={index}
-              className="border p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow flex flex-col justify-between"
+              className="border rounded-lg shadow-lg hover:shadow-xl transition-shadow flex flex-col justify-between"
             >
               <div>
-                <h3 className="text-xl font-semibold mb-2">{blog.title}</h3>
-                <p className="mb-0">
-                  <span className="font-semibold">By {blog.author}</span>
-                </p>
-                <p>
-                  <span className="italic">{blog.date}</span>
-                </p>
-                <p className="text-lg mb-4">{blog.excerpt}</p>
-                <p className="text-sm mb-4">Topics: {blog.topics.join(", ")}</p>
+                <img
+                  src={blog.img}
+                  alt={blog.title}
+                  className="w-full h-36 rounded-t-md object-cover border mx-auto mb-1"
+                />
+                <div className="px-4 pb-2">
+                  <Button
+                    variant="ghost"
+                    className="text-primary underline underline-offset-2 px-0 mt-3 mb-2 font-SofiaSans text-xl tracking-wider font-bold hover:bg-transparent hover:text-primary hover:no-underline"
+                    onClick={() => {
+                      router.push(blog.slug);
+                    }}
+                  >
+                    {blog.title}
+                  </Button>
+                  <p className="mb-0">
+                    <span>
+                      <strong>By:</strong> {blog.author}
+                    </span>
+                  </p>
+                  <p>
+                    <span className="italic text-xs">{blog.date}</span>
+                  </p>
+                  <p className="text-md mb-4">{blog.excerpt}</p>
+                  <p className="text-sm mb-4">
+                    <strong>Topics:</strong> {blog.topics.join(", ")}
+                  </p>
+                </div>
               </div>
-              <Button
-                variant="link"
-                className="text-primary underline"
-                onClick={() => {
-                  router.push(blog.slug);
-                }}
-              >
-                Read Full Article
-              </Button>
             </div>
           ))}
         </div>
