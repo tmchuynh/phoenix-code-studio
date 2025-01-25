@@ -1,24 +1,37 @@
 "use client";
-
 import { Button } from "@/components/ui/button";
 import { useSidebar } from "@/components/ui/sidebar";
-import { TopicFilterProps } from "@/lib/interfaces";
 import { blogs } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import {
-  Checkbox,
-  FormControl,
-  MenuItem,
-  OutlinedInput,
-  Select,
-  SelectChangeEvent,
-} from "@mui/material";
+import { Checkbox, PaginationItem } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { FC, useEffect, useState } from "react";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import { ChevronsUpDown } from "lucide-react";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const BlogDisplayPage: FC = () => {
   const router = useRouter();
   const { open } = useSidebar();
+  const [topicIsOpen, setTopicIsOpen] = useState(false);
+  const [dateIsOpen, setDateIsOpen] = useState(false);
 
   const [filteredBlogs, setFilteredBlogs] = useState(blogs);
   const [selectedDates, setSelectedDates] = useState<string[]>([]);
@@ -29,6 +42,31 @@ const BlogDisplayPage: FC = () => {
     date: false,
   });
   const [filtersCleared, setFiltersCleared] = useState(false);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [articlesPerPage, setArticlesPerPage] = useState(5);
+
+  // Calculate the indexes for pagination
+  const indexOfLastArticle = currentPage * articlesPerPage;
+  const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
+  const currentArticles = filteredBlogs.slice(
+    indexOfFirstArticle,
+    indexOfLastArticle
+  );
+
+  // Handle page change
+  const handlePageChange = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  };
+
+  // Handle articles per page change
+  const handleArticlesPerPageChange = (value: number) => {
+    setArticlesPerPage(value);
+    setCurrentPage(1); // Reset to the first page when articles per page changes
+  };
+
+  // Calculate total pages
+  const totalPages = Math.ceil(filteredBlogs.length / articlesPerPage);
 
   const handleFilter = () => {
     let filtered = blogs;
@@ -113,42 +151,83 @@ const BlogDisplayPage: FC = () => {
   return (
     <main className="w-11/12 mx-auto py-6">
       <h1 className="text-3xl font-bold text-center">Our Latest Blogs</h1>
-      <p className="text-center text-lg my-4">
+      <p className="text-center text-lg mt-4">
         Stay up-to-date with our latest insights and trends in web development.
       </p>
 
       {/* Filter Options */}
-      <section className="my-8">
-        <div className="h-40 md:h-32 lg:h-20 flex flex-col justify-between relative">
-          {/* Confirmation Text for Filters Cleared */}
-          {filtersCleared && (
-            <div className="mt-4 text-center h-14">
-              <p className="text-secondary m-0 p-0">
-                Filters have been cleared successfully!
-              </p>
-            </div>
-          )}
-
-          {/* No results warning */}
-          {noResults && (
-            <div className="mt-4 text-center h-14">
-              <p className="text-destructive m-0">
-                No blogs match your selected filters. Filters have been cleared.
-              </p>
-            </div>
-          )}
-
-          {/* Clear Filters Button */}
-          <Button
-            variant={"destructive"}
-            className="my-4 absolute bottom-4"
-            onClick={clearFilters}
+      <section className="mb-8">
+        <section className="h-60 md:h-44 lg:h-32 flex flex-col justify-between relative">
+          <div
+            className={cn(
+              "absolute bottom-0 flex flex-col lg:flex-row justify-between items-baseline md:items-end w-11/12 left-6",
+              {
+                "md:flex-row md:items-baseline": !open,
+              }
+            )}
           >
-            Clear Filters
-          </Button>
-        </div>
+            {/* Clear Filters Button */}
+            <Button
+              variant={"destructive"}
+              className="my-4"
+              onClick={clearFilters}
+            >
+              Clear Filters
+            </Button>
 
-        <div
+            {/* Articles per page DropdownMenu */}
+            <section className="pb-7">
+              <label htmlFor="articlesPerPage" className="mr-2">
+                Articles per page:
+              </label>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button className="p-2 text-sm bg-gray-200 rounded">
+                    {articlesPerPage} articles per page
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <DropdownMenuItem
+                    onClick={() => handleArticlesPerPageChange(5)}
+                  >
+                    5 articles per page
+                  </DropdownMenuItem>
+                  <DropdownMenuItem
+                    onClick={() => handleArticlesPerPageChange(10)}
+                  >
+                    10 articles per page
+                  </DropdownMenuItem>
+                  <DropdownMenuItem
+                    onClick={() => handleArticlesPerPageChange(15)}
+                  >
+                    15 articles per page
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </section>
+
+            {/* Confirmation Text for Filters Cleared */}
+            {filtersCleared && (
+              <div className="mt-4 text-center h-14">
+                <p className="text-secondary m-0 p-0">
+                  Filters have been cleared successfully!
+                </p>
+              </div>
+            )}
+
+            {/* No results warning */}
+            {noResults && (
+              <div className="mt-4 text-center h-14">
+                <p className="text-destructive m-0">
+                  No blogs match your selected filters. Filters have been
+                  cleared.
+                </p>
+              </div>
+            )}
+          </div>
+        </section>
+
+        <section
           className={cn(
             "flex flex-col lg:flex-row justify-center sm:items-end sm:space-y-4 md:gap-4",
             {
@@ -161,75 +240,116 @@ const BlogDisplayPage: FC = () => {
               "md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-1": open,
             })}
           >
+            {/* Topic Filter */}
             <div className="flex flex-wrap items-center">
-              <label htmlFor="topic" className="mr-2 text-lg w-full">
-                Filter by Topic:
-              </label>
-              {/* Topic Filter */}
-              <div
-                className={cn(
-                  "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full",
-                  {
-                    "lg:grid-cols-1": open,
-                  }
-                )}
+              <Collapsible
+                open={topicIsOpen}
+                onOpenChange={setTopicIsOpen}
+                className="w-full space-y-2"
               >
-                {topics.map((topic) => (
-                  <div key={topic} className="flex items-center mr-1">
-                    <Checkbox
-                      checked={selectedTopics.includes(topic)}
-                      onChange={(e) =>
-                        handleTopicCheckboxChange(topic, e.target.checked)
+                <div className="flex items-center justify-between space-x-4 px-4">
+                  <CollapsibleTrigger asChild>
+                    <div className="flex items-center w-full">
+                      <ChevronsUpDown className="h-4 w-4" />
+                      <label htmlFor="topic" className="ml-2 text-lg w-full">
+                        Filter by Topic:
+                      </label>
+                      <span className="sr-only">Toggle</span>
+                    </div>
+                  </CollapsibleTrigger>
+                </div>
+                <CollapsibleContent className="space-y-2">
+                  <div
+                    className={cn(
+                      "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full",
+                      {
+                        "lg:grid-cols-1": open,
                       }
-                    />
-                    <label
-                      htmlFor={topic}
-                      className="ml-2"
-                      onMouseLeave={handleMouseLeave}
-                      onClick={() => handleOpen("topic")}
-                    >
-                      {topic}
-                    </label>
+                    )}
+                  >
+                    {topics.sort().map((topic) => (
+                      <div key={topic} className="flex items-center mr-1">
+                        <Checkbox
+                          checked={selectedTopics.includes(topic)}
+                          onChange={(e) =>
+                            handleTopicCheckboxChange(topic, e.target.checked)
+                          }
+                        />
+                        <label
+                          htmlFor={topic}
+                          className="ml-2"
+                          onMouseLeave={handleMouseLeave}
+                          onClick={() => handleOpen("topic")}
+                        >
+                          {topic}
+                        </label>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
+                </CollapsibleContent>
+              </Collapsible>
             </div>
 
+            {/* Date Filter */}
             <div className="flex flex-wrap items-center">
-              <label htmlFor="date" className="mr-2 text-lg w-full">
-                Filter by Date:
-              </label>
-              {/* Date Filter */}
-              <div
-                className={cn(
-                  "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full",
-                  {
-                    "lg:grid-cols-1": open,
-                  }
-                )}
+              <Collapsible
+                open={dateIsOpen}
+                onOpenChange={setDateIsOpen}
+                className="w-full space-y-2"
               >
-                {dates.map((date, index) => (
-                  <div key={date} className="flex items-center mr-1">
-                    <Checkbox
-                      checked={selectedDates.includes(date)}
-                      onChange={(e) =>
-                        handleDateCheckboxChange(date, e.target.checked)
+                <div className="flex items-center justify-between space-x-4 px-4">
+                  <CollapsibleTrigger asChild>
+                    <div className="flex items-center w-full">
+                      <ChevronsUpDown className="h-4 w-4" />
+                      <label htmlFor="topic" className="ml-2 text-lg w-full">
+                        Filter by Date:
+                      </label>
+                      <span className="sr-only">Toggle</span>
+                    </div>
+                  </CollapsibleTrigger>
+                </div>
+                <CollapsibleContent className="space-y-2">
+                  <div
+                    className={cn(
+                      "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full",
+                      {
+                        "lg:grid-cols-1": open,
                       }
-                    />
-                    <label
-                      htmlFor={date}
-                      className="ml-2"
-                      onMouseLeave={handleMouseLeave}
-                      onClick={() => handleOpen("date")}
-                    >
-                      {date}
-                    </label>
+                    )}
+                  >
+                    {dates
+                      .sort((a, b) => {
+                        // Convert the date strings to Date objects
+                        const dateA = new Date(a);
+                        const dateB = new Date(b);
+
+                        // Compare the dates by their timestamp (milliseconds)
+                        return dateA.getTime() - dateB.getTime();
+                      })
+                      .map((date) => (
+                        <div key={date} className="flex items-center mr-1">
+                          <Checkbox
+                            checked={selectedDates.includes(date)}
+                            onChange={(e) =>
+                              handleDateCheckboxChange(date, e.target.checked)
+                            }
+                          />
+                          <label
+                            htmlFor={date}
+                            className="ml-2"
+                            onMouseLeave={handleMouseLeave}
+                            onClick={() => handleOpen("date")}
+                          >
+                            {date}
+                          </label>
+                        </div>
+                      ))}
                   </div>
-                ))}
-              </div>
+                </CollapsibleContent>
+              </Collapsible>
             </div>
           </div>
-        </div>
+        </section>
       </section>
 
       {/* Displaying filtered blog cards dynamically */}
@@ -245,7 +365,7 @@ const BlogDisplayPage: FC = () => {
             }
           )}
         >
-          {filteredBlogs.map((blog, index) => (
+          {currentArticles.map((blog, index) => (
             <div
               key={index}
               className="border p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow flex flex-col justify-between"
@@ -274,6 +394,18 @@ const BlogDisplayPage: FC = () => {
           ))}
         </div>
       </section>
+
+      {/* Pagination controls */}
+      <Pagination className="gap-5">
+        <PaginationPrevious
+          onClick={() => handlePageChange(currentPage - 1)}
+          className={currentPage === 1 ? "hidden" : ""}
+        />
+        <PaginationNext
+          onClick={() => handlePageChange(currentPage + 1)}
+          className={currentPage === totalPages ? "hidden" : ""}
+        />
+      </Pagination>
     </main>
   );
 };
