@@ -824,9 +824,9 @@ export const blogs = [
   {
     title: "The Importance of User Experience in Web Design",
     author: "John Doe",
-    date: "August 15, 2025",
+    date: "August 15, 2024",
     featured: true,
-    topics: ["UX/UI Design", "Web Design"],
+    topics: ["Design", "Web Development"],
     excerpt:
       "User experience (UX) is one of the most important factors when designing a website. It directly impacts how users interact with your website, and ultimately affects conversion rates.",
     slug: "/blog/importance-of-user-experience",
@@ -834,9 +834,9 @@ export const blogs = [
   {
     title: "How Tailwind CSS Can Speed Up Your Development Process",
     author: "Jane Smith",
-    date: "July 10, 2025",
+    date: "July 10, 2023",
     featured: false,
-    topics: ["CSS", "Frontend Development"],
+    topics: ["Web Development"],
     excerpt:
       "Tailwind CSS is a utility-first CSS framework that provides a highly customizable approach to building modern user interfaces. In this blog post, we'll explore how it can speed up your development process.",
     slug: "/blog/how-tailwind-css-can-speed-up-your-development",
@@ -844,10 +844,9 @@ export const blogs = [
   {
     title: "The Future of JavaScript Frameworks",
     author: "Michael Lee",
-    date: "June 5, 2025",
+    date: "June 5, 2023",
     featured: true,
     topics: ["JavaScript", "Web Development"],
-    tags: ["", "", "", "", "", "", "", ""],
     excerpt:
       "With the rapid evolution of JavaScript frameworks like React, Vue, and Angular, it's important to stay up-to-date with the latest trends. This article explores the future of JavaScript frameworks.",
     slug: "/blog/future-of-javascript-frameworks",
@@ -855,13 +854,92 @@ export const blogs = [
   {
     title: "Why Accessibility Matters in Web Development",
     author: "Sarah Kim",
-    date: "May 22, 2025",
+    date: "May 22, 2023",
     featured: false,
-    topics: ["Web Accessibility", "UX/UI Design"],
-    tags: ["", "", "", "", "", "", "", ""],
+    topics: ["Accessibility", "Design"],
     excerpt:
       "Accessibility should be a priority in every web development project. Ensuring that your website is usable by people with disabilities opens your content to a wider audience and improves user satisfaction.",
     slug: "/blog/why-accessibility-matters",
+  },
+  {
+    title: "Decoding Blockchain: Exploring the World of Decentralized Systems",
+    author: "Alex Johnson",
+    date: "April 10, 2024",
+    featured: false,
+    topics: ["Blockchain"],
+    excerpt:
+      "Blockchain technology is transforming industries by providing secure, decentralized systems. Discover the fundamentals and future potential of blockchain in this blog.",
+    slug: "/blog/decoding-blockchain-decentralized-systems",
+  },
+  {
+    title: "Demystifying Data Science: Transforming Data into Actionable Insights",
+    author: "Emily Carter",
+    date: "March 18, 2024",
+    featured: false,
+    topics: ["Data Science", "Analytics"],
+    excerpt:
+      "Data science is changing how we solve problems and make decisions. Learn how data scientists turn raw data into insights that drive success.",
+    slug: "/blog/demystifying-data-science",
+  },
+  {
+    title: "Revolutionizing Connectivity: Innovations in IoT Development",
+    author: "Samuel Green",
+    date: "February 25, 2023",
+    featured: true,
+    topics: ["IoT"],
+    excerpt:
+      "The Internet of Things (IoT) is connecting the world like never before. Explore how IoT innovations are transforming industries and daily life.",
+    slug: "/blog/revolutionizing-connectivity-iot",
+  },
+  {
+    title: "Creative Data Harvesting: The Wonders of Web Scraping",
+    author: "Olivia Martin",
+    date: "January 15, 2023",
+    featured: false,
+    topics: ["Data Science", "Web Development"],
+    excerpt:
+      "Web scraping opens up endless possibilities for collecting and analyzing data. Dive into the ethical and technical aspects of this powerful technique.",
+    slug: "/blog/creative-data-harvesting-web-scraping",
+  },
+  {
+    title: "Behind the Code: Insights into the World of Tech Startups",
+    author: "David Lee",
+    date: "December 5, 2024",
+    featured: false,
+    topics: ["Entrepreneurship"],
+    excerpt:
+      "Tech startups are driving innovation in the digital age. Explore the challenges and successes behind the scenes of these groundbreaking companies.",
+    slug: "/blog/insights-into-tech-startups",
+  },
+  {
+    title: "Navigating the Digital Revolution: Emerging Tech Trends",
+    author: "Sophia White",
+    date: "November 20, 2024",
+    featured: true,
+    topics: ["Innovation"],
+    excerpt:
+      "Stay ahead of the curve with a look at the latest technology trends reshaping the digital landscape and industries worldwide.",
+    slug: "/blog/navigating-tech-trends",
+  },
+  {
+    title: "Mastering User-Friendly Design: Gems of GUI Development",
+    author: "Lucas Brown",
+    date: "October 15, 2023",
+    featured: false,
+    topics: ["Design", "Web Development"],
+    excerpt:
+      "Great graphical user interfaces (GUIs) are key to intuitive user experiences. Discover tips and techniques for designing user-friendly interfaces.",
+    slug: "/blog/mastering-gui-design",
+  },
+  {
+    title: "From Startup Garage to Tech Giant: Stories of Tech Entrepreneurs",
+    author: "Ethan Garcia",
+    date: "August 5, 2024",
+    featured: false,
+    topics: ["Entrepreneurship"],
+    excerpt:
+      "Tech entrepreneurs are changing the world. Explore inspiring stories of how industry disruptors started from scratch and achieved greatness.",
+    slug: "/blog/stories-of-tech-entrepreneurs",
   },
 ];
 
@@ -872,7 +950,7 @@ export const pastProjects = [
     featured: true,
     description: "This is a simple Next.js project.It's a web-based quiz platform designed to offer a variety of quizzes across multiple subjects, including Chemistry, History, Math, and more. The application supports user registration, tracks progress, and allows users to select quizzes based on difficulty and subject. Users can register, reset their passwords, and manage their profiles with the ability to update personal information and choose default profile pictures. The application includes features like quiz progress tracking, score tracking, and a leaderboard to encourage competition. It also stores quiz data in localStorage, ensuring users can resume where they left off. Built with a responsive UI and accessibility features, the app provides a seamless experience across devices. Data management is handled using MySQL, Sequelize, and Next-Auth for secure user authentication and information retrieval.",
     short: "This Next.js app, a conversion of Quizlet-Plus, offers quizzes in subjects like Chemistry, History, and Math. It features user registration, progress tracking, profile management, and a leaderboard. Data is stored in localStorage, with MySQL, Sequelize, and Next-Auth handling authentication. The app is responsive and includes accessibility features for a seamless experience.",
-    languages: ["HTML", "CSS", "TypeScript"],
+    languages: ["HTML", "TypeScript"],
     frameworks: ["Next.js", "React"],
     technologies: ["MySQL", "Sequelize", "Next-Auth", "localStorage", "Axios"],
     githubLink: "https://github.com/tmchuynh/knowledge_knockout"
