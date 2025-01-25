@@ -1,10 +1,10 @@
 import { testimonials } from "@/lib/constants";
 import useSmallScreen from "@/lib/useSmallScreen";
 import { cn } from "@/lib/utils";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { useSidebar } from "./ui/sidebar";
-import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Button } from "./ui/button";
+import { useSidebar } from "./ui/sidebar";
 
 const Testimonials = () => {
   const isSmallScreen = useSmallScreen();

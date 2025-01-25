@@ -1,35 +1,19 @@
 "use client";
+import AboutSection from "@/components/AboutSection";
+import CallToAction from "@/components/CallToAction";
+import FeaturedBlogs from "@/components/FeaturedBlogs";
+import ServiceHighlights from "@/components/ServiceHighlights";
+import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
 import { useSidebar } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 import "swiper/css";
-import ServiceHighlights from "@/components/ServiceHighlights";
-import AboutSection from "@/components/AboutSection";
-import CallToAction from "@/components/CallToAction";
-import FeaturedBlogs from "@/components/FeaturedBlogs";
-import Testimonials from "@/components/Testimonials";
 
 const WelcomePage: FC = () => {
   const router = useRouter();
   const { open } = useSidebar();
-
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 640);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   const navigateToServices = () => {
     router.push("/services");

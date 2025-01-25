@@ -1,9 +1,9 @@
-import useSmallScreen from "@/lib/useSmallScreen";
-import { Button } from "./ui/button";
-import { cn } from "@/lib/utils";
 import { pastProjects } from "@/lib/constants";
-import { useSidebar } from "./ui/sidebar";
+import useSmallScreen from "@/lib/useSmallScreen";
+import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
+import { Button } from "./ui/button";
+import { useSidebar } from "./ui/sidebar";
 
 const FeaturedProjects = () => {
   const isSmallScreen = useSmallScreen();
