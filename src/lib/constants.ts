@@ -788,6 +788,7 @@ export const paymentPlans = [
 export const testimonials = [
   {
     name: "John Doe",
+    featured: true,
     position: "CEO, Tech Innovators",
     image: "/images/john-doe.jpg",
     quote:
@@ -795,6 +796,7 @@ export const testimonials = [
   },
   {
     name: "Sarah Smith",
+    featured: true,
     position: "Founder, Creative Solutions",
     image: "/images/sarah-smith.jpg",
     quote:
@@ -802,6 +804,7 @@ export const testimonials = [
   },
   {
     name: "Michael Lee",
+    featured: true,
     position: "CTO, NextGen Technologies",
     image: "/images/michael-lee.jpg",
     quote:
@@ -809,6 +812,7 @@ export const testimonials = [
   },
   {
     name: "Emma Johnson",
+    featured: true,
     position: "Marketing Director, Bright Horizons",
     image: "/images/emma-johnson.jpg",
     quote:
@@ -821,6 +825,7 @@ export const blogs = [
     title: "The Importance of User Experience in Web Design",
     author: "John Doe",
     date: "August 15, 2025",
+    featured: true,
     topics: ["UX/UI Design", "Web Design"],
     excerpt:
       "User experience (UX) is one of the most important factors when designing a website. It directly impacts how users interact with your website, and ultimately affects conversion rates.",
@@ -830,6 +835,7 @@ export const blogs = [
     title: "How Tailwind CSS Can Speed Up Your Development Process",
     author: "Jane Smith",
     date: "July 10, 2025",
+    featured: false,
     topics: ["CSS", "Frontend Development"],
     excerpt:
       "Tailwind CSS is a utility-first CSS framework that provides a highly customizable approach to building modern user interfaces. In this blog post, we'll explore how it can speed up your development process.",
@@ -839,7 +845,9 @@ export const blogs = [
     title: "The Future of JavaScript Frameworks",
     author: "Michael Lee",
     date: "June 5, 2025",
+    featured: true,
     topics: ["JavaScript", "Web Development"],
+    tags: ["", "", "", "", "", "", "", ""],
     excerpt:
       "With the rapid evolution of JavaScript frameworks like React, Vue, and Angular, it's important to stay up-to-date with the latest trends. This article explores the future of JavaScript frameworks.",
     slug: "/blog/future-of-javascript-frameworks",
@@ -848,7 +856,9 @@ export const blogs = [
     title: "Why Accessibility Matters in Web Development",
     author: "Sarah Kim",
     date: "May 22, 2025",
+    featured: false,
     topics: ["Web Accessibility", "UX/UI Design"],
+    tags: ["", "", "", "", "", "", "", ""],
     excerpt:
       "Accessibility should be a priority in every web development project. Ensuring that your website is usable by people with disabilities opens your content to a wider audience and improves user satisfaction.",
     slug: "/blog/why-accessibility-matters",
@@ -857,30 +867,38 @@ export const blogs = [
 
 export const pastProjects = [
   {
-    title: "E-Commerce Website",
-    description: "A fully responsive e-commerce website built with modern tools.",
+    title: "Quiz Application",
+    img: "/images/project-image-1.jpg",
+    featured: true,
+    description: "This is a simple Next.js project.It's a web-based quiz platform designed to offer a variety of quizzes across multiple subjects, including Chemistry, History, Math, and more. The application supports user registration, tracks progress, and allows users to select quizzes based on difficulty and subject. Users can register, reset their passwords, and manage their profiles with the ability to update personal information and choose default profile pictures. The application includes features like quiz progress tracking, score tracking, and a leaderboard to encourage competition. It also stores quiz data in localStorage, ensuring users can resume where they left off. Built with a responsive UI and accessibility features, the app provides a seamless experience across devices. Data management is handled using MySQL, Sequelize, and Next-Auth for secure user authentication and information retrieval.",
+    short: "This Next.js app, a conversion of Quizlet-Plus, offers quizzes in subjects like Chemistry, History, and Math. It features user registration, progress tracking, profile management, and a leaderboard. Data is stored in localStorage, with MySQL, Sequelize, and Next-Auth handling authentication. The app is responsive and includes accessibility features for a seamless experience.",
+    languages: ["HTML", "CSS", "TypeScript"],
+    frameworks: ["Next.js", "React"],
+    technologies: ["MySQL", "Sequelize", "Next-Auth", "localStorage", "Axios"],
+    githubLink: "https://github.com/tmchuynh/knowledge_knockout"
+  },
+  {
+    title: "Company Website",
+    img: "/images/project-image-1.jpg",
+    featured: true,
+    description: "The International Activities Club (IAC) website is a user-friendly platform that showcases the organization's educational programs and after-school activities. It highlights the A.R.C. Initiative, focusing on hands-on learning and real-world application of classroom knowledge. The site provides detailed information about the diverse extracurricular options, such as chess, sports, and creative writing, offered to students from 1st grade through high school. With easy navigation, the website ensures parents and schools can explore IAC’s services and find enriching learning opportunities for students.",
+    short: "The IAC website highlights educational programs, the A.R.C. Initiative, and after-school activities like chess, sports, and creative writing, offering enriching opportunities for students. It’s designed for easy navigation by parents and schools to explore IAC’s services.",
     languages: ["JavaScript", "HTML", "CSS"],
-    frameworks: ["React", "Node.js", "Express"],
-    technologies: ["MongoDB", "Stripe API", "Redux"],
-    liveLink: "https://ecommerce-website.com",
-    githubLink: "https://github.com/username/ecommerce-website"
+    frameworks: ["Node.js", "Express"],
+    technologies: ["Bootstrap CSS", "Chart.js"],
+    liveLink: "https://iacafterschools.com/",
   },
   {
-    title: "Portfolio Website",
-    description: "A personal portfolio website showcasing projects and skills.",
-    languages: ["HTML", "CSS", "JavaScript"],
-    frameworks: ["Next.js"],
-    technologies: ["Tailwind CSS", "Vercel"],
-    liveLink: "https://username-portfolio.com",
-    githubLink: "https://github.com/username/portfolio"
-  },
-  {
-    title: "Blog Application",
-    description: "A simple blog platform where users can create and manage posts.",
-    languages: ["Python", "HTML", "CSS"],
-    frameworks: ["Django"],
-    technologies: ["SQLite", "Bootstrap"],
-    liveLink: "",
-    githubLink: "https://github.com/username/blog-application"
+    title: "Company Website",
+    img: "/images/project-image-1.jpg",
+    featured: false,
+    description: `
+      The FirstGalaxy NPM version Build Status website is designed to showcase the benefits of joining FirstGalaxy Inc. as a real estate agent. It provides helpful resources for starting a real estate career and offers easy access to agent listings.
+
+      The code demonstrates how to filter data by importing an agents object from ./data.js. It uses strict mode, establishes a dropdown menu for filtering options, and toggles its visibility when clicked. The glossary module is also imported to display terms dynamically on the page. Each term is iterated over and printed to the screen, allowing users to easily view the glossary content.`,
+    short: "The FirstGalaxy NPM version Build Status website showcases the benefits of joining FirstGalaxy Inc., offers resources for starting a real estate career, and connects users to agent listings. The code demonstrates data filtering, toggling dropdown visibility, and dynamically displaying glossary terms imported from ./data.js.",
+    languages: ["JavaScript", "HTML", "CSS"],
+    technologies: ["Bootstrap CSS", "Chart.js"],
+    githubLink: "https://github.com/tmchuynh/firstgalaxy"
   },
 ];

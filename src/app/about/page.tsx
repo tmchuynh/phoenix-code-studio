@@ -2,17 +2,12 @@ import { SidebarSeparator } from "@/components/ui/sidebar";
 import {
   FaHandshake,
   FaHandsHelping,
-  FaLeaf,
-  FaMedal,
   FaRecycle,
   FaRegLightbulb,
   FaSeedling,
   FaStar,
   FaUsers,
 } from "react-icons/fa";
-import { GiGrowth, GiTechnoHeart } from "react-icons/gi";
-import { MdBiotech } from "react-icons/md";
-import { SiLevelsdotfyi } from "react-icons/si";
 import { GrGrow } from "react-icons/gr";
 
 const aboutUs = () => {

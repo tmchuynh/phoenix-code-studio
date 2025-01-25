@@ -1,22 +1,26 @@
 "use client";
 
-import { FC } from "react";
 import { Button } from "@/components/ui/button";
+import { useSidebar } from "@/components/ui/sidebar";
+import { blogs, pastProjects, testimonials } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
+import { FC } from "react";
 import {
   FaDesktop,
   FaHandshake,
   FaHandsHelping,
   FaPen,
   FaRecycle,
+  FaRegLightbulb,
   FaSearch,
   FaSeedling,
   FaStar,
+  FaUsers,
 } from "react-icons/fa";
 import { GrGrow } from "react-icons/gr";
-import { FaRegLightbulb, FaUsers, FaAward } from "react-icons/fa";
-import { useSidebar } from "@/components/ui/sidebar";
-import { cn } from "@/lib/utils";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const WelcomePage: FC = () => {
   const router = useRouter();
@@ -45,7 +49,11 @@ const WelcomePage: FC = () => {
   return (
     <main className="w-11/12 mx-auto py-6">
       {/* Welcome Section */}
-      <section className="text-center">
+      <section
+        className={cn("my-16 w-full", {
+          "w-10/12 md:w-11/12 lg:w-full": open,
+        })}
+      >
         <h1 className="text-4xl font-bold text-primary">
           Welcome to Phoenix Code Studio!
         </h1>
@@ -57,7 +65,11 @@ const WelcomePage: FC = () => {
       </section>
 
       {/* Services Highlight Section */}
-      <section className="my-16">
+      <section
+        className={cn("my-16 w-full", {
+          "w-10/12 md:w-11/12 lg:w-full": open,
+        })}
+      >
         <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
           What We Do
         </h2>
@@ -108,7 +120,11 @@ const WelcomePage: FC = () => {
       </section>
 
       {/* About Section */}
-      <section className="my-16">
+      <section
+        className={cn("my-16 w-full", {
+          "w-10/12 md:w-11/12 lg:w-full": open,
+        })}
+      >
         <h2 className="text-3xl font-semibold text-center mb-6 text-primary">
           Who We Are
         </h2>
@@ -230,7 +246,11 @@ const WelcomePage: FC = () => {
       </section>
 
       {/* Featured Projects Section */}
-      <section className="my-16">
+      <section
+        className={cn("my-16 w-full", {
+          "w-10/12 md:w-11/12 lg:w-full": open,
+        })}
+      >
         <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
           Featured Projects
         </h2>
@@ -239,212 +259,154 @@ const WelcomePage: FC = () => {
             "lg:flex-col xl:flex-row": open,
           })}
         >
+          {pastProjects.map((project, index) => (
+            <div key={`${project.short.substring(4, 15)}`}>
+              {project.featured && (
+                <div className="rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground p-1">
+                  <div className="p-4 rounded-lg">
+                    <img
+                      src={project.img}
+                      alt={`${project.title} Image`}
+                      className="rounded-lg w-full h-24 border object-cover"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-center text-primary pt-1">
+                    {project.title}
+                  </h3>
+                  <p className="text-center mt-2 text-balance">
+                    {project.short}
+                  </p>
+                </div>
+              )}
+            </div>
+          ))}
           {/* Project 1 */}
-          <div className="rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground p-1">
-            <div className="p-4 rounded-lg">
-              <img
-                src="/project-image-1.jpg"
-                alt="Project 1"
-                className="rounded-lg w-full h-24 border object-cover"
-              />
-            </div>
-            <h3 className="text-xl font-semibold text-center text-primary pt-1">
-              Project 1
-            </h3>
-            <p className="text-center mt-2">
-              A custom website for a local business that enhances customer
-              engagement.
-            </p>
-          </div>
-
-          {/* Project 2 */}
-          <div className="rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground p-1">
-            <div className="p-4 rounded-lg">
-              <img
-                src="/project-image-1.jpg"
-                alt="Project 1"
-                className="rounded-lg w-full h-24 border object-cover"
-              />
-            </div>
-            <h3 className="text-xl font-semibold text-center text-primary pt-1">
-              Project 1
-            </h3>
-            <p className="text-center mt-2">
-              A custom website for a local business that enhances customer
-              engagement.
-            </p>
-          </div>
-
-          {/* Project 3 */}
-          <div className="rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground p-1">
-            <div className="p-4 rounded-lg">
-              <img
-                src="/project-image-1.jpg"
-                alt="Project 1"
-                className="rounded-lg w-full h-24 border object-cover"
-              />
-            </div>
-            <h3 className="text-xl font-semibold text-center text-primary pt-1">
-              Project 1
-            </h3>
-            <p className="text-center mt-2">
-              A custom website for a local business that enhances customer
-              engagement.
-            </p>
-          </div>
         </div>
         <div className="text-center mt-8">
-          <Button variant="secondary" onClick={navigateToPastProjects}>
+          <Button onClick={navigateToPastProjects}>
             View Our Past Projects
           </Button>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="my-16">
+      <section
+        className={cn("my-16 w-full", {
+          "w-10/12 md:w-11/12 lg:w-full": open,
+        })}
+      >
         <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
           What Our Clients Say
         </h2>
-        <div
-          className={cn("grid grid-cols-1 xl:grid-cols-3 gap-4", {
-            "md:grid-cols-1": !open,
-          })}
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={1}
+          className="testimonial-carousel"
         >
-          {/* Testimonial 1 */}
-          <div
-            className={cn(
-              "p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground flex flex-col 2xl:flex-row-reverse flex-1",
-              {
-                "md:flex-row-reverse lg:flex-col": open,
-              }
-            )}
-          >
-            <div className="flex-1 flex 2xl:items-end">
-              <p className="text-lg italic">
-                "Phoenix Code Studio exceeded our expectations. Our website has
-                never looked better, and our online presence has grown
-                exponentially!"
-              </p>
-            </div>
-            <div
-              className={cn(
-                "py-1 mb-2 flex md:flex-col-reverse 2xl:pr-3 gap-3 justify-between items-end md:items-start mt-2 flex-1 w-full",
-                {
-                  "md:justify-end md:pr-3 lg:pr-0": open,
-                }
+          {testimonials.map((testimonial, index) => (
+            <SwiperSlide key={index} className="p-6 mx-auto">
+              {testimonial.featured && (
+                <div
+                  className={cn(
+                    "p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground flex flex-col 2xl:flex-row-reverse flex-1 w-full",
+                    {
+                      "md:flex-row-reverse lg:flex-col w-10/12 md:w-full": open,
+                    }
+                  )}
+                >
+                  <div className="flex-1 flex 2xl:items-end">
+                    <p className="text-lg italic">
+                      <span>"</span>
+                      {testimonial.quote}
+                      <span>"</span>
+                    </p>
+                  </div>
+                  <div
+                    className={cn(
+                      "py-1 mb-2 flex md:flex-col-reverse 2xl:pr-3 gap-3 justify-between items-end md:items-start mt-2 flex-1 w-full",
+                      {
+                        "md:justify-end md:pr-3 lg:pr-0": open,
+                      }
+                    )}
+                  >
+                    <div>
+                      <p className="mt-4 font-bold text-primary mb-1">
+                        {testimonial.name}
+                      </p>
+                      <p className="text-xs mb-0">{testimonial.position}</p>
+                    </div>
+                    <img
+                      src={testimonial.image}
+                      alt={`${testimonial.name} Image`}
+                      className={cn(
+                        "rounded-full w-16 h-16 md:h-28 md:w-full md:rounded-lg border object-cover object-bottom shadow-sm",
+                        {
+                          "h-28 md:w-full md:h-42 md:rounded-lg": open,
+                        }
+                      )}
+                    />
+                  </div>
+                </div>
               )}
-            >
-              <div>
-                <p className="mt-4 font-bold text-primary mb-1">Jane Doe</p>
-                <p className="text-xs mb-0">CEO, Example Corp</p>
-              </div>
-              <img
-                src="/project-image-1.jpg"
-                alt="Project 1"
-                className={cn(
-                  "rounded-full w-16 h-16 md:h-28 md:w-full md:rounded-lg border object-cover object-bottom shadow-sm",
-                  {
-                    "h-28 md:w-full md:h-42 md:rounded-lg": open,
-                  }
-                )}
-              />
-            </div>
-          </div>
-
-          {/* Testimonial 2 */}
-          <div className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground flex">
-            <div className="p-4 w-1/3 flex justify-center items-start mt-2">
-              <img
-                src="/project-image-1.jpg"
-                alt="Project 1"
-                className="rounded-full w-24 h-24 border object-cover shadow-sm"
-              />
-            </div>
-            <div>
-              <p className="text-lg italic">
-                "Phoenix Code Studio exceeded our expectations. Our website has
-                never looked better, and our online presence has grown
-                exponentially!"
-              </p>
-              <p className="mt-4 font-bold text-primary mb-1">Jane Doe</p>
-              <p className="text-xs mb-0">CEO, Example Corp</p>
-            </div>
-          </div>
-
-          {/* Testimonial 3 */}
-          <div className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground flex">
-            <div className="p-4 w-1/3 flex justify-center items-start mt-2">
-              <img
-                src="/project-image-1.jpg"
-                alt="Project 1"
-                className="rounded-full w-24 h-24 border object-cover shadow-sm"
-              />
-            </div>
-            <div>
-              <p className="text-lg italic">
-                "Phoenix Code Studio exceeded our expectations. Our website has
-                never looked better, and our online presence has grown
-                exponentially!"
-              </p>
-              <p className="mt-4 font-bold text-primary mb-1">Jane Doe</p>
-              <p className="text-xs mb-0">CEO, Example Corp</p>
-            </div>
-          </div>
-        </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
         <div className="text-center mt-8">
-          <Button variant="secondary" onClick={navigateToTestimonials}>
+          <Button onClick={navigateToTestimonials}>
             Read More Testimonials
           </Button>
         </div>
       </section>
 
       {/* Featured Blogs Section */}
-      <section className="my-16">
+      <section
+        className={cn("my-16 w-full", {
+          "w-10/12 md:w-11/12 lg:w-full": open,
+        })}
+      >
         <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
           Featured Blogs
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Blog 1 */}
-          <div className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground">
-            <h3 className="text-xl font-semibold text-center text-primary">
-              Blog Post 1
-            </h3>
-            <p className="text-center mt-4">
-              A guide to modern web design principles and best practices for
-              2023.
-            </p>
-          </div>
-
-          {/* Blog 2 */}
-          <div className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground">
-            <h3 className="text-xl font-semibold text-center text-primary">
-              Blog Post 2
-            </h3>
-            <p className="text-center mt-4">
-              How SEO optimization can dramatically improve your online
-              presence.
-            </p>
-          </div>
-
-          {/* Blog 3 */}
-          <div className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground">
-            <h3 className="text-xl font-semibold text-center text-primary">
-              Blog Post 3
-            </h3>
-            <p className="text-center mt-4">
-              Why content creation is key to driving traffic and engagement.
-            </p>
-          </div>
+        <div
+          className={cn("grid grid-cols-1 md:grid-cols-2 gap-8", {
+            "md:grid-cols-1 xl:grid-cols-2": open,
+          })}
+        >
+          {blogs.map((blog, index) => (
+            <div key={`${blog.title}-${blog.date}`}>
+              {blog.featured && (
+                <div className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground flex flex-col">
+                  <div>
+                    <h3 className="text-xl font-semibold text-center text-primary">
+                      {blog.title}
+                    </h3>
+                    <h5 className="text-center text-xs">{blog.date}</h5>
+                    <p className="text-center mt-4">{blog.excerpt}</p>
+                  </div>
+                  <Button
+                    variant={"outline"}
+                    onClick={() => {
+                      router.push(blog.slug);
+                    }}
+                  >
+                    Read More
+                  </Button>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
         <div className="text-center mt-8">
-          <Button variant="secondary" onClick={navigateToBlogs}>
-            Read Our Blogs
-          </Button>
+          <Button onClick={navigateToBlogs}>Read Our Blogs</Button>
         </div>
       </section>
 
       {/* Call to Action Section */}
-      <section className="text-center">
+      <section
+        className={cn("w-full text-center", {
+          "w-10/12 md:w-11/12 lg:w-full": open,
+        })}
+      >
         <h2 className="text-3xl font-semibold text-primary">
           Ready to Get Started?
         </h2>
@@ -452,9 +414,7 @@ const WelcomePage: FC = () => {
           We’re excited to help you with your next project. Get in touch with us
           to discuss how we can work together.
         </p>
-        <Button variant="secondary" onClick={navigateToContact}>
-          Contact Us
-        </Button>
+        <Button onClick={navigateToContact}>Contact Us</Button>
       </section>
     </main>
   );
