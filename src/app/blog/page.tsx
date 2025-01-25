@@ -119,80 +119,98 @@ const BlogDisplayPage: FC = () => {
 
         <div
           className={cn(
-            "flex flex-col xl:flex-row justify-center align-middle items-center space-y-4 sm:space-y-0",
+            "flex flex-col md:flex-row justify-center sm:items-end sm:space-y-4 md:gap-4",
             {
-              "md:flex-col xl:flex-row": open,
+              "md:items-center lg:items-end lg:flex-row xl:flex-row": open,
             }
           )}
         >
-          <div className="flex flex-wrap items-center">
-            <label htmlFor="topic" className="mr-2 text-lg w-full">
-              Filter by Topic:
-            </label>
-            {/* Topic Filter */}
+          <div
+            className={cn(
+              "flex flex-col md:flex-row justify-start space-y-4 sm:space-x-4 md:space-y-0 w-full pb-5",
+              {
+                "md:flex-col md:space-x-0 md:space-y-4 lg:flex-row lg:space-y-0 xl:flex-row":
+                  open,
+              }
+            )}
+          >
             <div className="flex flex-wrap items-center">
-              <FormControl sx={{ m: 1, width: 300 }}>
-                <InputLabel id="demo-multiple-topic-label">
-                  Select Topics
-                </InputLabel>
-                <Select
-                  labelId="demo-multiple-topic-label"
-                  id="demo-multiple-topic"
-                  multiple
-                  value={selectedTopics}
-                  onChange={(e) => {
-                    handleTopicChange(e);
-                    handleOpen("topic");
-                  }}
-                  input={<OutlinedInput label="Select Topics" />}
-                  onMouseLeave={handleMouseLeave}
-                  onOpen={() => handleOpen("topic")}
-                  open={dropdownOpen.topic}
-                >
-                  {topics.map((topic) => (
-                    <MenuItem key={topic} value={topic}>
-                      {topic}
-                    </MenuItem>
-                  ))}
-                </Select>
-              </FormControl>
+              <label htmlFor="topic" className="mr-2 text-lg w-full">
+                Filter by Topic:
+              </label>
+              {/* Topic Filter */}
+              <div className="flex items-center w-full">
+                <FormControl className="w-11/12">
+                  <InputLabel id="demo-multiple-topic-label">
+                    Select Topics
+                  </InputLabel>
+                  <Select
+                    labelId="demo-multiple-topic-label"
+                    id="demo-multiple-topic"
+                    multiple
+                    value={selectedTopics}
+                    onChange={(e) => {
+                      handleTopicChange(e);
+                      handleOpen("topic");
+                    }}
+                    input={<OutlinedInput label="Select Topics" />}
+                    onMouseLeave={handleMouseLeave}
+                    onOpen={() => handleOpen("topic")}
+                    open={dropdownOpen.topic}
+                  >
+                    {topics.map((topic) => (
+                      <MenuItem key={topic} value={topic}>
+                        {topic}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+              </div>
             </div>
-          </div>
 
-          <div className="flex flex-wrap items-center">
-            <label htmlFor="date" className="mr-2 text-lg w-full">
-              Filter by Date:
-            </label>
-            {/* Date Filter */}
-            <div className="flex items-center">
-              <FormControl sx={{ m: 1, width: 300 }}>
-                <InputLabel id="demo-date-select-label">Select Date</InputLabel>
-                <Select
-                  labelId="demo-date-select-label"
-                  id="demo-date-select"
-                  value={selectedDate}
-                  onChange={(e) => {
-                    setSelectedDate(e.target.value);
-                    handleOpen("date");
-                  }}
-                  input={<OutlinedInput label="Select Date" />}
-                  onMouseLeave={handleMouseLeave}
-                  onOpen={() => handleOpen("date")}
-                  open={dropdownOpen.date}
-                >
-                  <MenuItem value="">Select Date</MenuItem>
-                  {dates.map((date, index) => (
-                    <MenuItem key={index} value={date}>
-                      {date}
-                    </MenuItem>
-                  ))}
-                </Select>
-              </FormControl>
+            <div className="flex flex-wrap items-center">
+              <label htmlFor="date" className="mr-2 text-lg w-full">
+                Filter by Date:
+              </label>
+              {/* Date Filter */}
+              <div className="flex items-center w-full">
+                <FormControl className="w-11/12">
+                  <InputLabel id="demo-date-select-label">
+                    Select Date
+                  </InputLabel>
+                  <Select
+                    labelId="demo-date-select-label"
+                    id="demo-date-select"
+                    value={selectedDate}
+                    onChange={(e) => {
+                      setSelectedDate(e.target.value);
+                      handleOpen("date");
+                    }}
+                    input={<OutlinedInput label="Select Date" />}
+                    onMouseLeave={handleMouseLeave}
+                    onOpen={() => handleOpen("date")}
+                    open={dropdownOpen.date}
+                  >
+                    <MenuItem value="">Select Date</MenuItem>
+                    {dates.map((date, index) => (
+                      <MenuItem key={index} value={date}>
+                        {date}
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+              </div>
             </div>
           </div>
 
           {/* Clear Filters Button */}
-          <Button variant="link" onClick={clearFilters}>
+          <Button
+            variant="link"
+            className={cn("sm:!mb-7", {
+              "md:!mb-0 lg:!mb-7": open,
+            })}
+            onClick={clearFilters}
+          >
             Clear Filters
           </Button>
         </div>

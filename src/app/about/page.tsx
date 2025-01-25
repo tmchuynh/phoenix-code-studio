@@ -1,12 +1,23 @@
 import { SidebarSeparator } from "@/components/ui/sidebar";
-import { FaHandshake, FaMedal } from "react-icons/fa";
+import {
+  FaHandshake,
+  FaHandsHelping,
+  FaLeaf,
+  FaMedal,
+  FaRecycle,
+  FaRegLightbulb,
+  FaSeedling,
+  FaStar,
+  FaUsers,
+} from "react-icons/fa";
 import { GiGrowth, GiTechnoHeart } from "react-icons/gi";
 import { MdBiotech } from "react-icons/md";
 import { SiLevelsdotfyi } from "react-icons/si";
+import { GrGrow } from "react-icons/gr";
 
 const aboutUs = () => {
   return (
-    <main className="w-11/12 mx-auto py-3">
+    <main className="w-11/12 mx-auto py-6">
       <div>
         <h1>About Us</h1>
         <p>
@@ -60,7 +71,7 @@ const aboutUs = () => {
         <h2>Core Values</h2>
         <ul className="flex flex-col gap-2">
           <li className="flex">
-            <MdBiotech
+            <FaRegLightbulb
               className="flex-shrink-0 text-secondary mt-2 mr-3"
               style={{ fontSize: "24px" }}
             />
@@ -68,13 +79,29 @@ const aboutUs = () => {
               <span className="font-BonaNovaSC_Bold text-secondary">
                 Creativity and Innovation:{" "}
               </span>
-              We leverage creativity and cutting-edge technology to craft
+              We blend creativity with the latest technologies to deliver
               impactful digital solutions that bring our clients’ visions to
-              life.
+              life. By thinking outside the box and embracing new trends, we
+              ensure that each project is unique and relevant.
             </div>
           </li>
           <li className="flex">
-            <GiTechnoHeart
+            <GrGrow
+              className="flex-shrink-0 text-secondary mt-2 mr-3"
+              style={{ fontSize: "24px" }}
+            />
+            <div>
+              <span className="font-BonaNovaSC_Bold text-secondary">
+                Adaptability & Growth:{" "}
+              </span>
+              Embracing new challenges is part of our DNA. We constantly adapt
+              to the ever-changing digital landscape, ensuring that our
+              solutions remain forward-thinking, flexible, and aligned with
+              emerging trends and technologies.
+            </div>
+          </li>
+          <li className="flex">
+            <FaSeedling
               className="flex-shrink-0 text-secondary mt-2 mr-3"
               style={{ fontSize: "24px" }}
             />
@@ -82,12 +109,14 @@ const aboutUs = () => {
               <span className="font-BonaNovaSC_Bold text-secondary">
                 Authenticity:{" "}
               </span>
-              We create digital experiences that reflect the genuine identity
-              and values of our clients.
+              We believe in creating digital experiences that are true to our
+              clients’ identity and core values. Every solution is crafted with
+              authenticity to reflect the unique voice of each brand and connect
+              with their audience on a deeper level.
             </div>
           </li>
           <li className="flex">
-            <FaMedal
+            <FaStar
               className="flex-shrink-0 text-secondary mt-2 mr-3"
               style={{ fontSize: "24px" }}
             />
@@ -95,12 +124,14 @@ const aboutUs = () => {
               <span className="font-BonaNovaSC_Bold text-secondary">
                 Excellence:{" "}
               </span>
-              We deliver exceptional, user-friendly solutions while striving for
-              continuous growth and innovation.
+              We are committed to delivering exceptional, user-centric solutions
+              that exceed expectations. Our dedication to continuous growth and
+              innovation drives us to constantly improve and push the boundaries
+              of what’s possible in web development and design.
             </div>
           </li>
           <li className="flex">
-            <SiLevelsdotfyi
+            <FaHandsHelping
               className="flex-shrink-0 text-secondary mt-2 mr-3"
               style={{ fontSize: "24px" }}
             />
@@ -108,8 +139,10 @@ const aboutUs = () => {
               <span className="font-BonaNovaSC_Bold text-secondary">
                 Empowerment:{" "}
               </span>
-              We equip small businesses with the tools and support needed to
-              thrive in the digital space.
+              We empower small businesses to thrive in the digital space. By
+              providing the right tools, resources, and support, we help them
+              grow and succeed in a competitive online marketplace, ensuring
+              they can make the most of their digital presence.
             </div>
           </li>
           <li className="flex">
@@ -119,14 +152,16 @@ const aboutUs = () => {
             />
             <div>
               <span className="font-BonaNovaSC_Bold text-secondary">
-                Collaboration:{" "}
+                Collaboration & Communication:{" "}
               </span>
-              We prioritize open communication, working closely with clients to
-              ensure their goals are at the heart of every project.
+              Open, transparent communication is key to success. We collaborate
+              closely with our clients at every step of the process, ensuring
+              their ideas and goals are central to every project, resulting in
+              solutions that truly meet their needs.
             </div>
           </li>
           <li className="flex">
-            <GiGrowth
+            <FaUsers
               className="flex-shrink-0 text-secondary mt-2 mr-3"
               style={{ fontSize: "24px" }}
             />
@@ -134,8 +169,26 @@ const aboutUs = () => {
               <span className="font-BonaNovaSC_Bold text-secondary">
                 Community Impact:{" "}
               </span>
-              We use our expertise to create meaningful digital experiences that
-              help businesses grow and contribute to their communities.
+              We are passionate about making a difference. Our work doesn’t just
+              benefit our clients – we aim to create digital experiences that
+              drive positive change in communities, helping businesses grow and
+              contribute to the greater good.
+            </div>
+          </li>
+          <li className="flex">
+            <FaRecycle
+              className="flex-shrink-0 text-secondary mt-2 mr-3"
+              style={{ fontSize: "24px" }}
+            />
+            <div>
+              <span className="font-BonaNovaSC_Bold text-secondary">
+                Sustainability:{" "}
+              </span>
+              We recognize the importance of creating digital solutions that not
+              only serve today’s needs but also contribute to long-term
+              sustainability. We strive to design and develop solutions that are
+              scalable, eco-friendly, and future-proof, ensuring a better
+              digital future for everyone.
             </div>
           </li>
         </ul>

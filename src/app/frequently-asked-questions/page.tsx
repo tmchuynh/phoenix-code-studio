@@ -16,7 +16,7 @@ const FAQPage: FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <main className="w-11/12 mx-auto py-3">
+    <main className="w-11/12 mx-auto py-6">
       <h1>Frequently Asked Questions</h1>
       <div className="space-y-4 pt-5">
         {FAQs.map((faq, index) => (
