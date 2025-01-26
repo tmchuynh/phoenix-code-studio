@@ -1,13 +1,10 @@
 "use client";
-
 import { Card, CardContent } from "@/components/ui/card";
 import { useSidebar } from "@/components/ui/sidebar";
 import { testimonials } from "@/lib/constants";
-import { cn } from "@/lib/utils";
 import { FC } from "react";
 
 const TestimonialsPage: FC = () => {
-  const { open } = useSidebar();
   return (
     <main className="w-11/12 mx-auto py-6">
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
@@ -20,15 +17,7 @@ const TestimonialsPage: FC = () => {
 
       {/* Displaying testimonials dynamically */}
       <section className="my-8">
-        <div
-          className={cn(
-            "gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-10/12 md:w-11/12 lg:w-full mx-auto",
-            {
-              "md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 md:w-11/12 lg:w-11/12 xl:w-full":
-                open,
-            }
-          )}
-        >
+        <div className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-10/12 md:w-11/12 lg:w-full mx-auto">
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}

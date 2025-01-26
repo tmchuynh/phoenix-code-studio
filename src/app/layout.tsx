@@ -4,7 +4,6 @@ import { NotFoundProvider } from "./context/NotFoundContext";
 import "./globals.css";
 import { Providers } from "./providers";
 import BackToTop from "@/components/BackToTop";
-import { cn } from "@/lib/utils";
 import Navbar from "@/components/NavBar";
 
 export default function RootLayout({
@@ -41,7 +40,7 @@ export default function RootLayout({
 const MainContent = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <main className={cn("mx-auto w-11/12 py-10 overflow-hidden")}>
+      <main className="mx-auto w-11/12 py-10 overflow-hidden">
         <Navbar />
         {children}
         <BackToTop />

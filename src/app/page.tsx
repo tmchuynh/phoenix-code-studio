@@ -6,7 +6,6 @@ import FeaturedProjects from "@/components/FeaturedProjects";
 import ServiceHighlights from "@/components/ServiceHighlights";
 import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
 import "swiper/css";
