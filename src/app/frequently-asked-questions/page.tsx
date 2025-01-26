@@ -17,7 +17,9 @@ const FAQPage: FC = () => {
 
   return (
     <main className="w-11/12 mx-auto py-6">
-      <h1>Frequently Asked Questions</h1>
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
+        Frequently Asked Questions
+      </h1>
       <div className="space-y-4 pt-5">
         {FAQs.map((faq, index) => (
           <CollapsibleItem

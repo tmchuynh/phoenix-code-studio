@@ -23,7 +23,7 @@ const CustomWebsite: FC = () => {
       </h1>
       {companySpecificServices.map((service) => {
         return (
-          <p className="text-center text-lg my-4">
+          <p className="text-lg my-4">
             {service.name === "Custom Website Design" ? (
               <span className="mt-4">{service.info}</span>
             ) : null}

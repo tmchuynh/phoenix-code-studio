@@ -9,7 +9,7 @@ const TestimonialsPage: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         What Our Clients Say
       </h1>
-      <p className="text-center text-lg my-4">
+      <p className="text-lg my-4">
         Hear from our happy clients who have experienced the transformative
         power of our services.
       </p>

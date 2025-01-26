@@ -12,7 +12,7 @@ const ExampleContractsPage: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Example Contracts
       </h1>
-      <p className="text-center text-lg my-4">
+      <p className="text-lg my-4">
         Below are examples of contracts for different hiring scenarios:
       </p>
 

@@ -24,7 +24,7 @@ const CompanyRebranding: FC = () => {
         if (service.name === "Company Rebranding") {
           return (
             <div key={service.name}>
-              <p className="text-center text-lg my-4">{service.details}</p>
+              <p className="text-lg my-4">{service.details}</p>
             </div>
           );
         }

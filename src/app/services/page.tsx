@@ -29,8 +29,10 @@ const ServicesPage: FC = () => {
   return (
     <main className="w-11/12 mx-auto py-6">
       {/* Introduction Section */}
-      <section className="text-center">
-        <h1 className="text-4xl font-bold">Our Services</h1>
+      <section className="mb-8">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
+          Our Services
+        </h1>
         <p className="text-lg my-4">
           Explore the services we offer. Whether it's web development or content
           creation, we've got you covered.

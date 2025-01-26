@@ -18,7 +18,7 @@ const DatabaseServices: FC = () => {
       </h1>
       {companySpecificServices.map((service) => {
         return (
-          <div key={service.name} className="text-center text-lg my-4">
+          <div key={service.name} className="text-lg my-4">
             {service.name === "Database Management" && (
               <div>
                 <span className="mt-4">{service.info}</span>

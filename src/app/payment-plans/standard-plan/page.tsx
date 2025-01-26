@@ -13,7 +13,7 @@ const StandardPlan = () => {
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
           Standard Plan
         </h2>
-        <p className="text-xl text-gray-600">
+        <p className="text-xl">
           Perfect for medium-sized projects, providing more flexible payment
           terms and installments.
         </p>

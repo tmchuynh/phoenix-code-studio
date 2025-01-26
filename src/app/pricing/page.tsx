@@ -10,7 +10,7 @@ const PricingPage: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Our Pricing and Service Tiers
       </h1>
-      <p className="text-center text-lg my-4">
+      <p className="text-lg my-4">
         Explore our pricing options and choose the right service tier for your
         needs.
       </p>

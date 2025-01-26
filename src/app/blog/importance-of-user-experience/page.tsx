@@ -1,9 +1,10 @@
 import { Badge } from "@/components/ui/badge";
 import {
-  howToImproveUX,
-  keyElementsOfGreatUX,
   whyUXMattersList,
-} from "@/lib/constants";
+  keyElementsOfGreatUX,
+  howToImproveUX,
+} from "@/lib/content-constants";
+
 import React from "react";
 
 const BlogPage = () => {
@@ -14,7 +15,7 @@ const BlogPage = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             The Importance of User Experience in Web Design
           </h1>
-          <p className="text-sm text-gray-500">By John Doe – August 15, 2025</p>
+          <p className="text-sm">By John Doe – August 15, 2025</p>
           <div className="mt-4 flex justify-center space-x-4">
             <Badge variant={"outline"} className="text-sm">
               #UXUIDesign

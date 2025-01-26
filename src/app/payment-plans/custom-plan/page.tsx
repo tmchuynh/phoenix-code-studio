@@ -13,7 +13,7 @@ const CustomPlan = () => {
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
           Custom Plan
         </h2>
-        <p className="text-xl text-gray-600">
+        <p className="text-xl">
           Tailored payment options based on the complexity and size of your
           project. We can create a custom plan to fit your budget.
         </p>

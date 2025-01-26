@@ -11,8 +11,10 @@ const PaymentPlansPage: FC = () => {
   return (
     <main className="w-11/12 mx-auto py-6">
       {/* Page Header */}
-      <header className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-primary">Our Payment Plans</h1>
+      <header className="mb-8">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
+          Our Payment Plans
+        </h1>
         <p className="text-lg mt-4">
           Flexible payment options tailored to fit your budget and project
           needs. Choose the plan that works best for you.

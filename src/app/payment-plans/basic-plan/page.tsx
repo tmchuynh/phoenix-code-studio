@@ -14,7 +14,7 @@ const BasicPlan = () => {
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
           Basic Plan
         </h2>
-        <p className="text-xl text-gray-600">
+        <p className="text-xl">
           Ideal for small projects or businesses just getting started. Pay as
           you go with flexible terms.
         </p>

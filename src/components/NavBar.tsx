@@ -18,6 +18,7 @@ import { FaChevronDown } from "react-icons/fa";
 import { Input } from "./ui/input";
 import { IoMdMenu } from "react-icons/io";
 import { useState } from "react";
+import { ModeButton } from "./ModeButton";
 
 const NavBar = () => {
   const router = useRouter();
@@ -105,6 +106,7 @@ const NavBar = () => {
               </MenubarSub>
             </MenubarContent>
           </MenubarMenu>
+          <ModeButton />
         </div>
       </Menubar>
 

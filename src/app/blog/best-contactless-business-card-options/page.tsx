@@ -79,7 +79,7 @@ import React from "react";
 
 const ContactlessBusinessCardsBlog = () => {
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <main className="max-w-4xl mx-auto p-6">
       <article className="space-y-8">
         <header className="text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
@@ -143,7 +143,7 @@ const ContactlessBusinessCardsBlog = () => {
           </p>
         </footer>
       </article>
-    </div>
+    </main>
   );
 };
 
