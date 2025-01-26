@@ -12,13 +12,10 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { useSidebar } from "@/components/ui/sidebar";
 import { pastProjects } from "@/lib/constants";
 import { FC, useState, useEffect } from "react";
 
 const PastProjectsPage: FC = () => {
-  const { open } = useSidebar();
-
   // Filter states
   const [selectedLanguages, setSelectedLanguages] = useState<string[]>([]);
   const [selectedFrameworks, setSelectedFrameworks] = useState<string[]>([]);

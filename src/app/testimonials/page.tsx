@@ -1,6 +1,5 @@
 "use client";
 import { Card, CardContent } from "@/components/ui/card";
-import { useSidebar } from "@/components/ui/sidebar";
 import { testimonials } from "@/lib/constants";
 import { FC } from "react";
 

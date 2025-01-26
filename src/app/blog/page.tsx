@@ -1,6 +1,5 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { useSidebar } from "@/components/ui/sidebar";
 import { blogs } from "@/lib/constants";
 import { Checkbox } from "@mui/material";
 import { useRouter } from "next/navigation";
@@ -25,7 +24,6 @@ import {
 
 const BlogDisplayPage: FC = () => {
   const router = useRouter();
-  const { open } = useSidebar();
   const [topicIsOpen, setTopicIsOpen] = useState(false);
   const [dateIsOpen, setDateIsOpen] = useState(false);
 
