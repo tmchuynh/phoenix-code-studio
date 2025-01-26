@@ -186,7 +186,7 @@ const BlogDisplayPage: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Our Latest Blogs
       </h1>
-      <p className="text-center text-lg mt-4">
+      <p className="text-lg mt-4">
         Stay up-to-date with our latest insights and trends in web development.
       </p>
 
@@ -213,7 +213,7 @@ const BlogDisplayPage: FC = () => {
                   </CollapsibleTrigger>
                 </div>
                 <CollapsibleContent className="space-y-2">
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full">
+                  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-start items-start w-full">
                     {topics.sort().map((topic) => (
                       <div key={topic} className="flex items-center mr-1">
                         <Checkbox
@@ -255,7 +255,7 @@ const BlogDisplayPage: FC = () => {
                   </CollapsibleTrigger>
                 </div>
                 <CollapsibleContent className="space-y-2">
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full">
+                  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-start items-start w-full">
                     {dates
                       .sort((a, b) => {
                         // Convert the date strings to Date objects
@@ -306,7 +306,7 @@ const BlogDisplayPage: FC = () => {
                   </CollapsibleTrigger>
                 </div>
                 <CollapsibleContent className="space-y-2">
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full">
+                  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-start items-start w-full">
                     {authors.sort().map((author) => (
                       <div key={author} className="flex items-center mr-1">
                         <Checkbox
