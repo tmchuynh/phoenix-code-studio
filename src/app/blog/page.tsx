@@ -1,40 +1,42 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { blogs } from "@/lib/constants";
-import { Checkbox } from "@mui/material";
-import { useRouter } from "next/navigation";
-import { FC, useEffect, useState } from "react";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import { ChevronsUpDown } from "lucide-react";
-import {
-  Pagination,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/components/ui/pagination";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {
+  Pagination,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
+import { blogs } from "@/lib/constants";
+import { Checkbox } from "@mui/material";
+import { ChevronsUpDown } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { FC, useEffect, useState } from "react";
 
 const BlogDisplayPage: FC = () => {
   const router = useRouter();
-  const [topicIsOpen, setTopicIsOpen] = useState(false);
-  const [dateIsOpen, setDateIsOpen] = useState(false);
+
+  const [openCollapsible, setOpenCollapsible] = useState<string | null>(null);
 
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredBlogs, setFilteredBlogs] = useState(blogs);
   const [selectedDates, setSelectedDates] = useState<string[]>([]);
+  const [selectedAuthors, setSelectedAuthors] = useState<string[]>([]);
   const [noResults, setNoResults] = useState(false);
   const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
   const [dropdownOpen, setDropdownOpen] = useState({
     topic: false,
     date: false,
+    author: false,
   });
   const [filtersCleared, setFiltersCleared] = useState(false);
 
@@ -63,17 +65,33 @@ const BlogDisplayPage: FC = () => {
   // Calculate total pages
   const totalPages = Math.ceil(filteredBlogs.length / articlesPerPage);
 
+  // Manage which collapsible is open
+  const handleCollapsibleChange = (
+    collapsible: "topic" | "date" | "author"
+  ) => {
+    setOpenCollapsible(openCollapsible === collapsible ? null : collapsible); // Toggle the collapsible or close it
+  };
+
   const handleFilter = () => {
     let filtered = blogs;
 
+    // Filter by topics
     if (selectedTopics.length > 0) {
       filtered = filtered.filter((blog) =>
         blog.topics.some((topic) => selectedTopics.includes(topic))
       );
     }
 
+    // Filter by dates
     if (selectedDates.length > 0) {
       filtered = filtered.filter((blog) => selectedDates.includes(blog.date));
+    }
+
+    // Filter by authors
+    if (selectedAuthors.length > 0) {
+      filtered = filtered.filter((blog) =>
+        selectedAuthors.includes(blog.author)
+      );
     }
 
     // Apply search query filter
@@ -106,7 +124,9 @@ const BlogDisplayPage: FC = () => {
   const clearFilters = () => {
     setSelectedTopics([]);
     setSelectedDates([]);
+    setSelectedAuthors([]);
     setSearchQuery("");
+    setOpenCollapsible(null);
     setNoResults(false);
     setFiltersCleared(true);
     setFilteredBlogs(blogs);
@@ -115,6 +135,7 @@ const BlogDisplayPage: FC = () => {
 
   const topics = Array.from(new Set(blogs.flatMap((blog) => blog.topics)));
   const dates = Array.from(new Set(blogs.map((blog) => blog.date)));
+  const authors = Array.from(new Set(blogs.map((blog) => blog.author)));
 
   const handleTopicChange = (updatedTopics: string[]) => {
     setSelectedTopics(updatedTopics);
@@ -122,9 +143,9 @@ const BlogDisplayPage: FC = () => {
 
   useEffect(() => {
     handleFilter();
-  }, [selectedTopics, selectedDates, searchQuery]);
+  }, [selectedTopics, selectedDates, selectedAuthors, searchQuery]);
 
-  function handleOpen(dropdown: "topic" | "date") {
+  function handleOpen(dropdown: "topic" | "date" | "author") {
     setDropdownOpen({
       ...dropdownOpen,
       [dropdown]: !dropdownOpen[dropdown],
@@ -138,6 +159,17 @@ const BlogDisplayPage: FC = () => {
       handleTopicChange(selectedTopics.filter((t) => t !== topic));
     }
     handleOpen("topic");
+  };
+
+  const handleAuthorCheckboxChange = (author: string, checked: boolean) => {
+    if (checked) {
+      setSelectedAuthors((prevAuthors) => [...prevAuthors, author]);
+    } else {
+      setSelectedAuthors((prevAuthors) =>
+        prevAuthors.filter((t) => t !== author)
+      );
+    }
+    handleOpen("author");
   };
 
   const handleDateCheckboxChange = (date: string, checked: boolean) => {
@@ -165,8 +197,8 @@ const BlogDisplayPage: FC = () => {
             {/* Topic Filter */}
             <div className="flex flex-wrap items-center">
               <Collapsible
-                open={topicIsOpen}
-                onOpenChange={setTopicIsOpen}
+                open={openCollapsible === "topic"}
+                onOpenChange={() => handleCollapsibleChange("topic")}
                 className="w-full space-y-2"
               >
                 <div className="flex items-center justify-between space-x-4">
@@ -207,8 +239,8 @@ const BlogDisplayPage: FC = () => {
             {/* Date Filter */}
             <div className="flex flex-wrap items-center">
               <Collapsible
-                open={dateIsOpen}
-                onOpenChange={setDateIsOpen}
+                open={openCollapsible === "date"}
+                onOpenChange={() => handleCollapsibleChange("date")}
                 className="w-full space-y-2"
               >
                 <div className="flex items-center justify-between space-x-4">
@@ -250,6 +282,48 @@ const BlogDisplayPage: FC = () => {
                           </label>
                         </div>
                       ))}
+                  </div>
+                </CollapsibleContent>
+              </Collapsible>
+            </div>
+
+            {/* Author Filter */}
+            <div className="flex flex-wrap items-center">
+              <Collapsible
+                open={openCollapsible === "author"}
+                onOpenChange={() => handleCollapsibleChange("author")}
+                className="w-full space-y-2"
+              >
+                <div className="flex items-center justify-between space-x-4">
+                  <CollapsibleTrigger asChild>
+                    <div className="flex items-center w-full">
+                      <ChevronsUpDown className="h-4 w-4" />
+                      <label htmlFor="author" className="ml-2 text-lg w-full">
+                        Filter by Author:
+                      </label>
+                      <span className="sr-only">Toggle</span>
+                    </div>
+                  </CollapsibleTrigger>
+                </div>
+                <CollapsibleContent className="space-y-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full">
+                    {authors.sort().map((author) => (
+                      <div key={author} className="flex items-center mr-1">
+                        <Checkbox
+                          checked={selectedAuthors.includes(author)}
+                          onChange={(e) =>
+                            handleAuthorCheckboxChange(author, e.target.checked)
+                          }
+                        />
+                        <label
+                          htmlFor={author}
+                          className="ml-2"
+                          onClick={() => handleOpen("author")}
+                        >
+                          {author}
+                        </label>
+                      </div>
+                    ))}
                   </div>
                 </CollapsibleContent>
               </Collapsible>
@@ -319,7 +393,7 @@ const BlogDisplayPage: FC = () => {
           {/* Confirmation Text for Filters Cleared */}
           <div className="mt-4 text-center">
             {filtersCleared && (
-              <p className="text-secondary m-0 p-0">
+              <p className="text-destructive font-extrabold text-md m-0 p-0">
                 Filters have been cleared successfully!
               </p>
             )}
@@ -328,7 +402,7 @@ const BlogDisplayPage: FC = () => {
           {/* No results warning */}
           <div className="mt-4 text-center">
             {noResults && (
-              <p className="text-destructive m-0">
+              <p className="text-destructive font-extrabold text-md m-0 p-0">
                 No blogs match your selected filters. Filters have been cleared.
               </p>
             )}
