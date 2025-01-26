@@ -3,7 +3,13 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
-import { contentCreationServices } from "@/lib/constants";
+import {
+  contentCreationServices,
+  technicalWritingBenefits,
+  technicalWritingProcessSteps,
+  technicalWritingServices,
+  toolsForTechnicalWriting,
+} from "@/lib/constants";
 
 const TechnicalWritingServices: FC = () => {
   const router = useRouter();
@@ -15,15 +21,13 @@ const TechnicalWritingServices: FC = () => {
       </h1>
       {contentCreationServices.map((service) => {
         return (
-          <>
-            <div className="text-center text-lg my-4">
-              {service.name === "Technical Writing" ? (
-                <div key={service.name}>
-                  <span className="mt-4">{service.details}</span>
-                </div>
-              ) : null}
-            </div>
-          </>
+          <div key={service.name} className="text-center text-lg my-4">
+            {service.name === "Technical Writing" && (
+              <div>
+                <span className="mt-4">{service.details}</span>
+              </div>
+            )}
+          </div>
         );
       })}
 
@@ -37,33 +41,13 @@ const TechnicalWritingServices: FC = () => {
           or specifications, professional technical documentation ensures
           accuracy, clarity, and usability.
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-tertiary">
-              Improved User Experience:
-            </span>{" "}
-            Help users navigate, troubleshoot, and use your products
-            effectively.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Enhanced Brand Credibility:
-            </span>{" "}
-            Establish trust with professionally written, error-free
-            documentation.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Time and Cost Savings:
-            </span>{" "}
-            Reduce support queries with comprehensive, self-service resources.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Compliance and Accuracy:
-            </span>{" "}
-            Meet industry standards and ensure consistency across documents.
-          </li>
+        <ul className="list-disc pl-6 space-y-2">
+          {technicalWritingBenefits.map((benefit) => (
+            <li key={benefit.title}>
+              <span className="font-bold text-tertiary">{benefit.title}:</span>{" "}
+              {benefit.description}
+            </li>
+          ))}
         </ul>
       </section>
 
@@ -75,66 +59,25 @@ const TechnicalWritingServices: FC = () => {
           We specialize in creating precise, easy-to-understand technical
           documents across various industries.
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-tertiary">User Manuals:</span>{" "}
-            Step-by-step guides for software, hardware, and products.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">API Documentation:</span>{" "}
-            Comprehensive, developer-focused guides for using your APIs
-            effectively.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Knowledge Bases:</span>{" "}
-            Online repositories for troubleshooting, FAQs, and technical
-            support.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Technical Specifications:
-            </span>{" "}
-            Detailed descriptions of systems, products, and processes.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Standard Operating Procedures (SOPs):
-            </span>{" "}
-            Clear instructions for operational workflows.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">White Papers:</span>{" "}
-            Authoritative, in-depth reports on industry-specific topics.
-          </li>
+        <ul className="list-disc pl-6 space-y-2">
+          {technicalWritingServices.map((service) => (
+            <li key={service.title}>
+              <span className="font-bold text-tertiary">{service.title}:</span>{" "}
+              {service.description}
+            </li>
+          ))}
         </ul>
       </section>
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
         <ul className="list-decimal list-inside space-y-4">
-          <li>
-            <span className="font-bold text-tertiary">Discovery:</span>{" "}
-            Understand your audience, goals, and technical requirements.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Content Planning:</span>{" "}
-            Outline the structure, format, and key elements of the document.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Content Creation:</span>{" "}
-            Write clear, concise, and accurate technical content tailored to
-            your audience.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Review and Revision:
-            </span>{" "}
-            Collaborate with your team to ensure technical accuracy and clarity.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Final Delivery:</span>{" "}
-            Provide the documentation in the required formats (PDF, HTML, etc.).
-          </li>
+          {technicalWritingProcessSteps.map((step) => (
+            <li key={step.title}>
+              <span className="font-bold text-tertiary">{step.title}:</span>{" "}
+              {step.description}
+            </li>
+          ))}
         </ul>
         <p className="my-4">
           <span className="font-bold text-tertiary">Timeline:</span> Project
@@ -149,13 +92,10 @@ const TechnicalWritingServices: FC = () => {
           We utilize industry-leading tools to deliver high-quality technical
           content:
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>MadCap Flare</li>
-          <li>Confluence</li>
-          <li>Markdown Editors</li>
-          <li>Adobe FrameMaker</li>
-          <li>Google Docs for collaboration</li>
-          <li>Grammarly for proofreading</li>
+        <ul className="list-disc pl-6 space-y-2">
+          {toolsForTechnicalWriting.map((tool, index) => (
+            <li key={index}>{tool}</li>
+          ))}
         </ul>
       </section>
 
@@ -169,7 +109,7 @@ const TechnicalWritingServices: FC = () => {
           return (
             <>
               {service.name === "Technical Writing" && (
-                <ul className="list-disc list-inside space-y-2">
+                <ul className="list-disc pl-6 space-y-2">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-tertiary">

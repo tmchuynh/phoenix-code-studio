@@ -3,7 +3,13 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
-import { contentCreationServices } from "@/lib/constants";
+import {
+  contentCreationServices,
+  onboardingPaperBenefits,
+  onboardingProcessSteps,
+  onboardingServices,
+  toolsForOnboarding,
+} from "@/lib/constants";
 
 const TrainingManualOnboardingPapers: FC = () => {
   const router = useRouter();
@@ -15,16 +21,14 @@ const TrainingManualOnboardingPapers: FC = () => {
       </h1>
       {contentCreationServices.map((service) => {
         return (
-          <>
-            <div className="text-center text-lg my-4">
-              {service.name ===
-              "Training Manual and Onboarding Paperwork Creation" ? (
-                <div key={service.name}>
-                  <span className="mt-4">{service.details}</span>
-                </div>
-              ) : null}
-            </div>
-          </>
+          <div key={service.name} className="text-center text-lg my-4">
+            {service.name ===
+              "Training Manual and Onboarding Paperwork Creation" && (
+              <div>
+                <span className="mt-4">{service.details}</span>
+              </div>
+            )}
+          </div>
         );
       })}
 
@@ -38,30 +42,13 @@ const TrainingManualOnboardingPapers: FC = () => {
           expectations, and provide a structured approach to integrating team
           members into your organization.
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-tertiary">
-              Streamline Onboarding:
-            </span>{" "}
-            Provide new hires with all the information they need to get started
-            confidently.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Enhance Productivity:
-            </span>{" "}
-            Reduce the learning curve and ensure employees are equipped to
-            contribute quickly.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Ensure Consistency:</span>{" "}
-            Standardize training and onboarding processes across teams and
-            departments.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Foster Engagement:</span>{" "}
-            Build a positive first impression and boost employee retention.
-          </li>
+        <ul className="list-disc pl-6 space-y-2">
+          {onboardingPaperBenefits.map((benefit) => (
+            <li key={benefit.title}>
+              <span className="font-bold text-tertiary">{benefit.title}:</span>{" "}
+              {benefit.description}
+            </li>
+          ))}
         </ul>
       </section>
 
@@ -73,71 +60,25 @@ const TrainingManualOnboardingPapers: FC = () => {
           We specialize in creating customized documents tailored to your
           organization’s needs and culture.
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-tertiary">
-              Training Manual Creation:
-            </span>{" "}
-            Develop detailed manuals for processes, policies, and workflows.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Onboarding Documents:
-            </span>{" "}
-            Create checklists, welcome kits, and key policy guides for new
-            employees.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Role-Specific Guides:
-            </span>{" "}
-            Craft position-specific training guides to address unique
-            responsibilities.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Employee Handbooks:</span>{" "}
-            Comprehensive guides covering company culture, policies, and
-            benefits.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Multimedia Integration:
-            </span>{" "}
-            Enhance documents with visuals, infographics, and video links.
-          </li>
+        <ul className="list-disc pl-6 space-y-2">
+          {onboardingServices.map((service) => (
+            <li key={service.title}>
+              <span className="font-bold text-tertiary">{service.title}:</span>{" "}
+              {service.description}
+            </li>
+          ))}
         </ul>
       </section>
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
         <ul className="list-decimal list-inside space-y-4">
-          <li>
-            <span className="font-bold text-tertiary">Discovery:</span>{" "}
-            Understand your business goals, team structure, and training needs.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Content Development:
-            </span>{" "}
-            Create clear, concise content tailored to your objectives.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Design and Formatting:
-            </span>{" "}
-            Develop visually engaging layouts with your branding.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Review and Refinement:
-            </span>{" "}
-            Collaborate with you to ensure accuracy and alignment with company
-            values.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Final Delivery:</span>{" "}
-            Provide print-ready or digital documents in your preferred formats.
-          </li>
+          {onboardingProcessSteps.map((step) => (
+            <li key={step.title}>
+              <span className="font-bold text-tertiary">{step.title}:</span>{" "}
+              {step.description}
+            </li>
+          ))}
         </ul>
         <p className="my-4">
           <span className="font-bold text-tertiary">Timeline:</span> Projects
@@ -152,12 +93,10 @@ const TrainingManualOnboardingPapers: FC = () => {
           We utilize industry-leading tools to create professional and engaging
           training materials:
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>Adobe InDesign for professional layouts</li>
-          <li>Canva for custom visuals and infographics</li>
-          <li>Snagit for annotated screenshots</li>
-          <li>Grammarly for proofreading and editing</li>
-          <li>Microsoft Word for content drafting and formatting</li>
+        <ul className="list-disc pl-6 space-y-2">
+          {toolsForOnboarding.map((tool, index) => (
+            <li key={index}>{tool}</li>
+          ))}
         </ul>
       </section>
 
@@ -172,7 +111,7 @@ const TrainingManualOnboardingPapers: FC = () => {
             <>
               {service.name ===
                 "Training Manual and Onboarding Paperwork Creation" && (
-                <ul className="list-disc list-inside space-y-2">
+                <ul className="list-disc pl-6 space-y-2">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-tertiary">

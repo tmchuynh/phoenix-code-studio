@@ -25,7 +25,7 @@ const ExampleContractsPage: FC = () => {
             project. It covers key terms such as scope, payment structure, and
             intellectual property:
           </p>
-          <ul className="list-disc list-inside space-y-2">
+          <ul className="list-disc pl-6 space-y-2">
             <li>
               <span className="font-bold text-secondary">Project Scope:</span>{" "}
               Detailed description of the project, including deliverables and
@@ -86,7 +86,7 @@ const ExampleContractsPage: FC = () => {
             for a project. It is tailored for smaller, more flexible
             engagements:
           </p>
-          <ul className="list-disc list-inside space-y-2">
+          <ul className="list-disc pl-6 space-y-2">
             <li>
               <span className="font-bold text-secondary">Project Scope:</span> A
               detailed description of the project, expectations, and final

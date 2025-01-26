@@ -1,9 +1,16 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
+import {
+  webScrapingList,
+  ethicalConsiderationsList,
+  toolsForScrapingList,
+} from "@/lib/constants";
 import React from "react";
 
 const BlogPage = () => {
   return (
-    <div className="max-w-3xl mx-auto px-4 py-16">
+    <div className="max-w-4xl mx-auto p-6">
       <article className="space-y-8">
         <header className="text-center">
           <h1 className="text-4xl font-bold text-primary mb-4">
@@ -13,10 +20,18 @@ const BlogPage = () => {
             By Olivia Martin – January 15, 2025
           </p>
           <div className="mt-4 flex justify-center space-x-4">
-            <Badge className="text-sm">#WebScraping</Badge>
-            <Badge className="text-sm">#DataCollection</Badge>
-            <Badge className="text-sm">#DataAnalysis</Badge>
-            <Badge className="text-sm">#Technology</Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #WebScraping
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #DataCollection
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #DataAnalysis
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #Technology
+            </Badge>
           </div>
         </header>
 
@@ -33,7 +48,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             What is Web Scraping?
           </h2>
           <p className="text-lg">
@@ -47,70 +62,20 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
-            How Web Scraping Works
-          </h2>
-          <ol className="list-decimal pl-6 space-y-2">
-            <li>
-              <strong>Identifying the Target Website:</strong> The first step is
-              selecting the website and data to scrape, such as product prices,
-              customer reviews, or research articles.
-            </li>
-            <li>
-              <strong>Fetching the Web Page:</strong> Tools like Python’s{" "}
-              <code>requests</code> library or browser automation frameworks
-              fetch the HTML content of the web page.
-            </li>
-            <li>
-              <strong>Parsing the Data:</strong> The fetched content is parsed
-              using libraries like Beautiful Soup or XPath to locate the desired
-              data elements.
-            </li>
-            <li>
-              <strong>Storing the Data:</strong> The extracted data is then
-              structured and saved in formats like CSV, JSON, or databases for
-              further analysis.
-            </li>
-            <li>
-              <strong>Analyzing the Data:</strong> Once collected, the data can
-              be analyzed to generate insights, identify trends, or inform
-              decision-making.
-            </li>
-          </ol>
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             Applications of Web Scraping
           </h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>
-              <strong>Market Research:</strong> Track competitor pricing and
-              product availability. Monitor customer sentiment through reviews
-              and social media posts.
-            </li>
-            <li>
-              <strong>Lead Generation:</strong> Gather contact information from
-              professional directories for targeted outreach campaigns.
-            </li>
-            <li>
-              <strong>Academic Research:</strong> Collect large datasets for
-              analysis in scientific studies or research projects.
-            </li>
-            <li>
-              <strong>News Aggregation:</strong> Automate the collection of
-              articles from multiple sources to create a news feed or
-              newsletter.
-            </li>
-            <li>
-              <strong>Real Estate Analysis:</strong> Track property listings,
-              prices, and trends to make informed investment decisions.
-            </li>
+            {webScrapingList.map((item, index) => (
+              <li key={index}>
+                <strong>{item.title}:</strong> {item.description}
+              </li>
+            ))}
           </ul>
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             Ethical Considerations in Web Scraping
           </h2>
           <p className="text-lg">
@@ -118,56 +83,29 @@ const BlogPage = () => {
             legal responsibilities:
           </p>
           <ul className="list-disc pl-6 space-y-2">
-            <li>
-              <strong>Follow Website Terms of Service:</strong> Always review a
-              website’s terms of service to ensure compliance before scraping.
-            </li>
-            <li>
-              <strong>Avoid Overloading Servers:</strong> Use rate-limiting to
-              prevent overloading a website’s server with excessive requests.
-            </li>
-            <li>
-              <strong>Respect Privacy:</strong> Do not scrape sensitive or
-              personal information without consent.
-            </li>
-            <li>
-              <strong>Use Publicly Available Data:</strong> Focus on publicly
-              accessible information and avoid bypassing authentication or
-              security measures.
-            </li>
+            {ethicalConsiderationsList.map((item, index) => (
+              <li key={index}>
+                <strong>{item.title}:</strong> {item.description}
+              </li>
+            ))}
           </ul>
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             Popular Tools for Web Scraping
           </h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>
-              <strong>Beautiful Soup:</strong> A Python library for parsing HTML
-              and XML documents.
-            </li>
-            <li>
-              <strong>Scrapy:</strong> A powerful framework for large-scale web
-              scraping projects.
-            </li>
-            <li>
-              <strong>Selenium:</strong> A browser automation tool often used
-              for scraping dynamic content.
-            </li>
-            <li>
-              <strong>Octoparse:</strong> A no-code web scraping tool suitable
-              for non-programmers.
-            </li>
-            <li>
-              <strong>Puppeteer:</strong> A Node.js library for controlling
-              headless browsers and scraping JavaScript-heavy websites.
-            </li>
+            {toolsForScrapingList.map((item, index) => (
+              <li key={index}>
+                <strong>{item.title}:</strong> {item.description}
+              </li>
+            ))}
           </ul>
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             The Benefits of Web Scraping
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -187,7 +125,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             Challenges of Web Scraping
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -208,7 +146,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             Conclusion
           </h2>
           <p className="text-lg">

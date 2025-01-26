@@ -1,9 +1,12 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
+import { entrepreneurStories, lessons } from "@/lib/constants";
 import React from "react";
 
 const BlogPage = () => {
   return (
-    <div className="max-w-3xl mx-auto px-4 py-16">
+    <div className="max-w-4xl mx-auto p-6">
       <article className="space-y-8">
         <header className="text-center">
           <h1 className="text-4xl font-bold text-primary mb-4">
@@ -33,7 +36,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             The Journey of a Tech Entrepreneur
           </h2>
           <p className="text-lg">
@@ -66,147 +69,39 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             Inspiring Stories of Tech Entrepreneurs
           </h2>
-          <div className="space-y-4">
-            <div>
-              <h3 className="text-xl font-semibold text-primary">
-                1. Steve Jobs and Steve Wozniak (Apple)
+          {entrepreneurStories.map((entrepreneur, index) => (
+            <div key={index} className="space-y-4">
+              <h3 className="text-xl font-semibold text-tertiary">
+                {entrepreneur.title}
               </h3>
               <ul className="list-disc pl-6 space-y-2">
-                <li>
-                  <strong>Start:</strong> Apple began in a garage in Los Altos,
-                  California, where Jobs and Wozniak built the Apple I computer.
-                </li>
-                <li>
-                  <strong>Success:</strong> Apple is now one of the most
-                  valuable companies in the world, known for revolutionizing
-                  technology with products like the iPhone and MacBook.
-                </li>
-                <li>
-                  <strong>Lesson:</strong> Innovation and user-focused design
-                  can redefine industries.
-                </li>
+                {entrepreneur.details.map((detail, i) => (
+                  <li key={i}>
+                    <strong>{detail.split(":")[0]}:</strong>{" "}
+                    {detail.split(":")[1]}
+                  </li>
+                ))}
               </ul>
             </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-primary">
-                2. Bill Gates and Paul Allen (Microsoft)
-              </h3>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>
-                  <strong>Start:</strong> Gates and Allen founded Microsoft in
-                  1975 with a vision to put a computer on every desk.
-                </li>
-                <li>
-                  <strong>Success:</strong> Microsoft became a global software
-                  leader, driving the PC revolution.
-                </li>
-                <li>
-                  <strong>Lesson:</strong> Persistence and foresight can create
-                  opportunities in emerging markets.
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-primary">
-                3. Elon Musk (Tesla, SpaceX, and more)
-              </h3>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>
-                  <strong>Start:</strong> Musk’s entrepreneurial journey began
-                  with Zip2 and later PayPal, before moving into ambitious
-                  ventures like Tesla and SpaceX.
-                </li>
-                <li>
-                  <strong>Success:</strong> Musk has transformed industries
-                  including automotive, energy, and space exploration.
-                </li>
-                <li>
-                  <strong>Lesson:</strong> Dream big and be willing to take
-                  risks for groundbreaking innovation.
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-primary">
-                4. Jeff Bezos (Amazon)
-              </h3>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>
-                  <strong>Start:</strong> Bezos started Amazon as an online
-                  bookstore in his garage in 1994.
-                </li>
-                <li>
-                  <strong>Success:</strong> Amazon is now a global leader in
-                  e-commerce, cloud computing, and AI.
-                </li>
-                <li>
-                  <strong>Lesson:</strong> Focus on customer obsession and
-                  adaptability for long-term success.
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-primary">
-                5. Sara Blakely (Spanx)
-              </h3>
-              <ul className="list-disc pl-6 space-y-2">
-                <li>
-                  <strong>Start:</strong> Though not tech-focused initially,
-                  Blakely’s story highlights entrepreneurial creativity.
-                  Starting with $5,000, she built a billion-dollar brand.
-                </li>
-                <li>
-                  <strong>Success:</strong> Spanx revolutionized the apparel
-                  industry, showing that innovation can happen anywhere.
-                </li>
-                <li>
-                  <strong>Lesson:</strong> Believe in your vision, even when
-                  others doubt you.
-                </li>
-              </ul>
-            </div>
-          </div>
+          ))}
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             Lessons from Successful Entrepreneurs
           </h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>
-              <strong>Start Small, Think Big:</strong> Many tech giants began
-              with a single idea or product. Start with a focused goal, but keep
-              the bigger picture in mind.
-            </li>
-            <li>
-              <strong>Embrace Failure:</strong> Failure is often a stepping
-              stone to success. Learn from mistakes and keep moving forward.
-            </li>
-            <li>
-              <strong>Build a Strong Team:</strong> Surround yourself with
-              talented, passionate individuals who share your vision.
-            </li>
-            <li>
-              <strong>Stay Customer-Centric:</strong> Focus on solving real
-              problems for your customers and providing value.
-            </li>
-            <li>
-              <strong>Adapt and Evolve:</strong> The tech industry is
-              ever-changing. Entrepreneurs must be willing to pivot and innovate
-              to stay ahead.
-            </li>
+            {lessons.map((lesson, index) => (
+              <li key={index}>{lesson}</li>
+            ))}
           </ul>
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             The Future of Tech Entrepreneurship
           </h2>
           <p className="text-lg">
@@ -218,7 +113,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             Conclusion
           </h2>
           <p className="text-lg">

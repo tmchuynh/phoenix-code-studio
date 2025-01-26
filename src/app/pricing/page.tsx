@@ -22,7 +22,7 @@ const PricingPage: FC = () => {
           Our website design services are designed to meet your business goals,
           from simple informational websites to fully customized solutions.
         </p>
-        <ul className="list-disc list-inside space-y-2">
+        <ul className="list-disc pl-6 space-y-2">
           <li>
             <span className="font-bold text-tertiary">Basic Website:</span>{" "}
             Starting at $2,500 – A simple, informational website (5-10 pages).
@@ -52,7 +52,7 @@ const PricingPage: FC = () => {
           Our UX/UI design services focus on creating seamless and engaging user
           experiences while ensuring visually stunning interfaces.
         </p>
-        <ul className="list-disc list-inside space-y-2">
+        <ul className="list-disc pl-6 space-y-2">
           <li>
             <span className="font-bold text-tertiary">UX Design Research:</span>{" "}
             Starting at $3,000 – Includes user research, wireframing, and
@@ -81,7 +81,7 @@ const PricingPage: FC = () => {
           Wireframing and prototyping services to bring your ideas to life with
           interactive mockups and user-centered design.
         </p>
-        <ul className="list-disc list-inside space-y-2">
+        <ul className="list-disc pl-6 space-y-2">
           <li>
             <span className="font-bold text-tertiary">
               Low-Fidelity Wireframes:
@@ -119,7 +119,7 @@ const PricingPage: FC = () => {
           Our development services ensure that your vision is brought to life
           using the latest technologies and best practices.
         </p>
-        <ul className="list-disc list-inside space-y-2">
+        <ul className="list-disc pl-6 space-y-2">
           <li>
             <span className="font-bold text-tertiary">
               Frontend Development:
@@ -153,7 +153,7 @@ const PricingPage: FC = () => {
           Ensure the longevity of your website or application with our ongoing
           maintenance and support services.
         </p>
-        <ul className="list-disc list-inside space-y-2">
+        <ul className="list-disc pl-6 space-y-2">
           <li>
             <span className="font-bold text-tertiary">
               Monthly Support Plan:

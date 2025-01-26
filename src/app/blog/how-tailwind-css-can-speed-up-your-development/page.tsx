@@ -1,15 +1,22 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
+import {
+  howTailwindEnhancesWorkflow,
+  proTips,
+  whyUseTailwindList,
+} from "@/lib/constants";
 import React from "react";
 
 const BlogPage = () => {
   return (
-    <div className="max-w-3xl mx-auto px-4 py-16">
+    <div className="max-w-4xl mx-auto p-6">
       <article className="space-y-8">
         <header className="text-center">
           <h1 className="text-4xl font-bold text-primary mb-4">
             How Tailwind CSS Can Speed Up Your Development Process
           </h1>
-          <p className="text-sm text-gray-500">By Jane Smith – July 10, 2025</p>
+          <p className="text-sm text-muted">By Jane Smith – July 10, 2025</p>
           <div className="mt-4 flex justify-center space-x-4">
             <Badge className="text-sm">#CSS</Badge>
             <Badge className="text-sm">#FrontendDevelopment</Badge>
@@ -29,7 +36,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             What is Tailwind CSS?
           </h2>
           <p className="text-lg">
@@ -43,70 +50,33 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             Why Use Tailwind CSS?
           </h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>
-              <strong>Faster Development:</strong> With Tailwind, you can create
-              layouts and style elements without switching between your HTML and
-              CSS files. The inline utility classes let you see changes
-              instantly, significantly speeding up the development process.
-            </li>
-            <li>
-              <strong>Consistency Without the Overhead:</strong> Tailwind
-              promotes consistency across your project by using a single design
-              system. The framework’s utility classes ensure that all elements
-              follow the same rules, eliminating the risk of inconsistent
-              styling.
-            </li>
-            <li>
-              <strong>Customizable Design System:</strong> Tailwind is highly
-              customizable. Using the `tailwind.config.js` file, you can adjust
-              colors, spacing, typography, and more to match your project’s
-              branding requirements.
-            </li>
-            <li>
-              <strong>Responsive and Mobile-First Design:</strong> Tailwind
-              makes it easy to create responsive designs with intuitive class
-              naming conventions like `sm:`, `md:`, `lg:`, and `xl:`. This
-              ensures your designs look great on any device.
-            </li>
-            <li>
-              <strong>Reduced CSS Bloat:</strong> Tailwind's "tree-shaking"
-              feature removes unused CSS during the build process, keeping your
-              final CSS file small and optimized for performance.
-            </li>
+            {whyUseTailwindList.map((item, index) => (
+              <li key={index}>
+                <strong>{item.title}:</strong> {item.description}
+              </li>
+            ))}
           </ul>
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             How Tailwind CSS Enhances Your Workflow
           </h2>
-          <ul className="list-inside space-y-2">
-            <li>
-              <strong>Intuitive Class Names:</strong> Tailwind's class names are
-              descriptive and logical. For instance, `p-4` sets padding to 1rem,
-              while `text-center` centers text alignment. This clarity reduces
-              the need to memorize custom CSS.
-            </li>
-            <li>
-              <strong>Rich Component Ecosystem:</strong> While utility-first,
-              Tailwind still allows for creating reusable components. Combine
-              classes into templates or use third-party libraries like Tailwind
-              UI to speed up development further.
-            </li>
-            <li>
-              <strong>Seamless Integration with Frameworks:</strong> Tailwind
-              works well with frontend frameworks like React, Vue, and Angular,
-              allowing for smooth integration into modern development workflows.
-            </li>
+          <ul className="list-disc pl-6 space-y-2">
+            {howTailwindEnhancesWorkflow.map((item, index) => (
+              <li key={index}>
+                <strong>{item.title}:</strong> {item.description}
+              </li>
+            ))}
           </ul>
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             Getting Started with Tailwind CSS
           </h2>
           <ol className="list-decimal pl-6 space-y-2">
@@ -144,29 +114,20 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             Pro Tips for Using Tailwind CSS
           </h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>
-              <strong>Leverage Prebuilt Tools:</strong> Tools like Tailwind UI
-              or Headless UI provide ready-to-use components that save time
-              while maintaining flexibility.
-            </li>
-            <li>
-              <strong>Keep it Modular:</strong> While Tailwind encourages inline
-              styling, you can combine frequently used classes into reusable
-              components or utility classes.
-            </li>
-            <li>
-              <strong>Stay Organized:</strong> Use comments and logical grouping
-              to keep your HTML readable, even with multiple utility classes.
-            </li>
+            {proTips.map((tip, index) => (
+              <li key={index}>
+                <strong>{tip.title}:</strong> {tip.description}
+              </li>
+            ))}
           </ul>
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             Final Thoughts
           </h2>
           <p className="text-lg">

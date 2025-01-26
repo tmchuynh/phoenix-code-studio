@@ -3,7 +3,13 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
-import { contentCreationServices } from "@/lib/constants";
+import {
+  contentCreationServices,
+  onlineCourseBenefits,
+  onlineCourseProcessSteps,
+  onlineCourseServices,
+  onlineCourseTools,
+} from "@/lib/constants";
 
 const OnlineCoursesServices: FC = () => {
   const router = useRouter();
@@ -15,15 +21,13 @@ const OnlineCoursesServices: FC = () => {
       </h1>
       {contentCreationServices.map((service) => {
         return (
-          <>
-            <div className="text-center text-lg my-4">
-              {service.name === "Online Courses" ? (
-                <div key={service.name}>
-                  <span className="mt-4">{service.details}</span>
-                </div>
-              ) : null}
-            </div>
-          </>
+          <div key={service.name} className="text-center text-lg my-4">
+            {service.name === "Online Courses" && (
+              <div>
+                <span className="mt-4">{service.details}</span>
+              </div>
+            )}
+          </div>
         );
       })}
 
@@ -35,26 +39,13 @@ const OnlineCoursesServices: FC = () => {
           skills, professional development, or industry-specific knowledge,
           high-quality courses set you apart.
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-tertiary">Scalable Learning:</span>{" "}
-            Teach thousands of learners without geographic limitations.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Establish Authority:
-            </span>{" "}
-            Position yourself as an expert in your field with professional
-            courses.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Generate Revenue:</span>{" "}
-            Monetize your expertise with paid courses.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Engage Audiences:</span>{" "}
-            Create interactive and personalized learning experiences.
-          </li>
+        <ul className="list-disc pl-6 space-y-2">
+          {onlineCourseBenefits.map((benefit) => (
+            <li key={benefit.title}>
+              <span className="font-bold text-tertiary">{benefit.title}:</span>{" "}
+              {benefit.description}
+            </li>
+          ))}
         </ul>
       </section>
 
@@ -64,83 +55,25 @@ const OnlineCoursesServices: FC = () => {
           We provide end-to-end solutions for designing and developing impactful
           online courses.
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-tertiary">
-              Course Planning and Structure:
-            </span>{" "}
-            Develop a detailed course outline with clear learning objectives.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Content Development:
-            </span>{" "}
-            Write engaging, well-researched course materials tailored to your
-            audience.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Multimedia Creation:
-            </span>{" "}
-            Create video lectures, presentations, animations, and interactive
-            quizzes.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">LMS Integration:</span>{" "}
-            Set up and manage your course on Learning Management Systems (LMS)
-            like Teachable, Thinkific, or Moodle.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Assessments and Certifications:
-            </span>{" "}
-            Design quizzes, tests, and certificates for learner validation.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Course Optimization:
-            </span>{" "}
-            Analyze and refine courses based on user feedback and analytics.
-          </li>
+        <ul className="list-disc pl-6 space-y-2">
+          {onlineCourseServices.map((service) => (
+            <li key={service.title}>
+              <span className="font-bold text-tertiary">{service.title}:</span>{" "}
+              {service.description}
+            </li>
+          ))}
         </ul>
       </section>
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
         <ul className="list-decimal list-inside space-y-4">
-          <li>
-            <span className="font-bold text-tertiary">Discovery:</span>{" "}
-            Understand your audience, goals, and subject matter.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Course Outline Creation:
-            </span>{" "}
-            Develop a structured plan, including modules, lessons, and
-            activities.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Content Development:
-            </span>{" "}
-            Create engaging written, visual, and multimedia materials.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">LMS Setup:</span> Upload
-            and organize your course materials on the desired platform.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Testing and Feedback:
-            </span>{" "}
-            Run test sessions to ensure usability, engagement, and learning
-            outcomes.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Launch and Support:</span>{" "}
-            Launch your course and provide ongoing support for updates and
-            enhancements.
-          </li>
+          {onlineCourseProcessSteps.map((step) => (
+            <li key={step.title}>
+              <span className="font-bold text-tertiary">{step.title}:</span>{" "}
+              {step.description}
+            </li>
+          ))}
         </ul>
         <p className="my-4">
           <span className="font-bold text-tertiary">Timeline:</span> The
@@ -155,13 +88,10 @@ const OnlineCoursesServices: FC = () => {
           We use industry-leading tools to create engaging and professional
           online courses:
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>Articulate Storyline for interactive course content</li>
-          <li>Adobe Premiere Pro for video editing</li>
-          <li>Canva for visual content</li>
-          <li>Teachable, Thinkific, or Moodle for LMS setup</li>
-          <li>Google Docs for collaboration and content drafts</li>
-          <li>H5P for interactive quizzes and assessments</li>
+        <ul className="list-disc pl-6 space-y-2">
+          {onlineCourseTools.map((tool, index) => (
+            <li key={index}>{tool}</li>
+          ))}
         </ul>
       </section>
 
@@ -175,7 +105,7 @@ const OnlineCoursesServices: FC = () => {
           return (
             <>
               {service.name === "Online Courses" && (
-                <ul className="list-disc list-inside space-y-2">
+                <ul className="list-disc pl-6 space-y-2">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-tertiary">

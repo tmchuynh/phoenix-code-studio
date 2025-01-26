@@ -3,7 +3,13 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
-import { contentCreationServices } from "@/lib/constants";
+import {
+  blogWritingBenefits,
+  blogWritingServices,
+  contentCreationServices,
+  processStepsBlog,
+  toolsUsedBlog,
+} from "@/lib/constants";
 
 const BlogWritingServices: FC = () => {
   const router = useRouter();
@@ -13,15 +19,13 @@ const BlogWritingServices: FC = () => {
       <h1 className="text-3xl font-bold text-center">Blog Writing Services</h1>
       {contentCreationServices.map((service) => {
         return (
-          <>
-            <div className="text-center text-lg my-4">
-              {service.name === "Blog Writing" ? (
-                <div key={service.name}>
-                  <span className="mt-4">{service.details}</span>
-                </div>
-              ) : null}
-            </div>
-          </>
+          <div key={service.name} className="text-center text-lg my-4">
+            {service.name === "Blog Writing" && (
+              <div>
+                <span className="mt-4">{service.details}</span>
+              </div>
+            )}
+          </div>
         );
       })}
 
@@ -33,30 +37,13 @@ const BlogWritingServices: FC = () => {
           content not only informs and educates but also fosters trust and
           loyalty.
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-tertiary">
-              Increase Visibility:
-            </span>{" "}
-            Blogs help improve your search engine rankings and attract organic
-            traffic.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Build Authority:</span>{" "}
-            Showcase your expertise in your industry and position your brand as
-            a thought leader.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Engage Your Audience:
-            </span>{" "}
-            Provide valuable, actionable insights that keep readers coming back.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Drive Conversions:</span>{" "}
-            Use blogs as part of your content marketing strategy to convert
-            readers into customers.
-          </li>
+        <ul className="list-disc pl-6 space-y-2">
+          {blogWritingBenefits.map((benefit) => (
+            <li key={benefit.title}>
+              <span className="font-bold text-tertiary">{benefit.title}:</span>{" "}
+              {benefit.description}
+            </li>
+          ))}
         </ul>
       </section>
 
@@ -66,58 +53,25 @@ const BlogWritingServices: FC = () => {
           We provide end-to-end blog writing solutions tailored to your brand
           and audience.
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-tertiary">Topic Ideation:</span>{" "}
-            Generate engaging and relevant blog topics aligned with your
-            audience’s interests.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">SEO Optimization:</span>{" "}
-            Craft blogs optimized for search engines with strategic keywords.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Industry Expertise:</span>{" "}
-            Write content tailored to your specific niche, ensuring credibility
-            and accuracy.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Content Formatting:</span>{" "}
-            Deliver blogs formatted for readability, including subheadings,
-            bullet points, and callouts.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Regular Publishing:</span>{" "}
-            Provide consistent blog content to maintain audience engagement.
-          </li>
+        <ul className="list-disc pl-6 space-y-2">
+          {blogWritingServices.map((service) => (
+            <li key={service.title}>
+              <span className="font-bold text-tertiary">{service.title}:</span>{" "}
+              {service.description}
+            </li>
+          ))}
         </ul>
       </section>
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
         <ul className="list-decimal list-inside space-y-4">
-          <li>
-            <span className="font-bold text-tertiary">Discovery:</span>{" "}
-            Understand your brand, audience, and content goals.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Research:</span> Conduct
-            in-depth research to identify trends and keywords in your industry.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Content Creation:</span>{" "}
-            Write engaging, informative, and SEO-friendly blogs.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Editing & Proofreading:
-            </span>{" "}
-            Ensure every blog is polished, accurate, and error-free.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Delivery:</span> Provide
-            ready-to-publish content or upload directly to your CMS.
-          </li>
+          {processStepsBlog.map((step) => (
+            <li key={step.title}>
+              <span className="font-bold text-tertiary">{step.title}:</span>{" "}
+              {step.description}
+            </li>
+          ))}
         </ul>
         <p className="my-4">
           <span className="font-bold text-tertiary">Timeline:</span> Blogs are
@@ -132,12 +86,10 @@ const BlogWritingServices: FC = () => {
           We use industry-leading tools to ensure quality and optimize
           performance:
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>Grammarly for proofreading</li>
-          <li>SEMRush for keyword research</li>
-          <li>Google Analytics for performance tracking</li>
-          <li>WordPress for blog publishing</li>
-          <li>Canva for custom blog visuals</li>
+        <ul className="list-disc pl-6 space-y-2">
+          {toolsUsedBlog.map((tool, index) => (
+            <li key={index}>{tool}</li>
+          ))}
         </ul>
       </section>
 
@@ -152,7 +104,7 @@ const BlogWritingServices: FC = () => {
           return (
             <>
               {service.name === "Blog Writing" && (
-                <ul className="list-disc list-inside space-y-2">
+                <ul className="list-disc pl-6 space-y-2">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-tertiary">

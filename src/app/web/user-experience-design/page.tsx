@@ -35,7 +35,7 @@ const UXDesignServices: FC = () => {
           understanding user behavior, needs, and pain points to create seamless
           and engaging experiences.
         </p>
-        <ul className="list-disc list-inside space-y-2">
+        <ul className="list-disc pl-6 space-y-2">
           <li>
             <span className="font-bold text-tertiary">Improved Usability:</span>{" "}
             Simplify navigation and interactions for users.
@@ -71,7 +71,7 @@ const UXDesignServices: FC = () => {
           Our comprehensive UX design services are tailored to your product and
           audience, ensuring delightful user experiences.
         </p>
-        <ul className="list-disc list-inside space-y-2">
+        <ul className="list-disc pl-6 space-y-2">
           <li>
             <span className="font-bold text-tertiary">User Research:</span>{" "}
             Conducting interviews, surveys, and usability testing to understand
@@ -145,7 +145,7 @@ const UXDesignServices: FC = () => {
           We leverage industry-leading tools and technologies to ensure
           top-notch UX design:
         </p>
-        <ul className="list-disc list-inside space-y-2">
+        <ul className="list-disc pl-6 space-y-2">
           <li>Figma for wireframes and prototyping</li>
           <li>Adobe XD for high-fidelity designs</li>
           <li>InVision for interactive prototypes and collaboration</li>
@@ -167,7 +167,7 @@ const UXDesignServices: FC = () => {
           return (
             <>
               {service.name === "User Experience Design" && (
-                <ul className="list-disc list-inside space-y-2">
+                <ul className="list-disc pl-6 space-y-2">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-tertiary">

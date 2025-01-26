@@ -3,7 +3,13 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
-import { contentCreationServices } from "@/lib/constants";
+import {
+  contentCreationServices,
+  studyGuideCreationBenefits,
+  studyGuideCreationProcessSteps,
+  studyGuideCreationServices,
+  toolsForStudyGuideCreation,
+} from "@/lib/constants";
 
 const StudyGuideCreation: FC = () => {
   const router = useRouter();
@@ -15,15 +21,13 @@ const StudyGuideCreation: FC = () => {
       </h1>
       {contentCreationServices.map((service) => {
         return (
-          <>
-            <div className="text-center text-lg my-4">
-              {service.name === "Study Guide Creation" ? (
-                <div key={service.name}>
-                  <span className="mt-4">{service.details}</span>
-                </div>
-              ) : null}
-            </div>
-          </>
+          <div key={service.name} className="text-center text-lg my-4">
+            {service.name === "Study Guide Creation" && (
+              <div>
+                <span className="mt-4">{service.details}</span>
+              </div>
+            )}
+          </div>
         );
       })}
 
@@ -35,26 +39,13 @@ const StudyGuideCreation: FC = () => {
           students, professionals, or educators, professionally crafted study
           guides make complex concepts accessible and easy to retain.
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-tertiary">
-              Simplify Complex Topics:
-            </span>{" "}
-            Break down challenging concepts into manageable sections.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Enhance Retention:</span>{" "}
-            Use structured layouts and visual aids to reinforce learning.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Boost Confidence:</span>{" "}
-            Equip learners with tools to prepare effectively for exams or
-            presentations.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Save Time:</span> Provide
-            ready-to-use materials for focused study sessions.
-          </li>
+        <ul className="list-disc pl-6 space-y-2">
+          {studyGuideCreationBenefits.map((benefit) => (
+            <li key={benefit.title}>
+              <span className="font-bold text-tertiary">{benefit.title}:</span>{" "}
+              {benefit.description}
+            </li>
+          ))}
         </ul>
       </section>
 
@@ -64,71 +55,25 @@ const StudyGuideCreation: FC = () => {
           We create customized study guides designed to meet specific learning
           objectives and audience needs.
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-tertiary">
-              Topic-Specific Study Guides:
-            </span>{" "}
-            Focused materials covering specific subjects or concepts.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Exam Preparation Guides:
-            </span>{" "}
-            Comprehensive resources tailored for standardized tests,
-            certifications, or academic exams.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Flashcards and Summaries:
-            </span>{" "}
-            Condensed information for quick review and memorization.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Interactive Study Aids:
-            </span>{" "}
-            Digital guides with clickable elements and quizzes.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Custom Formats:</span>{" "}
-            Guides in PDF, print-ready, or digital formats for e-learning
-            platforms.
-          </li>
+        <ul className="list-disc pl-6 space-y-2">
+          {studyGuideCreationServices.map((service) => (
+            <li key={service.title}>
+              <span className="font-bold text-tertiary">{service.title}:</span>{" "}
+              {service.description}
+            </li>
+          ))}
         </ul>
       </section>
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
         <ul className="list-decimal list-inside space-y-4">
-          <li>
-            <span className="font-bold text-tertiary">Discovery:</span>{" "}
-            Understand your subject, audience, and objectives for the study
-            guide.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Content Development:
-            </span>{" "}
-            Research and write clear, accurate, and engaging content.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Design and Layout:</span>{" "}
-            Format the guide with visuals, infographics, and user-friendly
-            designs.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Review and Feedback:
-            </span>{" "}
-            Refine the guide based on your input to ensure accuracy and
-            alignment with your goals.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Final Delivery:</span>{" "}
-            Provide the guide in your desired format, ready for distribution or
-            use.
-          </li>
+          {studyGuideCreationProcessSteps.map((step) => (
+            <li key={step.title}>
+              <span className="font-bold text-tertiary">{step.title}:</span>{" "}
+              {step.description}
+            </li>
+          ))}
         </ul>
         <p className="my-4">
           <span className="font-bold text-tertiary">Timeline:</span> Most study
@@ -143,12 +88,10 @@ const StudyGuideCreation: FC = () => {
           We use industry-leading tools to create professional and engaging
           study guides:
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>Adobe InDesign for structured layouts</li>
-          <li>Canva for custom visuals and infographics</li>
-          <li>Microsoft Word for drafting and formatting</li>
-          <li>Grammarly for proofreading and editing</li>
-          <li>Quizlet for interactive flashcards</li>
+        <ul className="list-disc pl-6 space-y-2">
+          {toolsForStudyGuideCreation.map((tool, index) => (
+            <li key={index}>{tool}</li>
+          ))}
         </ul>
       </section>
 
@@ -162,7 +105,7 @@ const StudyGuideCreation: FC = () => {
           return (
             <>
               {service.name === "Study Guide Creation" && (
-                <ul className="list-disc list-inside space-y-2">
+                <ul className="list-disc pl-6 space-y-2">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-tertiary">

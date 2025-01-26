@@ -3,7 +3,13 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
-import { contentCreationServices } from "@/lib/constants";
+import {
+  contentCreationServices,
+  processStepsTutorial,
+  toolsUsedTutorial,
+  tutorialBenefits,
+  tutorialServices,
+} from "@/lib/constants";
 
 const TutorialCreationServices: FC = () => {
   const router = useRouter();
@@ -15,15 +21,13 @@ const TutorialCreationServices: FC = () => {
       </h1>
       {contentCreationServices.map((service) => {
         return (
-          <>
-            <div className="text-center text-lg my-4">
-              {service.name === "Tutorial Creation" ? (
-                <div key={service.name}>
-                  <span className="mt-4">{service.details}</span>
-                </div>
-              ) : null}
-            </div>
-          </>
+          <div key={service.name} className="text-center text-lg my-4">
+            {service.name === "Tutorial Creation" && (
+              <div>
+                <span className="mt-4">{service.details}</span>
+              </div>
+            )}
+          </div>
         );
       })}
 
@@ -35,31 +39,13 @@ const TutorialCreationServices: FC = () => {
           specific skills, professionally crafted tutorials build trust and
           ensure a seamless user experience.
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-tertiary">
-              Boost Understanding:
-            </span>{" "}
-            Break down complex processes into easy-to-follow steps.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Increase Engagement:
-            </span>{" "}
-            Interactive and visual tutorials keep users interested and informed.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Reduce Support Costs:
-            </span>{" "}
-            Enable users to troubleshoot and learn independently.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Build Brand Authority:
-            </span>{" "}
-            Showcase your expertise and dedication to customer success.
-          </li>
+        <ul className="list-disc pl-6 space-y-2">
+          {tutorialBenefits.map((benefit) => (
+            <li key={benefit.title}>
+              <span className="font-bold text-tertiary">{benefit.title}:</span>{" "}
+              {benefit.description}
+            </li>
+          ))}
         </ul>
       </section>
 
@@ -71,60 +57,25 @@ const TutorialCreationServices: FC = () => {
           We specialize in creating comprehensive and user-friendly tutorials
           tailored to your audience.
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-tertiary">Video Tutorials:</span>{" "}
-            High-quality, step-by-step videos with voiceovers and animations.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Written Tutorials:</span>{" "}
-            Detailed, easy-to-read guides with supporting visuals.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Interactive Tutorials:
-            </span>{" "}
-            Clickable, self-guided tutorials for software and web applications.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Quick Start Guides:</span>{" "}
-            Concise instructions to help users get started immediately.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Custom Formats:</span>{" "}
-            Tutorials tailored to your platform, such as PDFs, HTML, or LMS
-            integration.
-          </li>
+        <ul className="list-disc pl-6 space-y-2">
+          {tutorialServices.map((service) => (
+            <li key={service.title}>
+              <span className="font-bold text-tertiary">{service.title}:</span>{" "}
+              {service.description}
+            </li>
+          ))}
         </ul>
       </section>
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
         <ul className="list-decimal list-inside space-y-4">
-          <li>
-            <span className="font-bold text-tertiary">Discovery:</span>{" "}
-            Understand your objectives, target audience, and tutorial
-            requirements.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Planning:</span> Develop a
-            clear structure and outline for the tutorial.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Content Creation:</span>{" "}
-            Create detailed, step-by-step instructions with visuals or videos.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Review and Feedback:
-            </span>{" "}
-            Refine content based on your input to ensure accuracy and clarity.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Final Delivery:</span>{" "}
-            Provide the tutorial in your preferred format, optimized for your
-            platform.
-          </li>
+          {processStepsTutorial.map((step) => (
+            <li key={step.title}>
+              <span className="font-bold text-tertiary">{step.title}:</span>{" "}
+              {step.description}
+            </li>
+          ))}
         </ul>
         <p className="my-4">
           <span className="font-bold text-tertiary">Timeline:</span> Most
@@ -139,12 +90,10 @@ const TutorialCreationServices: FC = () => {
           We use industry-standard tools to create engaging and professional
           tutorials:
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>Adobe Premiere Pro for video editing</li>
-          <li>Snagit for annotated screenshots</li>
-          <li>Figma for visual content design</li>
-          <li>Articulate Storyline for interactive tutorials</li>
-          <li>Grammarly for proofreading written tutorials</li>
+        <ul className="list-disc pl-6 space-y-2">
+          {toolsUsedTutorial.map((tool, index) => (
+            <li key={index}>{tool}</li>
+          ))}
         </ul>
       </section>
 
@@ -158,7 +107,7 @@ const TutorialCreationServices: FC = () => {
           return (
             <>
               {service.name === "Tutorial Creation" && (
-                <ul className="list-disc list-inside space-y-2">
+                <ul className="list-disc pl-6 space-y-2">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-tertiary">

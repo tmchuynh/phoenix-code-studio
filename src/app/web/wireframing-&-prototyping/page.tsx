@@ -37,7 +37,7 @@ const WireframingPrototypingServices: FC = () => {
           feedback early. They ensure that your final product aligns with user
           expectations and business goals.
         </p>
-        <ul className="list-disc list-inside space-y-2">
+        <ul className="list-disc pl-6 space-y-2">
           <li>
             <span className="font-bold text-tertiary">Clarity:</span> Define
             layouts, content hierarchy, and navigation structure clearly.
@@ -77,7 +77,7 @@ const WireframingPrototypingServices: FC = () => {
           We specialize in creating detailed wireframes and interactive
           prototypes to ensure your project starts on the right foundation.
         </p>
-        <ul className="list-disc list-inside space-y-2">
+        <ul className="list-disc pl-6 space-y-2">
           <li>
             <span className="font-bold text-tertiary">
               Low-Fidelity Wireframes:
@@ -150,7 +150,7 @@ const WireframingPrototypingServices: FC = () => {
           We utilize industry-standard tools and technologies to create
           high-quality wireframes and prototypes:
         </p>
-        <ul className="list-disc list-inside space-y-2">
+        <ul className="list-disc pl-6 space-y-2">
           <li>Figma for collaborative wireframing and prototyping</li>
           <li>Adobe XD for high-fidelity design and interactive prototypes</li>
           <li>Sketch for vector-based design and interface development</li>
@@ -173,7 +173,7 @@ const WireframingPrototypingServices: FC = () => {
           return (
             <>
               {service.name === "Wireframing & Prototyping" && (
-                <ul className="list-disc list-inside space-y-2">
+                <ul className="list-disc pl-6 space-y-2">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-tertiary">

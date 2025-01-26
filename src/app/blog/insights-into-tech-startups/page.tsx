@@ -1,9 +1,16 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
+import {
+  startupChallenges,
+  startupSuccessStories,
+  strategiesForSuccess,
+} from "@/lib/constants";
 import React from "react";
 
 const BlogPage = () => {
   return (
-    <div className="max-w-3xl mx-auto px-4 py-16">
+    <div className="max-w-4xl mx-auto p-6">
       <article className="space-y-8">
         <header className="text-center">
           <h1 className="text-4xl font-bold text-primary mb-4">
@@ -32,7 +39,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             What Defines a Tech Startup?
           </h2>
           <p className="text-lg">
@@ -46,7 +53,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             The Journey of a Tech Startup
           </h2>
           <ol className="list-decimal pl-6 space-y-2">
@@ -81,93 +88,46 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             Challenges in the Tech Startup Ecosystem
           </h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>
-              <strong>Funding and Financial Management:</strong> Access to
-              capital is a common challenge. Startups must balance growth with
-              cost management to sustain operations.
-            </li>
-            <li>
-              <strong>Talent Acquisition:</strong> Attracting skilled
-              developers, designers, and marketers is critical but competitive
-              in the tech industry.
-            </li>
-            <li>
-              <strong>Market Competition:</strong> Startups often compete with
-              established companies and other innovators, making differentiation
-              essential.
-            </li>
-            <li>
-              <strong>Product Development:</strong> Rapidly evolving technology
-              and changing consumer demands require continuous product
-              iteration.
-            </li>
-            <li>
-              <strong>Burnout and Pressure:</strong> The fast-paced startup
-              culture can lead to stress and burnout for founders and employees.
-            </li>
+            {startupChallenges.map((challenge, index) => (
+              <li key={index}>
+                <strong>{challenge.title}:</strong> {challenge.description}
+              </li>
+            ))}
           </ul>
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             Success Stories of Tech Startups
           </h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>
-              <strong>Airbnb:</strong> What started as a platform for renting
-              out air mattresses has grown into a global leader in travel and
-              hospitality.
-            </li>
-            <li>
-              <strong>Stripe:</strong> A FinTech giant, Stripe transformed
-              online payments by providing developers with simple, scalable
-              payment solutions.
-            </li>
-            <li>
-              <strong>Slack:</strong> Initially designed as a gaming
-              communication tool, Slack pivoted to become one of the most
-              popular workplace collaboration platforms.
-            </li>
-            <li>
-              <strong>Tesla:</strong> While not a traditional startup today,
-              Tesla began with the mission to accelerate the world’s transition
-              to sustainable energy through electric vehicles.
-            </li>
+            {startupSuccessStories.map((story, index) => (
+              <li key={index}>
+                <strong>{story.company}:</strong> {story.description}
+              </li>
+            ))}
           </ul>
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             Strategies for Success
           </h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>
-              <strong>Customer-Centric Approach:</strong> Listening to user
-              feedback and solving real problems ensures a product resonates
-              with its audience.
-            </li>
-            <li>
-              <strong>Focus on Innovation:</strong> Startups thrive by thinking
-              outside the box and challenging conventional solutions.
-            </li>
-            <li>
-              <strong>Agile Development:</strong> Embracing an agile methodology
-              allows startups to iterate quickly and adapt to feedback.
-            </li>
-            <li>
-              <strong>Building a Strong Culture:</strong> A supportive and
-              collaborative company culture attracts top talent and fosters
-              creativity.
-            </li>
+            {strategiesForSuccess.map((strategy, index) => (
+              <li key={index}>
+                <strong>{strategy.title}:</strong> {strategy.description}
+              </li>
+            ))}
           </ul>
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             The Future of Tech Startups
           </h2>
           <p className="text-lg">
@@ -180,7 +140,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-primary mb-4">
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
             Conclusion
           </h2>
           <p className="text-lg">

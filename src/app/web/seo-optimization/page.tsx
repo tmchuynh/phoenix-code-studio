@@ -37,7 +37,7 @@ const SEOOptimization: FC = () => {
           your target audience, increasing organic traffic and boosting your
           visibility.
         </p>
-        <ul className="list-disc list-inside space-y-2">
+        <ul className="list-disc pl-6 space-y-2">
           <li>
             <span className="font-bold text-tertiary">On-Page SEO:</span>{" "}
             Optimize website elements such as titles, meta descriptions,
@@ -130,7 +130,7 @@ const SEOOptimization: FC = () => {
           return (
             <>
               {service.name === "SEO Optimization" && (
-                <ul className="list-disc list-inside space-y-2">
+                <ul className="list-disc pl-6 space-y-2">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-tertiary">

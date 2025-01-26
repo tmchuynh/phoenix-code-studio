@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useSidebar } from "@/components/ui/sidebar";
 import { blogs } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import { Checkbox, PaginationItem } from "@mui/material";
+import { Checkbox } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { FC, useEffect, useState } from "react";
 import {
@@ -14,9 +14,6 @@ import {
 import { ChevronsUpDown } from "lucide-react";
 import {
   Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationLink,
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
@@ -44,7 +41,7 @@ const BlogDisplayPage: FC = () => {
   const [filtersCleared, setFiltersCleared] = useState(false);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [articlesPerPage, setArticlesPerPage] = useState(5);
+  const [articlesPerPage, setArticlesPerPage] = useState(25);
 
   // Calculate the indexes for pagination
   const indexOfLastArticle = currentPage * articlesPerPage;
@@ -86,6 +83,10 @@ const BlogDisplayPage: FC = () => {
         setTimeout(() => setNoResults(true), 2500);
       } else {
         setNoResults(true);
+        setTimeout(() => {
+          setSelectedTopics([]);
+          setSelectedDates([]);
+        }, 1000);
       }
       setFilteredBlogs(blogs);
       setTimeout(() => setNoResults(false), 4000);
@@ -114,14 +115,6 @@ const BlogDisplayPage: FC = () => {
   useEffect(() => {
     handleFilter();
   }, [selectedTopics, selectedDates]);
-
-  function handleMouseLeave() {
-    setDropdownOpen({
-      ...dropdownOpen,
-      topic: false,
-      date: false,
-    });
-  }
 
   function handleOpen(dropdown: "topic" | "date") {
     setDropdownOpen({
@@ -157,76 +150,6 @@ const BlogDisplayPage: FC = () => {
 
       {/* Filter Options */}
       <section className="mb-8">
-        <section className="h-60 md:h-44 lg:h-32 flex flex-col justify-between relative">
-          <div
-            className={cn(
-              "absolute bottom-0 flex flex-col lg:flex-row justify-between items-baseline md:items-end w-11/12 left-6",
-              {
-                "md:flex-row md:items-baseline": !open,
-              }
-            )}
-          >
-            {/* Clear Filters Button */}
-            <Button
-              variant={"destructive"}
-              className="my-4"
-              onClick={clearFilters}
-            >
-              Clear Filters
-            </Button>
-
-            {/* Articles per page DropdownMenu */}
-            <section className="pb-7">
-              <label htmlFor="articlesPerPage" className="mr-2">
-                Articles per page:
-              </label>
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <button className="p-2 text-sm bg-gray-200 rounded">
-                    {articlesPerPage} articles per page
-                  </button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
-                  <DropdownMenuItem
-                    onClick={() => handleArticlesPerPageChange(5)}
-                  >
-                    5 articles per page
-                  </DropdownMenuItem>
-                  <DropdownMenuItem
-                    onClick={() => handleArticlesPerPageChange(10)}
-                  >
-                    10 articles per page
-                  </DropdownMenuItem>
-                  <DropdownMenuItem
-                    onClick={() => handleArticlesPerPageChange(15)}
-                  >
-                    15 articles per page
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </section>
-
-            {/* Confirmation Text for Filters Cleared */}
-            {filtersCleared && (
-              <div className="mt-4 text-center h-14">
-                <p className="text-secondary m-0 p-0">
-                  Filters have been cleared successfully!
-                </p>
-              </div>
-            )}
-
-            {/* No results warning */}
-            {noResults && (
-              <div className="mt-4 text-center h-14">
-                <p className="text-destructive m-0">
-                  No blogs match your selected filters. Filters have been
-                  cleared.
-                </p>
-              </div>
-            )}
-          </div>
-        </section>
-
         <section
           className={cn(
             "flex flex-col lg:flex-row justify-center sm:items-end sm:space-y-4 md:gap-4",
@@ -278,7 +201,6 @@ const BlogDisplayPage: FC = () => {
                         <label
                           htmlFor={topic}
                           className="ml-2"
-                          onMouseLeave={handleMouseLeave}
                           onClick={() => handleOpen("topic")}
                         >
                           {topic}
@@ -337,7 +259,6 @@ const BlogDisplayPage: FC = () => {
                           <label
                             htmlFor={date}
                             className="ml-2"
-                            onMouseLeave={handleMouseLeave}
                             onClick={() => handleOpen("date")}
                           >
                             {date}
@@ -350,10 +271,112 @@ const BlogDisplayPage: FC = () => {
             </div>
           </div>
         </section>
+
+        <section
+          className={cn(
+            "w-11/12 md:w-full mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center",
+            {
+              "w-10/12 md:w-11/12 md:items-start lg:items-center": open,
+            }
+          )}
+        >
+          {/* Clear Filters Button */}
+          <Button
+            variant={"destructive"}
+            className="my-5"
+            onClick={clearFilters}
+          >
+            Clear Filters
+          </Button>
+
+          {/* Articles per page DropdownMenu */}
+          <section
+            className={cn(
+              "flex flex-col md:flex-row md:justify-end items-center",
+              {
+                "md:flex-col lg:flex-row": open,
+              }
+            )}
+          >
+            <label htmlFor="articlesPerPage" className="mr-2">
+              Articles per page:
+            </label>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="p-2 text-sm bg-gray-200 rounded">
+                  {articlesPerPage} articles per page
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem
+                  onClick={() => handleArticlesPerPageChange(10)}
+                >
+                  10 articles per page
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => handleArticlesPerPageChange(15)}
+                >
+                  15 articles per page
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => handleArticlesPerPageChange(25)}
+                >
+                  25 articles per page
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => handleArticlesPerPageChange(50)}
+                >
+                  50 articles per page
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </section>
+        </section>
+
+        <section className="h-1 p-3">
+          {/* Confirmation Text for Filters Cleared */}
+          <div className="mt-4 text-center">
+            {filtersCleared && (
+              <p className="text-secondary m-0 p-0">
+                Filters have been cleared successfully!
+              </p>
+            )}
+          </div>
+
+          {/* No results warning */}
+          <div className="mt-4 text-center">
+            {noResults && (
+              <p className="text-destructive m-0">
+                No blogs match your selected filters. Filters have been cleared.
+              </p>
+            )}
+          </div>
+        </section>
       </section>
+
+      {/* Pagination controls */}
+      <Pagination className="gap-5">
+        <PaginationPrevious
+          onClick={() => handlePageChange(currentPage - 1)}
+          className={currentPage === 1 ? "hidden" : ""}
+        />
+        <PaginationNext
+          onClick={() => handlePageChange(currentPage + 1)}
+          className={currentPage === totalPages ? "hidden" : ""}
+        />
+      </Pagination>
 
       {/* Displaying filtered blog cards dynamically */}
       <section className="my-8">
+        <section className="text-center my-4">
+          <p className="text-lg">
+            Showing {indexOfFirstArticle + 1} to{" "}
+            {indexOfLastArticle > filteredBlogs.length
+              ? filteredBlogs.length
+              : indexOfLastArticle}{" "}
+            of {filteredBlogs.length} blogs
+          </p>
+        </section>
         <div
           className={cn(
             "flex flex-col xl:grid xl:grid-cols-3 2xl:flex-row gap-8",
@@ -376,25 +399,27 @@ const BlogDisplayPage: FC = () => {
                   alt={blog.title}
                   className="w-full h-36 rounded-t-md object-cover border mx-auto mb-1"
                 />
-                <div className="px-4 pb-2">
-                  <Button
-                    variant="ghost"
-                    className="text-primary underline underline-offset-2 px-0 mt-3 mb-2 font-SofiaSans text-xl tracking-wider font-bold hover:bg-transparent hover:text-primary hover:no-underline"
-                    onClick={() => {
-                      router.push(blog.slug);
-                    }}
-                  >
-                    {blog.title}
-                  </Button>
-                  <p className="mb-0">
-                    <span>
-                      <strong>By:</strong> {blog.author}
-                    </span>
-                  </p>
-                  <p>
-                    <span className="italic text-xs">{blog.date}</span>
-                  </p>
-                  <p className="text-md mb-4">{blog.excerpt}</p>
+                <div className="px-4 pb-2 flex flex-col justify-between h-[25em]">
+                  <div>
+                    <Button
+                      variant="ghost"
+                      className="text-primary underline underline-offset-2 px-0 my-5 font-SofiaSans text-xl tracking-wider font-bold hover:bg-transparent hover:text-primary hover:no-underline text-wrap text-left"
+                      onClick={() => {
+                        router.push(blog.slug);
+                      }}
+                    >
+                      {blog.title}
+                    </Button>
+                    <p className="mb-0">
+                      <span>
+                        <strong>By:</strong> {blog.author}
+                      </span>
+                    </p>
+                    <p>
+                      <span className="italic text-xs">{blog.date}</span>
+                    </p>
+                    <p className="text-md py-4">{blog.excerpt}</p>
+                  </div>
                   <p className="text-sm mb-4">
                     <strong>Topics:</strong> {blog.topics.join(", ")}
                   </p>
@@ -404,18 +429,6 @@ const BlogDisplayPage: FC = () => {
           ))}
         </div>
       </section>
-
-      {/* Pagination controls */}
-      <Pagination className="gap-5">
-        <PaginationPrevious
-          onClick={() => handlePageChange(currentPage - 1)}
-          className={currentPage === 1 ? "hidden" : ""}
-        />
-        <PaginationNext
-          onClick={() => handlePageChange(currentPage + 1)}
-          className={currentPage === totalPages ? "hidden" : ""}
-        />
-      </Pagination>
     </main>
   );
 };

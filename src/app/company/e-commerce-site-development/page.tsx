@@ -1,7 +1,14 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { companySpecificServices } from "@/lib/constants";
+import {
+  companySpecificServices,
+  customEcommerceFeatures,
+  developmentProcessItems,
+  productCatalogManagement,
+  securePaymentGateways,
+  shippingAndFulfillment,
+} from "@/lib/constants";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
 
@@ -15,15 +22,13 @@ const EcommerceWebsite: FC = () => {
       </h1>
       {companySpecificServices.map((service) => {
         return (
-          <>
-            <div className="text-center text-lg my-4">
-              {service.name === "E-Commerce Site Development" ? (
-                <div key={service.name}>
-                  <span className="mt-4">{service.details}</span>
-                </div>
-              ) : null}
-            </div>
-          </>
+          <div key={service.name} className="text-center text-lg my-4">
+            {service.name === "E-Commerce Site Development" && (
+              <div>
+                <span className="mt-4">{service.details}</span>
+              </div>
+            )}
+          </div>
         );
       })}
 
@@ -36,38 +41,13 @@ const EcommerceWebsite: FC = () => {
           unique, scalable, and optimized platform that reflects your brand’s
           identity while enhancing the shopping experience.
         </p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <span className="font-bold text-tertiary">Unique Design:</span>{" "}
-            Stand out in a crowded market with a store designed to resonate with
-            your brand.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Enhanced Shopping Experience:
-            </span>{" "}
-            Intuitive navigation, personalized recommendations, and fast
-            checkout processes to boost conversion rates.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Advanced Features:</span>{" "}
-            Implement custom product filters, inventory management, loyalty
-            programs, and more.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Mobile Optimization:
-            </span>{" "}
-            Fully responsive designs to ensure a seamless shopping experience on
-            all devices.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              SEO-Friendly Structure:
-            </span>{" "}
-            Built-in features to help your store rank higher and attract more
-            traffic.
-          </li>
+        <ul className="list-disc pl-6 space-y-2">
+          {customEcommerceFeatures.map((feature, index) => (
+            <li key={index}>
+              <span className="font-bold text-tertiary">{feature.title}:</span>{" "}
+              {feature.description}
+            </li>
+          ))}
         </ul>
       </section>
 
@@ -79,26 +59,13 @@ const EcommerceWebsite: FC = () => {
             We ensure your product catalog is easy to manage, scalable, and
             user-friendly, featuring:
           </p>
-          <ul className="list-disc list-inside space-y-2">
-            <li>
-              <span className="font-bold text-tertiary">
-                Dynamic Categories:
-              </span>{" "}
-              Create and manage product categories effortlessly.
-            </li>
-            <li>
-              <span className="font-bold text-tertiary">
-                Custom Attributes:
-              </span>{" "}
-              Add unique attributes such as size, color, or material to your
-              products.
-            </li>
-            <li>
-              <span className="font-bold text-tertiary">
-                Bulk Import/Export:
-              </span>{" "}
-              Easily manage large product inventories with bulk operations.
-            </li>
+          <ul className="list-disc pl-6 space-y-2">
+            {productCatalogManagement.map((item, index) => (
+              <li key={index}>
+                <span className="font-bold text-tertiary">{item.title}:</span>{" "}
+                {item.description}
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -107,21 +74,20 @@ const EcommerceWebsite: FC = () => {
           <p>
             Provide your customers with multiple payment options, including:
           </p>
-          <ul className="list-disc list-inside space-y-2">
-            <li>Credit/Debit Cards</li>
-            <li>PayPal</li>
-            <li>Apple Pay, Google Pay, and other mobile wallets</li>
-            <li>Buy Now, Pay Later integrations</li>
+          <ul className="list-disc pl-6 space-y-2">
+            {securePaymentGateways.map((gateway, index) => (
+              <li key={index}>{gateway}</li>
+            ))}
           </ul>
         </div>
 
         <div className="my-6">
           <h3 className="text-xl font-bold">Shipping and Fulfillment</h3>
           <p>Streamline your logistics with features such as:</p>
-          <ul className="list-disc list-inside space-y-2">
-            <li>Real-time shipping rate calculations</li>
-            <li>Automated tracking updates</li>
-            <li>Integration with major carriers (UPS, FedEx, DHL, etc.)</li>
+          <ul className="list-disc pl-6 space-y-2">
+            {shippingAndFulfillment.map((feature, index) => (
+              <li key={index}>{feature}</li>
+            ))}
           </ul>
         </div>
       </section>
@@ -129,34 +95,12 @@ const EcommerceWebsite: FC = () => {
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Development Process</h2>
         <ul className="list-decimal list-inside space-y-4">
-          <li>
-            <span className="font-bold text-tertiary">Consultation:</span>{" "}
-            Understanding your business, audience, and goals.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Planning:</span> Creating
-            a roadmap, wireframes, and feature list.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Design:</span> Crafting
-            unique and user-friendly interfaces.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Development:</span>{" "}
-            Building your store using modern technologies.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Integration:</span> Adding
-            payment gateways, analytics, and third-party tools.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Testing:</span> Ensuring
-            performance, security, and accessibility on all devices.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Launch & Support:</span>{" "}
-            Deploying your site and offering ongoing assistance.
-          </li>
+          {developmentProcessItems.map((item, index) => (
+            <li key={index}>
+              <span className="font-bold text-tertiary">{item.title}:</span>{" "}
+              {item.description}
+            </li>
+          ))}
         </ul>
         <p className="my-4">
           <span className="font-bold text-tertiary">Timeline:</span> Most
@@ -171,7 +115,7 @@ const EcommerceWebsite: FC = () => {
           We use industry-leading tools and frameworks to create scalable,
           secure, and high-performing eCommerce platforms:
         </p>
-        <ul className="list-disc list-inside space-y-2">
+        <ul className="list-disc pl-6 space-y-2">
           <li>Next.js for fast, SEO-friendly development</li>
           <li>Tailwind CSS for responsive, accessible design</li>
           <li>Shopify or WooCommerce APIs for backend functionality</li>
@@ -191,7 +135,7 @@ const EcommerceWebsite: FC = () => {
           return (
             <>
               {service.name === "E-Commerce Site Development" && (
-                <ul className="list-disc list-inside space-y-2">
+                <ul className="list-disc pl-6 space-y-2">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-tertiary">
