@@ -1,6 +1,11 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardTitle,
+} from "@/components/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,9 +18,14 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import { pastProjects } from "@/lib/constants";
+import useMediumScreen from "@/lib/useMediumScreen";
+import useSmallScreen from "@/lib/useSmallScreen";
 import { FC, useState, useEffect } from "react";
 
 const PastProjectsPage: FC = () => {
+  const isSmallScreen = useSmallScreen();
+  const isMediumScreen = useMediumScreen();
+
   // Filter states
   const [selectedLanguages, setSelectedLanguages] = useState<string[]>([]);
   const [selectedFrameworks, setSelectedFrameworks] = useState<string[]>([]);
@@ -145,7 +155,7 @@ const PastProjectsPage: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Past Projects
       </h1>
-      <p className="text-center text-lg my-4">
+      <p className="text-lg my-4">
         Check out some of the projects I've worked on in the past.
       </p>
 
@@ -155,7 +165,7 @@ const PastProjectsPage: FC = () => {
           {/* Languages Filter */}
           <div>
             <h3 className="text-lg font-semibold">Filter by Languages</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 justify-start items-start w-full gap-2">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-start items-start w-full gap-2">
               {allLanguages.map((language) => (
                 <div key={language} className="flex items-center">
                   <input
@@ -176,7 +186,7 @@ const PastProjectsPage: FC = () => {
           {/* Frameworks Filter */}
           <div>
             <h3 className="text-lg font-semibold">Filter by Frameworks</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 justify-start items-start w-full gap-2">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-start items-start w-full gap-2">
               {allFrameworks.map((framework) => (
                 <div key={framework} className="flex items-center">
                   <input
@@ -197,7 +207,7 @@ const PastProjectsPage: FC = () => {
           {/* Tags Filter */}
           <div>
             <h3 className="text-lg font-semibold">Filter by Tags</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 justify-start items-start w-full gap-2">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 justify-start items-start w-full gap-2">
               {allTags.map((tag) => (
                 <div key={tag} className="flex items-center">
                   <input
@@ -216,7 +226,7 @@ const PastProjectsPage: FC = () => {
       </section>
 
       {/* Clear Filters Button */}
-      <section className="w-11/12 md:w-full mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center">
+      <section className="w-11/12 md:w-full mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center gap-7">
         <Button variant="destructive" onClick={clearFilters}>
           Clear Filters
         </Button>
@@ -224,26 +234,26 @@ const PastProjectsPage: FC = () => {
         {/* Articles per page DropdownMenu */}
         <section className="flex flex-col md:flex-row md:justify-end items-center">
           <label htmlFor="articlesPerPage" className="mr-2">
-            Articles per page:
+            Projects per page:
           </label>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <button className="p-2 text-sm bg-gray-200 rounded">
-                {projectsPerPage} articles per page
+                {projectsPerPage} projects per page
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuItem onClick={() => handleProjectsPerPageChange(10)}>
-                10 articles per page
+                10 projects per page
               </DropdownMenuItem>
               <DropdownMenuItem onClick={() => handleProjectsPerPageChange(15)}>
-                15 articles per page
+                15 projects per page
               </DropdownMenuItem>
               <DropdownMenuItem onClick={() => handleProjectsPerPageChange(25)}>
-                25 articles per page
+                25 projects per page
               </DropdownMenuItem>
               <DropdownMenuItem onClick={() => handleProjectsPerPageChange(50)}>
-                50 articles per page
+                50 projects per page
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -264,7 +274,8 @@ const PastProjectsPage: FC = () => {
         <div className="mt-4 text-center">
           {noResults && (
             <p className="text-destructive m-0">
-              No blogs match your selected filters. Filters have been cleared.
+              No projects match your selected filters. Filters have been
+              cleared.
             </p>
           )}
         </div>
@@ -293,75 +304,109 @@ const PastProjectsPage: FC = () => {
             of {filteredProjects.length} projects
           </p>
         </section>
-        <div className={"grid md:grid-cols-1 xl:grid-cols-2 gap-8"}>
+        <div className="grid md:grid-cols-1 xl:grid-cols-2 gap-8">
           {currentProjects.map((project, index) => (
             <Card
               key={index}
-              className="border-2 border-transparent hover:border-border p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col justify-between"
+              className="border-2 border-transparent hover:border-border p-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col justify-between"
             >
-              <div>
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p className="text-gray-500 mb-4">{project.description}</p>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-2">
+              <CardContent
+                className={
+                  isSmallScreen
+                    ? "flex flex-col-reverse h-full"
+                    : "grid grid-cols-2 md:grid-cols-1 h-full p-3"
+                }
+              >
+                <div className="h-full flex flex-col justify-between">
                   <div>
-                    <p className="font-semibold">Languages:</p>
-                    <ul className="list-disc pl-4 mb-4">
-                      {project.languages.map((language, idx) => (
-                        <li key={idx} className="text-gray-600">
-                          {language}
-                        </li>
-                      ))}
-                    </ul>
+                    <h2 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2">
+                      {project.title}
+                    </h2>
+                    <p className="text-sm lg:text-lg mb-4 pr-10">
+                      {project.description}
+                    </p>
+
+                    <div className="text-sm lg:text-lg grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-2">
+                      <div>
+                        <p className="font-semibold">Languages:</p>
+                        <ul className="list-disc pl-4 mb-4">
+                          {project.languages.map((language, idx) => (
+                            <li key={idx}>{language}</li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      {project.frameworks && (
+                        <div>
+                          <p className="font-semibold">Frameworks:</p>
+                          <ul className="list-disc pl-4 mb-4">
+                            {project.frameworks.map((tech, idx) => (
+                              <li key={idx}>{tech}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+
+                      {project.technologies && (
+                        <div>
+                          <p className="font-semibold">Technologies:</p>
+                          <ul className="list-disc pl-4 mb-4">
+                            {project.technologies.map((tech, idx) => (
+                              <li key={idx}>{tech}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
                   </div>
 
-                  {project.frameworks && (
-                    <div>
-                      <p className="font-semibold">Frameworks:</p>
-                      <ul className="list-disc pl-4 mb-4">
-                        {project.frameworks.map((tech, idx) => (
-                          <li key={idx} className="text-gray-600">
-                            {tech}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  {project.technologies && (
-                    <div>
-                      <p className="font-semibold">Technologies:</p>
-                      <ul className="list-disc pl-4 mb-4">
-                        {project.technologies.map((tech, idx) => (
-                          <li key={idx} className="text-gray-600">
-                            {tech}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+                  {/* Optional links */}
+                  <div className="flex justify-center items-center">
+                    {project.liveLink && (
+                      <Button
+                        variant="secondary"
+                        onClick={() => window.open(project.liveLink, "_blank")}
+                      >
+                        View Live Website
+                      </Button>
+                    )}
+                    {project.githubLink && (
+                      <Button
+                        variant="outline"
+                        onClick={() =>
+                          window.open(project.githubLink, "_blank")
+                        }
+                      >
+                        View GitHub Repo
+                      </Button>
+                    )}
+                  </div>
                 </div>
-              </div>
-
-              {/* Optional links */}
-              <div className="flex justify-center items-center">
-                {project.liveLink && (
-                  <Button
-                    variant="link"
-                    onClick={() => window.open(project.liveLink, "_blank")}
-                  >
-                    View Live Website
-                  </Button>
-                )}
-                {project.githubLink && (
-                  <Button
-                    variant="link"
-                    onClick={() => window.open(project.githubLink, "_blank")}
-                  >
-                    View GitHub Repo
-                  </Button>
-                )}
-              </div>
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-2 pt-9">
+                  {isSmallScreen
+                    ? project.img.map(
+                        (img, index) =>
+                          index === 0 && (
+                            <img
+                              src={`${img}`}
+                              alt={project.title}
+                              className="w-full h-40 my-4 object-contain"
+                            />
+                          )
+                      )
+                    : project.img.map((img, index) => (
+                        <img
+                          src={`${img}`}
+                          alt={project.title}
+                          className={
+                            isMediumScreen
+                              ? "w-48 h-full ml-3 object-contain mx-auto"
+                              : "w-72 h-full object-contain mx-auto"
+                          }
+                        />
+                      ))}
+                </div>
+              </CardContent>
             </Card>
           ))}
         </div>
