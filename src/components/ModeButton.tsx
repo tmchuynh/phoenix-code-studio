@@ -5,6 +5,7 @@ import { useTheme } from "next-themes";
 import * as React from "react";
 import { useEffect, useState } from "react";
 import { Button, ButtonProps } from "./ui/button";
+import { cn } from "@/lib/utils";
 
 const ModeButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className }, ref) => {
@@ -43,10 +44,15 @@ const ModeButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Button
         size="icon"
+        variant={theme === "dark" ? "ghost" : "outline"}
         type="button"
         onClick={handleThemeToggle}
         aria-label="Toggle theme"
-        className={className}
+        className={cn(
+          className,
+          theme === "dark" &&
+            "hover:bg-transparent hover:border-2 hover:border-border"
+        )}
         ref={ref}
       >
         {theme === "dark" ? (

@@ -18,12 +18,14 @@ import { useRouter } from "next/navigation";
 import * as React from "react";
 import { useState } from "react";
 import { Button } from "./ui/button";
+import { FaChevronDown } from "react-icons/fa";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import { ModeButton } from "./ModeButton";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,6 +34,17 @@ const NavBar = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenuOnClick = () => setIsMenuOpen(false);
+
+  const [isInfoOpen, setIsInfoOpen] = useState(false);
+  const [isWebsiteServicesOpen, setIsWebsiteServicesOpen] = useState(false);
+  const [isCompaniesOpen, setIsCompaniesOpen] = useState(false);
+  const [isContentOpen, setIsContentOpen] = useState(false);
+
+  const toggleInfo = () => setIsInfoOpen(!isInfoOpen);
+  const toggleWebsiteServices = () =>
+    setIsWebsiteServicesOpen(!isWebsiteServicesOpen);
+  const toggleCompanies = () => setIsCompaniesOpen(!isCompaniesOpen);
+  const toggleContent = () => setIsContentOpen(!isContentOpen);
 
   return (
     <section>
@@ -142,6 +155,7 @@ const NavBar = () => {
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
+              <ModeButton className="w-12" />
             </NavigationMenuList>
           </NavigationMenu>
         )}
@@ -190,15 +204,24 @@ const NavBar = () => {
                   asChild
                   className="w-full bg-transparent text-start"
                 >
-                  <button className="p-2 text-sm rounded">Information</button>
+                  <button
+                    className="p-2 text-sm rounded flex justify-between transition-transform"
+                    onClick={toggleInfo}
+                  >
+                    Information
+                    <FaChevronDown
+                      className={`transition-transform ${
+                        isInfoOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
+                <DropdownMenuContent align="start">
                   {about.map((component) => (
                     <DropdownMenuItem
                       key={component.title}
                       title={component.title}
                       onClick={() => {
-                        closeMenuOnClick;
                         router.push(component.href);
                       }}
                     >
@@ -213,17 +236,24 @@ const NavBar = () => {
                   asChild
                   className="w-full bg-transparent text-start"
                 >
-                  <button className="p-2 text-sm rounded">
+                  <button
+                    className="p-2 text-sm rounded flex justify-between transition-transform"
+                    onClick={toggleWebsiteServices}
+                  >
                     Website Services
+                    <FaChevronDown
+                      className={`transition-transform ${
+                        isWebsiteServicesOpen ? "rotate-180" : ""
+                      }`}
+                    />
                   </button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
+                <DropdownMenuContent align="start">
                   {websites.map((component) => (
                     <DropdownMenuItem
                       key={component.title}
                       title={component.title}
                       onClick={() => {
-                        closeMenuOnClick;
                         router.push(component.href);
                       }}
                     >
@@ -238,17 +268,24 @@ const NavBar = () => {
                   asChild
                   className="w-full bg-transparent text-start"
                 >
-                  <button className="p-2 text-sm rounded">
+                  <button
+                    className="p-2 text-sm rounded flex justify-between transition-transform"
+                    onClick={toggleCompanies}
+                  >
                     Services for Companies
+                    <FaChevronDown
+                      className={`transition-transform ${
+                        isCompaniesOpen ? "rotate-180" : ""
+                      }`}
+                    />
                   </button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
+                <DropdownMenuContent align="start">
                   {companies.map((component) => (
                     <DropdownMenuItem
                       key={component.title}
                       title={component.title}
                       onClick={() => {
-                        closeMenuOnClick;
                         router.push(component.href);
                       }}
                     >
@@ -263,17 +300,24 @@ const NavBar = () => {
                   asChild
                   className="w-full bg-transparent text-start"
                 >
-                  <button className="p-2 text-sm rounded">
+                  <button
+                    className="p-2 text-sm rounded flex justify-between transition-transform"
+                    onClick={toggleContent}
+                  >
                     Content Creation
+                    <FaChevronDown
+                      className={`transition-transform ${
+                        isContentOpen ? "rotate-180" : ""
+                      }`}
+                    />
                   </button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
+                <DropdownMenuContent align="start">
                   {content.map((component) => (
                     <DropdownMenuItem
                       key={component.title}
                       title={component.title}
                       onClick={() => {
-                        closeMenuOnClick;
                         router.push(component.href);
                       }}
                     >
@@ -293,6 +337,7 @@ const NavBar = () => {
               >
                 Contact Us
               </Button>
+              <ModeButton className="absolute bottom-5 left-5" />
             </SheetContent>
           </Sheet>
         )}

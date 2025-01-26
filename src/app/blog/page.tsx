@@ -2,7 +2,6 @@
 import { Button } from "@/components/ui/button";
 import { useSidebar } from "@/components/ui/sidebar";
 import { blogs } from "@/lib/constants";
-import { cn } from "@/lib/utils";
 import { Checkbox } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { FC, useEffect, useState } from "react";
@@ -163,19 +162,8 @@ const BlogDisplayPage: FC = () => {
 
       {/* Filter Options */}
       <section className="mb-8">
-        <section
-          className={cn(
-            "flex flex-col lg:flex-row justify-center sm:items-end sm:space-y-4 md:gap-4",
-            {
-              "md:items-center lg:items-end lg:flex-row": open,
-            }
-          )}
-        >
-          <div
-            className={cn("w-full gap-3 grid grid-cols-1 pb-5 items-start", {
-              "w-11/12 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-1": open,
-            })}
-          >
+        <section className="flex flex-col lg:flex-row justify-center sm:items-end sm:space-y-4 md:gap-4">
+          <div className="w-full gap-3 grid grid-cols-1 pb-5 items-start">
             {/* Topic Filter */}
             <div className="flex flex-wrap items-center">
               <Collapsible
@@ -195,14 +183,7 @@ const BlogDisplayPage: FC = () => {
                   </CollapsibleTrigger>
                 </div>
                 <CollapsibleContent className="space-y-2">
-                  <div
-                    className={cn(
-                      "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full",
-                      {
-                        "lg:grid-cols-1": open,
-                      }
-                    )}
-                  >
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full">
                     {topics.sort().map((topic) => (
                       <div key={topic} className="flex items-center mr-1">
                         <Checkbox
@@ -244,14 +225,7 @@ const BlogDisplayPage: FC = () => {
                   </CollapsibleTrigger>
                 </div>
                 <CollapsibleContent className="space-y-2">
-                  <div
-                    className={cn(
-                      "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full",
-                      {
-                        "lg:grid-cols-1": open,
-                      }
-                    )}
-                  >
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full">
                     {dates
                       .sort((a, b) => {
                         // Convert the date strings to Date objects
@@ -292,20 +266,11 @@ const BlogDisplayPage: FC = () => {
             placeholder="Search by title or author"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className={cn("p-2 border rounded w-11/12 md:w-full mx-auto", {
-              "md:w-11/12": open,
-            })}
+            className="p-2 border rounded w-11/12 md:w-full mx-auto"
           />
         </section>
 
-        <section
-          className={cn(
-            "w-11/12 md:w-full mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center",
-            {
-              "w-10/12 md:w-11/12 md:items-start lg:items-center": open,
-            }
-          )}
-        >
+        <section className="w-11/12 md:w-full mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center">
           {/* Clear Filters Button */}
           <Button
             variant={"destructive"}
@@ -316,14 +281,7 @@ const BlogDisplayPage: FC = () => {
           </Button>
 
           {/* Articles per page DropdownMenu */}
-          <section
-            className={cn(
-              "flex flex-col md:flex-row md:justify-end items-center",
-              {
-                "md:flex-col lg:flex-row": open,
-              }
-            )}
-          >
+          <section className="flex flex-col md:flex-row md:justify-end items-center">
             <label htmlFor="articlesPerPage" className="mr-2">
               Articles per page:
             </label>
@@ -403,17 +361,7 @@ const BlogDisplayPage: FC = () => {
             of {filteredBlogs.length} blogs
           </p>
         </section>
-        <div
-          className={cn(
-            "flex flex-col xl:grid xl:grid-cols-3 2xl:flex-row gap-8",
-            {
-              "lg:grid lg:grid-cols-2": !open,
-            },
-            {
-              "2xl:grid-cols-4": open,
-            }
-          )}
-        >
+        <div className="flex flex-col xl:grid xl:grid-cols-3 2xl:flex-row gap-8 lg:grid lg:grid-cols-2">
           {currentArticles.map((blog, index) => (
             <div
               key={index}

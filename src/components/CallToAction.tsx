@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
 
@@ -10,11 +9,7 @@ const CallToAction = () => {
   };
 
   return (
-    <section
-      className={cn("w-full text-center border-t-2 border-b-2 py-9", {
-        "w-10/12 md:w-11/12 lg:w-full": open,
-      })}
-    >
+    <section className="w-full text-center border-t-2 border-b-2 py-9">
       <h2 className="text-3xl font-semibold text-primary">
         Ready to Get Started?
       </h2>

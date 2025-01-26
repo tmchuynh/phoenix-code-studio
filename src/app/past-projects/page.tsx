@@ -14,7 +14,6 @@ import {
 } from "@/components/ui/pagination";
 import { useSidebar } from "@/components/ui/sidebar";
 import { pastProjects } from "@/lib/constants";
-import { cn } from "@/lib/utils";
 import { FC, useState, useEffect } from "react";
 
 const PastProjectsPage: FC = () => {
@@ -159,14 +158,7 @@ const PastProjectsPage: FC = () => {
           {/* Languages Filter */}
           <div>
             <h3 className="text-lg font-semibold">Filter by Languages</h3>
-            <div
-              className={cn(
-                "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 justify-start items-start w-full gap-2",
-                {
-                  "md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2": open,
-                }
-              )}
-            >
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 justify-start items-start w-full gap-2">
               {allLanguages.map((language) => (
                 <div key={language} className="flex items-center">
                   <input
@@ -187,14 +179,7 @@ const PastProjectsPage: FC = () => {
           {/* Frameworks Filter */}
           <div>
             <h3 className="text-lg font-semibold">Filter by Frameworks</h3>
-            <div
-              className={cn(
-                "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 justify-start items-start w-full gap-2",
-                {
-                  "md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2": open,
-                }
-              )}
-            >
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 justify-start items-start w-full gap-2">
               {allFrameworks.map((framework) => (
                 <div key={framework} className="flex items-center">
                   <input
@@ -215,14 +200,7 @@ const PastProjectsPage: FC = () => {
           {/* Tags Filter */}
           <div>
             <h3 className="text-lg font-semibold">Filter by Tags</h3>
-            <div
-              className={cn(
-                "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 justify-start items-start w-full gap-2",
-                {
-                  "md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2": open,
-                }
-              )}
-            >
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4 justify-start items-start w-full gap-2">
               {allTags.map((tag) => (
                 <div key={tag} className="flex items-center">
                   <input
@@ -241,27 +219,13 @@ const PastProjectsPage: FC = () => {
       </section>
 
       {/* Clear Filters Button */}
-      <section
-        className={cn(
-          "w-11/12 md:w-full mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center",
-          {
-            "w-10/12 md:w-11/12 md:items-start lg:items-center": open,
-          }
-        )}
-      >
+      <section className="w-11/12 md:w-full mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center">
         <Button variant="destructive" onClick={clearFilters}>
           Clear Filters
         </Button>
 
         {/* Articles per page DropdownMenu */}
-        <section
-          className={cn(
-            "flex flex-col md:flex-row md:justify-end items-center",
-            {
-              "md:flex-col lg:flex-row": open,
-            }
-          )}
-        >
+        <section className="flex flex-col md:flex-row md:justify-end items-center">
           <label htmlFor="articlesPerPage" className="mr-2">
             Articles per page:
           </label>
@@ -342,14 +306,7 @@ const PastProjectsPage: FC = () => {
                 <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
                 <p className="text-gray-500 mb-4">{project.description}</p>
 
-                <div
-                  className={cn(
-                    "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-2",
-                    {
-                      "md:grid-cols-2": open,
-                    }
-                  )}
-                >
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-2">
                   <div>
                     <p className="font-semibold">Languages:</p>
                     <ul className="list-disc pl-4 mb-4">

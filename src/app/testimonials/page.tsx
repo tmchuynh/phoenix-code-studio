@@ -32,12 +32,7 @@ const TestimonialsPage: FC = () => {
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className={cn(
-                "p-6 rounded-lg shadow-lg text-center border-2 border-transparent hover:border-border flex justify-around",
-                {
-                  "": open,
-                }
-              )}
+              className="p-6 rounded-lg shadow-lg text-center border-2 border-transparent hover:border-border flex justify-around"
             >
               <CardContent className="flex flex-col justify-around items-center">
                 <div>

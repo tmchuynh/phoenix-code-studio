@@ -1,24 +1,12 @@
-import { cn } from "@/lib/utils";
 import { FaDesktop, FaPen, FaSearch } from "react-icons/fa";
 
 const ServiceHighlights = () => {
   return (
-    <section
-      className={cn("my-16 w-full", {
-        "w-10/12 md:w-11/12 lg:w-full": open,
-      })}
-    >
+    <section className="my-16 w-full">
       <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
         What We Do
       </h2>
-      <div
-        className={cn(
-          "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8",
-          {
-            "md:grid-cols-1 lg:grid-cols-2": open,
-          }
-        )}
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
         {/* Service 1 - Custom Website Design */}
         <div className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground">
           <FaDesktop className="text-4xl text-accent-1 mx-auto" />
