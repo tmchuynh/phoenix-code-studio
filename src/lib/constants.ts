@@ -142,7 +142,7 @@ export const websiteServices = [
   {
     name: "User Experience Design",
     startingPrice: 3500,
-    info: "We design intuitive, functional interfaces that prioritize usability and accessibility. Through user research, wireframing, prototyping, and testing, we create visually appealing designs that solve real user problems and deliver seamless, memorable experiences.",
+    info: "We specialize in designing intuitive, functional interfaces that seamlessly blend usability, accessibility, and aesthetic appeal. By conducting in-depth user research, we gain valuable insights into your target audience's needs, behaviors, and pain points. This understanding guides every step of our process, from wireframing and prototyping to rigorous testing and refinement. Our goal is to create designs that not only look stunning but also provide practical solutions to real user challenges. By prioritizing accessibility, we ensure that our interfaces are inclusive and can be enjoyed by all users, regardless of their abilities. The result is a seamless, engaging, and memorable user experience that leaves a lasting positive impression and drives meaningful interactions..",
     details:
       "Our UX design services focus on creating seamless and engaging user experiences. By conducting thorough research and usability testing, we deliver designs that simplify interactions and enhance effectiveness. Services include user research, wireframing, prototyping, and testing.",
     pricingTiers: [
