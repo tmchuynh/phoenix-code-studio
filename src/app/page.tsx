@@ -6,6 +6,7 @@ import FeaturedProjects from "@/components/FeaturedProjects";
 import ServiceHighlights from "@/components/ServiceHighlights";
 import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
+import { SidebarSeparator } from "@/components/ui/sidebar";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
 import "swiper/css";
@@ -38,7 +39,9 @@ const WelcomePage: FC = () => {
       <AboutSection />
 
       {/* Call to Action Section */}
+      <SidebarSeparator className="bg-muted h-0.5" />
       <CallToAction />
+      <SidebarSeparator className="bg-muted h-0.5" />
 
       {/* Featured Projects Section */}
       <FeaturedProjects />

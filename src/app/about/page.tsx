@@ -1,3 +1,6 @@
+"use client";
+
+import CallToAction from "@/components/CallToAction";
 import { SidebarSeparator } from "@/components/ui/sidebar";
 import {
   FaHandshake,
@@ -13,7 +16,7 @@ import { GrGrow } from "react-icons/gr";
 const aboutUs = () => {
   return (
     <main className="w-11/12 mx-auto py-6">
-      <div>
+      <div className="py-3">
         <h1>About Us</h1>
         <p>
           At Phoenix Code Studio, we blend cultural elegance with cutting-edge
@@ -36,7 +39,7 @@ const aboutUs = () => {
           bloom.
         </p>
       </div>
-      <SidebarSeparator className="bg-secondary" />
+      <SidebarSeparator className="bg-secondary h-0.5" />
       <div className="py-3">
         <h2>Mission Statement</h2>
         <p>
@@ -61,13 +64,13 @@ const aboutUs = () => {
           leave a meaningful and lasting impact.
         </p>
       </div>
-      <SidebarSeparator className="bg-secondary" />
+      <SidebarSeparator className="bg-secondary h-0.5" />
       <div className="py-3">
         <h2>Core Values</h2>
         <ul className="flex flex-col gap-2">
           <li className="flex">
             <FaRegLightbulb
-              className="flex-shrink-0 text-secondary mt-2 mr-3"
+              className="flex-shrink-0 text-tertiary mr-3"
               style={{ fontSize: "24px" }}
             />
             <div>
@@ -82,7 +85,7 @@ const aboutUs = () => {
           </li>
           <li className="flex">
             <GrGrow
-              className="flex-shrink-0 text-secondary mt-2 mr-3"
+              className="flex-shrink-0 text-tertiary mr-3"
               style={{ fontSize: "24px" }}
             />
             <div>
@@ -97,7 +100,7 @@ const aboutUs = () => {
           </li>
           <li className="flex">
             <FaSeedling
-              className="flex-shrink-0 text-secondary mt-2 mr-3"
+              className="flex-shrink-0 text-tertiary mr-3"
               style={{ fontSize: "24px" }}
             />
             <div>
@@ -112,7 +115,7 @@ const aboutUs = () => {
           </li>
           <li className="flex">
             <FaStar
-              className="flex-shrink-0 text-secondary mt-2 mr-3"
+              className="flex-shrink-0 text-tertiary mr-3"
               style={{ fontSize: "24px" }}
             />
             <div>
@@ -127,7 +130,7 @@ const aboutUs = () => {
           </li>
           <li className="flex">
             <FaHandsHelping
-              className="flex-shrink-0 text-secondary mt-2 mr-3"
+              className="flex-shrink-0 text-tertiary mr-3"
               style={{ fontSize: "24px" }}
             />
             <div>
@@ -142,7 +145,7 @@ const aboutUs = () => {
           </li>
           <li className="flex">
             <FaHandshake
-              className="flex-shrink-0 text-secondary mt-2 mr-3"
+              className="flex-shrink-0 text-tertiary mr-3"
               style={{ fontSize: "24px" }}
             />
             <div>
@@ -157,7 +160,7 @@ const aboutUs = () => {
           </li>
           <li className="flex">
             <FaUsers
-              className="flex-shrink-0 text-secondary mt-2 mr-3"
+              className="flex-shrink-0 text-tertiary mr-3"
               style={{ fontSize: "24px" }}
             />
             <div>
@@ -172,7 +175,7 @@ const aboutUs = () => {
           </li>
           <li className="flex">
             <FaRecycle
-              className="flex-shrink-0 text-secondary mt-2 mr-3"
+              className="flex-shrink-0 text-tertiary mr-3"
               style={{ fontSize: "24px" }}
             />
             <div>
@@ -188,7 +191,9 @@ const aboutUs = () => {
           </li>
         </ul>
       </div>
-      <SidebarSeparator className="bg-secondary" />
+      <SidebarSeparator className="bg-secondary h-0.5" />
+      <CallToAction />
+      <SidebarSeparator className="bg-secondary h-0.5" />
       <div className="py-3">
         <h2>Vision Statement</h2>
         <p>

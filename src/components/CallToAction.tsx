@@ -9,7 +9,7 @@ const CallToAction = () => {
   };
 
   return (
-    <section className="w-full text-center border-t-2 border-b-2 py-9">
+    <section className="w-full text-center py-9">
       <h2 className="text-3xl font-semibold text-primary">
         Ready to Get Started?
       </h2>
