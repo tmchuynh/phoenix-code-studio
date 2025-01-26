@@ -1,16 +1,11 @@
 "use client";
-import { NavSidebar } from "@/components/NavSidebar";
-import {
-  SidebarProvider,
-  SidebarTrigger,
-  useSidebar,
-} from "@/components/ui/sidebar";
 import Head from "next/head";
 import { NotFoundProvider } from "./context/NotFoundContext";
 import "./globals.css";
 import { Providers } from "./providers";
 import BackToTop from "@/components/BackToTop";
 import { cn } from "@/lib/utils";
+import Navbar from "@/components/NavBar";
 
 export default function RootLayout({
   children,
@@ -34,11 +29,9 @@ export default function RootLayout({
       </Head>
       <body>
         <NotFoundProvider>
-          <SidebarProvider>
-            <Providers>
-              <MainContent>{children}</MainContent>
-            </Providers>
-          </SidebarProvider>
+          <Providers>
+            <MainContent>{children}</MainContent>
+          </Providers>
         </NotFoundProvider>
       </body>
     </html>
@@ -46,16 +39,10 @@ export default function RootLayout({
 }
 
 const MainContent = ({ children }: { children: React.ReactNode }) => {
-  const { open } = useSidebar();
   return (
     <>
-      <NavSidebar />
-      <SidebarTrigger className="py-7 pl-9" />
-      <main
-        className={cn("relative w-11/12 mx-auto py-10 overflow-hidden", {
-          "w-8/12": open,
-        })}
-      >
+      <main className={cn("mx-auto w-11/12 py-10 overflow-hidden")}>
+        <Navbar />
         {children}
         <BackToTop />
       </main>

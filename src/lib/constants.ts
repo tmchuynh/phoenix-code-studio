@@ -1,180 +1,140 @@
-import { Send } from "lucide-react";
-import {
-  FaBuilding,
-  FaCalendarCheck,
-  FaInfoCircle,
-  FaLaptop,
-  FaMoneyBillAlt,
-  FaPenAlt,
-  FaQuestion,
-  FaSignature,
-} from "react-icons/fa";
-import { MdPeople } from "react-icons/md";
-import { IoBookSharp } from "react-icons/io5";
-import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { FAQ } from "./interfaces";
-import { BiWorld } from "react-icons/bi";
 
-export const menu = {
-  navMain: [
-    {
-      title: "Services Overview",
-      url: "/services",
-      icon: BiWorld,
-    },
-    {
-      title: "Services for Companies",
-      icon: FaBuilding,
-      items: [
-        {
-          title: "Company Rebranding",
-          url: "/company/company-rebranding"
-        },
-        {
-          title: "Custom Website Design",
-          url: "/company/custom-website-design",
-        },
-        {
-          title: "E-Commerce Site Development",
-          url: "/company/e-commerce-site-development",
-        },
-        {
-          title: "Single-Page Applications (SPAs)",
-          url: "/company/single-page-application",
-        },
-        {
-          title: "Database Management",
-          url: "/company/database-management",
-        },
-      ]
-    },
-    {
-      title: "Website Services",
-      icon: FaLaptop,
-      items: [
-        {
-          title: "SEO Optimization",
-          url: "/web/seo-optimization",
-        },
-        {
-          title: "User Experience (UX) Design",
-          url: "/web/user-experience-design",
-        },
-        {
-          title: "Wireframing & Prototyping",
-          url: "/web/wireframing-&-prototyping",
-        },
-      ],
-    },
-    {
-      title: "Content Creation Services",
-      icon: FaPenAlt,
-      items: [
-        {
-          title: "Brand Storytelling",
-          url: "/content/brand-storytelling",
-        },
-        {
-          title: "Website Copywriting",
-          url: "/content/website-copywriting",
-        },
-        {
-          title: "Product Guides/Manuals",
-          url: "/content/product-guides-manuals",
-        },
-        {
-          title: "Blog Writing",
-          url: "/content/blog-writing",
-        },
-        {
-          title: "Technical Writing",
-          url: "/content/technical-writing",
-        },
-        {
-          title: "Online Courses",
-          url: "/content/online-courses",
-        },
-        {
-          title: "Tutorial Creation",
-          url: "/content/tutorial-creation",
-        },
-        {
-          title: "Brochures & Flyers",
-          url: "/content/brochures-and-or-flyers",
-        },
-        {
-          title: "Training Manual & Onboarding Papers Creation",
-          url: "/content/training-manual-and-onboarding-paperwork-creation",
-        },
-        {
-          title: "Study Guide Creation",
-          url: "/content/study-guide-creation",
-        },
-        {
-          title: "eBook Creation",
-          url: "/content/ebook-creation",
-        },
-        {
-          title: "Newsletters",
-          url: "/content/newsletters",
-        },
-        {
-          title: "Proposal Writing",
-          url: "/content/proposal-writing",
-        },
-      ],
-    },
-    {
-      title: "Pricing",
-      url: "/pricing",
-      icon: FaMoneyBillAlt,
-    },
-    {
-      title: "Payment Plans",
-      url: "/payment-plans",
-      icon: FaCalendarCheck,
-    },
-    {
-      title: "FAQs",
-      url: "/frequently-asked-questions",
-      icon: FaQuestion,
-    },
-  ],
-  information: [
-    {
-      title: "About",
-      url: "/about",
-      icon: FaInfoCircle,
-    },
-    {
-      title: "Testimonials",
-      url: "/testimonials",
-      icon: MdPeople,
-    },
-    {
-      title: "Blogs",
-      url: "/blog",
-      icon: IoBookSharp,
-    },
-    {
-      title: "Past Projects",
-      url: "/past-projects",
-      icon: AiOutlineFundProjectionScreen,
-    },
-    {
-      title: "Contracts",
-      url: "/contracts",
-      icon: FaSignature,
-    },
-  ],
-  navSecondary: [
-    {
-      title: "Contact Us",
-      url: "/contact-us",
-      icon: Send,
-    },
-  ],
-};
+export const about: { title: string; href: string; description: string; }[] = [
+  {
+    title: "About",
+    href: "/about",
+    description:
+      "A modal dialog that interrupts the user with important content and expects a response.",
+  },
+  {
+    title: "Pricing",
+    href: "/pricing",
+    description:
+      "A modal dialog that interrupts the user with important content and expects a response.",
+  },
+  {
+    title: "Payment Plans",
+    href: "/payment-plans",
+    description:
+      "A modal dialog that interrupts the user with important content and expects a response.",
+  },
+  {
+    title: "FAQs",
+    href: "/frequently-asked-questions",
+    description:
+      "A modal dialog that interrupts the user with important content and expects a response.",
+  },
+  {
+    title: "Testimonials",
+    href: "/testimonials",
+    description:
+      "For sighted users to preview content available behind a link.",
+  },
+  {
+    title: "Blogs",
+    href: "/blog",
+    description:
+      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+  },
+];
+
+export const websites: { title: string; href: string; description: string; }[] = [
+  {
+    title: "SEO Optimization",
+    href: "/web/seo-optimization",
+    description:
+      "A modal dialog that interrupts the user with important content and expects a response.",
+  },
+  {
+    title: "User Experience (UX) Design",
+    href: "/web/user-experience-design",
+    description:
+      "For sighted users to preview content available behind a link.",
+  },
+  {
+    title: "Wireframing & Prototyping",
+    href: "/web/wireframing-&-prototyping",
+    description:
+      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+  },
+];
+
+export const content: { title: string; href: string; description: string; }[] = [
+  {
+    title: "Website Copywriting",
+    href: "/content/website-copywriting",
+    description:
+      "A modal dialog that interrupts the user with important content and expects a response.",
+  },
+  {
+    title: "Product Guides/Manuals",
+    href: "/content/product-guides-manuals",
+    description:
+      "For sighted users to preview content available behind a link.",
+  },
+  {
+    title: "Blog Writing",
+    href: "/content/blog-writing",
+    description:
+      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+  },
+  {
+    title: "Technical Writing",
+    href: "/content/technical-writing",
+    description: "Visually or semantically separates content.",
+  },
+  {
+    title: "Online Courses",
+    href: "/content/online-courses",
+    description:
+      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+  },
+  {
+    title: "Tutorial Creation",
+    href: "/content/tutorial-creation",
+    description:
+      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+  },
+];
+
+export const companies: { title: string; href: string; description: string; }[] = [
+  {
+    title: "Company Rebranding",
+    href: "/company/company-rebranding",
+    description:
+      "A modal dialog that interrupts the user with important content and expects a response.",
+  },
+  {
+    title: "Brand Storytelling",
+    href: "/company/brand-storytelling",
+    description:
+      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+  },
+  {
+    title: "Custom Website Design",
+    href: "/company/custom-website-design",
+    description:
+      "For sighted users to preview content available behind a link.",
+  },
+  {
+    title: "E-Commerce Site Development",
+    href: "/company/e-commerce-site-development",
+    description:
+      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+  },
+  {
+    title: "Single-Page Applications (SPAs)",
+    href: "/company/single-page-application",
+    description: "Visually or semantically separates content.",
+  },
+  {
+    title: "Database Management",
+    href: "/company/database-management",
+    description:
+      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+  },
+];
 
 export const websiteServices = [
   {
