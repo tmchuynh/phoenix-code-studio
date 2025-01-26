@@ -10,6 +10,7 @@ import {
   uxDesignTools,
   uxDesignPricingTiers,
 } from "@/lib/content-constants";
+import { websiteServices } from "@/lib/constants";
 
 const UXDesignServices: FC = () => {
   const router = useRouter();
@@ -19,6 +20,17 @@ const UXDesignServices: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         User Experience (UX) Design Services
       </h1>
+      {websiteServices.map((service) => {
+        return (
+          <div key={service.name} className="text-center text-lg my-4">
+            {service.name === "User Experience Design" && (
+              <div>
+                <span className="mt-4">{service.info}</span>
+              </div>
+            )}
+          </div>
+        );
+      })}
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Why UX Design Matters</h2>
@@ -56,7 +68,7 @@ const UXDesignServices: FC = () => {
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
-        <ul className="list-decimal list-inside space-y-4">
+        <ul className="list-decimal pl-6 space-y-2">
           {uxDesignProcess.map((step) => (
             <li key={step.title}>
               <span className="font-bold text-secondary">{step.title}:</span>{" "}

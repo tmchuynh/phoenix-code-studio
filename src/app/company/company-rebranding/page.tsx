@@ -55,7 +55,7 @@ const CompanyRebranding: FC = () => {
       {/* Our Process */}
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
-        <ul className="list-decimal list-inside space-y-4">
+        <ul className="list-decimal pl-6 space-y-2">
           {processSteps.map((step, index) => (
             <li key={index}>
               <span className="font-bold text-secondary">{step.title}:</span>{" "}

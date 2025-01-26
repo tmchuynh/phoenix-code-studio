@@ -53,7 +53,11 @@ const CustomWebsite: FC = () => {
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
-        <ul className="list-decimal list-inside space-y-4">
+        <p className="my-4">
+          Typical projects take 4–8 weeks, depending on the complexity and scope
+          of the website.
+        </p>
+        <ul className="list-decimal pl-6 space-y-2">
           {processStepsList.map((step, index) => (
             <li key={index}>
               <span className="font-bold text-secondary">{step.title}:</span>{" "}
@@ -61,11 +65,6 @@ const CustomWebsite: FC = () => {
             </li>
           ))}
         </ul>
-        <p className="my-4">
-          <span className="font-bold text-secondary">Timeline:</span> Typical
-          projects take 4–8 weeks, depending on the complexity and scope of the
-          website.
-        </p>
       </section>
 
       <section className="my-8">

@@ -39,7 +39,7 @@ const ServicesPage: FC = () => {
 
       {/* Company Services Section */}
       <section className="my-16">
-        <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
+        <h2 className="text-3xl font-semibold text-center mb-6 text-primary">
           Services for Companies
         </h2>
         <div className="space-y-8">
@@ -50,10 +50,10 @@ const ServicesPage: FC = () => {
                 className="flex justify-between items-end pb-4"
               >
                 <div>
-                  <h3 className="text-xl font-semibold text-primary">
+                  <h3 className="text-xl font-semibold text-secondary">
                     {service.name}
                   </h3>
-                  <p className="mt-4">{service.info}</p>
+                  <p className="mt-4">{service.details}</p>
                   <p className="mt-4">
                     <strong>Starting at: </strong>
                     {formatCurrency(service.startingPrice)}
@@ -74,7 +74,7 @@ const ServicesPage: FC = () => {
 
       {/* Website Services Section */}
       <section className="my-16">
-        <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
+        <h2 className="text-3xl font-semibold text-center mb-6 text-primary">
           Website Services
         </h2>
         <div className="space-y-8">
@@ -85,10 +85,10 @@ const ServicesPage: FC = () => {
                 className="flex justify-between items-end pb-4"
               >
                 <div>
-                  <h3 className="text-xl font-semibold text-primary">
+                  <h3 className="text-xl font-semibold text-secondary">
                     {service.name}
                   </h3>
-                  <p className="mt-4">{service.info}</p>
+                  <p className="mt-4">{service.details}</p>
                   <p className="mt-4">
                     <strong>Starting at: </strong>
                     {formatCurrency(service.startingPrice)}
@@ -109,7 +109,7 @@ const ServicesPage: FC = () => {
 
       {/* Content Creation Services Section */}
       <section className="my-16">
-        <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
+        <h2 className="text-3xl font-semibold text-center mb-6 text-primary">
           Content Creation Services
         </h2>
         <div className="space-y-8">
@@ -120,10 +120,10 @@ const ServicesPage: FC = () => {
                 className="flex justify-between items-end pb-4"
               >
                 <div>
-                  <h3 className="text-xl font-semibold text-primary">
+                  <h3 className="text-xl font-semibold text-secondary">
                     {service.name}
                   </h3>
-                  <p className="mt-4">{service.info}</p>
+                  <p className="mt-4">{service.details}</p>
                   <p className="mt-4">
                     <strong>Starting at: </strong>
                     {formatCurrency(service.startingPrice)}

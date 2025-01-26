@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
-import { contentCreationServices } from "@/lib/constants";
+import { companySpecificServices } from "@/lib/constants";
 import {
   brandStorytellingBenefits,
   brandStorytellingServices,
@@ -18,7 +18,7 @@ const BrandStorytellingServices: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Brand Storytelling Services
       </h1>
-      {contentCreationServices.map((service) => {
+      {companySpecificServices.map((service) => {
         return (
           <div key={service.name} className="text-center text-lg my-4">
             {service.name === "Brand Storytelling" && (
@@ -70,7 +70,12 @@ const BrandStorytellingServices: FC = () => {
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
-        <ul className="list-decimal list-inside space-y-4">
+        <p className="my-4">
+          The timeline for brand storytelling projects depends on the
+          complexity, scope, and desired channels. Most projects are completed
+          within 2–6 weeks.
+        </p>
+        <ul className="list-decimal pl-6 space-y-2">
           {brandStorytellingProcessSteps.map((step) => (
             <li key={step.title}>
               <span className="font-bold text-secondary">{step.title}:</span>{" "}
@@ -78,12 +83,6 @@ const BrandStorytellingServices: FC = () => {
             </li>
           ))}
         </ul>
-        <p className="my-4">
-          <span className="font-bold text-secondary">Timeline:</span> The
-          timeline for brand storytelling projects depends on the complexity,
-          scope, and desired channels. Most projects are completed within 2–6
-          weeks.
-        </p>
       </section>
 
       <section className="my-8">
@@ -93,7 +92,7 @@ const BrandStorytellingServices: FC = () => {
           goals. Pricing is based on the project’s complexity, length, and
           deliverables.
         </p>
-        {contentCreationServices.map((service) => {
+        {companySpecificServices.map((service) => {
           return (
             <>
               {service.name === "Brand Storytelling" && (

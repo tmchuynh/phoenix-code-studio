@@ -67,7 +67,11 @@ const OnlineCoursesServices: FC = () => {
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
-        <ul className="list-decimal list-inside space-y-4">
+        <p className="my-4">
+          The timeline depends on the course length, complexity, and multimedia
+          needs. Typical projects take 4–12 weeks.
+        </p>
+        <ul className="list-decimal pl-6 space-y-2">
           {onlineCourseProcessSteps.map((step) => (
             <li key={step.title}>
               <span className="font-bold text-secondary">{step.title}:</span>{" "}
@@ -75,11 +79,6 @@ const OnlineCoursesServices: FC = () => {
             </li>
           ))}
         </ul>
-        <p className="my-4">
-          <span className="font-bold text-secondary">Timeline:</span> The
-          timeline depends on the course length, complexity, and multimedia
-          needs. Typical projects take 4–12 weeks.
-        </p>
       </section>
 
       <section className="my-8">

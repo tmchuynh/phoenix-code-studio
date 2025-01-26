@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
-import { contentCreationServices } from "@/lib/constants";
+import { websiteServices } from "@/lib/constants";
 import {
   seoOptimizationBenefits,
   seoOptimizationServices,
@@ -19,7 +19,7 @@ const SEOOptimization: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         SEO Optimization Services
       </h1>
-      {contentCreationServices.map((service) => {
+      {websiteServices.map((service) => {
         return (
           <div key={service.name} className="text-center text-lg my-4">
             {service.name === "SEO Optimization" && (
@@ -74,7 +74,11 @@ const SEOOptimization: FC = () => {
       {/* Our Process */}
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
-        <ul className="list-decimal list-inside space-y-4">
+        <p className="my-4">
+          SEO projects typically take 2 to 6 weeks, depending on the complexity
+          and scope of the services required.
+        </p>
+        <ul className="list-decimal pl-6 space-y-2">
           {processStepsSEO.map((step) => (
             <li key={step.title}>
               <span className="font-bold text-secondary">{step.title}:</span>{" "}
@@ -82,11 +86,6 @@ const SEOOptimization: FC = () => {
             </li>
           ))}
         </ul>
-        <p className="my-4">
-          <span className="font-bold text-secondary">Timeline:</span> SEO
-          projects typically take 2 to 6 weeks, depending on the complexity and
-          scope of the services required.
-        </p>
       </section>
 
       {/* Tools We Use */}
@@ -110,7 +109,7 @@ const SEOOptimization: FC = () => {
           business's needs. Pricing is based on the complexity and scope of the
           project:
         </p>
-        {contentCreationServices.map((service) => {
+        {websiteServices.map((service) => {
           return (
             <>
               {service.name === "SEO Optimization" && (

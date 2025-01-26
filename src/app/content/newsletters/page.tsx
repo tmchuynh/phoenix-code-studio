@@ -65,8 +65,12 @@ const NewsletterServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>
-        <ul className="list-decimal list-inside space-y-4">
+        <h2 className="text-2xl font-semibold">Our Process</h2>{" "}
+        <p className="my-4">
+          Newsletters are typically ready within 5–10 business days, depending
+          on complexity and frequency.
+        </p>
+        <ul className="list-decimal pl-6 space-y-2">
           {newsletterProcessSteps.map((step) => (
             <li key={step.title}>
               <span className="font-bold text-secondary">{step.title}:</span>{" "}
@@ -74,11 +78,6 @@ const NewsletterServices: FC = () => {
             </li>
           ))}
         </ul>
-        <p className="my-4">
-          <span className="font-bold text-secondary">Timeline:</span>{" "}
-          Newsletters are typically ready within 5–10 business days, depending
-          on complexity and frequency.
-        </p>
       </section>
 
       <section className="my-8">

@@ -72,7 +72,11 @@ const TrainingManualOnboardingPapers: FC = () => {
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
-        <ul className="list-decimal list-inside space-y-4">
+        <p className="my-4">
+          Projects are typically completed within 2–6 weeks, depending on scope
+          and complexity.
+        </p>
+        <ul className="list-decimal pl-6 space-y-2">
           {onboardingProcessSteps.map((step) => (
             <li key={step.title}>
               <span className="font-bold text-secondary">{step.title}:</span>{" "}
@@ -80,11 +84,6 @@ const TrainingManualOnboardingPapers: FC = () => {
             </li>
           ))}
         </ul>
-        <p className="my-4">
-          <span className="font-bold text-secondary">Timeline:</span> Projects
-          are typically completed within 2–6 weeks, depending on scope and
-          complexity.
-        </p>
       </section>
 
       <section className="my-8">

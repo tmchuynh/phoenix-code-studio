@@ -66,8 +66,12 @@ const StudyGuideCreation: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>
-        <ul className="list-decimal list-inside space-y-4">
+        <h2 className="text-2xl font-semibold">Our Process</h2>{" "}
+        <p className="my-4">
+          Most study guides are completed within 1–3 weeks, depending on
+          complexity and length.
+        </p>
+        <ul className="list-decimal pl-6 space-y-2">
           {studyGuideCreationProcessSteps.map((step) => (
             <li key={step.title}>
               <span className="font-bold text-secondary">{step.title}:</span>{" "}
@@ -75,11 +79,6 @@ const StudyGuideCreation: FC = () => {
             </li>
           ))}
         </ul>
-        <p className="my-4">
-          <span className="font-bold text-secondary">Timeline:</span> Most study
-          guides are completed within 1–3 weeks, depending on complexity and
-          length.
-        </p>
       </section>
 
       <section className="my-8">

@@ -67,7 +67,12 @@ const EbookCreationServices: FC = () => {
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
-        <ul className="list-decimal list-inside space-y-4">
+        <p className="my-4">
+          The timeline for e-book creation depends on factors such as the topic,
+          length, complexity, target audience, and design requirements. Typical
+          projects range from 2 to 6 weeks.
+        </p>
+        <ul className="list-decimal pl-6 space-y-2">
           {ebookProcessSteps.map((step) => (
             <li key={step.title}>
               <span className="font-bold text-secondary">{step.title}:</span>{" "}
@@ -75,12 +80,6 @@ const EbookCreationServices: FC = () => {
             </li>
           ))}
         </ul>
-        <p className="my-4">
-          <span className="font-bold text-secondary">Timeline:</span> The
-          timeline for e-book creation depends on factors such as the topic,
-          length, complexity, target audience, and design requirements. Typical
-          projects range from 2 to 6 weeks.
-        </p>
       </section>
 
       <section className="my-8">

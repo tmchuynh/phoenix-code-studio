@@ -10,6 +10,7 @@ import {
   wireframingPrototypingTools,
   wireframingPrototypingPricingTiers,
 } from "@/lib/content-constants";
+import { websiteServices } from "@/lib/constants";
 
 const WireframingPrototypingServices: FC = () => {
   const router = useRouter();
@@ -19,6 +20,17 @@ const WireframingPrototypingServices: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Wireframing and Prototyping Services
       </h1>
+      {websiteServices.map((service) => {
+        return (
+          <div key={service.name} className="text-center text-lg my-4">
+            {service.name === "Wireframing & Prototyping" && (
+              <div>
+                <span className="mt-4">{service.info}</span>
+              </div>
+            )}
+          </div>
+        );
+      })}
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">
@@ -60,7 +72,7 @@ const WireframingPrototypingServices: FC = () => {
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
-        <ul className="list-decimal list-inside space-y-4">
+        <ul className="list-decimal pl-6 space-y-2">
           {wireframingPrototypingProcess.map((step) => (
             <li key={step.title}>
               <span className="font-bold text-secondary">{step.title}:</span>{" "}

@@ -67,7 +67,11 @@ const BlogWritingServices: FC = () => {
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
-        <ul className="list-decimal list-inside space-y-4">
+        <p className="my-4">
+          Blogs are typically delivered within 3–7 business days, depending on
+          complexity and word count.
+        </p>
+        <ul className="list-decimal pl-6 space-y-2">
           {processStepsBlog.map((step) => (
             <li key={step.title}>
               <span className="font-bold text-secondary">{step.title}:</span>{" "}
@@ -75,11 +79,6 @@ const BlogWritingServices: FC = () => {
             </li>
           ))}
         </ul>
-        <p className="my-4">
-          <span className="font-bold text-secondary">Timeline:</span> Blogs are
-          typically delivered within 3–7 business days, depending on complexity
-          and word count.
-        </p>
       </section>
 
       <section className="my-8">

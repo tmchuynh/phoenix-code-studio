@@ -106,7 +106,7 @@ const DatabaseServices: FC = () => {
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
-        <ul className="list-decimal list-inside space-y-4">
+        <ul className="list-decimal pl-6 space-y-2">
           {ourProcessItems.map((item, index) => (
             <li key={index}>
               <span className="font-bold text-secondary">{item.title}:</span>{" "}

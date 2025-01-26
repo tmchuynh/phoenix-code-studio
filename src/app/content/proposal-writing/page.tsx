@@ -69,7 +69,11 @@ const ProposalWritingServices: FC = () => {
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
-        <ul className="list-decimal list-inside space-y-4">
+        <p className="my-4">
+          The timeline depends on the proposal’s complexity, length, and
+          requirements. Typical projects range from 1 to 3 weeks.
+        </p>
+        <ul className="list-decimal pl-6 space-y-2">
           {proposalWritingProcessSteps.map((step) => (
             <li key={step.title}>
               <span className="font-bold text-secondary">{step.title}:</span>{" "}
@@ -77,11 +81,6 @@ const ProposalWritingServices: FC = () => {
             </li>
           ))}
         </ul>
-        <p className="my-4">
-          <span className="font-bold text-secondary">Timeline:</span> The
-          timeline depends on the proposal’s complexity, length, and
-          requirements. Typical projects range from 1 to 3 weeks.
-        </p>
       </section>
 
       <section className="my-8">
