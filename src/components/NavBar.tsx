@@ -40,6 +40,13 @@ const NavBar = () => {
           <NavigationMenu className="h-full w-full mx-auto">
             <NavigationMenuList>
               <NavigationMenuItem>
+                <Link href="/" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Home
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
                 <Link href="/services" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     Services Overview

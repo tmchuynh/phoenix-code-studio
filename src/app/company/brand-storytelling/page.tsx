@@ -3,12 +3,12 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
+import { contentCreationServices } from "@/lib/constants";
 import {
   brandStorytellingBenefits,
-  brandStorytellingProcessSteps,
   brandStorytellingServices,
-  contentCreationServices,
-} from "@/lib/constants";
+  brandStorytellingProcessSteps,
+} from "@/lib/content-constants";
 
 const BrandStorytellingServices: FC = () => {
   const router = useRouter();
@@ -23,7 +23,7 @@ const BrandStorytellingServices: FC = () => {
           <div key={service.name} className="text-center text-lg my-4">
             {service.name === "Brand Storytelling" && (
               <div>
-                <span className="mt-4">{service.details}</span>
+                <span className="mt-4">{service.info}</span>
               </div>
             )}
           </div>
@@ -43,7 +43,7 @@ const BrandStorytellingServices: FC = () => {
         <ul className="list-disc pl-6 space-y-2">
           {brandStorytellingBenefits.map((benefit) => (
             <li key={benefit.title}>
-              <span className="font-bold text-tertiary">{benefit.title}:</span>{" "}
+              <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
               {benefit.description}
             </li>
           ))}
@@ -61,7 +61,7 @@ const BrandStorytellingServices: FC = () => {
         <ul className="list-disc pl-6 space-y-2">
           {brandStorytellingServices.map((service) => (
             <li key={service.title}>
-              <span className="font-bold text-tertiary">{service.title}:</span>{" "}
+              <span className="font-bold text-secondary">{service.title}:</span>{" "}
               {service.description}
             </li>
           ))}
@@ -73,13 +73,13 @@ const BrandStorytellingServices: FC = () => {
         <ul className="list-decimal list-inside space-y-4">
           {brandStorytellingProcessSteps.map((step) => (
             <li key={step.title}>
-              <span className="font-bold text-tertiary">{step.title}:</span>{" "}
+              <span className="font-bold text-secondary">{step.title}:</span>{" "}
               {step.description}
             </li>
           ))}
         </ul>
         <p className="my-4">
-          <span className="font-bold text-tertiary">Timeline:</span> The
+          <span className="font-bold text-secondary">Timeline:</span> The
           timeline for brand storytelling projects depends on the complexity,
           scope, and desired channels. Most projects are completed within 2–6
           weeks.
@@ -100,7 +100,7 @@ const BrandStorytellingServices: FC = () => {
                 <ul className="list-disc pl-6 space-y-2">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
-                      <span className="font-bold text-tertiary">
+                      <span className="font-bold text-secondary">
                         {pricing.name}:
                       </span>
                       <span className="pl-2">{pricing.info}</span>

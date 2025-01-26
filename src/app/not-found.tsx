@@ -4,16 +4,13 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
-import { useSidebar } from "@/components/ui/sidebar";
 
 const NotFound = () => {
   const router = useRouter();
   const [countdown, setCountdown] = useState(10);
   const [redirect, setRedirect] = useState(true);
-  const { open, setOpen } = useSidebar();
 
   useEffect(() => {
-    setOpen(false);
     if (!redirect) return;
 
     const timer = setInterval(() => {
@@ -27,7 +24,6 @@ const NotFound = () => {
     }, 1000);
 
     const redirectTimer = setTimeout(() => {
-      setOpen(true);
       router.push(`/`);
     }, 10000);
 
@@ -40,7 +36,7 @@ const NotFound = () => {
   return (
     <main className="grid place-items-center px-6 py-24 sm:py-32 lg:px-8 min-h-screen">
       <div className="text-center">
-        <h1 className="my-4 text-balance uppercase font-Luckiest tracking-wider lg:text-4xl text-lg text-tertiary font-extrabold text-center">
+        <h1 className="my-4 text-balance uppercase font-Luckiest tracking-wider lg:text-4xl text-lg text-primary font-extrabold text-center">
           404 Page not found
         </h1>
         <div className="mt-6 text-pretty text-lg font-medium sm:text-xl/8">
@@ -56,7 +52,6 @@ const NotFound = () => {
           <DynamicButton
             text="Go back home"
             onClick={() => {
-              setOpen(true);
               router.push(`/`);
             }}
           />

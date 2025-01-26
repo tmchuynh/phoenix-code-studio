@@ -1,13 +1,13 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { companySpecificServices } from "@/lib/constants";
+import {
+  rebrandingServiceDetails,
+  processSteps,
+} from "@/lib/content-constants";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
-import {
-  companySpecificServices,
-  processSteps,
-  rebrandingServiceDetails,
-} from "@/lib/constants";
 
 const CompanyRebranding: FC = () => {
   const router = useRouter();
@@ -45,7 +45,7 @@ const CompanyRebranding: FC = () => {
         <ul className="list-disc pl-6 space-y-2">
           {rebrandingServiceDetails.map((item, index) => (
             <li key={index}>
-              <span className="font-bold text-tertiary">{item.title}:</span>{" "}
+              <span className="font-bold text-secondary">{item.title}:</span>{" "}
               {item.description}
             </li>
           ))}
@@ -58,7 +58,7 @@ const CompanyRebranding: FC = () => {
         <ul className="list-decimal list-inside space-y-4">
           {processSteps.map((step, index) => (
             <li key={index}>
-              <span className="font-bold text-tertiary">{step.title}:</span>{" "}
+              <span className="font-bold text-secondary">{step.title}:</span>{" "}
               {step.description}
             </li>
           ))}
@@ -78,7 +78,7 @@ const CompanyRebranding: FC = () => {
               <ul className="list-disc pl-6 space-y-2" key={service.name}>
                 {service.pricingTiers.map((pricing, index) => (
                   <li key={index}>
-                    <span className="font-bold text-tertiary">
+                    <span className="font-bold text-secondary">
                       {pricing.name}:
                     </span>
                     <span className="pl-2">{pricing.info}</span>

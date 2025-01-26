@@ -1,14 +1,15 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { companySpecificServices } from "@/lib/constants";
 import {
-  companySpecificServices,
   customEcommerceFeatures,
-  developmentProcessItems,
   productCatalogManagement,
   securePaymentGateways,
   shippingAndFulfillment,
-} from "@/lib/constants";
+  developmentProcessItems,
+} from "@/lib/content-constants";
+
 import { useRouter } from "next/navigation";
 import { FC } from "react";
 
@@ -25,7 +26,7 @@ const EcommerceWebsite: FC = () => {
           <div key={service.name} className="text-center text-lg my-4">
             {service.name === "E-Commerce Site Development" && (
               <div>
-                <span className="mt-4">{service.details}</span>
+                <span className="mt-4">{service.info}</span>
               </div>
             )}
           </div>
@@ -44,7 +45,7 @@ const EcommerceWebsite: FC = () => {
         <ul className="list-disc pl-6 space-y-2">
           {customEcommerceFeatures.map((feature, index) => (
             <li key={index}>
-              <span className="font-bold text-tertiary">{feature.title}:</span>{" "}
+              <span className="font-bold text-secondary">{feature.title}:</span>{" "}
               {feature.description}
             </li>
           ))}
@@ -62,7 +63,7 @@ const EcommerceWebsite: FC = () => {
           <ul className="list-disc pl-6 space-y-2">
             {productCatalogManagement.map((item, index) => (
               <li key={index}>
-                <span className="font-bold text-tertiary">{item.title}:</span>{" "}
+                <span className="font-bold text-secondary">{item.title}:</span>{" "}
                 {item.description}
               </li>
             ))}
@@ -97,13 +98,13 @@ const EcommerceWebsite: FC = () => {
         <ul className="list-decimal list-inside space-y-4">
           {developmentProcessItems.map((item, index) => (
             <li key={index}>
-              <span className="font-bold text-tertiary">{item.title}:</span>{" "}
+              <span className="font-bold text-secondary">{item.title}:</span>{" "}
               {item.description}
             </li>
           ))}
         </ul>
         <p className="my-4">
-          <span className="font-bold text-tertiary">Timeline:</span> Most
+          <span className="font-bold text-secondary">Timeline:</span> Most
           projects are completed within 6–12 weeks, depending on complexity and
           features.
         </p>
@@ -138,7 +139,7 @@ const EcommerceWebsite: FC = () => {
                 <ul className="list-disc pl-6 space-y-2">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
-                      <span className="font-bold text-tertiary">
+                      <span className="font-bold text-secondary">
                         {pricing.name}:
                       </span>
                       <span className="pl-2">{pricing.info}</span>

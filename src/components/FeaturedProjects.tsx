@@ -1,13 +1,10 @@
 import { pastProjects } from "@/lib/constants";
 import useSmallScreen from "@/lib/useSmallScreen";
-import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { Button } from "./ui/button";
-import { useSidebar } from "./ui/sidebar";
 
 const FeaturedProjects = () => {
   const isSmallScreen = useSmallScreen();
-  const { open } = useSidebar();
   const router = useRouter();
 
   const navigateToPastProjects = () => {
@@ -19,11 +16,7 @@ const FeaturedProjects = () => {
       <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
         Featured Projects
       </h2>
-      <div
-        className={cn("w-11/12 lg:w-full mx-auto gap-7 grid grid-cols-1", {
-          "w-full md:w-11/12": open,
-        })}
-      >
+      <div className="w-11/12 lg:w-full mx-auto gap-7 grid grid-cols-1">
         {pastProjects.map(
           (project, index) =>
             project.featured && (
@@ -42,15 +35,11 @@ const FeaturedProjects = () => {
                   {project.title}
                 </h3>
                 <p className="text-center mt-4">
-                  {open ? (
-                    <span className="whitespace-nowrap text-wrap overflow-hidden text-ellipsis">
-                      {isSmallScreen
-                        ? `${project.short.substring(0, 80)}...`
-                        : project.short}
-                    </span>
-                  ) : (
-                    <span>{project.short}</span>
-                  )}
+                  <span className="whitespace-nowrap text-wrap overflow-hidden text-ellipsis">
+                    {isSmallScreen
+                      ? `${project.short.substring(0, 80)}...`
+                      : project.short}
+                  </span>
                 </p>
               </div>
             )

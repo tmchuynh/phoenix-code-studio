@@ -1,9 +1,15 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { websiteServices } from "@/lib/constants";
-import { useRouter } from "next/navigation";
 import { FC } from "react";
+import { useRouter } from "next/navigation";
+import { contentCreationServices } from "@/lib/constants";
+import {
+  seoOptimizationBenefits,
+  seoOptimizationServices,
+  processStepsSEO,
+  toolsUsedSEO,
+} from "@/lib/content-constants";
 
 const SEOOptimization: FC = () => {
   const router = useRouter();
@@ -13,22 +19,21 @@ const SEOOptimization: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         SEO Optimization Services
       </h1>
-      {websiteServices.map((service) => {
+      {contentCreationServices.map((service) => {
         return (
-          <>
-            <div className="text-center text-lg my-4">
-              {service.name === "SEO Optimization" ? (
-                <div key={service.name}>
-                  <span className="mt-4">{service.details}</span>
-                </div>
-              ) : null}
-            </div>
-          </>
+          <div key={service.name} className="text-center text-lg my-4">
+            {service.name === "SEO Optimization" && (
+              <div>
+                <span className="mt-4">{service.info}</span>
+              </div>
+            )}
+          </div>
         );
       })}
 
+      {/* Why SEO Optimization Matters */}
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">What is SEO Optimization?</h2>
+        <h2 className="text-2xl font-semibold">Why SEO Optimization Matters</h2>
         <p className="my-4">
           SEO (Search Engine Optimization) optimization is the practice of
           enhancing your website’s content, structure, and technical aspects to
@@ -38,102 +43,81 @@ const SEOOptimization: FC = () => {
           visibility.
         </p>
         <ul className="list-disc pl-6 space-y-2">
-          <li>
-            <span className="font-bold text-tertiary">On-Page SEO:</span>{" "}
-            Optimize website elements such as titles, meta descriptions,
-            headings, and content for search engines.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Off-Page SEO:</span>{" "}
-            Improve your website's authority by building high-quality backlinks
-            from reputable sources.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Technical SEO:</span>{" "}
-            Optimize the technical aspects of your website, such as loading
-            speed, mobile-friendliness, and crawlability.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Local SEO:</span> Optimize
-            for location-based searches to improve visibility in local search
-            results.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Content Optimization:
-            </span>{" "}
-            Ensuring that the content on your site is high-quality, relevant,
-            and keyword-optimized.
-          </li>
+          {seoOptimizationBenefits.map((benefit) => (
+            <li key={benefit.title}>
+              <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
+              {benefit.description}
+            </li>
+          ))}
         </ul>
       </section>
 
+      {/* Our SEO Optimization Services */}
+      <section className="my-8">
+        <h2 className="text-2xl font-semibold">
+          Our SEO Optimization Services
+        </h2>
+        <p className="my-4">
+          We offer comprehensive SEO services to enhance your website's
+          visibility and increase organic traffic.
+        </p>
+        <ul className="list-disc pl-6 space-y-2">
+          {seoOptimizationServices.map((service) => (
+            <li key={service.title}>
+              <span className="font-bold text-secondary">{service.title}:</span>{" "}
+              {service.description}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {/* Our Process */}
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
         <ul className="list-decimal list-inside space-y-4">
-          <li>
-            <span className="font-bold text-tertiary">SEO Audit:</span> We start
-            by performing a comprehensive SEO audit to identify areas for
-            improvement on your website.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">Keyword Research:</span>{" "}
-            Conduct thorough research to identify the most valuable and relevant
-            keywords for your business.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              On-Page Optimization:
-            </span>{" "}
-            Optimize your website's content, meta tags, images, and internal
-            linking to ensure that it’s aligned with SEO best practices.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Off-Page SEO & Link Building:
-            </span>{" "}
-            Develop a strategy for acquiring high-quality backlinks and
-            improving domain authority.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Technical SEO Improvements:
-            </span>{" "}
-            Ensure that your website is technically sound, improving loading
-            speeds, mobile responsiveness, and more.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Content Strategy & Creation:
-            </span>{" "}
-            Create SEO-optimized content such as blogs, articles, and landing
-            pages to engage users and drive traffic.
-          </li>
-          <li>
-            <span className="font-bold text-tertiary">
-              Performance Tracking & Reporting:
-            </span>{" "}
-            We regularly monitor your website’s performance, providing detailed
-            reports and making necessary adjustments.
-          </li>
+          {processStepsSEO.map((step) => (
+            <li key={step.title}>
+              <span className="font-bold text-secondary">{step.title}:</span>{" "}
+              {step.description}
+            </li>
+          ))}
+        </ul>
+        <p className="my-4">
+          <span className="font-bold text-secondary">Timeline:</span> SEO
+          projects typically take 2 to 6 weeks, depending on the complexity and
+          scope of the services required.
+        </p>
+      </section>
+
+      {/* Tools We Use */}
+      <section className="my-8">
+        <h2 className="text-2xl font-semibold">Tools We Use</h2>
+        <p className="my-4">
+          We utilize industry-leading tools to optimize your website for SEO:
+        </p>
+        <ul className="list-disc pl-6 space-y-2">
+          {toolsUsedSEO.map((tool, index) => (
+            <li key={index}>{tool}</li>
+          ))}
         </ul>
       </section>
 
+      {/* Pricing Tiers */}
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Pricing Tiers</h2>
         <p className="my-4">
-          Our SEO optimization services are tailored to fit your business’s
-          needs, with pricing based on the complexity of the project and the
-          level of optimization required:
+          Our pricing for SEO optimization services is tailored to your
+          business's needs. Pricing is based on the complexity and scope of the
+          project:
         </p>
-        {websiteServices.map((service) => {
+        {contentCreationServices.map((service) => {
           return (
             <>
               {service.name === "SEO Optimization" && (
                 <ul className="list-disc pl-6 space-y-2">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
-                      <span className="font-bold text-tertiary">
+                      <span className="font-bold text-secondary">
                         {pricing.name}:
                       </span>
                       <span className="pl-2">{pricing.info}</span>
@@ -146,10 +130,12 @@ const SEOOptimization: FC = () => {
         })}
       </section>
 
+      {/* Get Started Section */}
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Get Started Today</h2>
         <p className="my-4">
-          Ready to improve your website’s ranking and visibility?{" "}
+          Ready to boost your website's visibility with our SEO optimization
+          services?{" "}
           <Button
             variant={"link"}
             onClick={() => {
@@ -157,7 +143,7 @@ const SEOOptimization: FC = () => {
             }}
             className="p-0 inline-flex m-0"
           >
-            Contact us for a free consultation and customized SEO strategy.
+            Contact us for a free consultation.
           </Button>
         </p>
       </section>

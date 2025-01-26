@@ -6,7 +6,6 @@ import FeaturedProjects from "@/components/FeaturedProjects";
 import ServiceHighlights from "@/components/ServiceHighlights";
 import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
-import { useSidebar } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
@@ -14,7 +13,6 @@ import "swiper/css";
 
 const WelcomePage: FC = () => {
   const router = useRouter();
-  const { open } = useSidebar();
 
   const navigateToServices = () => {
     router.push("/services");
@@ -23,11 +21,7 @@ const WelcomePage: FC = () => {
   return (
     <main className="w-11/12 mx-auto py-6">
       {/* Welcome Section */}
-      <section
-        className={cn("my-16 w-full", {
-          "w-10/12 md:w-11/12 lg:w-full": open,
-        })}
-      >
+      <section className="my-16 w-full">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
           Welcome to Phoenix Code Studio!
         </h1>

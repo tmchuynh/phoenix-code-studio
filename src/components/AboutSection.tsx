@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils";
 import {
   FaRegLightbulb,
   FaSeedling,
@@ -12,11 +11,7 @@ import { GrGrow } from "react-icons/gr";
 
 const AboutSection = () => {
   return (
-    <section
-      className={cn("my-16 w-full", {
-        "w-10/12 md:w-11/12 lg:w-full": open,
-      })}
-    >
+    <section className="my-16 w-full">
       <h2 className="text-3xl font-semibold text-center mb-6 text-primary">
         Who We Are
       </h2>
@@ -28,14 +23,7 @@ const AboutSection = () => {
         understand their needs, ensuring that our solutions deliver results that
         exceed expectations.
       </p>
-      <div
-        className={cn(
-          "grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-7 w-full md:w-11/12 lg:w-full mx-auto",
-          {
-            "md:grid-cols-2 lg:grid-cols-3 w-11/12 md:w-full": !open,
-          }
-        )}
-      >
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-7 w-full md:w-11/12 lg:w-full mx-auto">
         {/* Creativity & Innovation */}
         <div className="text-center">
           <FaRegLightbulb className="text-6xl text-accent-1 mx-auto mb-4" />

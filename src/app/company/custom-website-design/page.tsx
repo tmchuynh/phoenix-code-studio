@@ -1,14 +1,15 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { companySpecificServices } from "@/lib/constants";
 import {
-  companySpecificServices,
   customWebsiteDesignList,
-  domainRegistrationList,
   processStepsList,
-  toolsAndTechnologiesList,
+  domainRegistrationList,
   webHostingList,
-} from "@/lib/constants";
+  toolsAndTechnologiesList,
+} from "@/lib/content-constants";
+
 import { useRouter } from "next/navigation";
 import { FC } from "react";
 
@@ -24,7 +25,7 @@ const CustomWebsite: FC = () => {
         return (
           <p className="text-center text-lg my-4">
             {service.name === "Custom Website Design" ? (
-              <span className="mt-4">{service.details}</span>
+              <span className="mt-4">{service.info}</span>
             ) : null}
           </p>
         );
@@ -43,7 +44,7 @@ const CustomWebsite: FC = () => {
         <ul className="list-disc pl-6 space-y-2">
           {customWebsiteDesignList.map((item, index) => (
             <li key={index}>
-              <span className="font-bold text-tertiary">{item.title}:</span>{" "}
+              <span className="font-bold text-secondary">{item.title}:</span>{" "}
               {item.description}
             </li>
           ))}
@@ -55,13 +56,13 @@ const CustomWebsite: FC = () => {
         <ul className="list-decimal list-inside space-y-4">
           {processStepsList.map((step, index) => (
             <li key={index}>
-              <span className="font-bold text-tertiary">{step.title}:</span>{" "}
+              <span className="font-bold text-secondary">{step.title}:</span>{" "}
               {step.description}
             </li>
           ))}
         </ul>
         <p className="my-4">
-          <span className="font-bold text-tertiary">Timeline:</span> Typical
+          <span className="font-bold text-secondary">Timeline:</span> Typical
           projects take 4–8 weeks, depending on the complexity and scope of the
           website.
         </p>
@@ -79,7 +80,7 @@ const CustomWebsite: FC = () => {
         <ul className="list-disc pl-6 space-y-2">
           {domainRegistrationList.map((item, index) => (
             <li key={index}>
-              <span className="font-bold text-tertiary">{item.title}:</span>{" "}
+              <span className="font-bold text-secondary">{item.title}:</span>{" "}
               {item.description}
             </li>
           ))}
@@ -88,7 +89,7 @@ const CustomWebsite: FC = () => {
         <ul className="list-disc pl-6 space-y-2">
           {webHostingList.map((item, index) => (
             <li key={index}>
-              <span className="font-bold text-tertiary">{item.title}:</span>{" "}
+              <span className="font-bold text-secondary">{item.title}:</span>{" "}
               {item.description}
             </li>
           ))}
@@ -121,7 +122,7 @@ const CustomWebsite: FC = () => {
                 <ul className="list-disc pl-6 space-y-2">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
-                      <span className="font-bold text-tertiary">
+                      <span className="font-bold text-secondary">
                         {pricing.name}:
                       </span>
                       <span className="pl-2">{pricing.info}</span>

@@ -1,7 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import { entrepreneurStories, lessons } from "@/lib/constants";
+import { entrepreneurStories, lessons } from "@/lib/content-constants";
 import React from "react";
 
 const BlogPage = () => {

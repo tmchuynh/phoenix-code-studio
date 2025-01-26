@@ -3,13 +3,13 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
+import { contentCreationServices } from "@/lib/constants";
 import {
   blogWritingBenefits,
   blogWritingServices,
-  contentCreationServices,
   processStepsBlog,
   toolsUsedBlog,
-} from "@/lib/constants";
+} from "@/lib/content-constants";
 
 const BlogWritingServices: FC = () => {
   const router = useRouter();
@@ -24,7 +24,7 @@ const BlogWritingServices: FC = () => {
           <div key={service.name} className="text-center text-lg my-4">
             {service.name === "Blog Writing" && (
               <div>
-                <span className="mt-4">{service.details}</span>
+                <span className="mt-4">{service.info}</span>
               </div>
             )}
           </div>
@@ -42,7 +42,7 @@ const BlogWritingServices: FC = () => {
         <ul className="list-disc pl-6 space-y-2">
           {blogWritingBenefits.map((benefit) => (
             <li key={benefit.title}>
-              <span className="font-bold text-tertiary">{benefit.title}:</span>{" "}
+              <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
               {benefit.description}
             </li>
           ))}
@@ -58,7 +58,7 @@ const BlogWritingServices: FC = () => {
         <ul className="list-disc pl-6 space-y-2">
           {blogWritingServices.map((service) => (
             <li key={service.title}>
-              <span className="font-bold text-tertiary">{service.title}:</span>{" "}
+              <span className="font-bold text-secondary">{service.title}:</span>{" "}
               {service.description}
             </li>
           ))}
@@ -70,13 +70,13 @@ const BlogWritingServices: FC = () => {
         <ul className="list-decimal list-inside space-y-4">
           {processStepsBlog.map((step) => (
             <li key={step.title}>
-              <span className="font-bold text-tertiary">{step.title}:</span>{" "}
+              <span className="font-bold text-secondary">{step.title}:</span>{" "}
               {step.description}
             </li>
           ))}
         </ul>
         <p className="my-4">
-          <span className="font-bold text-tertiary">Timeline:</span> Blogs are
+          <span className="font-bold text-secondary">Timeline:</span> Blogs are
           typically delivered within 3–7 business days, depending on complexity
           and word count.
         </p>
@@ -109,7 +109,7 @@ const BlogWritingServices: FC = () => {
                 <ul className="list-disc pl-6 space-y-2">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
-                      <span className="font-bold text-tertiary">
+                      <span className="font-bold text-secondary">
                         {pricing.name}:
                       </span>
                       <span className="pl-2">{pricing.info}</span>

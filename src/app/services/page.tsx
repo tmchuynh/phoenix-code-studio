@@ -39,7 +39,7 @@ const ServicesPage: FC = () => {
 
       {/* Company Services Section */}
       <section className="my-16">
-        <h2 className="text-3xl font-semibold text-center mb-6 text-tertiary">
+        <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
           Services for Companies
         </h2>
         <div className="space-y-8">
@@ -74,7 +74,7 @@ const ServicesPage: FC = () => {
 
       {/* Website Services Section */}
       <section className="my-16">
-        <h2 className="text-3xl font-semibold text-center mb-6 text-tertiary">
+        <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
           Website Services
         </h2>
         <div className="space-y-8">
@@ -109,7 +109,7 @@ const ServicesPage: FC = () => {
 
       {/* Content Creation Services Section */}
       <section className="my-16">
-        <h2 className="text-3xl font-semibold text-center mb-6 text-tertiary">
+        <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
           Content Creation Services
         </h2>
         <div className="space-y-8">

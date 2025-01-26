@@ -24,21 +24,25 @@ const PricingPage: FC = () => {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <span className="font-bold text-tertiary">Basic Website:</span>{" "}
+            <span className="font-bold text-secondary">Basic Website:</span>{" "}
             Starting at $2,500 – A simple, informational website (5-10 pages).
           </li>
           <li>
-            <span className="font-bold text-tertiary">Advanced Website:</span>{" "}
+            <span className="font-bold text-secondary">Advanced Website:</span>{" "}
             Starting at $4,000 – Includes custom functionality, integrations,
             and dynamic content.
           </li>
           <li>
-            <span className="font-bold text-tertiary">E-Commerce Website:</span>{" "}
+            <span className="font-bold text-secondary">
+              E-Commerce Website:
+            </span>{" "}
             Starting at $6,500 – Fully functional online store with payment
             integration.
           </li>
           <li>
-            <span className="font-bold text-tertiary">Hosting and Domain:</span>{" "}
+            <span className="font-bold text-secondary">
+              Hosting and Domain:
+            </span>{" "}
             Starting at $15/month – Secure, reliable hosting with domain
             registration.
           </li>
@@ -54,16 +58,19 @@ const PricingPage: FC = () => {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <span className="font-bold text-tertiary">UX Design Research:</span>{" "}
+            <span className="font-bold text-secondary">
+              UX Design Research:
+            </span>{" "}
             Starting at $3,000 – Includes user research, wireframing, and
             prototyping.
           </li>
           <li>
-            <span className="font-bold text-tertiary">UI Design:</span> Starting
-            at $2,500 – Custom UI design for web and mobile applications.
+            <span className="font-bold text-secondary">UI Design:</span>{" "}
+            Starting at $2,500 – Custom UI design for web and mobile
+            applications.
           </li>
           <li>
-            <span className="font-bold text-tertiary">
+            <span className="font-bold text-secondary">
               UX Testing and Validation:
             </span>{" "}
             Starting at $2,000 – Usability testing and iteration based on user
@@ -83,27 +90,27 @@ const PricingPage: FC = () => {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <span className="font-bold text-tertiary">
+            <span className="font-bold text-secondary">
               Low-Fidelity Wireframes:
             </span>{" "}
             Starting at $1,500 – Quick sketches outlining layout and structure.
           </li>
           <li>
-            <span className="font-bold text-tertiary">
+            <span className="font-bold text-secondary">
               High-Fidelity Wireframes:
             </span>{" "}
             Starting at $2,000 – Detailed designs that closely resemble the
             final product.
           </li>
           <li>
-            <span className="font-bold text-tertiary">
+            <span className="font-bold text-secondary">
               Interactive Prototypes:
             </span>{" "}
             Starting at $2,500 – Clickable prototypes for testing user
             interactions.
           </li>
           <li>
-            <span className="font-bold text-tertiary">
+            <span className="font-bold text-secondary">
               Usability Testing Prototypes:
             </span>{" "}
             Starting at $3,000 – Prototypes optimized for testing with real
@@ -121,21 +128,21 @@ const PricingPage: FC = () => {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <span className="font-bold text-tertiary">
+            <span className="font-bold text-secondary">
               Frontend Development:
             </span>{" "}
             Starting at $4,500 – Custom frontend development using React,
             Next.js, or Angular.
           </li>
           <li>
-            <span className="font-bold text-tertiary">
+            <span className="font-bold text-secondary">
               Backend Development:
             </span>{" "}
             Starting at $5,500 – Robust backend solutions with Node.js, Express,
             or other technologies.
           </li>
           <li>
-            <span className="font-bold text-tertiary">
+            <span className="font-bold text-secondary">
               Full-Stack Development:
             </span>{" "}
             Starting at $8,000 – Complete end-to-end web applications, from
@@ -155,14 +162,14 @@ const PricingPage: FC = () => {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <span className="font-bold text-tertiary">
+            <span className="font-bold text-secondary">
               Monthly Support Plan:
             </span>{" "}
             Starting at $200/month – Includes bug fixes, updates, and basic
             support.
           </li>
           <li>
-            <span className="font-bold text-tertiary">Extended Support:</span>{" "}
+            <span className="font-bold text-secondary">Extended Support:</span>{" "}
             Starting at $500/month – Full-service support, including
             enhancements, updates, and troubleshooting.
           </li>

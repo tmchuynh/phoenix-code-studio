@@ -1,12 +1,13 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { companySpecificServices } from "@/lib/constants";
 import {
-  companySpecificServices,
   databaseCreationItems,
   databaseManagementItems,
   ourProcessItems,
-} from "@/lib/constants";
+} from "@/lib/content-constants";
+
 import { FC } from "react";
 
 const DatabaseServices: FC = () => {
@@ -20,7 +21,7 @@ const DatabaseServices: FC = () => {
           <div key={service.name} className="text-center text-lg my-4">
             {service.name === "Database Management" && (
               <div>
-                <span className="mt-4">{service.details}</span>
+                <span className="mt-4">{service.info}</span>
               </div>
             )}
           </div>
@@ -64,7 +65,7 @@ const DatabaseServices: FC = () => {
             },
           ].map((item, index) => (
             <li key={index}>
-              <span className="font-bold text-tertiary">{item.title}:</span>{" "}
+              <span className="font-bold text-secondary">{item.title}:</span>{" "}
               {item.description}
             </li>
           ))}
@@ -80,7 +81,7 @@ const DatabaseServices: FC = () => {
         <ul className="list-disc pl-6 space-y-2">
           {databaseCreationItems.map((item, index) => (
             <li key={index}>
-              <span className="font-bold text-tertiary">{item.title}:</span>{" "}
+              <span className="font-bold text-secondary">{item.title}:</span>{" "}
               {item.description}
             </li>
           ))}
@@ -96,7 +97,7 @@ const DatabaseServices: FC = () => {
         <ul className="list-disc pl-6 space-y-2">
           {databaseManagementItems.map((item, index) => (
             <li key={index}>
-              <span className="font-bold text-tertiary">{item.title}:</span>{" "}
+              <span className="font-bold text-secondary">{item.title}:</span>{" "}
               {item.description}
             </li>
           ))}
@@ -108,7 +109,7 @@ const DatabaseServices: FC = () => {
         <ul className="list-decimal list-inside space-y-4">
           {ourProcessItems.map((item, index) => (
             <li key={index}>
-              <span className="font-bold text-tertiary">{item.title}:</span>{" "}
+              <span className="font-bold text-secondary">{item.title}:</span>{" "}
               {item.description}
             </li>
           ))}
@@ -128,7 +129,7 @@ const DatabaseServices: FC = () => {
                 <ul className="list-disc pl-6 space-y-2">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
-                      <span className="font-bold text-tertiary">
+                      <span className="font-bold text-secondary">
                         {pricing.name}:
                       </span>
                       <span className="pl-2">{pricing.info}</span>

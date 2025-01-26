@@ -3,13 +3,13 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
+import { contentCreationServices } from "@/lib/constants";
 import {
-  contentCreationServices,
   onboardingPaperBenefits,
-  onboardingProcessSteps,
   onboardingServices,
+  onboardingProcessSteps,
   toolsForOnboarding,
-} from "@/lib/constants";
+} from "@/lib/content-constants";
 
 const TrainingManualOnboardingPapers: FC = () => {
   const router = useRouter();
@@ -25,7 +25,7 @@ const TrainingManualOnboardingPapers: FC = () => {
             {service.name ===
               "Training Manual and Onboarding Paperwork Creation" && (
               <div>
-                <span className="mt-4">{service.details}</span>
+                <span className="mt-4">{service.info}</span>
               </div>
             )}
           </div>
@@ -45,7 +45,7 @@ const TrainingManualOnboardingPapers: FC = () => {
         <ul className="list-disc pl-6 space-y-2">
           {onboardingPaperBenefits.map((benefit) => (
             <li key={benefit.title}>
-              <span className="font-bold text-tertiary">{benefit.title}:</span>{" "}
+              <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
               {benefit.description}
             </li>
           ))}
@@ -63,7 +63,7 @@ const TrainingManualOnboardingPapers: FC = () => {
         <ul className="list-disc pl-6 space-y-2">
           {onboardingServices.map((service) => (
             <li key={service.title}>
-              <span className="font-bold text-tertiary">{service.title}:</span>{" "}
+              <span className="font-bold text-secondary">{service.title}:</span>{" "}
               {service.description}
             </li>
           ))}
@@ -75,13 +75,13 @@ const TrainingManualOnboardingPapers: FC = () => {
         <ul className="list-decimal list-inside space-y-4">
           {onboardingProcessSteps.map((step) => (
             <li key={step.title}>
-              <span className="font-bold text-tertiary">{step.title}:</span>{" "}
+              <span className="font-bold text-secondary">{step.title}:</span>{" "}
               {step.description}
             </li>
           ))}
         </ul>
         <p className="my-4">
-          <span className="font-bold text-tertiary">Timeline:</span> Projects
+          <span className="font-bold text-secondary">Timeline:</span> Projects
           are typically completed within 2–6 weeks, depending on scope and
           complexity.
         </p>
@@ -114,7 +114,7 @@ const TrainingManualOnboardingPapers: FC = () => {
                 <ul className="list-disc pl-6 space-y-2">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
-                      <span className="font-bold text-tertiary">
+                      <span className="font-bold text-secondary">
                         {pricing.name}:
                       </span>
                       <span className="pl-2">{pricing.info}</span>

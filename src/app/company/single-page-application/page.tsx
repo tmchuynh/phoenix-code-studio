@@ -1,13 +1,13 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { companySpecificServices } from "@/lib/constants";
 import {
-  companySpecificServices,
-  processItems,
   spaDevelopmentFeatures,
   spaDevelopmentServices,
   technologiesUsed,
-} from "@/lib/constants";
+  processItems,
+} from "@/lib/content-constants";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
 
@@ -24,7 +24,7 @@ const SPAServices: FC = () => {
           <div key={service.name} className="text-center text-lg my-4">
             {service.name === "Single Page Application" && (
               <div>
-                <span className="mt-4">{service.details}</span>
+                <span className="mt-4">{service.info}</span>
               </div>
             )}
           </div>
@@ -44,7 +44,7 @@ const SPAServices: FC = () => {
         <ul className="list-disc pl-6 space-y-2">
           {spaDevelopmentFeatures.map((feature, index) => (
             <li key={index}>
-              <span className="font-bold text-tertiary">{feature.title}:</span>{" "}
+              <span className="font-bold text-secondary">{feature.title}:</span>{" "}
               {feature.description}
             </li>
           ))}
@@ -60,7 +60,7 @@ const SPAServices: FC = () => {
         <ul className="list-disc pl-6 space-y-2">
           {spaDevelopmentServices.map((service, index) => (
             <li key={index}>
-              <span className="font-bold text-tertiary">{service.title}:</span>{" "}
+              <span className="font-bold text-secondary">{service.title}:</span>{" "}
               {service.description}
             </li>
           ))}
@@ -85,13 +85,13 @@ const SPAServices: FC = () => {
         <ul className="list-decimal list-inside space-y-4">
           {processItems.map((item, index) => (
             <li key={index}>
-              <span className="font-bold text-tertiary">{item.title}:</span>{" "}
+              <span className="font-bold text-secondary">{item.title}:</span>{" "}
               {item.description}
             </li>
           ))}
         </ul>
         <p className="my-4">
-          <span className="font-bold text-tertiary">Timeline:</span> Most SPA
+          <span className="font-bold text-secondary">Timeline:</span> Most SPA
           projects are completed within 4–8 weeks, depending on complexity and
           features.
         </p>
@@ -111,7 +111,7 @@ const SPAServices: FC = () => {
                 <ul className="list-disc pl-6 space-y-2">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
-                      <span className="font-bold text-tertiary">
+                      <span className="font-bold text-secondary">
                         {pricing.name}:
                       </span>
                       <span className="pl-2">{pricing.info}</span>
