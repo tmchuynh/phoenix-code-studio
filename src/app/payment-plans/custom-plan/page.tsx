@@ -10,7 +10,9 @@ const CustomPlan = () => {
     <div className="max-w-3xl mx-auto px-4 py-16">
       {/* Page Header */}
       <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold text-primary mb-4">Custom Plan</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+          Custom Plan
+        </h2>
         <p className="text-xl text-gray-600">
           Tailored payment options based on the complexity and size of your
           project. We can create a custom plan to fit your budget.

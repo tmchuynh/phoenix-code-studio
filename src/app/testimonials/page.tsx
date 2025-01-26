@@ -10,7 +10,9 @@ const TestimonialsPage: FC = () => {
   const { open } = useSidebar();
   return (
     <main className="w-11/12 mx-auto py-6">
-      <h1 className="text-3xl font-bold text-center">What Our Clients Say</h1>
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
+        What Our Clients Say
+      </h1>
       <p className="text-center text-lg my-4">
         Hear from our happy clients who have experienced the transformative
         power of our services.

@@ -30,6 +30,7 @@ const BlogDisplayPage: FC = () => {
   const [topicIsOpen, setTopicIsOpen] = useState(false);
   const [dateIsOpen, setDateIsOpen] = useState(false);
 
+  const [searchQuery, setSearchQuery] = useState("");
   const [filteredBlogs, setFilteredBlogs] = useState(blogs);
   const [selectedDates, setSelectedDates] = useState<string[]>([]);
   const [noResults, setNoResults] = useState(false);
@@ -78,6 +79,15 @@ const BlogDisplayPage: FC = () => {
       filtered = filtered.filter((blog) => selectedDates.includes(blog.date));
     }
 
+    // Apply search query filter
+    if (searchQuery) {
+      filtered = filtered.filter(
+        (blog) =>
+          blog.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          blog.author.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
+
     if (filtered.length === 0) {
       if (filtersCleared) {
         setTimeout(() => setNoResults(true), 2500);
@@ -99,6 +109,7 @@ const BlogDisplayPage: FC = () => {
   const clearFilters = () => {
     setSelectedTopics([]);
     setSelectedDates([]);
+    setSearchQuery("");
     setNoResults(false);
     setFiltersCleared(true);
     setFilteredBlogs(blogs);
@@ -114,7 +125,7 @@ const BlogDisplayPage: FC = () => {
 
   useEffect(() => {
     handleFilter();
-  }, [selectedTopics, selectedDates]);
+  }, [selectedTopics, selectedDates, searchQuery]);
 
   function handleOpen(dropdown: "topic" | "date") {
     setDropdownOpen({
@@ -143,7 +154,9 @@ const BlogDisplayPage: FC = () => {
 
   return (
     <main className="w-11/12 mx-auto py-6">
-      <h1 className="text-3xl font-bold text-center">Our Latest Blogs</h1>
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
+        Our Latest Blogs
+      </h1>
       <p className="text-center text-lg mt-4">
         Stay up-to-date with our latest insights and trends in web development.
       </p>
@@ -160,7 +173,7 @@ const BlogDisplayPage: FC = () => {
         >
           <div
             className={cn("w-full gap-3 grid grid-cols-1 pb-5 items-start", {
-              "md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-1": open,
+              "w-11/12 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-1": open,
             })}
           >
             {/* Topic Filter */}
@@ -170,7 +183,7 @@ const BlogDisplayPage: FC = () => {
                 onOpenChange={setTopicIsOpen}
                 className="w-full space-y-2"
               >
-                <div className="flex items-center justify-between space-x-4 px-4">
+                <div className="flex items-center justify-between space-x-4">
                   <CollapsibleTrigger asChild>
                     <div className="flex items-center w-full">
                       <ChevronsUpDown className="h-4 w-4" />
@@ -219,7 +232,7 @@ const BlogDisplayPage: FC = () => {
                 onOpenChange={setDateIsOpen}
                 className="w-full space-y-2"
               >
-                <div className="flex items-center justify-between space-x-4 px-4">
+                <div className="flex items-center justify-between space-x-4">
                   <CollapsibleTrigger asChild>
                     <div className="flex items-center w-full">
                       <ChevronsUpDown className="h-4 w-4" />
@@ -270,6 +283,19 @@ const BlogDisplayPage: FC = () => {
               </Collapsible>
             </div>
           </div>
+        </section>
+
+        {/* Search Bar */}
+        <section className="flex pb-5">
+          <input
+            type="text"
+            placeholder="Search by title or author"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className={cn("p-2 border rounded w-11/12 md:w-full mx-auto", {
+              "md:w-11/12": open,
+            })}
+          />
         </section>
 
         <section

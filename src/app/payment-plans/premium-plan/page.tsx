@@ -10,7 +10,9 @@ const PremiumPlan = () => {
     <div className="max-w-3xl mx-auto px-4 py-16">
       {/* Page Header */}
       <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold text-primary mb-4">Premium Plan</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+          Premium Plan
+        </h2>
         <p className="text-xl text-gray-600">
           For large-scale, ongoing projects requiring continuous work and
           support. Flexible and extended payment options.

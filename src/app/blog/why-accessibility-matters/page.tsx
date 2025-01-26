@@ -13,7 +13,7 @@ const BlogPage = () => {
     <div className="max-w-4xl mx-auto p-6">
       <article className="space-y-8">
         <header className="text-center">
-          <h1 className="text-4xl font-bold text-primary mb-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Why Accessibility Matters in Web Development
           </h1>
           <p className="text-sm text-gray-500">By Sarah Kim – May 22, 2025</p>

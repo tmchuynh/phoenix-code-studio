@@ -146,7 +146,9 @@ const PastProjectsPage: FC = () => {
 
   return (
     <main className="w-11/12 mx-auto py-6">
-      <h1 className="text-3xl font-bold text-center">Past Projects</h1>
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
+        Past Projects
+      </h1>
       <p className="text-center text-lg my-4">
         Check out some of the projects I've worked on in the past.
       </p>
@@ -321,6 +323,15 @@ const PastProjectsPage: FC = () => {
 
       {/* Projects List */}
       <section className="my-8">
+        <section className="text-center my-4">
+          <p className="text-lg">
+            Showing {indexOfFirstProject + 1} to{" "}
+            {indexOfLastProject > filteredProjects.length
+              ? filteredProjects.length
+              : indexOfLastProject}{" "}
+            of {filteredProjects.length} projects
+          </p>
+        </section>
         <div className={"grid md:grid-cols-1 xl:grid-cols-2 gap-8"}>
           {currentProjects.map((project, index) => (
             <Card

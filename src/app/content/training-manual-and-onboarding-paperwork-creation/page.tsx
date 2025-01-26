@@ -16,7 +16,7 @@ const TrainingManualOnboardingPapers: FC = () => {
 
   return (
     <main className="w-11/12 mx-auto py-6">
-      <h1 className="text-3xl font-bold text-center">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Training Manual and Onboarding Papers Creation Services
       </h1>
       {contentCreationServices.map((service) => {

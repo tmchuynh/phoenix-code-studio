@@ -838,6 +838,50 @@ export const blogs = [
     slug: "/blog/importance-of-user-experience",
   },
   {
+    title: "Books to Read as a Developer",
+    author: "John Doe",
+    date: "March 23, 2022",
+    img: "/images/blog-placeholder.jpg",
+    featured: true,
+    topics: ["Books"],
+    excerpt:
+      "Choosing a career in tech. is choosing an endless life learning. But, then again, which career isn't like that? Improvement is critical after all.",
+    slug: "/blog/books-to-read-as-developer",
+  },
+  {
+    title: "Who's the Better Hire? - Jack of All Trades OR Master of One",
+    author: "John Doe",
+    date: "April 22, 2022",
+    img: "/images/blog-placeholder.jpg",
+    featured: true,
+    topics: ["Career"],
+    excerpt:
+      `The phrase "Jack of all trades, master of none" refers to a person who is competent in many skills but is not exactly outstanding in any of them. Even though "jack of all trades" sometimes is used as an insult, it did not begin as one. The complete saying goes "A jack of all trades is a master of none, but oftentimes better than a master of one."`,
+    slug: "/blog/jack-of-all-trades-or-master-of-one",
+  },
+  {
+    title: "Best Contactless Business Card Options",
+    author: "John Doe",
+    date: "April 22, 2022",
+    img: "/images/blog-placeholder.jpg",
+    featured: true,
+    topics: ["Career"],
+    excerpt:
+      `Contactless business cards are a modern, eco-friendly alternative to traditional paper cards. They allow professionals to share contact details, social media profiles, and more with a simple tap or scan. These cards are compatible with smartphones, eliminating the need for additional apps. Perfect for sustainable and seamless networking, they leave a lasting impression while reducing waste.`,
+    slug: "/blog/best-contactless-business-card-options",
+  },
+  {
+    title: "Why Every Developer Should Write",
+    author: "John Doe",
+    date: "March 21, 2022",
+    img: "/images/blog-placeholder.jpg",
+    featured: true,
+    topics: ["Career"],
+    excerpt:
+      `"In fact, the importance of writing has perhaps increased in the last decade or so, thanks to trends in technology...In matters of business, when every second counts, strong writing makes the difference between smooth operations and clumsy footing."`,
+    slug: "/blog/why-every-developer-should-write",
+  },
+  {
     title: "How Tailwind CSS Can Speed Up Your Development Process",
     author: "Jane Smith",
     date: "July 10, 2023",
@@ -967,7 +1011,7 @@ export const pastProjects = [
     featured: true,
     description: "This is a simple Next.js project.It's a web-based quiz platform designed to offer a variety of quizzes across multiple subjects, including Chemistry, History, Math, and more. The application supports user registration, tracks progress, and allows users to select quizzes based on difficulty and subject. Users can register, reset their passwords, and manage their profiles with the ability to update personal information and choose default profile pictures. The application includes features like quiz progress tracking, score tracking, and a leaderboard to encourage competition. It also stores quiz data in localStorage, ensuring users can resume where they left off. Built with a responsive UI and accessibility features, the app provides a seamless experience across devices. Data management is handled using MySQL, Sequelize, and Next-Auth for secure user authentication and information retrieval.",
     short: "This Next.js app, a conversion of Quizlet-Plus, offers quizzes in subjects like Chemistry, History, and Math. It features user registration, progress tracking, profile management, and a leaderboard. Data is stored in localStorage, with MySQL, Sequelize, and Next-Auth handling authentication. The app is responsive and includes accessibility features for a seamless experience.",
-    tags: ["", ""],
+    tags: ["User Auth", "Progress Tracking"],
     languages: ["HTML", "TypeScript"],
     frameworks: ["Next.js", "React"],
     technologies: ["MySQL", "Sequelize", "Next-Auth", "localStorage", "Axios"],
@@ -979,7 +1023,7 @@ export const pastProjects = [
     featured: true,
     description: "The International Activities Club (IAC) website is a user-friendly platform that showcases the organization's educational programs and after-school activities. It highlights the A.R.C. Initiative, focusing on hands-on learning and real-world application of classroom knowledge. The site provides detailed information about the diverse extracurricular options, such as chess, sports, and creative writing, offered to students from 1st grade through high school. With easy navigation, the website ensures parents and schools can explore IAC’s services and find enriching learning opportunities for students.",
     short: "The IAC website highlights educational programs, the A.R.C. Initiative, and after-school activities like chess, sports, and creative writing, offering enriching opportunities for students. It’s designed for easy navigation by parents and schools to explore IAC’s services.",
-    tags: ["", ""],
+    tags: ["Educational"],
     languages: ["JavaScript", "HTML", "CSS"],
     frameworks: ["Node.js", "Express"],
     technologies: ["Bootstrap CSS", "Chart.js"],
@@ -994,7 +1038,7 @@ export const pastProjects = [
 
       The code demonstrates how to filter data by importing an agents object from ./data.js. It uses strict mode, establishes a dropdown menu for filtering options, and toggles its visibility when clicked. The glossary module is also imported to display terms dynamically on the page. Each term is iterated over and printed to the screen, allowing users to easily view the glossary content.`,
     short: "The FirstGalaxy NPM version Build Status website showcases the benefits of joining FirstGalaxy Inc., offers resources for starting a real estate career, and connects users to agent listings. The code demonstrates data filtering, toggling dropdown visibility, and dynamically displaying glossary terms imported from ./data.js.",
-    tags: ["", ""],
+    tags: ["Real Estate", "Data Filtering", "Dynamic"],
     languages: ["JavaScript", "HTML", "CSS"],
     technologies: ["Bootstrap CSS", "Chart.js"],
     githubLink: "https://github.com/tmchuynh/firstgalaxy"
@@ -2002,26 +2046,66 @@ export const toolsForGUI = [
 ];
 
 export const applications = [
-  "Smart Homes: IoT-enabled devices like smart thermostats, security cameras, and voice assistants are making homes more efficient, secure, and convenient.",
-  "Healthcare: Wearable devices and remote monitoring systems are transforming patient care by providing real-time health data and enabling early intervention.",
-  "Industrial IoT (IIoT): Factories are leveraging IoT for predictive maintenance, supply chain optimization, and automation, driving efficiency and reducing downtime.",
-  "Agriculture: IoT is revolutionizing agriculture with smart sensors that monitor soil conditions, weather patterns, and crop health, helping farmers maximize yields.",
-  "Smart Cities: IoT powers smart city initiatives, including traffic management, energy-efficient lighting, and waste management, creating more sustainable urban environments.",
+  {
+    title: "Smart Homes",
+    description: "IoT-enabled devices like smart thermostats, security cameras, and voice assistants are making homes more efficient, secure, and convenient."
+  },
+  {
+    title: "Healthcare",
+    description: "Wearable devices and remote monitoring systems are transforming patient care by providing real-time health data and enabling early intervention."
+  },
+  {
+    title: "Industrial IoT (IIoT)",
+    description: "Factories are leveraging IoT for predictive maintenance, supply chain optimization, and automation, driving efficiency and reducing downtime."
+  },
+  {
+    title: "Agriculture",
+    description: "IoT is revolutionizing agriculture with smart sensors that monitor soil conditions, weather patterns, and crop health, helping farmers maximize yields."
+  },
+  {
+    title: "Smart Cities",
+    description: "IoT powers smart city initiatives, including traffic management, energy-efficient lighting, and waste management, creating more sustainable urban environments."
+  }
 ];
 
 export const challenges = [
-  "Interoperability: With countless devices and platforms, ensuring seamless communication and compatibility remains a challenge.",
-  "Scalability: Managing large-scale IoT networks with billions of devices requires robust infrastructure and efficient resource allocation.",
-  "Data Privacy and Security: Protecting sensitive data from breaches and ensuring user privacy is critical as IoT networks expand.",
-  "Energy Constraints: Developing IoT devices that consume minimal power while maintaining high performance is an ongoing challenge.",
+  {
+    title: "Interoperability",
+    description: "With countless devices and platforms, ensuring seamless communication and compatibility remains a challenge."
+  },
+  {
+    title: "Scalability",
+    description: "Managing large-scale IoT networks with billions of devices requires robust infrastructure and efficient resource allocation."
+  },
+  {
+    title: "Data Privacy and Security",
+    description: "Protecting sensitive data from breaches and ensuring user privacy is critical as IoT networks expand."
+  },
+  {
+    title: "Energy Constraints",
+    description: "Developing IoT devices that consume minimal power while maintaining high performance is an ongoing challenge."
+  }
 ];
 
 export const futureTrends = [
-  "Digital Twins: Virtual replicas of physical devices for real-time monitoring and simulation.",
-  "IoT and Blockchain: Combining IoT with blockchain for secure and transparent data transactions.",
-  "Personalized IoT Solutions: Tailoring IoT applications to individual needs and preferences.",
-  "IoT in Space: Expanding IoT networks to space technology for better Earth monitoring and communication.",
+  {
+    title: "Digital Twins",
+    description: "Virtual replicas of physical devices for real-time monitoring and simulation."
+  },
+  {
+    title: "IoT and Blockchain",
+    description: "Combining IoT with blockchain for secure and transparent data transactions."
+  },
+  {
+    title: "Personalized IoT Solutions",
+    description: "Tailoring IoT applications to individual needs and preferences."
+  },
+  {
+    title: "IoT in Space",
+    description: "Expanding IoT networks to space technology for better Earth monitoring and communication."
+  }
 ];
+
 
 export const examplesOfGreatGUI = [
   {

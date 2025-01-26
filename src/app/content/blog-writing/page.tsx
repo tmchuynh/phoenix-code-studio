@@ -16,7 +16,9 @@ const BlogWritingServices: FC = () => {
 
   return (
     <main className="w-11/12 mx-auto py-6">
-      <h1 className="text-3xl font-bold text-center">Blog Writing Services</h1>
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
+        Blog Writing Services
+      </h1>
       {contentCreationServices.map((service) => {
         return (
           <div key={service.name} className="text-center text-lg my-4">

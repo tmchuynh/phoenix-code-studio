@@ -14,7 +14,7 @@ const BlogPage = () => {
     <div className="max-w-4xl mx-auto p-6">
       <article className="space-y-8">
         <header className="text-center">
-          <h1 className="text-4xl font-bold text-primary mb-4">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Revolutionizing Connectivity: Innovations in IoT Development
           </h1>
           <p className="text-sm text-gray-500">
@@ -70,7 +70,10 @@ const BlogPage = () => {
           </h2>
           <ul className="list-disc pl-6 space-y-2">
             {applications.map((application, index) => (
-              <li key={index}>{application}</li>
+              <li key={index}>
+                <span className="font-bold">{application.title}:</span>{" "}
+                {application.description}
+              </li>
             ))}
           </ul>
         </section>
@@ -81,7 +84,10 @@ const BlogPage = () => {
           </h2>
           <ul className="list-disc pl-6 space-y-2">
             {challenges.map((challenge, index) => (
-              <li key={index}>{challenge}</li>
+              <li key={index}>
+                <span className="font-bold">{challenge.title}:</span>{" "}
+                {challenge.description}
+              </li>
             ))}
           </ul>
         </section>
@@ -92,7 +98,10 @@ const BlogPage = () => {
           </h2>
           <ul className="list-disc pl-6 space-y-2">
             {futureTrends.map((trend, index) => (
-              <li key={index}>{trend}</li>
+              <li key={index}>
+                <span className="font-bold">{trend.title}:</span>{" "}
+                {trend.description}
+              </li>
             ))}
           </ul>
         </section>

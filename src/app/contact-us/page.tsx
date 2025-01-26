@@ -87,7 +87,9 @@ const ContactUsPage: FC = () => {
 
   return (
     <main className="w-11/12 mx-auto py-6">
-      <h1 className="text-3xl font-bold text-center">Contact Us</h1>
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
+        Contact Us
+      </h1>
       <p className="text-center text-lg my-4">
         We would love to hear from you! Please fill out the form below, and
         we'll get back to you as soon as possible.
