@@ -74,6 +74,7 @@ export const contactlessCardOptions = [
   },
 ];
 
+import { Badge } from "@/components/ui/badge";
 import React from "react";
 
 const ContactlessBusinessCardsBlog = () => {
@@ -85,21 +86,21 @@ const ContactlessBusinessCardsBlog = () => {
             Best Contactless Business Card Options
           </h1>
           <div className="flex justify-center space-x-2">
-            <span className="bg-gray-200 px-3 py-1 rounded text-sm">
+            <Badge variant={"outline"} className="text-sm">
               #resources
-            </span>
-            <span className="bg-gray-200 px-3 py-1 rounded text-sm">
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
               #business
-            </span>
-            <span className="bg-gray-200 px-3 py-1 rounded text-sm">
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
               #career
-            </span>
+            </Badge>
           </div>
         </header>
 
         {contactlessCardOptions.map((card, index) => (
           <section key={index} className="space-y-4">
-            <h2 className="text-2xl font-semibold text-secondary mb-2">
+            <h2 className="text-3xl font-semibold mb-6 text-secondary">
               {card.name}
             </h2>
             <p className="text-lg">{card.description}</p>

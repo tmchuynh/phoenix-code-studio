@@ -63,6 +63,7 @@ export const jackOfAllTradesContent = {
   },
 };
 
+import { Badge } from "@/components/ui/badge";
 import React from "react";
 
 const JackOfAllTradesBlog = () => {
@@ -74,17 +75,25 @@ const JackOfAllTradesBlog = () => {
             {jackOfAllTradesContent.intro.title}
           </h1>
           <p className="text-lg">{jackOfAllTradesContent.intro.description}</p>
+          <div className="flex justify-center space-x-2">
+            <Badge variant={"outline"} className="text-sm">
+              #career
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #business
+            </Badge>
+          </div>
         </header>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             {jackOfAllTradesContent.origin.title}
           </h2>
           <p className="text-lg">{jackOfAllTradesContent.origin.description}</p>
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             {jackOfAllTradesContent.benefits.title}
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -97,7 +106,7 @@ const JackOfAllTradesBlog = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             {jackOfAllTradesContent.howToBecome.title}
           </h2>
           <p className="text-lg">
@@ -106,7 +115,7 @@ const JackOfAllTradesBlog = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             {jackOfAllTradesContent.tips.title}
           </h2>
           <ul className="list-disc pl-6 space-y-2">

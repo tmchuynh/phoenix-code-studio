@@ -39,6 +39,7 @@ export const whyWritingMattersContent = {
   },
 };
 
+import { Badge } from "@/components/ui/badge";
 import React from "react";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
@@ -53,6 +54,14 @@ const WhyWritingMattersBlog = () => {
           <p className="text-lg">
             {whyWritingMattersContent.intro.description}
           </p>
+          <div className="flex justify-center space-x-2">
+            <Badge variant={"outline"} className="text-sm">
+              #self-development
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #career
+            </Badge>
+          </div>
         </header>
 
         <div className="relative flex flex-col w-full text-pretty">
@@ -69,7 +78,7 @@ const WhyWritingMattersBlog = () => {
         </div>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             {whyWritingMattersContent.benefits.title}
           </h2>
           <p className="text-lg">
@@ -78,7 +87,7 @@ const WhyWritingMattersBlog = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             {whyWritingMattersContent.devToBenefits.title}
           </h2>
           <p className="text-lg">
@@ -87,7 +96,7 @@ const WhyWritingMattersBlog = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             {whyWritingMattersContent.howToStart.title}
           </h2>
           <p className="text-lg">
@@ -96,7 +105,7 @@ const WhyWritingMattersBlog = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             {whyWritingMattersContent.tips.title}
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -107,7 +116,7 @@ const WhyWritingMattersBlog = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             {whyWritingMattersContent.conclusion.title}
           </h2>
           <p className="text-lg">

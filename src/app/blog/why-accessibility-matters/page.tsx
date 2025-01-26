@@ -18,10 +18,18 @@ const BlogPage = () => {
           </h1>
           <p className="text-sm text-gray-500">By Sarah Kim – May 22, 2025</p>
           <div className="mt-4 flex justify-center space-x-4">
-            <Badge className="text-sm">#WebAccessibility</Badge>
-            <Badge className="text-sm">#UXUIDesign</Badge>
-            <Badge className="text-sm">#InclusiveDesign</Badge>
-            <Badge className="text-sm">#WebDevelopment</Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #WebAccessibility
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #UXUIDesign
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #InclusiveDesign
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #WebDevelopment
+            </Badge>
           </div>
         </header>
 
@@ -40,7 +48,7 @@ const BlogPage = () => {
 
         {/* What is Web Accessibility */}
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             What is Web Accessibility?
           </h2>
           <p className="text-lg">
@@ -56,7 +64,7 @@ const BlogPage = () => {
 
         {/* Why Accessibility Matters */}
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Why Accessibility Matters
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -70,7 +78,7 @@ const BlogPage = () => {
 
         {/* Core Principles of Accessibility */}
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Core Principles of Accessibility
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -84,7 +92,7 @@ const BlogPage = () => {
 
         {/* How to Improve Accessibility */}
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             How to Improve Accessibility on Your Website
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -98,7 +106,7 @@ const BlogPage = () => {
 
         {/* Why Accessibility is a Continuous Process */}
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Why Accessibility is a Continuous Process
           </h2>
           <p className="text-lg">
@@ -111,7 +119,7 @@ const BlogPage = () => {
 
         {/* Conclusion */}
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Conclusion
           </h2>
           <p className="text-lg">

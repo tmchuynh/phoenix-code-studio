@@ -21,10 +21,18 @@ const BlogPage = () => {
             By Samuel Green – February 25, 2025
           </p>
           <div className="mt-4 flex justify-center space-x-4">
-            <Badge className="text-sm">#IoT</Badge>
-            <Badge className="text-sm">#Technology</Badge>
-            <Badge className="text-sm">#Connectivity</Badge>
-            <Badge className="text-sm">#Innovation</Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #IoT
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #Technology
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #Connectivity
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #Innovation
+            </Badge>
           </div>
         </header>
 
@@ -40,7 +48,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             What is IoT?
           </h2>
           <p className="text-lg">
@@ -54,7 +62,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Innovations in IoT Development
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -65,7 +73,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Applications of IoT
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -79,7 +87,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Challenges Facing IoT Development
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -93,7 +101,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             The Future of IoT
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -107,7 +115,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Conclusion
           </h2>
           <p className="text-lg">

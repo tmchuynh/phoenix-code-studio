@@ -23,10 +23,18 @@ const BlogPage = () => {
             By Emily Carter – March 18, 2025
           </p>
           <div className="mt-4 flex justify-center space-x-4">
-            <Badge className="text-sm">#DataScience</Badge>
-            <Badge className="text-sm">#Analytics</Badge>
-            <Badge className="text-sm">#MachineLearning</Badge>
-            <Badge className="text-sm">#Insights</Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #DataScience
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #Analytics
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #MachineLearning
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #Insights
+            </Badge>
           </div>
         </header>
 
@@ -42,7 +50,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             What is Data Science?
           </h2>
           <p className="text-lg">
@@ -55,7 +63,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             The Data Science Workflow
           </h2>
           <ol className="list-decimal pl-6 space-y-2">
@@ -68,7 +76,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Key Tools and Techniques in Data Science
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -81,7 +89,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Applications of Data Science
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -94,7 +102,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Why Data Science Matters
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -107,7 +115,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Getting Started in Data Science
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -120,7 +128,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Conclusion
           </h2>
           <p className="text-lg">

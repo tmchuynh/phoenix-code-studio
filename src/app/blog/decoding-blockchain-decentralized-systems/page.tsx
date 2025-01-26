@@ -22,10 +22,18 @@ const BlogPage = () => {
             By Alex Johnson – April 10, 2025
           </p>
           <div className="mt-4 flex justify-center space-x-4">
-            <Badge className="text-sm">#Blockchain</Badge>
-            <Badge className="text-sm">#Decentralization</Badge>
-            <Badge className="text-sm">#TechnologyTrends</Badge>
-            <Badge className="text-sm">#FutureTech</Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #Blockchain
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #Decentralization
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #TechnologyTrends
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #FutureTech
+            </Badge>
           </div>
         </header>
 
@@ -41,7 +49,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             What is Blockchain?
           </h2>
           <p className="text-lg">
@@ -55,7 +63,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Key Features of Blockchain Technology
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -68,7 +76,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             How Blockchain Works
           </h2>
           <ol className="list-decimal pl-6 space-y-2">
@@ -81,7 +89,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Applications of Blockchain Technology
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -94,7 +102,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             The Future of Blockchain
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -107,7 +115,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Challenges to Adoption
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -120,7 +128,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Conclusion
           </h2>
           <p className="text-lg">

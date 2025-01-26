@@ -43,6 +43,7 @@ export const booksToRead = [
   },
 ];
 
+import { Badge } from "@/components/ui/badge";
 import React from "react";
 
 const BlogPage = () => {
@@ -58,11 +59,22 @@ const BlogPage = () => {
             But then again, which career isn't like that? Improvement is
             critical after all.
           </p>
+          <div className="flex justify-center space-x-2">
+            <Badge variant={"outline"} className="text-sm">
+              #books
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #self-development
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #career
+            </Badge>
+          </div>
         </header>
 
         {booksToRead.map((book, index) => (
           <section key={index}>
-            <h2 className="text-2xl font-semibold text-secondary mb-4">
+            <h2 className="text-3xl font-semibold mb-6 text-secondary">
               {book.title}
             </h2>
             <p className="text-lg">{book.description}</p>
@@ -70,7 +82,7 @@ const BlogPage = () => {
         ))}
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Conclusion
           </h2>
           <p className="text-lg">

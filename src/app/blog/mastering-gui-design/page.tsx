@@ -21,10 +21,18 @@ const BlogPage = () => {
             By Lucas Brown – October 15, 2024
           </p>
           <div className="mt-4 flex justify-center space-x-4">
-            <Badge className="text-sm">#GUIDesign</Badge>
-            <Badge className="text-sm">#UXUI</Badge>
-            <Badge className="text-sm">#UserExperience</Badge>
-            <Badge className="text-sm">#DesignTips</Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #GUIDesign
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #UXUI
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #UserExperience
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #DesignTips
+            </Badge>
           </div>
         </header>
 
@@ -40,7 +48,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             What Makes a GUI User-Friendly?
           </h2>
           <p className="text-lg">
@@ -52,7 +60,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Key Principles of GUI Design
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -65,7 +73,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Tips for Crafting User-Friendly GUIs
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -78,7 +86,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Tools for GUI Design
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -91,7 +99,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Examples of Great GUI Design
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -104,7 +112,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             The Role of UX/UI in GUI Design
           </h2>
           <p className="text-lg">
@@ -116,7 +124,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Conclusion
           </h2>
           <p className="text-lg">

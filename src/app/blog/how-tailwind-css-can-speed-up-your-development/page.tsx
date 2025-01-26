@@ -18,10 +18,18 @@ const BlogPage = () => {
           </h1>
           <p className="text-sm text-muted">By Jane Smith – July 10, 2025</p>
           <div className="mt-4 flex justify-center space-x-4">
-            <Badge className="text-sm">#CSS</Badge>
-            <Badge className="text-sm">#FrontendDevelopment</Badge>
-            <Badge className="text-sm">#TailwindCSS</Badge>
-            <Badge className="text-sm">#WebDesign</Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #CSS
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #FrontendDevelopment
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #TailwindCSS
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #WebDesign
+            </Badge>
           </div>
         </header>
 
@@ -36,7 +44,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             What is Tailwind CSS?
           </h2>
           <p className="text-lg">
@@ -50,7 +58,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Why Use Tailwind CSS?
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -63,7 +71,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             How Tailwind CSS Enhances Your Workflow
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -76,7 +84,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Getting Started with Tailwind CSS
           </h2>
           <ol className="list-decimal pl-6 space-y-2">
@@ -114,7 +122,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Pro Tips for Using Tailwind CSS
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -127,7 +135,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Final Thoughts
           </h2>
           <p className="text-lg">

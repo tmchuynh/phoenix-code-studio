@@ -18,10 +18,18 @@ const BlogPage = () => {
           </h1>
           <p className="text-sm text-gray-500">By Michael Lee – June 5, 2025</p>
           <div className="mt-4 flex justify-center space-x-4">
-            <Badge className="text-sm">#JavaScript</Badge>
-            <Badge className="text-sm">#WebDevelopment</Badge>
-            <Badge className="text-sm">#Frameworks</Badge>
-            <Badge className="text-sm">#FutureTech</Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #JavaScript
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #WebDevelopment
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #Frameworks
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #FutureTech
+            </Badge>
           </div>
         </header>
 
@@ -38,7 +46,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Why JavaScript Frameworks Matter
           </h2>
           <p className="text-lg">
@@ -52,7 +60,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Emerging Trends in JavaScript Frameworks
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -65,7 +73,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             What’s Next for Developers?
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -78,7 +86,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             How to Prepare for the Future
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -91,7 +99,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Conclusion
           </h2>
           <p className="text-lg">

@@ -25,10 +25,18 @@ const BlogPage = () => {
             By Sophia White – November 20, 2024
           </p>
           <div className="mt-4 flex justify-center space-x-4">
-            <Badge className="text-sm">#EmergingTrends</Badge>
-            <Badge className="text-sm">#DigitalRevolution</Badge>
-            <Badge className="text-sm">#Technology</Badge>
-            <Badge className="text-sm">#Innovation</Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #EmergingTrends
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #DigitalRevolution
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #Technology
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #Innovation
+            </Badge>
           </div>
         </header>
 
@@ -45,7 +53,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             1. Artificial Intelligence and Machine Learning
           </h2>
           <p className="text-lg">
@@ -65,7 +73,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             2. Quantum Computing
           </h2>
           <p className="text-lg">
@@ -85,7 +93,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             3. 5G and Beyond
           </h2>
           <p className="text-lg">
@@ -105,7 +113,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             4. Blockchain Beyond Cryptocurrency
           </h2>
           <p className="text-lg">
@@ -125,7 +133,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             5. Sustainability Through Technology
           </h2>
           <p className="text-lg">
@@ -145,7 +153,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             6. The Rise of the Metaverse
           </h2>
           <p className="text-lg">
@@ -165,7 +173,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             7. Edge Computing
           </h2>
           <p className="text-lg">
@@ -185,7 +193,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             How to Stay Ahead in the Digital Revolution
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -196,7 +204,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Conclusion
           </h2>
           <p className="text-lg">

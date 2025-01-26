@@ -16,9 +16,15 @@ const BlogPage = () => {
           </h1>
           <p className="text-sm text-gray-500">By John Doe – August 15, 2025</p>
           <div className="mt-4 flex justify-center space-x-4">
-            <Badge className="text-sm">#UXUIDesign</Badge>
-            <Badge className="text-sm">#WebDesign</Badge>
-            <Badge className="text-sm">#UserExperience</Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #UXUIDesign
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #WebDesign
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #UserExperience
+            </Badge>
           </div>
         </header>
 
@@ -34,7 +40,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             What is User Experience (UX)?
           </h2>
           <p className="text-lg">
@@ -48,7 +54,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Why UX Matters in Web Design
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -61,7 +67,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Key Elements of Great UX in Web Design
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -74,7 +80,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             How to Improve UX on Your Website
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -87,7 +93,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Final Thoughts
           </h2>
           <p className="text-lg">

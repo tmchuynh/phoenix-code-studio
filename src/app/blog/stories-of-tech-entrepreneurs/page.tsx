@@ -16,10 +16,18 @@ const BlogPage = () => {
             By Ethan Garcia – August 5, 2024
           </p>
           <div className="mt-4 flex justify-center space-x-4">
-            <Badge className="text-sm">#TechEntrepreneurs</Badge>
-            <Badge className="text-sm">#StartupSuccess</Badge>
-            <Badge className="text-sm">#Innovation</Badge>
-            <Badge className="text-sm">#Entrepreneurship</Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #TechEntrepreneurs
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #StartupSuccess
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #Innovation
+            </Badge>
+            <Badge variant={"outline"} className="text-sm">
+              #Entrepreneurship
+            </Badge>
           </div>
         </header>
 
@@ -36,7 +44,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             The Journey of a Tech Entrepreneur
           </h2>
           <p className="text-lg">
@@ -69,7 +77,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Inspiring Stories of Tech Entrepreneurs
           </h2>
           {entrepreneurStories.map((entrepreneur, index) => (
@@ -90,7 +98,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Lessons from Successful Entrepreneurs
           </h2>
           <ul className="list-disc pl-6 space-y-2">
@@ -101,7 +109,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             The Future of Tech Entrepreneurship
           </h2>
           <p className="text-lg">
@@ -113,7 +121,7 @@ const BlogPage = () => {
         </section>
 
         <section>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Conclusion
           </h2>
           <p className="text-lg">
