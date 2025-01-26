@@ -8,16 +8,10 @@ export const about: { title: string; href: string; description: string; }[] = [
       "Learn more about our mission, vision, and what drives us forward.",
   },
   {
-    title: "Pricing",
-    href: "/pricing",
+    title: "Blogs",
+    href: "/blog",
     description:
-      "Explore our pricing options and find the perfect plan for your needs.",
-  },
-  {
-    title: "Payment Plans",
-    href: "/payment-plans",
-    description:
-      "Discover flexible payment plans tailored to suit different budgets.",
+      "Stay updated with the latest news, tips, and insights from our blog.",
   },
   {
     title: "FAQs",
@@ -32,10 +26,31 @@ export const about: { title: string; href: string; description: string; }[] = [
       "Read success stories and reviews from our satisfied customers.",
   },
   {
-    title: "Blogs",
-    href: "/blog",
+    title: "Past Projects",
+    href: "/past-projects",
     description:
-      "Stay updated with the latest news, tips, and insights from our blog.",
+      "Learn more about our mission, vision, and what drives us forward.",
+  },
+];
+
+export const services: { title: string; href: string; description: string; }[] = [
+  {
+    title: "Overview",
+    href: "/services",
+    description:
+      "Explore our pricing options and find the perfect plan for your needs.",
+  },
+  {
+    title: "Pricing",
+    href: "/pricing",
+    description:
+      "Explore our pricing options and find the perfect plan for your needs.",
+  },
+  {
+    title: "Payment Plans",
+    href: "/payment-plans",
+    description:
+      "Discover flexible payment plans tailored to suit different budgets.",
   },
 ];
 
@@ -969,7 +984,7 @@ export const blogs = [
 export const pastProjects = [
   {
     title: "Quiz Application",
-    img: "/images/project-image-1.jpg",
+    img: ["/images/quizlet-application.png", "/images/quizlet-app-3.png"],
     featured: true,
     description: "This is a simple Next.js project.It's a web-based quiz platform designed to offer a variety of quizzes across multiple subjects, including Chemistry, History, Math, and more. The application supports user registration, tracks progress, and allows users to select quizzes based on difficulty and subject. Users can register, reset their passwords, and manage their profiles with the ability to update personal information and choose default profile pictures. The application includes features like quiz progress tracking, score tracking, and a leaderboard to encourage competition. It also stores quiz data in localStorage, ensuring users can resume where they left off. Built with a responsive UI and accessibility features, the app provides a seamless experience across devices. Data management is handled using MySQL, Sequelize, and Next-Auth for secure user authentication and information retrieval.",
     short: "This Next.js app, a conversion of Quizlet-Plus, offers quizzes in subjects like Chemistry, History, and Math. It features user registration, progress tracking, profile management, and a leaderboard. Data is stored in localStorage, with MySQL, Sequelize, and Next-Auth handling authentication. The app is responsive and includes accessibility features for a seamless experience.",
@@ -981,7 +996,7 @@ export const pastProjects = [
   },
   {
     title: "Company Website",
-    img: "/images/project-image-1.jpg",
+    img: ["/images/iac.png", "/images/iac-1.png", "/images/iac-website.png", "/images/iac-2.png"],
     featured: true,
     description: "The International Activities Club (IAC) website is a user-friendly platform that showcases the organization's educational programs and after-school activities. It highlights the A.R.C. Initiative, focusing on hands-on learning and real-world application of classroom knowledge. The site provides detailed information about the diverse extracurricular options, such as chess, sports, and creative writing, offered to students from 1st grade through high school. With easy navigation, the website ensures parents and schools can explore IAC’s services and find enriching learning opportunities for students.",
     short: "The IAC website highlights educational programs, the A.R.C. Initiative, and after-school activities like chess, sports, and creative writing, offering enriching opportunities for students. It’s designed for easy navigation by parents and schools to explore IAC’s services.",
@@ -993,7 +1008,7 @@ export const pastProjects = [
   },
   {
     title: "Company Website",
-    img: "/images/project-image-1.jpg",
+    img: ["/images/firstgalaxy-website.png", "/images/firstgalaxy.png", "/images/firstgalaxy-1.png", "/images/firstgalaxy-2.png"],
     featured: false,
     description: `
       The FirstGalaxy NPM version Build Status website is designed to showcase the benefits of joining FirstGalaxy Inc. as a real estate agent. It provides helpful resources for starting a real estate career and offers easy access to agent listings.
