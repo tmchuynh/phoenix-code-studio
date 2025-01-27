@@ -1,10 +1,3 @@
-export interface navItem {
-  title: string;
-  url?: string;
-  icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-  items?: navItem[];
-}
-
 export interface FAQ {
   question: string;
   answer: string;
@@ -17,18 +10,63 @@ export interface CollapsibleItemProps {
   onToggle: () => void;
 }
 
-export interface TopicFilterProps {
-  topics: string[];
-  selectedTopics: string[];
-  handleTopicChange: ( topics: string[] ) => void;
-  handleOpen: ( filterType: string ) => void;
-  handleMouseLeave: () => void;
+export interface Menu {
+  title: string;
+  href: string;
+  description: string;
 }
 
-export interface DateFilterProps {
-  dates: string[];
-  selectedDates: string[];
-  setSelectedDate: ( dates: string[] ) => void;
-  handleOpen: ( filterType: string ) => void;
-  handleMouseLeave: () => void;
+
+export interface PricingTier {
+  name: string;
+  startingPrice: number;
+  info: string;
+}
+
+export interface Services {
+  name: string;
+  startingPrice: number;
+  info: string;
+  details: string;
+  pricingTiers: PricingTier[];
+}
+
+export interface PaymentPlan {
+  title: string;
+  description: string;
+  details: string[];
+  route: string;
+}
+
+export interface Testimonial {
+  name: string;
+  featured: boolean;
+  position: string;
+  image: string;
+  quote: string;
+}
+
+export interface BlogPost {
+  title: string;
+  author: string;
+  date: string;
+  img: string;
+  featured: boolean;
+  topics: string[];
+  excerpt: string;
+  slug: string;
+}
+
+export interface Project {
+  title: string;
+  img: string[];
+  featured: boolean;
+  description: string;
+  short: string;
+  tags: string[];
+  languages: string[];
+  frameworks?: string[];
+  technologies?: string[];
+  githubLink?: string;
+  liveLink?: string;
 }

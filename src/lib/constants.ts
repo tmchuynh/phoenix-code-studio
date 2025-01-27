@@ -1,6 +1,6 @@
-import { FAQ } from "./interfaces";
+import { BlogPost, FAQ, Menu, PaymentPlan, Project, Services, Testimonial } from "./interfaces";
 
-export const about: { title: string; href: string; description: string; }[] = [
+export const about: Menu[] = [
   {
     title: "About",
     href: "/about",
@@ -33,7 +33,7 @@ export const about: { title: string; href: string; description: string; }[] = [
   },
 ];
 
-export const services: { title: string; href: string; description: string; }[] = [
+export const services: Menu[] = [
   {
     title: "Overview",
     href: "/services",
@@ -54,7 +54,7 @@ export const services: { title: string; href: string; description: string; }[] =
   },
 ];
 
-export const websites: { title: string; href: string; description: string; }[] = [
+export const websites: Menu[] = [
   {
     title: "SEO Optimization",
     href: "/web/seo-optimization",
@@ -75,7 +75,7 @@ export const websites: { title: string; href: string; description: string; }[] =
   },
 ];
 
-export const content: { title: string; href: string; description: string; }[] = [
+export const content: Menu[] = [
   {
     title: "Website Copywriting",
     href: "/content/website-copywriting",
@@ -114,7 +114,7 @@ export const content: { title: string; href: string; description: string; }[] = 
   },
 ];
 
-export const companies: { title: string; href: string; description: string; }[] = [
+export const companies: Menu[] = [
   {
     title: "Company Rebranding",
     href: "/company/company-rebranding",
@@ -153,7 +153,7 @@ export const companies: { title: string; href: string; description: string; }[] 
   },
 ];
 
-export const websiteServices = [
+export const websiteServices: Services[] = [
   {
     name: "User Experience Design",
     startingPrice: 3500,
@@ -223,7 +223,7 @@ export const websiteServices = [
   }
 ];
 
-export const companySpecificServices = [
+export const companySpecificServices: Services[] = [
   {
     name: "Company Rebranding",
     startingPrice: 5000,
@@ -389,8 +389,7 @@ export const companySpecificServices = [
   },
 ];
 
-
-export const contentCreationServices = [
+export const contentCreationServices: Services[] = [
   {
     name: "Website Copywriting",
     startingPrice: 1500,
@@ -669,7 +668,6 @@ export const contentCreationServices = [
   }
 ];
 
-
 export const FAQs: FAQ[] = [
   {
     question: "What sets Phoenix Code Studio apart?",
@@ -724,7 +722,7 @@ export const FAQs: FAQ[] = [
   }
 ];
 
-export const paymentPlans = [
+export const paymentPlans: PaymentPlan[] = [
   {
     title: "Basic Plan",
     description: "Ideal for small projects or businesses just getting started, this plan offers straightforward, flexible payment options that help you manage your budget effectively.",
@@ -767,7 +765,7 @@ export const paymentPlans = [
   }
 ];
 
-export const testimonials = [
+export const testimonials: Testimonial[] = [
   {
     name: "John Doe",
     featured: true,
@@ -802,7 +800,7 @@ export const testimonials = [
   },
 ];
 
-export const blogs = [
+export const blogs: BlogPost[] = [
   {
     title: "The Importance of User Experience in Web Design",
     author: "John Doe",
@@ -981,7 +979,7 @@ export const blogs = [
   },
 ];
 
-export const pastProjects = [
+export const pastProjects: Project[] = [
   {
     title: "Quiz Application",
     img: ["/images/quizlet-application.png", "/images/quizlet-app-3.png"],
