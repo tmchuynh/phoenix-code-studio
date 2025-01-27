@@ -27,8 +27,8 @@ body {
     --accent-1: #866c46;
     --accent-2: #415a77;
     --accent-3: #3a5a40;
-    --accent-4: #d1be9c;
-    --accent-5: #82673c;
+    --accent-4: #82673c;
+    --accent-5: #763f20;
     --accent-foreground: #ffffff;
     --destructive: #ff3e3e;
     --destructive-foreground: #1a1a1a;
@@ -75,7 +75,7 @@ body {
     --accent-2: #778da9;
     --accent-3: #a3b18a;
     --accent-4: #aa998f;
-    --accent-5: #bb9457;
+    --accent-5: #ebcebb;
     --accent-foreground: #ffffff;
     --destructive: #ff3e3edf;
     --destructive-foreground: #0f0f0f;

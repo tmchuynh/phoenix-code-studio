@@ -151,7 +151,7 @@ const PastProjectsPage: FC = () => {
   }, [selectedLanguages, selectedFrameworks, selectedTags]);
 
   return (
-    <main className="w-11/12 mx-auto py-6">
+    <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Past Projects
       </h1>

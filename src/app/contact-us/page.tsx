@@ -14,16 +14,23 @@ import {
   contentCreationServices,
   paymentPlans,
 } from "@/lib/constants";
+import { BpCheckbox } from "@/components/ui/checkbox-custom";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { FaChevronDown } from "react-icons/fa";
 
 const ContactUsPage: FC = () => {
-  // State for form fields
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
-    websiteServices: [],
-    contentCreationServices: [],
+    websiteServices: [] as string[],
+    contentCreationServices: [] as string[],
     paymentPlan: "",
   });
 
@@ -47,32 +54,32 @@ const ContactUsPage: FC = () => {
 
     if (name === "websiteServices") {
       setShowWebsiteServices(checked);
-      if (!checked)
-        setFormData((prevState) => ({ ...prevState, websiteServices: [] }));
     } else if (name === "contentCreationServices") {
       setShowContentCreationServices(checked);
-      if (!checked)
-        setFormData((prevState) => ({
-          ...prevState,
-          contentCreationServices: [],
-        }));
     }
   };
 
   const handleServiceSelect = (
-    e: React.ChangeEvent<{ value: unknown }>,
-    serviceType: string
+    e: React.ChangeEvent<HTMLInputElement>,
+    serviceType: "websiteServices" | "contentCreationServices"
   ) => {
-    const { value } = e.target;
-    setFormData((prevState) => ({
-      ...prevState,
-      [serviceType]: typeof value === "string" ? value.split(",") : value,
-    }));
+    const { value, checked } = e.target;
+    setFormData((prevState) => {
+      const updatedServices = checked
+        ? [...prevState[serviceType], value]
+        : prevState[serviceType].filter((service) => service !== value);
+
+      return {
+        ...prevState,
+        [serviceType]: updatedServices,
+      };
+    });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic
+    console.log(formData);
+
     setSubmitted(true);
     setFormData({
       name: "",
@@ -86,32 +93,31 @@ const ContactUsPage: FC = () => {
   };
 
   return (
-    <main className="w-11/12 mx-auto py-6">
+    <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Contact Us
       </h1>
-      <p className="text-center text-lg my-4">
-        We would love to hear from you! Please fill out the form below, and
-        we'll get back to you as soon as possible.
+      <p className="text-lg my-4">
+        We would love to hear from you! Whether you have questions about our
+        services, need more information, or are ready to start your next
+        project, we’re here to help. Please fill out the form below, and one of
+        our team members will get back to you as soon as possible.
       </p>
 
       {/* Contact Form */}
       <section className="my-8">
-        <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <div className="py-6 p-6">
           {submitted && (
-            <div className="bg-green-500 text-white p-4 rounded-md mb-4">
+            <div className="p-4 mb-4">
               <p>
                 Thank you for contacting us! We will get back to you shortly.
               </p>
             </div>
           )}
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="w-full flex flex-col">
             {/* Name */}
             <div className="mb-4">
-              <label
-                htmlFor="name"
-                className="block text-sm font-semibold text-gray-700"
-              >
+              <label htmlFor="name" className="block text-lg font-semibold">
                 Name
               </label>
               <input
@@ -121,16 +127,13 @@ const ContactUsPage: FC = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full p-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
 
             {/* Email */}
             <div className="mb-4">
-              <label
-                htmlFor="email"
-                className="block text-sm font-semibold text-gray-700"
-              >
+              <label htmlFor="email" className="block text-lg font-semibold">
                 Email
               </label>
               <input
@@ -140,16 +143,13 @@ const ContactUsPage: FC = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full p-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
 
             {/* Subject */}
             <div className="mb-4">
-              <label
-                htmlFor="subject"
-                className="block text-sm font-semibold text-gray-700"
-              >
+              <label htmlFor="subject" className="block text-lg font-semibold">
                 Subject
               </label>
               <input
@@ -159,16 +159,13 @@ const ContactUsPage: FC = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full p-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
 
             {/* Message */}
             <div className="mb-4">
-              <label
-                htmlFor="message"
-                className="block text-sm font-semibold text-gray-700"
-              >
+              <label htmlFor="message" className="block text-lg font-semibold">
                 Message
               </label>
               <textarea
@@ -176,17 +173,15 @@ const ContactUsPage: FC = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                required
                 rows={4}
-                className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="w-full p-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               />
             </div>
 
             {/* Website Services Section */}
             <div className="mb-4">
-              <label className="inline-flex items-center text-sm font-semibold text-gray-700">
-                <input
-                  type="checkbox"
+              <label className="inline-flex items-center text-lg font-semibold">
+                <BpCheckbox
                   name="websiteServices"
                   checked={showWebsiteServices}
                   onChange={handleServiceChange}
@@ -195,20 +190,18 @@ const ContactUsPage: FC = () => {
                 Website Services
               </label>
               {showWebsiteServices && (
-                <div className="pl-4">
+                <div className="pl-4 grid grid-cols md:grid-cols-2 lg:grid-cols-3">
                   {websiteServices.map((service, index) => (
-                    <div key={index} className="">
-                      <label className="inline-flex items-center text-sm font-semibold text-gray-700">
-                        <input
-                          type="checkbox"
-                          name={service.name}
+                    <div key={index} className="my-2">
+                      <label className="inline-flex items-center text-lg font-semibold text-accent-1">
+                        <BpCheckbox
+                          value={service.name}
                           checked={formData.websiteServices.includes(
                             service.name
                           )}
                           onChange={(e) =>
                             handleServiceSelect(e, "websiteServices")
                           }
-                          value={service.name}
                           className="mr-2"
                         />
                         {service.name}
@@ -221,9 +214,8 @@ const ContactUsPage: FC = () => {
 
             {/* Content Creation Services Section */}
             <div className="mb-4">
-              <label className="inline-flex items-center text-sm font-semibold text-gray-700">
-                <input
-                  type="checkbox"
+              <label className="inline-flex items-center text-lg font-semibold">
+                <BpCheckbox
                   name="contentCreationServices"
                   checked={showContentCreationServices}
                   onChange={handleServiceChange}
@@ -232,20 +224,18 @@ const ContactUsPage: FC = () => {
                 Content Creation Services
               </label>
               {showContentCreationServices && (
-                <div className="pl-4">
+                <div className="pl-4 grid grid-cols md:grid-cols-2 lg:grid-cols-3">
                   {contentCreationServices.map((service, index) => (
-                    <div key={index} className="">
-                      <label className="inline-flex items-center text-sm font-semibold text-gray-700">
-                        <input
-                          type="checkbox"
-                          name={service.name}
+                    <div key={index} className="my-2">
+                      <label className="inline-flex items-center text-lg font-semibold text-accent-1">
+                        <BpCheckbox
+                          value={service.name}
                           checked={formData.contentCreationServices.includes(
                             service.name
                           )}
                           onChange={(e) =>
                             handleServiceSelect(e, "contentCreationServices")
                           }
-                          value={service.name}
                           className="mr-2"
                         />
                         {service.name}
@@ -256,55 +246,38 @@ const ContactUsPage: FC = () => {
               )}
             </div>
 
-            {/* Payment Plan Dropdown */}
             <div className="mb-4">
-              <FormControl fullWidth>
-                <InputLabel id="payment-plan-label">
-                  Select Payment Plan
-                </InputLabel>
-                <Select
-                  labelId="payment-plan-label"
-                  value={formData.paymentPlan}
-                  onChange={(e) =>
-                    setFormData((prevState) => ({
-                      ...prevState,
-                      paymentPlan: e.target.value,
-                    }))
-                  }
-                  input={<OutlinedInput label="Select Payment Plan" />}
-                >
+              <DropdownMenu className="w-full">
+                <DropdownMenuTrigger asChild>
+                  <button className="w-full text-start p-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary flex items-center justify-between">
+                    {formData.paymentPlan || "Select a Payment Plan"}
+                    <FaChevronDown />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-52 sm:w-64 md:w-96 lg:w-[50em] 2xl:w-[100em]">
                   {paymentPlans.map((plan, idx) => (
-                    <MenuItem key={idx} value={plan.title}>
+                    <DropdownMenuItem
+                      key={idx}
+                      onClick={() => {
+                        setFormData((prevState) => ({
+                          ...prevState,
+                          paymentPlan: plan.title, // Update selected payment plan
+                        }));
+                      }}
+                    >
                       {plan.title}
-                    </MenuItem>
+                    </DropdownMenuItem>
                   ))}
-                </Select>
-              </FormControl>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
 
             {/* Submit Button */}
-            <Button
-              type="submit"
-              className="w-full py-3 mt-4 text-white bg-primary rounded-md hover:bg-primary-dark"
-            >
+            <Button type="submit" className="w-1/2 mx-auto">
               Submit
             </Button>
           </form>
         </div>
-      </section>
-
-      {/* Additional Links */}
-      <section className="my-8 text-center">
-        <p className="text-lg mt-2">
-          <a href="/payment-plans" className="text-primary underline">
-            View Our Payment Plans
-          </a>
-        </p>
-        <p className="text-lg mt-2">
-          <a href="/contracts" className="text-primary underline">
-            View Example Contracts
-          </a>
-        </p>
       </section>
     </main>
   );

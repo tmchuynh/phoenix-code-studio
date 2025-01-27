@@ -45,7 +45,7 @@ import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 const WhyWritingMattersBlog = () => {
   return (
-    <div className="w-11/12 mx-auto py-6">
+    <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
         <header className="text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
