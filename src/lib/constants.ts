@@ -705,24 +705,6 @@ export const contentCreationServices: Services[] = [
       }
     ]
   },
-  {
-    name: "Proposal Writing",
-    startingPrice: 500,
-    info: "Our proposal writing services are designed to articulate your ideas and goals with clarity and persuasion. We craft customized, results-oriented proposals that help you secure clients, win bids, or make compelling cases for funding. With a focus on professionalism, strategic impact, and tailored messaging, our proposals give you the competitive edge needed to achieve your objectives.",
-    details: "Our team specializes in creating professional, compelling proposals tailored to your needs. From business and academic to government projects, we enhance your chances of success with meticulously crafted documents.",
-    pricingTiers: [
-      {
-        name: "Standard Proposals (1-3 pages)",
-        startingPrice: 500,
-        info: "Starting at $500, this tier is ideal for short, focused proposals that require clear and concise communication."
-      },
-      {
-        name: "In-Depth Proposals (5-10 pages)",
-        startingPrice: 1500,
-        info: "Starting at $1,500, this tier is designed for comprehensive proposals that require detailed analysis, thorough research, and robust arguments."
-      }
-    ]
-  }
 ];
 
 export const FAQs: FAQ[] = [
