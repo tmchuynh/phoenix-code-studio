@@ -139,6 +139,14 @@ const NavBar = () => {
               </MenubarSub>
             </MenubarContent>
           </MenubarMenu>
+          <MenubarMenu>
+            <a
+              onClick={() => router.push("/contact-us")}
+              className="text-sm md:text-md lg:text-xl mx-4 hover:text-primary"
+            >
+              Contact Us
+            </a>
+          </MenubarMenu>
           <ModeButton />
         </div>
       </Menubar>
