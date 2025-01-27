@@ -15,7 +15,9 @@ const aboutUs = () => {
   return (
     <main className="w-11/12 mx-auto py-6">
       <div className="py-3">
-        <h1>About Us</h1>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
+          About Us
+        </h1>
         <p>
           At Phoenix Code Studio, we merge cultural sophistication with
           cutting-edge technology to deliver bespoke digital experiences that

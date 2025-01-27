@@ -16,7 +16,7 @@ const Testimonials = () => {
     <>
       {!isSmallScreen && (
         <section className="my-16 mx-auto w-9/12">
-          <h2 className="text-3xl font-semibold text-center mb-6 text-primary">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             What Our Clients Say
           </h2>
           <Swiper spaceBetween={30} slidesPerView={1} className="h-full">

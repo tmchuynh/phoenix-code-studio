@@ -7,9 +7,9 @@ export default function Banner() {
   return (
     <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-muted text-center p-3">
       <div className="flex flex-wrap items-center justify-center w-full align-middle gap-x-4">
-        <p className="text-sm/6 text-background m-0">
+        <p className="text-sm m-0">
           <strong className="font-semibold">
-            We're hiring! Let us know if you're interested!
+            Join Our Team! Exciting Opportunities Await!
           </strong>
           <svg
             viewBox="0 0 2 2"
@@ -18,7 +18,8 @@ export default function Banner() {
           >
             <circle r={1} cx={1} cy={1} />
           </svg>
-          New Sessions Start Every Three Months
+          Earn commissions based on project success and enjoy referral bonuses
+          for bringing in new clients and top talent.
         </p>
         <Button
           onClick={() => router.push("/contact-us")}
@@ -26,7 +27,7 @@ export default function Banner() {
           variant={"secondary"}
           className="group rounded-2xl px-4 mt-4 md:mt-0"
         >
-          Contact us for a free consultation and customized quote.
+          Contact us to learn more and take the first step.
           <span className="inline-block transition-transform duration-300 ease-in-out group-hover:translate-x-2">
             <LuArrowBigRightDash />
           </span>

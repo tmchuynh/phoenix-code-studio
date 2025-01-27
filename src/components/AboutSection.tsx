@@ -11,8 +11,8 @@ import { GrGrow } from "react-icons/gr";
 
 const AboutSection = () => {
   return (
-    <section className="my-16 w-full">
-      <h2 className="text-3xl font-semibold text-center mb-6 text-primary">
+    <section className="my-16 w-11/12 mx-auto">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
         Who We Are
       </h2>
       <p className="text-lg text-center max-w-4xl mx-auto mb-8">

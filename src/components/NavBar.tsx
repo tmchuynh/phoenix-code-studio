@@ -24,18 +24,14 @@ import { IoMdMenu } from "react-icons/io";
 import { ModeButton } from "./ModeButton";
 import { Button } from "./ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
-import useMediumScreen from "@/lib/useMediumScreen";
-import useSmallScreen from "@/lib/useSmallScreen";
 
 const NavBar = () => {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const isSmallScreen = useSmallScreen();
-  const isMediumScreen = useMediumScreen();
 
   return (
     <>
-      <Menubar className="md:flex h-full justify-between hidden mb-10">
+      <Menubar className="md:flex h-full justify-between hidden mb-10 w-11/12 mx-auto">
         <MenubarMenu>
           <span className="px-3">Phoenix Code Studio</span>
         </MenubarMenu>
@@ -150,7 +146,7 @@ const NavBar = () => {
       <Popover>
         <PopoverTrigger
           asChild
-          className="md:hidden"
+          className="md:hidden ml-5"
           onClick={() => {
             setIsMenuOpen(true);
           }}
@@ -165,6 +161,14 @@ const NavBar = () => {
               <span className="p-0">Phoenix Code Studio</span>
             </MenubarMenu>
             <div className="flex flex-col">
+              <MenubarMenu>
+                <a
+                  onClick={() => router.push("/")}
+                  className="text-sm md:text-md lg:text-xl mx-4"
+                >
+                  Home
+                </a>
+              </MenubarMenu>
               <MenubarMenu>
                 <div className="min-w-[12rem] flex flex-col ml-3 gap-4">
                   {about.map((about, index) => (
@@ -198,6 +202,24 @@ const NavBar = () => {
                       {service.title}
                     </MenubarItem>
                   ))}
+                  <MenubarSub>
+                    <MenubarSubTrigger className="hover:text-primary">
+                      Payment Plans
+                    </MenubarSubTrigger>
+                    <MenubarSubContent className="absolute top-10 -right-10 w-48">
+                      {paymentOptions.map((plan, index) => (
+                        <MenubarItem
+                          key={index}
+                          onClick={() => {
+                            router.push(plan.href);
+                            setIsMenuOpen(false);
+                          }}
+                        >
+                          {plan.title}
+                        </MenubarItem>
+                      ))}
+                    </MenubarSubContent>
+                  </MenubarSub>
                   <MenubarSeparator />
                   <MenubarSub>
                     <MenubarSubTrigger className="hover:text-primary">

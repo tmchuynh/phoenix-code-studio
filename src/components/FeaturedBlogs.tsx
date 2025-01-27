@@ -12,8 +12,8 @@ const FeaturedBlogs = () => {
   };
 
   return (
-    <section className="my-16 w-11/12 md:w-full mx-auto">
-      <h2 className="text-3xl font-semibold text-center mb-6 text-primary">
+    <section className="my-16 w-11/12 mx-auto">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
         Featured Blogs
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 w-full">

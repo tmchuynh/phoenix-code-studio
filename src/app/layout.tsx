@@ -40,7 +40,7 @@ export default function RootLayout({
 const MainContent = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <main className="mx-auto w-11/12 py-10 overflow-hidden">
+      <main className="mx-auto py-10 overflow-hidden">
         <Navbar />
         {children}
         <BackToTop />

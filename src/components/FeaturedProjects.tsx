@@ -12,8 +12,8 @@ const FeaturedProjects = () => {
   };
 
   return (
-    <section className="my-16">
-      <h2 className="text-3xl font-semibold text-center mb-6 text-primary">
+    <section className="my-16 w-11/12 mx-auto">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
         Featured Projects
       </h2>
       <div className="w-11/12 lg:w-full mx-auto gap-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

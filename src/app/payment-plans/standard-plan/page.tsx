@@ -7,12 +7,12 @@ const StandardPlan = () => {
   const isSmallScreen = useSmallScreen();
   const isMediumScreen = useMediumScreen();
   return (
-    <div className="mx-auto px-4 py-16">
+    <main className="my-16 w-11/12 mx-auto">
       {/* Page Header */}
-      <div className="mb-8">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+      <section className="mb-8">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
           Standard Plan
-        </h2>
+        </h1>
         {isSmallScreen && (
           <p className="text-xl">
             Perfect for medium-sized projects, providing more flexible payment
@@ -41,14 +41,14 @@ const StandardPlan = () => {
             and value you need to achieve outstanding outcomes.
           </p>
         )}
-      </div>
+      </section>
 
       {/* Features Explanation */}
-      <div className="space-y-8">
+      <section className="space-y-8">
         <div className="mb-6">
-          <h3 className="text-2xl font-semibold text-secondary mb-2">
+          <h2 className="text-2xl font-semibold text-secondary mb-2">
             Features
-          </h3>
+          </h2>
           <ul className="text-lg grid gap-4 grid-cols-1 md:grid-cols-2">
             <li className="flex items-center">
               <svg
@@ -188,78 +188,78 @@ const StandardPlan = () => {
             </li>
           </ul>
         </div>
+      </section>
 
-        {/* Pricing and Explanation */}
-        <div>
-          <h3 className="text-2xl font-semibold text-secondary mb-4">
-            How it Works
+      {/* Pricing and Explanation */}
+      <section>
+        <h2 className="text-2xl font-semibold text-secondary mb-4">
+          How it Works
+        </h2>
+        <p className="text-lg mb-4">
+          The Standard Plan is tailored for medium-sized projects, providing
+          flexible payment options that make managing your budget simple and
+          stress-free. With priority support included, we ensure your project is
+          completed on time and to the highest standards. This plan is designed
+          to give you the perfect balance of quality, efficiency, and
+          affordability.
+        </p>
+
+        {/* Split Payments into 3-6 Installments */}
+        <div className="mb-6">
+          <h3 className="text-2xl font-semibold text-tertiary mb-2">
+            Split Payments into 3-6 Installments
           </h3>
-          <p className="text-lg mb-4">
-            The Standard Plan is tailored for medium-sized projects, providing
-            flexible payment options that make managing your budget simple and
-            stress-free. With priority support included, we ensure your project
-            is completed on time and to the highest standards. This plan is
-            designed to give you the perfect balance of quality, efficiency, and
-            affordability.
+          <p className="text-lg">
+            The Standard Plan provides the option to split your payments into 3
+            to 6 installments, offering a flexible payment structure that fits
+            your budget. This allows you to spread out the cost of your project
+            over manageable intervals, making it easier to invest in
+            high-quality solutions without financial strain. By breaking
+            payments into smaller increments, you can prioritize cash flow
+            management while ensuring the project stays on track and progresses
+            without interruptions.
           </p>
-
-          {/* Split Payments into 3-6 Installments */}
-          <div className="mb-6">
-            <h4 className="text-xl font-semibold text-tertiary mb-2">
-              Split Payments into 3-6 Installments
-            </h4>
-            <p className="text-lg">
-              The Standard Plan provides the option to split your payments into
-              3 to 6 installments, offering a flexible payment structure that
-              fits your budget. This allows you to spread out the cost of your
-              project over manageable intervals, making it easier to invest in
-              high-quality solutions without financial strain. By breaking
-              payments into smaller increments, you can prioritize cash flow
-              management while ensuring the project stays on track and
-              progresses without interruptions.
-            </p>
-          </div>
-
-          {/* Priority Support During the Project */}
-          <div className="mb-6">
-            <h4 className="text-xl font-semibold text-tertiary mb-2">
-              Priority Support During the Project
-            </h4>
-            <p className="text-lg">
-              With the Standard Plan, you’ll benefit from priority support
-              throughout your project’s lifecycle. Our team is dedicated to
-              providing prompt assistance, whether it’s answering questions,
-              addressing concerns, or offering expert guidance. This level of
-              support ensures smooth project execution and gives you peace of
-              mind knowing that any challenges will be handled swiftly. With our
-              focused attention, you can stay confident and keep your project
-              moving forward efficiently.
-            </p>
-          </div>
-
-          {/* Up to 6 Months Payment Term */}
-          <div className="mb-6">
-            <h4 className="text-xl font-semibold text-tertiary mb-2">
-              Up to 6 Months Payment Term
-            </h4>
-            <p className="text-lg">
-              The Standard Plan offers a payment term of up to 6 months,
-              providing you with the flexibility to manage larger projects at
-              your own pace. This extended term is ideal for businesses looking
-              to balance their financial commitments while investing in
-              impactful solutions. With the added time to spread out payments,
-              you can focus on achieving your project’s goals without
-              compromising on quality or efficiency. This payment option ensures
-              that you can move forward with confidence, knowing your finances
-              are aligned with your project’s needs.
-            </p>
-          </div>
         </div>
-      </div>
+
+        {/* Priority Support During the Project */}
+        <div className="mb-6">
+          <h3 className="text-2xl font-semibold text-tertiary mb-2">
+            Priority Support During the Project
+          </h3>
+          <p className="text-lg">
+            With the Standard Plan, you’ll benefit from priority support
+            throughout your project’s lifecycle. Our team is dedicated to
+            providing prompt assistance, whether it’s answering questions,
+            addressing concerns, or offering expert guidance. This level of
+            support ensures smooth project execution and gives you peace of mind
+            knowing that any challenges will be handled swiftly. With our
+            focused attention, you can stay confident and keep your project
+            moving forward efficiently.
+          </p>
+        </div>
+
+        {/* Up to 6 Months Payment Term */}
+        <div className="mb-6">
+          <h3 className="text-2xl font-semibold text-tertiary mb-2">
+            Up to 6 Months Payment Term
+          </h3>
+          <p className="text-lg">
+            The Standard Plan offers a payment term of up to 6 months, providing
+            you with the flexibility to manage larger projects at your own pace.
+            This extended term is ideal for businesses looking to balance their
+            financial commitments while investing in impactful solutions. With
+            the added time to spread out payments, you can focus on achieving
+            your project’s goals without compromising on quality or efficiency.
+            This payment option ensures that you can move forward with
+            confidence, knowing your finances are aligned with your project’s
+            needs.
+          </p>
+        </div>
+      </section>
 
       {/* Call to Action Button */}
       <CallToAction />
-    </div>
+    </main>
   );
 };
 

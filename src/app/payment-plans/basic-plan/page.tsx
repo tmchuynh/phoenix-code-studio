@@ -8,12 +8,12 @@ const BasicPlan = () => {
   const isMediumScreen = useMediumScreen();
 
   return (
-    <div className="mx-auto px-4 py-16">
+    <main className="my-16 w-11/12 mx-auto">
       {/* Page Header */}
-      <div className="mb-8">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+      <section className="mb-8">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
           Basic Plan
-        </h2>
+        </h1>
         {isSmallScreen && (
           <p className="text-xl">
             Ideal for small projects or businesses just getting started. Pay as
@@ -45,14 +45,14 @@ const BasicPlan = () => {
             testing the waters of digital transformation.
           </p>
         )}
-      </div>
+      </section>
 
       {/* Features Explanation */}
-      <div className="space-y-8">
+      <section className="space-y-8">
         <div className="mb-6">
-          <h3 className="text-2xl font-semibold text-secondary mb-2">
+          <h2 className="text-2xl font-semibold text-secondary mb-2">
             Features
-          </h3>
+          </h2>
           <ul className="text-lg grid gap-4 grid-cols-1 md:grid-cols-2">
             <li className="flex items-center">
               <svg
@@ -192,76 +192,75 @@ const BasicPlan = () => {
             </li>
           </ul>
         </div>
+      </section>
 
-        {/* Pricing and Explanation */}
-        <div>
-          <h3 className="text-2xl font-semibold text-secondary mb-4">
-            How it Works
+      {/* Pricing and Explanation */}
+      <section>
+        <h2 className="text-2xl font-semibold text-secondary mb-4">
+          How it Works
+        </h2>
+        <p className="text-lg mb-4">
+          The Basic Plan allows you to start small and scale your payments as
+          you grow. You have the flexibility to choose how you want to pay based
+          on your project needs. Below is a breakdown of how each payment option
+          works:
+        </p>
+
+        {/* Pay Per Service or Milestone */}
+        <div className="mb-6">
+          <h3 className="text-2xl font-semibold text-tertiary mb-2">
+            Pay Per Service or Milestone
           </h3>
-          <p className="text-lg mb-4">
-            The Basic Plan allows you to start small and scale your payments as
-            you grow. You have the flexibility to choose how you want to pay
-            based on your project needs. Below is a breakdown of how each
-            payment option works:
+          <p className="text-lg">
+            Our "Pay Per Service or Milestone" option gives you the ultimate
+            flexibility to control your budget by paying only for what you need.
+            Whether it’s a specific task or a major project milestone, this
+            approach ensures you receive value at every stage of the project. By
+            aligning payments with tangible progress, you can confidently move
+            forward, knowing you’re investing in measurable results. This option
+            is perfect for businesses that prefer incremental progress and clear
+            deliverables.
           </p>
-
-          {/* Pay Per Service or Milestone */}
-          <div className="mb-6">
-            <h4 className="text-xl font-semibold text-tertiary mb-2">
-              Pay Per Service or Milestone
-            </h4>
-            <p className="text-lg">
-              Our "Pay Per Service or Milestone" option gives you the ultimate
-              flexibility to control your budget by paying only for what you
-              need. Whether it’s a specific task or a major project milestone,
-              this approach ensures you receive value at every stage of the
-              project. By aligning payments with tangible progress, you can
-              confidently move forward, knowing you’re investing in measurable
-              results. This option is perfect for businesses that prefer
-              incremental progress and clear deliverables.
-            </p>
-          </div>
-
-          {/* Monthly Payments */}
-          <div className="mb-6">
-            <h4 className="text-xl font-semibold text-tertiary mb-2">
-              Monthly Payments
-            </h4>
-            <p className="text-lg">
-              For those who prioritize budget predictability and financial
-              flexibility, our monthly payment option offers a convenient
-              solution. This structure allows you to spread the cost of services
-              over time, easing financial strain while maintaining steady
-              progress on your project. Monthly payments are ideal for
-              businesses that want consistent cash flow management without
-              compromising on quality or timelines. With this option, you can
-              plan ahead and focus on achieving your goals without unexpected
-              expenses.
-            </p>
-          </div>
-
-          {/* Up to 3 Months Payment Term */}
-          <div className="mb-6">
-            <h4 className="text-xl font-semibold text-tertiary mb-2">
-              Up to 3 Months Payment Term
-            </h4>
-            <p className="text-lg">
-              For larger or more complex projects, we offer payment terms of up
-              to three months to provide added flexibility. This option allows
-              you to distribute the cost over a longer period, making it easier
-              to balance your budget and allocate resources effectively. By
-              choosing this extended term, you can focus on other areas of your
-              business while still ensuring that your project progresses
-              smoothly and is completed on time. It's a practical way to manage
-              finances without compromising on results.
-            </p>
-          </div>
         </div>
-      </div>
+
+        {/* Monthly Payments */}
+        <div className="mb-6">
+          <h3 className="text-2xl font-semibold text-tertiary mb-2">
+            Monthly Payments
+          </h3>
+          <p className="text-lg">
+            For those who prioritize budget predictability and financial
+            flexibility, our monthly payment option offers a convenient
+            solution. This structure allows you to spread the cost of services
+            over time, easing financial strain while maintaining steady progress
+            on your project. Monthly payments are ideal for businesses that want
+            consistent cash flow management without compromising on quality or
+            timelines. With this option, you can plan ahead and focus on
+            achieving your goals without unexpected expenses.
+          </p>
+        </div>
+
+        {/* Up to 3 Months Payment Term */}
+        <div className="mb-6">
+          <h3 className="text-2xl font-semibold text-tertiary mb-2">
+            Up to 3 Months Payment Term
+          </h3>
+          <p className="text-lg">
+            For larger or more complex projects, we offer payment terms of up to
+            three months to provide added flexibility. This option allows you to
+            distribute the cost over a longer period, making it easier to
+            balance your budget and allocate resources effectively. By choosing
+            this extended term, you can focus on other areas of your business
+            while still ensuring that your project progresses smoothly and is
+            completed on time. It's a practical way to manage finances without
+            compromising on results.
+          </p>
+        </div>
+      </section>
 
       {/* Call to Action Button */}
       <CallToAction />
-    </div>
+    </main>
   );
 };
 
