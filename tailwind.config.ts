@@ -41,6 +41,7 @@ export default {
 					'2': 'var(--accent-2)',
 					'3': 'var(--accent-3)',
 					'4': 'var(--accent-4)',
+					'5': 'var(--accent-5)',
 					foreground: 'var(--accent-foreground)'
 				},
 				destructive: {
