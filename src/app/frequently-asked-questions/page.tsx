@@ -1,76 +1,40 @@
 "use client";
-
-import React, { FC, useState } from "react";
+import CallToAction from "@/components/CallToAction";
 import {
-  Collapsible,
-  CollapsibleTrigger,
-  CollapsibleContent,
-} from "@radix-ui/react-collapsible";
-import { FaChevronDown } from "react-icons/fa";
-import { CollapsibleItemProps } from "@/lib/interfaces";
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { FAQs } from "@/lib/constants";
-import { Button } from "@/components/ui/button";
-import router from "next/router";
+import { FC } from "react";
 
 const FAQPage: FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   return (
     <main className="w-11/12 mx-auto py-6">
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Frequently Asked Questions
       </h1>
-      <div className="space-y-4 pt-5">
-        {FAQs.map((faq, index) => (
-          <CollapsibleItem
-            key={index}
-            question={faq.question}
-            answer={faq.answer}
-            isOpen={openIndex === index}
-            onToggle={() => setOpenIndex(openIndex === index ? null : index)}
-          />
-        ))}
-      </div>
-      <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
-        <p className="my-4">
-          Ready to bring your ideas to life with professional wireframing and
-          prototyping?{" "}
-          <Button
-            variant={"link"}
-            onClick={() => {
-              router.push("/contact");
-            }}
-            className="p-0 inline-flex m-0"
-          >
-            Contact us for a free consultation.
-          </Button>
-        </p>
+      <p className="text-lg mt-4">
+        Welcome to our FAQs page! Here, you’ll find answers to some of the most
+        common questions about our services, products, and processes. Whether
+        you’re exploring what we offer, looking for guidance, or need help with
+        a specific issue, this resource is designed to provide quick and clear
+        information. If you don’t see your question here, feel free to reach out
+        — we’re always happy to assist!
+      </p>
+      <section className="mb-8">
+        <Accordion type="single" collapsible className="w-full">
+          {FAQs.map((question, index) => (
+            <AccordionItem value={`${index}`}>
+              <AccordionTrigger>{question.question}</AccordionTrigger>
+              <AccordionContent>{question.answer}</AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </section>
+      <CallToAction />
     </main>
-  );
-};
-
-const CollapsibleItem: React.FC<CollapsibleItemProps> = ({
-  question,
-  answer,
-  isOpen,
-  onToggle,
-}) => {
-  return (
-    <Collapsible open={isOpen} onOpenChange={onToggle}>
-      <CollapsibleTrigger className="flex justify-between items-center w-full text-left rounded-md focus:outline-none focus:ring-2 focus:ring-secondary p-2">
-        <span>{question}</span>
-        <FaChevronDown
-          className={`transition-transform duration-300 ${
-            isOpen ? "rotate-180" : "rotate-0"
-          }`}
-        />
-      </CollapsibleTrigger>
-      <CollapsibleContent className="p-4 rounded-md mt-2 border">
-        <p>{answer}</p>
-      </CollapsibleContent>
-    </Collapsible>
   );
 };
 

@@ -11,14 +11,12 @@ import {
 } from "@/components/ui/menubar";
 import { about, companies, content, services, websites } from "@/lib/constants";
 import { useRouter } from "next/navigation";
-import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
-import { Button } from "./ui/button";
-import { Label } from "./ui/label";
-import { FaChevronDown } from "react-icons/fa";
-import { Input } from "./ui/input";
-import { IoMdMenu } from "react-icons/io";
 import { useState } from "react";
+import { FaChevronDown } from "react-icons/fa";
+import { IoMdMenu } from "react-icons/io";
 import { ModeButton } from "./ModeButton";
+import { Button } from "./ui/button";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
 const NavBar = () => {
   const router = useRouter();

@@ -1,7 +1,5 @@
 "use client";
-
 import CallToAction from "@/components/CallToAction";
-import { SidebarSeparator } from "@/components/ui/sidebar";
 import {
   FaHandshake,
   FaHandsHelping,
