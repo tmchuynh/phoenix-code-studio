@@ -34,8 +34,12 @@ const ServicesPage: FC = () => {
           Our Services
         </h1>
         <p className="text-lg my-4">
-          Explore the services we offer. Whether it's web development or content
-          creation, we've got you covered.
+          Discover the wide range of services we offer to help your business
+          thrive. From cutting-edge web development and intuitive design to
+          impactful content creation and digital marketing solutions, we provide
+          everything you need to establish a strong online presence. Whatever
+          your goals, we’re here to deliver tailored solutions that drive
+          results and bring your vision to life.
         </p>
       </section>
 

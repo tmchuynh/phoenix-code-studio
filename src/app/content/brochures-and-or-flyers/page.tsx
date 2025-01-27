@@ -21,7 +21,7 @@ const BrochuresAndFlyersServices: FC = () => {
       </h1>
       {contentCreationServices.map((service) => {
         return (
-          <div key={service.name} className="text-center text-lg my-4">
+          <div key={service.name} className="text-lg my-4">
             {service.name === "Brochures and/or Flyers" && (
               <div>
                 <span className="mt-4">{service.info}</span>
@@ -36,9 +36,18 @@ const BrochuresAndFlyersServices: FC = () => {
           Why Brochures and Flyers Matter
         </h2>
         <p className="my-4">
-          Brochures and flyers are powerful marketing tools to showcase your
-          brand, products, or services. They are perfect for events, promotions,
-          and campaigns, leaving a lasting impression on your audience.
+          Brochures and flyers are versatile and impactful marketing tools
+          designed to effectively showcase your brand, products, or services.
+          These materials combine eye-catching designs with concise, persuasive
+          messaging to capture attention and communicate your value proposition.
+          Ideal for events, promotions, and campaigns, brochures and flyers
+          serve as tangible touchpoints that engage your audience and reinforce
+          your brand identity. Whether distributed in-person, included in mail
+          campaigns, or displayed digitally, they leave a lasting impression and
+          encourage potential customers to take action. With the right blend of
+          aesthetics and content, brochures and flyers provide an affordable and
+          efficient way to amplify your marketing efforts and connect with your
+          audience.
         </p>
         <ul className="list-disc pl-6 space-y-2">
           {brochuresFlyersBenefits.map((benefit) => (
@@ -55,8 +64,15 @@ const BrochuresAndFlyersServices: FC = () => {
           Our Brochures and Flyers Services
         </h2>
         <p className="my-4">
-          We provide end-to-end solutions for designing professional,
-          eye-catching brochures and flyers.
+          We offer comprehensive, end-to-end solutions for designing
+          professional and visually stunning brochures and flyers. From concept
+          development and content creation to layout design and final
+          production, we handle every step to ensure your marketing materials
+          are impactful and aligned with your brand identity. Our designs are
+          tailored to captivate your audience, communicate your message
+          effectively, and leave a lasting impression. Whether for events,
+          promotions, or campaigns, we deliver brochures and flyers that stand
+          out and drive results.
         </p>
         <ul className="list-disc pl-6 space-y-2">
           {brochuresFlyersServices.map((service) => (
@@ -70,10 +86,25 @@ const BrochuresAndFlyersServices: FC = () => {
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
-        <p className="my-4">
-          Most projects are completed within 3–7 business days, depending on
-          complexity.
+        <p>
+          Our brochure and flyer design process is structured to deliver
+          professional, impactful marketing materials that align with your brand
+          and goals. We begin with a consultation to understand your target
+          audience, objectives, and desired style. Next, we develop content and
+          concepts, including layouts, imagery, and messaging, to ensure a
+          cohesive and compelling design. Once approved, we create visually
+          stunning designs using modern tools and techniques, focusing on
+          readability, branding consistency, and eye-catching appeal. After
+          incorporating your feedback, we finalize the design, ensuring it’s
+          print-ready or optimized for digital distribution. Throughout the
+          process, we collaborate closely with you to achieve a polished and
+          effective result.
         </p>
+        <p className="my-4">
+          Typical brochure and flyer design projects take 1–3 weeks, depending
+          on the complexity and scope of the materials.
+        </p>
+
         <ul className="list-decimal pl-6 space-y-2">
           {brochuresFlyersProcessSteps.map((step) => (
             <li key={step.title}>

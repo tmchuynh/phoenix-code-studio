@@ -21,7 +21,7 @@ const EbookCreationServices: FC = () => {
       </h1>
       {contentCreationServices.map((service) => {
         return (
-          <div key={service.name} className="text-center text-lg my-4">
+          <div key={service.name} className="text-lg my-4">
             {service.name === "eBook Creation" && (
               <div>
                 <span className="mt-4">{service.info}</span>
@@ -34,10 +34,15 @@ const EbookCreationServices: FC = () => {
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Why E-Books Matter</h2>
         <p className="my-4">
-          E-books are a powerful way to showcase your expertise, build brand
-          authority, and provide value to your audience. Whether for lead
-          generation, education, or monetization, a well-crafted e-book can set
-          you apart.
+          E-books are an impactful tool for showcasing your expertise,
+          establishing brand authority, and delivering value to your audience.
+          Whether used for lead generation, educational purposes, or
+          monetization, a well-crafted e-book can help you stand out in a
+          competitive market. By offering in-depth insights, actionable
+          knowledge, and engaging content, e-books create a lasting impression
+          and position your brand as a trusted resource. They are a versatile
+          medium, perfect for building connections with your audience, driving
+          engagement, and supporting your business goals.
         </p>
         <ul className="list-disc pl-6 space-y-2">
           {ebookBenefits.map((benefit) => (
@@ -52,8 +57,15 @@ const EbookCreationServices: FC = () => {
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our E-Book Creation Services</h2>
         <p className="my-4">
-          We handle every aspect of e-book creation, from initial concept to
-          final design.
+          We provide end-to-end e-book creation services, managing every stage
+          of the process from initial concept development to the final polished
+          design. Our team works closely with you to understand your goals,
+          target audience, and key messaging, ensuring the content aligns with
+          your brand and objectives. From crafting compelling, well-structured
+          content to designing visually appealing layouts and covers, we deliver
+          e-books that captivate readers and communicate your expertise
+          effectively. Whether for education, lead generation, or monetization,
+          our e-book solutions are tailored to help you make a lasting impact.
         </p>
         <ul className="list-disc pl-6 space-y-2">
           {ebookServices.map((service) => (
@@ -67,11 +79,25 @@ const EbookCreationServices: FC = () => {
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
-        <p className="my-4">
-          The timeline for e-book creation depends on factors such as the topic,
-          length, complexity, target audience, and design requirements. Typical
-          projects range from 2 to 6 weeks.
+        <p>
+          Our e-book creation process is designed to deliver professional,
+          high-quality results that align with your goals and resonate with your
+          audience. We begin with a consultation to understand your objectives,
+          target audience, and the key message you want to convey. Next, we
+          develop an outline and content strategy to ensure the e-book is
+          well-organized and engaging. Once the content is written and refined,
+          our design team creates visually appealing layouts and covers,
+          incorporating your brand identity for a cohesive look. After your
+          review and feedback, we finalize the e-book, ensuring it is optimized
+          for digital distribution across multiple platforms. Throughout the
+          process, we collaborate closely with you to ensure the e-book exceeds
+          expectations.
         </p>
+        <p className="my-4">
+          Typical e-book creation projects take 4–8 weeks, depending on the
+          length and complexity of the content and design.
+        </p>
+
         <ul className="list-decimal pl-6 space-y-2">
           {ebookProcessSteps.map((step) => (
             <li key={step.title}>

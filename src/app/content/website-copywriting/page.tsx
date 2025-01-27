@@ -21,7 +21,7 @@ const WebsiteCopywritingServices: FC = () => {
       </h1>
       {contentCreationServices.map((service) => {
         return (
-          <div key={service.name} className="text-center text-lg my-4">
+          <div key={service.name} className="text-lg my-4">
             {service.name === "Website Copywriting" && (
               <div>
                 <span className="mt-4">{service.info}</span>
@@ -36,9 +36,21 @@ const WebsiteCopywritingServices: FC = () => {
           Why Website Copywriting Matters
         </h2>
         <p className="my-4">
-          Your website is often the first impression potential customers have of
-          your brand. High-quality, targeted copy ensures you capture their
-          attention, communicate your value, and guide them to take action.
+          Your website serves as the first impression many potential customers
+          will have of your brand, making it a critical touchpoint in their
+          journey. High-quality, targeted copy is essential to capture their
+          attention, effectively communicate your unique value proposition, and
+          build trust. By engaging visitors with clear, compelling messaging,
+          your website not only informs but also guides them toward meaningful
+          actions, such as making a purchase, signing up, or reaching out for
+          more information.Your website serves as the first impression many
+          potential customers will have of your brand, making it a critical
+          touchpoint in their journey. High-quality, targeted copy is essential
+          to capture their attention, effectively communicate your unique value
+          proposition, and build trust. By engaging visitors with clear,
+          compelling messaging, your website not only informs but also guides
+          them toward meaningful actions, such as making a purchase, signing up,
+          or reaching out for more information.
         </p>
         <ul className="list-disc pl-6 space-y-2">
           {websiteCopywritingBenefits.map((benefit) => (
@@ -55,8 +67,13 @@ const WebsiteCopywritingServices: FC = () => {
           Our Website Copywriting Services
         </h2>
         <p className="my-4">
-          We provide tailored website copywriting services to meet your business
-          goals and resonate with your audience.
+          We offer tailored website copywriting services designed to align with
+          your business goals and connect with your audience. By crafting clear,
+          engaging, and SEO-optimized content, we ensure your messaging
+          effectively communicates your brand’s value and inspires action.
+          Whether you’re looking to attract new customers, boost conversions, or
+          enhance your online presence, our copywriting solutions are customized
+          to resonate with your target audience and deliver measurable results.
         </p>
         <ul className="list-disc pl-6 space-y-2">
           {websiteCopywritingServices.map((service) => (
@@ -70,10 +87,23 @@ const WebsiteCopywritingServices: FC = () => {
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
+        <p>
+          Our website copywriting process is designed to deliver high-quality,
+          tailored content that aligns with your business goals and engages your
+          audience. We begin with a consultation to understand your brand,
+          target audience, and objectives. Next, we analyze your existing
+          website (if applicable) and perform research to identify key topics,
+          keywords, and SEO opportunities. Once we’ve developed a content
+          strategy, we craft clear, compelling, and optimized copy for each
+          page, ensuring it reflects your brand’s voice and resonates with your
+          audience. After completing the drafts, we collaborate with you for
+          feedback and make revisions to ensure the content meets your
+          expectations. Finally, we provide the finalized copy, ready for
+          implementation on your website.
+        </p>
         <p className="my-4">
-          Project timelines depend on the number of pages, complexity of the
-          content, and SEO requirements. Typical timelines range from 1 to 3
-          weeks.
+          Typical website copywriting projects take 2–6 weeks, depending on the
+          number of pages, content complexity, and SEO requirements.
         </p>
         <ul className="list-decimal pl-6 space-y-2">
           {processStepsCopywriting.map((step) => (

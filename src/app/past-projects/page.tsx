@@ -156,7 +156,12 @@ const PastProjectsPage: FC = () => {
         Past Projects
       </h1>
       <p className="text-lg my-4">
-        Check out some of the projects I've worked on in the past.
+        Take a look at some of the projects we've had the privilege to work on.
+        Each one reflects a unique challenge and solution, showcasing my
+        expertise in crafting innovative, functional, and visually appealing
+        designs. From dynamic websites to user-friendly applications, these
+        projects highlight my commitment to delivering high-quality results that
+        meet diverse client needs and goals.
       </p>
 
       {/* Filter Controls */}

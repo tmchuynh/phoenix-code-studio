@@ -198,7 +198,13 @@ const BlogDisplayPage: FC = () => {
         Our Latest Blogs
       </h1>
       <p className="text-lg mt-4">
-        Stay up-to-date with our latest insights and trends in web development.
+        Stay informed with our latest insights, tips, and trends in web
+        development. From cutting-edge technologies and design best practices to
+        practical strategies for enhancing user experience and driving online
+        growth, we share valuable knowledge to keep you ahead in the
+        ever-evolving digital landscape. Explore expert advice, industry
+        updates, and innovative ideas to elevate your web presence and achieve
+        your business goals.
       </p>
 
       {/* Filter Options */}

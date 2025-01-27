@@ -11,8 +11,11 @@ const PricingPage: FC = () => {
         Our Pricing and Service Tiers
       </h1>
       <p className="text-lg my-4">
-        Explore our pricing options and choose the right service tier for your
-        needs.
+        Explore our flexible pricing options designed to suit a variety of needs
+        and budgets. Whether you're looking for a basic package or a
+        comprehensive solution, we offer service tiers that provide exceptional
+        value and scalability. Choose the plan that aligns with your goals, and
+        let us help you achieve success with tailored, high-quality services.
       </p>
 
       {/* Service 1: Website Design */}

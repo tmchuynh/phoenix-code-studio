@@ -1,12 +1,19 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { paymentPlans } from "@/lib/constants";
+import { useTheme } from "next-themes";
 
 const PaymentPlansPage: FC = () => {
   const router = useRouter();
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <main className="w-11/12 mx-auto py-6">
@@ -16,8 +23,12 @@ const PaymentPlansPage: FC = () => {
           Our Payment Plans
         </h1>
         <p className="text-lg mt-4">
-          Flexible payment options tailored to fit your budget and project
-          needs. Choose the plan that works best for you.
+          We offer flexible payment options designed to accommodate your budget
+          and project requirements. Whether you prefer a pay-as-you-go model or
+          an extended payment plan, our options are tailored to provide
+          convenience and financial flexibility. Choose the plan that works best
+          for you, and let us bring your vision to life seamlessly and
+          affordably.
         </p>
       </header>
 
@@ -41,7 +52,8 @@ const PaymentPlansPage: FC = () => {
 
               {/* Learn More Button */}
               <Button
-                className="m-7 w-2/3 mx-auto"
+                variant={theme === "dark" ? "outline" : "secondary"}
+                className="my-7 w-1/3 self-end"
                 onClick={() => {
                   router.push(plan.route);
                 }}

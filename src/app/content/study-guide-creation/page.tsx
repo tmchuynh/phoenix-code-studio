@@ -21,7 +21,7 @@ const StudyGuideCreation: FC = () => {
       </h1>
       {contentCreationServices.map((service) => {
         return (
-          <div key={service.name} className="text-center text-lg my-4">
+          <div key={service.name} className="text-lg my-4">
             {service.name === "Study Guide Creation" && (
               <div>
                 <span className="mt-4">{service.info}</span>
@@ -34,10 +34,15 @@ const StudyGuideCreation: FC = () => {
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Why Study Guides Matter</h2>
         <p className="my-4">
-          Study guides are essential tools for organizing information,
-          reinforcing learning, and improving academic performance. Whether for
-          students, professionals, or educators, professionally crafted study
-          guides make complex concepts accessible and easy to retain.
+          Study guides are invaluable resources for organizing information,
+          reinforcing learning, and boosting academic performance. Whether
+          tailored for students, professionals, or educators, professionally
+          crafted study guides break down complex concepts into digestible and
+          easy-to-understand formats. By providing structured content, clear
+          explanations, and effective learning strategies, study guides help
+          users focus on key topics and improve retention. These tools are
+          essential for building confidence, enhancing comprehension, and
+          achieving success in any learning environment.
         </p>
         <ul className="list-disc pl-6 space-y-2">
           {studyGuideCreationBenefits.map((benefit) => (
@@ -52,8 +57,15 @@ const StudyGuideCreation: FC = () => {
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Study Guide Services</h2>
         <p className="my-4">
-          We create customized study guides designed to meet specific learning
-          objectives and audience needs.
+          We design customized study guides tailored to meet specific learning
+          objectives and the unique needs of your audience. By focusing on
+          clarity, organization, and accessibility, our study guides break down
+          complex topics into manageable sections, making them easy to
+          understand and retain. Whether for academic purposes, professional
+          certification, or educational training, we create resources that align
+          with your goals and enhance the learning experience. Each guide is
+          carefully crafted to support effective study habits, reinforce key
+          concepts, and empower learners to achieve their full potential.
         </p>
         <ul className="list-disc pl-6 space-y-2">
           {studyGuideCreationServices.map((service) => (
@@ -67,9 +79,22 @@ const StudyGuideCreation: FC = () => {
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>{" "}
+        <p>
+          Our study guide creation process is designed to deliver clear,
+          focused, and effective learning materials. We begin with a
+          consultation to understand your learning objectives, audience, and
+          subject matter. Next, we outline the content, ensuring it is
+          well-structured and aligned with your goals. Our team develops
+          concise, easy-to-follow materials, incorporating visuals, summaries,
+          and learning aids to enhance comprehension and retention. After
+          rigorous review and editing, we finalize the study guide, ensuring it
+          meets quality standards and is optimized for your chosen format,
+          whether digital or print. Throughout the process, we collaborate with
+          you to ensure the guide fully supports your audience’s needs.
+        </p>
         <p className="my-4">
-          Most study guides are completed within 1–3 weeks, depending on
-          complexity and length.
+          Typical study guide creation projects take 2–4 weeks, depending on the
+          complexity of the subject and the scope of the content.
         </p>
         <ul className="list-decimal pl-6 space-y-2">
           {studyGuideCreationProcessSteps.map((step) => (

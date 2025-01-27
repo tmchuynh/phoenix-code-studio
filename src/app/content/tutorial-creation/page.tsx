@@ -21,7 +21,7 @@ const TutorialCreationServices: FC = () => {
       </h1>
       {contentCreationServices.map((service) => {
         return (
-          <div key={service.name} className="text-center text-lg my-4">
+          <div key={service.name} className="text-lg my-4">
             {service.name === "Tutorial Creation" && (
               <div>
                 <span className="mt-4">{service.info}</span>
@@ -34,10 +34,14 @@ const TutorialCreationServices: FC = () => {
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Why Tutorials Matter</h2>
         <p className="my-4">
-          Tutorials are a powerful way to guide users, simplify complex tasks,
-          and enhance learning experiences. Whether for software, hardware, or
-          specific skills, professionally crafted tutorials build trust and
-          ensure a seamless user experience.
+          Tutorials are an effective tool for guiding users through complex
+          tasks, simplifying processes, and enhancing learning experiences.
+          Whether for software, hardware, or skill development, well-designed
+          tutorials provide step-by-step instructions that are easy to follow
+          and understand. By offering clear guidance and actionable insights,
+          professionally crafted tutorials not only build user confidence and
+          trust but also contribute to a seamless and engaging user experience,
+          fostering better understanding and long-term retention.
         </p>
         <ul className="list-disc pl-6 space-y-2">
           {tutorialBenefits.map((benefit) => (
@@ -54,8 +58,14 @@ const TutorialCreationServices: FC = () => {
           Our Tutorial Creation Services
         </h2>
         <p className="my-4">
-          We specialize in creating comprehensive and user-friendly tutorials
-          tailored to your audience.
+          We specialize in designing comprehensive, user-friendly tutorials that
+          are perfectly tailored to meet the needs of your audience. Whether you
+          need step-by-step guides for software, hardware, or skill-building,
+          our tutorials simplify complex concepts and ensure clarity at every
+          stage. By combining concise instructions with visuals, interactive
+          elements, and accessible language, we create engaging learning
+          experiences that empower users, build confidence, and foster trust in
+          your brand.
         </p>
         <ul className="list-disc pl-6 space-y-2">
           {tutorialServices.map((service) => (
@@ -69,9 +79,24 @@ const TutorialCreationServices: FC = () => {
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>{" "}
+        <p>
+          Our tutorial creation process is designed to deliver clear, engaging,
+          and effective learning materials that align with your goals and
+          audience needs. We begin with a consultation to understand your
+          objectives, target users, and the complexity of the subject matter.
+          Next, we research and outline the tutorial content, ensuring it is
+          logically structured and easy to follow. Our team then creates
+          step-by-step instructions, incorporating visuals, examples, and
+          interactive elements to enhance understanding. After thorough review
+          and testing for accuracy, clarity, and usability, we finalize the
+          tutorial and deliver it in the desired format, whether video, digital
+          guide, or interactive resource. Throughout the process, we collaborate
+          with you to ensure the tutorial meets your expectations and delivers
+          value to your audience.
+        </p>
         <p className="my-4">
-          Most tutorials are completed within 1–3 weeks, depending on complexity
-          and format.
+          Typical tutorial creation projects take 1–4 weeks, depending on the
+          complexity and scope of the material.
         </p>
         <ul className="list-decimal pl-6 space-y-2">
           {processStepsTutorial.map((step) => (

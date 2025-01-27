@@ -83,8 +83,32 @@ export const content: Menu[] = [
       "Create compelling and optimized website content that drives engagement and conversions.",
   },
   {
+    title: "Brochures and/or Flyers",
+    href: "/content/brochures-and-or-flyers",
+    description:
+      "Create compelling and optimized website content that drives engagement and conversions.",
+  },
+  {
+    title: "eBooks",
+    href: "/content/ebook-creation",
+    description:
+      "Create compelling and optimized website content that drives engagement and conversions.",
+  },
+  {
+    title: "Training Manual & Onboarding Paperwork",
+    href: "/content/training-manual-and-onboarding-paperwork-creation",
+    description:
+      "Create compelling and optimized website content that drives engagement and conversions.",
+  },
+  {
     title: "Product Guides/Manuals",
     href: "/content/product-guides-manuals",
+    description:
+      "Develop clear and detailed guides or manuals to help users understand your products.",
+  },
+  {
+    title: "Newsletters",
+    href: "/content/newsletters",
     description:
       "Develop clear and detailed guides or manuals to help users understand your products.",
   },
@@ -103,6 +127,12 @@ export const content: Menu[] = [
   {
     title: "Online Courses",
     href: "/content/online-courses",
+    description:
+      "Design and develop comprehensive online courses to educate and inspire learners.",
+  },
+  {
+    title: "Study Guides",
+    href: "/content/study-guide-creation",
     description:
       "Design and develop comprehensive online courses to educate and inspire learners.",
   },
@@ -176,7 +206,7 @@ export const websiteServices: Services[] = [
   {
     name: "Wireframing & Prototyping",
     startingPrice: 1000,
-    info: "Our wireframing and prototyping services bring your ideas to life while ensuring designs are user-friendly and practical. We create low-fidelity wireframes to map structure and navigation, and high-fidelity prototypes to simulate real interactions. These tools help you visualize and refine the user journey, saving time and ensuring functionality before development.",
+    info: "Our wireframing and prototyping services turn your ideas into tangible, user-centric designs. Starting with low-fidelity wireframes, we outline the structure, navigation, and layout to establish a clear blueprint. Then, we develop high-fidelity prototypes that simulate real interactions, providing a dynamic preview of the final product. These tools not only help you visualize and refine the user journey but also streamline the design process, saving time and ensuring practicality and functionality before full-scale development begins.",
     details:
       "We provide wireframing and prototyping services to help you visualize user interactions and refine design ideas before development begins. These tools are essential for identifying usability issues and ensuring an optimal user experience.",
     pricingTiers: [
@@ -200,7 +230,7 @@ export const websiteServices: Services[] = [
   {
     name: "SEO Optimization",
     startingPrice: 1000,
-    info: "Our SEO optimization services boost your website’s visibility in search engines and drive organic traffic. Using strategies like keyword research, on-page optimization, content enhancement, and link-building, we help your site rank higher in search results. By staying current with search engine algorithms, we ensure you maintain a competitive edge in your industry.",
+    info: "Our SEO optimization services are designed to enhance your website's visibility, attract organic traffic, and improve search engine rankings. Through comprehensive keyword research, on-page optimization, content improvement, and strategic link-building, we tailor solutions to meet your specific goals. By staying up-to-date with the latest search engine algorithms and best practices, we ensure your website remains competitive and relevant in an ever-changing digital landscape. Let us help you reach your audience effectively and maximize your online potential.",
     details:
       "Our SEO optimization services focus on enhancing your website’s visibility in search engines. From keyword research to link-building, we implement effective techniques to drive organic traffic and improve your site's ranking and overall performance.",
     pricingTiers: [
@@ -227,7 +257,7 @@ export const companySpecificServices: Services[] = [
   {
     name: "Company Rebranding",
     startingPrice: 5000,
-    info: "Our comprehensive rebranding services are tailored to revitalize your company's identity with a fresh, modern approach that deeply connects with your audience and aligns seamlessly with your business objectives. We specialize in redefining both the visual and strategic elements of your brand, including logo design, messaging, and overall brand strategy. By crafting a unique and cohesive identity, we help your business stand out in a competitive market, foster customer trust, and create a lasting impression that drives growth and success.",
+    info: "Our comprehensive rebranding services are designed to breathe new life into your company’s identity, delivering a fresh, modern transformation that resonates deeply with your audience and aligns perfectly with your business goals. We specialize in redefining every aspect of your brand, from striking logo designs and compelling messaging to a cohesive, forward-thinking brand strategy. By crafting a unique and authentic identity, we help your business rise above the competition, build lasting customer trust, and leave a powerful impression that drives meaningful growth and long-term success.",
     details:
       "Our rebranding services include a full strategy to redefine your brand image. From logo redesign to complete brand strategies, we ensure your company stands out and connects with your audience.",
     pricingTiers: [
@@ -256,7 +286,7 @@ export const companySpecificServices: Services[] = [
   {
     name: "Custom Website Design",
     startingPrice: 2500,
-    info: "We craft custom website designs that are perfectly aligned with your business goals and reflect your unique brand identity. Each website we create is fully responsive, ensuring seamless functionality and visual appeal across all devices, from desktops to smartphones. Our designs are tailored to provide an outstanding user experience, incorporating intuitive navigation, fast load times, and engaging visuals to captivate your audience. By blending creativity with functionality, we deliver websites that not only look stunning but also drive user engagement and support your business's success.",
+    info: "We design custom websites that don’t just look amazing but also work hard for your business. Aligned with your goals and tailored to reflect your unique brand identity, every website we create is a seamless blend of creativity and functionality. Fully responsive and optimized for performance, our designs deliver flawless experiences across all devices—from desktops to smartphones. With intuitive navigation, lightning-fast load times, and captivating visuals, we craft websites that engage your audience, inspire action, and fuel your business's growth. Let us help you make a lasting impression online and achieve success like never before.",
     details:
       "We specialize in creating custom websites that align with your brand and business objectives. From layout design to functionality, we ensure a seamless user experience.",
     pricingTiers: [
@@ -285,7 +315,7 @@ export const companySpecificServices: Services[] = [
   {
     name: "E-Commerce Site Development",
     startingPrice: 3500,
-    info: "We design scalable, secure, and user-friendly e-commerce platforms tailored to enhance customer experience and drive business success. Our platforms are built with intuitive navigation, making it easy for customers to explore products and complete their purchases effortlessly. Robust security measures protect sensitive customer data and transactions, ensuring trust and compliance with industry standards. With seamless payment integration, we enable smooth and hassle-free transactions across multiple payment methods. Additionally, our platforms support scalability to accommodate your business growth, offering advanced features like personalized recommendations, inventory management, and analytics to optimize performance. Whether you’re launching a new store or upgrading an existing one, we deliver e-commerce solutions designed to elevate your brand and maximize sales.",
+    info: "We design scalable, secure, and user-friendly e-commerce platforms tailored to elevate customer experience and drive sales. With intuitive navigation, seamless payment integration, and robust security, our platforms make shopping easy and secure. Built for growth, they include advanced features like personalized recommendations, inventory management, and analytics to optimize performance. Whether launching a new store or upgrading an existing one, we deliver solutions that showcase your brand and maximize success.",
     details:
       "We create e-commerce websites designed for security, scalability, and user satisfaction. From product pages to checkout systems, we provide the tools for a successful online store.",
     pricingTiers: [

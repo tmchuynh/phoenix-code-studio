@@ -24,7 +24,7 @@ const CompanyRebranding: FC = () => {
         if (service.name === "Company Rebranding") {
           return (
             <div key={service.name}>
-              <p className="text-lg my-4">{service.details}</p>
+              <p className="text-lg my-4">{service.info}</p>
             </div>
           );
         }
@@ -35,12 +35,16 @@ const CompanyRebranding: FC = () => {
       <section className="my-8">
         <h2 className="text-2xl font-semibold">What is Company Rebranding?</h2>
         <p className="my-4">
-          Company rebranding involves refreshing or completely overhauling your
-          business's image and messaging. This can include everything from your
-          logo, visual identity, brand values, website, and marketing
-          strategies. Our goal is to help your company stand out, communicate
-          its message clearly, and build stronger connections with your
-          audience.
+          Company rebranding is a transformative process that involves
+          revitalizing or completely redefining your business's image and
+          messaging. This comprehensive approach can include redesigning your
+          logo, refining your visual identity, reshaping your brand values,
+          updating your website, and enhancing your marketing strategies. The
+          goal is to create a cohesive and compelling brand presence that not
+          only sets your company apart but also communicates your message with
+          clarity and impact. By aligning your brand with your audience’s needs
+          and expectations, we help you build stronger, lasting connections and
+          position your business for long-term success.
         </p>
         <ul className="list-disc pl-6 space-y-2">
           {rebrandingServiceDetails.map((item, index) => (
@@ -55,6 +59,24 @@ const CompanyRebranding: FC = () => {
       {/* Our Process */}
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
+        <p className="my-4">
+          Our process for company rebranding is designed to be collaborative,
+          strategic, and impactful. We begin by deeply understanding your
+          business, its values, and your goals through research and
+          consultation. Next, we analyze your current brand identity and market
+          positioning to identify opportunities for growth and differentiation.
+          From there, we develop a tailored strategy, which may include logo
+          design, visual identity updates, messaging refinement, and website
+          enhancements. Throughout the process, we ensure that every element
+          aligns with your vision and resonates with your target audience. By
+          involving you at every step, we create a cohesive brand transformation
+          that empowers your business to stand out and thrive.
+        </p>
+        <p className="my-4">
+          Typical company rebranding projects take 8–12 weeks, depending on the
+          complexity and scope of the rebranding process.
+        </p>
+
         <ul className="list-decimal pl-6 space-y-2">
           {processSteps.map((step, index) => (
             <li key={index}>

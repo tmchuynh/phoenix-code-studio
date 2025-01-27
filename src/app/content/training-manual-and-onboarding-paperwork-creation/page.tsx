@@ -21,7 +21,7 @@ const TrainingManualOnboardingPapers: FC = () => {
       </h1>
       {contentCreationServices.map((service) => {
         return (
-          <div key={service.name} className="text-center text-lg my-4">
+          <div key={service.name} className="text-lg my-4">
             {service.name ===
               "Training Manual and Onboarding Paperwork Creation" && (
               <div>
@@ -37,10 +37,16 @@ const TrainingManualOnboardingPapers: FC = () => {
           Why Training Manuals and Onboarding Papers Matter
         </h2>
         <p className="my-4">
-          Training manuals and onboarding papers play a critical role in setting
-          new employees up for success. They ensure consistency, clarify
-          expectations, and provide a structured approach to integrating team
-          members into your organization.
+          Training manuals and onboarding documents are essential tools for
+          helping new employees succeed and seamlessly integrate into your
+          organization. These materials provide clear, consistent guidance on
+          company policies, roles, and processes, ensuring that expectations are
+          well understood from day one. By offering a structured approach to
+          onboarding, they reduce the learning curve, enhance productivity, and
+          promote a sense of confidence and alignment among team members.
+          Professionally crafted training manuals not only streamline the
+          onboarding experience but also contribute to long-term employee
+          engagement and success.
         </p>
         <ul className="list-disc pl-6 space-y-2">
           {onboardingPaperBenefits.map((benefit) => (
@@ -57,8 +63,16 @@ const TrainingManualOnboardingPapers: FC = () => {
           Our Training Manual and Onboarding Services
         </h2>
         <p className="my-4">
-          We specialize in creating customized documents tailored to your
-          organization’s needs and culture.
+          We specialize in designing customized training manuals and onboarding
+          documents that align with your organization’s unique needs, values,
+          and culture. Our materials are tailored to provide clear, structured
+          guidance, ensuring new employees understand their roles,
+          responsibilities, and company expectations. By incorporating your
+          specific processes, policies, and branding, we create documents that
+          reflect your organization’s identity while fostering a seamless and
+          engaging onboarding experience. Whether for small teams or large
+          enterprises, our customized solutions help set the foundation for
+          employee success and long-term productivity.
         </p>
         <ul className="list-disc pl-6 space-y-2">
           {onboardingServices.map((service) => (
@@ -72,10 +86,26 @@ const TrainingManualOnboardingPapers: FC = () => {
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
-        <p className="my-4">
-          Projects are typically completed within 2–6 weeks, depending on scope
-          and complexity.
+        <p>
+          Our process for creating training manuals and onboarding documents
+          ensures clarity, consistency, and alignment with your organization’s
+          goals and culture. We start by consulting with you to understand your
+          objectives, company values, and the specific roles and processes the
+          materials need to address. Next, we gather relevant information and
+          develop a content outline to structure the documents effectively. Our
+          team then creates clear, concise, and engaging materials,
+          incorporating visuals, step-by-step instructions, and company-specific
+          branding for a professional finish. After thorough review and editing,
+          we finalize the documents and deliver them in your preferred format,
+          whether digital, print, or both. Throughout the process, we
+          collaborate closely with you to ensure the materials meet your needs
+          and exceed your expectations.
         </p>
+        <p className="my-4">
+          Typical training manual and onboarding document projects take 3–6
+          weeks, depending on the complexity and scope of the materials.
+        </p>
+
         <ul className="list-decimal pl-6 space-y-2">
           {onboardingProcessSteps.map((step) => (
             <li key={step.title}>

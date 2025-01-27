@@ -19,7 +19,7 @@ const EcommerceWebsite: FC = () => {
   return (
     <main className="w-11/12 mx-auto py-6">
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        Custom E-Commerce Website Development
+        E-Commerce Website Development
       </h1>
       {companySpecificServices.map((service) => {
         return (
@@ -38,9 +38,19 @@ const EcommerceWebsite: FC = () => {
           Why Choose Custom eCommerce Development?
         </h2>
         <p className="my-4">
-          A custom eCommerce website goes beyond standard templates to provide a
-          unique, scalable, and optimized platform that reflects your brand’s
-          identity while enhancing the shopping experience.
+          A custom eCommerce website offers a tailored solution that goes beyond
+          generic templates, providing a platform uniquely designed to meet the
+          specific needs of your business and customers. By reflecting your
+          brand’s identity through personalized designs, intuitive navigation,
+          and seamless functionality, a custom eCommerce site enhances the
+          overall shopping experience. These platforms are built to be scalable,
+          ensuring they can grow alongside your business and handle increased
+          traffic and transactions without compromising performance. With
+          advanced features such as optimized checkout processes, personalized
+          product recommendations, and integration with third-party tools, a
+          custom eCommerce website delivers both functionality and a memorable
+          user experience, setting your brand apart in a competitive online
+          marketplace.
         </p>
         <ul className="list-disc pl-6 space-y-2">
           {customEcommerceFeatures.map((feature, index) => (
@@ -54,26 +64,31 @@ const EcommerceWebsite: FC = () => {
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Comprehensive Services</h2>
-        <div className="my-6">
-          <h3 className="text-xl font-bold">Product Catalog Management</h3>
+        <div>
+          <h3 className="text-xl font-bold">
+            Effortless Product Catalog Management
+          </h3>
           <p>
-            We ensure your product catalog is easy to manage, scalable, and
-            user-friendly, featuring:
+            We provide scalable, user-friendly solutions to make managing your
+            product catalog seamless and efficient, offering:
           </p>
           <ul className="list-disc pl-6 space-y-2">
             {productCatalogManagement.map((item, index) => (
               <li key={index}>
-                <span className="font-bold text-secondary">{item.title}:</span>{" "}
+                <span className="font-bold text-tertiary">{item.title}:</span>{" "}
                 {item.description}
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="my-6">
-          <h3 className="text-xl font-bold">Secure Payment Gateways</h3>
+        <div>
+          <h3 className="text-xl font-bold">
+            Reliable and Secure Payment Gateways
+          </h3>
           <p>
-            Provide your customers with multiple payment options, including:
+            Offer your customers a variety of secure and convenient payment
+            options, including:
           </p>
           <ul className="list-disc pl-6 space-y-2">
             {securePaymentGateways.map((gateway, index) => (
@@ -82,9 +97,14 @@ const EcommerceWebsite: FC = () => {
           </ul>
         </div>
 
-        <div className="my-6">
-          <h3 className="text-xl font-bold">Shipping and Fulfillment</h3>
-          <p>Streamline your logistics with features such as:</p>
+        <div>
+          <h3 className="text-xl font-bold">
+            Optimized Shipping and Fulfillment
+          </h3>
+          <p>
+            Simplify your logistics and enhance customer satisfaction with
+            features such as:
+          </p>
           <ul className="list-disc pl-6 space-y-2">
             {shippingAndFulfillment.map((feature, index) => (
               <li key={index}>{feature}</li>
@@ -95,9 +115,23 @@ const EcommerceWebsite: FC = () => {
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Development Process</h2>
+        <p>
+          Our custom eCommerce website development process is designed to
+          deliver a platform that reflects your brand identity and meets your
+          business needs. We begin with an in-depth consultation to understand
+          your goals, target audience, and unique requirements. Next, we create
+          a detailed plan, including wireframes and mockups, to visualize the
+          design and structure. Once approved, our team develops the site using
+          scalable, secure, and high-performance technologies. We integrate
+          essential features such as payment gateways, product catalogs, and
+          customer management tools while optimizing for speed, SEO, and user
+          experience. After rigorous testing to ensure functionality and
+          reliability, we launch your site and provide ongoing support to ensure
+          its success as your business evolves.
+        </p>
         <p className="my-4">
-          Most projects are completed within 6–12 weeks, depending on complexity
-          and features.
+          Typical custom eCommerce website projects take 8–16 weeks, depending
+          on the complexity and scope of the platform.
         </p>
         <ul className="list-decimal pl-6 space-y-2">
           {developmentProcessItems.map((item, index) => (

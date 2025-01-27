@@ -1183,6 +1183,34 @@ export const databaseManagementItems = [
   },
 ];
 
+export const databaseCreationItemsDetails = [
+  {
+    title: "Custom Database Design",
+    description:
+      "We design databases from scratch to suit your business workflows and data requirements.",
+  },
+  {
+    title: "Optimization",
+    description:
+      "Enhance the performance of your existing databases by reducing query times and improving indexing strategies.",
+  },
+  {
+    title: "Scalability",
+    description:
+      "Ensure your database grows seamlessly with your business, handling increasing data loads effectively.",
+  },
+  {
+    title: "Migration Services",
+    description:
+      "Migrate from legacy systems or upgrade to modern database solutions without downtime.",
+  },
+  {
+    title: "Data Security",
+    description:
+      "Protect sensitive data with robust encryption, access controls, and compliance with industry standards.",
+  },
+];
+
 export const ourProcessItems = [
   {
     title: "Consultation",

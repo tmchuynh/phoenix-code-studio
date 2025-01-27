@@ -21,7 +21,7 @@ const TechnicalWritingServices: FC = () => {
       </h1>
       {contentCreationServices.map((service) => {
         return (
-          <div key={service.name} className="text-center text-lg my-4">
+          <div key={service.name} className="text-lg my-4">
             {service.name === "Technical Writing" && (
               <div>
                 <span className="mt-4">{service.info}</span>
@@ -36,10 +36,14 @@ const TechnicalWritingServices: FC = () => {
           Why Technical Writing Matters
         </h2>
         <p className="my-4">
-          Effective technical writing bridges the gap between complex
-          information and user understanding. Whether you need manuals, guides,
-          or specifications, professional technical documentation ensures
-          accuracy, clarity, and usability.
+          Effective technical writing serves as a vital bridge between complex
+          information and user comprehension. By translating intricate concepts
+          into clear, accessible language, it empowers users to confidently
+          navigate products and systems. Whether you require detailed manuals,
+          instructional guides, or technical specifications, professionally
+          crafted technical documentation ensures precision, clarity, and ease
+          of use. This not only enhances user experience but also reduces
+          errors, streamlines processes, and supports overall efficiency.
         </p>
         <ul className="list-disc pl-6 space-y-2">
           {technicalWritingBenefits.map((benefit) => (
@@ -56,8 +60,15 @@ const TechnicalWritingServices: FC = () => {
           Our Technical Writing Services
         </h2>
         <p className="my-4">
-          We specialize in creating precise, easy-to-understand technical
-          documents across various industries.
+          We specialize in crafting precise, easy-to-understand technical
+          documents tailored to meet the unique needs of various industries.
+          Whether it’s user manuals, product guides, technical specifications,
+          or process documentation, our expert writers ensure clarity, accuracy,
+          and usability. By breaking down complex information into digestible
+          formats, we help users effectively understand and engage with your
+          products or systems. Our approach focuses on delivering high-quality,
+          professional documentation that enhances user experience and supports
+          your business objectives.
         </p>
         <ul className="list-disc pl-6 space-y-2">
           {technicalWritingServices.map((service) => (
@@ -71,10 +82,27 @@ const TechnicalWritingServices: FC = () => {
 
       <section className="my-8">
         <h2 className="text-2xl font-semibold">Our Process</h2>
-        <p className="my-4">
-          Project timelines depend on the document type, length, complexity, and
-          audience. Typical projects range from 1 to 4 weeks.
+        <p>
+          Our technical writing team consists of experts in various areas,
+          including technical writing, documentation, and content management. We
+          work closely with clients to develop custom technical documentation
+          solutions tailored to their specific needs. We begin by consulting
+          with you to understand your project requirements, audience, and goals.
+          Next, we conduct thorough research, including gathering technical
+          details, product specifications, and insights from subject matter
+          experts. We then outline and draft the documentation, ensuring logical
+          structure and readability. Visual aids, such as diagrams or
+          screenshots, are incorporated to enhance understanding. After rigorous
+          review and editing for accuracy, clarity, and consistency, we finalize
+          the document and deliver it in your preferred format. Throughout the
+          process, we collaborate with you to ensure the documentation meets
+          your expectations and serves its purpose effectively.
         </p>
+        <p className="my-4">
+          Typical technical writing projects take 3–8 weeks, depending on the
+          complexity of the subject and the scope of the documentation.
+        </p>
+
         <ul className="list-decimal pl-6 space-y-2">
           {technicalWritingProcessSteps.map((step) => (
             <li key={step.title}>
