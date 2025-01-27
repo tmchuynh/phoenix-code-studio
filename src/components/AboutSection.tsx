@@ -15,7 +15,7 @@ const AboutSection = () => {
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
         Who We Are
       </h2>
-      <p className="text-lg text-center max-w-4xl mx-auto mb-8">
+      <p className="text-lg text-center mx-auto mb-8">
         At Phoenix Code Studio, we are a passionate team of web developers,
         designers, and content creators. Our goal is to help businesses thrive
         by offering customized solutions, from high-quality websites to
