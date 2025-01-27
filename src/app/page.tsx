@@ -3,6 +3,7 @@ import AboutSection from "@/components/AboutSection";
 import CallToAction from "@/components/CallToAction";
 import FeaturedBlogs from "@/components/FeaturedBlogs";
 import FeaturedProjects from "@/components/FeaturedProjects";
+import JoinUs from "@/components/JoinUs";
 import ServiceHighlights from "@/components/ServiceHighlights";
 import Testimonials from "@/components/Testimonials";
 import Banner from "@/components/ui/banner";
@@ -33,7 +34,7 @@ const WelcomePage: FC = () => {
         <Button onClick={navigateToServices}>Explore Our Services</Button>
       </section>
 
-      <Banner />
+      <JoinUs />
 
       {/* Services Highlight Section */}
       <ServiceHighlights />
