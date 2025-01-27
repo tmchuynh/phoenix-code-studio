@@ -431,26 +431,44 @@ const BlogDisplayPage: FC = () => {
       {/* Pagination controls */}
       <Pagination className="gap-5">
         <PaginationPrevious
-          onClick={() => handlePageChange(currentPage - 1)}
-          className={currentPage === 1 ? "hidden" : ""}
+          onClick={() => {
+            if (currentPage > 1) {
+              handlePageChange(currentPage - 1);
+            }
+          }}
+          variant={currentPage === 1 ? "disabled" : "outline"}
+          className={
+            currentPage === 1 ? "cursor-not-allowed" : "cursor-default"
+          }
         />
+        <section className="text-center my-4">
+          {indexOfLastArticle >= filteredBlogs.length && totalPages === 1 ? (
+            <p className="text-lg">Showing all {filteredBlogs.length} blogs</p>
+          ) : (
+            <p className="text-lg">
+              Showing {indexOfFirstArticle + 1} to{" "}
+              {indexOfLastArticle > filteredBlogs.length
+                ? filteredBlogs.length
+                : indexOfLastArticle}{" "}
+              of {filteredBlogs.length} blogs
+            </p>
+          )}
+        </section>
         <PaginationNext
-          onClick={() => handlePageChange(currentPage + 1)}
-          className={currentPage === totalPages ? "hidden" : ""}
+          onClick={() => {
+            if (currentPage < totalPages) {
+              handlePageChange(currentPage + 1);
+            }
+          }}
+          variant={currentPage === totalPages ? "disabled" : "outline"}
+          className={
+            currentPage === totalPages ? "cursor-not-allowed" : "cursor-default"
+          }
         />
       </Pagination>
 
       {/* Displaying filtered blog cards dynamically */}
       <section className="my-8">
-        <section className="text-center my-4">
-          <p className="text-lg">
-            Showing {indexOfFirstArticle + 1} to{" "}
-            {indexOfLastArticle > filteredBlogs.length
-              ? filteredBlogs.length
-              : indexOfLastArticle}{" "}
-            of {filteredBlogs.length} blogs
-          </p>
-        </section>
         <div className="flex flex-col xl:grid xl:grid-cols-3 2xl:flex-row gap-8 lg:grid lg:grid-cols-2">
           {currentArticles.map((blog, index) => (
             <Card
