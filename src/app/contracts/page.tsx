@@ -13,54 +13,106 @@ const ExampleContractsPage: FC = () => {
         Example Contracts
       </h1>
       <p className="text-lg my-4">
-        Below are examples of contracts for different hiring scenarios:
+        Explore a range of contract examples tailored to various hiring
+        scenarios. These examples showcase how we structure agreements to
+        address different project needs, timelines, and budgets. Whether you're
+        hiring for a short-term engagement, a long-term partnership, or a highly
+        specialized project, these examples illustrate the flexibility and
+        customization we offer to meet diverse requirements.
+      </p>
+      <p className="text-lg my-4">
+        Each example provides insights into how we handle unique situations,
+        from milestone-based payments to comprehensive, end-to-end service
+        contracts. Our approach ensures clarity, fairness, and alignment with
+        your specific goals. If your situation falls outside these examples,
+        don’t worry—we’re ready to create a custom contract that suits your
+        exact needs.
+      </p>
+      <p className="text-lg">
+        Take a look at the scenarios below to see how we can help structure a
+        contract that works for you. If you have questions or need something
+        more specific, reach out to us for a personalized consultation.
       </p>
 
       {/* Company Contract */}
       <section className="my-8 flex flex-col justify-between">
         <div>
-          <h2 className="text-2xl font-semibold">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
             1. Company Hiring Phoenix Code Studio
           </h2>
-          <p className="my-4">
-            This contract is for a company hiring **Phoenix Code Studio** for a
-            project. It covers key terms such as scope, payment structure, and
-            intellectual property:
+          <p className="text-lg mb-4">
+            This contract serves as a comprehensive agreement for companies
+            hiring Phoenix Code Studio for a project. It is designed to
+            establish mutual understanding and ensure transparency in all
+            aspects of the collaboration. The contract covers critical
+            components such as project scope, detailed deliverables, payment
+            terms, and intellectual property rights, ensuring all parties are
+            aligned from the outset. By clearly defining roles,
+            responsibilities, and expectations, this agreement fosters a smooth
+            and efficient workflow while protecting the interests of both the
+            client and Phoenix Code Studio. With this contract in place,
+            companies can confidently embark on their project, knowing that
+            every detail has been carefully considered to ensure a successful
+            partnership.
           </p>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             <li>
-              <span className="font-bold text-secondary">Project Scope:</span>{" "}
-              Detailed description of the project, including deliverables and
-              timelines.
+              <span className="font-bold text-secondary">Project Scope:</span> A
+              comprehensive description of the project, including detailed
+              deliverables, timelines, and any specific requirements or
+              constraints.
             </li>
             <li>
-              <span className="font-bold text-secondary">Payment Terms:</span>{" "}
-              Payment structure, including deposit, milestones, and final
-              payment. Typically, payments are made based on project phases.
+              <span className="font-bold text-secondary">Payment Terms:</span> A
+              structured payment plan, typically including an initial deposit,
+              milestone payments tied to project phases, and a final payment
+              upon project completion. Options for flexible payment terms may be
+              included.
             </li>
             <li>
               <span className="font-bold text-secondary">
                 Confidentiality and NDA:
               </span>{" "}
-              Protection of proprietary information and intellectual property.
+              An agreement ensuring all proprietary information, trade secrets,
+              and intellectual property remain confidential and are protected.
             </li>
             <li>
               <span className="font-bold text-secondary">
                 Project Timeline:
               </span>{" "}
-              An agreed-upon timeline with key milestones and client feedback.
+              Clearly defined project phases, deadlines, and milestones, with
+              built-in checkpoints for client review and feedback to ensure
+              alignment.
             </li>
             <li>
               <span className="font-bold text-secondary">
                 Termination Clause:
               </span>{" "}
-              Terms under which the agreement may be terminated by either party.
+              Specific conditions under which the contract can be terminated by
+              either party, including notice periods and any associated costs.
             </li>
             <li>
               <span className="font-bold text-secondary">
                 Revisions and Feedback:
               </span>{" "}
-              Number of revisions included, and how feedback is integrated.
+              Details on how client feedback is collected, the number of
+              revisions included within the project scope, and processes for
+              additional changes if needed.
+            </li>
+            <li>
+              <span className="font-bold text-secondary">
+                Ownership of Deliverables:
+              </span>{" "}
+              Clarification of ownership rights, ensuring the client receives
+              full rights to the final deliverables upon project completion and
+              final payment.
+            </li>
+            <li>
+              <span className="font-bold text-secondary">
+                Support and Maintenance:
+              </span>{" "}
+              Optional terms for post-project support or maintenance, outlining
+              services, duration, and associated costs if applicable.
             </li>
           </ul>
         </div>
@@ -68,7 +120,7 @@ const ExampleContractsPage: FC = () => {
           variant="outline"
           className="mt-4"
           onClick={() => {
-            // Link to download or view a full contract example for a company
+            router.push("/contracts/example-company-contract");
           }}
         >
           View Full Contract Example
@@ -80,49 +132,73 @@ const ExampleContractsPage: FC = () => {
       {/* Individual Contract */}
       <section className="my-8 flex flex-col justify-between">
         <div>
-          <h2 className="text-2xl font-semibold">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
             2. Individual Hiring Phoenix Code Studio
           </h2>
-          <p className="my-4">
-            This contract is for an individual hiring **Phoenix Code Studio**
-            for a project. It is tailored for smaller, more flexible
-            engagements:
+          <p className="text-lg mb-4">
+            This contract is specifically designed for individuals seeking to
+            hire Phoenix Code Studio for a personalized project. Whether it’s a
+            one-time collaboration or a smaller-scale initiative, this agreement
+            provides a tailored and flexible framework that meets the unique
+            needs of individual clients. It ensures transparency and sets clear
+            expectations on both sides, covering essential aspects such as
+            project scope, payment structure, timelines, and intellectual
+            property rights. By providing a clear and concise contract, we aim
+            to create a seamless working relationship that prioritizes the
+            client’s satisfaction while delivering high-quality results. This
+            approach allows individuals to confidently move forward, knowing
+            their specific goals and requirements are being met with
+            professionalism and care.
           </p>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             <li>
               <span className="font-bold text-secondary">Project Scope:</span> A
-              detailed description of the project, expectations, and final
-              deliverables.
+              detailed outline of the project goals, expectations, and specific
+              final deliverables. Flexibility is provided to accommodate
+              personal preferences and adjustments.
             </li>
             <li>
               <span className="font-bold text-secondary">Payment Terms:</span>{" "}
-              Payment structure, including upfront payment, hourly rates, or
-              installment payments.
+              Various payment options, including upfront payments, hourly rates,
+              or installments. The structure is designed to provide flexibility
+              based on the individual’s budget and project size.
             </li>
             <li>
               <span className="font-bold text-secondary">
                 Revisions and Feedback:
               </span>{" "}
-              Number of revisions included and how feedback is integrated into
-              the project.
+              Inclusion of a specified number of revisions to ensure the final
+              product meets the individual’s expectations. A process for
+              providing feedback and incorporating changes is clearly outlined.
             </li>
             <li>
               <span className="font-bold text-secondary">
                 Intellectual Property:
               </span>{" "}
-              The agreement on ownership of the final deliverables.
+              An agreement clarifying ownership rights of the final
+              deliverables, ensuring the individual has full rights to the
+              completed work upon final payment.
             </li>
             <li>
-              <span className="font-bold text-secondary">Timeline:</span>{" "}
-              Expected completion dates with some flexibility based on client
-              needs.
+              <span className="font-bold text-secondary">Timeline:</span> A
+              clear timeline for project milestones and expected completion
+              dates, with built-in flexibility to adapt to the client’s needs
+              and schedule.
             </li>
             <li>
               <span className="font-bold text-secondary">
                 Termination Clause:
               </span>{" "}
-              How the agreement can be terminated by either party and any refund
+              Terms detailing how the agreement can be terminated by either
+              party, including notice periods and any applicable refund
               policies.
+            </li>
+            <li>
+              <span className="font-bold text-secondary">
+                Additional Services:
+              </span>{" "}
+              Options for add-ons such as post-project support or training to
+              help the individual maximize the value of the final deliverables.
             </li>
           </ul>
         </div>
@@ -130,7 +206,7 @@ const ExampleContractsPage: FC = () => {
           variant="outline"
           className="mt-4"
           onClick={() => {
-            // Link to download or view a full contract example for an individual
+            router.push("/contracts/example-individual-contract");
           }}
         >
           View Full Contract Example
@@ -142,12 +218,22 @@ const ExampleContractsPage: FC = () => {
       {/* Additional Contract Information */}
       <section className="my-8 flex flex-col justify-between">
         <div>
-          <h2 className="text-2xl font-semibold">Custom Contracts</h2>
-          <p className="my-4">
-            If your situation doesn’t quite match these examples, we can create
-            a custom contract tailored to your specific needs. Contact us to
-            discuss the details and we’ll draft an agreement that fits your
-            project.
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+            Custom Contracts
+          </h2>
+          <p className="text-lg mb-4">
+            Our team will take the time to understand your objectives,
+            challenges, and expectations, ensuring that every detail is
+            accounted for in the contract. From complex multi-phase projects to
+            one-off services with special considerations, we provide the
+            expertise and adaptability needed to create a framework that
+            supports your vision.
+          </p>
+          <p className="text-lg">
+            Reach out to us to discuss your project in detail, and we’ll craft a
+            personalized contract that aligns with your requirements. With a
+            custom-tailored agreement, you can move forward with confidence,
+            knowing that your specific needs are fully addressed.
           </p>
         </div>
         <Button
