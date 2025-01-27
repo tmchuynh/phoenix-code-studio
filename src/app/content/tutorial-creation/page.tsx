@@ -153,9 +153,7 @@ const TutorialCreationServices: FC = () => {
           Ready to create tutorials that educate and engage your audience?{" "}
           <Button
             variant={"link"}
-            onClick={() => {
-              router.push("/contact");
-            }}
+            onClick={() => router.push("/contact-us")}
             className="p-0 inline-flex m-0"
           >
             Contact us for a free consultation and customized quote.

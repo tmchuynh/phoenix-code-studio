@@ -152,12 +152,10 @@ const NewsletterServices: FC = () => {
           Ready to elevate your communication with professional newsletters?{" "}
           <Button
             variant={"link"}
-            onClick={() => {
-              router.push("/contact");
-            }}
+            onClick={() => router.push("/contact-us")}
             className="p-0 inline-flex m-0"
           >
-            Contact us for a free consultation.
+            Contact us for a free consultation and customized quote.
           </Button>
         </p>
       </section>

@@ -13,11 +13,20 @@ const CallToAction = () => {
       <h2 className="text-3xl font-semibold text-primary">
         Ready to Get Started?
       </h2>
-      <p className="text-lg mt-4">
-        We’re excited to help you with your next project. Get in touch with us
-        to discuss how we can work together.
+      <p className="mt-4">
+        We’re thrilled at the opportunity to collaborate on your next project!
+        Whether you’re looking to build a stunning website, enhance your digital
+        presence, or bring a new idea to life, we’re here to help every step of
+        the way.
       </p>
-      <Button onClick={navigateToContact}>Contact Us</Button>
+      <p>
+        Get in touch with us to discuss your goals, explore tailored solutions,
+        and discover how we can create something extraordinary together. Let’s
+        make your vision a reality!
+      </p>
+      <Button className="w-1/3 my-3" onClick={navigateToContact}>
+        Contact Us
+      </Button>
     </section>
   );
 };

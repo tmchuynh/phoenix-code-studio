@@ -9,7 +9,14 @@ import {
   MenubarSubTrigger,
   MenubarTrigger,
 } from "@/components/ui/menubar";
-import { about, companies, content, services, websites } from "@/lib/constants";
+import {
+  about,
+  companies,
+  content,
+  paymentOptions,
+  services,
+  websites,
+} from "@/lib/constants";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
@@ -17,10 +24,14 @@ import { IoMdMenu } from "react-icons/io";
 import { ModeButton } from "./ModeButton";
 import { Button } from "./ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import useMediumScreen from "@/lib/useMediumScreen";
+import useSmallScreen from "@/lib/useSmallScreen";
 
 const NavBar = () => {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isSmallScreen = useSmallScreen();
+  const isMediumScreen = useMediumScreen();
 
   return (
     <>
@@ -32,7 +43,7 @@ const NavBar = () => {
           <MenubarMenu>
             <a
               onClick={() => router.push("/")}
-              className="text-sm md:text-md lg:text-xl hover:text-primary mx-4"
+              className="text-sm md:text-md lg:text-xl mx-4"
             >
               Home
             </a>
@@ -51,7 +62,7 @@ const NavBar = () => {
             </div>
           </MenubarMenu>
           <MenubarMenu>
-            <MenubarTrigger className="hover:text-primary text-sm md:text-md lg:text-xl">
+            <MenubarTrigger className="text-sm md:text-md lg:text-xl">
               Services
               <FaChevronDown className="ml-3" />
             </MenubarTrigger>
@@ -65,17 +76,33 @@ const NavBar = () => {
                   {service.title}
                 </MenubarItem>
               ))}
-              <MenubarSeparator />
               <MenubarSub>
-                <MenubarSubTrigger className="hover:text-primary text-sm md:text-md lg:text-xl w-full md:mr-9">
-                  Website Services
+                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9">
+                  Payment Plans
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4">
+                  {paymentOptions.map((plan, index) => (
+                    <MenubarItem
+                      key={index}
+                      onClick={() => router.push(plan.href)}
+                      className="text-sm md:text-md lg:text-xl justify-end text-end"
+                    >
+                      {plan.title}
+                    </MenubarItem>
+                  ))}
+                </MenubarSubContent>
+              </MenubarSub>
+              <MenubarSeparator />
+              <MenubarSub>
+                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9">
+                  Website Services
+                </MenubarSubTrigger>
+                <MenubarSubContent className="mx-4 w-72">
                   {websites.map((website, index) => (
                     <MenubarItem
                       key={index}
                       onClick={() => router.push(website.href)}
-                      className="text-sm md:text-md lg:text-xl"
+                      className="text-sm md:text-md lg:text-xl justify-end text-end"
                     >
                       {website.title}
                     </MenubarItem>
@@ -83,15 +110,15 @@ const NavBar = () => {
                 </MenubarSubContent>
               </MenubarSub>
               <MenubarSub>
-                <MenubarSubTrigger className="hover:text-primary text-sm md:text-md lg:text-xl w-full md:mr-9">
+                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9">
                   Content Creation
                 </MenubarSubTrigger>
-                <MenubarSubContent className="mx-4">
+                <MenubarSubContent className="mx-4 w-72">
                   {content.map((content, index) => (
                     <MenubarItem
                       key={index}
                       onClick={() => router.push(content.href)}
-                      className="text-sm md:text-md lg:text-xl"
+                      className="text-sm md:text-md lg:text-xl justify-end text-end"
                     >
                       {content.title}
                     </MenubarItem>
@@ -99,15 +126,15 @@ const NavBar = () => {
                 </MenubarSubContent>
               </MenubarSub>
               <MenubarSub>
-                <MenubarSubTrigger className="hover:text-primary text-sm md:text-md lg:text-xl w-full md:mr-9">
+                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9">
                   Company Specific Services
                 </MenubarSubTrigger>
-                <MenubarSubContent className="mx-4">
+                <MenubarSubContent className="mx-4 w-72">
                   {companies.map((company, index) => (
                     <MenubarItem
                       key={index}
                       onClick={() => router.push(company.href)}
-                      className="text-sm md:text-md lg:text-xl"
+                      className="text-sm md:text-md lg:text-xl justify-end text-end"
                     >
                       {company.title}
                     </MenubarItem>
@@ -155,7 +182,7 @@ const NavBar = () => {
                 </div>
               </MenubarMenu>
               <MenubarMenu>
-                <MenubarTrigger className="hover:text-primary py-3 flex justify-between w-full">
+                <MenubarTrigger className="py-3 flex justify-between w-full">
                   Services
                   <FaChevronDown />
                 </MenubarTrigger>

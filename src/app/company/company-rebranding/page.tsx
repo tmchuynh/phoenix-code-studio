@@ -120,12 +120,10 @@ const CompanyRebranding: FC = () => {
           Ready to transform your company's brand?{" "}
           <Button
             variant={"link"}
-            onClick={() => {
-              router.push("/contact");
-            }}
+            onClick={() => router.push("/contact-us")}
             className="p-0 inline-flex m-0"
           >
-            Contact us for a free consultation and a customized quote.
+            Contact us for a free consultation and customized quote.
           </Button>
         </p>
       </section>

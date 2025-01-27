@@ -8,10 +8,13 @@ import {
   databaseManagementItems,
   ourProcessItems,
 } from "@/lib/content-constants";
+import { useRouter } from "next/navigation";
 
 import { FC } from "react";
 
 const DatabaseServices: FC = () => {
+  const router = useRouter();
+
   return (
     <main className="w-11/12 mx-auto py-6">
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
@@ -161,8 +164,12 @@ const DatabaseServices: FC = () => {
         <h2 className="text-2xl font-semibold">Get Started Today</h2>
         <p className="my-4">
           Ready to elevate your data infrastructure?{" "}
-          <Button variant={"link"} className="p-0 inline-flex m-0">
-            Contact us for a free consultation.
+          <Button
+            variant={"link"}
+            onClick={() => router.push("/contact-us")}
+            className="p-0 inline-flex m-0"
+          >
+            Contact us for a free consultation and customized quote.
           </Button>
         </p>
       </section>

@@ -46,9 +46,30 @@ export const services: Menu[] = [
     description:
       "Explore our pricing options and find the perfect plan for your needs.",
   },
+];
+
+export const paymentOptions: Menu[] = [
   {
-    title: "Payment Plans",
-    href: "/payment-plans",
+    title: "Basic Plan",
+    href: "/payment-plans/basic-plan",
+    description:
+      "Explore our pricing options and find the perfect plan for your needs.",
+  },
+  {
+    title: "Standard Plan",
+    href: "/payment-plans/standard-plan",
+    description:
+      "Explore our pricing options and find the perfect plan for your needs.",
+  },
+  {
+    title: "Premium Plan",
+    href: "/payment-plans/premium-plan",
+    description:
+      "Discover flexible payment plans tailored to suit different budgets.",
+  },
+  {
+    title: "Custom Plan",
+    href: "/payment-plans/custom-plan",
     description:
       "Discover flexible payment plans tailored to suit different budgets.",
   },
@@ -83,28 +104,10 @@ export const content: Menu[] = [
       "Create compelling and optimized website content that drives engagement and conversions.",
   },
   {
-    title: "Brochures and/or Flyers",
-    href: "/content/brochures-and-or-flyers",
+    title: "Blog Writing",
+    href: "/content/blog-writing",
     description:
-      "Create compelling and optimized website content that drives engagement and conversions.",
-  },
-  {
-    title: "eBooks",
-    href: "/content/ebook-creation",
-    description:
-      "Create compelling and optimized website content that drives engagement and conversions.",
-  },
-  {
-    title: "Training Manual & Onboarding Paperwork",
-    href: "/content/training-manual-and-onboarding-paperwork-creation",
-    description:
-      "Create compelling and optimized website content that drives engagement and conversions.",
-  },
-  {
-    title: "Product Guides/Manuals",
-    href: "/content/product-guides-manuals",
-    description:
-      "Develop clear and detailed guides or manuals to help users understand your products.",
+      "Craft informative and engaging blog posts to attract and retain your audience.",
   },
   {
     title: "Newsletters",
@@ -113,22 +116,10 @@ export const content: Menu[] = [
       "Develop clear and detailed guides or manuals to help users understand your products.",
   },
   {
-    title: "Blog Writing",
-    href: "/content/blog-writing",
-    description:
-      "Craft informative and engaging blog posts to attract and retain your audience.",
-  },
-  {
     title: "Technical Writing",
     href: "/content/technical-writing",
     description:
       "Produce precise and structured documentation for technical processes and tools.",
-  },
-  {
-    title: "Online Courses",
-    href: "/content/online-courses",
-    description:
-      "Design and develop comprehensive online courses to educate and inspire learners.",
   },
   {
     title: "Study Guides",
@@ -141,6 +132,36 @@ export const content: Menu[] = [
     href: "/content/tutorial-creation",
     description:
       "Create step-by-step tutorials to guide users through tasks and improve understanding.",
+  },
+  {
+    title: "Product Guides/Manuals",
+    href: "/content/product-guides-manuals",
+    description:
+      "Develop clear and detailed guides or manuals to help users understand your products.",
+  },
+  {
+    title: "Brochures and/or Flyers",
+    href: "/content/brochures-and-or-flyers",
+    description:
+      "Create compelling and optimized website content that drives engagement and conversions.",
+  },
+  {
+    title: "Training Manual & Onboarding Paperwork",
+    href: "/content/training-manual-and-onboarding-paperwork-creation",
+    description:
+      "Create compelling and optimized website content that drives engagement and conversions.",
+  },
+  {
+    title: "Online Courses",
+    href: "/content/online-courses",
+    description:
+      "Design and develop comprehensive online courses to educate and inspire learners.",
+  },
+  {
+    title: "eBooks",
+    href: "/content/ebook-creation",
+    description:
+      "Create compelling and optimized website content that drives engagement and conversions.",
   },
 ];
 

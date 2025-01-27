@@ -9,15 +9,21 @@ import {
   companySpecificServices,
 } from "@/lib/constants";
 import { formatCurrency } from "@/lib/utils";
+import useMediumScreen from "@/lib/useMediumScreen";
 
 const ServicesPage: FC = () => {
   const router = useRouter();
+  const isMediumScreen = useMediumScreen();
 
-  const navigateToService = (serviceName: string) => {
+  const navigateToCompanyService = (serviceName: string) => {
+    router.push(`/company/${serviceName.toLowerCase().replace(/ /g, "-")}`);
+  };
+
+  const navigateToWebService = (serviceName: string) => {
     router.push(`/web/${serviceName.toLowerCase().replace(/ /g, "-")}`);
   };
 
-  const navigateToContent = (serviceName: string) => {
+  const navigateToContentService = (serviceName: string) => {
     const formattedServiceName = serviceName
       .toLowerCase()
       .replace(/ /g, "-")
@@ -34,12 +40,19 @@ const ServicesPage: FC = () => {
           Our Services
         </h1>
         <p className="text-lg my-4">
-          Discover the wide range of services we offer to help your business
-          thrive. From cutting-edge web development and intuitive design to
-          impactful content creation and digital marketing solutions, we provide
-          everything you need to establish a strong online presence. Whatever
-          your goals, we’re here to deliver tailored solutions that drive
-          results and bring your vision to life.
+          Discover the comprehensive range of services we offer to help your
+          business not only thrive but excel in today’s competitive digital
+          landscape. Whether you’re looking for cutting-edge web development to
+          create a stunning, high-performing website, intuitive design to
+          enhance user experience, or impactful content creation that resonates
+          with your audience, we’ve got you covered. Our expertise extends to
+          digital marketing solutions designed to increase visibility, drive
+          traffic, and boost engagement, ensuring your brand stands out in the
+          crowded online space. Whatever your goals—be it launching a new
+          venture, revitalizing your existing presence, or expanding into new
+          markets—we’re dedicated to delivering tailored solutions that align
+          with your vision, achieve tangible results, and set you apart from the
+          competition.
         </p>
       </section>
 
@@ -53,20 +66,22 @@ const ServicesPage: FC = () => {
             <div key={index}>
               <div
                 key={service.name}
-                className="flex justify-between items-end pb-4"
+                className="flex flex-col md:flex-row justify-between md:items-end pb-4"
               >
                 <div>
-                  <h3 className="text-xl font-semibold text-accent-5">
+                  <h3 className="text-2xl font-semibold text-accent-5">
                     {service.name}
                   </h3>
-                  <p className="mt-4">{service.details}</p>
-                  <p className="mt-4">
+                  <p className="mt-4 text-lg">
+                    {!isMediumScreen ? service.info : service.details}
+                  </p>
+                  <p className="mt-4 text-lg">
                     <strong>Starting at: </strong>
                     {formatCurrency(service.startingPrice)}
                   </p>
                 </div>
                 <Button
-                  onClick={() => navigateToService(service.name)}
+                  onClick={() => navigateToCompanyService(service.name)}
                   className="m-0"
                 >
                   Learn More
@@ -91,17 +106,19 @@ const ServicesPage: FC = () => {
                 className="flex justify-between items-end pb-4"
               >
                 <div>
-                  <h3 className="text-xl font-semibold text-accent-5">
+                  <h3 className="text-2xl font-semibold text-accent-5">
                     {service.name}
                   </h3>
-                  <p className="mt-4">{service.details}</p>
-                  <p className="mt-4">
+                  <p className="mt-4 text-lg">
+                    {!isMediumScreen ? service.info : service.details}
+                  </p>
+                  <p className="mt-4 text-lg">
                     <strong>Starting at: </strong>
                     {formatCurrency(service.startingPrice)}
                   </p>
                 </div>
                 <Button
-                  onClick={() => navigateToService(service.name)}
+                  onClick={() => navigateToWebService(service.name)}
                   className="m-0"
                 >
                   Learn More
@@ -126,17 +143,19 @@ const ServicesPage: FC = () => {
                 className="flex justify-between items-end pb-4"
               >
                 <div>
-                  <h3 className="text-xl font-semibold text-accent-5">
+                  <h3 className="text-2xl font-semibold text-accent-5">
                     {service.name}
                   </h3>
-                  <p className="mt-4">{service.details}</p>
-                  <p className="mt-4">
+                  <p className="mt-4 text-lg">
+                    {!isMediumScreen ? service.info : service.details}
+                  </p>
+                  <p className="mt-4 text-lg">
                     <strong>Starting at: </strong>
                     {formatCurrency(service.startingPrice)}
                   </p>
                 </div>
                 <Button
-                  onClick={() => navigateToContent(service.name)}
+                  onClick={() => navigateToContentService(service.name)}
                   className="m-0"
                 >
                   Learn More

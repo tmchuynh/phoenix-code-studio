@@ -219,7 +219,8 @@ body {
     @apply bg-background text-foreground;
   }
 
-  h3 {
+  h3,
+  h4 {
     @apply tracking-wider;
   }
 }

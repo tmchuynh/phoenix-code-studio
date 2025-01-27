@@ -21,12 +21,12 @@ export default function Banner() {
           New Sessions Start Every Three Months
         </p>
         <Button
-          onClick={() => router.push(`/contact`)}
+          onClick={() => router.push("/contact-us")}
           size={"sm"}
           variant={"secondary"}
           className="group rounded-2xl px-4 mt-4 md:mt-0"
         >
-          Contact Us Today
+          Contact us for a free consultation and customized quote.
           <span className="inline-block transition-transform duration-300 ease-in-out group-hover:translate-x-2">
             <LuArrowBigRightDash />
           </span>
