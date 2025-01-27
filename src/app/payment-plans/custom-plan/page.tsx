@@ -22,7 +22,9 @@ const CustomPlan = () => {
       {/* Features Explanation */}
       <div className="space-y-8">
         <div className="mb-6">
-          <h3 className="text-2xl font-semibold text-primary mb-2">Features</h3>
+          <h3 className="text-2xl font-semibold text-secondary mb-2">
+            Features
+          </h3>
           <ul className="list-disc pl-6 space-y-2 text-lg">
             <li>Flexible payment terms based on project scope</li>
             <li>Options for ongoing support and scaling</li>
@@ -32,7 +34,7 @@ const CustomPlan = () => {
 
         {/* Pricing and Explanation */}
         <div>
-          <h3 className="text-2xl font-semibold text-primary mb-4">
+          <h3 className="text-2xl font-semibold text-secondary mb-4">
             How it Works
           </h3>
           <p className="text-lg mb-4">
@@ -44,7 +46,7 @@ const CustomPlan = () => {
 
           {/* Flexible Payment Terms */}
           <div className="mb-6">
-            <h4 className="font-semibold text-secondary">
+            <h4 className="font-semibold text-tertiary">
               Flexible Payment Terms Based on Project Scope
             </h4>
             <p className="text-lg">
@@ -57,7 +59,7 @@ const CustomPlan = () => {
 
           {/* Ongoing Support and Scaling Options */}
           <div className="mb-6">
-            <h4 className="font-semibold text-secondary">
+            <h4 className="font-semibold text-tertiary">
               Options for Ongoing Support and Scaling
             </h4>
             <p className="text-lg">
@@ -70,7 +72,7 @@ const CustomPlan = () => {
 
           {/* Up to 24 Months Payment Term */}
           <div className="mb-6">
-            <h4 className="font-semibold text-secondary">
+            <h4 className="font-semibold text-tertiary">
               Up to 24-Month Payment Term
             </h4>
             <p className="text-lg">
@@ -82,7 +84,7 @@ const CustomPlan = () => {
 
           {/* Examples of Custom Payment Plans */}
           <div>
-            <h3 className="text-2xl font-semibold text-primary mb-4">
+            <h3 className="text-2xl font-semibold text-secondary mb-4">
               Examples of Custom Payment Plans
             </h3>
             <p className="text-lg mb-4">
@@ -93,76 +95,87 @@ const CustomPlan = () => {
 
             {/* Example 1 */}
             <div className="mb-6">
-              <h4 className="font-semibold text-secondary">
+              <h4 className="font-semibold text-tertiary">
                 Example 1: Mid-Scale Web Development Project
               </h4>
               <ul className="list-disc pl-6 space-y-2">
                 <li>
-                  <strong>Project Scope:</strong> Design and development of a
-                  custom website for a growing business.
+                  <strong className="text-accent-3">Project Scope:</strong>{" "}
+                  Design and development of a custom website for a growing
+                  business.
                 </li>
                 <li>
-                  <strong>Payment Term:</strong> $10,000 total project cost,
-                  split into 4 installments over 12 months.
+                  <strong className="text-accent-3">Payment Term:</strong>{" "}
+                  $10,000 total project cost, split into 4 installments over 12
+                  months.
                 </li>
                 <li>
-                  <strong>Support:</strong> 6 months of ongoing support after
-                  launch, including updates and bug fixes.
+                  <strong className="text-accent-3">Support:</strong> 6 months
+                  of ongoing support after launch, including updates and bug
+                  fixes.
                 </li>
                 <li>
-                  <strong>Additional Details:</strong> Initial deposit of
-                  $2,500, followed by 3 equal monthly installments of $2,500.
+                  <strong className="text-accent-3">Additional Details:</strong>{" "}
+                  Initial deposit of $2,500, followed by 3 equal monthly
+                  installments of $2,500.
                 </li>
               </ul>
             </div>
 
             {/* Example 2 */}
             <div className="mb-6">
-              <h4 className="font-semibold text-secondary">
+              <h4 className="font-semibold text-tertiary">
                 Example 2: Large-Scale Mobile App Development
               </h4>
               <ul className="list-disc pl-6 space-y-2">
                 <li>
-                  <strong>Project Scope:</strong> Full development of a mobile
-                  app with integration of third-party APIs.
+                  <strong className="text-accent-3">Project Scope:</strong> Full
+                  development of a mobile app with integration of third-party
+                  APIs.
                 </li>
                 <li>
-                  <strong>Payment Term:</strong> $50,000 total project cost,
-                  split into 5 installments over 18 months.
+                  <strong className="text-accent-3">Payment Term:</strong>{" "}
+                  $50,000 total project cost, split into 5 installments over 18
+                  months.
                 </li>
                 <li>
-                  <strong>Support:</strong> Ongoing support after project
-                  delivery with an option for scaling as new features are added.
+                  <strong className="text-accent-3">Support:</strong> Ongoing
+                  support after project delivery with an option for scaling as
+                  new features are added.
                 </li>
                 <li>
-                  <strong>Additional Details:</strong> Monthly payments of
-                  $7,500, with a 3-month grace period before payments start.
+                  <strong className="text-accent-3">Additional Details:</strong>{" "}
+                  Monthly payments of $7,500, with a 3-month grace period before
+                  payments start.
                 </li>
               </ul>
             </div>
 
             {/* Example 3 */}
             <div>
-              <h4 className="font-semibold text-secondary">
+              <h4 className="font-semibold text-tertiary">
                 Example 3: Enterprise Software Integration
               </h4>
               <ul className="list-disc pl-6 space-y-2">
                 <li>
-                  <strong>Project Scope:</strong> Integration of new software
-                  into an enterprise’s existing infrastructure.
+                  <strong className="text-accent-3">Project Scope:</strong>{" "}
+                  Integration of new software into an enterprise’s existing
+                  infrastructure.
                 </li>
                 <li>
-                  <strong>Payment Term:</strong> $100,000 total project cost,
-                  split into 6 installments over 24 months.
+                  <strong className="text-accent-3">Payment Term:</strong>{" "}
+                  $100,000 total project cost, split into 6 installments over 24
+                  months.
                 </li>
                 <li>
-                  <strong>Support:</strong> Continuous support and maintenance
-                  for the first year, plus an option to extend.
+                  <strong className="text-accent-3">Support:</strong> Continuous
+                  support and maintenance for the first year, plus an option to
+                  extend.
                 </li>
                 <li>
-                  <strong>Additional Details:</strong> Payments are divided
-                  equally every 4 months, starting 2 months after the initial
-                  deposit of $20,000.
+                  <strong className="text-accent-3">Additional Details:</strong>{" "}
+                  Payments are divided equally every 4 months, starting 2 months
+                  after the initial deposit of $20,000.
                 </li>
               </ul>
             </div>

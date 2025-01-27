@@ -23,7 +23,7 @@ const Testimonials = () => {
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index} className="p-6 mx-auto">
                 {testimonial.featured && (
-                  <div className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground">
+                  <div className="p-6 rounded-lg border-2 bg-card text-card-foreground">
                     <div className="flex-1 flex 2xl:items-end">
                       <p className="text-lg italic">
                         <span>"</span>

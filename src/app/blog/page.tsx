@@ -473,13 +473,13 @@ const BlogDisplayPage: FC = () => {
           {currentArticles.map((blog, index) => (
             <Card
               key={index}
-              className="border rounded-lg shadow-lg hover:shadow-xl transition-shadow flex flex-col justify-between"
+              className="border-2 border-transparent dark:hover:border-border rounded-lg shadow-lg hover:shadow-xl transition-shadow flex flex-col justify-between"
             >
               <div>
                 <img
                   src={blog.img}
                   alt={blog.title}
-                  className="w-full h-36 rounded-t-md object-cover border mx-auto mb-1"
+                  className="w-full h-36 rounded-t-md object-cover mx-auto mb-1"
                 />
                 <div className="px-4 pb-2 flex flex-col justify-between h-[25em]">
                   <div>
