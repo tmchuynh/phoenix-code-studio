@@ -24,7 +24,7 @@ const NavBar = () => {
 
   return (
     <>
-      <Menubar className="md:flex h-full justify-between hidden">
+      <Menubar className="md:flex h-full justify-between hidden mb-10">
         <MenubarMenu>
           <span className="px-3">Phoenix Code Studio</span>
         </MenubarMenu>

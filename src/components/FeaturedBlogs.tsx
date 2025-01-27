@@ -50,7 +50,7 @@ const FeaturedBlogs = () => {
         )}
       </div>
       <div className="text-center mt-8">
-        <Button variant={"secondary"} onClick={navigateToBlogs}>
+        <Button variant={"tertiary"} onClick={navigateToBlogs}>
           Read Our Blogs
         </Button>
       </div>

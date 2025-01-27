@@ -49,7 +49,7 @@ const Testimonials = () => {
             ))}
           </Swiper>
           <div className="text-center mt-8">
-            <Button variant={"secondary"} onClick={navigateToTestimonials}>
+            <Button variant={"tertiary"} onClick={navigateToTestimonials}>
               Read More Testimonials
             </Button>
           </div>
