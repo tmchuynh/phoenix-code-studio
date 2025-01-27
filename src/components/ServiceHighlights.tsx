@@ -3,7 +3,7 @@ import { FaDesktop, FaPen, FaSearch } from "react-icons/fa";
 const ServiceHighlights = () => {
   return (
     <section className="my-16 w-11/12 mx-auto">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
         What We Do
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
