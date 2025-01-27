@@ -39,7 +39,7 @@ const NavBar = () => {
           <MenubarMenu>
             <a
               onClick={() => router.push("/")}
-              className="text-sm md:text-md lg:text-xl mx-4"
+              className="text-sm md:text-md lg:text-xl mx-4 hover:text-primary"
             >
               Home
             </a>
@@ -50,7 +50,7 @@ const NavBar = () => {
                 <a
                   key={index}
                   onClick={() => router.push(about.href)}
-                  className="text-sm md:text-md lg:text-xl  hover:text-primary"
+                  className="text-sm md:text-md lg:text-xl hover:text-primary"
                 >
                   {about.title}
                 </a>
@@ -164,7 +164,7 @@ const NavBar = () => {
               <MenubarMenu>
                 <a
                   onClick={() => router.push("/")}
-                  className="text-sm md:text-md lg:text-xl mx-4"
+                  className="text-sm md:text-md lg:text-xl"
                 >
                   Home
                 </a>
@@ -178,7 +178,7 @@ const NavBar = () => {
                         router.push(about.href);
                         setIsMenuOpen(false);
                       }}
-                      className="text-sm md:text-md lg:text-xl  hover:text-primary"
+                      className="text-sm md:text-md lg:text-xl"
                     >
                       {about.title}
                     </a>
@@ -203,9 +203,7 @@ const NavBar = () => {
                     </MenubarItem>
                   ))}
                   <MenubarSub>
-                    <MenubarSubTrigger className="hover:text-primary">
-                      Payment Plans
-                    </MenubarSubTrigger>
+                    <MenubarSubTrigger>Payment Plans</MenubarSubTrigger>
                     <MenubarSubContent className="absolute top-10 -right-10 w-48">
                       {paymentOptions.map((plan, index) => (
                         <MenubarItem
@@ -222,9 +220,7 @@ const NavBar = () => {
                   </MenubarSub>
                   <MenubarSeparator />
                   <MenubarSub>
-                    <MenubarSubTrigger className="hover:text-primary">
-                      Website Services
-                    </MenubarSubTrigger>
+                    <MenubarSubTrigger>Website Services</MenubarSubTrigger>
                     <MenubarSubContent className="absolute top-10 -right-10 w-48">
                       {websites.map((website, index) => (
                         <MenubarItem
@@ -240,9 +236,7 @@ const NavBar = () => {
                     </MenubarSubContent>
                   </MenubarSub>
                   <MenubarSub>
-                    <MenubarSubTrigger className="hover:text-primary">
-                      Content Creation
-                    </MenubarSubTrigger>
+                    <MenubarSubTrigger>Content Creation</MenubarSubTrigger>
                     <MenubarSubContent className="absolute top-10 -right-10 w-48">
                       {content.map((content, index) => (
                         <MenubarItem
@@ -258,7 +252,7 @@ const NavBar = () => {
                     </MenubarSubContent>
                   </MenubarSub>
                   <MenubarSub>
-                    <MenubarSubTrigger className="hover:text-primary">
+                    <MenubarSubTrigger>
                       Company Specific Services
                     </MenubarSubTrigger>
                     <MenubarSubContent className="absolute top-10 -right-10 w-48">
