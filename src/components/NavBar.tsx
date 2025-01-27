@@ -30,7 +30,15 @@ const NavBar = () => {
         <MenubarMenu>
           <span className="px-3">Phoenix Code Studio</span>
         </MenubarMenu>
-        <div className="flex items-center">
+        <div className="flex items-center cursor-default">
+          <MenubarMenu>
+            <a
+              onClick={() => router.push("/")}
+              className="text-sm hover:text-primary mx-4"
+            >
+              Home
+            </a>
+          </MenubarMenu>
           <MenubarMenu>
             <div className="min-w-[12rem] flex gap-4">
               {about.map((about, index) => (

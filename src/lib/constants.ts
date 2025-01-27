@@ -842,7 +842,7 @@ export const blogs: BlogPost[] = [
     featured: true,
     topics: ["Career"],
     excerpt:
-      `Contactless business cards are a modern, eco-friendly alternative to traditional paper cards. They allow professionals to share contact details, social media profiles, and more with a simple tap or scan. These cards are compatible with smartphones, eliminating the need for additional apps. Perfect for sustainable and seamless networking, they leave a lasting impression while reducing waste.`,
+      `Contactless business cards are a modern, eco-friendly alternative to paper cards, allowing professionals to share contact details, social media profiles, and more with a simple tap or scan. Smartphone-compatible and app-free, they offer seamless networking while reducing waste and leaving a lasting impression.`,
     slug: "/blog/best-contactless-business-card-options",
   },
   {

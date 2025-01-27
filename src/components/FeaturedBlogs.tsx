@@ -13,7 +13,7 @@ const FeaturedBlogs = () => {
 
   return (
     <section className="my-16 w-11/12 md:w-full mx-auto">
-      <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
+      <h2 className="text-3xl font-semibold text-center mb-6 text-primary">
         Featured Blogs
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 w-full">
@@ -22,19 +22,21 @@ const FeaturedBlogs = () => {
             blog.featured && (
               <div
                 key={index}
-                className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground flex flex-col justify-around"
+                className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground flex flex-col justify-between"
               >
                 <div>
-                  <h3 className="text-xl font-semibold text-center text-primary">
+                  <h3 className="text-xl font-semibold text-center text-tertiary">
                     {blog.title}
                   </h3>
-                  <h5 className="text-center text-xs">{blog.date}</h5>
+                  <h5 className="text-center text-secondary text-xs">
+                    {blog.date}
+                  </h5>
+                  <p className="text-center mt-4">
+                    {isSmallScreen
+                      ? `${blog.excerpt.substring(0, 60)}...`
+                      : blog.excerpt}
+                  </p>
                 </div>
-                <p className="text-center mt-4">
-                  {isSmallScreen
-                    ? `${blog.excerpt.substring(0, 60)}...`
-                    : blog.excerpt}
-                </p>
                 <Button
                   variant={"outline"}
                   onClick={() => {
@@ -48,7 +50,9 @@ const FeaturedBlogs = () => {
         )}
       </div>
       <div className="text-center mt-8">
-        <Button onClick={navigateToBlogs}>Read Our Blogs</Button>
+        <Button variant={"secondary"} onClick={navigateToBlogs}>
+          Read Our Blogs
+        </Button>
       </div>
     </section>
   );

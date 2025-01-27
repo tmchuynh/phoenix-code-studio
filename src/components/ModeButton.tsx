@@ -48,7 +48,7 @@ const ModeButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
         type="button"
         onClick={handleThemeToggle}
         aria-label="Toggle theme"
-        className={cn(className, "hover:bg-transparent hover:text-secondary")}
+        className={cn(className, "hover:bg-transparent hover:text-secondary ")}
         ref={ref}
       >
         {theme === "dark" ? (

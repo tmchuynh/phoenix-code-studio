@@ -26,8 +26,8 @@ const AboutSection = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-7 w-full md:w-11/12 lg:w-full mx-auto">
         {/* Creativity & Innovation */}
         <div className="text-center">
-          <FaRegLightbulb className="text-6xl text-accent-1 mx-auto mb-4" />
-          <h3 className="font-bold text-primary">Creativity & Innovation</h3>
+          <FaRegLightbulb className="text-6xl text-tertiary mx-auto mb-4" />
+          <h3 className="font-bold text-secondary">Creativity & Innovation</h3>
           <p className="text-md md:text-lg">
             We blend creativity with the latest technologies to deliver
             impactful digital solutions that bring our clients’ visions to life.
@@ -38,8 +38,8 @@ const AboutSection = () => {
 
         {/* Adaptability & Growth */}
         <div className="text-center">
-          <GrGrow className="text-6xl text-accent-1 mx-auto mb-4" />
-          <h3 className="font-bold text-primary">Adaptability & Growth</h3>
+          <GrGrow className="text-6xl text-tertiary mx-auto mb-4" />
+          <h3 className="font-bold text-secondary">Adaptability & Growth</h3>
           <p className="text-md md:text-lg">
             Embracing new challenges is part of our DNA. We constantly adapt to
             the ever-changing digital landscape, ensuring that our solutions
@@ -50,8 +50,8 @@ const AboutSection = () => {
 
         {/* Authenticity */}
         <div className="text-center">
-          <FaSeedling className="text-6xl text-accent-1 mx-auto mb-4" />
-          <h3 className="font-bold text-primary">Authenticity</h3>
+          <FaSeedling className="text-6xl text-tertiary mx-auto mb-4" />
+          <h3 className="font-bold text-secondary">Authenticity</h3>
           <p className="text-md md:text-lg">
             We believe in creating digital experiences that are true to our
             clients’ identity and core values. Every solution is crafted with
@@ -62,8 +62,8 @@ const AboutSection = () => {
 
         {/* Excellence */}
         <div className="text-center">
-          <FaStar className="text-6xl text-accent-1 mx-auto mb-4" />
-          <h3 className="font-bold text-primary">Excellence</h3>
+          <FaStar className="text-6xl text-tertiary mx-auto mb-4" />
+          <h3 className="font-bold text-secondary">Excellence</h3>
           <p className="text-md md:text-lg">
             We are committed to delivering exceptional, user-centric solutions
             that exceed expectations. Our dedication to continuous growth and
@@ -74,8 +74,8 @@ const AboutSection = () => {
 
         {/* Empowerment */}
         <div className="text-center">
-          <FaHandsHelping className="text-6xl text-accent-1 mx-auto mb-4" />
-          <h3 className="font-bold text-primary">Empowerment</h3>
+          <FaHandsHelping className="text-6xl text-tertiary mx-auto mb-4" />
+          <h3 className="font-bold text-secondary">Empowerment</h3>
           <p className="text-md md:text-lg">
             We empower small businesses to thrive in the digital space. By
             providing the right tools, resources, and support, we help them grow
@@ -86,8 +86,8 @@ const AboutSection = () => {
 
         {/* Collaboration & Communication */}
         <div className="text-center">
-          <FaHandshake className="text-6xl text-accent-1 mx-auto mb-4" />
-          <h3 className="font-bold text-primary">
+          <FaHandshake className="text-6xl text-tertiary mx-auto mb-4" />
+          <h3 className="font-bold text-secondary">
             Collaboration & Communication
           </h3>
           <p className="text-md md:text-lg">
@@ -100,8 +100,8 @@ const AboutSection = () => {
 
         {/* Community Impact */}
         <div className="text-center">
-          <FaUsers className="text-6xl text-accent-1 mx-auto mb-4" />
-          <h3 className="font-bold text-primary">Community Impact</h3>
+          <FaUsers className="text-6xl text-tertiary mx-auto mb-4" />
+          <h3 className="font-bold text-secondary">Community Impact</h3>
           <p className="text-md md:text-lg">
             We are passionate about making a difference. Our work doesn’t just
             benefit our clients – we aim to create digital experiences that
@@ -112,8 +112,8 @@ const AboutSection = () => {
 
         {/* Sustainability */}
         <div className="text-center">
-          <FaRecycle className="text-6xl text-accent-1 mx-auto mb-4" />
-          <h3 className="font-bold text-primary">Sustainability</h3>
+          <FaRecycle className="text-6xl text-tertiary mx-auto mb-4" />
+          <h3 className="font-bold text-secondary">Sustainability</h3>
           <p className="text-md md:text-lg">
             We recognize the importance of creating digital solutions that not
             only serve today’s needs but also contribute to long-term
