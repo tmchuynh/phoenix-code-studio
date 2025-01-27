@@ -32,7 +32,9 @@ const EbookCreationServices: FC = () => {
       })}
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Why E-Books Matter</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Why E-Books Matter
+        </h2>
         <p className="my-4">
           E-books are an impactful tool for showcasing your expertise,
           establishing brand authority, and delivering value to your audience.
@@ -44,7 +46,7 @@ const EbookCreationServices: FC = () => {
           medium, perfect for building connections with your audience, driving
           engagement, and supporting your business goals.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {ebookBenefits.map((benefit) => (
             <li key={benefit.title}>
               <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
@@ -55,7 +57,9 @@ const EbookCreationServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our E-Book Creation Services</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our E-Book Creation Services
+        </h2>
         <p className="my-4">
           We provide end-to-end e-book creation services, managing every stage
           of the process from initial concept development to the final polished
@@ -67,7 +71,7 @@ const EbookCreationServices: FC = () => {
           effectively. Whether for education, lead generation, or monetization,
           our e-book solutions are tailored to help you make a lasting impact.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {ebookServices.map((service) => (
             <li key={service.title}>
               <span className="font-bold text-secondary">{service.title}:</span>{" "}
@@ -78,7 +82,9 @@ const EbookCreationServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Process
+        </h2>
         <p>
           Our e-book creation process is designed to deliver professional,
           high-quality results that align with your goals and resonate with your
@@ -109,11 +115,13 @@ const EbookCreationServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Tools We Use</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Tools We Use
+        </h2>
         <p className="my-4">
           We leverage the best tools to create high-quality e-books:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {ebookTools.map((tool, index) => (
             <li key={index}>{tool}</li>
           ))}
@@ -121,7 +129,9 @@ const EbookCreationServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Pricing</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing
+        </h2>
         <p className="my-4">
           Our pricing is tailored to your specific needs and the scope of your
           project. Factors that influence pricing include:
@@ -130,7 +140,7 @@ const EbookCreationServices: FC = () => {
           return (
             <>
               {service.name === "eBook Creation" && (
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-1 text-lg">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-secondary">
@@ -147,7 +157,9 @@ const EbookCreationServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to create a captivating e-book that elevates your brand?{" "}
           <Button

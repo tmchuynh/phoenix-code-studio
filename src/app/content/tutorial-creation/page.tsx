@@ -32,7 +32,9 @@ const TutorialCreationServices: FC = () => {
       })}
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Why Tutorials Matter</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Why Tutorials Matter
+        </h2>
         <p className="my-4">
           Tutorials are an effective tool for guiding users through complex
           tasks, simplifying processes, and enhancing learning experiences.
@@ -43,7 +45,7 @@ const TutorialCreationServices: FC = () => {
           trust but also contribute to a seamless and engaging user experience,
           fostering better understanding and long-term retention.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {tutorialBenefits.map((benefit) => (
             <li key={benefit.title}>
               <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
@@ -54,7 +56,7 @@ const TutorialCreationServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Our Tutorial Creation Services
         </h2>
         <p className="my-4">
@@ -67,7 +69,7 @@ const TutorialCreationServices: FC = () => {
           experiences that empower users, build confidence, and foster trust in
           your brand.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {tutorialServices.map((service) => (
             <li key={service.title}>
               <span className="font-bold text-secondary">{service.title}:</span>{" "}
@@ -78,7 +80,9 @@ const TutorialCreationServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>{" "}
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Process
+        </h2>{" "}
         <p>
           Our tutorial creation process is designed to deliver clear, engaging,
           and effective learning materials that align with your goals and
@@ -109,12 +113,14 @@ const TutorialCreationServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Tools We Use</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Tools We Use
+        </h2>
         <p className="my-4">
           We use industry-standard tools to create engaging and professional
           tutorials:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {toolsUsedTutorial.map((tool, index) => (
             <li key={index}>{tool}</li>
           ))}
@@ -122,7 +128,9 @@ const TutorialCreationServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Pricing</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing
+        </h2>
         <p className="my-4">
           Pricing is based on the type, length, and complexity of the tutorial.
           We offer flexible options to meet your needs.
@@ -131,7 +139,7 @@ const TutorialCreationServices: FC = () => {
           return (
             <>
               {service.name === "Tutorial Creation" && (
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-1 text-lg">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-secondary">
@@ -148,7 +156,9 @@ const TutorialCreationServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to create tutorials that educate and engage your audience?{" "}
           <Button

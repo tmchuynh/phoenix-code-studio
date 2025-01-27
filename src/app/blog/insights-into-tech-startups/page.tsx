@@ -5,7 +5,7 @@ import {
   startupChallenges,
   startupSuccessStories,
   strategiesForSuccess,
-} from "@/lib/constants";
+} from "@/lib/content-constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -99,7 +99,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Challenges in the Tech Startup Ecosystem
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {startupChallenges.map((challenge, index) => (
               <li key={index}>
                 <strong>{challenge.title}:</strong> {challenge.description}
@@ -112,7 +112,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Success Stories of Tech Startups
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {startupSuccessStories.map((story, index) => (
               <li key={index}>
                 <strong>{story.company}:</strong> {story.description}
@@ -125,7 +125,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Strategies for Success
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {strategiesForSuccess.map((strategy, index) => (
               <li key={index}>
                 <strong>{strategy.title}:</strong> {strategy.description}

@@ -32,7 +32,9 @@ const BlogWritingServices: FC = () => {
       })}
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Why Blog Writing Matters</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Why Blog Writing Matters
+        </h2>
         <p className="my-4">
           Blogging is an incredibly powerful tool for establishing brand
           authority, increasing website traffic, and building meaningful
@@ -48,7 +50,7 @@ const BlogWritingServices: FC = () => {
           strategic blogging approach strengthens your brand’s credibility and
           encourages long-term engagement with your audience.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {blogWritingBenefits.map((benefit) => (
             <li key={benefit.title}>
               <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
@@ -59,7 +61,9 @@ const BlogWritingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Blog Writing Services</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Blog Writing Services
+        </h2>
         <p className="my-4">
           We offer comprehensive, end-to-end blog writing solutions designed to
           align seamlessly with your brand’s voice and resonate with your target
@@ -70,7 +74,7 @@ const BlogWritingServices: FC = () => {
           content that enhances your brand authority, attracts organic traffic,
           and keeps your audience engaged.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {blogWritingServices.map((service) => (
             <li key={service.title}>
               <span className="font-bold text-secondary">{service.title}:</span>{" "}
@@ -81,7 +85,9 @@ const BlogWritingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Process
+        </h2>
         <p>
           Our blog writing process is designed to deliver high-quality, tailored
           content that aligns with your brand and engages your audience. We
@@ -110,12 +116,14 @@ const BlogWritingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Tools We Use</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Tools We Use
+        </h2>
         <p className="my-4">
           We use industry-leading tools to ensure quality and optimize
           performance:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {toolsUsedBlog.map((tool, index) => (
             <li key={index}>{tool}</li>
           ))}
@@ -123,7 +131,9 @@ const BlogWritingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Pricing</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing
+        </h2>
         <p className="my-4">
           Our pricing is tailored to your needs and the scope of the project.
           Factors that affect pricing include word count, complexity, and SEO
@@ -133,7 +143,7 @@ const BlogWritingServices: FC = () => {
           return (
             <>
               {service.name === "Blog Writing" && (
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-1 text-lg">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-secondary">
@@ -150,7 +160,9 @@ const BlogWritingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to elevate your brand with high-quality blog content?{" "}
           <Button

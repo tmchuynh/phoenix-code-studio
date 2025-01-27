@@ -5,7 +5,7 @@ import {
   whatIsWebAccessibility,
   corePrinciplesOfAccessibility,
   howToImproveAccessibility,
-} from "@/lib/constants";
+} from "@/lib/content-constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -67,7 +67,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Why Accessibility Matters
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {whatIsWebAccessibility.map((item, index) => (
               <li key={index}>
                 <strong>{item.title}:</strong> {item.description}
@@ -81,7 +81,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Core Principles of Accessibility
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {corePrinciplesOfAccessibility.map((item, index) => (
               <li key={index}>
                 <strong>{item.title}:</strong> {item.description}
@@ -95,7 +95,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             How to Improve Accessibility on Your Website
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {howToImproveAccessibility.map((item, index) => (
               <li key={index}>
                 <strong>{item.title}:</strong> {item.description}

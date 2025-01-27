@@ -7,7 +7,7 @@ import {
   blockchainApplicationsList,
   futureOfBlockchainList,
   challengesToBlockchainAdoptionList,
-} from "@/lib/constants";
+} from "@/lib/content-constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -66,7 +66,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Key Features of Blockchain Technology
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {blockchainFeaturesList.map((feature, index) => (
               <li key={index}>
                 <strong>{feature.title}:</strong> {feature.description}
@@ -92,7 +92,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Applications of Blockchain Technology
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {blockchainApplicationsList.map((application, index) => (
               <li key={index}>
                 <strong>{application.title}:</strong> {application.description}
@@ -105,7 +105,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             The Future of Blockchain
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {futureOfBlockchainList.map((future, index) => (
               <li key={index}>
                 <strong>{future.title}:</strong> {future.description}
@@ -118,7 +118,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Challenges to Adoption
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {challengesToBlockchainAdoptionList.map((challenge, index) => (
               <li key={index}>
                 <strong>{challenge.title}:</strong> {challenge.description}

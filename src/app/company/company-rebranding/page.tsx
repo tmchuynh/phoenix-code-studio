@@ -33,7 +33,9 @@ const CompanyRebranding: FC = () => {
 
       {/* What is Company Rebranding? */}
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">What is Company Rebranding?</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          What is Company Rebranding?
+        </h2>
         <p className="my-4">
           Company rebranding is a transformative process that involves
           revitalizing or completely redefining your business's image and
@@ -46,7 +48,7 @@ const CompanyRebranding: FC = () => {
           and expectations, we help you build stronger, lasting connections and
           position your business for long-term success.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {rebrandingServiceDetails.map((item, index) => (
             <li key={index}>
               <span className="font-bold text-secondary">{item.title}:</span>{" "}
@@ -58,7 +60,9 @@ const CompanyRebranding: FC = () => {
 
       {/* Our Process */}
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Process
+        </h2>
         <p className="my-4">
           Our process for company rebranding is designed to be collaborative,
           strategic, and impactful. We begin by deeply understanding your
@@ -89,7 +93,9 @@ const CompanyRebranding: FC = () => {
 
       {/* Pricing Tiers */}
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Pricing Tiers</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing Tiers
+        </h2>
         <p className="my-4">
           Our company rebranding services are customized to meet your specific
           needs. Below are our starting prices:
@@ -115,7 +121,9 @@ const CompanyRebranding: FC = () => {
 
       {/* Get Started */}
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to transform your company's brand?{" "}
           <Button

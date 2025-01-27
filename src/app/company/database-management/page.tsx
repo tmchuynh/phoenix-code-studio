@@ -33,7 +33,9 @@ const DatabaseServices: FC = () => {
       })}
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">What We Offer</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          What We Offer
+        </h2>
         <p className="my-4">
           Our database services are designed to provide your business with a
           robust, scalable, and secure data infrastructure that meets your
@@ -48,7 +50,7 @@ const DatabaseServices: FC = () => {
           empower your business to make data-driven decisions with confidence
           and scale efficiently as you grow.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {databaseCreationItemsDetails.map((item, index) => (
             <li key={index}>
               <span className="font-bold text-secondary">{item.title}:</span>{" "}
@@ -59,7 +61,9 @@ const DatabaseServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Database Creation</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Database Creation
+        </h2>
         <p className="my-4">
           Our database creation services encompass designing and deploying
           customized data storage solutions tailored to meet your unique
@@ -72,7 +76,7 @@ const DatabaseServices: FC = () => {
           from scratch or upgrading your current infrastructure, our services
           ensure your data storage is robust and aligned with your goals.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {databaseCreationItems.map((item, index) => (
             <li key={index}>
               <span className="font-bold text-secondary">{item.title}:</span>{" "}
@@ -83,7 +87,9 @@ const DatabaseServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Database Management</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Database Management
+        </h2>
         <p className="my-4">
           Our database management services are designed to ensure your database
           operates with optimal efficiency, robust security, and unwavering
@@ -95,7 +101,7 @@ const DatabaseServices: FC = () => {
           managing your database, we help your business stay focused on growth
           without worrying about backend complexities.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {databaseManagementItems.map((item, index) => (
             <li key={index}>
               <span className="font-bold text-secondary">{item.title}:</span>{" "}
@@ -106,7 +112,9 @@ const DatabaseServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Process
+        </h2>
         <p>
           Our database management process begins with a thorough assessment of
           your existing database infrastructure to identify areas for
@@ -135,7 +143,9 @@ const DatabaseServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Pricing Tiers</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing Tiers
+        </h2>
         <p className="my-4">
           Our pricing is customized based on the complexity, size, and features
           of your database project:
@@ -144,7 +154,7 @@ const DatabaseServices: FC = () => {
           return (
             <>
               {service.name === "Database Management" && (
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-1 text-lg">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-secondary">
@@ -161,7 +171,9 @@ const DatabaseServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to elevate your data infrastructure?{" "}
           <Button

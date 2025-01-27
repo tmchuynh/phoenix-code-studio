@@ -32,7 +32,7 @@ const SPAServices: FC = () => {
       })}
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Why Choose Single Page Applications?
         </h2>
         <p className="my-4">
@@ -50,7 +50,7 @@ const SPAServices: FC = () => {
           efficient solution that combines high performance with exceptional
           user experience.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {spaDevelopmentFeatures.map((feature, index) => (
             <li key={index}>
               <span className="font-bold text-secondary">{feature.title}:</span>{" "}
@@ -61,7 +61,9 @@ const SPAServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our SPA Development Services</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our SPA Development Services
+        </h2>
         <p className="my-4">
           We offer comprehensive end-to-end Single Page Application (SPA)
           development services designed to align with your business goals and
@@ -75,7 +77,7 @@ const SPAServices: FC = () => {
           with intuitive design to meet your objectives and exceed user
           expectations.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {spaDevelopmentServices.map((service, index) => (
             <li key={index}>
               <span className="font-bold text-secondary">{service.title}:</span>{" "}
@@ -86,12 +88,14 @@ const SPAServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Technologies We Use</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Technologies We Use
+        </h2>
         <p className="my-4">
           We leverage the latest tools and frameworks to deliver cutting-edge
           SPAs:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {technologiesUsed.map((tech, index) => (
             <li key={index}>{tech}</li>
           ))}
@@ -99,7 +103,9 @@ const SPAServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Process
+        </h2>
         <p>
           Our SPA development process begins with a deep understanding of your
           business goals, target audience, and project requirements. We start by
@@ -128,7 +134,9 @@ const SPAServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Pricing</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing
+        </h2>
         <p className="my-4">
           Our pricing is based on the complexity and features of your SPA
           project. We offer flexible packages to suit businesses of all sizes:
@@ -138,7 +146,7 @@ const SPAServices: FC = () => {
           return (
             <>
               {service.name === "Single Page Application" && (
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-1 text-lg">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-secondary">
@@ -155,7 +163,9 @@ const SPAServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to build a high-performance Single Page Application?{" "}
           <Button

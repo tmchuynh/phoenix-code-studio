@@ -34,7 +34,7 @@ const EcommerceWebsite: FC = () => {
       })}
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Why Choose Custom eCommerce Development?
         </h2>
         <p className="my-4">
@@ -52,7 +52,7 @@ const EcommerceWebsite: FC = () => {
           user experience, setting your brand apart in a competitive online
           marketplace.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {customEcommerceFeatures.map((feature, index) => (
             <li key={index}>
               <span className="font-bold text-secondary">{feature.title}:</span>{" "}
@@ -63,7 +63,9 @@ const EcommerceWebsite: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Comprehensive Services</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Comprehensive Services
+        </h2>
         <div>
           <h3 className="text-xl font-bold">
             Effortless Product Catalog Management
@@ -72,7 +74,7 @@ const EcommerceWebsite: FC = () => {
             We provide scalable, user-friendly solutions to make managing your
             product catalog seamless and efficient, offering:
           </p>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {productCatalogManagement.map((item, index) => (
               <li key={index}>
                 <span className="font-bold text-tertiary">{item.title}:</span>{" "}
@@ -90,7 +92,7 @@ const EcommerceWebsite: FC = () => {
             Offer your customers a variety of secure and convenient payment
             options, including:
           </p>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {securePaymentGateways.map((gateway, index) => (
               <li key={index}>{gateway}</li>
             ))}
@@ -105,7 +107,7 @@ const EcommerceWebsite: FC = () => {
             Simplify your logistics and enhance customer satisfaction with
             features such as:
           </p>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {shippingAndFulfillment.map((feature, index) => (
               <li key={index}>{feature}</li>
             ))}
@@ -114,7 +116,9 @@ const EcommerceWebsite: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Development Process</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Development Process
+        </h2>
         <p>
           Our custom eCommerce website development process is designed to
           deliver a platform that reflects your brand identity and meets your
@@ -144,12 +148,14 @@ const EcommerceWebsite: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Tools and Technologies</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Tools and Technologies
+        </h2>
         <p className="my-4">
           We use industry-leading tools and frameworks to create scalable,
           secure, and high-performing eCommerce platforms:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           <li>Next.js for fast, SEO-friendly development</li>
           <li>Tailwind CSS for responsive, accessible design</li>
           <li>Shopify or WooCommerce APIs for backend functionality</li>
@@ -159,7 +165,9 @@ const EcommerceWebsite: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Pricing Tiers</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing Tiers
+        </h2>
         <p className="my-4">
           Our pricing is customized based on your website’s features,
           complexity, and scope:
@@ -169,7 +177,7 @@ const EcommerceWebsite: FC = () => {
           return (
             <>
               {service.name === "E-Commerce Site Development" && (
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-1 text-lg">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-secondary">
@@ -186,7 +194,9 @@ const EcommerceWebsite: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to launch your online store?{" "}
           <Button

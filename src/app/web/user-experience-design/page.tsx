@@ -33,14 +33,16 @@ const UXDesignServices: FC = () => {
       })}
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Why UX Design Matters</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Why UX Design Matters
+        </h2>
         <p className="my-4">
           Exceptional UX design ensures that your users can easily navigate,
           interact with, and find value in your product. It focuses on
           understanding user behavior, needs, and pain points to create seamless
           and engaging experiences.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {uxDesignBenefits.map((benefit) => (
             <li key={benefit.title}>
               <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
@@ -51,12 +53,14 @@ const UXDesignServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our UX Design Services</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our UX Design Services
+        </h2>
         <p className="my-4">
           Our comprehensive UX design services are tailored to your product and
           audience, ensuring delightful user experiences.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {uxDesignServices.map((service) => (
             <li key={service.title}>
               <span className="font-bold text-secondary">{service.title}:</span>{" "}
@@ -67,7 +71,9 @@ const UXDesignServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Process
+        </h2>
         <ul className="list-decimal pl-6 space-y-2">
           {uxDesignProcess.map((step) => (
             <li key={step.title}>
@@ -79,12 +85,14 @@ const UXDesignServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Tools and Technologies</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Tools and Technologies
+        </h2>
         <p className="my-4">
           We leverage industry-leading tools and technologies to ensure
           top-notch UX design:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {uxDesignTools.map((tool, index) => (
             <li key={index}>{tool}</li>
           ))}
@@ -92,12 +100,14 @@ const UXDesignServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Pricing Tiers</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing Tiers
+        </h2>
         <p className="my-4">
           Our pricing is customized based on your product’s complexity,
           features, and scope:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {uxDesignPricingTiers.map((pricing) => (
             <li key={pricing.name}>
               <span className="font-bold text-secondary">{pricing.name}:</span>{" "}
@@ -108,7 +118,9 @@ const UXDesignServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to elevate your product with outstanding user experience design?{" "}
           <Button

@@ -20,12 +20,14 @@ const PricingPage: FC = () => {
 
       {/* Service 1: Website Design */}
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Website Design Services</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Website Design Services
+        </h2>
         <p className="my-4">
           Our website design services are designed to meet your business goals,
           from simple informational websites to fully customized solutions.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           <li>
             <span className="font-bold text-secondary">Basic Website:</span>{" "}
             Starting at $2,500 – A simple, informational website (5-10 pages).
@@ -54,12 +56,14 @@ const PricingPage: FC = () => {
 
       {/* Service 2: UX/UI Design */}
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">UX/UI Design Services</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          UX/UI Design Services
+        </h2>
         <p className="my-4">
           Our UX/UI design services focus on creating seamless and engaging user
           experiences while ensuring visually stunning interfaces.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           <li>
             <span className="font-bold text-secondary">
               UX Design Research:
@@ -84,14 +88,14 @@ const PricingPage: FC = () => {
 
       {/* Service 3: Wireframing & Prototyping */}
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Wireframing and Prototyping Services
         </h2>
         <p className="my-4">
           Wireframing and prototyping services to bring your ideas to life with
           interactive mockups and user-centered design.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           <li>
             <span className="font-bold text-secondary">
               Low-Fidelity Wireframes:
@@ -124,12 +128,14 @@ const PricingPage: FC = () => {
 
       {/* Service 4: Development Services */}
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Development Services</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Development Services
+        </h2>
         <p className="my-4">
           Our development services ensure that your vision is brought to life
           using the latest technologies and best practices.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           <li>
             <span className="font-bold text-secondary">
               Frontend Development:
@@ -156,14 +162,14 @@ const PricingPage: FC = () => {
 
       {/* Service 5: Ongoing Support and Maintenance */}
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Ongoing Support and Maintenance
         </h2>
         <p className="my-4">
           Ensure the longevity of your website or application with our ongoing
           maintenance and support services.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           <li>
             <span className="font-bold text-secondary">
               Monthly Support Plan:
@@ -180,7 +186,9 @@ const PricingPage: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to discuss your project and choose the best tier for your needs?{" "}
           <Button

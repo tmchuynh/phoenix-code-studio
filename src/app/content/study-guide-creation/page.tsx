@@ -32,7 +32,9 @@ const StudyGuideCreation: FC = () => {
       })}
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Why Study Guides Matter</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Why Study Guides Matter
+        </h2>
         <p className="my-4">
           Study guides are invaluable resources for organizing information,
           reinforcing learning, and boosting academic performance. Whether
@@ -44,7 +46,7 @@ const StudyGuideCreation: FC = () => {
           essential for building confidence, enhancing comprehension, and
           achieving success in any learning environment.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {studyGuideCreationBenefits.map((benefit) => (
             <li key={benefit.title}>
               <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
@@ -55,7 +57,9 @@ const StudyGuideCreation: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Study Guide Services</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Study Guide Services
+        </h2>
         <p className="my-4">
           We design customized study guides tailored to meet specific learning
           objectives and the unique needs of your audience. By focusing on
@@ -67,7 +71,7 @@ const StudyGuideCreation: FC = () => {
           carefully crafted to support effective study habits, reinforce key
           concepts, and empower learners to achieve their full potential.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {studyGuideCreationServices.map((service) => (
             <li key={service.title}>
               <span className="font-bold text-secondary">{service.title}:</span>{" "}
@@ -78,7 +82,9 @@ const StudyGuideCreation: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>{" "}
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Process
+        </h2>{" "}
         <p>
           Our study guide creation process is designed to deliver clear,
           focused, and effective learning materials. We begin with a
@@ -107,12 +113,14 @@ const StudyGuideCreation: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Tools We Use</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Tools We Use
+        </h2>
         <p className="my-4">
           We use industry-leading tools to create professional and engaging
           study guides:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {toolsForStudyGuideCreation.map((tool, index) => (
             <li key={index}>{tool}</li>
           ))}
@@ -120,7 +128,9 @@ const StudyGuideCreation: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Pricing</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing
+        </h2>
         <p className="my-4">
           Pricing depends on the subject, length, and level of customization
           required. We offer flexible packages to suit various needs.
@@ -129,7 +139,7 @@ const StudyGuideCreation: FC = () => {
           return (
             <>
               {service.name === "Study Guide Creation" && (
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-1 text-lg">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-secondary">
@@ -146,7 +156,9 @@ const StudyGuideCreation: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to create study guides that simplify learning and improve
           outcomes?{" "}

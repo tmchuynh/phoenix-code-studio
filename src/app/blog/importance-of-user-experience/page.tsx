@@ -58,7 +58,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Why UX Matters in Web Design
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {whyUXMattersList.map((item, index) => (
               <li key={index}>
                 <strong>{item.title}:</strong> {item.description}
@@ -71,7 +71,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Key Elements of Great UX in Web Design
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {keyElementsOfGreatUX.map((item, index) => (
               <li key={index}>
                 <strong>{item.title}:</strong> {item.description}
@@ -84,7 +84,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             How to Improve UX on Your Website
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {howToImproveUX.map((item, index) => (
               <li key={index}>
                 <strong>{item.title}:</strong> {item.description}

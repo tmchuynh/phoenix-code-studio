@@ -41,6 +41,12 @@ export const services: Menu[] = [
       "Explore our pricing options and find the perfect plan for your needs.",
   },
   {
+    title: "Example Contracts",
+    href: "/contracts",
+    description:
+      "Explore our pricing options and find the perfect plan for your needs.",
+  },
+  {
     title: "Pricing",
     href: "/pricing",
     description:

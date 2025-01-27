@@ -32,7 +32,7 @@ const TechnicalWritingServices: FC = () => {
       })}
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Why Technical Writing Matters
         </h2>
         <p className="my-4">
@@ -45,7 +45,7 @@ const TechnicalWritingServices: FC = () => {
           of use. This not only enhances user experience but also reduces
           errors, streamlines processes, and supports overall efficiency.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {technicalWritingBenefits.map((benefit) => (
             <li key={benefit.title}>
               <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
@@ -56,7 +56,7 @@ const TechnicalWritingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Our Technical Writing Services
         </h2>
         <p className="my-4">
@@ -70,7 +70,7 @@ const TechnicalWritingServices: FC = () => {
           professional documentation that enhances user experience and supports
           your business objectives.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {technicalWritingServices.map((service) => (
             <li key={service.title}>
               <span className="font-bold text-secondary">{service.title}:</span>{" "}
@@ -81,7 +81,9 @@ const TechnicalWritingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Process
+        </h2>
         <p>
           Our technical writing team consists of experts in various areas,
           including technical writing, documentation, and content management. We
@@ -114,12 +116,14 @@ const TechnicalWritingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Tools We Use</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Tools We Use
+        </h2>
         <p className="my-4">
           We utilize industry-leading tools to deliver high-quality technical
           content:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {toolsForTechnicalWriting.map((tool, index) => (
             <li key={index}>{tool}</li>
           ))}
@@ -127,7 +131,9 @@ const TechnicalWritingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Pricing</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing
+        </h2>
         <p className="my-4">
           Pricing depends on the complexity, length, audience, and level of
           technical expertise required for the documentation.
@@ -136,7 +142,7 @@ const TechnicalWritingServices: FC = () => {
           return (
             <>
               {service.name === "Technical Writing" && (
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-1 text-lg">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-secondary">
@@ -153,7 +159,9 @@ const TechnicalWritingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to elevate your technical documentation?{" "}
           <Button

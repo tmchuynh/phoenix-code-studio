@@ -2,10 +2,10 @@
 
 import { Badge } from "@/components/ui/badge";
 import {
+  whyUseTailwindList,
   howTailwindEnhancesWorkflow,
   proTips,
-  whyUseTailwindList,
-} from "@/lib/constants";
+} from "@/lib/content-constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -61,7 +61,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Why Use Tailwind CSS?
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {whyUseTailwindList.map((item, index) => (
               <li key={index}>
                 <strong>{item.title}:</strong> {item.description}
@@ -74,7 +74,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             How Tailwind CSS Enhances Your Workflow
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {howTailwindEnhancesWorkflow.map((item, index) => (
               <li key={index}>
                 <strong>{item.title}:</strong> {item.description}
@@ -125,7 +125,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Pro Tips for Using Tailwind CSS
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {proTips.map((tip, index) => (
               <li key={index}>
                 <strong>{tip.title}:</strong> {tip.description}

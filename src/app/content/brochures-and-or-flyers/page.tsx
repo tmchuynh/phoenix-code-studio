@@ -32,7 +32,7 @@ const BrochuresAndFlyersServices: FC = () => {
       })}
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Why Brochures and Flyers Matter
         </h2>
         <p className="my-4">
@@ -49,7 +49,7 @@ const BrochuresAndFlyersServices: FC = () => {
           efficient way to amplify your marketing efforts and connect with your
           audience.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {brochuresFlyersBenefits.map((benefit) => (
             <li key={benefit.title}>
               <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
@@ -60,7 +60,7 @@ const BrochuresAndFlyersServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Our Brochures and Flyers Services
         </h2>
         <p className="my-4">
@@ -74,7 +74,7 @@ const BrochuresAndFlyersServices: FC = () => {
           promotions, or campaigns, we deliver brochures and flyers that stand
           out and drive results.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {brochuresFlyersServices.map((service) => (
             <li key={service.title}>
               <span className="font-bold text-secondary">{service.title}:</span>{" "}
@@ -85,7 +85,9 @@ const BrochuresAndFlyersServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Process
+        </h2>
         <p>
           Our brochure and flyer design process is structured to deliver
           professional, impactful marketing materials that align with your brand
@@ -116,12 +118,14 @@ const BrochuresAndFlyersServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Tools We Use</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Tools We Use
+        </h2>
         <p className="my-4">
           We utilize industry-leading tools to ensure professional-grade
           designs:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {brochuresFlyersTools.map((tool, index) => (
             <li key={index}>{tool}</li>
           ))}
@@ -129,7 +133,9 @@ const BrochuresAndFlyersServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Pricing</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing
+        </h2>
         <p className="my-4">
           Pricing depends on the design complexity, format, and number of
           revisions.
@@ -138,7 +144,7 @@ const BrochuresAndFlyersServices: FC = () => {
           return (
             <>
               {service.name === "Brochures and/or Flyers" && (
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-1 text-lg">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-secondary">
@@ -155,7 +161,9 @@ const BrochuresAndFlyersServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to create stunning brochures and flyers that captivate your
           audience?{" "}

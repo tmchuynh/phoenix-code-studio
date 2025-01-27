@@ -1,6 +1,10 @@
 import { testimonials } from "@/lib/constants";
 import useSmallScreen from "@/lib/useSmallScreen";
 import { useRouter } from "next/navigation";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Button } from "./ui/button";
 
@@ -19,11 +23,26 @@ const Testimonials = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
             Hear From Our Clients
           </h2>
-          <Swiper spaceBetween={30} slidesPerView={1} className="h-full">
-            {testimonials.map((testimonial, index) => (
-              <SwiperSlide key={index} className="p-6 mx-auto">
+          <Swiper
+            spaceBetween={30}
+            centeredSlides={true}
+            autoplay={{
+              delay: 10000,
+              disableOnInteraction: false,
+            }}
+            pagination={{
+              clickable: true,
+              dynamicBullets: true,
+            }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}
+            className="mySwiper"
+            slidesPerView={1}
+          >
+            {testimonials.map((testimonial) => (
+              <SwiperSlide key={testimonial.name} className="p-6 mx-auto">
                 {testimonial.featured && (
-                  <div className="p-6 rounded-lg border-2 bg-card text-card-foreground">
+                  <div className="p-6 rounded-lg border-2 bg-card text-card-foreground mx-10 mb-8">
                     <div className="flex-1 flex 2xl:items-end">
                       <p className="text-lg italic">
                         <span>"</span>
@@ -49,7 +68,7 @@ const Testimonials = () => {
             ))}
           </Swiper>
           <div className="text-center mt-8">
-            <Button variant={"tertiary"} onClick={navigateToTestimonials}>
+            <Button variant="tertiary" onClick={navigateToTestimonials}>
               Read More Testimonials
             </Button>
           </div>

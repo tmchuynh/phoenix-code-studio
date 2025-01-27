@@ -32,7 +32,9 @@ const NewsletterServices: FC = () => {
       })}
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Why Newsletters Matter</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Why Newsletters Matter
+        </h2>
         <p className="my-4">
           Newsletters are an effective way to nurture relationships, keep your
           audience informed, and drive engagement with your business. Whether
@@ -45,7 +47,7 @@ const NewsletterServices: FC = () => {
           strengthen loyalty, and support your broader marketing and
           communication goals.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {newsletterBenefits.map((benefit) => (
             <li key={benefit.title}>
               <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
@@ -56,7 +58,9 @@ const NewsletterServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Newsletter Services</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Newsletter Services
+        </h2>
         <p className="my-4">
           We provide comprehensive, end-to-end newsletter solutions, managing
           every aspect from strategy development to final delivery. Our process
@@ -69,7 +73,7 @@ const NewsletterServices: FC = () => {
           across platforms. Let us handle the details so you can focus on
           building stronger connections with your audience.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {newsletterServices.map((service) => (
             <li key={service.title}>
               <span className="font-bold text-secondary">{service.title}:</span>{" "}
@@ -80,7 +84,9 @@ const NewsletterServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>{" "}
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Process
+        </h2>{" "}
         <p>
           Our newsletter creation process is designed to deliver engaging and
           impactful communications that resonate with your audience. We start by
@@ -109,11 +115,13 @@ const NewsletterServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Tools We Use</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Tools We Use
+        </h2>
         <p className="my-4">
           We leverage top tools to ensure engaging, high-performing newsletters:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {newsletterTools.map((tool, index) => (
             <li key={index}>{tool}</li>
           ))}
@@ -121,7 +129,9 @@ const NewsletterServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Pricing</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing
+        </h2>
         <p className="my-4">
           Pricing depends on the frequency, length, and complexity of your
           newsletters.
@@ -130,7 +140,7 @@ const NewsletterServices: FC = () => {
           return (
             <>
               {service.name === "Newsletters" && (
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-1 text-lg">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-secondary">
@@ -147,7 +157,9 @@ const NewsletterServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to elevate your communication with professional newsletters?{" "}
           <Button

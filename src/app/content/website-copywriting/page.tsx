@@ -32,7 +32,7 @@ const WebsiteCopywritingServices: FC = () => {
       })}
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Why Website Copywriting Matters
         </h2>
         <p className="my-4">
@@ -52,7 +52,7 @@ const WebsiteCopywritingServices: FC = () => {
           them toward meaningful actions, such as making a purchase, signing up,
           or reaching out for more information.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {websiteCopywritingBenefits.map((benefit) => (
             <li key={benefit.title}>
               <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
@@ -63,7 +63,7 @@ const WebsiteCopywritingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Our Website Copywriting Services
         </h2>
         <p className="my-4">
@@ -75,7 +75,7 @@ const WebsiteCopywritingServices: FC = () => {
           enhance your online presence, our copywriting solutions are customized
           to resonate with your target audience and deliver measurable results.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {websiteCopywritingServices.map((service) => (
             <li key={service.title}>
               <span className="font-bold text-secondary">{service.title}:</span>{" "}
@@ -86,7 +86,9 @@ const WebsiteCopywritingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Process
+        </h2>
         <p>
           Our website copywriting process is designed to deliver high-quality,
           tailored content that aligns with your business goals and engages your
@@ -116,12 +118,14 @@ const WebsiteCopywritingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Tools We Use</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Tools We Use
+        </h2>
         <p className="my-4">
           We use cutting-edge tools to deliver high-quality, optimized website
           copy:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {toolsUsedCopywriting.map((tool, index) => (
             <li key={index}>{tool}</li>
           ))}
@@ -129,7 +133,9 @@ const WebsiteCopywritingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Pricing</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing
+        </h2>
         <p className="my-4">
           Pricing is based on the number of pages, word count, and complexity of
           the content.
@@ -138,7 +144,7 @@ const WebsiteCopywritingServices: FC = () => {
           return (
             <>
               {service.name === "Website Copywriting" && (
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-1 text-lg">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-secondary">
@@ -155,7 +161,9 @@ const WebsiteCopywritingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to elevate your website with powerful, engaging copy?{" "}
           <Button

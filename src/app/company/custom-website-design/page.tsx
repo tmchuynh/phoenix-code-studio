@@ -32,7 +32,7 @@ const CustomWebsite: FC = () => {
       })}
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           What is Custom Website Design?
         </h2>
         <p className="my-4">
@@ -52,7 +52,7 @@ const CustomWebsite: FC = () => {
           build brand authority, a custom website design provides the foundation
           for a distinctive and impactful online presence that drives results.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {customWebsiteDesignList.map((item, index) => (
             <li key={index}>
               <span className="font-bold text-secondary">{item.title}:</span>{" "}
@@ -63,7 +63,9 @@ const CustomWebsite: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Process
+        </h2>
         <p>
           Our process for creating a custom website, followed by domain
           registration and web hosting, ensures a seamless and efficient
@@ -105,7 +107,7 @@ const CustomWebsite: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Domain Registration and Web Hosting
         </h2>
         <p>
@@ -120,7 +122,7 @@ const CustomWebsite: FC = () => {
           experience for your audience.
         </p>
         <h3 className="text-xl font-bold">Domain Registration</h3>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {domainRegistrationList.map((item, index) => (
             <li key={index}>
               <span className="font-bold text-tertiary">{item.title}:</span>{" "}
@@ -129,7 +131,7 @@ const CustomWebsite: FC = () => {
           ))}
         </ul>
         <h3 className="text-xl font-bold">Web Hosting</h3>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {webHostingList.map((item, index) => (
             <li key={index}>
               <span className="font-bold text-tertiary">{item.title}:</span>{" "}
@@ -140,12 +142,14 @@ const CustomWebsite: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Tools and Technologies</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Tools and Technologies
+        </h2>
         <p className="my-4">
           We leverage industry-leading tools and technologies to create
           efficient, scalable, and secure websites:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {toolsAndTechnologiesList.map((tool, index) => (
             <li key={index}>{tool}</li>
           ))}
@@ -153,7 +157,9 @@ const CustomWebsite: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Pricing Tiers</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing Tiers
+        </h2>
         <p className="my-4">
           Our pricing is customized based on your website’s features,
           complexity, and scope:
@@ -162,7 +168,7 @@ const CustomWebsite: FC = () => {
           return (
             <>
               {service.name === "Custom Website Design" && (
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-1 text-lg">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-secondary">
@@ -179,7 +185,9 @@ const CustomWebsite: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to elevate your online presence with a custom website?{" "}
           <Button

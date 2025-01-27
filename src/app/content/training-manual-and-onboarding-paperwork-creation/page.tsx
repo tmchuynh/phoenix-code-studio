@@ -33,7 +33,7 @@ const TrainingManualOnboardingPapers: FC = () => {
       })}
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Why Training Manuals and Onboarding Papers Matter
         </h2>
         <p className="my-4">
@@ -48,7 +48,7 @@ const TrainingManualOnboardingPapers: FC = () => {
           onboarding experience but also contribute to long-term employee
           engagement and success.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {onboardingPaperBenefits.map((benefit) => (
             <li key={benefit.title}>
               <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
@@ -59,7 +59,7 @@ const TrainingManualOnboardingPapers: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Our Training Manual and Onboarding Services
         </h2>
         <p className="my-4">
@@ -74,7 +74,7 @@ const TrainingManualOnboardingPapers: FC = () => {
           enterprises, our customized solutions help set the foundation for
           employee success and long-term productivity.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {onboardingServices.map((service) => (
             <li key={service.title}>
               <span className="font-bold text-secondary">{service.title}:</span>{" "}
@@ -85,7 +85,9 @@ const TrainingManualOnboardingPapers: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Process
+        </h2>
         <p>
           Our process for creating training manuals and onboarding documents
           ensures clarity, consistency, and alignment with your organization’s
@@ -117,12 +119,14 @@ const TrainingManualOnboardingPapers: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Tools We Use</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Tools We Use
+        </h2>
         <p className="my-4">
           We utilize industry-leading tools to create professional and engaging
           training materials:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {toolsForOnboarding.map((tool, index) => (
             <li key={index}>{tool}</li>
           ))}
@@ -130,7 +134,9 @@ const TrainingManualOnboardingPapers: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Pricing</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing
+        </h2>
         <p className="my-4">
           Pricing is based on the document type, length, and complexity. We
           offer flexible packages to suit your needs.
@@ -140,7 +146,7 @@ const TrainingManualOnboardingPapers: FC = () => {
             <>
               {service.name ===
                 "Training Manual and Onboarding Paperwork Creation" && (
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-1 text-lg">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-secondary">
@@ -157,7 +163,9 @@ const TrainingManualOnboardingPapers: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to empower your team with clear and effective training and
           onboarding materials?{" "}

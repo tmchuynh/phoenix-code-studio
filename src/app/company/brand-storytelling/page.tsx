@@ -31,7 +31,7 @@ const BrandStorytellingServices: FC = () => {
       })}
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Why Brand Storytelling Matters
         </h2>
         <p className="my-4">
@@ -45,7 +45,7 @@ const BrandStorytellingServices: FC = () => {
           meaningful connections with your audience. Our rebranding services are
           designed to help your business thrive in an ever-evolving marketplace.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {brandStorytellingBenefits.map((benefit) => (
             <li key={benefit.title}>
               <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
@@ -56,7 +56,7 @@ const BrandStorytellingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Our Brand Storytelling Services
         </h2>
         <p className="my-4">
@@ -73,7 +73,7 @@ const BrandStorytellingServices: FC = () => {
           through website content, marketing campaigns, or brand storytelling,
           we ensure your narrative leaves a powerful and lasting impact.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {brandStorytellingServices.map((service) => (
             <li key={service.title}>
               <span className="font-bold text-secondary">{service.title}:</span>{" "}
@@ -84,7 +84,9 @@ const BrandStorytellingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Process
+        </h2>
         <p>
           Our process for crafting compelling brand narratives begins with a
           deep dive into your business. We take the time to understand your
@@ -116,7 +118,9 @@ const BrandStorytellingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Pricing</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing
+        </h2>
         <p className="my-4">
           Our brand storytelling services are tailored to fit your specific
           goals. Pricing is based on the project’s complexity, length, and
@@ -126,7 +130,7 @@ const BrandStorytellingServices: FC = () => {
           return (
             <>
               {service.name === "Brand Storytelling" && (
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-1 text-lg">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-secondary">
@@ -143,7 +147,9 @@ const BrandStorytellingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to tell your story and define your brand?{" "}
           <Button

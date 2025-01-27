@@ -5,12 +5,13 @@ import {
   webScrapingList,
   ethicalConsiderationsList,
   toolsForScrapingList,
-} from "@/lib/constants";
+} from "@/lib/content-constants";
+
 import React from "react";
 
 const BlogPage = () => {
   return (
-    <div className="max-w-4xl mx-auto p-6">
+    <main className="my-16 w-11/12 mx-auto">
       <article className="space-y-8">
         <header className="text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
@@ -65,7 +66,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Applications of Web Scraping
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {webScrapingList.map((item, index) => (
               <li key={index}>
                 <strong>{item.title}:</strong> {item.description}
@@ -82,7 +83,7 @@ const BlogPage = () => {
             While web scraping is a powerful tool, it comes with ethical and
             legal responsibilities:
           </p>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {ethicalConsiderationsList.map((item, index) => (
               <li key={index}>
                 <strong>{item.title}:</strong> {item.description}
@@ -95,7 +96,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Popular Tools for Web Scraping
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {toolsForScrapingList.map((item, index) => (
               <li key={index}>
                 <strong>{item.title}:</strong> {item.description}
@@ -108,7 +109,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             The Benefits of Web Scraping
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             <li>
               <strong>Efficiency:</strong> Automates data collection processes,
               saving time and resources.
@@ -128,7 +129,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Challenges of Web Scraping
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             <li>
               <strong>Anti-Scraping Measures:</strong> Websites may use
               CAPTCHAs, IP blocking, or dynamic content to deter scrapers.
@@ -175,7 +176,7 @@ const BlogPage = () => {
           </p>
         </footer>
       </article>
-    </div>
+    </main>
   );
 };
 

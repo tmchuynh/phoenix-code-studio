@@ -10,7 +10,7 @@ import {
   trends6,
   trends7,
   stayingAhead,
-} from "@/lib/constants";
+} from "@/lib/content-constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -65,7 +65,7 @@ const BlogPage = () => {
           <p className="text-lg">
             <strong>What’s Next?</strong>
           </p>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {trends1.map((trend, index) => (
               <li key={index}>{trend}</li>
             ))}
@@ -85,7 +85,7 @@ const BlogPage = () => {
           <p className="text-lg">
             <strong>Applications:</strong>
           </p>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {trends2.map((trend, index) => (
               <li key={index}>{trend}</li>
             ))}
@@ -105,7 +105,7 @@ const BlogPage = () => {
           <p className="text-lg">
             <strong>Impact:</strong>
           </p>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {trends3.map((trend, index) => (
               <li key={index}>{trend}</li>
             ))}
@@ -125,7 +125,7 @@ const BlogPage = () => {
           <p className="text-lg">
             <strong>Future Trends:</strong>
           </p>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {trends4.map((trend, index) => (
               <li key={index}>{trend}</li>
             ))}
@@ -145,7 +145,7 @@ const BlogPage = () => {
           <p className="text-lg">
             <strong>Key Innovations:</strong>
           </p>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {trends5.map((trend, index) => (
               <li key={index}>{trend}</li>
             ))}
@@ -165,7 +165,7 @@ const BlogPage = () => {
           <p className="text-lg">
             <strong>What to Expect:</strong>
           </p>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {trends6.map((trend, index) => (
               <li key={index}>{trend}</li>
             ))}
@@ -185,7 +185,7 @@ const BlogPage = () => {
           <p className="text-lg">
             <strong>Applications:</strong>
           </p>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {trends7.map((trend, index) => (
               <li key={index}>{trend}</li>
             ))}
@@ -196,7 +196,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             How to Stay Ahead in the Digital Revolution
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {stayingAhead.map((trend, index) => (
               <li key={index}>{trend}</li>
             ))}

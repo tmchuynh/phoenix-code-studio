@@ -6,7 +6,7 @@ import {
   tipsForCraftingGUIs,
   toolsForGUI,
   examplesOfGreatGUI,
-} from "@/lib/constants";
+} from "@/lib/content-constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -63,7 +63,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Key Principles of GUI Design
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {keyPrinciples.map((principle, index) => (
               <li key={index}>
                 <strong>{principle.title}:</strong> {principle.description}
@@ -76,7 +76,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Tips for Crafting User-Friendly GUIs
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {tipsForCraftingGUIs.map((tip, index) => (
               <li key={index}>
                 <strong>{tip.title}:</strong> {tip.description}
@@ -89,7 +89,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Tools for GUI Design
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {toolsForGUI.map((tool, index) => (
               <li key={index}>
                 <strong>{tool.title}:</strong> {tool.description}
@@ -102,7 +102,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Examples of Great GUI Design
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {examplesOfGreatGUI.map((example, index) => (
               <li key={index}>
                 <strong>{example.title}:</strong> {example.description}

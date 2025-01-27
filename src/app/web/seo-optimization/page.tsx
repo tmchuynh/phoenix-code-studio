@@ -33,7 +33,9 @@ const SEOOptimization: FC = () => {
 
       {/* Why SEO Optimization Matters */}
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Why SEO Optimization Matters</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Why SEO Optimization Matters
+        </h2>
         <p className="my-4">
           SEO (Search Engine Optimization) optimization is the practice of
           enhancing your website’s content, structure, and technical aspects to
@@ -42,7 +44,7 @@ const SEOOptimization: FC = () => {
           your target audience, increasing organic traffic and boosting your
           visibility.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {seoOptimizationBenefits.map((benefit) => (
             <li key={benefit.title}>
               <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
@@ -54,14 +56,14 @@ const SEOOptimization: FC = () => {
 
       {/* Our SEO Optimization Services */}
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Our SEO Optimization Services
         </h2>
         <p className="my-4">
           We offer comprehensive SEO services to enhance your website's
           visibility and increase organic traffic.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {seoOptimizationServices.map((service) => (
             <li key={service.title}>
               <span className="font-bold text-secondary">{service.title}:</span>{" "}
@@ -73,7 +75,9 @@ const SEOOptimization: FC = () => {
 
       {/* Our Process */}
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Process
+        </h2>
         <p className="my-4">
           SEO projects typically take 2 to 6 weeks, depending on the complexity
           and scope of the services required.
@@ -90,11 +94,13 @@ const SEOOptimization: FC = () => {
 
       {/* Tools We Use */}
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Tools We Use</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Tools We Use
+        </h2>
         <p className="my-4">
           We utilize industry-leading tools to optimize your website for SEO:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {toolsUsedSEO.map((tool, index) => (
             <li key={index}>{tool}</li>
           ))}
@@ -103,7 +109,9 @@ const SEOOptimization: FC = () => {
 
       {/* Pricing Tiers */}
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Pricing Tiers</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing Tiers
+        </h2>
         <p className="my-4">
           Our pricing for SEO optimization services is tailored to your
           business's needs. Pricing is based on the complexity and scope of the
@@ -113,7 +121,7 @@ const SEOOptimization: FC = () => {
           return (
             <>
               {service.name === "SEO Optimization" && (
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-1 text-lg">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-secondary">
@@ -131,7 +139,9 @@ const SEOOptimization: FC = () => {
 
       {/* Get Started Section */}
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to boost your website's visibility with our SEO optimization
           services?{" "}

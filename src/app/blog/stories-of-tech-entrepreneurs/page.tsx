@@ -85,7 +85,7 @@ const BlogPage = () => {
               <h3 className="text-xl font-semibold text-tertiary">
                 {entrepreneur.title}
               </h3>
-              <ul className="list-disc pl-6 space-y-2">
+              <ul className="list-disc pl-6 space-y-1 text-lg">
                 {entrepreneur.details.map((detail, i) => (
                   <li key={i}>
                     <strong>{detail.split(":")[0]}:</strong>{" "}
@@ -101,7 +101,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Lessons from Successful Entrepreneurs
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {lessons.map((lesson, index) => (
               <li key={index}>{lesson}</li>
             ))}

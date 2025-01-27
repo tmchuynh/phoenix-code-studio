@@ -32,7 +32,9 @@ const OnlineCoursesServices: FC = () => {
       })}
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Why Online Courses Matter</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Why Online Courses Matter
+        </h2>
         <p className="my-4">
           Online courses are an impactful tool for sharing knowledge,
           establishing authority, and creating scalable, engaging learning
@@ -44,7 +46,7 @@ const OnlineCoursesServices: FC = () => {
           long-term impact, making them an essential part of modern education
           and training.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {onlineCourseBenefits.map((benefit) => (
             <li key={benefit.title}>
               <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
@@ -55,7 +57,9 @@ const OnlineCoursesServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Online Courses Services</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Online Courses Services
+        </h2>
         <p className="my-4">
           We offer comprehensive, end-to-end solutions for designing and
           developing impactful online courses. From initial concept creation and
@@ -68,7 +72,7 @@ const OnlineCoursesServices: FC = () => {
           our solutions are tailored to help you create memorable and effective
           learning experiences.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {onlineCourseServices.map((service) => (
             <li key={service.title}>
               <span className="font-bold text-secondary">{service.title}:</span>{" "}
@@ -79,7 +83,9 @@ const OnlineCoursesServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Process
+        </h2>
         <p>
           Our online course creation process is designed to deliver impactful
           and engaging learning experiences. We begin with a detailed
@@ -109,12 +115,14 @@ const OnlineCoursesServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Tools We Use</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Tools We Use
+        </h2>
         <p className="my-4">
           We use industry-leading tools to create engaging and professional
           online courses:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {onlineCourseTools.map((tool, index) => (
             <li key={index}>{tool}</li>
           ))}
@@ -122,7 +130,9 @@ const OnlineCoursesServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Pricing</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing
+        </h2>
         <p className="my-4">
           Pricing is based on the course length, complexity, and multimedia
           requirements.
@@ -131,7 +141,7 @@ const OnlineCoursesServices: FC = () => {
           return (
             <>
               {service.name === "Online Courses" && (
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-1 text-lg">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-secondary">
@@ -148,7 +158,9 @@ const OnlineCoursesServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to launch your online course and share your expertise?{" "}
           <Button

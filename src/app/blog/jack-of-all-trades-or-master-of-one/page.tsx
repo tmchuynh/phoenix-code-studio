@@ -96,7 +96,7 @@ const JackOfAllTradesBlog = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             {jackOfAllTradesContent.benefits.title}
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {jackOfAllTradesContent.benefits.points.map((benefit, index) => (
               <li key={index}>
                 <strong>{benefit.title}:</strong> {benefit.description}
@@ -118,7 +118,7 @@ const JackOfAllTradesBlog = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             {jackOfAllTradesContent.tips.title}
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {jackOfAllTradesContent.tips.points.map((tip, index) => (
               <li key={index}>
                 <strong>{tip.title}:</strong> {tip.description}

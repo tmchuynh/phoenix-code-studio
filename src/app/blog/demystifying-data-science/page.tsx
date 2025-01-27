@@ -7,7 +7,7 @@ import {
   dataScienceApplicationsList,
   dataScienceBenefitsList,
   gettingStartedInDataScienceList,
-} from "@/lib/constants";
+} from "@/lib/content-constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -79,7 +79,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Key Tools and Techniques in Data Science
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {dataScienceToolsList.map((tool, index) => (
               <li key={index}>
                 <strong>{tool.title}:</strong> {tool.description}
@@ -92,7 +92,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Applications of Data Science
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {dataScienceApplicationsList.map((application, index) => (
               <li key={index}>
                 <strong>{application.title}:</strong> {application.description}
@@ -105,7 +105,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Why Data Science Matters
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {dataScienceBenefitsList.map((benefit, index) => (
               <li key={index}>
                 <strong>{benefit.title}:</strong> {benefit.description}
@@ -118,7 +118,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Getting Started in Data Science
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {gettingStartedInDataScienceList.map((tip, index) => (
               <li key={index}>
                 <strong>{tip.title}:</strong> {tip.description}

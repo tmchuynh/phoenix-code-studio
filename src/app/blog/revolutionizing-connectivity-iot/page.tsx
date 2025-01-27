@@ -2,11 +2,11 @@
 
 import { Badge } from "@/components/ui/badge";
 import {
+  innovations,
   applications,
   challenges,
   futureTrends,
-  innovations,
-} from "@/lib/constants";
+} from "@/lib/content-constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -65,7 +65,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Innovations in IoT Development
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {innovations.map((innovation, index) => (
               <li key={index}>{innovation}</li>
             ))}
@@ -76,7 +76,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Applications of IoT
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {applications.map((application, index) => (
               <li key={index}>
                 <span className="font-bold">{application.title}:</span>{" "}
@@ -90,7 +90,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Challenges Facing IoT Development
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {challenges.map((challenge, index) => (
               <li key={index}>
                 <span className="font-bold">{challenge.title}:</span>{" "}
@@ -104,7 +104,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             The Future of IoT
           </h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="list-disc pl-6 space-y-1 text-lg">
             {futureTrends.map((trend, index) => (
               <li key={index}>
                 <span className="font-bold">{trend.title}:</span>{" "}

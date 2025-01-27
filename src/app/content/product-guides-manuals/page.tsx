@@ -32,7 +32,7 @@ const ProductGuidesManualsServices: FC = () => {
       })}
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Why Product Guides and Manuals Matter
         </h2>
         <p className="my-4">
@@ -47,7 +47,7 @@ const ProductGuidesManualsServices: FC = () => {
           these guides not only improve usability but also strengthen brand
           trust and loyalty.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {productGuideBenefits.map((benefit) => (
             <li key={benefit.title}>
               <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
@@ -58,7 +58,7 @@ const ProductGuidesManualsServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Our Product Guides and Manuals Services
         </h2>
         <p className="my-4">
@@ -72,7 +72,7 @@ const ProductGuidesManualsServices: FC = () => {
           enhance product usability, reduce support inquiries, and foster a
           positive user experience.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {productGuideServices.map((service) => (
             <li key={service.title}>
               <span className="font-bold text-secondary">{service.title}:</span>{" "}
@@ -83,7 +83,9 @@ const ProductGuidesManualsServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>{" "}
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Process
+        </h2>{" "}
         <p>
           Our product documentation process is designed to deliver clear,
           user-focused guides that enhance product usability and customer
@@ -113,12 +115,14 @@ const ProductGuidesManualsServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Tools We Use</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Tools We Use
+        </h2>
         <p className="my-4">
           We leverage industry-leading tools to create high-quality product
           guides and manuals:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {productGuideTools.map((tool, index) => (
             <li key={index}>{tool}</li>
           ))}
@@ -126,7 +130,9 @@ const ProductGuidesManualsServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Pricing</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing
+        </h2>
         <p className="my-4">
           Pricing is determined by the scope, length, and technical complexity
           of the manual.
@@ -135,7 +141,7 @@ const ProductGuidesManualsServices: FC = () => {
           return (
             <>
               {service.name === "Product Guides/Manuals" && (
-                <ul className="list-disc pl-6 space-y-2">
+                <ul className="list-disc pl-6 space-y-1 text-lg">
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>
                       <span className="font-bold text-secondary">
@@ -152,7 +158,9 @@ const ProductGuidesManualsServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to create clear, professional product guides and manuals?{" "}
           <Button

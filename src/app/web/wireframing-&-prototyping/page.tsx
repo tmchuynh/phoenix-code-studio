@@ -33,7 +33,7 @@ const WireframingPrototypingServices: FC = () => {
       })}
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Why Wireframing and Prototyping Matter
         </h2>
         <p className="my-4">
@@ -42,7 +42,7 @@ const WireframingPrototypingServices: FC = () => {
           feedback early. They ensure that your final product aligns with user
           expectations and business goals.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {wireframingPrototypingBenefits.map((benefit) => (
             <li key={benefit.title}>
               <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
@@ -53,14 +53,14 @@ const WireframingPrototypingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Our Wireframing and Prototyping Services
         </h2>
         <p className="my-4">
           We specialize in creating detailed wireframes and interactive
           prototypes to ensure your project starts on the right foundation.
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {wireframingPrototypingServices.map((service) => (
             <li key={service.title}>
               <span className="font-bold text-secondary">{service.title}:</span>{" "}
@@ -71,7 +71,9 @@ const WireframingPrototypingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Our Process</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Our Process
+        </h2>
         <ul className="list-decimal pl-6 space-y-2">
           {wireframingPrototypingProcess.map((step) => (
             <li key={step.title}>
@@ -83,12 +85,14 @@ const WireframingPrototypingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Tools and Technologies</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Tools and Technologies
+        </h2>
         <p className="my-4">
           We utilize industry-standard tools and technologies to create
           high-quality wireframes and prototypes:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {wireframingPrototypingTools.map((tool, index) => (
             <li key={index}>{tool}</li>
           ))}
@@ -96,12 +100,14 @@ const WireframingPrototypingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Pricing Tiers</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing Tiers
+        </h2>
         <p className="my-4">
           Our wireframing and prototyping services are tailored to meet your
           needs. Pricing depends on the complexity and scope of the project:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-1 text-lg">
           {wireframingPrototypingPricingTiers.map((pricing) => (
             <li key={pricing.name}>
               <span className="font-bold text-secondary">{pricing.name}:</span>{" "}
@@ -112,7 +118,9 @@ const WireframingPrototypingServices: FC = () => {
       </section>
 
       <section className="my-8">
-        <h2 className="text-2xl font-semibold">Get Started Today</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Get Started Today
+        </h2>
         <p className="my-4">
           Ready to bring your ideas to life with professional wireframing and
           prototyping?{" "}
