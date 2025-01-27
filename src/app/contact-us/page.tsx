@@ -254,7 +254,7 @@ const ContactUsPage: FC = () => {
                     <FaChevronDown />
                   </button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-52 sm:w-64 md:w-96 lg:w-[50em] 2xl:w-[100em]">
+                <DropdownMenuContent className="w-52 sm:w-64 md:w-96 lg:w-[50em] 2xl:w-[80em]">
                   {paymentPlans.map((plan, idx) => (
                     <DropdownMenuItem
                       key={idx}
