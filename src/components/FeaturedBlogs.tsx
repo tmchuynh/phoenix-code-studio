@@ -25,7 +25,7 @@ const FeaturedBlogs = () => {
                 className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground flex flex-col justify-between"
               >
                 <div>
-                  <h3 className="text-xl font-semibold text-center text-tertiary">
+                  <h3 className="text-2xl font-semibold text-center text-tertiary">
                     {blog.title}
                   </h3>
                   <h5 className="text-center text-secondary text-xs">

@@ -102,7 +102,7 @@ const aboutUs = () => {
         <ul className="flex flex-col gap-2">
           <li className="flex">
             <FaRegLightbulb
-              className="flex-shrink-0 text-tertiary mr-3"
+              className="flex-shrink-0 text-accent-1 mr-3"
               style={{ fontSize: "24px" }}
             />
             <div>
@@ -117,7 +117,7 @@ const aboutUs = () => {
           </li>
           <li className="flex">
             <GrGrow
-              className="flex-shrink-0 text-tertiary mr-3"
+              className="flex-shrink-0 text-accent-1 mr-3"
               style={{ fontSize: "24px" }}
             />
             <div>
@@ -132,7 +132,7 @@ const aboutUs = () => {
           </li>
           <li className="flex">
             <FaSeedling
-              className="flex-shrink-0 text-tertiary mr-3"
+              className="flex-shrink-0 text-accent-1 mr-3"
               style={{ fontSize: "24px" }}
             />
             <div>
@@ -147,7 +147,7 @@ const aboutUs = () => {
           </li>
           <li className="flex">
             <FaStar
-              className="flex-shrink-0 text-tertiary mr-3"
+              className="flex-shrink-0 text-accent-1 mr-3"
               style={{ fontSize: "24px" }}
             />
             <div>
@@ -162,7 +162,7 @@ const aboutUs = () => {
           </li>
           <li className="flex">
             <FaHandsHelping
-              className="flex-shrink-0 text-tertiary mr-3"
+              className="flex-shrink-0 text-accent-1 mr-3"
               style={{ fontSize: "24px" }}
             />
             <div>
@@ -177,7 +177,7 @@ const aboutUs = () => {
           </li>
           <li className="flex">
             <FaHandshake
-              className="flex-shrink-0 text-tertiary mr-3"
+              className="flex-shrink-0 text-accent-1 mr-3"
               style={{ fontSize: "24px" }}
             />
             <div>
@@ -192,7 +192,7 @@ const aboutUs = () => {
           </li>
           <li className="flex">
             <FaUsers
-              className="flex-shrink-0 text-tertiary mr-3"
+              className="flex-shrink-0 text-accent-1 mr-3"
               style={{ fontSize: "24px" }}
             />
             <div>
@@ -207,7 +207,7 @@ const aboutUs = () => {
           </li>
           <li className="flex">
             <FaRecycle
-              className="flex-shrink-0 text-tertiary mr-3"
+              className="flex-shrink-0 text-accent-1 mr-3"
               style={{ fontSize: "24px" }}
             />
             <div>

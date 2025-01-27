@@ -243,7 +243,7 @@ const PastProjectsPage: FC = () => {
           </label>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <button className="p-2 text-sm bg-gray-200 rounded">
+              <button className="p-2 text-sm bg-muted rounded">
                 {projectsPerPage} projects per page
               </button>
             </DropdownMenuTrigger>

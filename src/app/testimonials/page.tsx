@@ -7,11 +7,16 @@ const TestimonialsPage: FC = () => {
   return (
     <main className="w-11/12 mx-auto py-6">
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        What Our Clients Say
+        Testimonials from Our Clients
       </h1>
       <p className="text-lg my-4">
-        Hear from our happy clients who have experienced the transformative
-        power of our services.
+        Discover the stories of our satisfied clients who have experienced
+        firsthand the transformative impact of our services. From achieving
+        their business goals to elevating their brands, our clients share how
+        our tailored solutions have made a meaningful difference. Their success
+        is a testament to our commitment to delivering exceptional results and
+        building lasting partnerships. Hear directly from those who have trusted
+        us to bring their visions to life.
       </p>
 
       {/* Displaying testimonials dynamically */}
@@ -32,7 +37,7 @@ const TestimonialsPage: FC = () => {
                   <p className="font-semibold text-xl mb-2">
                     {testimonial.name}
                   </p>
-                  <p className="text-lg text-gray-500 mb-4">
+                  <p className="text-lg text-accent-3 mb-4">
                     {testimonial.position}
                   </p>
                 </div>

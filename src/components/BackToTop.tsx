@@ -32,7 +32,7 @@ const BackToTop = () => {
         <Button
           onClick={scrollToTop}
           size={"icon"}
-          className="fixed bottom-4 right-4 bg-primary text-primary-foreground rounded-full shadow-lg"
+          className="fixed bottom-4 right-4 bg-accent-1 text-accent-foreground border-accent-1 rounded-full shadow-lg"
           aria-label="Back to top"
         >
           <FaArrowUp />
