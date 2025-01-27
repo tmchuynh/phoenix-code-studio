@@ -39,7 +39,6 @@ const aboutUs = () => {
           bloom.
         </p>
       </div>
-      <SidebarSeparator className="bg-secondary h-0.5" />
       <div className="py-3">
         <h2>Mission Statement</h2>
         <p>
@@ -64,7 +63,6 @@ const aboutUs = () => {
           leave a meaningful and lasting impact.
         </p>
       </div>
-      <SidebarSeparator className="bg-secondary h-0.5" />
       <div className="py-3">
         <h2>Core Values</h2>
         <ul className="flex flex-col gap-2">
@@ -191,9 +189,6 @@ const aboutUs = () => {
           </li>
         </ul>
       </div>
-      <SidebarSeparator className="bg-secondary h-0.5" />
-      <CallToAction />
-      <SidebarSeparator className="bg-secondary h-0.5" />
       <div className="py-3">
         <h2>Vision Statement</h2>
         <p>
@@ -227,6 +222,7 @@ const aboutUs = () => {
           their full potential and make their mark in the digital landscape.
         </p>
       </div>
+      <CallToAction />
     </main>
   );
 };
