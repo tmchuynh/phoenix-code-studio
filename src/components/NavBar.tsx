@@ -24,7 +24,7 @@ const NavBar = () => {
 
   return (
     <>
-      <Menubar className="md:flex justify-between hidden">
+      <Menubar className="md:flex h-full justify-between hidden">
         <MenubarMenu>
           <span className="px-3">Phoenix Code Studio</span>
         </MenubarMenu>
@@ -32,7 +32,7 @@ const NavBar = () => {
           <MenubarMenu>
             <a
               onClick={() => router.push("/")}
-              className="text-sm hover:text-primary mx-4"
+              className="text-sm md:text-md lg:text-xl hover:text-primary mx-4"
             >
               Home
             </a>
@@ -43,7 +43,7 @@ const NavBar = () => {
                 <a
                   key={index}
                   onClick={() => router.push(about.href)}
-                  className="text-sm hover:text-primary"
+                  className="text-sm md:text-md lg:text-xl  hover:text-primary"
                 >
                   {about.title}
                 </a>
@@ -51,22 +51,23 @@ const NavBar = () => {
             </div>
           </MenubarMenu>
           <MenubarMenu>
-            <MenubarTrigger className="hover:text-primary">
+            <MenubarTrigger className="hover:text-primary text-sm md:text-md lg:text-xl">
               Services
               <FaChevronDown className="ml-3" />
             </MenubarTrigger>
-            <MenubarContent className="hidden md:block">
+            <MenubarContent className="hidden md:block mt-3">
               {services.map((service, index) => (
                 <MenubarItem
                   key={index}
                   onClick={() => router.push(service.href)}
+                  className="text-sm md:text-md lg:text-xl"
                 >
                   {service.title}
                 </MenubarItem>
               ))}
               <MenubarSeparator />
               <MenubarSub>
-                <MenubarSubTrigger className="hover:text-primary">
+                <MenubarSubTrigger className="hover:text-primary text-sm md:text-md lg:text-xl w-full md:mr-9">
                   Website Services
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4">
@@ -74,6 +75,7 @@ const NavBar = () => {
                     <MenubarItem
                       key={index}
                       onClick={() => router.push(website.href)}
+                      className="text-sm md:text-md lg:text-xl"
                     >
                       {website.title}
                     </MenubarItem>
@@ -81,7 +83,7 @@ const NavBar = () => {
                 </MenubarSubContent>
               </MenubarSub>
               <MenubarSub>
-                <MenubarSubTrigger className="hover:text-primary">
+                <MenubarSubTrigger className="hover:text-primary text-sm md:text-md lg:text-xl w-full md:mr-9">
                   Content Creation
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4">
@@ -89,6 +91,7 @@ const NavBar = () => {
                     <MenubarItem
                       key={index}
                       onClick={() => router.push(content.href)}
+                      className="text-sm md:text-md lg:text-xl"
                     >
                       {content.title}
                     </MenubarItem>
@@ -96,7 +99,7 @@ const NavBar = () => {
                 </MenubarSubContent>
               </MenubarSub>
               <MenubarSub>
-                <MenubarSubTrigger className="hover:text-primary">
+                <MenubarSubTrigger className="hover:text-primary text-sm md:text-md lg:text-xl w-full md:mr-9">
                   Company Specific Services
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4">
@@ -104,6 +107,7 @@ const NavBar = () => {
                     <MenubarItem
                       key={index}
                       onClick={() => router.push(company.href)}
+                      className="text-sm md:text-md lg:text-xl"
                     >
                       {company.title}
                     </MenubarItem>
@@ -116,7 +120,7 @@ const NavBar = () => {
         </div>
       </Menubar>
 
-      <Popover open={isMenuOpen}>
+      <Popover>
         <PopoverTrigger
           asChild
           className="md:hidden"
@@ -128,7 +132,7 @@ const NavBar = () => {
             <IoMdMenu />
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-full ml-4 h-72 p-0 md:hidden">
+        <PopoverContent className="w-full ml-4 mt-3 h-72 p-0 md:hidden">
           <Menubar className="flex flex-col h-72 space-y-4 p-3 items-start">
             <MenubarMenu>
               <span className="p-0">Phoenix Code Studio</span>
@@ -143,7 +147,7 @@ const NavBar = () => {
                         router.push(about.href);
                         setIsMenuOpen(false);
                       }}
-                      className="text-sm hover:text-primary"
+                      className="text-sm md:text-md lg:text-xl  hover:text-primary"
                     >
                       {about.title}
                     </a>
@@ -155,7 +159,7 @@ const NavBar = () => {
                   Services
                   <FaChevronDown />
                 </MenubarTrigger>
-                <MenubarContent className="block md:hidden">
+                <MenubarContent className="block md:hidden ml-9 -mt-2">
                   {services.map((service, index) => (
                     <MenubarItem
                       key={index}
@@ -172,7 +176,7 @@ const NavBar = () => {
                     <MenubarSubTrigger className="hover:text-primary">
                       Website Services
                     </MenubarSubTrigger>
-                    <MenubarSubContent className="absolute top-10 -right-10 w-40">
+                    <MenubarSubContent className="absolute top-10 -right-10 w-48">
                       {websites.map((website, index) => (
                         <MenubarItem
                           key={index}
@@ -190,7 +194,7 @@ const NavBar = () => {
                     <MenubarSubTrigger className="hover:text-primary">
                       Content Creation
                     </MenubarSubTrigger>
-                    <MenubarSubContent className="absolute top-10 -right-10 w-40">
+                    <MenubarSubContent className="absolute top-10 -right-10 w-48">
                       {content.map((content, index) => (
                         <MenubarItem
                           key={index}
@@ -208,7 +212,7 @@ const NavBar = () => {
                     <MenubarSubTrigger className="hover:text-primary">
                       Company Specific Services
                     </MenubarSubTrigger>
-                    <MenubarSubContent className="absolute top-10 -right-10 w-40">
+                    <MenubarSubContent className="absolute top-10 -right-10 w-48">
                       {companies.map((company, index) => (
                         <MenubarItem
                           key={index}
