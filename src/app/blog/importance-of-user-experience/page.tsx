@@ -8,11 +8,28 @@ const BlogPage = () => {
   return (
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
-        <header className="text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+        <header>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
             The Importance of User Experience in Web Design
           </h1>
           <p>By John Doe – August 15, 2025</p>
+          <p>
+            A website is more than just a digital presence—it’s an interactive
+            experience that shapes how users perceive your brand. User
+            Experience (UX) design plays a crucial role in ensuring that
+            visitors not only find what they need but also enjoy the process,
+            leading to higher engagement, retention, and conversions. A
+            well-designed UX focuses on usability, accessibility, and intuitive
+            navigation, ensuring that every element—from page layout to
+            interactive features—works seamlessly and efficiently. A poor user
+            experience, on the other hand, leads to frustration, high bounce
+            rates, and lost business opportunities. Beyond aesthetics, UX design
+            enhances functionality by prioritizing speed, responsiveness, and
+            accessibility for all users, including those with disabilities. By
+            implementing user research, wireframing, and usability testing,
+            businesses can create websites that not only look great but also
+            provide a smooth, frustration-free experience.
+          </p>
           <div className="mt-4 flex justify-center space-x-4">
             <Badge variant={"outline"} className="text-sm">
               #UXUIDesign

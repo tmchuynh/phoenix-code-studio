@@ -8,10 +8,28 @@ const ContactlessBusinessCardsBlog = () => {
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
-        <header className="text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+        <header>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
             Best Contactless Business Card Options
           </h1>
+          <p>By Olivia Martin – January 15, 2025</p>
+          <p>
+            In today’s fast-paced, digital world, networking is evolving, and
+            contactless business cards are leading the way. Gone are the days of
+            carrying stacks of paper cards that get lost or forgotten—smart,
+            digital alternatives now make sharing contact information seamless,
+            eco-friendly, and more efficient. With just a tap or scan,
+            contactless business cards allow professionals to instantly share
+            phone numbers, emails, websites, social media profiles, and even
+            payment details. They work across devices without the need for an
+            app, ensuring effortless connections wherever you go. Beyond
+            convenience, these modern business cards leave a lasting impression,
+            showcasing innovation and adaptability in an increasingly digital
+            landscape. Whether you're an entrepreneur, freelancer, or corporate
+            professional, making the switch to contactless networking helps you
+            stay ahead while reducing waste and embracing a smarter way to
+            connect.
+          </p>
           <div className="flex justify-center space-x-2">
             <Badge variant={"outline"} className="text-sm">
               #resources

@@ -8,11 +8,31 @@ const BlogPage = () => {
   return (
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
-        <header className="text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+        <header>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
             Why Accessibility Matters in Web Development
           </h1>
           <p>By Sarah Kim – May 22, 2025</p>
+          <p>
+            Web accessibility ensures that everyone, regardless of ability, can
+            navigate, understand, and interact with online content. By designing
+            websites that accommodate users with visual, auditory, motor, or
+            cognitive impairments, businesses create a more inclusive digital
+            experience that benefits all visitors. Accessible web design is not
+            just about compliance with standards like WCAG (Web Content
+            Accessibility Guidelines)—it’s about equal opportunity. Features
+            like alt text for images, keyboard-friendly navigation, color
+            contrast adjustments, and screen reader compatibility make websites
+            more usable for a wider audience, including those with disabilities.
+            Beyond inclusivity, accessibility also enhances SEO, improves user
+            experience, and expands your reach. A well-designed, accessible
+            website ensures faster load times, better readability, and easier
+            navigation, benefiting all users, not just those with disabilities.
+            Prioritizing web accessibility is a commitment to digital equity,
+            ensuring that your site is welcoming, functional, and usable for
+            everyone. In today’s web-driven world, accessible design is not just
+            an option—it’s a necessity for ethical, legal, and business success.
+          </p>
           <div className="mt-4 flex justify-center space-x-4">
             <Badge variant={"outline"} className="text-sm">
               #WebAccessibility

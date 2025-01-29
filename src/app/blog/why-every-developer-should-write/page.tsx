@@ -1,7 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import { whyWritingMattersContent } from "@/lib/company-constant";
+import { whyWritingMattersContent } from "@/lib/blog-constants";
 import React from "react";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
@@ -9,8 +9,8 @@ const WhyWritingMattersBlog = () => {
   return (
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
-        <header className="text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+        <header>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
             {whyWritingMattersContent.intro.title}
           </h1>
           <p>{whyWritingMattersContent.intro.description}</p>

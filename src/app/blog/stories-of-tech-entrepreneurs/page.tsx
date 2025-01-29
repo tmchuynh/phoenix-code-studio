@@ -8,8 +8,8 @@ const BlogPage = () => {
   return (
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
-        <header className="text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+        <header>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
             From Startup Garage to Tech Giant: Stories of Tech Entrepreneurs
           </h1>
           <p>By Ethan Garcia – August 5, 2024</p>

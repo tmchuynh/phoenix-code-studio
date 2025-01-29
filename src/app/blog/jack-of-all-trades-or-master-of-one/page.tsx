@@ -8,8 +8,8 @@ const JackOfAllTradesBlog = () => {
   return (
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
-        <header className="text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+        <header>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
             {jackOfAllTradesContent.intro.title}
           </h1>
           <p>{jackOfAllTradesContent.intro.description}</p>

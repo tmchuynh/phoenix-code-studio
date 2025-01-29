@@ -11,7 +11,7 @@ const CustomPlan = () => {
     <main className="my-16 w-11/12 mx-auto">
       {/* Page Header */}
       <section className="mb-8">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
           Custom Plan
         </h1>
         {isSmallScreen && (

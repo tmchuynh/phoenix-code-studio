@@ -8,12 +8,29 @@ const BlogPage = () => {
   return (
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
-        <header className="text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+        <header>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
             Demystifying Data Science: Transforming Data into Actionable
             Insights
           </h1>
           <p>By Emily Carter – March 18, 2025</p>
+          <p>
+            In today's digital age, data is more than just numbers—it’s a
+            powerful asset that drives decision-making and fuels innovation.
+            Data science is the art of extracting meaningful insights from raw
+            data, using statistics, machine learning, and analytical techniques
+            to solve complex problems across industries. From predicting
+            customer behavior to detecting fraud and optimizing business
+            operations, data science plays a crucial role in helping
+            organizations make informed, data-driven decisions. By leveraging
+            AI, big data, and predictive analytics, businesses can identify
+            patterns, automate processes, and unlock new opportunities for
+            growth. Understanding data science means bridging the gap between
+            raw information and strategic action. As technology advances, the
+            ability to harness data effectively becomes a key competitive
+            advantage—making data science one of the most sought-after skills in
+            today’s workforce.
+          </p>
           <div className="mt-4 flex justify-center space-x-4">
             <Badge variant={"outline"} className="text-sm">
               #DataScience

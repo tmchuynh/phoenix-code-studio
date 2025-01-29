@@ -8,12 +8,32 @@ const BlogPage = () => {
   return (
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
-        <header className="text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+        <header>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
             Revolutionizing Connectivity: Innovations in IoT Development
           </h1>
-          <p className="text-sm text-gray-500">
-            By Samuel Green – February 25, 2025
+          <p>By Samuel Green – February 25, 2025</p>
+          <p>
+            The Internet of Things (IoT) is reshaping the way devices, systems,
+            and people interact, creating a seamlessly connected world where
+            automation and real-time data exchange drive efficiency. From smart
+            homes and wearable tech to industrial automation and healthcare
+            solutions, IoT is revolutionizing connectivity across industries.
+            One of the most groundbreaking innovations in IoT is the rise of
+            edge computing, which processes data closer to the source, reducing
+            latency and improving real-time decision-making. This is especially
+            crucial in applications like autonomous vehicles, smart cities, and
+            industrial IoT, where split-second responses are vital.
+            Additionally, advancements in 5G technology are enabling faster,
+            more reliable IoT networks, allowing millions of connected devices
+            to communicate with minimal delay. Enhanced security measures, such
+            as blockchain-based authentication and AI-driven threat detection,
+            are also making IoT ecosystems more secure and resilient against
+            cyber threats. As IoT continues to evolve, its integration with AI,
+            machine learning, and cloud computing will further enhance
+            automation, predictive analytics, and operational efficiency. These
+            innovations are transforming industries, paving the way for a more
+            intelligent, connected, and data-driven future.
           </p>
           <div className="mt-4 flex justify-center space-x-4">
             <Badge variant={"outline"} className="text-sm">

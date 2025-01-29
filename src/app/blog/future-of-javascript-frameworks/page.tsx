@@ -8,11 +8,28 @@ const BlogPage = () => {
   return (
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
-        <header className="text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+        <header>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
             The Future of JavaScript Frameworks
           </h1>
           <p>By Michael Lee – June 5, 2025</p>
+          <p>
+            JavaScript frameworks have been at the heart of modern web
+            development, enabling developers to build faster, more efficient,
+            and highly interactive applications. As technology evolves, so do
+            the frameworks that power the web, with emerging trends shaping the
+            future of frontend and backend development. With frameworks like
+            React, Vue, Angular, and Svelte continuously innovating, the focus
+            is shifting towards performance optimization, server-side rendering
+            (SSR), and developer-friendly tooling. Meta-frameworks like Next.js
+            and Nuxt.js are also gaining popularity, offering better SEO,
+            scalability, and improved user experiences. Looking ahead, we can
+            expect lighter, faster, and more modular frameworks that emphasize
+            static site generation (SSG), edge computing, and AI-powered
+            development tools. As JavaScript frameworks continue to evolve,
+            developers must stay adaptable and embrace new advancements to build
+            the next generation of dynamic, scalable web applications.
+          </p>
           <div className="mt-4 flex justify-center space-x-4">
             <Badge variant={"outline"} className="text-sm">
               #JavaScript

@@ -7,14 +7,28 @@ const BlogPage = () => {
   return (
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
-        <header className="text-center">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+        <header>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
             Books to Read as a Developer
           </h1>
           <p>
-            Choosing a career in tech is choosing an endless life of learning.
-            But then again, which career isn't like that? Improvement is
-            critical after all.
+            Choosing a career in tech means embracing a lifelong journey of
+            learning and adaptation. The industry is constantly evolving, with
+            new programming languages, frameworks, tools, and best practices
+            emerging all the time. Staying ahead requires curiosity, dedication,
+            and a willingness to continuously expand your skill set. But then
+            again, isn’t that true for any career? Growth and improvement are
+            essential in every field, and technology is no exception. The best
+            developers, engineers, and tech professionals are those who actively
+            seek out knowledge, refine their craft, and adapt to change. Whether
+            you’re learning a new coding language, mastering a complex
+            algorithm, or understanding better ways to collaborate with a team,
+            improvement is the key to success. The ever-changing nature of tech
+            might seem overwhelming, but it’s also what makes it so exciting.
+            Every project, challenge, and breakthrough presents an opportunity
+            to learn something new. In this dynamic field, the willingness to
+            stay curious and continuously grow is what sets apart great
+            professionals from the rest.
           </p>
           <div className="flex justify-center space-x-2">
             <Badge variant={"outline"} className="text-sm">
