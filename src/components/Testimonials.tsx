@@ -44,7 +44,7 @@ const Testimonials = () => {
                 {testimonial.featured && (
                   <div className="p-6 rounded-lg border-2 bg-card text-card-foreground mx-10 mb-8">
                     <div className="flex-1 flex 2xl:items-end">
-                      <p className="text-lg italic">
+                      <p className="italic">
                         <span>"</span>
                         <span className="text-center mt-4">
                           {isSmallScreen

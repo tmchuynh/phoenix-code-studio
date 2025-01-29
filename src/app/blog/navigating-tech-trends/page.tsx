@@ -1,16 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import {
-  trends1,
-  trends2,
-  trends3,
-  trends4,
-  trends5,
-  trends6,
-  trends7,
-  stayingAhead,
-} from "@/lib/content-constants";
+import { emergingTechTrends, stayingAheadTips } from "@/lib/blog-constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -21,9 +12,7 @@ const BlogPage = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Navigating the Digital Revolution: Emerging Tech Trends
           </h1>
-          <p className="text-sm text-gray-500">
-            By Sophia White – November 20, 2024
-          </p>
+          <p>By Sophia White – November 20, 2024</p>
           <div className="mt-4 flex justify-center space-x-4">
             <Badge variant={"outline"} className="text-sm">
               #EmergingTrends
@@ -41,7 +30,7 @@ const BlogPage = () => {
         </header>
 
         <section className="space-y-4">
-          <p className="text-lg">
+          <p>
             The <strong>digital revolution</strong> is transforming industries,
             redefining how we live and work, and driving technological
             innovation at an unprecedented pace. Staying ahead of the curve in
@@ -52,153 +41,30 @@ const BlogPage = () => {
           </p>
         </section>
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            1. Artificial Intelligence and Machine Learning
-          </h2>
-          <p className="text-lg">
-            AI and machine learning continue to lead the charge in technological
-            innovation. From automating routine tasks to making sense of massive
-            datasets, these technologies are becoming integral to various
-            industries, including healthcare, finance, and customer service.
-          </p>
-          <p className="text-lg">
-            <strong>What’s Next?</strong>
-          </p>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {trends1.map((trend, index) => (
-              <li key={index}>{trend}</li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            2. Quantum Computing
-          </h2>
-          <p className="text-lg">
-            Quantum computing is on the verge of revolutionizing data
-            processing. By leveraging the principles of quantum mechanics, these
-            computers can solve complex problems exponentially faster than
-            classical computers.
-          </p>
-          <p className="text-lg">
-            <strong>Applications:</strong>
-          </p>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {trends2.map((trend, index) => (
-              <li key={index}>{trend}</li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            3. 5G and Beyond
-          </h2>
-          <p className="text-lg">
-            The rollout of 5G networks is transforming connectivity, enabling
-            faster data transfer, lower latency, and enhanced IoT capabilities.
-            As 6G research progresses, we can expect even more transformative
-            applications in automation and augmented reality.
-          </p>
-          <p className="text-lg">
-            <strong>Impact:</strong>
-          </p>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {trends3.map((trend, index) => (
-              <li key={index}>{trend}</li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            4. Blockchain Beyond Cryptocurrency
-          </h2>
-          <p className="text-lg">
-            Blockchain technology is moving beyond its roots in cryptocurrency.
-            Its ability to create secure, decentralized ledgers is finding
-            applications in supply chain management, healthcare, and even voting
-            systems.
-          </p>
-          <p className="text-lg">
-            <strong>Future Trends:</strong>
-          </p>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {trends4.map((trend, index) => (
-              <li key={index}>{trend}</li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            5. Sustainability Through Technology
-          </h2>
-          <p className="text-lg">
-            As environmental concerns grow, technology is playing a critical
-            role in driving sustainability. Innovations in renewable energy,
-            green tech, and AI-driven resource management are helping combat
-            climate change.
-          </p>
-          <p className="text-lg">
-            <strong>Key Innovations:</strong>
-          </p>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {trends5.map((trend, index) => (
-              <li key={index}>{trend}</li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            6. The Rise of the Metaverse
-          </h2>
-          <p className="text-lg">
-            The metaverse is evolving from a concept to reality, blending
-            physical and virtual worlds through immersive technologies like AR
-            and VR. Companies are investing heavily in building virtual spaces
-            for work, play, and commerce.
-          </p>
-          <p className="text-lg">
-            <strong>What to Expect:</strong>
-          </p>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {trends6.map((trend, index) => (
-              <li key={index}>{trend}</li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            7. Edge Computing
-          </h2>
-          <p className="text-lg">
-            As the demand for real-time data processing grows, edge computing is
-            gaining traction. By processing data closer to its source, edge
-            computing reduces latency and bandwidth usage, making it essential
-            for IoT and AI applications.
-          </p>
-          <p className="text-lg">
-            <strong>Applications:</strong>
-          </p>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {trends7.map((trend, index) => (
-              <li key={index}>{trend}</li>
-            ))}
-          </ul>
-        </section>
+        {emergingTechTrends.map((trendCategory, index) => (
+          <section key={index}>
+            <h2 className="text-3xl font-semibold mb-6 text-secondary">
+              {index + 1}. {trendCategory.category}
+            </h2>
+            <p>{trendCategory.description}</p>
+            <p>
+              <strong>Key Trends:</strong>
+            </p>
+            <ul className="list-disc pl-6 space-y-1">
+              {trendCategory.trends.map((trend, trendIndex) => (
+                <li key={trendIndex}>{trend}</li>
+              ))}
+            </ul>
+          </section>
+        ))}
 
         <section>
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             How to Stay Ahead in the Digital Revolution
           </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {stayingAhead.map((trend, index) => (
-              <li key={index}>{trend}</li>
+          <ul className="list-disc pl-6 space-y-1">
+            {stayingAheadTips.map((tip, index) => (
+              <li key={index}>{tip}</li>
             ))}
           </ul>
         </section>
@@ -207,7 +73,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Conclusion
           </h2>
-          <p className="text-lg">
+          <p>
             The digital revolution is more than a technological shift—it’s a
             reimagining of how we live, work, and connect. By staying informed
             about emerging trends, you can navigate this revolution with
@@ -216,14 +82,13 @@ const BlogPage = () => {
         </section>
 
         <footer className="mt-8 text-center">
-          <p className="text-sm">
+          <p>
             Explore more insights into <strong>Technology</strong> and{" "}
             <strong>Innovation</strong> on our{" "}
             <a href="#" className="text-primary underline">
               Blog
-            </a>
-            . Stay tuned for the latest updates, expert tips, and industry
-            analysis!
+            </a>{" "}
+            for the latest updates, expert tips, and industry analysis!
           </p>
         </footer>
       </article>

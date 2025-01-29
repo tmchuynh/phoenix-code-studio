@@ -9,7 +9,7 @@ const TestimonialsPage: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Testimonials from Our Clients
       </h1>
-      <p className="text-lg my-4">
+      <p>
         Discover the stories of our satisfied clients who have experienced
         firsthand the transformative impact of our services. From achieving
         their business goals to elevating their brands, our clients share how
@@ -34,12 +34,8 @@ const TestimonialsPage: FC = () => {
                     alt={testimonial.name}
                     className="w-24 h-24 rounded-full object-cover shadow-lg mx-auto mb-4"
                   />
-                  <p className="font-semibold text-xl mb-2">
-                    {testimonial.name}
-                  </p>
-                  <p className="text-lg text-accent-3 mb-4">
-                    {testimonial.position}
-                  </p>
+                  <p className="font-semibold mb-2">{testimonial.name}</p>
+                  <p className="text-accent-3 mb-4">{testimonial.position}</p>
                 </div>
                 <blockquote className="italic text-lg">
                   "{testimonial.quote}"

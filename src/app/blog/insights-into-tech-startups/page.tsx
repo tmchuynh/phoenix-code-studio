@@ -1,11 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import {
-  startupChallenges,
-  startupSuccessStories,
-  strategiesForSuccess,
-} from "@/lib/content-constants";
+import { techStartupResources } from "@/lib/blog-constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -16,9 +12,7 @@ const BlogPage = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Behind the Code: Insights into the World of Tech Startups
           </h1>
-          <p className="text-sm text-gray-500">
-            By David Lee – December 5, 2024
-          </p>
+          <p>By David Lee – December 5, 2024</p>
           <div className="mt-4 flex justify-center space-x-4">
             <Badge variant={"outline"} className="text-sm">
               #TechStartups
@@ -36,7 +30,7 @@ const BlogPage = () => {
         </header>
 
         <section className="space-y-4">
-          <p className="text-lg">
+          <p>
             <strong>Tech startups</strong> are at the forefront of innovation,
             reshaping industries and introducing groundbreaking solutions to
             everyday challenges. These agile companies operate in fast-paced
@@ -50,7 +44,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             What Defines a Tech Startup?
           </h2>
-          <p className="text-lg">
+          <p>
             A tech startup is a young company that leverages technology to solve
             problems or create new opportunities. Unlike traditional businesses,
             startups aim for rapid growth and scalability, often operating in
@@ -95,50 +89,26 @@ const BlogPage = () => {
           </ol>
         </section>
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Challenges in the Tech Startup Ecosystem
-          </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {startupChallenges.map((challenge, index) => (
-              <li key={index}>
-                <strong>{challenge.title}:</strong> {challenge.description}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Success Stories of Tech Startups
-          </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {startupSuccessStories.map((story, index) => (
-              <li key={index}>
-                <strong>{story.company}:</strong> {story.description}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Strategies for Success
-          </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {strategiesForSuccess.map((strategy, index) => (
-              <li key={index}>
-                <strong>{strategy.title}:</strong> {strategy.description}
-              </li>
-            ))}
-          </ul>
-        </section>
+        {techStartupResources.map((categoryItem, categoryIndex) => (
+          <section key={categoryIndex}>
+            <h2 className="text-3xl font-semibold mb-6 text-secondary">
+              {categoryItem.category}
+            </h2>
+            <ul className="list-disc pl-6 space-y-1">
+              {categoryItem.items.map((item, itemIndex) => (
+                <li key={itemIndex}>
+                  <strong>{item.title}:</strong> {item.description}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
 
         <section>
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             The Future of Tech Startups
           </h2>
-          <p className="text-lg">
+          <p>
             The tech startup ecosystem shows no signs of slowing down. Emerging
             trends like AI, blockchain, and renewable energy are creating
             opportunities for the next wave of innovation. With a focus on
@@ -151,7 +121,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Conclusion
           </h2>
-          <p className="text-lg">
+          <p>
             Tech startups are more than just businesses—they’re catalysts for
             change and innovation. By embracing challenges and staying committed
             to their vision, these companies have the power to redefine
@@ -160,7 +130,7 @@ const BlogPage = () => {
         </section>
 
         <footer className="mt-8 text-center">
-          <p className="text-sm">
+          <p>
             If you’re inspired by the world of tech startups or looking to start
             your own, stay tuned to our{" "}
             <a href="#" className="text-primary underline">

@@ -6,7 +6,7 @@ const JoinUs = () => {
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
         Come Be a Part of Our Team
       </h2>
-      <p className="text-lg mb-4">
+      <p>
         Are you ready to take your career to the next level? At our company,
         we're searching for{" "}
         <span className="underline underline-offset-4 text-primary">
@@ -36,7 +36,7 @@ const JoinUs = () => {
         our open positions and discover how you can play a key role in our
         success while advancing your own career.
       </p>
-      <p className="text-lg">
+      <p>
         Don’t just work —{" "}
         <span className="text-primary font-extrabold">THRIVE</span>. Come join a
         team where your ideas are valued, your contributions are recognized, and

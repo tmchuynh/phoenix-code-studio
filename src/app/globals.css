@@ -223,4 +223,11 @@ body {
   h4 {
     @apply tracking-wider;
   }
+  p {
+    @apply text-sm md:text-lg xl:text-xl;
+  }
+
+  li {
+    @apply text-sm md:text-lg xl:text-xl;
+  }
 }

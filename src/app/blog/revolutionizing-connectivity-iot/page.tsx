@@ -1,12 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import {
-  innovations,
-  applications,
-  challenges,
-  futureTrends,
-} from "@/lib/content-constants";
+import { iotResources } from "@/lib/blog-constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -37,13 +32,24 @@ const BlogPage = () => {
         </header>
 
         <section className="space-y-4">
-          <p className="text-lg">
-            The <strong>Internet of Things (IoT)</strong> is reshaping how we
-            live, work, and interact with technology. By connecting devices,
-            sensors, and systems, IoT is driving a new era of innovation,
-            improving efficiency, and transforming industries. In this blog,
-            we’ll dive into the latest advancements in IoT development and
-            explore how they’re revolutionizing connectivity in our daily lives.
+          <p>
+            The <strong>Internet of Things (IoT)</strong> is revolutionizing the
+            way we live, work, and interact with technology. By seamlessly
+            connecting devices, sensors, and systems, IoT enables real-time data
+            collection, automation, and intelligent decision-making, driving a
+            new era of digital transformation. From smart homes and wearable
+            technology to industrial automation and healthcare advancements, IoT
+            is enhancing efficiency, improving convenience, and reshaping
+            industries worldwide.
+          </p>
+          <p>
+            As businesses and consumers embrace IoT, we are witnessing
+            groundbreaking developments that push the boundaries of
+            connectivity. These advancements include edge computing for faster
+            processing, AI-powered IoT for predictive analytics, and enhanced
+            security measures to protect sensitive data. Whether it’s optimizing
+            supply chains, enabling smart cities, or creating personalized user
+            experiences, IoT continues to unlock endless possibilities.
           </p>
         </section>
 
@@ -51,74 +57,67 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             What is IoT?
           </h2>
-          <p className="text-lg">
-            The Internet of Things refers to a network of interconnected devices
-            that collect, share, and act on data. These devices range from smart
-            home appliances and wearable tech to industrial machinery and
-            autonomous vehicles. IoT bridges the gap between the physical and
-            digital worlds, enabling real-time monitoring, control, and
-            decision-making.
+          <p>
+            The Internet of Things (IoT) refers to a vast network of
+            interconnected devices that collect, share, and act on data,
+            transforming the way we interact with the world around us. These
+            devices range from everyday consumer products like smart home
+            appliances, fitness wearables, and connected vehicles to
+            industrial-grade sensors, agricultural automation, and smart city
+            infrastructure. By integrating IoT technology, businesses and
+            individuals can achieve higher levels of efficiency, automation, and
+            connectivity.
+          </p>
+          <p>
+            IoT bridges the gap between the physical and digital worlds by
+            enabling real-time monitoring, remote control, and automated
+            decision-making. With the help of sensors, cloud computing, and
+            artificial intelligence, IoT devices can process and respond to data
+            in real-time, optimizing performance, enhancing security, and
+            improving overall user experience. For example, smart thermostats
+            learn user preferences to adjust indoor temperatures efficiently,
+            while industrial IoT systems monitor equipment to predict and
+            prevent maintenance issues before failures occur.
+          </p>
+          <p>
+            A critical innovation within IoT is edge computing, which processes
+            data closer to where it is generated rather than relying solely on
+            cloud computing. By reducing latency and bandwidth usage, edge
+            computing enhances IoT applications that require real-time
+            decision-making. This is especially valuable in fields such as
+            healthcare, autonomous vehicles, and industrial automation, where
+            immediate responses are crucial for safety and efficiency.
+          </p>
+          <p>
+            As IoT continues to evolve, it is shaping the future of industries,
+            improving supply chain management, revolutionizing healthcare with
+            remote patient monitoring, and enabling smart cities that optimize
+            traffic, energy consumption, and public safety. The potential of IoT
+            is limitless, making it one of the most transformative technologies
+            of our time.
           </p>
         </section>
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Innovations in IoT Development
-          </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {innovations.map((innovation, index) => (
-              <li key={index}>{innovation}</li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Applications of IoT
-          </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {applications.map((application, index) => (
-              <li key={index}>
-                <span className="font-bold">{application.title}:</span>{" "}
-                {application.description}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Challenges Facing IoT Development
-          </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {challenges.map((challenge, index) => (
-              <li key={index}>
-                <span className="font-bold">{challenge.title}:</span>{" "}
-                {challenge.description}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            The Future of IoT
-          </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {futureTrends.map((trend, index) => (
-              <li key={index}>
-                <span className="font-bold">{trend.title}:</span>{" "}
-                {trend.description}
-              </li>
-            ))}
-          </ul>
-        </section>
+        {iotResources.map((resource, index) => (
+          <section key={index}>
+            <h2 className="text-3xl font-semibold mb-6 text-secondary">
+              {resource.category}
+            </h2>
+            <ul className="list-disc pl-6 space-y-1">
+              {resource.items.map((item, itemIndex) => (
+                <li key={itemIndex}>
+                  <strong>{item.title}:</strong> {item.description}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
 
         <section>
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Conclusion
           </h2>
-          <p className="text-lg">
+          <p>
             The Internet of Things is transforming how we connect and interact
             with the world around us. By enabling smarter solutions, improving
             efficiency, and fostering innovation, IoT is shaping a future where
@@ -128,7 +127,7 @@ const BlogPage = () => {
         </section>
 
         <footer className="mt-8 text-center">
-          <p className="text-sm">
+          <p>
             To stay updated on the latest in <strong>IoT</strong> and{" "}
             <strong>Technology</strong>, explore our{" "}
             <a href="#" className="text-primary underline">

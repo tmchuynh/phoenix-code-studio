@@ -1,11 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import {
-  whyUseTailwindList,
-  howTailwindEnhancesWorkflow,
-  proTips,
-} from "@/lib/content-constants";
+import { tailwindCSSResources } from "@/lib/blog-constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -16,7 +12,7 @@ const BlogPage = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             How Tailwind CSS Can Speed Up Your Development Process
           </h1>
-          <p className="text-sm text-muted">By Jane Smith – July 10, 2025</p>
+          <p>By Jane Smith – July 10, 2025</p>
           <div className="mt-4 flex justify-center space-x-4">
             <Badge variant={"outline"} className="text-sm">
               #CSS
@@ -34,7 +30,7 @@ const BlogPage = () => {
         </header>
 
         <section className="space-y-4">
-          <p className="text-lg">
+          <p>
             <strong>Tailwind CSS</strong> is a utility-first CSS framework that
             provides a highly customizable approach to building modern user
             interfaces. In this post, we’ll explore why Tailwind CSS has become
@@ -47,7 +43,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             What is Tailwind CSS?
           </h2>
-          <p className="text-lg">
+          <p>
             Tailwind CSS is a modern CSS framework that focuses on providing
             utility classes—small, reusable CSS snippets for styling your
             elements directly in the HTML. Unlike traditional CSS frameworks
@@ -57,31 +53,20 @@ const BlogPage = () => {
           </p>
         </section>
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Why Use Tailwind CSS?
-          </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {whyUseTailwindList.map((item, index) => (
-              <li key={index}>
-                <strong>{item.title}:</strong> {item.description}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            How Tailwind CSS Enhances Your Workflow
-          </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {howTailwindEnhancesWorkflow.map((item, index) => (
-              <li key={index}>
-                <strong>{item.title}:</strong> {item.description}
-              </li>
-            ))}
-          </ul>
-        </section>
+        {tailwindCSSResources.map((categoryItem, categoryIndex) => (
+          <section key={categoryIndex}>
+            <h2 className="text-3xl font-semibold mb-6 text-secondary">
+              {categoryItem.category}
+            </h2>
+            <ul className="list-disc pl-6 space-y-1">
+              {categoryItem.items.map((item, itemIndex) => (
+                <li key={itemIndex}>
+                  <strong>{item.title}:</strong> {item.description}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
 
         <section>
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
@@ -123,28 +108,15 @@ const BlogPage = () => {
 
         <section>
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Pro Tips for Using Tailwind CSS
-          </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {proTips.map((tip, index) => (
-              <li key={index}>
-                <strong>{tip.title}:</strong> {tip.description}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Final Thoughts
           </h2>
-          <p className="text-lg">
+          <p>
             Tailwind CSS is more than just a CSS framework—it’s a game-changer
             for frontend development. By combining speed, flexibility, and
             customization, it empowers developers to build modern, responsive
             designs with ease.
           </p>
-          <p className="text-lg">
+          <p>
             If you’re looking for a tool to enhance your development workflow,
             give Tailwind CSS a try. Its versatility and efficiency make it an
             invaluable asset for developers of all skill levels.
@@ -152,7 +124,7 @@ const BlogPage = () => {
         </section>
 
         <footer className="mt-8 text-center">
-          <p className="text-sm">
+          <p>
             For more insights on <strong>CSS</strong> and{" "}
             <strong>Frontend Development</strong>, check out our{" "}
             <a href="#" className="text-primary underline">

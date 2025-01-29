@@ -22,7 +22,7 @@ const PaymentPlansPage: FC = () => {
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
           Our Payment Plans
         </h1>
-        <p className="text-lg mt-4">
+        <p className="mt-4">
           We offer flexible payment options designed to accommodate your budget
           and project requirements. Whether you prefer a pay-as-you-go model or
           an extended payment plan, our options are tailored to provide
@@ -41,7 +41,7 @@ const PaymentPlansPage: FC = () => {
               <h3>{plan.title}</h3>
 
               {/* Plan Description */}
-              <p className="text-lg mb-6">{plan.description}</p>
+              <p className="mb-6">{plan.description}</p>
 
               {/* Plan Details */}
               <ul className="list-disc pl-6 space-y-2 text-lg">

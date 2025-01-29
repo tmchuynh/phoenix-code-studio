@@ -1,13 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import {
-  dataScienceWorkflowList,
-  dataScienceToolsList,
-  dataScienceApplicationsList,
-  dataScienceBenefitsList,
-  gettingStartedInDataScienceList,
-} from "@/lib/content-constants";
+import { dataScienceResources } from "@/lib/blog-constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -19,9 +13,7 @@ const BlogPage = () => {
             Demystifying Data Science: Transforming Data into Actionable
             Insights
           </h1>
-          <p className="text-sm text-gray-500">
-            By Emily Carter – March 18, 2025
-          </p>
+          <p>By Emily Carter – March 18, 2025</p>
           <div className="mt-4 flex justify-center space-x-4">
             <Badge variant={"outline"} className="text-sm">
               #DataScience
@@ -39,7 +31,7 @@ const BlogPage = () => {
         </header>
 
         <section className="space-y-4">
-          <p className="text-lg">
+          <p>
             <strong>Data science</strong> is revolutionizing the way businesses
             and industries solve problems and make decisions. With the explosion
             of data in today’s digital age, organizations are leveraging data
@@ -53,7 +45,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             What is Data Science?
           </h2>
-          <p className="text-lg">
+          <p>
             Data science is an interdisciplinary field that combines statistics,
             computer science, and domain expertise to analyze and interpret
             complex datasets. It goes beyond simply collecting data—it involves
@@ -62,76 +54,36 @@ const BlogPage = () => {
           </p>
         </section>
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            The Data Science Workflow
-          </h2>
-          <ol className="list-decimal pl-6 space-y-2">
-            {dataScienceWorkflowList.map((step, index) => (
-              <li key={index}>
-                <strong>{step.title}:</strong> {step.description}
-              </li>
-            ))}
-          </ol>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Key Tools and Techniques in Data Science
-          </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {dataScienceToolsList.map((tool, index) => (
-              <li key={index}>
-                <strong>{tool.title}:</strong> {tool.description}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Applications of Data Science
-          </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {dataScienceApplicationsList.map((application, index) => (
-              <li key={index}>
-                <strong>{application.title}:</strong> {application.description}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Why Data Science Matters
-          </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {dataScienceBenefitsList.map((benefit, index) => (
-              <li key={index}>
-                <strong>{benefit.title}:</strong> {benefit.description}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Getting Started in Data Science
-          </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {gettingStartedInDataScienceList.map((tip, index) => (
-              <li key={index}>
-                <strong>{tip.title}:</strong> {tip.description}
-              </li>
-            ))}
-          </ul>
-        </section>
+        {dataScienceResources.map((categoryItem, categoryIndex) => (
+          <section key={categoryIndex}>
+            <h2 className="text-3xl font-semibold mb-6 text-secondary">
+              {categoryItem.category}
+            </h2>
+            {categoryItem.category === "Data Science Workflow" ? (
+              <ol className="list-decimal pl-6 space-y-2">
+                {categoryItem.items.map((item, itemIndex) => (
+                  <li key={itemIndex}>
+                    <strong>{item.title}:</strong> {item.description}
+                  </li>
+                ))}
+              </ol>
+            ) : (
+              <ul className="list-disc pl-6 space-y-1">
+                {categoryItem.items.map((item, itemIndex) => (
+                  <li key={itemIndex}>
+                    <strong>{item.title}:</strong> {item.description}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+        ))}
 
         <section>
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Conclusion
           </h2>
-          <p className="text-lg">
+          <p>
             Data science is a powerful tool for unlocking the potential of data
             and transforming it into actionable insights. Whether you’re a
             business leader looking to harness data for growth or an aspiring
@@ -142,7 +94,7 @@ const BlogPage = () => {
         </section>
 
         <footer className="mt-8 text-center">
-          <p className="text-sm">
+          <p>
             For more insights on <strong>Data Science</strong> and{" "}
             <strong>Analytics</strong>, visit our{" "}
             <a href="#" className="text-primary underline">

@@ -39,7 +39,7 @@ const ServicesPage: FC = () => {
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
           Our Services
         </h1>
-        <p className="text-lg my-4">
+        <p>
           Discover the comprehensive range of services we offer to help your
           business not only thrive but excel in today’s competitive digital
           landscape. Whether you’re looking for cutting-edge web development to
@@ -72,10 +72,8 @@ const ServicesPage: FC = () => {
                   <h3 className="text-2xl font-semibold text-accent-5">
                     {service.name}
                   </h3>
-                  <p className="mt-4 text-lg">
-                    {!isMediumScreen ? service.info : service.details}
-                  </p>
-                  <p className="mt-4 text-lg">
+                  <p>{!isMediumScreen ? service.info : service.details}</p>
+                  <p>
                     <strong>Starting at: </strong>
                     {formatCurrency(service.startingPrice)}
                   </p>
@@ -109,10 +107,8 @@ const ServicesPage: FC = () => {
                   <h3 className="text-2xl font-semibold text-accent-5">
                     {service.name}
                   </h3>
-                  <p className="mt-4 text-lg">
-                    {!isMediumScreen ? service.info : service.details}
-                  </p>
-                  <p className="mt-4 text-lg">
+                  <p>{!isMediumScreen ? service.info : service.details}</p>
+                  <p>
                     <strong>Starting at: </strong>
                     {formatCurrency(service.startingPrice)}
                   </p>
@@ -146,10 +142,8 @@ const ServicesPage: FC = () => {
                   <h3 className="text-2xl font-semibold text-accent-5">
                     {service.name}
                   </h3>
-                  <p className="mt-4 text-lg">
-                    {!isMediumScreen ? service.info : service.details}
-                  </p>
-                  <p className="mt-4 text-lg">
+                  <p>{!isMediumScreen ? service.info : service.details}</p>
+                  <p>
                     <strong>Starting at: </strong>
                     {formatCurrency(service.startingPrice)}
                   </p>

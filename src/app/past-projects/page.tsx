@@ -155,7 +155,7 @@ const PastProjectsPage: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Past Projects
       </h1>
-      <p className="text-lg my-4">
+      <p>
         Take a look at some of the projects we've had the privilege to work on.
         Each one reflects a unique challenge and solution, showcasing my
         expertise in crafting innovative, functional, and visually appealing
@@ -301,7 +301,7 @@ const PastProjectsPage: FC = () => {
       {/* Projects List */}
       <section className="my-8">
         <section className="text-center my-4">
-          <p className="text-lg">
+          <p>
             Showing {indexOfFirstProject + 1} to{" "}
             {indexOfLastProject > filteredProjects.length
               ? filteredProjects.length
@@ -327,9 +327,7 @@ const PastProjectsPage: FC = () => {
                     <h2 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2">
                       {project.title}
                     </h2>
-                    <p className="text-sm lg:text-lg mb-4 pr-10">
-                      {project.description}
-                    </p>
+                    <p className="mb-4">{project.description}</p>
 
                     <div className="text-sm lg:text-lg grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-2">
                       <div>

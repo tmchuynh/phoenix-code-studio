@@ -1,11 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import {
-  emergingTrendsList,
-  whatsNextList,
-  howToPrepareList,
-} from "@/lib/content-constants";
+import { javascriptFrameworkTrends } from "@/lib/blog-constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -16,7 +12,7 @@ const BlogPage = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             The Future of JavaScript Frameworks
           </h1>
-          <p className="text-sm text-gray-500">By Michael Lee – June 5, 2025</p>
+          <p>By Michael Lee – June 5, 2025</p>
           <div className="mt-4 flex justify-center space-x-4">
             <Badge variant={"outline"} className="text-sm">
               #JavaScript
@@ -34,7 +30,7 @@ const BlogPage = () => {
         </header>
 
         <section className="space-y-4">
-          <p className="text-lg">
+          <p>
             With the rapid evolution of <strong>JavaScript frameworks</strong>{" "}
             like React, Vue, and Angular, staying ahead of the curve is crucial
             for developers. As the web development landscape continues to grow
@@ -49,7 +45,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Why JavaScript Frameworks Matter
           </h2>
-          <p className="text-lg">
+          <p>
             JavaScript frameworks have been at the forefront of modern web
             development for years. They streamline the process of building
             complex applications, enhance performance, and provide developers
@@ -59,50 +55,26 @@ const BlogPage = () => {
           </p>
         </section>
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Emerging Trends in JavaScript Frameworks
-          </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {emergingTrendsList.map((trend, index) => (
-              <li key={index}>
-                <strong>{trend.title}:</strong> {trend.description}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            What’s Next for Developers?
-          </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {whatsNextList.map((item, index) => (
-              <li key={index}>
-                <strong>{item.title}:</strong> {item.description}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            How to Prepare for the Future
-          </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {howToPrepareList.map((item, index) => (
-              <li key={index}>
-                <strong>{item.title}:</strong> {item.description}
-              </li>
-            ))}
-          </ul>
-        </section>
+        {javascriptFrameworkTrends.map((categoryItem, categoryIndex) => (
+          <section key={categoryIndex}>
+            <h2 className="text-3xl font-semibold mb-6 text-secondary">
+              {categoryItem.category}
+            </h2>
+            <ul className="list-disc pl-6 space-y-1">
+              {categoryItem.items.map((item, itemIndex) => (
+                <li key={itemIndex}>
+                  <strong>{item.title}:</strong> {item.description}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
 
         <section>
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Conclusion
           </h2>
-          <p className="text-lg">
+          <p>
             The future of JavaScript frameworks is full of possibilities. As
             frameworks evolve to meet the demands of modern web development,
             they will continue to push the boundaries of what’s possible on the
@@ -113,7 +85,7 @@ const BlogPage = () => {
         </section>
 
         <footer className="mt-8 text-center">
-          <p className="text-sm">
+          <p>
             For more on <strong>JavaScript</strong> and{" "}
             <strong>Web Development</strong>, visit our{" "}
             <a href="#" className="text-primary underline">

@@ -7,7 +7,7 @@ export default function Banner() {
   return (
     <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-muted text-center p-3">
       <div className="flex flex-wrap items-center justify-center w-full align-middle gap-x-4">
-        <p className="text-sm m-0">
+        <p className="m-0">
           <strong className="font-semibold">
             Join Our Team! Exciting Opportunities Await!
           </strong>

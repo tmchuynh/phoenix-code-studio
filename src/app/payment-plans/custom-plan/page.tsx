@@ -15,13 +15,13 @@ const CustomPlan = () => {
           Custom Plan
         </h1>
         {isSmallScreen && (
-          <p className="text-xl">
+          <p>
             Tailored payment options based on the complexity and size of your
             project. We can create a custom plan to fit your budget.
           </p>
         )}
         {!isSmallScreen && (
-          <p className="text-xl">
+          <p>
             Our Custom Plan is designed to provide fully tailored payment
             solutions that align with the unique needs, complexity, and scope of
             your project. Whether you’re embarking on a small initiative or
@@ -33,7 +33,7 @@ const CustomPlan = () => {
           </p>
         )}
         {!isMediumScreen && (
-          <p className="text-xl">
+          <p>
             This plan is ideal for businesses seeking scalability and
             adaptability in their projects. Whether your requirements include
             specialized services, ongoing support, or evolving project phases,
@@ -216,7 +216,7 @@ const CustomPlan = () => {
         <h2 className="text-2xl font-semibold text-secondary mb-4">
           How it Works
         </h2>
-        <p className="text-lg mb-4">
+        <p>
           The Custom Plan is designed to meet the specific needs of large and
           complex projects. We work with you to understand your project scope
           and provide flexible terms to ensure your budget fits within the
@@ -228,7 +228,7 @@ const CustomPlan = () => {
           <h3 className="text-2xl font-semibold text-tertiary mb-2">
             Flexible Payment Terms Based on Project Scope
           </h3>
-          <p className="text-lg">
+          <p>
             We understand that every project is unique, which is why our payment
             terms are tailored to match the size, complexity, and scope of your
             initiative. Whether you're working on a straightforward project or a
@@ -244,7 +244,7 @@ const CustomPlan = () => {
           <h3 className="text-2xl font-semibold text-tertiary mb-2">
             Options for Ongoing Support and Scaling
           </h3>
-          <p className="text-lg">
+          <p>
             The Custom Plan is designed with your project's growth in mind,
             offering options for ongoing support and scalability. As your needs
             evolve, we provide post-launch maintenance, feature updates, and
@@ -260,7 +260,7 @@ const CustomPlan = () => {
           <h3 className="text-2xl font-semibold text-tertiary mb-2">
             Up to 24-Month Payment Term
           </h3>
-          <p className="text-lg">
+          <p>
             For large-scale and long-term projects, we offer extended payment
             terms of up to 24 months, providing maximum financial flexibility.
             This allows you to spread out costs over an extended period, making
@@ -277,7 +277,7 @@ const CustomPlan = () => {
           <h3 className="text-2xl font-semibold text-secondary mb-4">
             Examples of Custom Payment Plans
           </h3>
-          <p className="text-lg mb-4">
+          <p>
             To give you a better understanding of how we can customize payment
             options to meet the unique needs of your project, we’ve compiled a
             few examples of tailored payment plans we’ve successfully
@@ -294,7 +294,7 @@ const CustomPlan = () => {
             <h3 className="text-2xl font-semibold text-tertiary mb-2">
               Example 1: Mid-Scale Web Development Project
             </h3>
-            <ul className="list-disc pl-6 space-y-1 text-lg">
+            <ul className="list-disc pl-6 space-y-1">
               <li>
                 <strong className="text-accent-3">Project Scope:</strong> Design
                 and development of a custom website for a growing business,
@@ -325,7 +325,7 @@ const CustomPlan = () => {
             <h3 className="text-2xl font-semibold text-tertiary mb-2">
               Example 2: Large-Scale Mobile App Development
             </h3>
-            <ul className="list-disc pl-6 space-y-1 text-lg">
+            <ul className="list-disc pl-6 space-y-1">
               <li>
                 <strong className="text-accent-3">Project Scope:</strong>{" "}
                 Complete development of a feature-rich mobile app, including
@@ -357,7 +357,7 @@ const CustomPlan = () => {
             <h3 className="text-2xl font-semibold text-tertiary mb-2">
               Example 3: Enterprise Software Integration
             </h3>
-            <ul className="list-disc pl-6 space-y-1 text-lg">
+            <ul className="list-disc pl-6 space-y-1">
               <li>
                 <strong className="text-accent-3">Project Scope:</strong>{" "}
                 Integration of advanced enterprise software into the existing IT
@@ -390,7 +390,7 @@ const CustomPlan = () => {
             <h3 className="text-2xl font-semibold text-tertiary mb-2">
               Example 4: E-Commerce Website Development
             </h3>
-            <ul className="list-disc pl-6 space-y-1 text-lg">
+            <ul className="list-disc pl-6 space-y-1">
               <li>
                 <strong className="text-accent-3">Project Scope:</strong> Design
                 and development of a scalable e-commerce platform with features
@@ -420,7 +420,7 @@ const CustomPlan = () => {
             <h3 className="text-2xl font-semibold text-tertiary mb-2">
               Example 5: SaaS Platform Development
             </h3>
-            <ul className="list-disc pl-6 space-y-1 text-lg">
+            <ul className="list-disc pl-6 space-y-1">
               <li>
                 <strong className="text-accent-3">Project Scope:</strong>{" "}
                 Development of a SaaS platform with user authentication,

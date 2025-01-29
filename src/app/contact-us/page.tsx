@@ -1,14 +1,6 @@
 "use client";
-
 import { FC, useState } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Select,
-  MenuItem,
-  FormControl,
-  InputLabel,
-  OutlinedInput,
-} from "@mui/material";
 import {
   websiteServices,
   contentCreationServices,
@@ -97,7 +89,7 @@ const ContactUsPage: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Contact Us
       </h1>
-      <p className="text-lg my-4">
+      <p>
         We would love to hear from you! Whether you have questions about our
         services, need more information, or are ready to start your next
         project, we’re here to help. Please fill out the form below, and one of

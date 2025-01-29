@@ -10,7 +10,7 @@ const PricingPage: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Our Pricing and Service Tiers
       </h1>
-      <p className="text-lg my-4">
+      <p>
         Explore our flexible pricing options designed to suit a variety of needs
         and budgets. Whether you're looking for a basic package or a
         comprehensive solution, we offer service tiers that provide exceptional
@@ -23,11 +23,11 @@ const PricingPage: FC = () => {
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Website Design Services
         </h2>
-        <p className="my-4">
+        <p>
           Our website design services are designed to meet your business goals,
           from simple informational websites to fully customized solutions.
         </p>
-        <ul className="list-disc pl-6 space-y-1 text-lg">
+        <ul className="list-disc pl-6 space-y-1">
           <li>
             <span className="font-bold text-secondary">Basic Website:</span>{" "}
             Starting at $2,500 – A simple, informational website (5-10 pages).
@@ -59,11 +59,11 @@ const PricingPage: FC = () => {
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           UX/UI Design Services
         </h2>
-        <p className="my-4">
+        <p>
           Our UX/UI design services focus on creating seamless and engaging user
           experiences while ensuring visually stunning interfaces.
         </p>
-        <ul className="list-disc pl-6 space-y-1 text-lg">
+        <ul className="list-disc pl-6 space-y-1">
           <li>
             <span className="font-bold text-secondary">
               UX Design Research:
@@ -91,11 +91,11 @@ const PricingPage: FC = () => {
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Wireframing and Prototyping Services
         </h2>
-        <p className="my-4">
+        <p>
           Wireframing and prototyping services to bring your ideas to life with
           interactive mockups and user-centered design.
         </p>
-        <ul className="list-disc pl-6 space-y-1 text-lg">
+        <ul className="list-disc pl-6 space-y-1">
           <li>
             <span className="font-bold text-secondary">
               Low-Fidelity Wireframes:
@@ -131,11 +131,11 @@ const PricingPage: FC = () => {
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Development Services
         </h2>
-        <p className="my-4">
+        <p>
           Our development services ensure that your vision is brought to life
           using the latest technologies and best practices.
         </p>
-        <ul className="list-disc pl-6 space-y-1 text-lg">
+        <ul className="list-disc pl-6 space-y-1">
           <li>
             <span className="font-bold text-secondary">
               Frontend Development:
@@ -165,11 +165,11 @@ const PricingPage: FC = () => {
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Ongoing Support and Maintenance
         </h2>
-        <p className="my-4">
+        <p>
           Ensure the longevity of your website or application with our ongoing
           maintenance and support services.
         </p>
-        <ul className="list-disc pl-6 space-y-1 text-lg">
+        <ul className="list-disc pl-6 space-y-1">
           <li>
             <span className="font-bold text-secondary">
               Monthly Support Plan:
@@ -189,7 +189,7 @@ const PricingPage: FC = () => {
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Get Started Today
         </h2>
-        <p className="my-4">
+        <p>
           Ready to discuss your project and choose the best tier for your needs?{" "}
           <Button
             variant={"link"}

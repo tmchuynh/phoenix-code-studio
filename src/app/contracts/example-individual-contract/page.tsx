@@ -11,11 +11,11 @@ const ContractPage = () => {
         <h2 className="text-3xl font-semibold text-secondary">
           1. Agreement Overview
         </h2>
-        <p className="text-lg">
+        <p>
           This Service Agreement ("Agreement") is made and entered into on{" "}
           <strong>[Date]</strong> by and between:
         </p>
-        <ul className="list-disc pl-6 space-y-1 text-lg">
+        <ul className="list-disc pl-6 space-y-1">
           <li>
             <strong>Client (Individual):</strong> [Client Name]
           </li>
@@ -29,10 +29,8 @@ const ContractPage = () => {
         <h2 className="text-3xl font-semibold text-secondary">
           2. Scope of Work
         </h2>
-        <p className="text-lg">
-          The Service Provider agrees to perform the following services:
-        </p>
-        <ul className="list-disc pl-6 space-y-1 text-lg">
+        <p>The Service Provider agrees to perform the following services:</p>
+        <ul className="list-disc pl-6 space-y-1">
           <li>Provide [specific service or product].</li>
           <li>Deliver the service as per the agreed timeline.</li>
           <li>Ensure quality and compliance with industry standards.</li>
@@ -43,10 +41,10 @@ const ContractPage = () => {
         <h2 className="text-3xl font-semibold text-secondary">
           3. Terms of Agreement
         </h2>
-        <p className="text-lg">
+        <p>
           The Service Provider agrees to the following terms and conditions:
         </p>
-        <ul className="list-disc pl-6 space-y-1 text-lg">
+        <ul className="list-disc pl-6 space-y-1">
           <li>
             <strong>Contract Duration:</strong> [Start Date] to [End Date]
           </li>
@@ -65,10 +63,8 @@ const ContractPage = () => {
         <h2 className="text-3xl font-semibold text-secondary">
           4. Payment Terms
         </h2>
-        <p className="text-lg">
-          The Client agrees to pay the Service Provider the following:
-        </p>
-        <ul className="list-disc pl-6 space-y-1 text-lg">
+        <p>The Client agrees to pay the Service Provider the following:</p>
+        <ul className="list-disc pl-6 space-y-1">
           <li>
             <strong>Total Amount:</strong> $[Amount]
           </li>
@@ -87,10 +83,8 @@ const ContractPage = () => {
         <h2 className="text-3xl font-semibold text-secondary">
           5. Additional Terms
         </h2>
-        <p className="text-lg">
-          The Service Provider agrees to the following additional terms:
-        </p>
-        <ul className="list-disc pl-6 space-y-1 text-lg">
+        <p>The Service Provider agrees to the following additional terms:</p>
+        <ul className="list-disc pl-6 space-y-1">
           <li>
             <strong>Warranty:</strong> [Warranty information, if any]
           </li>
@@ -105,7 +99,7 @@ const ContractPage = () => {
       </div>
 
       <div className="mt-8 text-center">
-        <p className="text-lg mb-4">
+        <p>
           By signing below, both parties agree to the terms and conditions
           outlined in this contract.
         </p>

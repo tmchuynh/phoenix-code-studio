@@ -3,155 +3,86 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
-import { companySpecificServices } from "@/lib/constants";
-import {
-  brandStorytellingBenefits,
-  brandStorytellingServices,
-  brandStorytellingProcessSteps,
-} from "@/lib/content-constants";
+import { brandStorytellingData } from "@/lib/company-constant";
 
 const BrandStorytellingServices: FC = () => {
   const router = useRouter();
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
+      {/* Page Header */}
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Brand Storytelling Services
       </h1>
-      {companySpecificServices.map((service) => {
-        return (
-          <div key={service.name} className="text-lg my-4">
-            {service.name === "Brand Storytelling" && (
-              <div>
-                <span className="mt-4">{service.info}</span>
-              </div>
-            )}
-          </div>
-        );
-      })}
 
+      {/* Introduction */}
       <section className="my-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Why Brand Storytelling Matters
         </h2>
         <p className="my-4">
-          Company rebranding is the process of revitalizing your business’s
-          image and messaging to better align with your goals and audience. This
-          transformation may include updating your logo, refining your visual
-          identity, redefining brand values, enhancing your website, and
-          revamping marketing strategies. At its core, rebranding is about
-          creating a fresh, cohesive identity that sets your company apart,
-          communicates your mission effectively, and fosters deeper, more
-          meaningful connections with your audience. Our rebranding services are
-          designed to help your business thrive in an ever-evolving marketplace.
+          Brand storytelling is **more than marketing**—it’s about crafting a
+          **compelling narrative** that resonates with your audience, builds
+          trust, and creates an emotional connection. A well-crafted brand story
+          **differentiates** your business in a crowded market, **clarifies your
+          mission**, and leaves a **lasting impression**.
         </p>
-        <ul className="list-disc pl-6 space-y-1 text-lg">
-          {brandStorytellingBenefits.map((benefit) => (
-            <li key={benefit.title}>
-              <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
-              {benefit.description}
-            </li>
-          ))}
-        </ul>
       </section>
 
-      <section className="my-8">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-          Our Brand Storytelling Services
-        </h2>
-        <p className="my-4">
-          We specialize in crafting compelling narratives that go beyond mere
-          words, capturing the very essence of your brand and communicating it
-          in a way that deeply resonates with your audience. Through a
-          thoughtful blend of creativity and strategy, we weave stories that
-          reflect your unique values, vision, and mission. Our approach ensures
-          that your brand narrative isn’t just memorable but also authentic,
-          aligning perfectly with what your business stands for. By telling your
-          story in a way that connects emotionally and intellectually, we help
-          you forge meaningful relationships with your audience, inspiring
-          trust, fostering loyalty, and driving lasting engagement. Whether it’s
-          through website content, marketing campaigns, or brand storytelling,
-          we ensure your narrative leaves a powerful and lasting impact.
-        </p>
-        <ul className="list-disc pl-6 space-y-1 text-lg">
-          {brandStorytellingServices.map((service) => (
-            <li key={service.title}>
-              <span className="font-bold text-secondary">{service.title}:</span>{" "}
-              {service.description}
-            </li>
-          ))}
-        </ul>
-      </section>
+      {/* Dynamic Rendering for Storytelling Sections */}
+      {brandStorytellingData.map((section, index) => (
+        <section key={index} className="my-8">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+            {section.category}
+          </h2>
+          <ul className="list-disc pl-6 space-y-1 text-lg">
+            {section.items.map((item, itemIndex) => (
+              <li key={itemIndex}>
+                <span className="font-bold text-secondary">{item.title}:</span>{" "}
+                {item.description}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
 
-      <section className="my-8">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-          Our Process
-        </h2>
-        <p>
-          Our process for crafting compelling brand narratives begins with a
-          deep dive into your business. We take the time to understand your
-          values, vision, mission, and the unique elements that set you apart.
-          Through research and collaboration, we uncover the core story that
-          defines your brand and resonates with your audience. Next, we
-          translate this understanding into a strategic narrative, carefully
-          aligning your messaging with the emotional and intellectual needs of
-          your target audience. From developing captivating copy to ensuring
-          consistency across all channels, we refine your brand’s voice to
-          create a powerful, cohesive story. Throughout the process, we work
-          closely with you, incorporating your feedback to ensure the narrative
-          truly represents your brand and forges meaningful connections with
-          your audience.
-        </p>
-        <p className="my-4">
-          The timeline for brand storytelling projects depends on the
-          complexity, scope, and desired channels. Most projects are completed
-          within 2–6 weeks.
-        </p>
-        <ul className="list-decimal pl-6 space-y-2">
-          {brandStorytellingProcessSteps.map((step) => (
-            <li key={step.title}>
-              <span className="font-bold text-secondary">{step.title}:</span>{" "}
-              {step.description}
-            </li>
-          ))}
-        </ul>
-      </section>
-
+      {/* Pricing Section */}
       <section className="my-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Pricing
         </h2>
         <p className="my-4">
-          Our brand storytelling services are tailored to fit your specific
-          goals. Pricing is based on the project’s complexity, length, and
-          deliverables.
+          Our brand storytelling services are tailored to fit your **unique
+          business goals**. Pricing varies based on project **complexity, scope,
+          and content deliverables**.
         </p>
-        {companySpecificServices.map((service) => {
-          return (
-            <>
-              {service.name === "Brand Storytelling" && (
-                <ul className="list-disc pl-6 space-y-1 text-lg">
-                  {service.pricingTiers.map((pricing) => (
-                    <li key={pricing.name}>
-                      <span className="font-bold text-secondary">
-                        {pricing.name}:
-                      </span>
-                      <span className="pl-2">{pricing.info}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </>
-          );
-        })}
+        <ul className="list-disc pl-6 space-y-1">
+          <li>
+            <span className="font-bold text-secondary">Basic Package:</span>{" "}
+            Core narrative development and brand messaging.
+          </li>
+          <li>
+            <span className="font-bold text-secondary">Advanced Package:</span>{" "}
+            Multi-channel storytelling strategy, including website and marketing
+            campaigns.
+          </li>
+          <li>
+            <span className="font-bold text-secondary">
+              Enterprise Package:
+            </span>{" "}
+            Full-scale brand storytelling, including origin stories, video
+            scripts, and thought leadership content.
+          </li>
+        </ul>
       </section>
 
+      {/* Get Started Section */}
       <section className="my-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Get Started Today
         </h2>
         <p className="my-4">
-          Ready to tell your story and define your brand?{" "}
+          Ready to craft a **powerful brand story**?{" "}
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}

@@ -3,126 +3,55 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
-import {
-  uxDesignBenefits,
-  uxDesignServices,
-  uxDesignProcess,
-  uxDesignTools,
-  uxDesignPricingTiers,
-} from "@/lib/content-constants";
-import { websiteServices } from "@/lib/constants";
+import { uxDesignData } from "@/lib/web-constants";
 
 const UXDesignServices: FC = () => {
   const router = useRouter();
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
+      {/* Page Header */}
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         User Experience (UX) Design Services
       </h1>
-      {websiteServices.map((service) => {
-        return (
-          <div key={service.name} className="text-lg my-4">
-            {service.name === "User Experience Design" && (
-              <div>
-                <span className="mt-4">{service.info}</span>
-              </div>
-            )}
-          </div>
-        );
-      })}
 
+      {/* Introduction */}
       <section className="my-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Why UX Design Matters
         </h2>
         <p className="my-4">
-          Exceptional UX design ensures that your users can easily navigate,
-          interact with, and find value in your product. It focuses on
-          understanding user behavior, needs, and pain points to create seamless
-          and engaging experiences.
+          UX design is more than just aesthetics—it’s about creating experiences
+          that are **intuitive, engaging, and accessible**. Our UX services
+          focus on **understanding user behavior** and ensuring seamless
+          interactions for your audience.
         </p>
-        <ul className="list-disc pl-6 space-y-1 text-lg">
-          {uxDesignBenefits.map((benefit) => (
-            <li key={benefit.title}>
-              <span className="font-bold text-secondary">{benefit.title}:</span>{" "}
-              {benefit.description}
-            </li>
-          ))}
-        </ul>
       </section>
 
-      <section className="my-8">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-          Our UX Design Services
-        </h2>
-        <p className="my-4">
-          Our comprehensive UX design services are tailored to your product and
-          audience, ensuring delightful user experiences.
-        </p>
-        <ul className="list-disc pl-6 space-y-1 text-lg">
-          {uxDesignServices.map((service) => (
-            <li key={service.title}>
-              <span className="font-bold text-secondary">{service.title}:</span>{" "}
-              {service.description}
-            </li>
-          ))}
-        </ul>
-      </section>
+      {/* Dynamic Rendering for Content Sections */}
+      {uxDesignData.map((section, index) => (
+        <section key={index} className="my-8">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+            {section.category}
+          </h2>
+          <ul className="list-disc pl-6 space-y-1 text-lg">
+            {section.items.map((item, itemIndex) => (
+              <li key={itemIndex}>
+                <span className="font-bold text-secondary">{item.title}:</span>{" "}
+                {item.description}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
 
-      <section className="my-8">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-          Our Process
-        </h2>
-        <ul className="list-decimal pl-6 space-y-2">
-          {uxDesignProcess.map((step) => (
-            <li key={step.title}>
-              <span className="font-bold text-secondary">{step.title}:</span>{" "}
-              {step.description}
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="my-8">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-          Tools and Technologies
-        </h2>
-        <p className="my-4">
-          We leverage industry-leading tools and technologies to ensure
-          top-notch UX design:
-        </p>
-        <ul className="list-disc pl-6 space-y-1 text-lg">
-          {uxDesignTools.map((tool, index) => (
-            <li key={index}>{tool}</li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="my-8">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-          Pricing Tiers
-        </h2>
-        <p className="my-4">
-          Our pricing is customized based on your product’s complexity,
-          features, and scope:
-        </p>
-        <ul className="list-disc pl-6 space-y-1 text-lg">
-          {uxDesignPricingTiers.map((pricing) => (
-            <li key={pricing.name}>
-              <span className="font-bold text-secondary">{pricing.name}:</span>{" "}
-              <span className="pl-2">{pricing.info}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-
+      {/* Get Started Section */}
       <section className="my-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Get Started Today
         </h2>
         <p className="my-4">
-          Ready to elevate your product with outstanding user experience design?{" "}
+          Ready to elevate your **user experience and increase engagement**?{" "}
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}

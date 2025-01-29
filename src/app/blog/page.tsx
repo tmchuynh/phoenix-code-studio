@@ -194,7 +194,7 @@ const BlogDisplayPage: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Our Latest Blogs
       </h1>
-      <p className="text-lg mt-4">
+      <p className="mt-4">
         Stay informed with our latest insights, tips, and trends in web
         development. From cutting-edge technologies and design best practices to
         practical strategies for enhancing user experience and driving online
@@ -408,7 +408,7 @@ const BlogDisplayPage: FC = () => {
           {/* Confirmation Text for Filters Cleared */}
           <div className="mt-4 text-center">
             {filtersCleared && (
-              <p className="text-destructive font-extrabold text-md m-0 p-0">
+              <p className="text-destructive font-extrabold m-0 p-0">
                 Filters have been cleared successfully!
               </p>
             )}
@@ -417,7 +417,7 @@ const BlogDisplayPage: FC = () => {
           {/* No results warning */}
           <div className="mt-4 text-center">
             {noResults && (
-              <p className="text-destructive font-extrabold text-md m-0 p-0">
+              <p className="text-destructive font-extrabold m-0 p-0">
                 No blogs match your selected filters. Filters have been cleared.
               </p>
             )}
@@ -440,9 +440,9 @@ const BlogDisplayPage: FC = () => {
         />
         <section className="text-center my-4">
           {indexOfLastArticle >= filteredBlogs.length && totalPages === 1 ? (
-            <p className="text-lg">Showing all {filteredBlogs.length} blogs</p>
+            <p>Showing all {filteredBlogs.length} blogs</p>
           ) : (
-            <p className="text-lg">
+            <p>
               Showing {indexOfFirstArticle + 1} to{" "}
               {indexOfLastArticle > filteredBlogs.length
                 ? filteredBlogs.length
@@ -499,7 +499,7 @@ const BlogDisplayPage: FC = () => {
                     </p>
                     <p className="text-md py-4">{blog.excerpt}</p>
                   </div>
-                  <p className="text-sm mb-4">
+                  <p className="mb-4">
                     <strong>Topics:</strong> {blog.topics.join(", ")}
                   </p>
                 </div>

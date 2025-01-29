@@ -1,7 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import { entrepreneurStories, lessons } from "@/lib/content-constants";
+import { entrepreneurStories, lessons } from "@/lib/blog-constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -12,9 +12,7 @@ const BlogPage = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             From Startup Garage to Tech Giant: Stories of Tech Entrepreneurs
           </h1>
-          <p className="text-sm text-gray-500">
-            By Ethan Garcia – August 5, 2024
-          </p>
+          <p>By Ethan Garcia – August 5, 2024</p>
           <div className="mt-4 flex justify-center space-x-4">
             <Badge variant={"outline"} className="text-sm">
               #TechEntrepreneurs
@@ -32,7 +30,7 @@ const BlogPage = () => {
         </header>
 
         <section className="space-y-4">
-          <p className="text-lg">
+          <p>
             Tech entrepreneurs are transforming the world, bringing innovative
             ideas to life and reshaping industries in the process. Many of the
             most successful companies today started in humble settings, such as
@@ -47,7 +45,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             The Journey of a Tech Entrepreneur
           </h2>
-          <p className="text-lg">
+          <p>
             Starting a tech company often involves a blend of ambition,
             resilience, and a willingness to take risks. The path from a startup
             idea to becoming a tech giant typically includes:
@@ -85,7 +83,7 @@ const BlogPage = () => {
               <h3 className="text-xl font-semibold text-tertiary">
                 {entrepreneur.title}
               </h3>
-              <ul className="list-disc pl-6 space-y-1 text-lg">
+              <ul className="list-disc pl-6 space-y-1">
                 {entrepreneur.details.map((detail, i) => (
                   <li key={i}>
                     <strong>{detail.split(":")[0]}:</strong>{" "}
@@ -101,7 +99,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Lessons from Successful Entrepreneurs
           </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
+          <ul className="list-disc pl-6 space-y-1">
             {lessons.map((lesson, index) => (
               <li key={index}>{lesson}</li>
             ))}
@@ -112,7 +110,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             The Future of Tech Entrepreneurship
           </h2>
-          <p className="text-lg">
+          <p>
             The rise of AI, blockchain, and sustainability-focused technologies
             presents new opportunities for entrepreneurs. Emerging markets,
             increased accessibility to funding, and advances in remote work are
@@ -124,13 +122,13 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Conclusion
           </h2>
-          <p className="text-lg">
+          <p>
             The stories of tech entrepreneurs are a testament to the power of
             innovation, resilience, and determination. Whether you’re an
             aspiring entrepreneur or simply inspired by these journeys, remember
             that every successful company starts with a single step.
           </p>
-          <p className="text-lg">
+          <p>
             Explore more stories, insights, and tips for tech entrepreneurship
             on our{" "}
             <a href="#" className="text-primary underline">
@@ -141,7 +139,7 @@ const BlogPage = () => {
         </section>
 
         <footer className="mt-8 text-center">
-          <p className="text-sm">
+          <p>
             Explore more stories, insights, and resources on{" "}
             <strong>Tech Entrepreneurship</strong> and{" "}
             <strong>Innovation</strong> on our{" "}

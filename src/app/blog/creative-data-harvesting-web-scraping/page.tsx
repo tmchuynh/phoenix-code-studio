@@ -1,12 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import {
-  webScrapingList,
-  ethicalConsiderationsList,
-  toolsForScrapingList,
-} from "@/lib/content-constants";
-
+import { webScrapingResources } from "@/lib/blog-constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -17,9 +12,7 @@ const BlogPage = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Creative Data Harvesting: The Wonders of Web Scraping
           </h1>
-          <p className="text-sm text-gray-500">
-            By Olivia Martin – January 15, 2025
-          </p>
+          <p>By Olivia Martin – January 15, 2025</p>
           <div className="mt-4 flex justify-center space-x-4">
             <Badge variant={"outline"} className="text-sm">
               #WebScraping
@@ -37,7 +30,7 @@ const BlogPage = () => {
         </header>
 
         <section className="space-y-4">
-          <p className="text-lg">
+          <p>
             <strong>Web scraping</strong> is a powerful technique that opens up
             endless possibilities for collecting and analyzing data from the
             internet. From market research to competitive analysis, web scraping
@@ -52,7 +45,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             What is Web Scraping?
           </h2>
-          <p className="text-lg">
+          <p>
             Web scraping is the process of extracting data from websites using
             automated tools. It involves fetching web pages, parsing their
             content, and collecting specific information for analysis.
@@ -62,54 +55,32 @@ const BlogPage = () => {
           </p>
         </section>
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Applications of Web Scraping
-          </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {webScrapingList.map((item, index) => (
-              <li key={index}>
-                <strong>{item.title}:</strong> {item.description}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Ethical Considerations in Web Scraping
-          </h2>
-          <p className="text-lg">
-            While web scraping is a powerful tool, it comes with ethical and
-            legal responsibilities:
-          </p>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {ethicalConsiderationsList.map((item, index) => (
-              <li key={index}>
-                <strong>{item.title}:</strong> {item.description}
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Popular Tools for Web Scraping
-          </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
-            {toolsForScrapingList.map((item, index) => (
-              <li key={index}>
-                <strong>{item.title}:</strong> {item.description}
-              </li>
-            ))}
-          </ul>
-        </section>
+        {webScrapingResources.map((categoryItem, categoryIndex) => (
+          <section key={categoryIndex}>
+            <h2 className="text-3xl font-semibold mb-6 text-secondary">
+              {categoryItem.category}
+            </h2>
+            {categoryItem.category === "Ethical Considerations" ? (
+              <p>
+                While web scraping is a powerful tool, it comes with ethical and
+                legal responsibilities:
+              </p>
+            ) : null}
+            <ul className="list-disc pl-6 space-y-1">
+              {categoryItem.items.map((item, itemIndex) => (
+                <li key={itemIndex}>
+                  <strong>{item.title}:</strong> {item.description}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
 
         <section>
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             The Benefits of Web Scraping
           </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
+          <ul className="list-disc pl-6 space-y-1">
             <li>
               <strong>Efficiency:</strong> Automates data collection processes,
               saving time and resources.
@@ -129,7 +100,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Challenges of Web Scraping
           </h2>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
+          <ul className="list-disc pl-6 space-y-1">
             <li>
               <strong>Anti-Scraping Measures:</strong> Websites may use
               CAPTCHAs, IP blocking, or dynamic content to deter scrapers.
@@ -150,13 +121,13 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Conclusion
           </h2>
-          <p className="text-lg">
+          <p>
             Web scraping is a versatile and transformative tool for data
             collection and analysis. By understanding its technical and ethical
             dimensions, developers and businesses can harness its power
             responsibly to gain valuable insights and drive innovation.
           </p>
-          <p className="text-lg">
+          <p>
             Ready to explore the possibilities of web scraping? Dive into our{" "}
             <a href="#" className="text-primary underline">
               Blog
@@ -166,7 +137,7 @@ const BlogPage = () => {
         </section>
 
         <footer className="mt-8 text-center">
-          <p className="text-sm">
+          <p>
             For more insights on <strong>Web Scraping</strong> and{" "}
             <strong>Data Collection</strong>, check out our{" "}
             <a href="#" className="text-primary underline">

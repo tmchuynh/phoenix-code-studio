@@ -15,13 +15,13 @@ const BasicPlan = () => {
           Basic Plan
         </h1>
         {isSmallScreen && (
-          <p className="text-xl">
+          <p>
             Ideal for small projects or businesses just getting started. Pay as
             you go with flexible terms.
           </p>
         )}
         {!isSmallScreen && (
-          <p className="text-xl">
+          <p>
             This plan provides a solid foundation for your project, offering the
             essential tools and services required to establish a strong online
             presence. As your business grows and your needs evolve, the Basic
@@ -33,7 +33,7 @@ const BasicPlan = () => {
           </p>
         )}
         {!isMediumScreen && (
-          <p className="text-xl">
+          <p>
             The Basic Plan is an ideal starting point for small projects or
             businesses entering the digital space for the first time. Designed
             to be simple and cost-effective, this plan offers a convenient
@@ -199,7 +199,7 @@ const BasicPlan = () => {
         <h2 className="text-2xl font-semibold text-secondary mb-4">
           How it Works
         </h2>
-        <p className="text-lg mb-4">
+        <p>
           The Basic Plan allows you to start small and scale your payments as
           you grow. You have the flexibility to choose how you want to pay based
           on your project needs. Below is a breakdown of how each payment option
@@ -211,7 +211,7 @@ const BasicPlan = () => {
           <h3 className="text-2xl font-semibold text-tertiary mb-2">
             Pay Per Service or Milestone
           </h3>
-          <p className="text-lg">
+          <p>
             Our "Pay Per Service or Milestone" option gives you the ultimate
             flexibility to control your budget by paying only for what you need.
             Whether it’s a specific task or a major project milestone, this
@@ -228,7 +228,7 @@ const BasicPlan = () => {
           <h3 className="text-2xl font-semibold text-tertiary mb-2">
             Monthly Payments
           </h3>
-          <p className="text-lg">
+          <p>
             For those who prioritize budget predictability and financial
             flexibility, our monthly payment option offers a convenient
             solution. This structure allows you to spread the cost of services
@@ -245,7 +245,7 @@ const BasicPlan = () => {
           <h3 className="text-2xl font-semibold text-tertiary mb-2">
             Up to 3 Months Payment Term
           </h3>
-          <p className="text-lg">
+          <p>
             For larger or more complex projects, we offer payment terms of up to
             three months to provide added flexibility. This option allows you to
             distribute the cost over a longer period, making it easier to

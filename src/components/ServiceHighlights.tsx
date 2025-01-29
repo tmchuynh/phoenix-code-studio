@@ -13,7 +13,7 @@ const ServiceHighlights = () => {
           <h3 className="text-xl md:text-2xl font-semibold text-center text-secondary mt-4">
             Custom Website Design
           </h3>
-          <p className="text-center mt-4 md:text-lg">
+          <p className="text-center mt-4">
             Tailored websites that reflect your brand’s unique identity and
             engage your audience.
           </p>
@@ -25,7 +25,7 @@ const ServiceHighlights = () => {
           <h3 className="text-xl md:text-2xl font-semibold text-center text-secondary mt-4">
             Content Creation
           </h3>
-          <p className="text-center mt-4 md:text-lg">
+          <p className="text-center mt-4">
             From blog posts to eBooks, we create compelling content that
             connects with your audience.
           </p>
@@ -37,7 +37,7 @@ const ServiceHighlights = () => {
           <h3 className="text-xl md:text-2xl font-semibold text-center text-secondary mt-4">
             SEO Optimization
           </h3>
-          <p className="text-center mt-4 md:text-lg">
+          <p className="text-center mt-4">
             Improve your online visibility and drive traffic with our expert SEO
             strategies.
           </p>

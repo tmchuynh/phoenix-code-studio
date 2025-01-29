@@ -1,11 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { companySpecificServices } from "@/lib/constants";
-import {
-  rebrandingServiceDetails,
-  processSteps,
-} from "@/lib/content-constants";
+import { companyRebrandingData } from "@/lib/company-constant";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
 
@@ -19,107 +15,70 @@ const CompanyRebranding: FC = () => {
         Company Rebranding Services
       </h1>
 
-      {/* Display Service Details Dynamically */}
-      {companySpecificServices.map((service) => {
-        if (service.name === "Company Rebranding") {
-          return (
-            <div key={service.name}>
-              <p className="text-lg my-4">{service.info}</p>
-            </div>
-          );
-        }
-        return null;
-      })}
-
-      {/* What is Company Rebranding? */}
+      {/* Introduction */}
       <section className="my-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           What is Company Rebranding?
         </h2>
         <p className="my-4">
-          Company rebranding is a transformative process that involves
-          revitalizing or completely redefining your business's image and
-          messaging. This comprehensive approach can include redesigning your
-          logo, refining your visual identity, reshaping your brand values,
-          updating your website, and enhancing your marketing strategies. The
-          goal is to create a cohesive and compelling brand presence that not
-          only sets your company apart but also communicates your message with
-          clarity and impact. By aligning your brand with your audience’s needs
-          and expectations, we help you build stronger, lasting connections and
-          position your business for long-term success.
+          Company rebranding is a **transformative process** that involves
+          **revitalizing your business identity** to better align with market
+          trends, audience expectations, and growth strategies. Whether you're
+          looking to **modernize your brand, refresh your messaging, or redesign
+          your website**, our comprehensive services help you create a
+          **powerful, cohesive, and future-ready brand identity**.
         </p>
-        <ul className="list-disc pl-6 space-y-1 text-lg">
-          {rebrandingServiceDetails.map((item, index) => (
-            <li key={index}>
-              <span className="font-bold text-secondary">{item.title}:</span>{" "}
-              {item.description}
-            </li>
-          ))}
-        </ul>
       </section>
 
-      {/* Our Process */}
-      <section className="my-8">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-          Our Process
-        </h2>
-        <p className="my-4">
-          Our process for company rebranding is designed to be collaborative,
-          strategic, and impactful. We begin by deeply understanding your
-          business, its values, and your goals through research and
-          consultation. Next, we analyze your current brand identity and market
-          positioning to identify opportunities for growth and differentiation.
-          From there, we develop a tailored strategy, which may include logo
-          design, visual identity updates, messaging refinement, and website
-          enhancements. Throughout the process, we ensure that every element
-          aligns with your vision and resonates with your target audience. By
-          involving you at every step, we create a cohesive brand transformation
-          that empowers your business to stand out and thrive.
-        </p>
-        <p className="my-4">
-          Typical company rebranding projects take 8–12 weeks, depending on the
-          complexity and scope of the rebranding process.
-        </p>
+      {/* Dynamic Rendering for Rebranding Services */}
+      {companyRebrandingData.map((section, index) => (
+        <section key={index} className="my-8">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+            {section.category}
+          </h2>
+          <ul className="list-disc pl-6 space-y-1 text-lg">
+            {section.items.map((item, itemIndex) => (
+              <li key={itemIndex}>
+                <span className="font-bold text-secondary">{item.title}:</span>{" "}
+                {item.description}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
 
-        <ul className="list-decimal pl-6 space-y-2">
-          {processSteps.map((step, index) => (
-            <li key={index}>
-              <span className="font-bold text-secondary">{step.title}:</span>{" "}
-              {step.description}
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      {/* Pricing Tiers */}
+      {/* Pricing Section */}
       <section className="my-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Pricing Tiers
         </h2>
         <p className="my-4">
-          Our company rebranding services are customized to meet your specific
-          needs. Below are our starting prices:
+          Our company rebranding services are **tailored to your needs**. Below
+          are our pricing tiers:
         </p>
-        {companySpecificServices.map((service) => {
-          if (service.name === "Company Rebranding") {
-            return (
-              <ul className="list-disc pl-6 space-y-2" key={service.name}>
-                {service.pricingTiers.map((pricing, index) => (
-                  <li key={index}>
-                    <span className="font-bold text-secondary">
-                      {pricing.name}:
-                    </span>
-                    <span className="pl-2">{pricing.info}</span>
-                  </li>
-                ))}
-              </ul>
-            );
-          }
-          return null;
-        })}
+        <ul className="list-disc pl-6 space-y-1">
+          <li>
+            <span className="font-bold text-secondary">Basic Rebranding:</span>{" "}
+            Logo refresh, color scheme update, and minor website adjustments.
+          </li>
+          <li>
+            <span className="font-bold text-secondary">
+              Full Rebranding Package:
+            </span>{" "}
+            Comprehensive brand identity overhaul, including website redesign,
+            brand messaging, and marketing collateral.
+          </li>
+          <li>
+            <span className="font-bold text-secondary">
+              Enterprise Rebranding:
+            </span>{" "}
+            Large-scale corporate rebranding, internal culture alignment, and
+            full marketing integration.
+          </li>
+        </ul>
       </section>
 
-      {/* Get Started */}
+      {/* Get Started Section */}
       <section className="my-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Get Started Today

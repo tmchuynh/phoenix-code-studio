@@ -12,7 +12,7 @@ const ExampleContractsPage: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Example Contracts
       </h1>
-      <p className="text-lg my-4">
+      <p>
         Explore a range of contract examples tailored to various hiring
         scenarios. These examples showcase how we structure agreements to
         address different project needs, timelines, and budgets. Whether you're
@@ -20,7 +20,7 @@ const ExampleContractsPage: FC = () => {
         specialized project, these examples illustrate the flexibility and
         customization we offer to meet diverse requirements.
       </p>
-      <p className="text-lg my-4">
+      <p>
         Each example provides insights into how we handle unique situations,
         from milestone-based payments to comprehensive, end-to-end service
         contracts. Our approach ensures clarity, fairness, and alignment with
@@ -28,7 +28,7 @@ const ExampleContractsPage: FC = () => {
         don’t worry—we’re ready to create a custom contract that suits your
         exact needs.
       </p>
-      <p className="text-lg">
+      <p>
         Take a look at the scenarios below to see how we can help structure a
         contract that works for you. If you have questions or need something
         more specific, reach out to us for a personalized consultation.
@@ -40,7 +40,7 @@ const ExampleContractsPage: FC = () => {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
             1. Company Hiring Phoenix Code Studio
           </h2>
-          <p className="text-lg mb-4">
+          <p>
             This contract serves as a comprehensive agreement for companies
             hiring Phoenix Code Studio for a project. It is designed to
             establish mutual understanding and ensure transparency in all
@@ -55,7 +55,7 @@ const ExampleContractsPage: FC = () => {
             every detail has been carefully considered to ensure a successful
             partnership.
           </p>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
+          <ul className="list-disc pl-6 space-y-1">
             <li>
               <span className="font-bold text-secondary">Project Scope:</span> A
               comprehensive description of the project, including detailed
@@ -135,7 +135,7 @@ const ExampleContractsPage: FC = () => {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
             2. Individual Hiring Phoenix Code Studio
           </h2>
-          <p className="text-lg mb-4">
+          <p>
             This contract is specifically designed for individuals seeking to
             hire Phoenix Code Studio for a personalized project. Whether it’s a
             one-time collaboration or a smaller-scale initiative, this agreement
@@ -150,7 +150,7 @@ const ExampleContractsPage: FC = () => {
             their specific goals and requirements are being met with
             professionalism and care.
           </p>
-          <ul className="list-disc pl-6 space-y-1 text-lg">
+          <ul className="list-disc pl-6 space-y-1">
             <li>
               <span className="font-bold text-secondary">Project Scope:</span> A
               detailed outline of the project goals, expectations, and specific
@@ -221,7 +221,7 @@ const ExampleContractsPage: FC = () => {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
             Custom Contracts
           </h2>
-          <p className="text-lg mb-4">
+          <p>
             Our team will take the time to understand your objectives,
             challenges, and expectations, ensuring that every detail is
             accounted for in the contract. From complex multi-phase projects to
@@ -229,7 +229,7 @@ const ExampleContractsPage: FC = () => {
             expertise and adaptability needed to create a framework that
             supports your vision.
           </p>
-          <p className="text-lg">
+          <p>
             Reach out to us to discuss your project in detail, and we’ll craft a
             personalized contract that aligns with your requirements. With a
             custom-tailored agreement, you can move forward with confidence,

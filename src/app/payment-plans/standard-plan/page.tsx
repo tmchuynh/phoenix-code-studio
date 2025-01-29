@@ -14,13 +14,13 @@ const StandardPlan = () => {
           Standard Plan
         </h1>
         {isSmallScreen && (
-          <p className="text-xl">
+          <p>
             Perfect for medium-sized projects, providing more flexible payment
             terms and installments.
           </p>
         )}
         {!isSmallScreen && (
-          <p className="text-xl">
+          <p>
             The Standard Plan is ideal for medium-sized projects, offering a
             balanced combination of flexibility and affordability. With extended
             payment terms and the option for installments, this plan is perfect
@@ -30,7 +30,7 @@ const StandardPlan = () => {
           </p>
         )}
         {!isMediumScreen && (
-          <p className="text-xl">
+          <p>
             With the Standard Plan, you gain access to solutions tailored to
             your specific needs, ensuring your project receives the attention
             and resources it deserves. It’s an excellent choice for initiatives
@@ -195,7 +195,7 @@ const StandardPlan = () => {
         <h2 className="text-2xl font-semibold text-secondary mb-4">
           How it Works
         </h2>
-        <p className="text-lg mb-4">
+        <p>
           The Standard Plan is tailored for medium-sized projects, providing
           flexible payment options that make managing your budget simple and
           stress-free. With priority support included, we ensure your project is
@@ -209,7 +209,7 @@ const StandardPlan = () => {
           <h3 className="text-2xl font-semibold text-tertiary mb-2">
             Split Payments into 3-6 Installments
           </h3>
-          <p className="text-lg">
+          <p>
             The Standard Plan provides the option to split your payments into 3
             to 6 installments, offering a flexible payment structure that fits
             your budget. This allows you to spread out the cost of your project
@@ -226,7 +226,7 @@ const StandardPlan = () => {
           <h3 className="text-2xl font-semibold text-tertiary mb-2">
             Priority Support During the Project
           </h3>
-          <p className="text-lg">
+          <p>
             With the Standard Plan, you’ll benefit from priority support
             throughout your project’s lifecycle. Our team is dedicated to
             providing prompt assistance, whether it’s answering questions,
@@ -243,7 +243,7 @@ const StandardPlan = () => {
           <h3 className="text-2xl font-semibold text-tertiary mb-2">
             Up to 6 Months Payment Term
           </h3>
-          <p className="text-lg">
+          <p>
             The Standard Plan offers a payment term of up to 6 months, providing
             you with the flexibility to manage larger projects at your own pace.
             This extended term is ideal for businesses looking to balance their

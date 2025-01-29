@@ -15,7 +15,7 @@ const AboutSection = () => {
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
         Who We Are
       </h2>
-      <p className="text-lg text-center mx-auto mb-8">
+      <p className="text-center mx-auto mb-8">
         At Phoenix Code Studio, we are a passionate team of web developers,
         designers, and content creators. Our goal is to help businesses thrive
         by offering customized solutions, from high-quality websites to
@@ -28,7 +28,7 @@ const AboutSection = () => {
         <div className="text-center">
           <FaRegLightbulb className="text-6xl text-accent-5 mx-auto mb-4" />
           <h3 className="font-bold text-secondary">Creativity & Innovation</h3>
-          <p className="text-md md:text-lg">
+          <p>
             We blend creativity with the latest technologies to deliver
             impactful digital solutions that bring our clients’ visions to life.
             By thinking outside the box and embracing new trends, we ensure that
@@ -40,7 +40,7 @@ const AboutSection = () => {
         <div className="text-center">
           <GrGrow className="text-6xl text-accent-5 mx-auto mb-4" />
           <h3 className="font-bold text-secondary">Adaptability & Growth</h3>
-          <p className="text-md md:text-lg">
+          <p>
             Embracing new challenges is part of our DNA. We constantly adapt to
             the ever-changing digital landscape, ensuring that our solutions
             remain forward-thinking, flexible, and aligned with emerging trends
@@ -52,7 +52,7 @@ const AboutSection = () => {
         <div className="text-center">
           <FaSeedling className="text-6xl text-accent-5 mx-auto mb-4" />
           <h3 className="font-bold text-secondary">Authenticity</h3>
-          <p className="text-md md:text-lg">
+          <p>
             We believe in creating digital experiences that are true to our
             clients’ identity and core values. Every solution is crafted with
             authenticity to reflect the unique voice of each brand and connect
@@ -64,7 +64,7 @@ const AboutSection = () => {
         <div className="text-center">
           <FaStar className="text-6xl text-accent-5 mx-auto mb-4" />
           <h3 className="font-bold text-secondary">Excellence</h3>
-          <p className="text-md md:text-lg">
+          <p>
             We are committed to delivering exceptional, user-centric solutions
             that exceed expectations. Our dedication to continuous growth and
             innovation drives us to constantly improve and push the boundaries
@@ -76,7 +76,7 @@ const AboutSection = () => {
         <div className="text-center">
           <FaHandsHelping className="text-6xl text-accent-5 mx-auto mb-4" />
           <h3 className="font-bold text-secondary">Empowerment</h3>
-          <p className="text-md md:text-lg">
+          <p>
             We empower small businesses to thrive in the digital space. By
             providing the right tools, resources, and support, we help them grow
             and succeed in a competitive online marketplace, ensuring they can
@@ -90,7 +90,7 @@ const AboutSection = () => {
           <h3 className="font-bold text-secondary">
             Collaboration & Communication
           </h3>
-          <p className="text-md md:text-lg">
+          <p>
             Open, transparent communication is key to success. We collaborate
             closely with our clients at every step of the process, ensuring
             their ideas and goals are central to every project, resulting in
@@ -102,7 +102,7 @@ const AboutSection = () => {
         <div className="text-center">
           <FaUsers className="text-6xl text-accent-5 mx-auto mb-4" />
           <h3 className="font-bold text-secondary">Community Impact</h3>
-          <p className="text-md md:text-lg">
+          <p>
             We are passionate about making a difference. Our work doesn’t just
             benefit our clients – we aim to create digital experiences that
             drive positive change in communities, helping businesses grow and
@@ -114,7 +114,7 @@ const AboutSection = () => {
         <div className="text-center">
           <FaRecycle className="text-6xl text-accent-5 mx-auto mb-4" />
           <h3 className="font-bold text-secondary">Sustainability</h3>
-          <p className="text-md md:text-lg">
+          <p>
             We recognize the importance of creating digital solutions that not
             only serve today’s needs but also contribute to long-term
             sustainability. We strive to design and develop solutions that are
