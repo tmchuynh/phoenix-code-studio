@@ -3,7 +3,7 @@ export const contactlessCardOptions = [
   {
     name: "TapTok",
     description:
-      "TapTok is a revolutionary approach to networking through innovative and customizable contact sharing technologies. Our products eliminate the need for paper business cards and offer a sleek alternative for modern users.",
+      "TapTok is redefining the way professionals connect by offering a revolutionary approach to networking through innovative and customizable contact-sharing technologies. In a digital-first world where convenience and efficiency matter, TapTok eliminates the need for traditional paper business cards, reducing waste and streamlining the way people share their information. With just a tap, users can instantly exchange contact details, social media profiles, and other relevant information, creating a seamless and professional networking experience. Designed for modern professionals, entrepreneurs, and businesses, TapTok provides a sleek, eco-friendly alternative that not only enhances branding but also ensures lasting connections. Whether at networking events, meetings, or casual encounters, TapTok empowers users with a smart, interactive, and hassle-free way to share their professional identity with ease.",
     features: [
       "Customize your profile",
       "Powerful dashboard to get a detailed view of your network",
@@ -15,44 +15,88 @@ export const contactlessCardOptions = [
       "Customized Cards",
       "NEW Metal Cards (Standard or Customized)",
     ],
+    analytics:
+      "Network insights, scan tracking, detailed engagement dashboard",
   },
+  {
+    name: "Mobilo Cards",
+    description:
+      "Mobilo is revolutionizing the way professionals network by providing a smart, digital-first solution for sharing contact details instantly. Designed for entrepreneurs, business professionals, and teams, Mobilo eliminates the need for traditional paper business cards, offering a seamless, eco-friendly, and modern approach to exchanging information. With just a tap or scan, users can share their contact information, social media profiles, websites, and more, ensuring efficient and professional interactions.  What sets Mobilo apart is its multi-functional capabilities, allowing users to switch between different modes, including business card mode, lead generation mode, and landing page mode—making it an essential tool for networking events, corporate meetings, and sales teams. With built-in CRM integration, Mobilo helps businesses automate follow-ups and track interactions, boosting productivity and ensuring no connection is lost. Whether you’re looking to enhance your brand, simplify networking, or drive business growth, Mobilo provides a smart, sustainable, and high-impact solution for seamless professional connections.",
+    features: [
+      "Instantly share contact details with one tap or QR scan",
+      "Switch between business card, lead generation, and landing page modes",
+      "CRM integration for effortless follow-ups and contact management",
+      "No app required for the recipient",
+      "Eco-friendly and cost-effective alternative to paper business cards",
+    ],
+  },
+
   {
     name: "dot Cards",
     description:
-      "Dot cards allow you to share LinkedIn, website, phone number, email, payment info, and social media accounts instantly. No app required! Compatible with iPhone and Android.",
+      "Dot cards offer a seamless and modern way to instantly share your professional and personal information, including LinkedIn, website, phone number, email, payment details (Venmo, PayPal, etc.), and social media accounts. Designed for effortless networking, Dot cards eliminate the need for physical business cards or manual contact exchanges. With just a tap or scan, you can instantly share your details without requiring an app, ensuring compatibility across both iPhone and Android devices. Whether you're at a business meeting, networking event, or social gathering, Dot cards provide a smart, convenient, and contactless way to connect and leave a lasting impression.",
     features: [
       "Dynamically share what you want with who you want",
       "Profiles are viewed directly through a browser",
       "Durable options: dot.classic, dot.thin, and dot.card",
     ],
+    productOptions: [
+      "dot.card (Standard NFC Business Card)",
+      "dot.classic (Stickable NFC Tag for Phones and Surfaces)",
+      "dot.thin (Ultra-Thin NFC Tag for Discreet Placement)",
+      "dot.profile (Web-Based Digital Profile for Easy Sharing)",
+      "Customized dot Cards (Personalized Branding and Design Options)",
+    ],
+    analytics:
+      "Scan count, link tracking, CRM sync",
   },
   {
     name: "Linq Cards",
     description:
-      "Linq lets you build a page that contains your contact info, website, social media links, photos, videos, appointment scheduling, and more — all shareable with just a tap.",
+      "Linq is a powerful digital networking tool that allows users to create a customizable contact page containing their essential details, including contact information, website, social media links, photos, videos, appointment scheduling, and more. Instead of juggling multiple platforms to share your information, Linq consolidates everything into a single, easy-to-access digital hub that can be shared instantly with just a tap or scan. This makes it an ideal solution for business professionals, entrepreneurs, and creatives looking to streamline their networking efforts and leave a lasting impression. With Linq, you can enhance your brand visibility, make networking more efficient, and ensure that your connections always have access to your latest updates.",
     features: [
       "Unlimited use business card that can be dynamically updated",
       "Integrates with 380+ CRMs",
       "Real-time analytics and tracking",
       "Customizable for teams and brands",
     ],
+    productOptions: [
+      "Linq Card (Standard NFC Business Card)",
+      "Linq Tap (Compact NFC Keychain for Easy Sharing)",
+      "Linq Hub (Tabletop NFC Device for Business and Events)",
+      "Linq Bracelet (Wearable NFC for Instant Networking)",
+      "Linq Badge (Smart Name Tag for Conferences and Events)",
+      "Linq for Teams (Enterprise Solution with CRM Integration)",
+      "Customized Linq Cards (Personalized Branding and Design Options)",
+    ],
     analytics:
-      "Track actionable data like shares, clicks, meetings scheduled, and new contacts. Measure the ROI of your networking efforts.",
+      "Real-time analytics, CRM integrations, lead capture",
   },
   {
     name: "popl Cards",
     description:
-      "Popl allows you to instantly share anything with a tap, scan, or send. Share contact info, social media, websites, payment apps, files, videos, and more.",
+      "Popl is an innovative contact-sharing solution that allows you to instantly share almost anything with a tap, scan, or send. Whether you need to exchange contact details, social media profiles, websites, payment apps, files, videos, or more, Popl provides a fast and seamless way to connect with others in any setting. Unlike traditional business cards, Popl ensures that your information is always up to date and accessible with just a single interaction. Whether you're networking at events, meeting clients, or promoting your brand, Popl simplifies the process by eliminating the need for outdated paper cards while offering a modern, digital-first approach to making connections.",
     features: [
       "Send your digital business card via text, email, AirDrop, or email signatures",
       "Works with iPhone and Android without requiring an app",
       "Easily share information with one tap",
     ],
+    productOptions: [
+      "Popl Card (Standard NFC Business Card)",
+      "Popl Phone Tag (Stickable NFC Tag for Phones and Surfaces)",
+      "Popl Keychain (Portable NFC Sharing Device)",
+      "Popl Wristband (Wearable NFC for Instant Networking)",
+      "Popl XL (Large NFC Display for Events and Businesses)",
+      "Popl Metal Card (Premium Metal NFC Business Card)",
+      "Customized Popl Cards (Personalized Branding and Design Options)",
+    ],
+    analytics:
+      "Click tracking, lead capture, CRM integration, engagement reports",
   },
   {
     name: "HiHello Cards",
     description:
-      "HiHello offers digital business cards that are environmentally friendly, cost-effective, and make a great first impression.",
+      "HiHello offers a smart and sustainable alternative to traditional business cards with its fully digital, customizable business cards. Designed to be environmentally friendly and cost-effective, HiHello eliminates the hassle of printing, carrying, and updating physical business cards, ensuring that your professional details are always current. With features such as QR code sharing, virtual backgrounds, and contact management, HiHello helps you make a strong first impression while promoting a paperless and modern networking experience. Whether you're an individual professional or part of a larger team, HiHello provides a scalable and user-friendly way to exchange contact details in a seamless and eco-conscious manner.",
     features: [
       "Create multiple digital business cards",
       "Share your cards with anyone",
@@ -64,12 +108,81 @@ export const contactlessCardOptions = [
   {
     name: "Blinq Cards",
     description:
-      "Blinq digital business cards are easy to share and can be used without an app, making them a secure, eco-friendly, and COVID-safe solution.",
+      "Blinq digital business cards are a secure, eco-friendly, and COVID-safe alternative to traditional paper cards, making networking simpler and more efficient. Unlike other digital solutions, Blinq allows you to share your information instantly without requiring the recipient to download an app. This makes it a hassle-free option for business professionals, entrepreneurs, and sales teams who want to connect effortlessly. Blinq also includes features like custom branding, contact tracking, and CRM integration, making it a valuable tool for businesses looking to modernize their networking process. With its focus on privacy and security, Blinq ensures that your digital business card is always accessible, up to date, and easy to share.",
     features: [
       "Automatically log when and where you met new contacts",
       "Add notes to your cards to record key customer details",
       "Stand out with customizable digital cards",
     ],
+    analytics:
+      "Click analytics, custom tracking links, CRM compatibility",
+  },
+  {
+    name: "V1CE NFC Cards",
+    description:
+      "V1CE is a premium digital business card solution that enables professionals to share contact details, social media profiles, and websites instantly with just a tap or QR scan. Designed for entrepreneurs, executives, and businesses, V1CE offers sleek, customizable cards made from high-quality materials like metal, bamboo, and plastic, providing an elegant and eco-friendly alternative to paper business cards. With built-in CRM integration, users can track interactions and automate follow-ups, ensuring seamless networking and relationship management. No app is required for the recipient, making V1CE a hassle-free and highly effective tool for modern professionals looking to enhance their brand and streamline their connections.",
+    features: [
+      "Instant contact sharing with NFC technology and QR scanning",
+      "Premium materials including metal, bamboo, and plastic options",
+      "Customizable design to reflect your brand identity",
+      "CRM integration for tracking interactions and follow-ups",
+      "No app required for the recipient",
+      "Eco-friendly and reusable alternative to paper business cards",
+    ],
+    analytics:
+      "Business card engagement tracking, lead capture, CRM support",
+  },
+  {
+    name: "Retrēv",
+    description:
+      "Retrev is a cutting-edge digital business card solution that simplifies networking by allowing professionals to share contact details, social media profiles, and websites with a single tap or scan. Designed for modern entrepreneurs and businesses, Retrev offers a sleek, customizable, and eco-friendly alternative to traditional business cards. With advanced NFC technology and QR codes, users can instantly connect without the need for an app, making interactions seamless and efficient. Retrev also provides real-time analytics, allowing users to track engagement and follow up effortlessly, ensuring that no valuable connection is lost.",
+    features: [
+      "Instant contact sharing via NFC and QR code",
+      "Customizable digital profiles for a personalized experience",
+      "No app required for recipients",
+      "Real-time analytics and engagement tracking",
+      "Eco-friendly and sustainable alternative to paper business cards",
+      "Seamless integration with CRM tools for lead management",
+    ],
+    productOptions: [
+      "Retrev Card (Standard NFC Business Card)",
+      "Retrev Tag (Stickable NFC Tag for Phones, Laptops, and More)",
+      "Retrev Keychain (Compact NFC Keychain for Easy Sharing)",
+      "Retrev Bracelet (Wearable NFC for Quick Networking)",
+      "Retrev Metal Card (Premium Metal NFC Business Card)",
+      "Retrev Pet Tag (Smart NFC Tag for Pet Identification and Safety)",
+      "Customized Retrev Cards (Personalized Branding and Design Options)",
+    ],
+    analytics:
+      "Interaction logs, custom reports, CRM integrations",
+  },
+  {
+    name: "MiDoble Card",
+    description:
+      "MiDoble Card is a smart and eco-friendly digital business card that enables professionals to share their contact details, social media profiles, websites, and more with just a tap or QR scan. Designed for entrepreneurs, freelancers, and businesses, MiDoble Card eliminates the need for traditional paper cards, providing a sleek and sustainable alternative. With customizable profiles, seamless NFC technology, and instant sharing capabilities, MiDoble Card ensures effortless networking and lasting connections. No app is required for the recipient, making it a convenient and efficient tool for modern professionals.",
+    features: [
+      "Instant contact sharing via NFC and QR code",
+      "Customizable profiles to reflect your brand identity",
+      "No app required for recipients",
+      "Eco-friendly and reusable alternative to paper business cards",
+      "Seamless integration with social media and websites",
+      "Perfect for entrepreneurs, freelancers, and corporate professionals",
+    ],
+  },
+  {
+    name: "Elify",
+    description:
+      "Elify is an innovative digital business card solution that transforms the way professionals connect by offering seamless contact sharing with just a tap or QR scan. Designed for entrepreneurs, sales teams, and business professionals, Elify eliminates the need for paper business cards, providing a smart and eco-friendly alternative. With customizable profiles, real-time engagement tracking, and CRM integration, Elify helps users build meaningful connections and manage their network effortlessly. Its intuitive platform ensures that you stay connected with clients and prospects while maintaining a polished and professional brand presence.",
+    features: [
+      "Instant contact sharing via NFC and QR code",
+      "Customizable digital profiles with branding options",
+      "Real-time analytics and engagement tracking",
+      "CRM integration for lead management and follow-ups",
+      "No app required for recipients",
+      "Eco-friendly and sustainable alternative to paper business cards",
+    ],
+    analytics:
+      "Scan history, interaction metrics, contact capture",
   },
 ];
 

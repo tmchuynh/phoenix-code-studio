@@ -94,6 +94,30 @@ const ContactlessBusinessCardsBlog = () => {
           </section>
         ))}
 
+        <section className="space-y-4">
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
+            How Can Analytics Help You?
+          </h2>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>
+              <strong>Measure Networking Success: </strong>See how often your
+              card is scanned and which contacts are engaging.
+            </li>
+            <li>
+              <strong>Improve Follow-Ups: </strong>Use lead capture data to
+              follow up with interested connections.
+            </li>
+            <li>
+              <strong>Optimize Your Profile: </strong>If one link gets more
+              clicks than others, adjust your profile to highlight key content.
+            </li>
+            <li>
+              <strong>Enhance Marketing Efforts: </strong>Track networking event
+              performance and measure ROI.
+            </li>
+          </ul>
+        </section>
+
         <footer className="mt-8 text-center">
           <p>
             For more insights on{" "}
