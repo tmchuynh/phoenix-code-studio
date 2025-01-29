@@ -74,86 +74,107 @@ export const contactlessCardOptions = [
 ];
 
 export const whyWritingMattersContent = {
-  intro: {
-    title: "Why Writing Matters",
-    description:
-      "Asking why writing matters is similar to asking why communication is important. In any part of our lives, we want to be the most efficient and effective communicators we can be in order to present our ideas across to both technical and non-technical counterparts. The truth is, the need for strong writing proficiency will never diminish but may only increase as time goes on.",
-  },
   benefits: {
     title: "How It Benefits Your Future",
     description:
       "Through writing about different topics, we are not only encouraged but forced to do essential research to put out the best information we can. This gives us the opportunity to learn more about these topics and get a better understanding of them. Therefore, we become a better developer by attaining a deeper knowledge base in both soft and technical skills.\n\nDuring the research, we are also exposed to learning about new technologies that are upcoming. This allows us to stay updated with the current trends and new versions of existing technologies. By posting and writing about all these topics, your articles also become your own personal notes for every topic you want to go back to while giving back to the community and helping newer developers following in your footsteps. It's a win-win scenario!",
   },
-  devToBenefits: {
-    title: "What dev.to Can Help You With",
-    description:
-      "Dev.to has a wonderful community of encouraging and supportive folks. They are helpful in many ways. Publishing will make our presence public online but also connect us with those outside of our local circles. Through these connections, we have the opportunity to build relationships online that let us find help in people who have such a variety of knowledge in many fields.\n\nPlus, when you publish knowledgeable information, it validates your knowledge to you and others. Writing about what you know and your journey can also grab the attention of potential employers and clients.",
-  },
   howToStart: {
     title: "How to Start Today",
     description:
-      "Remember to write because you want to, not because others tell you to. Write about the topics that matter to you - what do you care about, what interests you, what are you passionate about? Your interest and passion will shine through in your writing and pique interest in your readers.",
+      "Writing should always be driven by passion, curiosity, and personal interest—not just obligation. The most compelling content comes from genuine enthusiasm for a topic, whether it’s technology, storytelling, business insights, or personal experiences. When you write about what truly matters to you, your authenticity and enthusiasm naturally shine through, making your work more engaging and impactful. Instead of chasing trends or writing simply for the sake of producing content, focus on topics that excite you and reflect your knowledge and perspective. Passionate writing is not only more enjoyable for the writer but also resonates more deeply with readers, sparking their curiosity and encouraging meaningful discussions. Whether you’re sharing insights, teaching others, or expressing your creativity, writing from the heart fosters genuine connections with your audience. When your passion is evident, it draws readers in, keeps them engaged, and leaves a lasting impression—making your words not just informative, but truly inspiring.",
   },
   tips: {
     title: "Some Tips",
     points: [
-      "Explain any abbreviations and/or acronyms before using them in articles.",
-      "Write consistently (i.e., set a publishing schedule).",
-      "Use simple terms. Remove jargon and don't expect your readers to be familiar with technical terms.",
-      "Use headers and a table of contents to divide your article into sections.",
-      "Use correct titles (not click-baits) and deliver on your topics.",
-      "Write series if your topics are more complex but don't make your readers click through to 'read the rest.'",
+      "Explain any abbreviations and/or acronyms before using them in articles. Not all readers will be familiar with industry-specific abbreviations and acronyms. Always introduce them in full the first time you use them, followed by the abbreviation in parentheses.",
+      "Consistency is key to building credibility and audience engagement. Establish a realistic publishing schedule—whether it’s weekly, bi-weekly, or monthly—and stick to it. This not only helps maintain reader interest but also boosts SEO rankings, as search engines favor regularly updated content.",
+      "People connect with stories, so when appropriate, add a personal touch or a real-world example to illustrate your point. This makes the content more engaging and relatable for your audience.",
+      "Keep your writing accessible and inclusive by using clear, straightforward language. Avoid unnecessary technical jargon unless you’re writing for a niche audience that understands it. If you must use industry-specific terms, provide explanations or examples to help all readers follow along.",
+      "Breaking your content into clear sections with headers improves readability and navigation. A table of contents (for long-form content) helps readers quickly find what they need without scanning through the entire article.",
+      "Your title should accurately reflect the content of your article. Avoid misleading or exaggerated headlines that don’t align with the substance of your writing. Readers appreciate honesty and transparency, and misleading titles can result in loss of trust and credibility.",
+      "If your topic is too broad to cover in one article, consider breaking it into a series for better digestibility. However, avoid forcing readers to click through multiple pages to get the full content—provide value in every piece while keeping the option open for deeper dives.",
+      "Typos, grammatical errors, and awkward phrasing distract readers and can undermine your credibility. Take the time to review your work, use grammar-checking tools, and even read it aloud to catch mistakes before publishing."
     ],
-  },
-  conclusion: {
-    title: "Conclusion",
-    description:
-      "Writing can be a lot of fun and a wonderful learning opportunity. But at the end of the day, it is your personal choice how much you want to contribute to the community or if you want to contribute at all. It can depend on your available time, what you're comfortable with, etc. In the end, do what's best for you.",
   },
 };
 
 
-export const entrepreneurStories = [
+export const entrepreneurInsights = [
   {
-    title: "Steve Jobs and Steve Wozniak (Apple)",
-    details: [
-      "Apple began in a garage in Los Altos, California, where Jobs and Wozniak built the Apple I computer.",
-      "Apple is now one of the most valuable companies in the world, known for revolutionizing technology with products like the iPhone and MacBook.",
-      "Innovation and user-focused design can redefine industries.",
-    ],
+    category: "stories",
+    items: [
+      {
+        title: "Steve Jobs and Steve Wozniak (Apple)",
+        details: [
+          "Apple began in a garage in Los Altos, California, where Jobs and Wozniak built the Apple I computer.",
+          "Apple is now one of the most valuable companies in the world, known for revolutionizing technology with products like the iPhone and MacBook.",
+          "Innovation and user-focused design can redefine industries.",
+        ],
+      },
+      {
+        title: "Bill Gates and Paul Allen (Microsoft)",
+        details: [
+          "Gates and Allen founded Microsoft in 1975 with a vision to put a computer on every desk.",
+          "Microsoft became a global software leader, driving the PC revolution.",
+          "Persistence and foresight can create opportunities in emerging markets.",
+        ],
+      },
+      {
+        title: "Elon Musk (Tesla, SpaceX, and more)",
+        details: [
+          "Musk’s entrepreneurial journey began with Zip2 and later PayPal, before moving into ambitious ventures like Tesla and SpaceX.",
+          "Musk has transformed industries including automotive, energy, and space exploration.",
+          "Dream big and be willing to take risks for groundbreaking innovation.",
+        ],
+      },
+      {
+        title: "Jeff Bezos (Amazon)",
+        details: [
+          "Bezos started Amazon as an online bookstore in his garage in 1994.",
+          "Amazon is now a global leader in e-commerce, cloud computing, and AI.",
+          "Focus on customer obsession and adaptability for long-term success.",
+        ],
+      },
+      {
+        title: "Sara Blakely (Spanx)",
+        details: [
+          "Though not tech-focused initially, Blakely’s story highlights entrepreneurial creativity. Starting with $5,000, she built a billion-dollar brand.",
+          "Spanx revolutionized the apparel industry, showing that innovation can happen anywhere.",
+          "Believe in your vision, even when others doubt you.",
+        ],
+      },
+    ]
   },
   {
-    title: "Bill Gates and Paul Allen (Microsoft)",
-    details: [
-      "Gates and Allen founded Microsoft in 1975 with a vision to put a computer on every desk.",
-      "Microsoft became a global software leader, driving the PC revolution.",
-      "Persistence and foresight can create opportunities in emerging markets.",
-    ],
-  },
-  {
-    title: "Elon Musk (Tesla, SpaceX, and more)",
-    details: [
-      "Musk’s entrepreneurial journey began with Zip2 and later PayPal, before moving into ambitious ventures like Tesla and SpaceX.",
-      "Musk has transformed industries including automotive, energy, and space exploration.",
-      "Dream big and be willing to take risks for groundbreaking innovation.",
-    ],
-  },
-  {
-    title: "Jeff Bezos (Amazon)",
-    details: [
-      "Bezos started Amazon as an online bookstore in his garage in 1994.",
-      "Amazon is now a global leader in e-commerce, cloud computing, and AI.",
-      "Focus on customer obsession and adaptability for long-term success.",
-    ],
-  },
-  {
-    title: "Sara Blakely (Spanx)",
-    details: [
-      "Though not tech-focused initially, Blakely’s story highlights entrepreneurial creativity. Starting with $5,000, she built a billion-dollar brand.",
-      "Spanx revolutionized the apparel industry, showing that innovation can happen anywhere.",
-      "Believe in your vision, even when others doubt you.",
-    ],
-  },
+    category: "lessons",
+    items: [
+      {
+        title: "Start Small, Think Big",
+        details: "Many of today’s tech giants started with humble beginnings but had a bold vision for the future. Scaling a business takes time, but having a long-term perspective and a growth mindset is crucial for success.",
+      },
+      {
+        title: "Build a Strong Team",
+        details: "Surround yourself with talented, passionate individuals who share your vision. No entrepreneur succeeds alone. Behind every great company is a talented and dedicated team. Tech leaders prioritize hiring passionate, skilled individuals and fostering a company culture that encourages innovation, collaboration, and resilience.",
+      },
+      {
+        title: "Persistence is Key",
+        details: "The journey of entrepreneurship is filled with ups and downs. What separates successful entrepreneurs from the rest is their ability to keep going despite challenges, criticism, and uncertainty.",
+      },
+      {
+        title: "Adapt and Evolve",
+        details: "The tech industry is constantly evolving, and successful entrepreneurs stay ahead by embracing change, learning new technologies, and adjusting their strategies to meet market demands.",
+      },
+      {
+        title: "Embrace Failure as a Stepping Stone",
+        details: "Many of the most successful tech founders failed multiple times before achieving success. Rather than seeing failure as an endpoint, they used it as an opportunity to learn, iterate, and improve."
+      },
+      {
+        title: "Stay Customer-Centric and Solve Real Problems",
+        details: "The most impactful tech startups are built around solving a clear, tangible problem. Whether it’s improving communication, automating tasks, or providing better access to information, successful entrepreneurs focus on creating solutions that bring real value."
+      }
+    ]
+  }
 ];
 
 export const lessons = [
@@ -521,28 +542,32 @@ export const dataScienceResources = [
       {
         title: "Data Collection",
         description:
-          "Data scientists gather raw data from various sources, such as databases, APIs, web scraping, or IoT devices.",
+          "These sources include databases, APIs, web scraping, IoT devices, social media, and more. The quality and quantity of data directly impact the accuracy and reliability of insights derived from it.",
       },
       {
         title: "Data Cleaning and Preprocessing",
         description:
-          "Raw data is often messy and inconsistent. Cleaning involves handling missing values, correcting errors, and preparing the data for analysis.",
+          "Raw data is often messy and inconsistent. Cleaning involves handling missing values, correcting errors, and preparing the data for analysis. Cleaning data is one of the most time-consuming but crucial parts of data science, as poor-quality data leads to inaccurate conclusions.",
       },
       {
         title: "Exploratory Data Analysis (EDA)",
         description:
-          "EDA is a crucial step where data scientists explore datasets using statistical methods and visualizations to identify trends, correlations, and outliers.",
+          "EDA is a crucial step where data scientists explore datasets using statistical methods and visualizations to identify trends, correlations, and outliers. This phase helps form hypotheses and strategies for deeper data analysis.",
       },
       {
         title: "Model Development",
         description:
-          "Machine learning models are built and trained on the processed data to predict outcomes or classify information.",
+          "Once data is cleaned and understood, machine learning algorithms can be applied to make predictions and detect patterns. Machine learning models are built and trained on the processed data to predict outcomes or classify information.",
       },
       {
         title: "Insights and Reporting",
         description:
-          "The results are communicated through visualizations, dashboards, and reports, enabling stakeholders to make informed decisions.",
+          "The results are communicated through visualizations, dashboards, and reports, enabling stakeholders to make informed decisions. Data scientists use visualization tools like Matplotlib, Tableau, and Power BI to present findings in an intuitive way. This step allows decision-makers to understand trends, insights, and key takeaways at a glance.",
       },
+      {
+        title: "Deployment & Continuous Monitoring",
+        description: "Once insights are generated, they must be implemented in real-world applications. Data science models can be deployed in business dashboards, AI-powered chatbots, fraud detection systems, and recommendation engines. Continuous monitoring ensures accuracy, efficiency, and adaptability over time."
+      }
     ],
   },
   {
@@ -581,27 +606,27 @@ export const dataScienceResources = [
       {
         title: "Healthcare",
         description:
-          "Predict disease outbreaks. Personalize treatment plans using patient data.",
+          "Predicting disease outbreaks, improving diagnostics, and personalizing treatments",
       },
       {
         title: "Finance",
         description:
-          "Detect fraudulent transactions. Optimize investment strategies through predictive modeling.",
+          "Detecting fraudulent transactions, assessing credit risks, and optimizing investments",
       },
       {
         title: "Retail",
         description:
-          "Personalize customer experiences. Optimize supply chain operations.",
+          "Enhancing customer recommendations, forecasting demand, and personalizing marketing campaigns",
       },
       {
         title: "Marketing",
         description:
-          "Segment audiences for targeted campaigns. Analyze customer sentiment from social media.",
+          "Optimizing supply chains, predicting equipment failures, and improving quality control",
       },
       {
         title: "Transportation",
         description:
-          "Improve route efficiency with predictive analytics. Enhance vehicle maintenance with IoT data.",
+          "Enhancing artificial intelligence, powering search engines, and automating processes",
       },
     ],
   },

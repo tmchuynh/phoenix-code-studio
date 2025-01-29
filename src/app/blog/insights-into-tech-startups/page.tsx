@@ -2,6 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { techStartupResources } from "@/lib/blog-constants";
+import { blogs } from "@/lib/constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -9,27 +10,44 @@ const BlogPage = () => {
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
         <header>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Behind the Code: Insights into the World of Tech Startups
           </h1>
-          <p>By David Lee – December 5, 2024</p>
-          <div className="mt-4 flex justify-center space-x-4">
-            <Badge variant={"outline"} className="text-sm">
-              #TechStartups
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #Innovation
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #Entrepreneurship
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #Technology
-            </Badge>
+          <div>
+            {blogs.map((blog, index) => {
+              return (
+                blog.title ===
+                  "Behind the Code: Insights into the World of Tech Startups" && (
+                  <>
+                    <p key={index}>
+                      <span className="font-bold">Written By: </span>
+                      {blog.author}
+                    </p>
+                    <p key={index}>{blog.date}</p>
+                    <div className="flex space-x-2 mb-8">
+                      {blog.topics.map((topic, index) => {
+                        return (
+                          <Badge
+                            variant={"outline"}
+                            className="text-sm lowercase"
+                            key={index}
+                          >
+                            #{topic}
+                          </Badge>
+                        );
+                      })}
+                    </div>
+                  </>
+                )
+              );
+            })}
           </div>
         </header>
 
-        <section className="space-y-4">
+        <section>
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
+            What Defines a Tech Startup?
+          </h2>
           <p>
             <strong>Tech startups</strong> are at the forefront of innovation,
             reshaping industries and introducing groundbreaking solutions to
@@ -38,12 +56,6 @@ const BlogPage = () => {
             this blog, we’ll explore the inner workings of tech startups, the
             challenges they face, and the strategies behind their success.
           </p>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            What Defines a Tech Startup?
-          </h2>
           <p>
             A tech startup is a young company that leverages technology to solve
             problems or create new opportunities. Unlike traditional businesses,

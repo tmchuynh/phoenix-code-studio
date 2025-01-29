@@ -1,7 +1,8 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-import { entrepreneurStories, lessons } from "@/lib/blog-constants";
+import { entrepreneurInsights } from "@/lib/blog-constants";
+import { blogs } from "@/lib/constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -9,37 +10,50 @@ const BlogPage = () => {
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
         <header>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             From Startup Garage to Tech Giant: Stories of Tech Entrepreneurs
           </h1>
-          <p>By Ethan Garcia – August 5, 2024</p>
-          <div className="mt-4 flex justify-center space-x-4">
-            <Badge variant={"outline"} className="text-sm">
-              #TechEntrepreneurs
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #StartupSuccess
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #Innovation
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #Entrepreneurship
-            </Badge>
+          <div>
+            {blogs.map((blog, index) => {
+              return (
+                blog.title ===
+                  "From Startup Garage to Tech Giant: Stories of Tech Entrepreneurs" && (
+                  <>
+                    <p key={index}>
+                      <span className="font-bold">Written By: </span>
+                      {blog.author}
+                    </p>
+                    <p key={index}>{blog.date}</p>
+                    <div className="flex space-x-2 mb-8">
+                      {blog.topics.map((topic, index) => {
+                        return (
+                          <Badge
+                            variant={"outline"}
+                            className="text-sm lowercase"
+                            key={index}
+                          >
+                            #{topic}
+                          </Badge>
+                        );
+                      })}
+                    </div>
+                  </>
+                )
+              );
+            })}
           </div>
-        </header>
-
-        <section className="space-y-4">
           <p>
-            Tech entrepreneurs are transforming the world, bringing innovative
-            ideas to life and reshaping industries in the process. Many of the
-            most successful companies today started in humble settings, such as
-            garages or dorm rooms, and have grown into global giants. In this
-            blog, we’ll dive into some of the most inspiring stories of tech
-            entrepreneurs who turned their dreams into reality, along with
-            lessons we can learn from their journeys.
+            Tech entrepreneurs are redefining industries, revolutionizing how we
+            live, work, and interact with the world. With groundbreaking ideas,
+            relentless passion, and the ability to adapt to rapid technological
+            advancements, these innovators have created some of the most
+            influential companies of our time. Many of today’s biggest tech
+            giants—from Apple and Microsoft to Google and Tesla—began as small,
+            ambitious projects in garages, dorm rooms, or tiny offices. Their
+            stories serve as powerful testaments to creativity, perseverance,
+            and the willingness to take risks.
           </p>
-        </section>
+        </header>
 
         <section>
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
@@ -76,34 +90,50 @@ const BlogPage = () => {
 
         <section>
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Inspiring Stories of Tech Entrepreneurs
+            Lessons from Successful Entrepreneurs
           </h2>
-          {entrepreneurStories.map((entrepreneur, index) => (
-            <div key={index} className="space-y-4">
-              <h3 className="text-xl font-semibold text-tertiary">
-                {entrepreneur.title}
-              </h3>
-              <ul className="list-disc pl-6 space-y-1">
-                {entrepreneur.details.map((detail, i) => (
-                  <li key={i}>
-                    <strong>{detail.split(":")[0]}:</strong>{" "}
-                    {detail.split(":")[1]}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <p>
+            The success stories of these tech entrepreneurs provide valuable
+            insights that can inspire and guide aspiring innovators.
+          </p>
+          {entrepreneurInsights.map(
+            (categoryItem, categoryIndex) =>
+              categoryItem.category === "lessons" && (
+                <ul className="list-disc pl-6 space-y-1">
+                  {categoryItem.items.map((item, storyIndex) => (
+                    <li key={categoryIndex}>
+                      <strong>{item.title}:</strong> {item.details}
+                    </li>
+                  ))}
+                </ul>
+              )
+          )}
         </section>
 
         <section>
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Lessons from Successful Entrepreneurs
+            Inspiring Stories of Tech Entrepreneurs
           </h2>
-          <ul className="list-disc pl-6 space-y-1">
-            {lessons.map((lesson, index) => (
-              <li key={index}>{lesson}</li>
-            ))}
-          </ul>
+          <p>
+            Many legendary tech companies began as small projects, often fueled
+            by a simple idea, a passion for solving problems, and a desire to
+            disrupt the status quo. These companies faced numerous obstacles,
+            failures, and moments of uncertainty, but their founders pushed
+            through, learned from setbacks, and continuously adapted to bring
+            their ideas to life.
+          </p>
+          {entrepreneurInsights.map(
+            (categoryItem, categoryIndex) =>
+              categoryItem.category === "stories" && (
+                <ul className="list-disc pl-6 space-y-1">
+                  {categoryItem.items.map((item, storyIndex) => (
+                    <li key={categoryIndex}>
+                      <strong>{item.title}:</strong> {item.details}
+                    </li>
+                  ))}
+                </ul>
+              )
+          )}
         </section>
 
         <section>
@@ -111,10 +141,17 @@ const BlogPage = () => {
             The Future of Tech Entrepreneurship
           </h2>
           <p>
-            The rise of AI, blockchain, and sustainability-focused technologies
-            presents new opportunities for entrepreneurs. Emerging markets,
-            increased accessibility to funding, and advances in remote work are
-            also making it easier than ever to start and grow a tech company.
+            As technology continues to advance, new opportunities for innovation
+            emerge every day. With the rise of AI, blockchain, IoT, and other
+            cutting-edge fields, the next generation of tech entrepreneurs has
+            endless possibilities to create groundbreaking solutions.
+          </p>
+          <p>
+            Whether you're an aspiring founder, an investor, or someone looking
+            to bring an idea to life, the stories of successful tech
+            entrepreneurs serve as motivation to take that first step. The next
+            game-changing company could be an idea you’re working on right
+            now—so keep innovating, keep learning, and never stop building.
           </p>
         </section>
 
@@ -123,26 +160,37 @@ const BlogPage = () => {
             Conclusion
           </h2>
           <p>
-            The stories of tech entrepreneurs are a testament to the power of
-            innovation, resilience, and determination. Whether you’re an
-            aspiring entrepreneur or simply inspired by these journeys, remember
-            that every successful company starts with a single step.
+            Tech entrepreneurship is not just about building products—it’s about
+            shaping the future. By taking risks, challenging the status quo, and
+            pushing the boundaries of what’s possible, today’s innovators are
+            paving the way for the next wave of technological breakthroughs.
           </p>
           <p>
-            Explore more stories, insights, and tips for tech entrepreneurship
-            on our{" "}
-            <a href="#" className="text-primary underline">
-              Blog
-            </a>
-            , and start turning your ideas into reality today!
+            Who knows? The next revolutionary company could be your idea,
+            waiting to be brought to life. Are you ready to take that leap?
           </p>
         </section>
 
         <footer className="mt-8 text-center">
           <p>
             Explore more stories, insights, and resources on{" "}
-            <strong>Tech Entrepreneurship</strong> and{" "}
-            <strong>Innovation</strong> on our{" "}
+            {blogs.map((blog) => {
+              return (
+                blog.title ===
+                  "From Startup Garage to Tech Giant: Stories of Tech Entrepreneurs" && (
+                  <>
+                    {blog.topics.map((topic, index) => {
+                      return (
+                        <strong key={index} className="hover:text-tertiary">
+                          #{topic}{" "}
+                        </strong>
+                      );
+                    })}
+                  </>
+                )
+              );
+            })}{" "}
+            on our{" "}
             <a href="#" className="text-primary underline">
               Blog
             </a>

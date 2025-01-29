@@ -2,6 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { tailwindCSSResources } from "@/lib/blog-constants";
+import { blogs } from "@/lib/constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -9,10 +10,38 @@ const BlogPage = () => {
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
         <header>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             How Tailwind CSS Can Speed Up Your Development Process
           </h1>
-          <p>By Jane Smith – July 10, 2025</p>
+          <div>
+            {blogs.map((blog, index) => {
+              return (
+                blog.title ===
+                  "How Tailwind CSS Can Speed Up Your Development Process" && (
+                  <>
+                    <p key={index}>
+                      <span className="font-bold">Written By: </span>
+                      {blog.author}
+                    </p>
+                    <p key={index}>{blog.date}</p>
+                    <div className="flex space-x-2 mb-8">
+                      {blog.topics.map((topic, index) => {
+                        return (
+                          <Badge
+                            variant={"outline"}
+                            className="text-sm lowercase"
+                            key={index}
+                          >
+                            #{topic}
+                          </Badge>
+                        );
+                      })}
+                    </div>
+                  </>
+                )
+              );
+            })}
+          </div>
           <p>
             In the fast-paced world of web development, efficiency is key—and
             Tailwind CSS has become a game-changer for developers looking to
@@ -35,23 +64,12 @@ const BlogPage = () => {
             Tailwind CSS streamlines the development process, allowing you to
             focus on building great user experiences—without the CSS overhead.
           </p>
-          <div className="mt-4 flex justify-center space-x-4">
-            <Badge variant={"outline"} className="text-sm">
-              #CSS
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #FrontendDevelopment
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #TailwindCSS
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #WebDesign
-            </Badge>
-          </div>
         </header>
 
-        <section className="space-y-4">
+        <section>
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
+            What is Tailwind CSS?
+          </h2>
           <p>
             <strong>Tailwind CSS</strong> is a utility-first CSS framework that
             provides a highly customizable approach to building modern user
@@ -59,12 +77,6 @@ const BlogPage = () => {
             a favorite among developers, how it can drastically improve your
             workflow, and tips to get started with this powerful tool.
           </p>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            What is Tailwind CSS?
-          </h2>
           <p>
             Tailwind CSS is a modern CSS framework that focuses on providing
             utility classes—small, reusable CSS snippets for styling your
@@ -147,8 +159,24 @@ const BlogPage = () => {
 
         <footer className="mt-8 text-center">
           <p>
-            For more insights on <strong>CSS</strong> and{" "}
-            <strong>Frontend Development</strong>, check out our{" "}
+            For more insights on{" "}
+            {blogs.map((blog) => {
+              return (
+                blog.title ===
+                  "How Tailwind CSS Can Speed Up Your Development Process" && (
+                  <>
+                    {blog.topics.map((topic, index) => {
+                      return (
+                        <strong key={index} className="hover:text-tertiary">
+                          #{topic}{" "}
+                        </strong>
+                      );
+                    })}
+                  </>
+                )
+              );
+            })}
+            , check out our{" "}
             <a href="#" className="text-primary underline">
               Blog
             </a>

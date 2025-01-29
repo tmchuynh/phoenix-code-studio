@@ -2,6 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { accessibilityResources } from "@/lib/blog-constants";
+import { blogs } from "@/lib/constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -9,10 +10,38 @@ const BlogPage = () => {
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
         <header>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Why Accessibility Matters in Web Development
           </h1>
-          <p>By Sarah Kim – May 22, 2025</p>
+          <div>
+            {blogs.map((blog, index) => {
+              return (
+                blog.title ===
+                  "Why Accessibility Matters in Web Development" && (
+                  <>
+                    <p key={index}>
+                      <span className="font-bold">Written By: </span>
+                      {blog.author}
+                    </p>
+                    <p key={index}>{blog.date}</p>
+                    <div className="flex space-x-2 mb-8">
+                      {blog.topics.map((topic, index) => {
+                        return (
+                          <Badge
+                            variant={"outline"}
+                            className="text-sm lowercase"
+                            key={index}
+                          >
+                            #{topic}
+                          </Badge>
+                        );
+                      })}
+                    </div>
+                  </>
+                )
+              );
+            })}
+          </div>
           <p>
             Web accessibility ensures that everyone, regardless of ability, can
             navigate, understand, and interact with online content. By designing
@@ -33,23 +62,12 @@ const BlogPage = () => {
             everyone. In today’s web-driven world, accessible design is not just
             an option—it’s a necessity for ethical, legal, and business success.
           </p>
-          <div className="mt-4 flex justify-center space-x-4">
-            <Badge variant={"outline"} className="text-sm">
-              #WebAccessibility
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #UXUIDesign
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #InclusiveDesign
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #WebDevelopment
-            </Badge>
-          </div>
         </header>
 
-        <section className="space-y-4">
+        <section>
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
+            What is Web Accessibility?
+          </h2>
           <p>
             <strong>Accessibility</strong> should be a priority in every web
             development project. Ensuring that your website is usable by people
@@ -59,12 +77,6 @@ const BlogPage = () => {
             accessibility is crucial, the benefits it provides, and how to start
             making your website more accessible today.
           </p>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            What is Web Accessibility?
-          </h2>
           <p>
             Web accessibility refers to the practice of designing and developing
             websites that can be used by everyone, including individuals with
@@ -121,8 +133,24 @@ const BlogPage = () => {
 
         <footer className="mt-8 text-center">
           <p>
-            For more insights on <strong>Web Accessibility</strong> and{" "}
-            <strong>UX/UI Design</strong>, check out our{" "}
+            For more insights on{" "}
+            {blogs.map((blog) => {
+              return (
+                blog.title ===
+                  "Why Accessibility Matters in Web Development" && (
+                  <>
+                    {blog.topics.map((topic, index) => {
+                      return (
+                        <strong key={index} className="hover:text-tertiary">
+                          #{topic}{" "}
+                        </strong>
+                      );
+                    })}
+                  </>
+                )
+              );
+            })}
+            , check out our{" "}
             <a href="#" className="text-primary underline">
               Blog
             </a>{" "}

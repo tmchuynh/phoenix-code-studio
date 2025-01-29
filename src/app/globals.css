@@ -224,7 +224,7 @@ body {
     @apply tracking-wider;
   }
   p {
-    @apply text-sm md:text-lg xl:text-xl;
+    @apply text-sm md:text-lg xl:text-xl my-2;
   }
 
   li {

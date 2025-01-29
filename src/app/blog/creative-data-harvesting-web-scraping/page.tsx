@@ -2,6 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { webScrapingResources } from "@/lib/blog-constants";
+import { blogs } from "@/lib/constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -9,10 +10,38 @@ const BlogPage = () => {
     <main className="my-16 w-11/12 mx-auto">
       <article className="space-y-8">
         <header>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Creative Data Harvesting: The Wonders of Web Scraping
           </h1>
-          <p>By Olivia Martin – January 15, 2025</p>
+          <div>
+            {blogs.map((blog, index) => {
+              return (
+                blog.title ===
+                  "Creative Data Harvesting: The Wonders of Web Scraping" && (
+                  <>
+                    <p key={index}>
+                      <span className="font-bold">Written By: </span>
+                      {blog.author}
+                    </p>
+                    <p key={index}>{blog.date}</p>
+                    <div className="flex space-x-2 mb-8">
+                      {blog.topics.map((topic, index) => {
+                        return (
+                          <Badge
+                            variant={"outline"}
+                            className="text-sm lowercase"
+                            key={index}
+                          >
+                            #{topic}
+                          </Badge>
+                        );
+                      })}
+                    </div>
+                  </>
+                )
+              );
+            })}
+          </div>
           <p>
             In the era of big data, information is one of the most valuable
             assets, and web scraping has become a powerful tool for gathering,
@@ -31,23 +60,12 @@ const BlogPage = () => {
             raw data into actionable intelligence that fuels business growth and
             innovation.
           </p>
-          <div className="mt-4 flex justify-center space-x-4">
-            <Badge variant={"outline"} className="text-sm">
-              #WebScraping
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #DataCollection
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #DataAnalysis
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #Technology
-            </Badge>
-          </div>
         </header>
 
-        <section className="space-y-4">
+        <section>
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
+            What is Web Scraping?
+          </h2>
           <p>
             <strong>Web scraping</strong> is a powerful technique that opens up
             endless possibilities for collecting and analyzing data from the
@@ -57,12 +75,6 @@ const BlogPage = () => {
             scraping and highlight its potential to revolutionize how we gather
             and use data.
           </p>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            What is Web Scraping?
-          </h2>
           <p>
             Web scraping is the process of extracting data from websites using
             automated tools. It involves fetching web pages, parsing their
@@ -145,19 +157,28 @@ const BlogPage = () => {
             dimensions, developers and businesses can harness its power
             responsibly to gain valuable insights and drive innovation.
           </p>
-          <p>
-            Ready to explore the possibilities of web scraping? Dive into our{" "}
-            <a href="#" className="text-primary underline">
-              Blog
-            </a>{" "}
-            for more tips, tools, and best practices.
-          </p>
         </section>
 
         <footer className="mt-8 text-center">
           <p>
-            For more insights on <strong>Web Scraping</strong> and{" "}
-            <strong>Data Collection</strong>, check out our{" "}
+            For more insights on{" "}
+            {blogs.map((blog) => {
+              return (
+                blog.title ===
+                  "Creative Data Harvesting: The Wonders of Web Scraping" && (
+                  <>
+                    {blog.topics.map((topic, index) => {
+                      return (
+                        <strong key={index} className="hover:text-tertiary">
+                          #{topic}{" "}
+                        </strong>
+                      );
+                    })}
+                  </>
+                )
+              );
+            })}
+            , check out our{" "}
             <a href="#" className="text-primary underline">
               Blog
             </a>{" "}

@@ -2,6 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { iotResources } from "@/lib/blog-constants";
+import { blogs } from "@/lib/constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -9,10 +10,38 @@ const BlogPage = () => {
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
         <header>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Revolutionizing Connectivity: Innovations in IoT Development
           </h1>
-          <p>By Samuel Green – February 25, 2025</p>
+          <div>
+            {blogs.map((blog, index) => {
+              return (
+                blog.title ===
+                  "Revolutionizing Connectivity: Innovations in IoT Development" && (
+                  <>
+                    <p key={index}>
+                      <span className="font-bold">Written By: </span>
+                      {blog.author}
+                    </p>
+                    <p key={index}>{blog.date}</p>
+                    <div className="flex space-x-2 mb-8">
+                      {blog.topics.map((topic, index) => {
+                        return (
+                          <Badge
+                            variant={"outline"}
+                            className="text-sm lowercase"
+                            key={index}
+                          >
+                            #{topic}
+                          </Badge>
+                        );
+                      })}
+                    </div>
+                  </>
+                )
+              );
+            })}
+          </div>
           <p>
             The Internet of Things (IoT) is reshaping the way devices, systems,
             and people interact, creating a seamlessly connected world where
@@ -35,86 +64,70 @@ const BlogPage = () => {
             innovations are transforming industries, paving the way for a more
             intelligent, connected, and data-driven future.
           </p>
-          <div className="mt-4 flex justify-center space-x-4">
-            <Badge variant={"outline"} className="text-sm">
-              #IoT
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #Technology
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #Connectivity
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #Innovation
-            </Badge>
-          </div>
         </header>
-
-        <section className="space-y-4">
-          <p>
-            The <strong>Internet of Things (IoT)</strong> is revolutionizing the
-            way we live, work, and interact with technology. By seamlessly
-            connecting devices, sensors, and systems, IoT enables real-time data
-            collection, automation, and intelligent decision-making, driving a
-            new era of digital transformation. From smart homes and wearable
-            technology to industrial automation and healthcare advancements, IoT
-            is enhancing efficiency, improving convenience, and reshaping
-            industries worldwide.
-          </p>
-          <p>
-            As businesses and consumers embrace IoT, we are witnessing
-            groundbreaking developments that push the boundaries of
-            connectivity. These advancements include edge computing for faster
-            processing, AI-powered IoT for predictive analytics, and enhanced
-            security measures to protect sensitive data. Whether it’s optimizing
-            supply chains, enabling smart cities, or creating personalized user
-            experiences, IoT continues to unlock endless possibilities.
-          </p>
-        </section>
 
         <section>
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             What is IoT?
           </h2>
           <p>
-            The Internet of Things (IoT) refers to a vast network of
-            interconnected devices that collect, share, and act on data,
-            transforming the way we interact with the world around us. These
-            devices range from everyday consumer products like smart home
-            appliances, fitness wearables, and connected vehicles to
-            industrial-grade sensors, agricultural automation, and smart city
-            infrastructure. By integrating IoT technology, businesses and
-            individuals can achieve higher levels of efficiency, automation, and
+            The <strong>Internet of Things (IoT)</strong> is transforming the
+            way we interact with technology, seamlessly connecting devices,
+            sensors, and systems to enable real-time data collection,
+            automation, and intelligent decision-making. From smart homes and
+            wearable tech to industrial automation and healthcare innovations,
+            IoT is enhancing efficiency, improving convenience, and reshaping
+            industries worldwide.
+          </p>
+          <p>
+            As businesses and consumers increasingly integrate IoT into their
+            daily lives, the technology continues to evolve and expand, pushing
+            the boundaries of what’s possible. Innovations like edge computing
+            for faster processing, AI-driven predictive analytics, and enhanced
+            security protocols are ensuring that IoT remains at the forefront of
+            digital transformation. Whether it’s optimizing supply chains,
+            creating smarter cities, or delivering personalized user
+            experiences, IoT is unlocking new levels of efficiency and
             connectivity.
           </p>
           <p>
-            IoT bridges the gap between the physical and digital worlds by
-            enabling real-time monitoring, remote control, and automated
-            decision-making. With the help of sensors, cloud computing, and
-            artificial intelligence, IoT devices can process and respond to data
-            in real-time, optimizing performance, enhancing security, and
-            improving overall user experience. For example, smart thermostats
-            learn user preferences to adjust indoor temperatures efficiently,
-            while industrial IoT systems monitor equipment to predict and
-            prevent maintenance issues before failures occur.
+            At its core, IoT is a vast network of interconnected devices that
+            collect, share, and analyze data, bridging the gap between the
+            physical and digital worlds. These devices include everything from
+            consumer products like smart thermostats, connected cars, and
+            fitness trackers to industrial-grade solutions such as automated
+            agriculture, remote equipment monitoring, and smart grid systems. By
+            integrating IoT, businesses can automate processes, improve
+            decision-making, and drive cost efficiency, while individuals
+            benefit from greater convenience and personalization.
           </p>
           <p>
-            A critical innovation within IoT is edge computing, which processes
-            data closer to where it is generated rather than relying solely on
-            cloud computing. By reducing latency and bandwidth usage, edge
-            computing enhances IoT applications that require real-time
-            decision-making. This is especially valuable in fields such as
-            healthcare, autonomous vehicles, and industrial automation, where
-            immediate responses are crucial for safety and efficiency.
+            A key enabler of IoT’s rapid growth is edge computing, which
+            processes data closer to where it is generated, rather than relying
+            solely on centralized cloud systems. This reduces latency and
+            bandwidth usage, making it ideal for time-sensitive applications
+            like autonomous vehicles, real-time healthcare monitoring, and
+            industrial automation. By enabling instantaneous processing and
+            decision-making, edge computing enhances both the speed and security
+            of IoT applications.
           </p>
           <p>
-            As IoT continues to evolve, it is shaping the future of industries,
-            improving supply chain management, revolutionizing healthcare with
-            remote patient monitoring, and enabling smart cities that optimize
-            traffic, energy consumption, and public safety. The potential of IoT
-            is limitless, making it one of the most transformative technologies
-            of our time.
+            Beyond technology, IoT is shaping the future of supply chain
+            management, smart cities, healthcare, and more. In logistics, IoT
+            helps track shipments, monitor inventory in real-time, and reduce
+            inefficiencies. In healthcare, remote patient monitoring and
+            AI-powered diagnostics are improving patient outcomes and
+            streamlining medical processes. Meanwhile, smart cities leverage IoT
+            to optimize traffic flow, reduce energy consumption, and enhance
+            public safety, making urban environments more sustainable and
+            livable.
+          </p>
+          <p>
+            As IoT adoption accelerates, its potential is limitless, driving
+            innovation, efficiency, and automation across virtually every
+            industry. Whether in business, healthcare, transportation, or
+            personal use, the Internet of Things is revolutionizing the way we
+            connect, communicate, and interact with the world.
           </p>
         </section>
 
@@ -148,8 +161,24 @@ const BlogPage = () => {
 
         <footer className="mt-8 text-center">
           <p>
-            To stay updated on the latest in <strong>IoT</strong> and{" "}
-            <strong>Technology</strong>, explore our{" "}
+            To stay updated on the latest on{" "}
+            {blogs.map((blog) => {
+              return (
+                blog.title ===
+                  "Revolutionizing Connectivity: Innovations in IoT Development" && (
+                  <>
+                    {blog.topics.map((topic, index) => {
+                      return (
+                        <strong key={index} className="hover:text-tertiary">
+                          #{topic}{" "}
+                        </strong>
+                      );
+                    })}
+                  </>
+                )
+              );
+            })}
+            , explore our{" "}
             <a href="#" className="text-primary underline">
               Blog
             </a>{" "}

@@ -2,6 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { javascriptFrameworkTrends } from "@/lib/blog-constants";
+import { blogs } from "@/lib/constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -9,10 +10,37 @@ const BlogPage = () => {
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
         <header>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             The Future of JavaScript Frameworks
           </h1>
-          <p>By Michael Lee – June 5, 2025</p>
+          <div>
+            {blogs.map((blog, index) => {
+              return (
+                blog.title === "The Future of JavaScript Frameworks" && (
+                  <>
+                    <p key={index}>
+                      <span className="font-bold">Written By: </span>
+                      {blog.author}
+                    </p>
+                    <p key={index}>{blog.date}</p>
+                    <div className="flex space-x-2 mb-8">
+                      {blog.topics.map((topic, index) => {
+                        return (
+                          <Badge
+                            variant={"outline"}
+                            className="text-sm lowercase"
+                            key={index}
+                          >
+                            #{topic}
+                          </Badge>
+                        );
+                      })}
+                    </div>
+                  </>
+                )
+              );
+            })}
+          </div>
           <p>
             JavaScript frameworks have been at the heart of modern web
             development, enabling developers to build faster, more efficient,
@@ -30,23 +58,12 @@ const BlogPage = () => {
             developers must stay adaptable and embrace new advancements to build
             the next generation of dynamic, scalable web applications.
           </p>
-          <div className="mt-4 flex justify-center space-x-4">
-            <Badge variant={"outline"} className="text-sm">
-              #JavaScript
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #WebDevelopment
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #Frameworks
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #FutureTech
-            </Badge>
-          </div>
         </header>
 
-        <section className="space-y-4">
+        <section>
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
+            Why JavaScript Frameworks Matter
+          </h2>
           <p>
             With the rapid evolution of <strong>JavaScript frameworks</strong>{" "}
             like React, Vue, and Angular, staying ahead of the curve is crucial
@@ -56,12 +73,6 @@ const BlogPage = () => {
             explores emerging trends and what they mean for developers and
             businesses.
           </p>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Why JavaScript Frameworks Matter
-          </h2>
           <p>
             JavaScript frameworks have been at the forefront of modern web
             development for years. They streamline the process of building
@@ -103,8 +114,23 @@ const BlogPage = () => {
 
         <footer className="mt-8 text-center">
           <p>
-            For more on <strong>JavaScript</strong> and{" "}
-            <strong>Web Development</strong>, visit our{" "}
+            For more on{" "}
+            {blogs.map((blog) => {
+              return (
+                blog.title === "The Future of JavaScript Frameworks" && (
+                  <>
+                    {blog.topics.map((topic, index) => {
+                      return (
+                        <strong key={index} className="hover:text-tertiary">
+                          #{topic}{" "}
+                        </strong>
+                      );
+                    })}
+                  </>
+                )
+              );
+            })}
+            , visit our{" "}
             <a href="#" className="text-primary underline">
               Blog
             </a>{" "}

@@ -1,6 +1,7 @@
 "use client";
 import { Badge } from "@/components/ui/badge";
 import { booksToRead } from "@/lib/blog-constants";
+import { blogs } from "@/lib/constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -8,9 +9,37 @@ const BlogPage = () => {
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
         <header>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Books to Read as a Developer
           </h1>
+          <div>
+            {blogs.map((blog, index) => {
+              return (
+                blog.title === "Books to Read as a Developer" && (
+                  <>
+                    <p key={index}>
+                      <span className="font-bold">Written By: </span>
+                      {blog.author}
+                    </p>
+                    <p key={index}>{blog.date}</p>
+                    <div className="flex space-x-2 mb-8">
+                      {blog.topics.map((topic, index) => {
+                        return (
+                          <Badge
+                            variant={"outline"}
+                            className="text-sm lowercase"
+                            key={index}
+                          >
+                            #{topic}
+                          </Badge>
+                        );
+                      })}
+                    </div>
+                  </>
+                )
+              );
+            })}
+          </div>
           <p>
             Choosing a career in tech means embracing a lifelong journey of
             learning and adaptation. The industry is constantly evolving, with
@@ -30,17 +59,6 @@ const BlogPage = () => {
             stay curious and continuously grow is what sets apart great
             professionals from the rest.
           </p>
-          <div className="flex justify-center space-x-2">
-            <Badge variant={"outline"} className="text-sm">
-              #books
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #self-development
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #career
-            </Badge>
-          </div>
         </header>
 
         {booksToRead.map((book, index) => (
@@ -71,8 +89,23 @@ const BlogPage = () => {
 
         <footer className="mt-8 text-center">
           <p>
-            For more insights on <strong>Software Development</strong>, check
-            out our{" "}
+            For more insights on{" "}
+            {blogs.map((blog) => {
+              return (
+                blog.title === "Best Contactless Business Card Options" && (
+                  <>
+                    {blog.topics.map((topic, index) => {
+                      return (
+                        <strong key={index} className="hover:text-tertiary">
+                          #{topic}{" "}
+                        </strong>
+                      );
+                    })}
+                  </>
+                )
+              );
+            })}
+            , check out our{" "}
             <a href="#" className="text-primary underline">
               Blog
             </a>{" "}

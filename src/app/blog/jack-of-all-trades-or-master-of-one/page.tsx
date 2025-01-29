@@ -2,6 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { jackOfAllTradesContent } from "@/lib/blog-constants";
+import { blogs } from "@/lib/constants";
 import React from "react";
 
 const JackOfAllTradesBlog = () => {
@@ -9,18 +10,39 @@ const JackOfAllTradesBlog = () => {
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
         <header>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             {jackOfAllTradesContent.intro.title}
           </h1>
-          <p>{jackOfAllTradesContent.intro.description}</p>
-          <div className="flex justify-center space-x-2">
-            <Badge variant={"outline"} className="text-sm">
-              #career
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #business
-            </Badge>
+          <div>
+            {blogs.map((blog, index) => {
+              return (
+                blog.title ===
+                  "Who's the Better Hire? - Jack of All Trades OR Master of One" && (
+                  <>
+                    <p key={index}>
+                      <span className="font-bold">Written By: </span>
+                      {blog.author}
+                    </p>
+                    <p key={index}>{blog.date}</p>
+                    <div className="flex space-x-2 mb-8">
+                      {blog.topics.map((topic, index) => {
+                        return (
+                          <Badge
+                            variant={"outline"}
+                            className="text-sm lowercase"
+                            key={index}
+                          >
+                            #{topic}
+                          </Badge>
+                        );
+                      })}
+                    </div>
+                  </>
+                )
+              );
+            })}
           </div>
+          <p>{jackOfAllTradesContent.intro.description}</p>
         </header>
 
         <section>
@@ -65,8 +87,24 @@ const JackOfAllTradesBlog = () => {
 
         <footer className="mt-8 text-center">
           <p>
-            For more insights on <strong>Personal Development</strong>, check
-            out our{" "}
+            For more insights on{" "}
+            {blogs.map((blog) => {
+              return (
+                blog.title ===
+                  "Who's the Better Hire? - Jack of All Trades OR Master of One" && (
+                  <>
+                    {blog.topics.map((topic, index) => {
+                      return (
+                        <strong key={index} className="hover:text-tertiary">
+                          #{topic}{" "}
+                        </strong>
+                      );
+                    })}
+                  </>
+                )
+              );
+            })}
+            , check out our{" "}
             <a href="#" className="text-primary underline">
               Blog
             </a>{" "}

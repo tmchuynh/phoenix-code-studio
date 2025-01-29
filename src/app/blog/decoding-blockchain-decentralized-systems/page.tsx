@@ -2,6 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { blockchainResources } from "@/lib/blog-constants";
+import { blogs } from "@/lib/constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -9,10 +10,38 @@ const BlogPage = () => {
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
         <header>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Decoding Blockchain: Exploring the World of Decentralized Systems
           </h1>
-          <p>By Alex Johnson – April 10, 2025</p>
+          <div>
+            {blogs.map((blog, index) => {
+              return (
+                blog.title ===
+                  "Decoding Blockchain: Exploring the World of Decentralized Systems" && (
+                  <>
+                    <p key={index}>
+                      <span className="font-bold">Written By: </span>
+                      {blog.author}
+                    </p>
+                    <p key={index}>{blog.date}</p>
+                    <div className="flex space-x-2 mb-8">
+                      {blog.topics.map((topic, index) => {
+                        return (
+                          <Badge
+                            variant={"outline"}
+                            className="text-sm lowercase"
+                            key={index}
+                          >
+                            #{topic}
+                          </Badge>
+                        );
+                      })}
+                    </div>
+                  </>
+                )
+              );
+            })}
+          </div>
           <p>
             Blockchain technology is revolutionizing industries by introducing
             secure, transparent, and decentralized systems that eliminate the
@@ -32,23 +61,12 @@ const BlogPage = () => {
             exchange information—ushering in a new era of trustless,
             decentralized ecosystems.
           </p>
-          <div className="mt-4 flex justify-center space-x-4">
-            <Badge variant={"outline"} className="text-sm">
-              #Blockchain
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #Decentralization
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #TechnologyTrends
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #FutureTech
-            </Badge>
-          </div>
         </header>
 
-        <section className="space-y-4">
+        <section>
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
+            What is Blockchain?
+          </h2>
           <p>
             <strong>Blockchain technology</strong> is revolutionizing industries
             by offering secure, decentralized systems that go beyond traditional
@@ -57,12 +75,6 @@ const BlogPage = () => {
             ever-expanding. In this blog, we’ll break down what blockchain is,
             how it works, and its potential to reshape our digital landscape.
           </p>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            What is Blockchain?
-          </h2>
           <p>
             At its core, blockchain is a distributed ledger technology (DLT)
             that records transactions across multiple computers in a secure and
@@ -118,8 +130,24 @@ const BlogPage = () => {
 
         <footer className="mt-8 text-center">
           <p>
-            For more insights on <strong>Blockchain</strong> and{" "}
-            <strong>Decentralized Technology</strong>, visit our{" "}
+            For more insights on{" "}
+            {blogs.map((blog) => {
+              return (
+                blog.title ===
+                  "Decoding Blockchain: Exploring the World of Decentralized Systems" && (
+                  <>
+                    {blog.topics.map((topic, index) => {
+                      return (
+                        <strong key={index} className="hover:text-tertiary">
+                          #{topic}{" "}
+                        </strong>
+                      );
+                    })}
+                  </>
+                )
+              );
+            })}
+            , visit our{" "}
             <a href="#" className="text-primary underline">
               Blog
             </a>{" "}

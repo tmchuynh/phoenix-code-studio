@@ -2,6 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { emergingTechTrends, stayingAheadTips } from "@/lib/blog-constants";
+import { blogs } from "@/lib/constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -9,10 +10,38 @@ const BlogPage = () => {
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
         <header>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Navigating the Digital Revolution: Emerging Tech Trends
           </h1>
-          <p>By Sophia White – November 20, 2024</p>
+          <div>
+            {blogs.map((blog, index) => {
+              return (
+                blog.title ===
+                  "Navigating the Digital Revolution: Emerging Tech Trends" && (
+                  <>
+                    <p key={index}>
+                      <span className="font-bold">Written By: </span>
+                      {blog.author}
+                    </p>
+                    <p key={index}>{blog.date}</p>
+                    <div className="flex space-x-2 mb-8">
+                      {blog.topics.map((topic, index) => {
+                        return (
+                          <Badge
+                            variant={"outline"}
+                            className="text-sm lowercase"
+                            key={index}
+                          >
+                            #{topic}
+                          </Badge>
+                        );
+                      })}
+                    </div>
+                  </>
+                )
+              );
+            })}
+          </div>
           <p>
             The digital revolution is transforming the way we live, work, and
             connect with technology. Rapid advancements in AI, blockchain, IoT,
@@ -34,23 +63,12 @@ const BlogPage = () => {
             for organizations looking to remain competitive and future-proof in
             an evolving digital landscape.
           </p>
-          <div className="mt-4 flex justify-center space-x-4">
-            <Badge variant={"outline"} className="text-sm">
-              #EmergingTrends
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #DigitalRevolution
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #Technology
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #Innovation
-            </Badge>
-          </div>
         </header>
 
-        <section className="space-y-4">
+        <section>
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
+            What is the Digital Revolution?
+          </h2>
           <p>
             The <strong>digital revolution</strong> is transforming industries,
             redefining how we live and work, and driving technological
@@ -104,8 +122,24 @@ const BlogPage = () => {
 
         <footer className="mt-8 text-center">
           <p>
-            Explore more insights into <strong>Technology</strong> and{" "}
-            <strong>Innovation</strong> on our{" "}
+            Explore more insights into{" "}
+            {blogs.map((blog) => {
+              return (
+                blog.title ===
+                  "Navigating the Digital Revolution: Emerging Tech Trends" && (
+                  <>
+                    {blog.topics.map((topic, index) => {
+                      return (
+                        <strong key={index} className="hover:text-tertiary">
+                          #{topic}{" "}
+                        </strong>
+                      );
+                    })}
+                  </>
+                )
+              );
+            })}{" "}
+            on our{" "}
             <a href="#" className="text-primary underline">
               Blog
             </a>{" "}

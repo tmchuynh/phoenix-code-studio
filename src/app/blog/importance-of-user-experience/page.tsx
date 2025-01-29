@@ -2,6 +2,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { uxDesignResources } from "@/lib/blog-constants";
+import { blogs } from "@/lib/constants";
 import React from "react";
 
 const BlogPage = () => {
@@ -9,10 +10,38 @@ const BlogPage = () => {
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <article className="space-y-8">
         <header>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             The Importance of User Experience in Web Design
           </h1>
-          <p>By John Doe – August 15, 2025</p>
+          <div>
+            {blogs.map((blog, index) => {
+              return (
+                blog.title ===
+                  "The Importance of User Experience in Web Design" && (
+                  <>
+                    <p key={index}>
+                      <span className="font-bold">Written By: </span>
+                      {blog.author}
+                    </p>
+                    <p key={index}>{blog.date}</p>
+                    <div className="flex space-x-2 mb-8">
+                      {blog.topics.map((topic, index) => {
+                        return (
+                          <Badge
+                            variant={"outline"}
+                            className="text-sm lowercase"
+                            key={index}
+                          >
+                            #{topic}
+                          </Badge>
+                        );
+                      })}
+                    </div>
+                  </>
+                )
+              );
+            })}
+          </div>
           <p>
             A website is more than just a digital presence—it’s an interactive
             experience that shapes how users perceive your brand. User
@@ -30,20 +59,14 @@ const BlogPage = () => {
             businesses can create websites that not only look great but also
             provide a smooth, frustration-free experience.
           </p>
-          <div className="mt-4 flex justify-center space-x-4">
-            <Badge variant={"outline"} className="text-sm">
-              #UXUIDesign
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #WebDesign
-            </Badge>
-            <Badge variant={"outline"} className="text-sm">
-              #UserExperience
-            </Badge>
-          </div>
         </header>
 
-        <section className="space-y-4">
+        <section className="space-y-4"></section>
+
+        <section>
+          <h2 className="text-3xl font-semibold mb-6 text-secondary">
+            What is User Experience (UX)?
+          </h2>
           <p>
             <strong>User experience (UX)</strong> is a critical factor in web
             design that determines how users engage with your website, shaping
@@ -60,12 +83,6 @@ const BlogPage = () => {
             not only improves customer satisfaction but also enhances brand
             perception and credibility.
           </p>
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            What is User Experience (UX)?
-          </h2>
           <p>
             User experience (UX) refers to the overall experience a person has
             when interacting with a website or digital product. It encompasses
@@ -127,7 +144,24 @@ const BlogPage = () => {
 
         <footer className="mt-8 text-center">
           <p>
-            For more posts like this, visit our{" "}
+            For more posts like this about{" "}
+            {blogs.map((blog) => {
+              return (
+                blog.title ===
+                  "The Importance of User Experience in Web Design" && (
+                  <>
+                    {blog.topics.map((topic, index) => {
+                      return (
+                        <strong key={index} className="hover:text-tertiary">
+                          #{topic}{" "}
+                        </strong>
+                      );
+                    })}
+                  </>
+                )
+              );
+            })}
+            , visit our{" "}
             <a href="/blog" className="text-primary underline">
               Blog
             </a>

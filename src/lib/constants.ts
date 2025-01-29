@@ -846,7 +846,7 @@ export const blogs: BlogPost[] = [
     date: "August 15, 2024",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Design", "Web Development"],
+    topics: ["Design", "Web Development", "Web Development",],
     excerpt:
       "User experience (UX) is one of the most important factors when designing a website. It directly impacts how users interact with your website, and ultimately affects conversion rates.",
     slug: "/blog/importance-of-user-experience",
@@ -857,7 +857,7 @@ export const blogs: BlogPost[] = [
     date: "March 23, 2022",
     img: "/images/blog-placeholder.jpg",
     featured: false,
-    topics: ["Books"],
+    topics: ["Books", "Self-Development", "Web Development", "Career"],
     excerpt:
       "A career in tech demands constant learning and growth. But isn’t that true for any career? After all, continuous improvement is the key to success.",
     slug: "/blog/books-to-read-as-developer",
@@ -868,9 +868,9 @@ export const blogs: BlogPost[] = [
     date: "April 22, 2022",
     img: "/images/blog-placeholder.jpg",
     featured: false,
-    topics: ["Career"],
+    topics: ["Career", "Business"],
     excerpt:
-      `The phrase "Jack of all trades, master of none" refers to a person who is competent in many skills but is not exactly outstanding in any of them. Even though "jack of all trades" sometimes is used as an insult, it did not begin as one. The complete saying goes "A jack of all trades is a master of none, but oftentimes better than a master of one."`,
+      `Even though "jack of all trades" sometimes is used as an insult, it did not begin as one. The complete saying goes "A jack of all trades is a master of none, but oftentimes better than a master of one."`,
     slug: "/blog/jack-of-all-trades-or-master-of-one",
   },
   {
@@ -879,9 +879,9 @@ export const blogs: BlogPost[] = [
     date: "April 22, 2022",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Career"],
+    topics: ["Career", "Resources", "Business"],
     excerpt:
-      `Contactless business cards are a modern, eco-friendly alternative to paper cards, allowing professionals to share contact details, social media profiles, and more with a simple tap or scan. Smartphone-compatible and app-free, they offer seamless networking while reducing waste and leaving a lasting impression.`,
+      `Contactless business cards are a modern, eco-friendly alternative to paper cards, allowing professionals to share contact details, social media profiles, and more with a simple tap or scan.`,
     slug: "/blog/best-contactless-business-card-options",
   },
   {
@@ -890,7 +890,7 @@ export const blogs: BlogPost[] = [
     date: "March 21, 2022",
     img: "/images/blog-placeholder.jpg",
     featured: false,
-    topics: ["Career"],
+    topics: ["Career", "Self-Development"],
     excerpt:
       `"In fact, the importance of writing has perhaps increased in the last decade or so, thanks to trends in technology...In matters of business, when every second counts, strong writing makes the difference between smooth operations and clumsy footing."`,
     slug: "/blog/why-every-developer-should-write",
@@ -901,7 +901,7 @@ export const blogs: BlogPost[] = [
     date: "July 10, 2023",
     img: "/images/blog-placeholder.jpg",
     featured: false,
-    topics: ["Web Development"],
+    topics: ["Web Development", "Design", "Web Development"],
     excerpt:
       "Tailwind CSS is a utility-first CSS framework that provides a highly customizable approach to building modern user interfaces. In this blog post, we'll explore how it can speed up your development process.",
     slug: "/blog/how-tailwind-css-can-speed-up-your-development",
@@ -923,7 +923,7 @@ export const blogs: BlogPost[] = [
     date: "May 22, 2023",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Accessibility", "Design"],
+    topics: ["Accessibility", "Design", "Web Development"],
     excerpt:
       "Accessibility should be a priority in every web development project. Ensuring that your website is usable by people with disabilities opens your content to a wider audience and improves user satisfaction.",
     slug: "/blog/why-accessibility-matters",
@@ -945,7 +945,7 @@ export const blogs: BlogPost[] = [
     date: "March 18, 2024",
     img: "/images/blog-placeholder.jpg",
     featured: false,
-    topics: ["Data Science", "Analytics"],
+    topics: ["Data Science", "Analytics", "Machine Learning"],
     excerpt:
       "Data science is changing how we solve problems and make decisions. Learn how data scientists turn raw data into insights that drive success.",
     slug: "/blog/demystifying-data-science",
@@ -967,7 +967,7 @@ export const blogs: BlogPost[] = [
     date: "January 15, 2023",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Data Science", "Web Development"],
+    topics: ["Data Science", "Web Development", "Analysis"],
     excerpt:
       "Web scraping opens up endless possibilities for collecting and analyzing data. Dive into the ethical and technical aspects of this powerful technique.",
     slug: "/blog/creative-data-harvesting-web-scraping",
@@ -978,7 +978,7 @@ export const blogs: BlogPost[] = [
     date: "December 5, 2024",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Entrepreneurship"],
+    topics: ["Entrepreneurship", "Innovation"],
     excerpt:
       "Tech startups are driving innovation in the digital age. Explore the challenges and successes behind the scenes of these groundbreaking companies.",
     slug: "/blog/insights-into-tech-startups",
@@ -1000,7 +1000,7 @@ export const blogs: BlogPost[] = [
     date: "October 15, 2023",
     img: "/images/blog-placeholder.jpg",
     featured: false,
-    topics: ["Design", "Web Development"],
+    topics: ["Design", "Web Development", "Design"],
     excerpt:
       "Great graphical user interfaces (GUIs) are key to intuitive user experiences. Discover tips and techniques for designing user-friendly interfaces.",
     slug: "/blog/mastering-gui-design",
@@ -1011,7 +1011,7 @@ export const blogs: BlogPost[] = [
     date: "August 5, 2024",
     img: "/images/blog-placeholder.jpg",
     featured: false,
-    topics: ["Entrepreneurship"],
+    topics: ["Entrepreneurship", "Innovation"],
     excerpt:
       "Tech entrepreneurs are changing the world. Explore inspiring stories of how industry disruptors started from scratch and achieved greatness.",
     slug: "/blog/stories-of-tech-entrepreneurs",
