@@ -6,7 +6,6 @@ import FeaturedProjects from "@/components/FeaturedProjects";
 import JoinUs from "@/components/JoinUs";
 import ServiceHighlights from "@/components/ServiceHighlights";
 import Testimonials from "@/components/Testimonials";
-import Banner from "@/components/ui/banner";
 import { Button } from "@/components/ui/button";
 import { SidebarSeparator } from "@/components/ui/sidebar";
 import { useRouter } from "next/navigation";

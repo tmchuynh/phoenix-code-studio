@@ -24,10 +24,10 @@ const FeaturedProjects = () => {
                 key={index}
                 className="rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground p-7"
               >
-                <h3 className="text-xl font-semibold text-center text-secondary pt-1">
+                <h3 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-semibold text-center text-secondary pt-1">
                   {project.title}
                 </h3>
-                <p className="text-center mt-4">
+                <p className="text-pretty mt-4">
                   <span className="whitespace-nowrap text-wrap overflow-hidden text-ellipsis">
                     {isSmallScreen
                       ? `${project.short.substring(0, 80)}...`

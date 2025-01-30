@@ -1,8 +1,9 @@
 import { Button } from "./ui/button";
+import Highlight from "@/components/Highlighted";
 
 const JoinUs = () => {
   return (
-    <section className="py-16 w-10/12 mx-auto text-balance text-center">
+    <section className="py-16 w-10/12 mx-auto text-balance text-center space-y-7">
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
         Come Be a Part of Our Team
       </h2>
@@ -12,26 +13,13 @@ const JoinUs = () => {
         <span className="underline underline-offset-4 text-primary">
           passionate
         </span>
-        ,{" "}
-        <span className="underline underline-offset-4 text-primary">
-          talented
-        </span>{" "}
-        individuals who want to make a real impact in a dynamic and innovative
-        environment. Whether you're a developer, designer, marketer, or someone
-        who thrives on solving challenges, we have a place for you. By joining
-        our team, you'll be part of a culture that values{" "}
-        <span className="underline underline-offset-4 text-primary">
-          creativity
-        </span>
-        ,{" "}
-        <span className="underline underline-offset-4 text-primary">
-          collaboration
-        </span>
-        , and{" "}
-        <span className="underline underline-offset-4 text-primary">
-          growth
-        </span>
-        . We offer opportunities to work on exciting projects, learn new skills,
+        , <Highlight>talented</Highlight> individuals who want to make a real
+        impact in a dynamic and innovative environment. Whether you're a
+        developer, designer, marketer, or someone who thrives on solving
+        challenges, we have a place for you. By joining our team, you'll be part
+        of a culture that values <Highlight>creativity</Highlight>,{" "}
+        <Highlight>collaboration</Highlight>, and <Highlight>growth</Highlight>.
+        We offer opportunities to work on exciting projects, learn new skills,
         and contribute to shaping the future of technology and business. Explore
         our open positions and discover how you can play a key role in our
         success while advancing your own career.

@@ -15,7 +15,7 @@ const FAQPage: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Frequently Asked Questions
       </h1>
-      <p className="mt-4">
+      <p className="mt-4 ">
         Welcome to our FAQs page! Here, you’ll find answers to some of the most
         common questions about our services, products, and processes. Whether
         you’re exploring what we offer, looking for guidance, or need help with

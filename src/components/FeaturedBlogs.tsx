@@ -28,10 +28,8 @@ const FeaturedBlogs = () => {
                   <h3 className="text-2xl font-semibold text-center text-tertiary">
                     {blog.title}
                   </h3>
-                  <h5 className="text-center text-secondary text-xs">
-                    {blog.date}
-                  </h5>
-                  <p className="text-center mt-4">
+                  <h5 className="text-center text-md">{blog.date}</h5>
+                  <p className="text-pretty mt-4">
                     {isSmallScreen
                       ? `${blog.excerpt.substring(0, 60)}...`
                       : blog.excerpt}
@@ -42,6 +40,7 @@ const FeaturedBlogs = () => {
                   onClick={() => {
                     router.push(blog.slug);
                   }}
+                  className="mt-7"
                 >
                   Read More
                 </Button>
