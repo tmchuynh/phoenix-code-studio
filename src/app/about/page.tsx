@@ -1,5 +1,6 @@
 "use client";
 import CallToAction from "@/components/CallToAction";
+import { SidebarSeparator } from "@/components/ui/sidebar";
 import {
   FaHandshake,
   FaHandsHelping,
@@ -14,7 +15,8 @@ import { GrGrow } from "react-icons/gr";
 const aboutUs = () => {
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
-      <div className="py-3">
+      {/* About Us */}
+      <section className="py-3">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
           About Us
         </h1>
@@ -56,8 +58,10 @@ const aboutUs = () => {
           has the tools to bloom and achieve its full potential in the digital
           world.
         </p>
-      </div>
-      <div className="py-3">
+      </section>
+
+      {/* Mission Statement */}
+      <section className="py-3">
         <h2>Mission Statement</h2>
         <p>
           At Phoenix Code Studio, our mission is to empower small businesses by
@@ -98,8 +102,14 @@ const aboutUs = () => {
           your business stands out and leaves a meaningful impact in an
           increasingly digital world.
         </p>
-      </div>
-      <div className="py-3">
+      </section>
+
+      <SidebarSeparator className="bg-muted h-0.5" />
+      <CallToAction />
+      <SidebarSeparator className="bg-muted h-0.5" />
+
+      {/* Core Values */}
+      <section className="py-3">
         <h2>Core Values</h2>
         <ul className="flex flex-col gap-2">
           <li className="flex">
@@ -224,8 +234,10 @@ const aboutUs = () => {
             </div>
           </li>
         </ul>
-      </div>
-      <div className="py-3">
+      </section>
+
+      {/* Vision Statement */}
+      <section className="py-3">
         <h2>Vision Statement</h2>
         <p>
           At Phoenix Code Studio, our vision is to transform the way small
@@ -257,8 +269,7 @@ const aboutUs = () => {
           to build deeper connections with their audience and achieve
           sustainable success.
         </p>
-      </div>
-      <CallToAction />
+      </section>
     </main>
   );
 };
