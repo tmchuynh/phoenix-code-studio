@@ -1,6 +1,14 @@
 "use client";
 
+import CallToAction from "@/components/CallToAction";
 import { Button } from "@/components/ui/button";
+import { SidebarSeparator } from "@/components/ui/sidebar";
+import {
+  companySpecificServices,
+  contentCreationServices,
+  websiteServices,
+} from "@/lib/constants";
+import { formatCurrency } from "@/lib/utils";
 import router from "next/router";
 import { FC } from "react";
 
@@ -18,187 +26,156 @@ const PricingPage: FC = () => {
         let us help you achieve success with tailored, high-quality services.
       </p>
 
-      {/* Service 1: Website Design */}
+      {/* Service 1: Website Services */}
       <section className="my-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-          Website Design Services
+          Customized Website Services
         </h2>
         <p>
-          Our website design services are designed to meet your business goals,
-          from simple informational websites to fully customized solutions.
+          Your website is the digital face of your business, and we are here to
+          ensure it makes a lasting impression. Our website services are
+          designed to cater to businesses of all sizes, whether you need a
+          simple informational site, a custom-built eCommerce platform, or a
+          dynamic, feature-rich web application.
         </p>
-        <ul className="list-disc pl-6 space-y-1 text-balance">
-          <li>
-            <span className="font-bold text-secondary">Basic Website:</span>{" "}
-            Starting at $2,500 – A simple, informational website (5-10 pages).
-          </li>
-          <li>
-            <span className="font-bold text-secondary">Advanced Website:</span>{" "}
-            Starting at $4,000 – Includes custom functionality, integrations,
-            and dynamic content.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              E-Commerce Website:
-            </span>{" "}
-            Starting at $6,500 – Fully functional online store with payment
-            integration.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Hosting and Domain:
-            </span>{" "}
-            Starting at $15/month – Secure, reliable hosting with domain
-            registration.
-          </li>
-        </ul>
+        <p>
+          We specialize in creating fully responsive, visually appealing, and
+          highly functional websites that align with your brand identity and
+          business objectives. From initial strategy and design to development,
+          optimization, and ongoing support, we offer end-to-end solutions
+          tailored to your unique needs.
+        </p>
+        <p>
+          Our services include custom website design, user experience (UX) and
+          user interface (UI) enhancements, content management system (CMS)
+          integrations, performance optimization, and SEO best practices to
+          improve visibility and engagement. We prioritize usability, security,
+          and scalability to ensure your website remains fast, reliable, and
+          adaptable as your business grows.
+        </p>
+        <p>
+          Whether you're launching a new website, revamping an existing one, or
+          integrating advanced functionalities, our expert team will guide you
+          through every step of the process. Let us help you create a powerful
+          online presence that connects with your audience and drives measurable
+          results.
+        </p>
+
+        {websiteServices.map((services) => (
+          <div className="my-4">
+            <p>{services.details}</p>
+            <ul className="list-disc pl-6 space-y-1 text-pretty">
+              {services.pricingTiers.map((item, index) => (
+                <>
+                  <li key={index}>
+                    <strong>{item.name}:</strong> {item.info}
+                  </li>
+                </>
+              ))}
+            </ul>
+          </div>
+        ))}
       </section>
 
-      {/* Service 2: UX/UI Design */}
+      <section className="my-8">
+        <SidebarSeparator className="bg-muted h-0.5" />
+        <CallToAction />
+        <SidebarSeparator className="bg-muted h-0.5" />
+      </section>
+
+      {/* Service 2: Company Specific Services */}
       <section className="my-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-          UX/UI Design Services
+          Company-Specific Services
         </h2>
+        <p>
+          Every business has unique needs, and our company-specific services are
+          tailored to provide customized solutions that align with your brand’s
+          goals, vision, and target audience. Whether you’re looking to enhance
+          your digital presence, optimize customer engagement, or streamline
+          internal operations, we have the expertise to deliver results.
+        </p>
         <p>
           Our UX/UI design services focus on creating seamless and engaging user
-          experiences while ensuring visually stunning interfaces.
+          experiences while ensuring visually stunning and intuitive interfaces.
+          We conduct in-depth research, wireframing, prototyping, and usability
+          testing to craft designs that enhance user interactions and maximize
+          conversion rates.
         </p>
-        <ul className="list-disc pl-6 space-y-1 text-balance">
-          <li>
-            <span className="font-bold text-secondary">
-              UX Design Research:
-            </span>{" "}
-            Starting at $3,000 – Includes user research, wireframing, and
-            prototyping.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">UI Design:</span>{" "}
-            Starting at $2,500 – Custom UI design for web and mobile
-            applications.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              UX Testing and Validation:
-            </span>{" "}
-            Starting at $2,000 – Usability testing and iteration based on user
-            feedback.
-          </li>
-        </ul>
+        <p>
+          Beyond design, we offer comprehensive branding and rebranding
+          solutions, helping businesses establish or refine their brand identity
+          with compelling storytelling, logo design, and cohesive visual
+          elements. Additionally, we provide tailored software development
+          services, including custom applications, database management, and
+          enterprise solutions designed to improve efficiency and scalability.
+        </p>
+        <p>
+          We also specialize in eCommerce development, CRM integrations, and
+          automation tools that enhance business operations, customer
+          engagement, and long-term growth. Whatever your specific business
+          requirements, our dedicated team is here to create strategic,
+          innovative, and results-driven solutions that set you apart from the
+          competition.
+        </p>
+
+        {companySpecificServices.map((services) => (
+          <div className="my-4">
+            <p>{services.details}</p>
+            <ul className="list-disc pl-6 space-y-1 text-pretty">
+              {services.pricingTiers.map((item, index) => (
+                <>
+                  <li key={index}>
+                    <strong>{item.name}:</strong> {item.info}
+                  </li>
+                </>
+              ))}
+            </ul>
+          </div>
+        ))}
       </section>
 
-      {/* Service 3: Wireframing & Prototyping */}
+      {/* Service 3: Content Creation Services */}
       <section className="my-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-          Wireframing and Prototyping Services
+          Comprehensive Content Creation Services
         </h2>
         <p>
-          Wireframing and prototyping services to bring your ideas to life with
-          interactive mockups and user-centered design.
+          Elevate your brand’s presence with our professional content creation
+          services, designed to engage, inform, and inspire your audience.
+          Whether you need compelling website copy, interactive visual
+          storytelling, in-depth blog articles, or detailed product guides, we
+          craft content that aligns with your brand’s voice and business goals.
         </p>
-        <ul className="list-disc pl-6 space-y-1 text-balance">
-          <li>
-            <span className="font-bold text-secondary">
-              Low-Fidelity Wireframes:
-            </span>{" "}
-            Starting at $1,500 – Quick sketches outlining layout and structure.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              High-Fidelity Wireframes:
-            </span>{" "}
-            Starting at $2,000 – Detailed designs that closely resemble the
-            final product.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Interactive Prototypes:
-            </span>{" "}
-            Starting at $2,500 – Clickable prototypes for testing user
-            interactions.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Usability Testing Prototypes:
-            </span>{" "}
-            Starting at $3,000 – Prototypes optimized for testing with real
-            users.
-          </li>
-        </ul>
-      </section>
+        <p>
+          Our approach is rooted in strategy and creativity, ensuring that every
+          piece of content is optimized for impact. We specialize in crafting
+          user-centric narratives, SEO-friendly copy, and multimedia content
+          that drives engagement, boosts visibility, and converts visitors into
+          loyal customers.
+        </p>
+        <p>
+          From initial concept and research to final execution, we work closely
+          with you to produce high-quality content that speaks to your target
+          audience. Whether you’re building an online presence, launching a new
+          product, or strengthening your brand’s storytelling, our tailored
+          content solutions will help you achieve lasting success.
+        </p>
 
-      {/* Service 4: Development Services */}
-      <section className="my-8">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-          Development Services
-        </h2>
-        <p>
-          Our development services ensure that your vision is brought to life
-          using the latest technologies and best practices.
-        </p>
-        <ul className="list-disc pl-6 space-y-1 text-balance">
-          <li>
-            <span className="font-bold text-secondary">
-              Frontend Development:
-            </span>{" "}
-            Starting at $4,500 – Custom frontend development using React,
-            Next.js, or Angular.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Backend Development:
-            </span>{" "}
-            Starting at $5,500 – Robust backend solutions with Node.js, Express,
-            or other technologies.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Full-Stack Development:
-            </span>{" "}
-            Starting at $8,000 – Complete end-to-end web applications, from
-            frontend to backend.
-          </li>
-        </ul>
-      </section>
-
-      {/* Service 5: Ongoing Support and Maintenance */}
-      <section className="my-8">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-          Ongoing Support and Maintenance
-        </h2>
-        <p>
-          Ensure the longevity of your website or application with our ongoing
-          maintenance and support services.
-        </p>
-        <ul className="list-disc pl-6 space-y-1 text-balance">
-          <li>
-            <span className="font-bold text-secondary">
-              Monthly Support Plan:
-            </span>{" "}
-            Starting at $200/month – Includes bug fixes, updates, and basic
-            support.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">Extended Support:</span>{" "}
-            Starting at $500/month – Full-service support, including
-            enhancements, updates, and troubleshooting.
-          </li>
-        </ul>
-      </section>
-
-      <section className="my-8">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-          Get Started Today
-        </h2>
-        <p>
-          Ready to discuss your project and choose the best tier for your needs?{" "}
-          <Button
-            variant={"link"}
-            onClick={() => router.push("/contact-us")}
-            className="p-0 inline-flex m-0"
-          >
-            Contact us for a free consultation and customized quote.
-          </Button>
-        </p>
+        {contentCreationServices.map((services) => (
+          <div className="my-4">
+            <p>{services.details}</p>
+            <ul className="list-disc pl-6 space-y-1 text-pretty">
+              {services.pricingTiers.map((item, index) => (
+                <>
+                  <li key={index}>
+                    <strong>{item.name}:</strong> {item.info}
+                  </li>
+                </>
+              ))}
+            </ul>
+          </div>
+        ))}
       </section>
     </main>
   );
