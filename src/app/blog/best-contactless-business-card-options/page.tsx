@@ -60,45 +60,11 @@ const ContactlessBusinessCardsBlog = () => {
           </p>
         </header>
 
-        {contactlessCardOptions.map((card, index) => (
-          <section key={index} className="space-y-4">
-            <h2 className="text-3xl font-semibold mb-6 text-secondary">
-              {card.name}
-            </h2>
-            <p>{card.description}</p>
-
-            <h3 className="text-xl font-medium">Features:</h3>
-            <ul className="list-disc pl-6 space-y-1">
-              {card.features.map((feature, i) => (
-                <li key={i}>{feature}</li>
-              ))}
-            </ul>
-
-            {card.productOptions && (
-              <div>
-                <h3 className="text-xl font-medium">Product Options:</h3>
-                <ul className="list-disc pl-6 space-y-1">
-                  {card.productOptions.map((option, i) => (
-                    <li key={i}>{option}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {card.analytics && (
-              <div>
-                <h3 className="text-xl font-medium">Analytics:</h3>
-                <p>{card.analytics}</p>
-              </div>
-            )}
-          </section>
-        ))}
-
         <section className="space-y-4">
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             How Can Analytics Help You?
           </h2>
-          <ul className="list-disc pl-6 space-y-1">
+          <ul className="list-disc pl-6 space-y-1 text-balance">
             <li>
               <strong>Measure Networking Success: </strong>See how often your
               card is scanned and which contacts are engaging.
@@ -117,6 +83,40 @@ const ContactlessBusinessCardsBlog = () => {
             </li>
           </ul>
         </section>
+
+        {contactlessCardOptions.map((card, index) => (
+          <section key={index} className="space-y-4">
+            <h2 className="text-3xl font-semibold mb-6 text-secondary">
+              {card.name}
+            </h2>
+            <p>{card.description}</p>
+
+            <h3 className="text-xl font-medium">Features:</h3>
+            <ul className="list-disc pl-6 space-y-1 text-balance grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-7">
+              {card.features.map((feature, i) => (
+                <li key={i}>{feature}</li>
+              ))}
+            </ul>
+
+            {card.productOptions && (
+              <div>
+                <h3 className="text-xl font-medium">Product Options:</h3>
+                <ul className="list-disc pl-6 space-y-1 text-balance grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-7">
+                  {card.productOptions.map((option, i) => (
+                    <li key={i}>{option}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {card.analytics && (
+              <div>
+                <h3 className="text-xl font-medium">Analytics:</h3>
+                <p>{card.analytics}</p>
+              </div>
+            )}
+          </section>
+        ))}
 
         <footer className="mt-8 text-center">
           <p>
