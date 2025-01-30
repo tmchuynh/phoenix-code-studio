@@ -236,6 +236,6 @@ body {
   }
 
   ul {
-    @apply list-disc pl-6 space-y-2 text-balance mb-4;
+    @apply list-disc pl-6 space-y-2 text-balance my-4;
   }
 }
