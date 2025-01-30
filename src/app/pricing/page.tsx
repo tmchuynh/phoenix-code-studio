@@ -64,7 +64,7 @@ const PricingPage: FC = () => {
         {websiteServices.map((services) => (
           <div className="my-4">
             <p>{services.details}</p>
-            <ul className="list-disc pl-6 space-y-1 text-pretty">
+            <ul>
               {services.pricingTiers.map((item, index) => (
                 <>
                   <li key={index}>
@@ -122,7 +122,7 @@ const PricingPage: FC = () => {
         {companySpecificServices.map((services) => (
           <div className="my-4">
             <p>{services.details}</p>
-            <ul className="list-disc pl-6 space-y-1 text-pretty">
+            <ul>
               {services.pricingTiers.map((item, index) => (
                 <>
                   <li key={index}>
@@ -165,7 +165,7 @@ const PricingPage: FC = () => {
         {contentCreationServices.map((services) => (
           <div className="my-4">
             <p>{services.details}</p>
-            <ul className="list-disc pl-6 space-y-1 text-pretty">
+            <ul>
               {services.pricingTiers.map((item, index) => (
                 <>
                   <li key={index}>

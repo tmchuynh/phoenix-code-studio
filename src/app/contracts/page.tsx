@@ -55,7 +55,7 @@ const ExampleContractsPage: FC = () => {
             every detail has been carefully considered to ensure a successful
             partnership.
           </p>
-          <ul className="list-disc pl-6 space-y-1 text-balance">
+          <ul>
             <li>
               <span className="font-bold text-secondary">Project Scope:</span> A
               comprehensive description of the project, including detailed
@@ -150,7 +150,7 @@ const ExampleContractsPage: FC = () => {
             their specific goals and requirements are being met with
             professionalism and care.
           </p>
-          <ul className="list-disc pl-6 space-y-1 text-balance">
+          <ul>
             <li>
               <span className="font-bold text-secondary">Project Scope:</span> A
               detailed outline of the project goals, expectations, and specific

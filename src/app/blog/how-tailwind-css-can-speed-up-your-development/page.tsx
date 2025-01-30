@@ -92,7 +92,7 @@ const BlogPage = () => {
             <h2 className="text-3xl font-semibold mb-6 text-secondary">
               {categoryItem.category}
             </h2>
-            <ul className="list-disc pl-6 space-y-1 text-balance">
+            <ul>
               {categoryItem.items.map((item, itemIndex) => (
                 <li key={itemIndex}>
                   <strong>{item.title}:</strong> {item.description}

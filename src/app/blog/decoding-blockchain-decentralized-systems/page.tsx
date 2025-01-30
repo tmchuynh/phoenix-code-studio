@@ -99,7 +99,7 @@ const BlogPage = () => {
                 ))}
               </ol>
             ) : (
-              <ul className="list-disc pl-6 space-y-1 text-balance">
+              <ul>
                 {categoryItem.items.map((item, itemIndex) => (
                   <li key={itemIndex}>
                     <strong>{item.title}:</strong> {item.description}

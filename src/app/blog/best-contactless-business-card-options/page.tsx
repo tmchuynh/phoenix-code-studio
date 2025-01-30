@@ -64,7 +64,7 @@ const ContactlessBusinessCardsBlog = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             How Can Analytics Help You?
           </h2>
-          <ul className="list-disc pl-6 space-y-1 text-balance">
+          <ul>
             <li>
               <strong>Measure Networking Success: </strong>See how often your
               card is scanned and which contacts are engaging.
@@ -92,7 +92,7 @@ const ContactlessBusinessCardsBlog = () => {
             <p>{card.description}</p>
 
             <h3 className="text-xl font-medium">Features:</h3>
-            <ul className="list-disc pl-6 space-y-1 text-balance grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-7">
+            <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-7">
               {card.features.map((feature, i) => (
                 <li key={i}>{feature}</li>
               ))}
@@ -101,7 +101,7 @@ const ContactlessBusinessCardsBlog = () => {
             {card.productOptions && (
               <div>
                 <h3 className="text-xl font-medium">Product Options:</h3>
-                <ul className="list-disc pl-6 space-y-1 text-balance grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-7">
+                <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-7">
                   {card.productOptions.map((option, i) => (
                     <li key={i}>{option}</li>
                   ))}

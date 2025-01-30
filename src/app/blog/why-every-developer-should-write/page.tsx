@@ -107,7 +107,7 @@ const WhyWritingMattersBlog = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             {whyWritingMattersContent.tips.title}
           </h2>
-          <ul className="list-disc pl-6 space-y-1 text-balance">
+          <ul>
             {whyWritingMattersContent.tips.points.map((tip, index) => (
               <li key={index}>{tip}</li>
             ))}

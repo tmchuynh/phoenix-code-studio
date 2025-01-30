@@ -234,4 +234,8 @@ body {
   strong {
     @apply text-secondary;
   }
+
+  ul {
+    @apply list-disc pl-6 space-y-2 text-balance mb-4;
+  }
 }

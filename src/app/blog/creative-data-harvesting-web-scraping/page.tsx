@@ -96,7 +96,7 @@ const BlogPage = () => {
                 legal responsibilities:
               </p>
             ) : null}
-            <ul className="list-disc pl-6 space-y-1 text-balance">
+            <ul>
               {categoryItem.items.map((item, itemIndex) => (
                 <li key={itemIndex}>
                   <strong>{item.title}:</strong> {item.description}
@@ -110,7 +110,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             The Benefits of Web Scraping
           </h2>
-          <ul className="list-disc pl-6 space-y-1 text-balance">
+          <ul>
             <li>
               <strong>Efficiency:</strong> Automates data collection processes,
               saving time and resources.
@@ -130,7 +130,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Challenges of Web Scraping
           </h2>
-          <ul className="list-disc pl-6 space-y-1 text-balance">
+          <ul>
             <li>
               <strong>Anti-Scraping Measures:</strong> Websites may use
               CAPTCHAs, IP blocking, or dynamic content to deter scrapers.

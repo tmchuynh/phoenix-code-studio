@@ -44,7 +44,7 @@ const PaymentPlansPage: FC = () => {
               <p className="mb-6">{plan.description}</p>
 
               {/* Plan Details */}
-              <ul className="list-disc pl-6 space-y-2 text-lg">
+              <ul className="text-lg">
                 {plan.details.map((detail, i) => (
                   <li key={i}>{detail}</li>
                 ))}

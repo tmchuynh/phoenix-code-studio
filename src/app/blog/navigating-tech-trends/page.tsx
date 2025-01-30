@@ -89,7 +89,7 @@ const BlogPage = () => {
             <p>
               <strong>Key Trends:</strong>
             </p>
-            <ul className="list-disc pl-6 space-y-1 text-balance">
+            <ul>
               {trendCategory.trends.map((trend, trendIndex) => (
                 <li key={trendIndex}>{trend}</li>
               ))}
@@ -101,7 +101,7 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             How to Stay Ahead in the Digital Revolution
           </h2>
-          <ul className="list-disc pl-6 space-y-1 text-balance">
+          <ul>
             {stayingAheadTips.map((tip, index) => (
               <li key={index}>{tip}</li>
             ))}

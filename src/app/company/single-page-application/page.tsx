@@ -34,7 +34,7 @@ const SPAServices: FC = () => {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
             {section.category}
           </h2>
-          <ul className="list-disc pl-6 space-y-1 text-balance">
+          <ul>
             {section.items.map((item, itemIndex) => (
               <li key={itemIndex}>
                 <span className="font-bold text-secondary">{item.title}:</span>{" "}
@@ -54,7 +54,7 @@ const SPAServices: FC = () => {
           We leverage industry-leading technologies to ensure high-performance
           SPA development:
         </p>
-        <ul className="list-disc pl-6 space-y-1 text-balance">
+        <ul>
           {technologiesUsed.map((tech, index) => (
             <li key={index}>{tech}</li>
           ))}
@@ -70,7 +70,7 @@ const SPAServices: FC = () => {
           Our company rebranding services are{" "}
           <strong>tailored to your needs</strong>. Below are our pricing tiers:
         </p>
-        <ul className="list-disc pl-6 space-y-1 text-balance">
+        <ul>
           {companySpecificServices.map(
             (service) =>
               service.name === "Single Page Application" &&

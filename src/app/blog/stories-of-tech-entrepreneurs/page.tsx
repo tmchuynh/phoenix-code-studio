@@ -99,7 +99,7 @@ const BlogPage = () => {
           {entrepreneurInsights.map(
             (categoryItem, categoryIndex) =>
               categoryItem.category === "lessons" && (
-                <ul className="list-disc pl-6 space-y-1 text-balance">
+                <ul>
                   {categoryItem.items.map((item, storyIndex) => (
                     <li key={categoryIndex}>
                       <strong>{item.title}:</strong> {item.details}
@@ -125,7 +125,7 @@ const BlogPage = () => {
           {entrepreneurInsights.map(
             (categoryItem, categoryIndex) =>
               categoryItem.category === "stories" && (
-                <ul className="list-disc pl-6 space-y-1 text-balance">
+                <ul>
                   {categoryItem.items.map((item, storyIndex) => (
                     <li key={categoryIndex}>
                       <strong>{item.title}:</strong> {item.details}

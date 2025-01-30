@@ -332,7 +332,7 @@ const PastProjectsPage: FC = () => {
                     <div className="text-sm lg:text-lg grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-2">
                       <div>
                         <p className="font-semibold">Languages:</p>
-                        <ul className="list-disc pl-4 mb-4">
+                        <ul>
                           {project.languages.map((language, idx) => (
                             <li key={idx}>{language}</li>
                           ))}
@@ -342,7 +342,7 @@ const PastProjectsPage: FC = () => {
                       {project.frameworks && (
                         <div>
                           <p className="font-semibold">Frameworks:</p>
-                          <ul className="list-disc pl-4 mb-4">
+                          <ul>
                             {project.frameworks.map((tech, idx) => (
                               <li key={idx}>{tech}</li>
                             ))}
@@ -353,7 +353,7 @@ const PastProjectsPage: FC = () => {
                       {project.technologies && (
                         <div>
                           <p className="font-semibold">Technologies:</p>
-                          <ul className="list-disc pl-4 mb-4">
+                          <ul>
                             {project.technologies.map((tech, idx) => (
                               <li key={idx}>{tech}</li>
                             ))}
