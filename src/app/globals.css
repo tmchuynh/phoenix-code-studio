@@ -230,4 +230,8 @@ body {
   li {
     @apply text-sm md:text-lg xl:text-xl;
   }
+
+  strong {
+    @apply text-secondary;
+  }
 }

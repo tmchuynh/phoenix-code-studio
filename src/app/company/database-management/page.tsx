@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { databaseServicesData } from "@/lib/company-constant";
+import { companySpecificServices } from "@/lib/constants";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
 
@@ -45,29 +46,28 @@ const DatabaseServices: FC = () => {
         </section>
       ))}
 
-      {/* Pricing Section */}
+      {/* Pricing Tiers */}
       <section className="my-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Pricing Tiers
         </h2>
         <p className="my-4">
-          Our pricing is customized based on the **complexity, size, and
-          features** of your database project.
+          Our company rebranding services are{" "}
+          <strong>tailored to your needs</strong>. Below are our pricing tiers:
         </p>
         <ul className="list-disc pl-6 space-y-1 text-balance">
-          <li>
-            <span className="font-bold text-secondary">Basic Plan:</span>{" "}
-            Small-scale databases with essential security measures.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">Standard Plan:</span>{" "}
-            Mid-size databases with **performance optimizations & monitoring**.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">Enterprise Plan:</span>{" "}
-            Large-scale, mission-critical databases with **24/7 support and
-            cloud scalability**.
-          </li>
+          {companySpecificServices.map(
+            (service) =>
+              service.name === "Database Management" &&
+              service.pricingTiers.map((tiers, index) => (
+                <li key={index}>
+                  <span className="font-bold text-secondary">
+                    {tiers.name}:
+                  </span>{" "}
+                  {tiers.info}
+                </li>
+              ))
+          )}
         </ul>
       </section>
 

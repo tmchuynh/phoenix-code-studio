@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
 import { websiteCopywritingData } from "@/lib/content-constants";
+import { contentCreationServices } from "@/lib/constants";
 
 const WebsiteCopywritingServices: FC = () => {
   const router = useRouter();
@@ -44,6 +45,33 @@ const WebsiteCopywritingServices: FC = () => {
           </ul>
         </section>
       ))}
+
+      {/* Pricing Section */}
+      <section className="my-8">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing
+        </h2>
+        <p>
+          Pricing is based on the word count, complexity, and SEO requirements
+          of your blog content.
+        </p>
+        {contentCreationServices.map((service) => (
+          <>
+            {service.name === "Website Copywriting" && (
+              <ul className="list-disc pl-6 space-y-1 text-balance">
+                {service.pricingTiers.map((pricing) => (
+                  <li key={pricing.name}>
+                    <span className="font-bold text-secondary">
+                      {pricing.name}:
+                    </span>
+                    <span className="pl-2">{pricing.info}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </>
+        ))}
+      </section>
 
       {/* Get Started Section */}
       <section className="my-8">

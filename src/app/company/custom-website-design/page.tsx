@@ -5,6 +5,7 @@ import {
   websiteServicesData,
   toolsAndTechnologies,
 } from "@/lib/blog-constants";
+import { companySpecificServices } from "@/lib/constants";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
 
@@ -60,6 +61,31 @@ const CustomWebsite: FC = () => {
           {toolsAndTechnologies.map((tool, index) => (
             <li key={index}>{tool}</li>
           ))}
+        </ul>
+      </section>
+
+      {/* Pricing Tiers */}
+      <section className="my-8">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Pricing Tiers
+        </h2>
+        <p className="my-4">
+          Our company rebranding services are{" "}
+          <strong>tailored to your needs</strong>. Below are our pricing tiers:
+        </p>
+        <ul className="list-disc pl-6 space-y-1 text-balance">
+          {companySpecificServices.map(
+            (service) =>
+              service.name === "Custom Website Design" &&
+              service.pricingTiers.map((tiers, index) => (
+                <li key={index}>
+                  <span className="font-bold text-secondary">
+                    {tiers.name}:
+                  </span>{" "}
+                  {tiers.info}
+                </li>
+              ))
+          )}
         </ul>
       </section>
 

@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { companyRebrandingData } from "@/lib/company-constant";
+import { companySpecificServices } from "@/lib/constants";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
 
@@ -47,34 +48,28 @@ const CompanyRebranding: FC = () => {
         </section>
       ))}
 
-      {/* Pricing Section */}
+      {/* Pricing Tiers */}
       <section className="my-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
           Pricing Tiers
         </h2>
         <p className="my-4">
-          Our company rebranding services are **tailored to your needs**. Below
-          are our pricing tiers:
+          Our company rebranding services are{" "}
+          <strong>tailored to your needs</strong>. Below are our pricing tiers:
         </p>
         <ul className="list-disc pl-6 space-y-1 text-balance">
-          <li>
-            <span className="font-bold text-secondary">Basic Rebranding:</span>{" "}
-            Logo refresh, color scheme update, and minor website adjustments.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Full Rebranding Package:
-            </span>{" "}
-            Comprehensive brand identity overhaul, including website redesign,
-            brand messaging, and marketing collateral.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Enterprise Rebranding:
-            </span>{" "}
-            Large-scale corporate rebranding, internal culture alignment, and
-            full marketing integration.
-          </li>
+          {companySpecificServices.map(
+            (service) =>
+              service.name === "Company Rebranding" &&
+              service.pricingTiers.map((tiers, index) => (
+                <li key={index}>
+                  <span className="font-bold text-secondary">
+                    {tiers.name}:
+                  </span>{" "}
+                  {tiers.info}
+                </li>
+              ))
+          )}
         </ul>
       </section>
 

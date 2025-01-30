@@ -8,9 +8,7 @@ export default function Banner() {
     <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-muted text-center p-3">
       <div className="flex flex-wrap items-center justify-center w-full align-middle gap-x-4">
         <p className="m-0">
-          <strong className="font-semibold">
-            Join Our Team! Exciting Opportunities Await!
-          </strong>
+          <strong>Join Our Team! Exciting Opportunities Await!</strong>
           <svg
             viewBox="0 0 2 2"
             aria-hidden="true"

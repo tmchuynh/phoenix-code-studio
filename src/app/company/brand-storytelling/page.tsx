@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
 import { brandStorytellingData } from "@/lib/company-constant";
+import { companySpecificServices } from "@/lib/constants";
 
 const BrandStorytellingServices: FC = () => {
   const router = useRouter();
@@ -46,33 +47,28 @@ const BrandStorytellingServices: FC = () => {
         </section>
       ))}
 
-      {/* Pricing Section */}
+      {/* Pricing Tiers */}
       <section className="my-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-          Pricing
+          Pricing Tiers
         </h2>
         <p className="my-4">
-          Our brand storytelling services are tailored to fit your **unique
-          business goals**. Pricing varies based on project **complexity, scope,
-          and content deliverables**.
+          Our company rebranding services are{" "}
+          <strong>tailored to your needs</strong>. Below are our pricing tiers:
         </p>
         <ul className="list-disc pl-6 space-y-1 text-balance">
-          <li>
-            <span className="font-bold text-secondary">Basic Package:</span>{" "}
-            Core narrative development and brand messaging.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">Advanced Package:</span>{" "}
-            Multi-channel storytelling strategy, including website and marketing
-            campaigns.
-          </li>
-          <li>
-            <span className="font-bold text-secondary">
-              Enterprise Package:
-            </span>{" "}
-            Full-scale brand storytelling, including origin stories, video
-            scripts, and thought leadership content.
-          </li>
+          {companySpecificServices.map(
+            (service) =>
+              service.name === "Brand Storytelling" &&
+              service.pricingTiers.map((tiers, index) => (
+                <li key={index}>
+                  <span className="font-bold text-secondary">
+                    {tiers.name}:
+                  </span>{" "}
+                  {tiers.info}
+                </li>
+              ))
+          )}
         </ul>
       </section>
 
