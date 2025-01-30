@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
+import Highlight from "@/components/Highlighted";
 
 const ExampleContractsPage: FC = () => {
   const router = useRouter();
@@ -25,7 +26,7 @@ const ExampleContractsPage: FC = () => {
         from milestone-based payments to comprehensive, end-to-end service
         contracts. Our approach ensures clarity, fairness, and alignment with
         your specific goals. If your situation falls outside these examples,
-        don’t worry—we’re ready to create a custom contract that suits your
+        don’t worry - we’re ready to create a custom contract that suits your
         exact needs.
       </p>
       <p>
@@ -38,7 +39,7 @@ const ExampleContractsPage: FC = () => {
       <section className="my-8 flex flex-col justify-between">
         <div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-            1. Company Hiring Phoenix Code Studio
+            1. Companies Hiring Phoenix Code Studio
           </h2>
           <p>
             This contract serves as a comprehensive agreement for companies
@@ -55,7 +56,7 @@ const ExampleContractsPage: FC = () => {
             every detail has been carefully considered to ensure a successful
             partnership.
           </p>
-          <ul>
+          <ul className="list-disc pl-6 space-y-1">
             <li>
               <span className="font-bold text-secondary">Project Scope:</span> A
               comprehensive description of the project, including detailed
@@ -133,7 +134,7 @@ const ExampleContractsPage: FC = () => {
       <section className="my-8 flex flex-col justify-between">
         <div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-            2. Individual Hiring Phoenix Code Studio
+            2. Individuals Hiring Phoenix Code Studio
           </h2>
           <p>
             This contract is specifically designed for individuals seeking to
@@ -150,7 +151,7 @@ const ExampleContractsPage: FC = () => {
             their specific goals and requirements are being met with
             professionalism and care.
           </p>
-          <ul>
+          <ul className="list-disc pl-6 space-y-1">
             <li>
               <span className="font-bold text-secondary">Project Scope:</span> A
               detailed outline of the project goals, expectations, and specific
@@ -231,9 +232,10 @@ const ExampleContractsPage: FC = () => {
           </p>
           <p>
             Reach out to us to discuss your project in detail, and we’ll craft a
-            personalized contract that aligns with your requirements. With a
-            custom-tailored agreement, you can move forward with confidence,
-            knowing that your specific needs are fully addressed.
+            personalized contract that aligns with your requirements. With a{" "}
+            <Highlight>custom-tailored agreement</Highlight>, you can move
+            forward with confidence, knowing that your specific needs are fully
+            addressed.
           </p>
         </div>
         <Button

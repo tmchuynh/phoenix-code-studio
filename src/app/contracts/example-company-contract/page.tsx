@@ -1,115 +1,272 @@
+"use client";
+
+import Highlight from "@/components/Highlighted";
 import { Button } from "@/components/ui/button";
 
-const ContractPage = () => {
+const ServiceAgreementPage = () => {
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto py-6">
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        Service Agreement Contract
+    <main className="w-10/12 md:w-9/12 mx-auto py-10">
+      {/* Title */}
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary text-center mb-6">
+        Service Agreement
       </h1>
 
-      <div className="my-6">
-        <h2 className="text-3xl font-semibold text-secondary">
-          1. Agreement Overview
-        </h2>
+      {/* Agreement Date */}
+      <p className="text-lg text-center text-secondary mb-10">
+        This Service Agreement ("Agreement") is made and entered into as of . .
+        . . . . . . . . . . . . . . . . , by and between:
+      </p>
+
+      {/* Company Information */}
+      <section className="mb-10 space-y-6">
         <p>
-          This Service Agreement ("Agreement") is made and entered into on{" "}
-          <strong>[Date]</strong> by and between:
+          <strong>Company A (Client):</strong> A{" "}
+          <strong>[State/Country]</strong> corporation with its principal place
+          of business at . . . . . . . . . . . . . . . . . . . . . . . . . .
         </p>
-        <ul>
-          <li>
-            <strong>Client Company:</strong> [Client Name]
-          </li>
-          <li>
-            <strong>Service Provider:</strong> [Service Provider Name]
-          </li>
-        </ul>
-      </div>
-
-      <div className="mb-6">
-        <h2 className="text-3xl font-semibold text-secondary">
-          2. Scope of Work
-        </h2>
-        <p>The Service Provider agrees to perform the following services:</p>
-        <ul className="mt-4 text-lg">
-          <li>Provide [specific service or product].</li>
-          <li>Deliver the service as per the agreed timeline.</li>
-          <li>Ensure quality and compliance with industry standards.</li>
-        </ul>
-      </div>
-
-      <div className="mb-6">
-        <h2 className="text-3xl font-semibold text-secondary">
-          3. Terms of Agreement
-        </h2>
         <p>
-          The Service Provider agrees to the following terms and conditions:
+          <strong>Company B (Contractor):</strong> A{" "}
+          <strong>[State/Country]</strong> corporation with its principal place
+          of business at . . . . . . . . . . . . . . . . . . . . . . . . . .
         </p>
-        <ul>
-          <li>
-            <strong>Contract Duration:</strong> [Start Date] to [End Date]
-          </li>
-          <li>
-            <strong>Confidentiality:</strong> Both parties agree to maintain the
-            confidentiality of sensitive information.
-          </li>
-          <li>
-            <strong>Termination Clause:</strong> Either party may terminate this
-            agreement with [X] days' notice.
-          </li>
-        </ul>
-      </div>
+      </section>
 
-      <div className="mb-6">
-        <h2 className="text-3xl font-semibold text-secondary">
-          4. Payment Terms
-        </h2>
-        <p>The Client agrees to pay the Service Provider the following:</p>
-        <ul>
-          <li>
-            <strong>Total Amount:</strong> $[Amount]
-          </li>
-          <li>
-            <strong>Payment Method:</strong> [Method (e.g., bank transfer,
-            check, etc.)]
-          </li>
-          <li>
-            <strong>Payment Schedule:</strong> [Payment terms, e.g., 50%
-            upfront, 50% on completion]
-          </li>
-        </ul>
-      </div>
-
-      <div className="mb-6">
-        <h2 className="text-3xl font-semibold text-secondary">
-          5. Additional Terms
-        </h2>
-        <p>The Service Provider agrees to the following additional terms:</p>
-        <ul>
-          <li>
-            <strong>Warranty:</strong> [Warranty information, if any]
-          </li>
-          <li>
-            <strong>Liability:</strong> [Liability clauses]
-          </li>
-          <li>
-            <strong>Dispute Resolution:</strong> Any disputes will be resolved
-            via [arbitration, mediation, etc.].
-          </li>
-        </ul>
-      </div>
-
-      <div className="mt-8 text-center">
-        <p>
-          By signing below, both parties agree to the terms and conditions
-          outlined in this contract.
-        </p>
-        <div className="flex justify-center gap-12">
-          <Button>Client Signature</Button>
-          <Button>Service Provider Signature</Button>
+      {/* Agreement Sections */}
+      <section className="space-y-10">
+        <div>
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
+            1. SERVICES
+          </h2>
+          <p>
+            1.1 Contractor agrees to provide the following services to the
+            Client:
+            <ul>
+              <li>
+                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+              </li>
+              <li>
+                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+              </li>
+              <li>
+                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+              </li>
+              <li>
+                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+              </li>
+              <li>
+                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+              </li>
+            </ul>
+          </p>
+          <p>
+            1.2 All services shall be performed professionally and in accordance
+            with industry standards.
+          </p>
         </div>
-      </div>
+
+        <div>
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
+            2. COMPENSATION
+          </h2>
+          <p>
+            2.1 The Client agrees to pay the Contractor a total fee of . . . . .
+            . . . . . . . . . . . . . . . . . . . . for the services rendered.
+          </p>
+          <p>
+            2.2 Payments shall be made according to the following schedule:{" "}
+            <ul className="">
+              <li>
+                <span>
+                  <strong>First Payment: </strong>
+                </span>
+                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+                . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+              </li>
+              <li>
+                <strong>Second Payment: </strong> . . . . . . . . . . . . . . .
+                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+                . . . . . . . . . . .
+              </li>
+              <li>
+                <strong>Third Payment: </strong> . . . . . . . . . . . . . . . .
+                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+                . . . . . . . . . .
+              </li>
+              <li>
+                <strong>Final Payment: </strong> . . . . . . . . . . . . . . . .
+                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+                . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+                . . . . . . . . . .
+              </li>
+            </ul>
+          </p>
+          <p>
+            2.3 Late payments shall accrue interest at a rate of{" "}
+            <Highlight>3% per month</Highlight> on any outstanding balance.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
+            3. EXPENSES
+          </h2>
+          <p>
+            3.1 The Client shall not be responsible for reimbursing the
+            Contractor for any work-related expenses incurred in connection with
+            the services provided under this Agreement.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
+            4. OWNERSHIP AND INTELLECTUAL PROPERTY
+          </h2>
+          <p>
+            4.1 Contractor shall retain{" "}
+            <Highlight>complete ownership</Highlight> of all work product,
+            including but not limited to intellectual property, copyrights,
+            trademarks, trade secrets, and patents developed under this
+            Agreement.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
+            5. CONFIDENTIALITY
+          </h2>
+          <p>
+            5.1 The Contractor shall keep all confidential information received
+            from the Client strictly confidential.
+          </p>
+          <p>
+            5.2 This duty of confidentiality shall remain{" "}
+            <Highlight>indefinite</Highlight> and shall not be terminated upon
+            the conclusion of this Agreement.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
+            6. TERM AND TERMINATION
+          </h2>
+          <p>
+            6.1 This Agreement shall commence on{" "}
+            <strong>. . . . . . . . . . . . . . . . . </strong> and continue
+            until the completion of the project.
+          </p>
+          <p>
+            6.2{" "}
+            <Highlight>
+              Neither party may terminate this Agreement early
+            </Highlight>{" "}
+            except in the case of a material breach, fraud, or mutual written
+            agreement.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
+            7. LIABILITY AND INDEMNIFICATION
+          </h2>
+          <p>
+            7.1 The Contractor shall not be liable for any indirect, incidental,
+            or consequential damages arising from the services provided.
+          </p>
+          <p>
+            7.2 The Client agrees to indemnify and hold the Contractor harmless
+            from any third-party claims arising from the use of the services.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-2xl font-semibold text-secondary mb-4">
+            8. GENERAL PROVISIONS
+          </h2>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              <strong>Governing Law:</strong> This Agreement shall be governed
+              by the laws of <Highlight>California</Highlight>.
+            </li>
+            <li>
+              <strong>Entire Agreement:</strong> This Agreement constitutes the
+              entire understanding between the parties and supersedes all prior
+              agreements.
+            </li>
+            <li>
+              <strong>Amendments:</strong> Any modifications must be in writing
+              and signed by both parties.
+            </li>
+            <li>
+              <strong>Severability:</strong> If any provision of this Agreement
+              is found to be invalid, the remainder of the Agreement shall
+              remain in full force and effect.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Signature Section */}
+      <section className="mt-16">
+        <h2 className="text-2xl font-semibold text-secondary mb-6">
+          IN WITNESS WHEREOF, the parties hereto have executed this Agreement as
+          of the Effective Date.
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-8">
+          {/* Client Signature */}
+          <div className="border border-muted p-6 rounded-lg">
+            <h3 className="text-xl font-semibold mb-2">Company A (Client)</h3>
+            <p className="text-sm mb-6">
+              Signature: . . . . . . . . . . . . . . . . . . . . . . . . .{" "}
+            </p>
+            <p className="text-sm">
+              Name: . . . . . . . . . . . . . . . . . . . . . . . . . . . .{" "}
+            </p>
+            <p className="text-sm">
+              Title: . . . . . . . . . . . . . . . . . . . . . . . . . . . .{" "}
+            </p>
+            <p className="text-sm">
+              Date: . . . . . . . . . . . . . . . . . . . . . . . . . . . .{" "}
+            </p>
+          </div>
+
+          {/* Contractor Signature */}
+          <div className="border border-muted p-6 rounded-lg">
+            <h3 className="text-xl font-semibold mb-2">
+              Company B (Contractor)
+            </h3>
+            <p className="text-sm mb-6">
+              Signature: . . . . . . . . . . . . . . . . . . . . . . . . .{" "}
+            </p>
+            <p className="text-sm">
+              Name: . . . . . . . . . . . . . . . . . . . . . . . . . . . .{" "}
+            </p>
+            <p className="text-sm">
+              Title: . . . . . . . . . . . . . . . . . . . . . . . . . . . .{" "}
+            </p>
+            <p className="text-sm">
+              Date: . . . . . . . . . . . . . . . . . . . . . . . . . . . .{" "}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action Button */}
+      <section className="text-center mt-12">
+        <Button variant={"outline"} className="px-6 py-3 text-lg">
+          Download Agreement
+        </Button>
+      </section>
     </main>
   );
 };
 
-export default ContractPage;
+export default ServiceAgreementPage;
