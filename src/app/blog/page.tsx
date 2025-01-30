@@ -141,16 +141,36 @@ const BlogDisplayPage: FC = () => {
     setTimeout(() => setFiltersCleared(false), 4000);
   };
 
-  const topics = Array.from(new Set(blogs.flatMap((blog) => blog.topics)));
   const dates = Array.from(new Set(blogs.map((blog) => blog.date)));
   const authors = Array.from(new Set(blogs.map((blog) => blog.author)));
 
+  const topicCounts: Record<string, number> = blogs.reduce((acc, blog) => {
+    blog.topics.forEach((topic) => {
+      acc[topic] = (acc[topic] || 0) + 1;
+    });
+    return acc;
+  }, {} as Record<string, number>);
+
+  const dateCounts = dates.reduce((acc, date) => {
+    acc[date] = blogs.filter((blog) => blog.date === date).length;
+    return acc;
+  }, {} as Record<string, number>);
+
+  const authorCounts = authors.reduce((acc, author) => {
+    acc[author] = blogs.filter((blog) => blog.author === author).length;
+    return acc;
+  }, {} as Record<string, number>);
+
+  const topics = Object.keys(topicCounts).sort();
+
   const handleTopicChange = (updatedTopics: string[]) => {
     setSelectedTopics(updatedTopics);
+    console.log(updatedTopics);
   };
 
   useEffect(() => {
     handleFilter();
+    console.log(blogs.map((blog) => blog.topics));
   }, [selectedTopics, selectedDates, selectedAuthors, searchQuery]);
 
   function handleOpen(dropdown: "topic" | "date" | "author") {
@@ -187,6 +207,14 @@ const BlogDisplayPage: FC = () => {
       setSelectedDates(selectedDates.filter((d) => d !== date));
     }
     handleOpen("date");
+  };
+
+  const handleTopicClick = (topic: string) => {
+    if (!selectedTopics.includes(topic)) {
+      const updatedTopics = [...selectedTopics, topic];
+      setSelectedTopics(updatedTopics);
+      handleFilter();
+    }
   };
 
   return (
@@ -241,7 +269,8 @@ const BlogDisplayPage: FC = () => {
                           className="ml-2"
                           onClick={() => handleOpen("topic")}
                         >
-                          {topic}
+                          {topic}{" "}
+                          <span className="ml-1">( {topicCounts[topic]} )</span>
                         </label>
                       </div>
                     ))}
@@ -289,10 +318,15 @@ const BlogDisplayPage: FC = () => {
                           />
                           <label
                             htmlFor={date}
-                            className="ml-2"
+                            className={`ml-2 flex items-center ${
+                              selectedDates.includes(date)
+                                ? "font-bold text-accent-2"
+                                : ""
+                            }`}
                             onClick={() => handleOpen("date")}
                           >
-                            {date}
+                            {date}{" "}
+                            <span className="ml-1">( {dateCounts[date]} )</span>
                           </label>
                         </div>
                       ))}
@@ -332,10 +366,17 @@ const BlogDisplayPage: FC = () => {
                         />
                         <label
                           htmlFor={author}
-                          className="ml-2"
-                          onClick={() => handleOpen("author")}
+                          className={`ml-2 flex items-center ${
+                            selectedDates.includes(author)
+                              ? "font-bold text-accent-2"
+                              : ""
+                          }`}
+                          onClick={() => handleOpen("date")}
                         >
-                          {author}
+                          {author}{" "}
+                          <span className="ml-1">
+                            ( {authorCounts[author]} )
+                          </span>
                         </label>
                       </div>
                     ))}
@@ -489,18 +530,30 @@ const BlogDisplayPage: FC = () => {
                     >
                       {blog.title}
                     </Button>
-                    <p className="mb-0">
+                    <p className="mb-0 text-sm">
                       <span>
                         <strong>By:</strong> {blog.author}
                       </span>
                     </p>
-                    <p>
-                      <span className="italic text-xs">{blog.date}</span>
+                    <p className="mt-0">
+                      <span className="italic text-sm">{blog.date}</span>
                     </p>
                     <p className="text-md py-4">{blog.excerpt}</p>
                   </div>
                   <p className="mb-4">
-                    <strong>Topics:</strong> {blog.topics.join(", ")}
+                    <strong>Topics:</strong>{" "}
+                    {blog.topics.map((topic, index) => (
+                      <span key={index}>
+                        <Button
+                          variant="link"
+                          className="p-0 m-0 lowercase"
+                          onClick={() => handleTopicClick(topic)}
+                        >
+                          {topic}
+                        </Button>
+                        {index !== blog.topics.length - 1 && ", "}
+                      </span>
+                    ))}
                   </p>
                 </div>
               </div>
