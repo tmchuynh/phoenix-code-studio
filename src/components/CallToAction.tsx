@@ -9,10 +9,10 @@ const CallToAction = () => {
   };
 
   return (
-    <section className="w-full text-center py-9">
-      <h2 className="text-3xl font-semibold text-primary">
+    <section className="w-9/12 mx-auto space-y-6 py-9">
+      <h1 className="text-3xl md:text-4xl font-bold text-primary">
         Ready to Get Started?
-      </h2>
+      </h1>
       <p className="mt-4">
         We’re thrilled at the opportunity to collaborate on your next project!
         Whether you’re looking to build a stunning website, enhance your digital
@@ -24,7 +24,7 @@ const CallToAction = () => {
         and discover how we can create something extraordinary together. Let’s
         make your vision a reality!
       </p>
-      <Button className="w-1/3 my-3" onClick={navigateToContact}>
+      <Button className="w-1/2 my-3" onClick={navigateToContact}>
         Contact Us
       </Button>
     </section>
