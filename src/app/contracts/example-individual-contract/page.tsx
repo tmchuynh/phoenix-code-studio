@@ -15,7 +15,7 @@ const ContractPage = () => {
           This Service Agreement ("Agreement") is made and entered into on{" "}
           <strong>[Date]</strong> by and between:
         </p>
-        <ul className="list-disc pl-6 space-y-1">
+        <ul className="list-disc pl-6 space-y-1 text-balance">
           <li>
             <strong>Client (Individual):</strong> [Client Name]
           </li>
@@ -30,7 +30,7 @@ const ContractPage = () => {
           2. Scope of Work
         </h2>
         <p>The Service Provider agrees to perform the following services:</p>
-        <ul className="list-disc pl-6 space-y-1">
+        <ul className="list-disc pl-6 space-y-1 text-balance">
           <li>Provide [specific service or product].</li>
           <li>Deliver the service as per the agreed timeline.</li>
           <li>Ensure quality and compliance with industry standards.</li>
@@ -44,7 +44,7 @@ const ContractPage = () => {
         <p>
           The Service Provider agrees to the following terms and conditions:
         </p>
-        <ul className="list-disc pl-6 space-y-1">
+        <ul className="list-disc pl-6 space-y-1 text-balance">
           <li>
             <strong>Contract Duration:</strong> [Start Date] to [End Date]
           </li>
@@ -64,7 +64,7 @@ const ContractPage = () => {
           4. Payment Terms
         </h2>
         <p>The Client agrees to pay the Service Provider the following:</p>
-        <ul className="list-disc pl-6 space-y-1">
+        <ul className="list-disc pl-6 space-y-1 text-balance">
           <li>
             <strong>Total Amount:</strong> $[Amount]
           </li>
@@ -84,7 +84,7 @@ const ContractPage = () => {
           5. Additional Terms
         </h2>
         <p>The Service Provider agrees to the following additional terms:</p>
-        <ul className="list-disc pl-6 space-y-1">
+        <ul className="list-disc pl-6 space-y-1 text-balance">
           <li>
             <strong>Warranty:</strong> [Warranty information, if any]
           </li>

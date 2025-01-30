@@ -35,7 +35,7 @@ const WireframingPrototypingServices: FC = () => {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
             {section.category}
           </h2>
-          <ul className="list-disc pl-6 space-y-1">
+          <ul className="list-disc pl-6 space-y-1 text-balance">
             {section.items.map((item, itemIndex) => (
               <li key={itemIndex}>
                 <span className="font-bold text-secondary">{item.title}:</span>{" "}

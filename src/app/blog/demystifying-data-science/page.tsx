@@ -120,7 +120,7 @@ const BlogPage = () => {
                 </ol>
               </>
             ) : (
-              <ul className="list-disc pl-6 space-y-1">
+              <ul className="list-disc pl-6 space-y-1 text-balance">
                 {categoryItem.items.map((item, itemIndex) => (
                   <li key={itemIndex}>
                     <strong>{item.title}:</strong> {item.description}
@@ -144,7 +144,7 @@ const BlogPage = () => {
             manually.
           </p>
           <p>Some examples of AI-driven data science applications include:</p>
-          <ul className="list-disc pl-6 space-y-1">
+          <ul className="list-disc pl-6 space-y-1 text-balance">
             <li>Chatbots that provide instant customer support</li>
             <li>
               Recommendation systems (Netflix, Amazon, Spotify) that personalize

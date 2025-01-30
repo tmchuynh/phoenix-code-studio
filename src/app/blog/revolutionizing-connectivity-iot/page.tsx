@@ -136,7 +136,7 @@ const BlogPage = () => {
             <h2 className="text-3xl font-semibold mb-6 text-secondary">
               {resource.category}
             </h2>
-            <ul className="list-disc pl-6 space-y-1">
+            <ul className="list-disc pl-6 space-y-1 text-balance">
               {resource.items.map((item, itemIndex) => (
                 <li key={itemIndex}>
                   <strong>{item.title}:</strong> {item.description}

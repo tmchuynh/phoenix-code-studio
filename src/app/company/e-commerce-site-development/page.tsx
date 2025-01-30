@@ -40,7 +40,7 @@ const EcommerceWebsite: FC = () => {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
             {section.category}
           </h2>
-          <ul className="list-disc pl-6 space-y-1">
+          <ul className="list-disc pl-6 space-y-1 text-balance">
             {section.items.map((item, itemIndex) => (
               <li key={itemIndex}>
                 <span className="font-bold text-secondary">{item.title}:</span>{" "}
@@ -60,7 +60,7 @@ const EcommerceWebsite: FC = () => {
           We offer seamless payment integration with secure and trusted
           providers:
         </p>
-        <ul className="list-disc pl-6 space-y-1">
+        <ul className="list-disc pl-6 space-y-1 text-balance">
           {paymentOptions.map((option, index) => (
             <li key={index}>{option}</li>
           ))}
@@ -73,7 +73,7 @@ const EcommerceWebsite: FC = () => {
           Shipping & Fulfillment
         </h2>
         <p>Optimize your logistics and enhance the customer experience with:</p>
-        <ul className="list-disc pl-6 space-y-1">
+        <ul className="list-disc pl-6 space-y-1 text-balance">
           {shippingFulfillment.map((feature, index) => (
             <li key={index}>{feature}</li>
           ))}
@@ -89,7 +89,7 @@ const EcommerceWebsite: FC = () => {
           We leverage cutting-edge technologies to create fast, secure, and
           scalable eCommerce solutions:
         </p>
-        <ul className="list-disc pl-6 space-y-1">
+        <ul className="list-disc pl-6 space-y-1 text-balance">
           {ecommerceTechnologies.map((tech, index) => (
             <li key={index}>{tech}</li>
           ))}

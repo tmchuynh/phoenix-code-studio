@@ -294,7 +294,7 @@ const CustomPlan = () => {
             <h3 className="text-2xl font-semibold text-tertiary mb-2">
               Example 1: Mid-Scale Web Development Project
             </h3>
-            <ul className="list-disc pl-6 space-y-1">
+            <ul className="list-disc pl-6 space-y-1 text-balance">
               <li>
                 <strong className="text-accent-3">Project Scope:</strong> Design
                 and development of a custom website for a growing business,
@@ -325,7 +325,7 @@ const CustomPlan = () => {
             <h3 className="text-2xl font-semibold text-tertiary mb-2">
               Example 2: Large-Scale Mobile App Development
             </h3>
-            <ul className="list-disc pl-6 space-y-1">
+            <ul className="list-disc pl-6 space-y-1 text-balance">
               <li>
                 <strong className="text-accent-3">Project Scope:</strong>{" "}
                 Complete development of a feature-rich mobile app, including
@@ -357,7 +357,7 @@ const CustomPlan = () => {
             <h3 className="text-2xl font-semibold text-tertiary mb-2">
               Example 3: Enterprise Software Integration
             </h3>
-            <ul className="list-disc pl-6 space-y-1">
+            <ul className="list-disc pl-6 space-y-1 text-balance">
               <li>
                 <strong className="text-accent-3">Project Scope:</strong>{" "}
                 Integration of advanced enterprise software into the existing IT
@@ -390,7 +390,7 @@ const CustomPlan = () => {
             <h3 className="text-2xl font-semibold text-tertiary mb-2">
               Example 4: E-Commerce Website Development
             </h3>
-            <ul className="list-disc pl-6 space-y-1">
+            <ul className="list-disc pl-6 space-y-1 text-balance">
               <li>
                 <strong className="text-accent-3">Project Scope:</strong> Design
                 and development of a scalable e-commerce platform with features
@@ -420,7 +420,7 @@ const CustomPlan = () => {
             <h3 className="text-2xl font-semibold text-tertiary mb-2">
               Example 5: SaaS Platform Development
             </h3>
-            <ul className="list-disc pl-6 space-y-1">
+            <ul className="list-disc pl-6 space-y-1 text-balance">
               <li>
                 <strong className="text-accent-3">Project Scope:</strong>{" "}
                 Development of a SaaS platform with user authentication,
