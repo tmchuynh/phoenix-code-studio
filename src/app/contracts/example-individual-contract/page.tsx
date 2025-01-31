@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import Highlight from "@/components/Highlighted";
+import EmphasizeText from "@/components/Highlighted";
 
 const ServiceAgreementPage = () => {
   return (
@@ -110,7 +110,8 @@ const ServiceAgreementPage = () => {
           </p>
           <p>
             2.3 Late payments shall accrue interest at a rate of{" "}
-            <Highlight>3% per month</Highlight> on any outstanding balance.
+            <EmphasizeText>3% per month</EmphasizeText> on any outstanding
+            balance.
           </p>
         </div>
 
@@ -131,10 +132,10 @@ const ServiceAgreementPage = () => {
           </h2>
           <p>
             4.1 Contractor shall retain{" "}
-            <Highlight>complete ownership</Highlight> of all work product,
-            including but not limited to intellectual property, copyrights,
-            trademarks, trade secrets, and patents developed under this
-            Agreement.
+            <EmphasizeText>complete ownership</EmphasizeText> of all work
+            product, including but not limited to intellectual property,
+            copyrights, trademarks, trade secrets, and patents developed under
+            this Agreement.
           </p>
         </div>
 
@@ -148,8 +149,8 @@ const ServiceAgreementPage = () => {
           </p>
           <p>
             5.2 This duty of confidentiality shall remain{" "}
-            <Highlight>indefinite</Highlight> and shall not be terminated upon
-            the conclusion of this Agreement.
+            <EmphasizeText>indefinite</EmphasizeText> and shall not be
+            terminated upon the conclusion of this Agreement.
           </p>
         </div>
 
@@ -164,9 +165,9 @@ const ServiceAgreementPage = () => {
           </p>
           <p>
             6.2{" "}
-            <Highlight>
+            <EmphasizeText>
               Neither party may terminate this Agreement early
-            </Highlight>{" "}
+            </EmphasizeText>{" "}
             except in the case of a material breach, fraud, or mutual written
             agreement.
           </p>
@@ -193,7 +194,7 @@ const ServiceAgreementPage = () => {
           <ul className="list-disc pl-6 space-y-2">
             <li>
               <strong>Governing Law:</strong> This Agreement shall be governed
-              by the laws of <Highlight>California</Highlight>.
+              by the laws of <EmphasizeText>California</EmphasizeText>.
             </li>
             <li>
               <strong>Entire Agreement:</strong> This Agreement constitutes the

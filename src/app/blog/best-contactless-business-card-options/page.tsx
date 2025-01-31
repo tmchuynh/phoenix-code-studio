@@ -3,7 +3,6 @@
 import { Badge } from "@/components/ui/badge";
 import { contactlessCardOptions } from "@/lib/blog-constants";
 import { blogs } from "@/lib/constants";
-import React from "react";
 
 const ContactlessBusinessCardsBlog = () => {
   return (

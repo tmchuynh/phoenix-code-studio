@@ -1,4 +1,5 @@
 "use client";
+
 import AboutSection from "@/components/AboutSection";
 import CallToAction from "@/components/CallToAction";
 import FeaturedBlogs from "@/components/FeaturedBlogs";

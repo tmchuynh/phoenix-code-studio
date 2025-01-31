@@ -1,9 +1,9 @@
 "use client";
 
+import EmphasizeText from "@/components/Highlighted";
 import { Button } from "@/components/ui/button";
-import { FC } from "react";
 import { useRouter } from "next/navigation";
-import Highlight from "@/components/Highlighted";
+import { FC } from "react";
 
 const ExampleContractsPage: FC = () => {
   const router = useRouter();
@@ -233,9 +233,9 @@ const ExampleContractsPage: FC = () => {
           <p>
             Reach out to us to discuss your project in detail, and we’ll craft a
             personalized contract that aligns with your requirements. With a{" "}
-            <Highlight>custom-tailored agreement</Highlight>, you can move
-            forward with confidence, knowing that your specific needs are fully
-            addressed.
+            <EmphasizeText>custom-tailored agreement</EmphasizeText>, you can
+            move forward with confidence, knowing that your specific needs are
+            fully addressed.
           </p>
         </div>
         <Button

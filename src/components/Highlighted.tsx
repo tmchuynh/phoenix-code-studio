@@ -1,6 +1,6 @@
 import React from "react";
 
-const Highlight = ({ children }: { children: React.ReactNode }) => {
+const EmphasizeText = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <span className="underline underline-offset-4 text-primary">
@@ -10,4 +10,4 @@ const Highlight = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default Highlight;
+export default EmphasizeText;

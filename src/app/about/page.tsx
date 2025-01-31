@@ -1,6 +1,7 @@
 "use client";
+
 import CallToAction from "@/components/CallToAction";
-import Highlight from "@/components/Highlighted";
+import EmphasizeText from "@/components/Highlighted";
 import { Button } from "@/components/ui/button";
 import { SidebarSeparator } from "@/components/ui/sidebar";
 import { useRouter } from "next/navigation";
@@ -34,15 +35,15 @@ const aboutUs = () => {
           flourish in it. Just as the lotus rises and blooms, we aim to empower
           your business to thrive in a competitive online world. Our
           comprehensive services include{" "}
-          <Highlight>custom website development</Highlight>,{" "}
-          <Highlight>brand revitalization</Highlight>,{" "}
-          <Highlight>website redesigns</Highlight>, and more all tailored to
-          bring your unique vision to life. From designing visually stunning and
-          highly functional websites to reimagining your brand identity, we
-          focus on crafting solutions that resonate deeply with your audience.
-          Whether you’re starting from scratch or seeking to refresh your
-          existing digital presence, our goal is to translate your business’s
-          core values into designs that inspire and engage.
+          <EmphasizeText>custom website development</EmphasizeText>,{" "}
+          <EmphasizeText>brand revitalization</EmphasizeText>,{" "}
+          <EmphasizeText>website redesigns</EmphasizeText>, and more all
+          tailored to bring your unique vision to life. From designing visually
+          stunning and highly functional websites to reimagining your brand
+          identity, we focus on crafting solutions that resonate deeply with
+          your audience. Whether you’re starting from scratch or seeking to
+          refresh your existing digital presence, our goal is to translate your
+          business’s core values into designs that inspire and engage.
         </p>
 
         <p>
@@ -51,13 +52,13 @@ const aboutUs = () => {
           delivering websites; we create experiences that reflect your
           individuality and tell your story. By prioritizing modern design,
           intuitive functionality, and a personal touch, we ensure your online
-          presence feels <Highlight>approachable</Highlight>,{" "}
-          <Highlight>professional</Highlight>, and{" "}
-          <Highlight>impactful</Highlight>. With a focus on collaboration and
-          innovation, we work closely with you every step of the way to
-          understand your business goals and translate them into a digital
-          presence that drives results. At Phoenix Code Studio, we don’t just
-          build websites; we build partnerships, empowering you to grow and
+          presence feels <EmphasizeText>approachable</EmphasizeText>,{" "}
+          <EmphasizeText>professional</EmphasizeText>, and{" "}
+          <EmphasizeText>impactful</EmphasizeText>. With a focus on
+          collaboration and innovation, we work closely with you every step of
+          the way to understand your business goals and translate them into a
+          digital presence that drives results. At Phoenix Code Studio, we don’t
+          just build websites; we build partnerships, empowering you to grow and
           succeed in the ever-evolving digital landscape.
         </p>
 

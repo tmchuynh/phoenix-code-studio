@@ -1,15 +1,12 @@
 "use client";
 
 import CallToAction from "@/components/CallToAction";
-import { Button } from "@/components/ui/button";
 import { SidebarSeparator } from "@/components/ui/sidebar";
 import {
   companySpecificServices,
   contentCreationServices,
   websiteServices,
 } from "@/lib/constants";
-import { formatCurrency } from "@/lib/utils";
-import router from "next/router";
 import { FC } from "react";
 
 const PricingPage: FC = () => {

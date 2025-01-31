@@ -1,5 +1,5 @@
+import EmphasizeText from "@/components/Highlighted";
 import { Button } from "./ui/button";
-import Highlight from "@/components/Highlighted";
 
 const JoinUs = () => {
   return (
@@ -13,16 +13,17 @@ const JoinUs = () => {
         <span className="underline underline-offset-4 text-primary">
           passionate
         </span>
-        , <Highlight>talented</Highlight> individuals who want to make a real
-        impact in a dynamic and innovative environment. Whether you're a
+        , <EmphasizeText>talented</EmphasizeText> individuals who want to make a
+        real impact in a dynamic and innovative environment. Whether you're a
         developer, designer, marketer, or someone who thrives on solving
         challenges, we have a place for you. By joining our team, you'll be part
-        of a culture that values <Highlight>creativity</Highlight>,{" "}
-        <Highlight>collaboration</Highlight>, and <Highlight>growth</Highlight>.
-        We offer opportunities to work on exciting projects, learn new skills,
-        and contribute to shaping the future of technology and business. Explore
-        our open positions and discover how you can play a key role in our
-        success while advancing your own career.
+        of a culture that values <EmphasizeText>creativity</EmphasizeText>,{" "}
+        <EmphasizeText>collaboration</EmphasizeText>, and{" "}
+        <EmphasizeText>growth</EmphasizeText>. We offer opportunities to work on
+        exciting projects, learn new skills, and contribute to shaping the
+        future of technology and business. Explore our open positions and
+        discover how you can play a key role in our success while advancing your
+        own career.
       </p>
       <p>
         Don’t just work —{" "}
