@@ -1085,39 +1085,183 @@ export const pastProjects: Project[] = [
 
 export const jobPositions: JobPosition[] = [
   {
-    title: "Software Engineer",
+    title: "Executive Assistant",
     description:
-      "Join our team as a Software Engineer to develop scalable web applications using modern frameworks.",
+      "We are looking for a highly organized and detail-oriented Executive Assistant to support senior management with administrative tasks, scheduling, and operational efficiency.",
     responsibilities: [
-      "Develop and maintain web applications",
-      "Collaborate with designers and product managers",
-      "Write clean, maintainable, and efficient code",
-      "Optimize applications for speed and scalability",
+      "Manage calendars, schedule meetings, and handle correspondence",
+      "Coordinate travel arrangements and prepare reports",
+      "Assist in project management and operational support",
+      "Handle confidential information with discretion",
     ],
     qualifications: [
-      "Bachelor’s degree in Computer Science or related field",
-      "Experience with JavaScript frameworks (React, Next.js)",
-      "Strong problem-solving skills",
-      "Familiarity with database management (SQL, NoSQL)",
+      "Proven experience as an Executive Assistant or in a similar role",
+      "Strong communication and organizational skills",
+      "Proficiency in Microsoft Office and project management tools",
+      "Ability to multitask and work independently",
     ],
-    information: "Full-time | Remote or On-site | Competitive salary",
+    information: "Contract | Remote | Flexible schedule",
   },
   {
-    title: "UI/UX Designer",
+    title: "Content Writer",
     description:
-      "We are looking for a creative UI/UX Designer to design intuitive and accessible user experiences.",
+      "We are seeking a skilled Content Writer to create engaging, high-quality content for blogs, websites, product guides, and marketing materials.",
     responsibilities: [
-      "Create wireframes, prototypes, and high-fidelity designs",
-      "Work closely with developers to implement designs",
-      "Conduct user research and usability testing",
-      "Ensure accessibility and responsiveness in designs",
+      "Research and write blog posts, articles, and web content",
+      "Develop compelling product descriptions and technical guides",
+      "Optimize content for SEO and readability",
+      "Collaborate with designers and marketers to produce engaging materials",
     ],
     qualifications: [
-      "Proficiency in Figma, Adobe XD, or Sketch",
-      "Experience with design systems and branding",
-      "Knowledge of HTML/CSS is a plus",
-      "Strong attention to detail and user-centered design principles",
+      "Excellent writing, editing, and proofreading skills",
+      "Experience with SEO principles and keyword optimization",
+      "Ability to adapt writing style for different audiences",
+      "Proficiency in content management systems (WordPress, Webflow, etc.)",
     ],
-    information: "Contract | Hybrid | Flexible schedule",
+    information: "Contract | Remote | Flexible schedule",
+  },
+  {
+    title: "Graphic Designer/Illustrator",
+    description:
+      "We are looking for a creative Graphic Designer/Illustrator to produce stunning visual content for branding, web design, and marketing materials.",
+    responsibilities: [
+      "Create compelling graphics for websites, social media, and print",
+      "Develop illustrations and visual concepts for brand identity",
+      "Work closely with the marketing and web teams to enhance user experience",
+      "Ensure consistency in branding and design across all platforms",
+    ],
+    qualifications: [
+      "Proficiency in Adobe Creative Suite (Photoshop, Illustrator, InDesign)",
+      "Experience in branding, typography, and color theory",
+      "Strong portfolio showcasing design and illustration work",
+      "Knowledge of UI/UX design is a plus",
+    ],
+    information: "Contract | Remote | Flexible schedule",
+  },
+  {
+    title: "Brand Strategist",
+    description:
+      "We are looking for a strategic thinker to lead brand development, positioning, and storytelling efforts for our clients.",
+    responsibilities: [
+      "Define brand identity, messaging, and positioning strategies",
+      "Conduct market research and competitive analysis",
+      "Develop and implement branding campaigns",
+      "Collaborate with designers, writers, and marketing teams",
+    ],
+    qualifications: [
+      "Experience in brand strategy, marketing, or a related field",
+      "Strong understanding of consumer psychology and brand perception",
+      "Excellent communication and storytelling skills",
+      "Ability to translate insights into compelling brand narratives",
+    ],
+    information: "Contract | Remote | Growth opportunities | Flexible schedule",
+  },
+  {
+    title: "Public Relations (PR) Specialist",
+    description:
+      "We are looking for a PR Specialist to enhance brand awareness, manage media relations, and create compelling press content.",
+    responsibilities: [
+      "Develop PR campaigns and media outreach strategies",
+      "Write press releases, speeches, and promotional content",
+      "Manage relationships with journalists and media outlets",
+      "Monitor brand reputation and respond to public inquiries",
+    ],
+    qualifications: [
+      "Experience in public relations, communications, or journalism",
+      "Strong writing and interpersonal skills",
+      "Familiarity with media trends and digital PR strategies",
+      "Ability to handle crisis communication and reputation management",
+    ],
+    information: "Contract | Remote | Growth opportunities | Flexible schedule",
+  },
+  {
+    title: "Sales Representative",
+    description:
+      "We are looking for a dynamic Sales Representative to drive business growth and expand our client base.",
+    responsibilities: [
+      "Identify and reach out to potential clients",
+      "Develop and present sales proposals",
+      "Maintain strong client relationships and follow up on leads",
+      "Achieve sales targets and contribute to company revenue growth",
+    ],
+    qualifications: [
+      "Proven sales experience with a track record of achieving targets",
+      "Excellent communication and negotiation skills",
+      "Understanding of digital services and branding solutions",
+      "Ability to build long-term client relationships",
+    ],
+    information: "Commission-based | Remote | Growth opportunities",
+  },
+  {
+    title: "Cybersecurity Specialist",
+    description:
+      "We are seeking a Cybersecurity Specialist to ensure data security, implement best practices, and protect against cyber threats.",
+    responsibilities: [
+      "Monitor and analyze security threats and vulnerabilities",
+      "Develop and implement cybersecurity policies and protocols",
+      "Conduct security audits and penetration testing",
+      "Train teams on security best practices and risk mitigation",
+    ],
+    qualifications: [
+      "Experience in cybersecurity, network security, or IT security",
+      "Knowledge of security frameworks (ISO 27001, NIST, etc.)",
+      "Familiarity with firewalls, encryption, and ethical hacking",
+      "Cybersecurity certifications (CISSP, CEH, etc.) are a plus",
+    ],
+    information: "Contract | Remote | Growth opportunities",
+  },
+  {
+    title: "AI/Automation Specialist",
+    description:
+      "We are seeking an AI/Automation Specialist to develop intelligent solutions that streamline operations and enhance efficiency.",
+    responsibilities: [
+      "Design and implement AI-driven automation processes",
+      "Work with machine learning models and data analysis",
+      "Optimize business workflows using AI tools and chatbots",
+      "Collaborate with developers to integrate AI into digital products",
+    ],
+    qualifications: [
+      "Experience in AI development, automation, or data science",
+      "Proficiency in Python, TensorFlow, or related AI frameworks",
+      "Knowledge of AI ethics and responsible AI development",
+      "Ability to translate business needs into automated solutions",
+    ],
+    information: "Contract | Remote | Growth opportunities | Flexible schedule",
+  },
+  {
+    title: "Conversion Rate Optimization (CRO) Specialist",
+    description:
+      "We are looking for a CRO Specialist to optimize user experience and increase conversion rates for our digital platforms.",
+    responsibilities: [
+      "Analyze website traffic and user behavior to identify improvement areas",
+      "A/B test landing pages and marketing campaigns",
+      "Develop strategies to enhance customer journeys and engagement",
+      "Collaborate with marketing and web development teams",
+    ],
+    qualifications: [
+      "Experience in CRO, UX research, or digital marketing",
+      "Knowledge of Google Analytics, Hotjar, and A/B testing tools",
+      "Understanding of consumer psychology and digital funnels",
+      "Data-driven approach to optimizing conversion strategies",
+    ],
+    information: "Contract | Remote | Growth opportunities | Flexible schedule",
+  },
+  {
+    title: "Email Marketing Specialist",
+    description:
+      "We are looking for an Email Marketing Specialist to create and manage email campaigns that drive customer engagement and conversions.",
+    responsibilities: [
+      "Develop and execute targeted email marketing campaigns",
+      "Analyze campaign performance and optimize for better engagement",
+      "Manage subscriber lists and segmentation strategies",
+      "Ensure compliance with email marketing regulations (GDPR, CAN-SPAM)",
+    ],
+    qualifications: [
+      "Experience in email marketing and CRM platforms",
+      "Strong copywriting and A/B testing skills",
+      "Knowledge of automation tools and drip campaigns",
+      "Analytical mindset with a focus on data-driven improvements",
+    ],
+    information: "Contract | Remote | Growth opportunities | Flexible schedule",
   },
 ];
