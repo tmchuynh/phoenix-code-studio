@@ -8,6 +8,12 @@ export const about: Menu[] = [
       "Learn more about our mission, vision, and what drives us forward.",
   },
   {
+    title: "Careers",
+    href: "/careers",
+    description:
+      "Learn more about our mission, vision, and what drives us forward.",
+  },
+  {
     title: "Blogs",
     href: "/blog",
     description:
