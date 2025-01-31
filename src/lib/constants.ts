@@ -1,4 +1,4 @@
-import { BlogPost, FAQ, Menu, PaymentPlan, Project, Services, Testimonial } from "./interfaces";
+import { BlogPost, FAQ, JobPosition, Menu, PaymentPlan, Project, Services, Testimonial } from "./interfaces";
 
 export const about: Menu[] = [
   {
@@ -1074,5 +1074,44 @@ export const pastProjects: Project[] = [
     languages: ["JavaScript", "HTML", "CSS"],
     technologies: ["Bootstrap CSS", "Chart.js"],
     githubLink: "https://github.com/tmchuynh/firstgalaxy"
+  },
+];
+
+export const jobPositions: JobPosition[] = [
+  {
+    title: "Software Engineer",
+    description:
+      "Join our team as a Software Engineer to develop scalable web applications using modern frameworks.",
+    responsibilities: [
+      "Develop and maintain web applications",
+      "Collaborate with designers and product managers",
+      "Write clean, maintainable, and efficient code",
+      "Optimize applications for speed and scalability",
+    ],
+    qualifications: [
+      "Bachelor’s degree in Computer Science or related field",
+      "Experience with JavaScript frameworks (React, Next.js)",
+      "Strong problem-solving skills",
+      "Familiarity with database management (SQL, NoSQL)",
+    ],
+    information: "Full-time | Remote or On-site | Competitive salary",
+  },
+  {
+    title: "UI/UX Designer",
+    description:
+      "We are looking for a creative UI/UX Designer to design intuitive and accessible user experiences.",
+    responsibilities: [
+      "Create wireframes, prototypes, and high-fidelity designs",
+      "Work closely with developers to implement designs",
+      "Conduct user research and usability testing",
+      "Ensure accessibility and responsiveness in designs",
+    ],
+    qualifications: [
+      "Proficiency in Figma, Adobe XD, or Sketch",
+      "Experience with design systems and branding",
+      "Knowledge of HTML/CSS is a plus",
+      "Strong attention to detail and user-centered design principles",
+    ],
+    information: "Contract | Hybrid | Flexible schedule",
   },
 ];

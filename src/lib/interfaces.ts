@@ -70,3 +70,11 @@ export interface Project {
   githubLink?: string;
   liveLink?: string;
 }
+
+export interface JobPosition {
+  title: string;
+  description: string;
+  responsibilities: string[];
+  qualifications: string[];
+  information: string;
+}
