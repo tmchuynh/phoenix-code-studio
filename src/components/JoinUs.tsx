@@ -4,9 +4,9 @@ import { Button } from "./ui/button";
 const JoinUs = () => {
   return (
     <section className="py-16 w-10/12 mx-auto text-balance text-end space-y-7">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
+      <h1 className="text-3xl md:text-4xl font-bold text-primary">
         Come Be a Part of Our Team
-      </h2>
+      </h1>
       <p>
         Ready to take your career to the next level? At our company, we're
         looking for <EmphasizeText>passionate</EmphasizeText>,{" "}
