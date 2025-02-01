@@ -59,7 +59,7 @@ export interface BlogPost {
 
 export interface Project {
   title: string;
-  img: string[];
+  img?: string[];
   featured: boolean;
   description: string;
   short: string;

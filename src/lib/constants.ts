@@ -1053,22 +1053,32 @@ export const pastProjects: Project[] = [
     languages: ["HTML", "TypeScript"],
     frameworks: ["Next.js", "React", "jQuery"],
     technologies: ["MySQL", "Sequelize", "Next-Auth", "localStorage", "Axios"],
-    githubLink: "https://github.com/tmchuynh/knowledge_knockout"
+    githubLink: "https://github.com/tmchuynh/knowledge_knockout",
+  },
+  {
+    title: "Bootstrap Website Mock",
+    img: ["/images/bootstrap-1.png", "/images/bootstrap-2.png", "/images/bootstrap-3.png", "/images/bootstrap-4.png"],
+    featured: true,
+    description: "This is a simple Next.js project.It's a web-based quiz platform designed to offer a variety of quizzes across multiple subjects, including Chemistry, History, Math, and more. The application supports user registration, tracks progress, and allows users to select quizzes based on difficulty and subject. Users can register, reset their passwords, and manage their profiles with the ability to update personal information and choose default profile pictures. The application includes features like quiz progress tracking, score tracking, and a leaderboard to encourage competition. It also stores quiz data in localStorage, ensuring users can resume where they left off. Built with a responsive UI and accessibility features, the app provides a seamless experience across devices. Data management is handled using MySQL, Sequelize, and Next-Auth for secure user authentication and information retrieval.",
+    short: "This Next.js app, a conversion of Quizlet-Plus, offers quizzes in subjects like Chemistry, History, and Math. It features user registration, progress tracking, profile management, and a leaderboard. Data is stored in localStorage, with MySQL, Sequelize, and Next-Auth handling authentication. The app is responsive and includes accessibility features for a seamless experience.",
+    tags: ["Mock Up", "Dynamic", "Data Filtering"],
+    languages: ["HTML", "JavaScript", "CSS", "SCSS"],
+    frameworks: ["Bootstrap CSS", "jQuery"],
+    githubLink: "https://github.com/tmchuynh/Bootstrap-Icon-Mock",
   },
   {
     title: "Military Fitness Calculator",
-    img: ["/images/iac.png", "/images/iac-1.png", "/images/iac-website.png", "/images/iac-2.png"],
     featured: true,
-    description: "The International Activities Club (IAC) website is a user-friendly platform that showcases the organization's educational programs and after-school activities. It highlights the A.R.C. Initiative, focusing on hands-on learning and real-world application of classroom knowledge. The site provides detailed information about the diverse extracurricular options, such as chess, sports, and creative writing, offered to students from 1st grade through high school. With easy navigation, the website ensures parents and schools can explore IAC’s services and find enriching learning opportunities for students.",
-    short: "The IAC website highlights educational programs, the A.R.C. Initiative, and after-school activities like chess, sports, and creative writing, offering enriching opportunities for students. It’s designed for easy navigation by parents and schools to explore IAC’s services.",
+    description: "Army physical fitness test score is calculated by assigning a number of points to doing sit-ups, push-ups, and the time in which you do a 2-mile run. The maximum APFT score is 100 points per discipline, which gives a total of 300 points. To pass the test, it is required to get at least 60 points (60%) in each category. This means that the minimum total score is 180 points. The APFT calculator shows the overall score in the last field. The US Army service members are also obliged to meet body fat standards which take height, neck, waist, and hip measurements into consideration.",
+    short: "It is obligatory for US Army service members to go through the fitness test twice a year. It is designed so that soldiers can prove their muscular strength, endurance, and cardiovascular respiratory fitness.",
     tags: ["Educational", "Dynamic"],
     languages: ["JavaScript", "HTML", "CSS"],
-    frameworks: ["Node.js", "jQuery"],
-    technologies: ["Materialize", "Tilt.js",],
-    githubLink: "https://github.com/tmchuynh/Military-Fitness-Calculator"
+    frameworks: ["Node.js", "jQuery", "Materialize CSS"],
+    technologies: ["vanilla-tilt.js", "Ajax"],
+    githubLink: "https://github.com/tmchuynh/Military-Fitness-Calculator",
   },
   {
-    title: "Company Website",
+    title: "IAC Company Website",
     img: ["/images/iac.png", "/images/iac-1.png", "/images/iac-website.png", "/images/iac-2.png"],
     featured: true,
     description: "The International Activities Club (IAC) website is a user-friendly platform that showcases the organization's educational programs and after-school activities. It highlights the A.R.C. Initiative, focusing on hands-on learning and real-world application of classroom knowledge. The site provides detailed information about the diverse extracurricular options, such as chess, sports, and creative writing, offered to students from 1st grade through high school. With easy navigation, the website ensures parents and schools can explore IAC’s services and find enriching learning opportunities for students.",
@@ -1080,7 +1090,17 @@ export const pastProjects: Project[] = [
     liveLink: "https://iacafterschools.com/",
   },
   {
-    title: "Company Website",
+    title: "Emoji Finder",
+    featured: true,
+    description: "The International Activities Club (IAC) website is a user-friendly platform that showcases the organization's educational programs and after-school activities. It highlights the A.R.C. Initiative, focusing on hands-on learning and real-world application of classroom knowledge. The site provides detailed information about the diverse extracurricular options, such as chess, sports, and creative writing, offered to students from 1st grade through high school. With easy navigation, the website ensures parents and schools can explore IAC’s services and find enriching learning opportunities for students.",
+    short: "The IAC website highlights educational programs, the A.R.C. Initiative, and after-school activities like chess, sports, and creative writing, offering enriching opportunities for students. It’s designed for easy navigation by parents and schools to explore IAC’s services.",
+    tags: ["Fun", "Dynamic"],
+    languages: ["JavaScript", "HTML", "CSS"],
+    technologies: ["jest-dom", "React"],
+    githubLink: "https://github.com/tmchuynh/Emoji-Finder",
+  },
+  {
+    title: "FirstGalaxy Company Website",
     img: ["/images/firstgalaxy-website.png", "/images/firstgalaxy.png", "/images/firstgalaxy-1.png", "/images/firstgalaxy-2.png"],
     featured: false,
     description: `
@@ -1091,7 +1111,17 @@ export const pastProjects: Project[] = [
     tags: ["Real Estate", "Data Filtering", "Dynamic"],
     languages: ["JavaScript", "HTML", "CSS", "jQuery"],
     technologies: ["Bootstrap CSS", "Chart.js"],
-    githubLink: "https://github.com/tmchuynh/firstgalaxy"
+    githubLink: "https://github.com/tmchuynh/firstgalaxy",
+  },
+  {
+    title: "Chess Game",
+    featured: true,
+    description: "The code creates a 2D array of points. The first row is the x-axis and the second row is the y-axis. Each point in the array represents an evaluation of white's king position. The first value in each point is black's evaluation of white's king position, and the second value is white's evaluation of black's king position. [2, 3] evaluates to 0 for both values because it falls on both axes (x and y). [1, 2] evaluates to -1 for both values because it falls on both axes (x and y). [3, 4] evaluates to -4 for white but +5 for black because it falls on only.",
+    short: `chessboard.js is a standalone JavaScript Chess Board. It is designed to be "just a board" and expose a powerful API so that it can be used in different ways.The code starts by creating a board and setting up the game. The positionCount variable is used to keep track of how many chess pieces are on the board. var pawnEvalWhite = [ [0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [5.0, 5.0, 5.0, 5.0], [1., 1., 2., 3.]] var knightEval = [ [-5., -4., -3.]] var bishopEvalWhite = [ [-2., -1.]] var rookEvalWhite = [ [-2.]`,
+    tags: ["Fun", "Dynamic"],
+    languages: ["JavaScript", "HTML", "CSS"],
+    technologies: ["Chessboard.js", "Node.js"],
+    githubLink: "https://github.com/tmchuynh/Chess-Game",
   },
 ];
 
