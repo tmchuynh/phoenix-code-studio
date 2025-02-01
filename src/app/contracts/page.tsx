@@ -31,8 +31,12 @@ const ExampleContractsPage: FC = () => {
       </p>
       <p>
         Take a look at the scenarios below to see how we can help structure a
-        contract that works for you. If you have questions or need something
-        more specific, reach out to us for a personalized consultation.
+        contract that works for you.If you have questions or need something more
+        specific,{" "}
+        <Button variant={"link"} className="p-0 m-0 h-fit">
+          reach out to us for a personalized consultation
+        </Button>
+        .
       </p>
 
       {/* Company Contract */}
@@ -67,8 +71,7 @@ const ExampleContractsPage: FC = () => {
               <span className="font-bold text-secondary">Payment Terms:</span> A
               structured payment plan, typically including an initial deposit,
               milestone payments tied to project phases, and a final payment
-              upon project completion. Options for flexible payment terms may be
-              included.
+              upon project completion.
             </li>
             <li>
               <span className="font-bold text-secondary">
@@ -84,13 +87,6 @@ const ExampleContractsPage: FC = () => {
               Clearly defined project phases, deadlines, and milestones, with
               built-in checkpoints for client review and feedback to ensure
               alignment.
-            </li>
-            <li>
-              <span className="font-bold text-secondary">
-                Termination Clause:
-              </span>{" "}
-              Specific conditions under which the contract can be terminated by
-              either party, including notice periods and any associated costs.
             </li>
             <li>
               <span className="font-bold text-secondary">
@@ -239,7 +235,7 @@ const ExampleContractsPage: FC = () => {
           </p>
         </div>
         <Button
-          variant="outline"
+          variant="secondary"
           className="mt-4"
           onClick={() => {
             router.push("/contact-us");
