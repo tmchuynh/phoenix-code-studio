@@ -24,7 +24,11 @@ const CallToAction = () => {
         and discover how we can create something extraordinary together. Let’s
         make your vision a reality!
       </p>
-      <Button className="w-1/2 my-3" onClick={navigateToContact}>
+      <Button
+        className="w-1/2 my-3"
+        variant={"secondary"}
+        onClick={navigateToContact}
+      >
         Contact Us
       </Button>
     </section>

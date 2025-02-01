@@ -3,8 +3,8 @@ import { Button } from "./ui/button";
 
 const JoinUs = () => {
   return (
-    <section className="py-16 w-10/12 mx-auto text-balance text-center space-y-7">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
+    <section className="py-16 w-10/12 mx-auto text-balance text-end space-y-7">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
         Come Be a Part of Our Team
       </h2>
       <p>
@@ -35,6 +35,7 @@ const JoinUs = () => {
 
       <Button
         className="my-3 w-1/2"
+        variant={"secondary"}
         onClick={() => (window.location.href = "/careers")}
       >
         View Open Positions

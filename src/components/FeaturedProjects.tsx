@@ -39,7 +39,11 @@ const FeaturedProjects = () => {
         )}
       </div>
       <div className="text-center mt-8">
-        <Button variant={"tertiary"} onClick={navigateToPastProjects}>
+        <Button
+          variant={"tertiary"}
+          className="w-1/2 my-3"
+          onClick={navigateToPastProjects}
+        >
           View Our Past Projects
         </Button>
       </div>

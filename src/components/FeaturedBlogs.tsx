@@ -36,7 +36,7 @@ const FeaturedBlogs = () => {
                   </p>
                 </div>
                 <Button
-                  variant={"outline"}
+                  variant={"accent"}
                   onClick={() => {
                     router.push(blog.slug);
                   }}
@@ -49,7 +49,11 @@ const FeaturedBlogs = () => {
         )}
       </div>
       <div className="text-center mt-8">
-        <Button variant={"tertiary"} onClick={navigateToBlogs}>
+        <Button
+          variant={"tertiary"}
+          className="w-1/2 my-3"
+          onClick={navigateToBlogs}
+        >
           Read Our Blogs
         </Button>
       </div>
