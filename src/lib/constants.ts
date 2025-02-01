@@ -15,7 +15,7 @@ export const about: Menu[] = [
   },
   {
     title: "Blogs",
-    href: "/blog",
+    href: "/blogs",
     description:
       "Stay updated with the latest news, tips, and insights from our blog.",
   },
@@ -873,7 +873,7 @@ export const blogs: BlogPost[] = [
     topics: ["Design", "Software Engineer"],
     excerpt:
       "User experience (UX) is one of the most important factors when designing a website. It directly impacts how users interact with your website, and ultimately affects conversion rates.",
-    slug: "/blog/importance-of-user-experience",
+    slug: "/blogs/importance-of-user-experience",
   },
   {
     title: "Books to Read as a Developer",
@@ -884,7 +884,7 @@ export const blogs: BlogPost[] = [
     topics: ["Self-Development", "Software Engineer", "Career"],
     excerpt:
       "A career in tech demands constant learning and growth. But isn’t that true for any career? After all, continuous improvement is the key to success.",
-    slug: "/blog/books-to-read-as-developer",
+    slug: "/blogs/books-to-read-as-developer",
   },
   {
     title: "Who's the Better Hire? - Jack of All Trades OR Master of One",
@@ -895,7 +895,7 @@ export const blogs: BlogPost[] = [
     topics: ["Career"],
     excerpt:
       `Even though "jack of all trades" sometimes is used as an insult, it did not begin as one. The complete saying goes "A jack of all trades is a master of none, but oftentimes better than a master of one."`,
-    slug: "/blog/jack-of-all-trades-or-master-of-one",
+    slug: "/blogs/jack-of-all-trades-or-master-of-one",
   },
   {
     title: "Best Contactless Business Card Options",
@@ -906,7 +906,7 @@ export const blogs: BlogPost[] = [
     topics: ["Career", "Resources"],
     excerpt:
       `Contactless business cards are a modern, eco-friendly alternative to paper cards, allowing professionals to share contact details, social media profiles, and more with a simple tap or scan.`,
-    slug: "/blog/best-contactless-business-card-options",
+    slug: "/blogs/best-contactless-business-card-options",
   },
   {
     title: "Why Every Developer Should Write",
@@ -917,7 +917,7 @@ export const blogs: BlogPost[] = [
     topics: ["Career", "Self-Development"],
     excerpt:
       `"In fact, the importance of writing has perhaps increased in the last decade or so, thanks to trends in technology...In matters of business, when every second counts, strong writing makes the difference between smooth operations and clumsy footing."`,
-    slug: "/blog/why-every-developer-should-write",
+    slug: "/blogs/why-every-developer-should-write",
   },
   {
     title: "How Tailwind CSS Can Speed Up Your Development Process",
@@ -928,7 +928,7 @@ export const blogs: BlogPost[] = [
     topics: ["Software Engineer", "Design"],
     excerpt:
       "Tailwind CSS is a utility-first CSS framework that provides a highly customizable approach to building modern user interfaces. In this blog post, we'll explore how it can speed up your development process.",
-    slug: "/blog/how-tailwind-css-can-speed-up-your-development",
+    slug: "/blogs/how-tailwind-css-can-speed-up-your-development",
   },
   {
     title: "The Future of JavaScript Frameworks",
@@ -939,7 +939,7 @@ export const blogs: BlogPost[] = [
     topics: ["Resources", "Software Engineer"],
     excerpt:
       "With the rapid evolution of JavaScript frameworks like React, Vue, and Angular, it's important to stay up-to-date with the latest trends. This article explores the future of JavaScript frameworks.",
-    slug: "/blog/future-of-javascript-frameworks",
+    slug: "/blogs/future-of-javascript-frameworks",
   },
   {
     title: "Why Accessibility Matters in Web Development",
@@ -950,7 +950,7 @@ export const blogs: BlogPost[] = [
     topics: ["Accessibility", "Design", "Software Engineer"],
     excerpt:
       "Accessibility should be a priority in every web development project. Ensuring that your website is usable by people with disabilities opens your content to a wider audience and improves user satisfaction.",
-    slug: "/blog/why-accessibility-matters",
+    slug: "/blogs/why-accessibility-matters",
   },
   {
     title: "Decoding Blockchain: Exploring the World of Decentralized Systems",
@@ -961,7 +961,7 @@ export const blogs: BlogPost[] = [
     topics: ["Blockchain", "Resources"],
     excerpt:
       "Blockchain technology is transforming industries by providing secure, decentralized systems. Discover the fundamentals and future potential of blockchain in this blog.",
-    slug: "/blog/decoding-blockchain-decentralized-systems",
+    slug: "/blogs/decoding-blockchain-decentralized-systems",
   },
   {
     title: "Demystifying Data Science: Transforming Data into Actionable Insights",
@@ -972,7 +972,7 @@ export const blogs: BlogPost[] = [
     topics: ["Data Science", "Analytics", "Machine Learning"],
     excerpt:
       "Data science is changing how we solve problems and make decisions. Learn how data scientists turn raw data into insights that drive success.",
-    slug: "/blog/demystifying-data-science",
+    slug: "/blogs/demystifying-data-science",
   },
   {
     title: "Revolutionizing Connectivity: Innovations in IoT Development",
@@ -983,7 +983,7 @@ export const blogs: BlogPost[] = [
     topics: ["Innovation"],
     excerpt:
       "The Internet of Things (IoT) is connecting the world like never before. Explore how IoT innovations are transforming industries and daily life.",
-    slug: "/blog/revolutionizing-connectivity-iot",
+    slug: "/blogs/revolutionizing-connectivity-iot",
   },
   {
     title: "Creative Data Harvesting: The Wonders of Web Scraping",
@@ -994,7 +994,7 @@ export const blogs: BlogPost[] = [
     topics: ["Data Science", "Software Engineer", "Analytics"],
     excerpt:
       "Web scraping opens up endless possibilities for collecting and analyzing data. Dive into the ethical and technical aspects of this powerful technique.",
-    slug: "/blog/creative-data-harvesting-web-scraping",
+    slug: "/blogs/creative-data-harvesting-web-scraping",
   },
   {
     title: "Behind the Code: Insights into the World of Tech Startups",
@@ -1005,7 +1005,7 @@ export const blogs: BlogPost[] = [
     topics: ["Entrepreneurship", "Innovation"],
     excerpt:
       "Tech startups are driving innovation in the digital age. Explore the challenges and successes behind the scenes of these groundbreaking companies.",
-    slug: "/blog/insights-into-tech-startups",
+    slug: "/blogs/insights-into-tech-startups",
   },
   {
     title: "Navigating the Digital Revolution: Emerging Tech Trends",
@@ -1016,7 +1016,7 @@ export const blogs: BlogPost[] = [
     topics: ["Innovation"],
     excerpt:
       "Stay ahead of the curve with a look at the latest technology trends reshaping the digital landscape and industries worldwide.",
-    slug: "/blog/navigating-tech-trends",
+    slug: "/blogs/navigating-tech-trends",
   },
   {
     title: "Mastering User-Friendly Design: Gems of GUI Development",
@@ -1027,7 +1027,7 @@ export const blogs: BlogPost[] = [
     topics: ["Design", "Software Engineer", "Design"],
     excerpt:
       "Great graphical user interfaces (GUIs) are key to intuitive user experiences. Discover tips and techniques for designing user-friendly interfaces.",
-    slug: "/blog/mastering-gui-design",
+    slug: "/blogs/mastering-gui-design",
   },
   {
     title: "From Startup Garage to Tech Giant: Stories of Tech Entrepreneurs",
@@ -1038,7 +1038,7 @@ export const blogs: BlogPost[] = [
     topics: ["Entrepreneurship", "Innovation"],
     excerpt:
       "Tech entrepreneurs are changing the world. Explore inspiring stories of how industry disruptors started from scratch and achieved greatness.",
-    slug: "/blog/stories-of-tech-entrepreneurs",
+    slug: "/blogs/stories-of-tech-entrepreneurs",
   },
 ];
 
