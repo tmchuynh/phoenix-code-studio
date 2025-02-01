@@ -10,17 +10,24 @@ import {
 } from "@/lib/constants";
 import { formatCurrency } from "@/lib/utils";
 import useMediumScreen from "@/lib/useMediumScreen";
+import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 
 const ServicesPage: FC = () => {
   const router = useRouter();
   const isMediumScreen = useMediumScreen();
 
   const navigateToCompanyService = (serviceName: string) => {
-    router.push(`/company/${serviceName.toLowerCase().replace(/ /g, "-")}`);
+    router.push(
+      `/comapny-specific-services/${serviceName
+        .toLowerCase()
+        .replace(/ /g, "-")}`
+    );
   };
 
   const navigateToWebService = (serviceName: string) => {
-    router.push(`/web/${serviceName.toLowerCase().replace(/ /g, "-")}`);
+    router.push(
+      `/website-services/${serviceName.toLowerCase().replace(/ /g, "-")}`
+    );
   };
 
   const navigateToContentService = (serviceName: string) => {
@@ -29,11 +36,12 @@ const ServicesPage: FC = () => {
       .replace(/ /g, "-")
       .replace(/\//g, "-");
 
-    router.push(`/content/${formattedServiceName}`);
+    router.push(`/content-creation-services/${formattedServiceName}`);
   };
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
+      <DynamicBreadcrumb />
       {/* Introduction Section */}
       <section className="mb-8">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">

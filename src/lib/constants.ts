@@ -90,19 +90,19 @@ export const paymentOptions: Menu[] = [
 export const websites: Menu[] = [
   {
     title: "SEO Optimization",
-    href: "/web/seo-optimization",
+    href: "/website-services/seo-optimization",
     description:
       "Boost your website's visibility with strategies to improve search engine rankings.",
   },
   {
     title: "User Experience (UX) Design",
-    href: "/web/user-experience-design",
+    href: "/website-services/user-experience-design",
     description:
       "Craft intuitive and engaging designs that enhance user satisfaction and accessibility.",
   },
   {
     title: "Wireframing & Prototyping",
-    href: "/web/wireframing-&-prototyping",
+    href: "/website-services/wireframing-&-prototyping",
     description:
       "Visualize and test design concepts through effective wireframes and prototypes.",
   },
@@ -111,67 +111,67 @@ export const websites: Menu[] = [
 export const content: Menu[] = [
   {
     title: "Website Copywriting",
-    href: "/content/website-copywriting",
+    href: "/content-creation-services/website-copywriting",
     description:
       "Create compelling and optimized website content that drives engagement and conversions.",
   },
   {
     title: "Blog Writing",
-    href: "/content/blog-writing",
+    href: "/content-creation-services/blog-writing",
     description:
       "Craft informative and engaging blog posts to attract and retain your audience.",
   },
   {
     title: "Newsletters",
-    href: "/content/newsletters",
+    href: "/content-creation-services/newsletters",
     description:
       "Develop clear and detailed guides or manuals to help users understand your products.",
   },
   {
     title: "Technical Writing",
-    href: "/content/technical-writing",
+    href: "/content-creation-services/technical-writing",
     description:
       "Produce precise and structured documentation for technical processes and tools.",
   },
   {
     title: "Study Guides",
-    href: "/content/study-guide-creation",
+    href: "/content-creation-services/study-guide-creation",
     description:
       "Design and develop comprehensive online courses to educate and inspire learners.",
   },
   {
     title: "Tutorial Creation",
-    href: "/content/tutorial-creation",
+    href: "/content-creation-services/tutorial-creation",
     description:
       "Create step-by-step tutorials to guide users through tasks and improve understanding.",
   },
   {
     title: "Product Guides/Manuals",
-    href: "/content/product-guides-manuals",
+    href: "/content-creation-services/product-guides-manuals",
     description:
       "Develop clear and detailed guides or manuals to help users understand your products.",
   },
   {
     title: "Brochures and/or Flyers",
-    href: "/content/brochures-and-or-flyers",
+    href: "/content-creation-services/brochures-and-or-flyers",
     description:
       "Create compelling and optimized website content that drives engagement and conversions.",
   },
   {
     title: "Training Manual & Onboarding Paperwork",
-    href: "/content/training-manual-and-onboarding-paperwork-creation",
+    href: "/content-creation-services/training-manual-and-onboarding-paperwork-creation",
     description:
       "Create compelling and optimized website content that drives engagement and conversions.",
   },
   {
     title: "Online Courses",
-    href: "/content/online-courses",
+    href: "/content-creation-services/online-courses",
     description:
       "Design and develop comprehensive online courses to educate and inspire learners.",
   },
   {
     title: "eBooks",
-    href: "/content/ebook-creation",
+    href: "/content-creation-services/ebook-creation",
     description:
       "Create compelling and optimized website content that drives engagement and conversions.",
   },
@@ -180,37 +180,37 @@ export const content: Menu[] = [
 export const companies: Menu[] = [
   {
     title: "Company Rebranding",
-    href: "/company/company-rebranding",
+    href: "/comapny-specific-services/company-rebranding",
     description:
       "Transform your company’s identity with a refreshed logo, messaging, and brand strategy.",
   },
   {
     title: "Brand Storytelling",
-    href: "/company/brand-storytelling",
+    href: "/comapny-specific-services/brand-storytelling",
     description:
       "Craft compelling narratives to communicate your brand's mission, vision, and values.",
   },
   {
     title: "Custom Website Design",
-    href: "/company/custom-website-design",
+    href: "/comapny-specific-services/custom-website-design",
     description:
       "Create a unique, user-focused website tailored to your brand’s needs and goals.",
   },
   {
     title: "E-Commerce Site Development",
-    href: "/company/e-commerce-site-development",
+    href: "/comapny-specific-services/e-commerce-site-development",
     description:
       "Develop seamless online shopping experiences to boost sales and customer engagement.",
   },
   {
     title: "Single-Page Applications (SPAs)",
-    href: "/company/single-page-application",
+    href: "/comapny-specific-services/single-page-application",
     description:
       "Build fast, dynamic web applications with intuitive user interfaces and streamlined performance.",
   },
   {
     title: "Database Management",
-    href: "/company/database-management",
+    href: "/comapny-specific-services/database-management",
     description:
       "Ensure secure and efficient management of your data with scalable database solutions.",
   },

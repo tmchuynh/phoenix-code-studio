@@ -1,6 +1,7 @@
 "use client";
 
 import EmphasizeText from "@/components/Highlighted";
+import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { jobPositions } from "@/lib/constants";
 import { useRouter } from "next/navigation";
@@ -11,6 +12,7 @@ const JobListingsPage: FC = () => {
 
   return (
     <main className="w-10/12 md:w-9/12 mx-auto py-10">
+      <DynamicBreadcrumb />
       {/* Page Title */}
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary text-center mb-10">
         Open Positions

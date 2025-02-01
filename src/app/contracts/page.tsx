@@ -1,6 +1,7 @@
 "use client";
 
 import EmphasizeText from "@/components/Highlighted";
+import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
@@ -10,6 +11,7 @@ const ExampleContractsPage: FC = () => {
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
+      <DynamicBreadcrumb />
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Example Contracts
       </h1>

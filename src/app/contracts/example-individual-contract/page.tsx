@@ -2,10 +2,12 @@
 
 import { Button } from "@/components/ui/button";
 import EmphasizeText from "@/components/Highlighted";
+import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 
 const ServiceAgreementPage = () => {
   return (
     <main className="w-10/12 md:w-9/12 mx-auto py-10">
+      <DynamicBreadcrumb />
       {/* Title */}
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary text-center mb-6">
         Service Agreement

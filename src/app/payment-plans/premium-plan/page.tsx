@@ -1,5 +1,6 @@
 "use client";
 import CallToAction from "@/components/CallToAction";
+import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
 
@@ -8,6 +9,7 @@ const PremiumPlan = () => {
   const isMediumScreen = useMediumScreen();
   return (
     <main className="my-16 w-11/12 mx-auto">
+      <DynamicBreadcrumb />
       {/* Page Header */}
       <section className="mb-8">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">

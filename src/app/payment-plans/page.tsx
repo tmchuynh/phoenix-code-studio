@@ -5,6 +5,7 @@ import { FC, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { paymentPlans } from "@/lib/constants";
 import { useTheme } from "next-themes";
+import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 
 const PaymentPlansPage: FC = () => {
   const router = useRouter();
@@ -17,6 +18,7 @@ const PaymentPlansPage: FC = () => {
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
+      <DynamicBreadcrumb />
       {/* Page Header */}
       <header className="mb-8">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">

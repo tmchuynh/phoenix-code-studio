@@ -1,5 +1,6 @@
 "use client";
 
+import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { BpCheckbox } from "@/components/ui/checkbox-custom";
@@ -220,6 +221,7 @@ const BlogDisplayPage: FC = () => {
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
+      <DynamicBreadcrumb />
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Our Latest Blogs
       </h1>

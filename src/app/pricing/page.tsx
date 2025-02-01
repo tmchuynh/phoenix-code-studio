@@ -1,6 +1,7 @@
 "use client";
 
 import CallToAction from "@/components/CallToAction";
+import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { SidebarSeparator } from "@/components/ui/sidebar";
 import {
   companySpecificServices,
@@ -12,6 +13,7 @@ import { FC } from "react";
 const PricingPage: FC = () => {
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
+      <DynamicBreadcrumb />
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Our Pricing and Service Tiers
       </h1>

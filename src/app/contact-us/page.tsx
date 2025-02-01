@@ -14,6 +14,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { FaChevronDown } from "react-icons/fa";
+import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 
 const ContactUsPage: FC = () => {
   const [formData, setFormData] = useState({
@@ -86,6 +87,7 @@ const ContactUsPage: FC = () => {
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
+      <DynamicBreadcrumb />
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Contact Us
       </h1>

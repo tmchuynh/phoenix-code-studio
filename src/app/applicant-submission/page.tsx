@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { jobPositions } from "@/lib/constants";
 import { BpCheckbox } from "@/components/ui/checkbox-custom";
+import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 
 const ApplicantSubmissionPage = () => {
   const [selectedPositions, setSelectedPositions] = useState<string[]>([]);
@@ -77,6 +78,7 @@ const ApplicantSubmissionPage = () => {
 
   return (
     <main className="w-10/12 md:w-8/12 mx-auto py-6">
+      <DynamicBreadcrumb />
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
         Apply for Open Positions
       </h1>

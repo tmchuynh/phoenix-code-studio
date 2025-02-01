@@ -1,6 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
+import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { jackOfAllTradesContent } from "@/lib/blog-constants";
 import { blogs } from "@/lib/constants";
 import React from "react";
@@ -8,6 +9,7 @@ import React from "react";
 const JackOfAllTradesBlog = () => {
   return (
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
+      <DynamicBreadcrumb />
       <article className="space-y-8">
         <header>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
