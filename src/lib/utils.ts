@@ -10,3 +10,7 @@ export const formatCurrency = ( value: number ) => {
 
   return "$" + value.toLocaleString( undefined );
 };
+
+export const capitalize = ( str: string ) => {
+  return str.replace( /-/g, " " ).replace( /\b\w/g, ( char ) => char.toUpperCase() );
+};
