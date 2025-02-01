@@ -308,7 +308,7 @@ const PastProjectsPage: FC = () => {
           {currentProjects.map((project, index) => (
             <Card
               key={index}
-              className="border-2 border-transparent hover:border-border p-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col justify-between"
+              className="border-2 border-transparent dark:hover:border-border p-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col justify-between"
             >
               <CardContent
                 className={
@@ -380,30 +380,33 @@ const PastProjectsPage: FC = () => {
                     )}
                   </div>
                 </div>
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-2 pt-9">
-                  {isSmallScreen
-                    ? project.img.map(
-                        (img, index) =>
-                          index === 0 && (
-                            <img
-                              src={`${img}`}
-                              alt={project.title}
-                              className="w-full h-40 my-4 object-contain"
-                            />
-                          )
-                      )
-                    : project.img.map((img, index) => (
-                        <img
-                          src={`${img}`}
-                          alt={project.title}
-                          className={
-                            isMediumScreen
-                              ? "w-48 h-full ml-3 object-contain mx-auto"
-                              : "w-72 h-full object-contain mx-auto"
-                          }
-                        />
-                      ))}
-                </div>
+
+                {project.img && (
+                  <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-2 pt-9">
+                    {isSmallScreen
+                      ? project.img.map(
+                          (img, index) =>
+                            index === 0 && (
+                              <img
+                                src={`${img}`}
+                                alt={project.title}
+                                className="w-full h-40 my-4 object-contain"
+                              />
+                            )
+                        )
+                      : project.img.map((img, index) => (
+                          <img
+                            src={`${img}`}
+                            alt={project.title}
+                            className={
+                              isMediumScreen
+                                ? "w-48 h-full ml-3 object-contain mx-auto"
+                                : "w-72 h-full object-contain mx-auto"
+                            }
+                          />
+                        ))}
+                  </div>
+                )}
               </CardContent>
             </Card>
           ))}
