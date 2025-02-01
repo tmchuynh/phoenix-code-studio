@@ -35,7 +35,7 @@ const NavBar = () => {
         <MenubarMenu>
           <span className="px-3">Phoenix Code Studio</span>
         </MenubarMenu>
-        <div className="flex items-center cursor-default xl:space-x-5 2xl:space-x-10">
+        <div className="flex items-center cursor-pointer xl:space-x-5 2xl:space-x-10">
           <MenubarMenu>
             <a
               onClick={() => router.push("/")}
@@ -58,7 +58,7 @@ const NavBar = () => {
             </div>
           </MenubarMenu>
           <MenubarMenu>
-            <MenubarTrigger className="text-sm md:text-md lg:text-xl">
+            <MenubarTrigger className="text-sm md:text-md lg:text-xl cursor-pointer">
               Services
               <FaChevronDown className="ml-3" />
             </MenubarTrigger>
@@ -67,13 +67,13 @@ const NavBar = () => {
                 <MenubarItem
                   key={index}
                   onClick={() => router.push(service.href)}
-                  className="text-sm md:text-md lg:text-xl"
+                  className="text-sm md:text-md lg:text-xl cursor-pointer"
                 >
                   {service.title}
                 </MenubarItem>
               ))}
               <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9">
+                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                   Payment Plans
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4">
@@ -81,7 +81,7 @@ const NavBar = () => {
                     <MenubarItem
                       key={index}
                       onClick={() => router.push(plan.href)}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end"
+                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
                     >
                       {plan.title}
                     </MenubarItem>
@@ -90,7 +90,7 @@ const NavBar = () => {
               </MenubarSub>
               <MenubarSeparator />
               <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9">
+                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                   Website Services
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4 w-72">
@@ -98,7 +98,7 @@ const NavBar = () => {
                     <MenubarItem
                       key={index}
                       onClick={() => router.push(website.href)}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end"
+                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
                     >
                       {website.title}
                     </MenubarItem>
@@ -106,7 +106,7 @@ const NavBar = () => {
                 </MenubarSubContent>
               </MenubarSub>
               <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9">
+                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                   Content Creation
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4 w-72">
@@ -114,7 +114,7 @@ const NavBar = () => {
                     <MenubarItem
                       key={index}
                       onClick={() => router.push(content.href)}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end"
+                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
                     >
                       {content.title}
                     </MenubarItem>
@@ -122,7 +122,7 @@ const NavBar = () => {
                 </MenubarSubContent>
               </MenubarSub>
               <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9">
+                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                   Company Specific Services
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4 w-72">
@@ -130,7 +130,7 @@ const NavBar = () => {
                     <MenubarItem
                       key={index}
                       onClick={() => router.push(company.href)}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end"
+                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
                     >
                       {company.title}
                     </MenubarItem>
@@ -155,7 +155,7 @@ const NavBar = () => {
         <MenubarMenu>
           <span className="px-3">Phoenix Code Studio</span>
         </MenubarMenu>
-        <div className="flex items-center cursor-default">
+        <div className="flex items-center cursor-pointer">
           <MenubarMenu>
             <a
               onClick={() => router.push("/")}
@@ -165,7 +165,7 @@ const NavBar = () => {
             </a>
           </MenubarMenu>
           <MenubarMenu>
-            <MenubarTrigger className="text-sm md:text-md lg:text-xl">
+            <MenubarTrigger className="text-sm md:text-md lg:text-xl cursor-pointer">
               About Us
               <FaChevronDown className="ml-3" />
             </MenubarTrigger>
@@ -174,7 +174,7 @@ const NavBar = () => {
                 <MenubarItem
                   key={index}
                   onClick={() => router.push(service.href)}
-                  className="text-sm md:text-md lg:text-xl"
+                  className="text-sm md:text-md lg:text-xl cursor-pointer"
                 >
                   {service.title}
                 </MenubarItem>
@@ -182,7 +182,7 @@ const NavBar = () => {
             </MenubarContent>
           </MenubarMenu>
           <MenubarMenu>
-            <MenubarTrigger className="text-sm md:text-md lg:text-xl">
+            <MenubarTrigger className="text-sm md:text-md lg:text-xl cursor-pointer">
               Services
               <FaChevronDown className="ml-3" />
             </MenubarTrigger>
@@ -191,13 +191,13 @@ const NavBar = () => {
                 <MenubarItem
                   key={index}
                   onClick={() => router.push(service.href)}
-                  className="text-sm md:text-md lg:text-xl"
+                  className="text-sm md:text-md lg:text-xl cursor-pointer"
                 >
                   {service.title}
                 </MenubarItem>
               ))}
               <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9">
+                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                   Payment Plans
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4">
@@ -205,7 +205,7 @@ const NavBar = () => {
                     <MenubarItem
                       key={index}
                       onClick={() => router.push(plan.href)}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end"
+                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
                     >
                       {plan.title}
                     </MenubarItem>
@@ -214,7 +214,7 @@ const NavBar = () => {
               </MenubarSub>
               <MenubarSeparator />
               <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9">
+                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                   Website Services
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4 w-72">
@@ -222,7 +222,7 @@ const NavBar = () => {
                     <MenubarItem
                       key={index}
                       onClick={() => router.push(website.href)}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end"
+                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
                     >
                       {website.title}
                     </MenubarItem>
@@ -230,7 +230,7 @@ const NavBar = () => {
                 </MenubarSubContent>
               </MenubarSub>
               <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9">
+                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                   Content Creation
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4 w-72">
@@ -238,7 +238,7 @@ const NavBar = () => {
                     <MenubarItem
                       key={index}
                       onClick={() => router.push(content.href)}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end"
+                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
                     >
                       {content.title}
                     </MenubarItem>
@@ -246,7 +246,7 @@ const NavBar = () => {
                 </MenubarSubContent>
               </MenubarSub>
               <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9">
+                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                   Company Specific Services
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4 w-72">
@@ -254,7 +254,7 @@ const NavBar = () => {
                     <MenubarItem
                       key={index}
                       onClick={() => router.push(company.href)}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end"
+                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
                     >
                       {company.title}
                     </MenubarItem>
