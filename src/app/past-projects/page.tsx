@@ -1,7 +1,8 @@
 "use client";
+import { Badge } from "@/components/ui/badge";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -25,6 +26,10 @@ const PastProjectsPage: FC = () => {
   // Filter states
   const [selectedLanguages, setSelectedLanguages] = useState<string[]>([]);
   const [selectedFrameworks, setSelectedFrameworks] = useState<string[]>([]);
+  const [selectedTechnologies, setSelectedTechnologies] = useState<string[]>(
+    []
+  );
+  const [selectedLibraries, setSelectedLibraries] = useState<string[]>([]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [filtersCleared, setFiltersCleared] = useState(false);
   const [noResults, setNoResults] = useState(false);
@@ -76,6 +81,22 @@ const PastProjectsPage: FC = () => {
       );
     }
 
+    if (selectedTechnologies.length > 0) {
+      filtered = filtered.filter((project) =>
+        selectedTechnologies.every((technology) =>
+          project.technologies?.includes(technology)
+        )
+      );
+    }
+
+    if (selectedLibraries.length > 0) {
+      filtered = filtered.filter((project) =>
+        selectedLibraries.every(
+          (library) => project.libraries?.includes(library) // Fix: corrected key name
+        )
+      );
+    }
+
     if (selectedTags.length > 0) {
       filtered = filtered.filter((project) =>
         selectedTags.every((tag) => project.tags.includes(tag))
@@ -90,6 +111,8 @@ const PastProjectsPage: FC = () => {
         setTimeout(() => {
           setSelectedLanguages([]);
           setSelectedFrameworks([]);
+          setSelectedTechnologies([]);
+          setSelectedLibraries([]);
           setSelectedTags([]);
         }, 1000);
       }
@@ -111,6 +134,18 @@ const PastProjectsPage: FC = () => {
   const handleFrameworkChange = (framework: string, checked: boolean) => {
     setSelectedFrameworks((prev) =>
       checked ? [...prev, framework] : prev.filter((fw) => fw !== framework)
+    );
+  };
+
+  const handleTechnologyChange = (technology: string, checked: boolean) => {
+    setSelectedTechnologies((prev) =>
+      checked ? [...prev, technology] : prev.filter((t) => t !== technology)
+    );
+  };
+
+  const handleLibrariesChange = (library: string, checked: boolean) => {
+    setSelectedLibraries((prev) =>
+      checked ? [...prev, library] : prev.filter((fw) => fw !== library)
     );
   };
 
@@ -138,13 +173,25 @@ const PastProjectsPage: FC = () => {
   const allFrameworks = Array.from(
     new Set(pastProjects.flatMap((p) => p.frameworks || []))
   );
+  const allTechnologies = Array.from(
+    new Set(pastProjects.flatMap((p) => p.technologies || []))
+  );
+  const allLibraries = Array.from(
+    new Set(pastProjects.flatMap((p) => p.libraries || [])) // Fix: corrected key name
+  );
   const allTags = Array.from(
     new Set(pastProjects.flatMap((p) => p.tags || []))
   );
 
   useEffect(() => {
     handleFilter();
-  }, [selectedLanguages, selectedFrameworks, selectedTags]);
+  }, [
+    selectedLanguages,
+    selectedFrameworks,
+    selectedTags,
+    selectedTechnologies,
+    selectedLibraries,
+  ]);
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
@@ -201,6 +248,48 @@ const PastProjectsPage: FC = () => {
                     className="mr-2"
                   />
                   <label htmlFor={framework}>{framework}</label>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Libraries Filter */}
+          <div>
+            <h3 className="text-lg font-semibold">Filter by Libraries</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-start items-start w-full gap-2">
+              {allLibraries.map((library) => (
+                <div key={library} className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id={library}
+                    checked={selectedLibraries.includes(library)}
+                    onChange={(e) =>
+                      handleLibrariesChange(library, e.target.checked)
+                    }
+                    className="mr-2"
+                  />
+                  <label htmlFor={library}>{library}</label>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Technologies Filter */}
+          <div>
+            <h3 className="text-lg font-semibold">Filter by Technologies</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-start items-start w-full gap-2">
+              {allTechnologies.map((library) => (
+                <div key={library} className="flex items-center">
+                  <input
+                    type="checkbox"
+                    id={library}
+                    checked={selectedTechnologies.includes(library)}
+                    onChange={(e) =>
+                      handleTechnologyChange(library, e.target.checked)
+                    }
+                    className="mr-2"
+                  />
+                  <label htmlFor={library}>{library}</label>
                 </div>
               ))}
             </div>
@@ -357,6 +446,17 @@ const PastProjectsPage: FC = () => {
                           </ul>
                         </div>
                       )}
+
+                      {project.libraries && (
+                        <div>
+                          <p className="font-semibold">Libraries:</p>
+                          <ul>
+                            {project.libraries.map((lib, idx) => (
+                              <li key={idx}>{lib}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -410,6 +510,17 @@ const PastProjectsPage: FC = () => {
                   </div>
                 )}
               </CardContent>
+              <CardFooter className="mx-auto h-fit pb-1">
+                {project.tags.length > 0 && (
+                  <div className="mt-6">
+                    {project.tags.map((tag, index) => (
+                      <Badge key={index} variant={"secondary"} className="mr-2">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
+                )}
+              </CardFooter>
             </Card>
           ))}
         </div>

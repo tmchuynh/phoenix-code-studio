@@ -66,6 +66,7 @@ export interface Project {
   tags: string[];
   languages: string[];
   frameworks?: string[];
+  libraries?: string[];
   technologies?: string[];
   githubLink?: string;
   liveLink?: string;
