@@ -51,7 +51,7 @@ const BlogDisplayPage: FC = () => {
   const [filtersCleared, setFiltersCleared] = useState(false);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [articlesPerPage, setArticlesPerPage] = useState(25);
+  const [articlesPerPage, setArticlesPerPage] = useState(10);
 
   // Calculate the indexes for pagination
   const indexOfLastArticle = currentPage * articlesPerPage;
@@ -470,7 +470,7 @@ const BlogDisplayPage: FC = () => {
       </section>
 
       {/* Pagination controls */}
-      <Pagination className="gap-5">
+      <Pagination className="gap-5 flex items-center">
         <PaginationPrevious
           onClick={() => {
             if (currentPage > 1) {
@@ -482,7 +482,7 @@ const BlogDisplayPage: FC = () => {
             currentPage === 1 ? "cursor-not-allowed" : "cursor-default"
           }
         />
-        <section className="text-center my-4">
+        <section className="text-center">
           {indexOfLastArticle >= filteredBlogs.length && totalPages === 1 ? (
             <p>Showing all {filteredBlogs.length} blogs</p>
           ) : (
@@ -526,7 +526,7 @@ const BlogDisplayPage: FC = () => {
                   <div>
                     <Button
                       variant="ghost"
-                      className="text-primary underline underline-offset-2 px-0 my-5 font-SofiaSans text-xl tracking-wider font-bold hover:bg-transparent hover:text-primary hover:no-underline text-wrap text-left"
+                      className="text-primary underline underline-offset-2 px-0 mt-5 mb-2 font-SofiaSans text-xl tracking-wider font-bold hover:bg-transparent hover:text-primary hover:no-underline text-wrap text-left"
                       onClick={() => {
                         router.push(blog.slug);
                       }}
@@ -535,7 +535,8 @@ const BlogDisplayPage: FC = () => {
                     </Button>
                     <p className="mb-0 text-sm">
                       <span>
-                        <strong>By:</strong> {blog.author}
+                        <strong className="text-foreground">By:</strong>{" "}
+                        {blog.author}
                       </span>
                     </p>
                     <p className="mt-0">
@@ -543,8 +544,8 @@ const BlogDisplayPage: FC = () => {
                     </p>
                     <p className="text-md py-4">{blog.excerpt}</p>
                   </div>
-                  <p className="mb-4">
-                    <strong>Topics:</strong>{" "}
+                  <div className="mt-4">
+                    <strong className="text-foreground">Topics:</strong>{" "}
                     {blog.topics.map((topic, index) => (
                       <span key={index}>
                         <Button
@@ -557,7 +558,7 @@ const BlogDisplayPage: FC = () => {
                         {index !== blog.topics.length - 1 && ", "}
                       </span>
                     ))}
-                  </p>
+                  </div>
                 </div>
               </div>
             </Card>

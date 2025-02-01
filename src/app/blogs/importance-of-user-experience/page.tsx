@@ -30,7 +30,7 @@ const BlogPage = () => {
                       {blog.topics.map((topic, index) => {
                         return (
                           <Badge
-                            variant={"outline"}
+                            variant={"accent"}
                             className="text-sm lowercase"
                             key={index}
                           >
