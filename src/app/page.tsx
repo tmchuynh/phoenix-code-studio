@@ -34,10 +34,10 @@ const WelcomePage: FC = () => {
         <Button onClick={navigateToServices}>Explore Our Services</Button>
       </section>
 
-      <JoinUs />
-
       {/* Services Highlight Section */}
       <ServiceHighlights />
+
+      <JoinUs />
 
       {/* About Section */}
       <AboutSection />

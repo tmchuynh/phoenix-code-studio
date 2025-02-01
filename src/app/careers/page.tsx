@@ -16,29 +16,29 @@ const JobListingsPage: FC = () => {
         Open Positions
       </h1>
       <p>
-        Are you ready to take your career to the next level? At our company,
-        we're searching for{" "}
-        <span className="underline underline-offset-4 text-primary">
-          passionate
-        </span>
-        , <EmphasizeText>talented</EmphasizeText> individuals who want to make a
-        real impact in a dynamic and innovative environment. Whether you're a
-        developer, designer, marketer, or someone who thrives on solving
-        challenges, we have a place for you. By joining our team, you'll be part
-        of a culture that values <EmphasizeText>creativity</EmphasizeText>,{" "}
-        <EmphasizeText>collaboration</EmphasizeText>, and{" "}
-        <EmphasizeText>growth</EmphasizeText>. We offer opportunities to work on
-        exciting projects, learn new skills, and contribute to shaping the
-        future of technology and business. Explore our open positions and
-        discover how you can play a key role in our success while advancing your
-        own career.
+        Looking for a career that challenges, inspires, and propels you forward?
+        We’re on the hunt for <EmphasizeText>driven</EmphasizeText> and{" "}
+        <EmphasizeText>skilled</EmphasizeText> professionals eager to leave a
+        mark in a fast-paced, innovative environment. Whether you specialize in
+        development, design, marketing, or problem-solving, we have a role where
+        you can thrive.
       </p>
+
       <p>
-        Don’t just work —{" "}
-        <span className="text-primary font-extrabold">THRIVE</span>. Come join a
-        team where your ideas are valued, your contributions are recognized, and
-        your career aspirations are supported. Let’s grow and achieve great
-        things together.
+        Here, we foster a culture of <EmphasizeText>innovation</EmphasizeText>,{" "}
+        <EmphasizeText>teamwork</EmphasizeText>, and{" "}
+        <EmphasizeText>growth</EmphasizeText>. You'll have the chance to work on
+        groundbreaking projects, refine your expertise, and contribute to
+        shaping the future of business and technology. Browse our open positions
+        and see where your talents fit in.
+      </p>
+
+      <p>
+        Don't settle—
+        <span className="text-primary font-extrabold">ELEVATE</span> your
+        career. Join a team that values your ideas, celebrates your
+        contributions, and supports your ambitions. Together, we’ll create
+        something extraordinary.
       </p>
 
       {/* Job Listings */}
@@ -82,7 +82,7 @@ const JobListingsPage: FC = () => {
             <div className="mt-6">
               <Button
                 variant={"secondary"}
-                onClick={() => router.push("contact-us")}
+                onClick={() => router.push("/applicant-submission")}
                 className="px-6 py-3 text-lg"
               >
                 Apply Now
