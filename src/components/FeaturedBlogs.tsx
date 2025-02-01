@@ -8,7 +8,7 @@ const FeaturedBlogs = () => {
   const router = useRouter();
 
   const navigateToBlogs = () => {
-    router.push("/blog");
+    router.push("/blogs");
   };
 
   return (
