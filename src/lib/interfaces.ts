@@ -41,8 +41,8 @@ export interface PaymentPlan {
 export interface Testimonial {
   name: string;
   featured: boolean;
-  position: string;
-  image: string;
+  position?: string;
+  rating?: number;
   quote: string;
 }
 
@@ -78,4 +78,9 @@ export interface JobPosition {
   responsibilities: string[];
   qualifications: string[];
   information: string;
+}
+
+export interface StarRatingProps {
+  rating: number;
+  maxStars?: number;
 }

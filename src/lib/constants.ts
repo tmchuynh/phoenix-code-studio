@@ -62,6 +62,12 @@ export const services: Menu[] = [
 
 export const paymentOptions: Menu[] = [
   {
+    title: "Overview",
+    href: "/payment-plans",
+    description:
+      "Explore our pricing options and find the perfect plan for your needs.",
+  },
+  {
     title: "Basic Plan",
     href: "/payment-plans/basic-plan",
     description:
@@ -830,36 +836,54 @@ export const paymentPlans: PaymentPlan[] = [
 
 export const testimonials: Testimonial[] = [
   {
-    name: "John Doe",
+    name: "Gray Boulware",
     featured: true,
-    position: "CEO, Tech Innovators",
-    image: "/images/avatar-placeholder.jpg",
+    rating: 5,
+    position: "Technical Product Owner",
     quote:
-      "This service helped us transform our business. The team was fantastic, and the results exceeded our expectations!",
+      `Tina is a dynamic full-stack web developer with a passion for crafting intuitive and functional digital experiences. Specializing in user experience and front-end design, she brings creativity and precision to every project, showcasing her strong work ethic and unwavering dedication. Her ability to blend technical expertise with a keen eye for design makes her a standout in her field.  
+
+      Beyond development, Tina is a true polymath, seamlessly integrating skills from software engineering, business development, real estate, and personal growth. Her ability to connect these diverse disciplines fuels her innovation, allowing her to create unique, forward-thinking solutions that drive real impact.`,
   },
   {
-    name: "Sarah Smith",
+    name: "Justin Bui",
     featured: true,
-    position: "Founder, Creative Solutions",
-    image: "/images/avatar-placeholder.jpg",
+    rating: 5,
+    position: "Data Scientist",
     quote:
-      "A professional and reliable partner. The process was smooth, and the final product truly captures our vision.",
+      `It's not often you meet someone as driven and talented as Tina. I had the pleasure of working alongside her in Theta Tau, a professional engineering fraternity at California State University, Fullerton. Her leadership stood out immediately—she consistently took initiative, introduced innovative ideas, and guided the team through challenges with confidence and resilience.  
+
+      Beyond her leadership, Tina's eagerness to learn and adapt is truly inspiring. Whether mastering technical skills or building a business, she embraces new challenges with enthusiasm and determination. Her dedication, resourcefulness, and unwavering drive make her an invaluable asset to any team.`,
   },
   {
-    name: "Michael Lee",
+    name: "Spencer DeMera",
     featured: true,
-    position: "CTO, NextGen Technologies",
-    image: "/images/avatar-placeholder.jpg",
+    rating: 5,
+    position: "Senior Full-Stack Web Developer",
     quote:
-      "The quality of work and attention to detail was exceptional. We saw a noticeable improvement in user engagement.",
+      `Tina is one of the most hardworking and determined individuals I’ve had the pleasure of working with. Despite starting with little experience, she has grown into a highly skilled and proficient developer. Her ability to learn and adapt is evident in her work, particularly showcased on her personal portfolio site—an impressive testament to her technical expertise and creativity.  
+
+      What sets Tina apart is her relentless drive and self-motivation. Her projects clearly demonstrate her ability to tackle new technologies with confidence, overcoming any challenge that comes her way. She is a true problem-solver and an invaluable asset to any team.`,
   },
   {
-    name: "Emma Johnson",
+    name: "Olivia Carter",
     featured: true,
-    position: "Marketing Director, Bright Horizons",
-    image: "/images/avatar-placeholder.jpg",
+    rating: 4,
+    position: "UX/UI Designer",
     quote:
-      "Absolutely amazing experience. The team was highly collaborative and delivered exactly what we needed, on time!",
+      `Tina is a remarkable developer with an incredible work ethic and an insatiable drive for growth. Her journey from minimal experience to mastering complex development concepts is nothing short of inspiring. What truly sets her apart is her ability to learn rapidly and apply new technologies with confidence.
+
+      Her portfolio is a testament to her technical proficiency and creative problem-solving skills, showcasing not only her expertise but also her dedication to continuous improvement. Any team would be fortunate to have someone as determined, resourceful, and capable as Tina.`,
+  },
+  {
+    name: "Sophia Mitchell",
+    featured: true,
+    rating: 4.5,
+    position: "Data Analyst",
+    quote:
+      `Tina's commitment to her craft is evident in everything she does. She is not only a skilled developer but also a quick learner who thrives on challenges. Her ability to teach herself new technologies and implement them effectively is a rare and valuable trait.
+
+      Her personal portfolio stands as proof of her technical expertise and innovative thinking, highlighting her ability to create impactful digital solutions. She is a driven professional who brings energy, creativity, and determination to every project she takes on—an asset to any team or organization.`,
   },
 ];
 
@@ -1024,7 +1048,7 @@ export const blogs: BlogPost[] = [
     date: "October 15, 2023",
     img: "/images/blog-placeholder.jpg",
     featured: false,
-    topics: ["Design", "Software Engineer", "Design"],
+    topics: ["Design", "Software Engineer",],
     excerpt:
       "Great graphical user interfaces (GUIs) are key to intuitive user experiences. Discover tips and techniques for designing user-friendly interfaces.",
     slug: "/blogs/mastering-gui-design",
