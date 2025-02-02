@@ -284,8 +284,8 @@ const BlogDisplayPage: FC = () => {
                         >
                           <p>
                             {topic}
-                            <span className="ml-1">
-                              ( {topicCounts[topic]} )
+                            <span className="ml-1 text-accent-4">
+                              ({topicCounts[topic]})
                             </span>
                           </p>
                         </label>
@@ -345,8 +345,8 @@ const BlogDisplayPage: FC = () => {
                             <p>
                               {" "}
                               {date}{" "}
-                              <span className="ml-1">
-                                ( {dateCounts[date]} )
+                              <span className="ml-1 text-accent-4">
+                                ({dateCounts[date]})
                               </span>
                             </p>
                           </label>
@@ -398,8 +398,8 @@ const BlogDisplayPage: FC = () => {
                           <p>
                             {" "}
                             {author}{" "}
-                            <span className="ml-1">
-                              ( {authorCounts[author]} )
+                            <span className="ml-1 text-accent-4">
+                              ({authorCounts[author]})
                             </span>
                           </p>
                         </label>
@@ -419,7 +419,7 @@ const BlogDisplayPage: FC = () => {
             placeholder="Search by title or author"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="p-2 border rounded w-11/12 md:w-full mx-auto md:h-12 lg:h-14 md:text-md lg:text-xl"
+            className="p-2 border border-border rounded w-11/12 md:w-full mx-auto md:h-12 lg:h-14 md:text-md lg:text-xl placeholder:text-accent-2"
           />
         </section>
 
