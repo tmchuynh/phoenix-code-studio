@@ -82,7 +82,7 @@ const ApplicantSubmissionPage = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
         Apply for Open Positions
       </h1>
-      <p className="mb-6 text-lg">
+      <p>
         Submit your application for one or more of our open positions. Ensure
         that you upload your resume and provide at least one portfolio link. A
         cover letter is optional.
@@ -96,7 +96,7 @@ const ApplicantSubmissionPage = () => {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Job Positions Selection */}
         <section>
-          <h2 className="text-xl font-semibold text-secondary mb-3">
+          <h2 className="text-secondary mb-3">
             Select the position(s) you're applying for:
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -109,7 +109,7 @@ const ApplicantSubmissionPage = () => {
                   }
                 />
                 <label htmlFor={position.title} className="ml-2">
-                  {position.title}
+                  <p>{position.title}</p>
                 </label>
               </div>
             ))}
@@ -118,40 +118,42 @@ const ApplicantSubmissionPage = () => {
 
         {/* Resume Upload (Required) */}
         <section>
-          <h2 className="text-xl font-semibold text-secondary mb-3">
-            Upload Your Resume (Required)
-          </h2>
+          <h2 className="text-secondary mb-3">Upload Your Resume (Required)</h2>
           <Input
             type="file"
             accept=".pdf,.doc,.docx"
             onChange={handleResumeUpload}
+            className="border border-border rounded w-11/12 md:w-full mx-auto md:h-12 md:text-md lg:text-xl file:text-accent-2 file:font-extrabold file:md:text-md file:lg:text-lg"
             required
           />
           {resume && (
-            <p className="text-sm ml-5 mt-2">Uploaded File: {resume.name}</p>
+            <p className="text-sm xl:text-lg ml-5 mt-2">
+              <strong>Uploaded File:</strong> {resume.name}
+            </p>
           )}
         </section>
 
         {/* Cover Letter Upload (Optional) */}
         <section>
-          <h2 className="text-xl font-semibold text-secondary mb-3">
+          <h2 className="text-secondary mb-3">
             Upload a Cover Letter (Optional)
           </h2>
           <Input
             type="file"
             accept=".pdf,.doc,.docx"
             onChange={handleCoverLetterUpload}
+            className="border border-border rounded w-11/12 md:w-full mx-auto md:h-12 md:text-md lg:text-xl file:text-accent-2 file:font-extrabold file:md:text-md file:lg:text-lg"
           />
           {coverLetter && (
-            <p className="text-sm ml-5 mt-2">
-              Selected File: {coverLetter.name}
+            <p className="text-sm xl:text-lg ml-5 mt-2">
+              <strong>Selected File:</strong> {coverLetter.name}
             </p>
           )}
         </section>
 
         {/* Portfolio Links (At Least One Required) */}
         <section>
-          <h2 className="text-xl font-semibold text-secondary mb-3">
+          <h2 className="text-secondary mb-3">
             Portfolio Links (At Least One Required)
           </h2>
           <div className="space-y-3">
@@ -161,6 +163,7 @@ const ApplicantSubmissionPage = () => {
                 type="url"
                 placeholder={`Portfolio Link ${index + 1}`}
                 value={link}
+                className="border border-border rounded w-11/12 md:w-full mx-auto md:h-12 md:text-md lg:text-xl placeholder:text-accent-2"
                 onChange={(e) => handlePortfolioChange(index, e.target.value)}
               />
             ))}
