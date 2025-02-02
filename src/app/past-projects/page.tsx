@@ -343,7 +343,7 @@ const PastProjectsPage: FC = () => {
             <div>
               <h3 className="font-semibold">Filter by Frameworks</h3>
               <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
-                {allFrameworks.map((framework) => (
+                {allFrameworks.sort().map((framework) => (
                   <div key={framework} className="flex items-center">
                     <input
                       type="checkbox"
@@ -366,7 +366,7 @@ const PastProjectsPage: FC = () => {
             <div>
               <h3 className="font-semibold">Filter by Languages</h3>
               <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
-                {allLanguages.map((language) => (
+                {allLanguages.sort().map((language) => (
                   <div key={language} className="flex items-center">
                     <input
                       type="checkbox"
@@ -389,7 +389,7 @@ const PastProjectsPage: FC = () => {
             <div>
               <h3 className="font-semibold">Filter by Libraries</h3>
               <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
-                {allLibraries.map((library) => (
+                {allLibraries.sort().map((library) => (
                   <div key={library} className="flex items-center">
                     <input
                       type="checkbox"
@@ -412,7 +412,7 @@ const PastProjectsPage: FC = () => {
             <div>
               <h3 className="font-semibold">Filter by Tags</h3>
               <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
-                {allTags.map((tag) => (
+                {allTags.sort().map((tag) => (
                   <div key={tag} className="flex items-center">
                     <input
                       type="checkbox"
@@ -433,7 +433,7 @@ const PastProjectsPage: FC = () => {
             <div>
               <h3 className="font-semibold">Filter by Technologies</h3>
               <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
-                {allTechnologies.map((library) => (
+                {allTechnologies.sort().map((library) => (
                   <div key={library} className="flex items-center">
                     <input
                       type="checkbox"
@@ -583,7 +583,7 @@ const PastProjectsPage: FC = () => {
                       <div>
                         {project.tags.length > 0 && (
                           <div className="mb-5 gap-2 flex flex-wrap">
-                            {project.tags.map((tag, index) => (
+                            {project.tags.sort().map((tag, index) => (
                               <Badge
                                 key={index}
                                 variant={"secondary"}

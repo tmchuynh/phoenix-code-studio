@@ -645,7 +645,7 @@ const BlogDisplayPage: FC = () => {
                     <div className="mt-4 flex flex-col bottom-2 absolute md:text-md lg:text-lg">
                       {blog.topics.length > 0 && (
                         <div className="mt-6">
-                          {blog.topics.map((topic, index) => (
+                          {blog.topics.sort().map((topic, index) => (
                             <Badge
                               key={index}
                               variant={"secondary"}
@@ -662,7 +662,7 @@ const BlogDisplayPage: FC = () => {
                     <div className="mt-4 absolute bottom-4 md:text-md lg:text-lg">
                       {blog.topics.length > 0 && (
                         <div className="mt-6 gap-2 flex flex-wrap">
-                          {blog.topics.map((topic, index) => (
+                          {blog.topics.sort().map((topic, index) => (
                             <Badge
                               key={index}
                               variant={"secondary"}
