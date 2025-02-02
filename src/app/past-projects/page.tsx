@@ -582,7 +582,7 @@ const PastProjectsPage: FC = () => {
                     {isSmallScreen ? null : isLargeScreen ? (
                       <div>
                         {project.tags.length > 0 && (
-                          <div className="mt-6 gap-2 flex flex-wrap">
+                          <div className="mb-5 gap-2 flex flex-wrap">
                             {project.tags.map((tag, index) => (
                               <Badge
                                 key={index}
@@ -718,6 +718,49 @@ const PastProjectsPage: FC = () => {
           ))}
         </div>
       </section>
+
+      {/* Pagination controls */}
+      <Pagination className="gap-5 flex items-center">
+        <PaginationPrevious
+          onClick={() => {
+            if (currentPage > 1) {
+              handlePageChange(currentPage - 1);
+            }
+          }}
+          variant={currentPage === 1 ? "disabled" : "outline"}
+          className={
+            currentPage === 1 ? "cursor-not-allowed" : "cursor-default"
+          }
+        />
+        <section className="text-center">
+          {indexOfLastProject >= filteredProjects.length && totalPages === 1 ? (
+            filteredProjects.length === pastProjects.length ? (
+              <p>Showing all {filteredProjects.length} projects</p>
+            ) : (
+              <p>Showing all {filteredProjects.length} filtered projects</p>
+            )
+          ) : (
+            <p>
+              Showing {indexOfFirstProject + 1} to{" "}
+              {indexOfLastProject > filteredProjects.length
+                ? filteredProjects.length
+                : indexOfLastProject}{" "}
+              of {filteredProjects.length} projects
+            </p>
+          )}
+        </section>
+        <PaginationNext
+          onClick={() => {
+            if (currentPage < totalPages) {
+              handlePageChange(currentPage + 1);
+            }
+          }}
+          variant={currentPage === totalPages ? "disabled" : "outline"}
+          className={
+            currentPage === totalPages ? "cursor-not-allowed" : "cursor-default"
+          }
+        />
+      </Pagination>
     </main>
   );
 };

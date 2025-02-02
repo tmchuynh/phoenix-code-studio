@@ -29,3 +29,12 @@ export const formatQuote = ( quote: string ): string[] => {
     .map( ( paragraph ) => paragraph.trim() ) // Trim the spaces
     .filter( ( paragraph ) => paragraph !== "" ); // Remove any empty paragraphs
 };
+
+export const formatDate = ( dateString: string ): string => {
+  const date = new Date( dateString );
+  const year = date.getFullYear();
+  const month = ( date.getMonth() + 1 ).toString().padStart( 2, "0" ); // Adding leading zero for single digit months
+  const day = date.getDate().toString().padStart( 2, "0" ); // Adding leading zero for single digit days
+
+  return `${ year }-${ month }-${ day }`;
+};

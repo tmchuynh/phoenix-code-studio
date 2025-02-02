@@ -25,6 +25,7 @@ import {
 import { blogs } from "@/lib/constants";
 import useBetweenLargeAndXL from "@/lib/onlyLargerScreens";
 import useSmallScreen from "@/lib/useSmallScreen";
+import { formatDate } from "@/lib/utils";
 import { ChevronsUpDown } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
@@ -130,11 +131,47 @@ const BlogDisplayPage: FC = () => {
           setSelectedDates([]);
         }, 1000);
       }
-      setFilteredBlogs(blogs);
+      setFilteredBlogs(
+        blogs.sort((a, b) => {
+          const dateA = new Date(formatDate(a.date));
+          const dateB = new Date(formatDate(b.date));
+
+          // Compare by year
+          if (dateA.getFullYear() !== dateB.getFullYear()) {
+            return dateB.getFullYear() - dateA.getFullYear();
+          }
+
+          // Compare by month (if years are the same)
+          if (dateA.getMonth() !== dateB.getMonth()) {
+            return dateA.getMonth() - dateB.getMonth();
+          }
+
+          // Compare by day (if both year and month are the same)
+          return dateA.getDate() - dateB.getDate();
+        })
+      );
       setTimeout(() => setNoResults(false), 4000);
     } else {
       setNoResults(false);
-      setFilteredBlogs(filtered);
+      setFilteredBlogs(
+        filtered.sort((a, b) => {
+          const dateA = new Date(formatDate(a.date));
+          const dateB = new Date(formatDate(b.date));
+
+          // Compare by year
+          if (dateA.getFullYear() !== dateB.getFullYear()) {
+            return dateB.getFullYear() - dateA.getFullYear();
+          }
+
+          // Compare by month (if years are the same)
+          if (dateA.getMonth() !== dateB.getMonth()) {
+            return dateA.getMonth() - dateB.getMonth();
+          }
+
+          // Compare by day (if both year and month are the same)
+          return dateA.getDate() - dateB.getDate();
+        })
+      );
     }
   };
 
@@ -145,7 +182,25 @@ const BlogDisplayPage: FC = () => {
     setSearchQuery("");
     setOpenCollapsible(null);
     setNoResults(false);
-    setFilteredBlogs(blogs);
+    setFilteredBlogs(
+      blogs.sort((a, b) => {
+        const dateA = new Date(formatDate(a.date));
+        const dateB = new Date(formatDate(b.date));
+
+        // Compare by year
+        if (dateA.getFullYear() !== dateB.getFullYear()) {
+          return dateB.getFullYear() - dateA.getFullYear();
+        }
+
+        // Compare by month (if years are the same)
+        if (dateA.getMonth() !== dateB.getMonth()) {
+          return dateA.getMonth() - dateB.getMonth();
+        }
+
+        // Compare by day (if both year and month are the same)
+        return dateA.getDate() - dateB.getDate();
+      })
+    );
     if (!e) {
       setFiltersCleared(true);
       setTimeout(() => setFiltersCleared(false), 4000);
@@ -319,11 +374,20 @@ const BlogDisplayPage: FC = () => {
                     {dates
                       .sort((a, b) => {
                         // Convert the date strings to Date objects
-                        const dateA = new Date(a);
-                        const dateB = new Date(b);
+                        const dateA = new Date(formatDate(a));
+                        const dateB = new Date(formatDate(b));
 
-                        // Compare the dates by their timestamp (milliseconds)
-                        return dateA.getTime() - dateB.getTime();
+                        // Compare by year
+                        if (dateA.getFullYear() !== dateB.getFullYear()) {
+                          return dateA.getFullYear() - dateB.getFullYear();
+                        }
+
+                        // Compare by month (if years are the same)
+                        if (dateA.getMonth() !== dateB.getMonth()) {
+                          return dateA.getMonth() - dateB.getMonth();
+                        }
+
+                        return dateA.getDate() - dateB.getDate();
                       })
                       .map((date) => (
                         <div key={date} className="flex items-center mr-1">
@@ -552,12 +616,12 @@ const BlogDisplayPage: FC = () => {
                   alt={blog.title}
                   className="w-full h-36 rounded-t-md object-cover mx-auto mb-1"
                 />
-                <div className="px-4 pb-2 flex flex-col justify-between h-[20em] md:h-[25em] 2xl:h-[30em] relative">
+                <div className="px-4 pb-2 flex flex-col justify-between h-[20em] md:h-[25em] 2xl:h-[35em] relative">
                   <div>
-                    <p className="text-lg md:text-2xl">
+                    <p>
                       <Button
                         variant="ghost"
-                        className="text-primary underline underline-offset-2 px-0 mt-5 mb-2 font-SofiaSans tracking-wider font-bold hover:bg-transparent hover:text-primary hover:no-underline text-wrap text-left"
+                        className="text-primary underline underline-offset-2 px-0 mt-5 mb-2 font-SofiaSans tracking-wider font-bold hover:bg-transparent hover:text-primary hover:no-underline text-wrap text-left text-md md:text-lg lg:text-xl 2xl:text-2xl"
                         onClick={() => {
                           router.push(blog.slug);
                         }}
@@ -618,6 +682,49 @@ const BlogDisplayPage: FC = () => {
           ))}
         </div>
       </section>
+
+      {/* Pagination controls */}
+      <Pagination className="gap-5 flex items-center">
+        <PaginationPrevious
+          onClick={() => {
+            if (currentPage > 1) {
+              handlePageChange(currentPage - 1);
+            }
+          }}
+          variant={currentPage === 1 ? "disabled" : "outline"}
+          className={
+            currentPage === 1 ? "cursor-not-allowed" : "cursor-default"
+          }
+        />
+        <section className="text-center">
+          {indexOfLastArticle >= filteredBlogs.length && totalPages === 1 ? (
+            filteredBlogs.length === blogs.length ? (
+              <p>Showing all {filteredBlogs.length} blogs</p>
+            ) : (
+              <p>Showing all {filteredBlogs.length} filtered blogs</p>
+            )
+          ) : (
+            <p>
+              Showing {indexOfFirstArticle + 1} to{" "}
+              {indexOfLastArticle > filteredBlogs.length
+                ? filteredBlogs.length
+                : indexOfLastArticle}{" "}
+              of {filteredBlogs.length} blogs
+            </p>
+          )}
+        </section>
+        <PaginationNext
+          onClick={() => {
+            if (currentPage < totalPages) {
+              handlePageChange(currentPage + 1);
+            }
+          }}
+          variant={currentPage === totalPages ? "disabled" : "outline"}
+          className={
+            currentPage === totalPages ? "cursor-not-allowed" : "cursor-default"
+          }
+        />
+      </Pagination>
     </main>
   );
 };
