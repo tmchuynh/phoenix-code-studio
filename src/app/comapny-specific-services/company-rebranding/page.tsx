@@ -17,6 +17,17 @@ const CompanyRebranding: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Company Rebranding Services
       </h1>
+      <p>
+        Our Company Rebranding Services are designed to help your business
+        evolve and stand out in a competitive market. Whether you’re looking to
+        refresh your visual identity, update your messaging, or completely
+        reposition your brand, we provide comprehensive strategies to align your
+        brand with your current goals and market trends. From logo design and
+        website redesigns to refining your brand’s voice and culture, we ensure
+        your new identity resonates with your target audience and reflects the
+        true essence of your business. Let us help you create a brand that is
+        not only recognizable but memorable.
+      </p>
 
       {/* Introduction */}
       <section className="my-8">
@@ -24,12 +35,12 @@ const CompanyRebranding: FC = () => {
           What is Company Rebranding?
         </h2>
         <p className="my-4">
-          Company rebranding is a **transformative process** that involves
-          **revitalizing your business identity** to better align with market
+          Company rebranding is a transformative process that involves
+          revitalizing your business identity to better align with market
           trends, audience expectations, and growth strategies. Whether you're
-          looking to **modernize your brand, refresh your messaging, or redesign
-          your website**, our comprehensive services help you create a
-          **powerful, cohesive, and future-ready brand identity**.
+          looking to modernize your brand, refresh your messaging, or redesign
+          your website, our comprehensive services help you create a powerful,
+          cohesive, and future-ready brand identity.
         </p>
       </section>
 

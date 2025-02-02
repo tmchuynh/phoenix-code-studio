@@ -2,11 +2,14 @@
 
 import { Badge } from "@/components/ui/badge";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
+import { Button } from "@/components/ui/button";
 import { dataScienceResources } from "@/lib/blog-constants";
 import { blogs } from "@/lib/constants";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const BlogPage = () => {
+  const router = useRouter();
   return (
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
@@ -269,7 +272,7 @@ const BlogPage = () => {
             make more informed strategic choices based on real-time data.
           </p>
 
-          <h3 className="text-2xl font-semibold mt-4 mb-2">
+          <h3 className="text-2xl font-semibold mt-4 mb-2 text-accent-1">
             AI in Data Processing and Automation
           </h3>
           <ul className="list-disc pl-6 space-y-2">
@@ -291,7 +294,7 @@ const BlogPage = () => {
             </li>
           </ul>
 
-          <h3 className="text-2xl font-semibold mt-4 mb-2">
+          <h3 className="text-2xl font-semibold mt-4 mb-2 text-accent-1">
             AI in Customer Experience and Personalization
           </h3>
           <ul className="list-disc pl-6 space-y-2">
@@ -313,7 +316,7 @@ const BlogPage = () => {
             </li>
           </ul>
 
-          <h3 className="text-2xl font-semibold mt-4 mb-2">
+          <h3 className="text-2xl font-semibold mt-4 mb-2 text-accent-1">
             AI in Finance and Cybersecurity
           </h3>
           <ul className="list-disc pl-6 space-y-2">
@@ -329,7 +332,7 @@ const BlogPage = () => {
             </li>
           </ul>
 
-          <h3 className="text-2xl font-semibold mt-4 mb-2">
+          <h3 className="text-2xl font-semibold mt-4 mb-2 text-accent-1">
             AI in Healthcare & Medical Advancements
           </h3>
           <ul className="list-disc pl-6 space-y-2">
@@ -345,7 +348,7 @@ const BlogPage = () => {
             </li>
           </ul>
 
-          <h3 className="text-2xl font-semibold mt-4 mb-2">
+          <h3 className="text-2xl font-semibold mt-4 mb-2 text-accent-1">
             AI in Smart Technology and Transportation
           </h3>
           <ul className="list-disc pl-6 space-y-2">
@@ -432,9 +435,13 @@ const BlogPage = () => {
               );
             })}
             , visit our{" "}
-            <a href="#" className="text-primary underline">
+            <Button
+              onClick={() => router.push("/blogs")}
+              className="m-0 p-0"
+              variant={"link"}
+            >
               Blog
-            </a>{" "}
+            </Button>{" "}
             and stay ahead in the ever-evolving landscape of data.
           </p>
         </footer>

@@ -605,18 +605,18 @@ export const contentCreationServices: Services[] = [
       },
       {
         name: "Bi-Fold Brochures",
-        startingPrice: 100,
-        info: "Starting at $100 per design, ideal for presenting more detailed information in a compact, foldable format. Includes high-quality design and layout."
+        startingPrice: 75,
+        info: "Starting at $75 per design, ideal for presenting more detailed information in a compact, foldable format. Includes high-quality design and layout."
       },
       {
         name: "Tri-Fold Brochures",
-        startingPrice: 150,
-        info: "Starting at $150 per design, these brochures offer ample space for organized content and visuals. Perfect for marketing campaigns that require detailed information and appealing design."
+        startingPrice: 100,
+        info: "Starting at $100 per design, these brochures offer ample space for organized content and visuals. Perfect for marketing campaigns that require detailed information and appealing design."
       },
       {
         name: "Custom Multi-Page Brochures",
-        startingPrice: 300,
-        info: "Starting at $300, tailored to your specific needs. These brochures can include multiple pages, custom layouts, and advanced designs, making them ideal for extensive product or service catalogs."
+        startingPrice: 200,
+        info: "Starting at $200, tailored to your specific needs. These brochures can include multiple pages, custom layouts, and advanced designs, making them ideal for extensive product or service catalogs."
       }
     ]
   },
@@ -794,41 +794,45 @@ export const FAQs: FAQ[] = [
 export const paymentPlans: PaymentPlan[] = [
   {
     title: "Basic Plan",
-    description: "Ideal for small projects or businesses just getting started, this plan offers straightforward, flexible payment options that help you manage your budget effectively.",
+    description:
+      "Ideal for small projects or businesses just getting started, the Basic Plan offers straightforward, flexible payment options to help you manage your budget effectively while ensuring high-quality service delivery.",
     details: [
-      "Pay per service or milestone to maintain financial control",
-      "Monthly payments available for added convenience",
-      "Up to 3 months payment term to suit short-term projects"
+      "Pay per service or milestone to maintain financial control and avoid upfront costs",
+      "Monthly payments available for added convenience, making budgeting easier for smaller projects",
+      "Up to 3 months payment term to suit short-term projects and quick timelines"
     ],
     route: "/payment-plans/basic-plan"
   },
   {
     title: "Standard Plan",
-    description: "Perfect for medium-sized projects, this plan provides more flexibility with manageable payment installments and enhanced support to ensure your project stays on track.",
+    description:
+      "Perfect for medium-sized projects, the Standard Plan provides more flexibility with manageable payment installments. It also includes enhanced support, ensuring that your project stays on track with consistent communication and collaboration.",
     details: [
-      "Split payments into 3-6 installments for better cash flow",
-      "Priority support during the project for smoother execution",
-      "Up to 6 months payment term to accommodate project timelines"
+      "Split payments into 3-6 installments for better cash flow management and affordability",
+      "Priority support during the project, with dedicated resources for smoother execution and timely delivery",
+      "Up to 6 months payment term to accommodate medium-term project timelines and milestones"
     ],
     route: "/payment-plans/standard-plan"
   },
   {
     title: "Premium Plan",
-    description: "Designed for large-scale or ongoing projects, this plan offers flexible and extended payment options along with comprehensive support to address evolving needs.",
+    description:
+      "Designed for large-scale or ongoing projects, the Premium Plan offers flexible and extended payment options. This plan also includes comprehensive support to address evolving needs, ensuring that your business or project continues to grow without financial strain.",
     details: [
-      "Monthly retainer payments for predictable budgeting",
-      "Up to 12-month payment terms to manage long-term commitments",
-      "Full-service coverage including ongoing support and updates"
+      "Monthly retainer payments for predictable budgeting and consistent cash flow management",
+      "Up to 12-month payment terms to manage long-term commitments and ensure financial flexibility",
+      "Full-service coverage including ongoing support, regular updates, and strategic advice to align with your objectives"
     ],
     route: "/payment-plans/premium-plan"
   },
   {
     title: "Custom Plan",
-    description: "Tailored for complex or unique projects, this plan allows us to work together to create a payment structure that aligns with your specific needs, timeline, and budget.",
+    description:
+      "Tailored for complex or unique projects, the Custom Plan allows us to collaborate with you to create a flexible payment structure that aligns with your specific needs, timeline, and budget. This plan offers maximum flexibility to accommodate large-scale or unconventional projects.",
     details: [
-      "Flexible payment terms based on the size and scope of your project",
-      "Options for scaling and ongoing support to ensure continued success",
-      "Up to 24 months payment term based on mutual agreement"
+      "Flexible payment terms based on the size and scope of your project, with room for adjustment as needs evolve",
+      "Options for scaling and ongoing support to ensure continued success and project optimization over time",
+      "Up to 24 months payment term, with terms mutually agreed upon to best fit long-term and evolving projects"
     ],
     route: "/payment-plans/custom-plan"
   }

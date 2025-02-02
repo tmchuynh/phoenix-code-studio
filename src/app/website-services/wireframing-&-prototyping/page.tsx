@@ -17,6 +17,17 @@ const WireframingPrototypingServices: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Wireframing & Prototyping Services
       </h1>
+      <p>
+        Our Wireframing & Prototyping Services help bring your ideas to life
+        with clear, interactive blueprints that guide the development process.
+        We create low-fidelity wireframes to establish structure and layout,
+        followed by high-fidelity prototypes that simulate real user
+        interactions. This iterative process allows you to test and validate
+        your design concepts early on, ensuring the final product meets user
+        needs and expectations. Whether for web or mobile apps, our wireframing
+        and prototyping services provide a visual roadmap that streamlines
+        development and improves communication across teams.
+      </p>
 
       {/* Introduction */}
       <section className="my-8">
@@ -24,11 +35,10 @@ const WireframingPrototypingServices: FC = () => {
           Why Wireframing & Prototyping Matter
         </h2>
         <p className="my-4">
-          Wireframing and prototyping are **essential steps** in the product
-          development process, ensuring **clarity, efficiency, and a
-          user-centered approach**. These tools help in **identifying potential
-          issues early**, enabling cost-effective iterations and smoother
-          development workflows.
+          Wireframing and prototyping are essential steps in the product
+          development process, ensuring clarity, efficiency, and a user-centered
+          approach. These tools help in identifying potential issues early,
+          enabling cost-effective iterations and smoother development workflows.
         </p>
       </section>
 
@@ -80,8 +90,8 @@ const WireframingPrototypingServices: FC = () => {
           Get Started Today
         </h2>
         <p className="my-4">
-          Ready to transform your **ideas into intuitive wireframes &
-          interactive prototypes**?{" "}
+          Ready to transform your ideas into intuitive wireframes & interactive
+          prototypes?{" "}
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}

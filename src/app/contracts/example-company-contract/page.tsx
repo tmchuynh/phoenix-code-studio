@@ -203,7 +203,7 @@ const ServiceAgreementPage = () => {
             <li>
               If a check is returned unpaid for any reason (insufficient funds,
               account closure, stop payment, etc.), the Client will be
-              responsible for a **returned check fee of{" "}
+              responsible for a returned check fee of{" "}
               <EmphasizeText>[X]</EmphasizeText> and must remit payment
               immediately through a different accepted method.
             </li>

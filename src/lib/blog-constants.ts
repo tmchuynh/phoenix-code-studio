@@ -1977,58 +1977,6 @@ export const accessibilityResources: BlogContent[] = [
   },
 ];
 
-export const websiteServicesData: BlogContent[] = [
-  {
-    category: "Key Benefits of Custom Website Design",
-    items: [
-      { title: "Unique Branding", description: "Reflect your brand’s identity and values in every detail." },
-      { title: "Tailored Functionality", description: "Features designed to meet your business needs, such as booking systems, product filters, or custom integrations." },
-      { title: "Scalability", description: "Future-proof designs that adapt as your business grows." },
-      { title: "SEO Optimization", description: "Structured designs to improve your website’s visibility on search engines." },
-      { title: "Enhanced User Experience", description: "Intuitive, accessible, and user-friendly interfaces for all audiences." },
-    ],
-  },
-  {
-    category: "Our Web Design Process",
-    items: [
-      { title: "Consultation", description: "We start by understanding your goals, brand, and audience." },
-      { title: "Planning", description: "Develop a detailed sitemap, wireframes, and a comprehensive strategy." },
-      { title: "Design", description: "Craft high-fidelity prototypes, incorporating your feedback at every stage." },
-      { title: "Development", description: "Build a responsive, high-performance website using cutting-edge technologies." },
-      { title: "Testing", description: "Rigorous testing for functionality, compatibility, speed, and accessibility." },
-      { title: "Launch", description: "Deploy your site with secure hosting and domain registration." },
-      { title: "Ongoing Support", description: "Offer continuous updates, maintenance, and improvements post-launch." },
-    ],
-  },
-  {
-    category: "Domain Registration",
-    items: [
-      { title: "Domain Name Selection", description: "Collaborate with us to choose a domain that aligns with your brand." },
-      { title: "Extensions", description: "(.com, .org, .net) customized to suit your industry and audience." },
-      { title: "Privacy Protection", description: "Safeguard your personal information." },
-      { title: "Management", description: "Seamless renewals and updates for your domain." },
-    ],
-  },
-  {
-    category: "Web Hosting",
-    items: [
-      { title: "Managed Hosting", description: "Enjoy stress-free hosting with regular updates and backups." },
-      { title: "Optimized Performance", description: "Fast, secure servers for high-speed websites." },
-      { title: "SSL Certificates", description: "Enhance security and improve SEO rankings." },
-      { title: "99.9% Uptime Guarantee", description: "Ensure your website is always accessible." },
-      { title: "Scalable Hosting Plans", description: "Flexible solutions to fit businesses of all sizes." },
-    ],
-  },
-];
-
-export const toolsAndTechnologies = [
-  "Next.js for fast, SEO-friendly development",
-  "Tailwind CSS for responsive, accessible designs",
-  "Figma for wireframes and prototyping",
-  "Cloudflare for security and CDN services",
-  "Google Analytics for tracking performance",
-];
-
 export const accessibilityContent: BlogContent[] = [
   {
     category: "Why Accessibility Matters",

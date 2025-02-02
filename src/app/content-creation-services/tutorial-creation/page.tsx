@@ -17,6 +17,17 @@ const TutorialCreationServices: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Tutorial Creation Services
       </h1>
+      <p>
+        Our Tutorial Creation Services are designed to help you deliver
+        high-quality, interactive tutorials that guide users through complex
+        processes with ease. Whether it’s video tutorials, written guides, or
+        interactive learning modules, we create educational content tailored to
+        your audience’s needs. We specialize in breaking down intricate concepts
+        into clear, actionable steps, ensuring a seamless learning experience.
+        With engaging visuals, step-by-step instructions, and personalized
+        content, our tutorials help users master new skills efficiently and
+        effectively.
+      </p>
 
       {/* Introduction */}
       <section className="my-8">
@@ -26,9 +37,9 @@ const TutorialCreationServices: FC = () => {
         <p className="my-4">
           Tutorials simplify complex processes, enhance learning experiences,
           and empower users to navigate new systems with confidence. Whether for
-          **software applications, hardware guides, or skill development**,
-          well-crafted tutorials provide **clear, actionable steps** to ensure
-          an effortless learning experience.
+          software applications, hardware guides, or skill development,
+          well-crafted tutorials provide clear, actionable steps to ensure an
+          effortless learning experience.
         </p>
       </section>
 

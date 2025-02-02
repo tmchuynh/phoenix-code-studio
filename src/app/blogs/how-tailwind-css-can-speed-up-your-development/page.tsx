@@ -271,9 +271,13 @@ const BlogPage = () => {
               );
             })}
             , check out our{" "}
-            <a href="#" className="text-primary underline">
+            <Button
+              onClick={() => router.push("/blogs")}
+              className="m-0 p-0"
+              variant={"link"}
+            >
               Blog
-            </a>
+            </Button>{" "}
             . Stay tuned for more tutorials, tips, and resources!
           </p>
         </footer>

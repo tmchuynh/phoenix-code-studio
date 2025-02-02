@@ -2,12 +2,16 @@
 
 import { Badge } from "@/components/ui/badge";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
+import { Button } from "@/components/ui/button";
 import { whyWritingMattersContent } from "@/lib/blog-constants";
 import { blogs } from "@/lib/constants";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 const WhyWritingMattersBlog = () => {
+  const router = useRouter();
+
   return (
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
@@ -172,9 +176,13 @@ const WhyWritingMattersBlog = () => {
               );
             })}
             , check out our{" "}
-            <a href="#" className="text-primary underline">
+            <Button
+              onClick={() => router.push("/blogs")}
+              className="m-0 p-0"
+              variant={"link"}
+            >
               Blog
-            </a>{" "}
+            </Button>{" "}
             and start enhancing your communication skills today.
           </p>
         </footer>

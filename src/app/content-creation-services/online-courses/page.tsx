@@ -17,6 +17,15 @@ const OnlineCoursesServices: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Online Courses Development Services
       </h1>
+      <p>
+        Our Online Courses Development Services provide everything you need to
+        create engaging, educational, and interactive learning experiences. From
+        course planning and content development to multimedia creation and
+        platform integration, we offer comprehensive solutions tailored to your
+        audience. Whether you're launching a new course or enhancing an existing
+        one, we ensure that your online courses are not only informative but
+        also engaging and optimized for effective learning outcomes.
+      </p>
 
       {/* Dynamic Section Rendering */}
       {onlineCourseData.map((section, index) => (

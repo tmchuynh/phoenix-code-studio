@@ -17,6 +17,17 @@ const SEOOptimization: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         SEO Optimization Services
       </h1>
+      <p>
+        Our SEO Optimization Services are designed to help your website rank
+        higher on search engines and drive more organic traffic. By implementing
+        a combination of on-page and off-page SEO strategies, we improve your
+        website’s visibility, relevance, and authority in search results. From
+        keyword research and content optimization to technical SEO and backlink
+        building, our team tailors a comprehensive SEO plan to suit your
+        business goals. With a focus on delivering measurable results, we help
+        ensure that your website not only attracts visitors but also converts
+        them into loyal customers.
+      </p>
 
       {/* Introduction */}
       <section className="my-8">
@@ -25,9 +36,9 @@ const SEOOptimization: FC = () => {
         </h2>
         <p className="my-4">
           SEO (Search Engine Optimization) helps improve your website’s
-          visibility on search engines like **Google & Bing**. Our
-          **comprehensive SEO services** ensure your website ranks higher,
-          drives more organic traffic, and **attracts the right audience**.
+          visibility on search engines like Google & Bing. Our comprehensive SEO
+          services ensure your website ranks higher, drives more organic
+          traffic, and attracts the right audience.
         </p>
       </section>
 
@@ -79,7 +90,7 @@ const SEOOptimization: FC = () => {
           Get Started Today
         </h2>
         <p className="my-4">
-          Ready to boost your website’s SEO and **increase organic traffic**?{" "}
+          Ready to boost your website’s SEO and increase organic traffic?{" "}
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}

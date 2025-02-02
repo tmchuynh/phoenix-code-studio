@@ -17,6 +17,17 @@ const UXDesignServices: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         User Experience (UX) Design Services
       </h1>
+      <p>
+        Our User Experience (UX) Design Services focus on creating intuitive,
+        seamless, and engaging experiences for your users. We prioritize user
+        needs, behaviors, and emotions to design interfaces that not only look
+        great but also function flawlessly. By conducting thorough user
+        research, creating wireframes, and prototyping, we ensure that every
+        interaction is optimized for ease of use and satisfaction. Whether
+        you’re building a website, mobile app, or software product, our UX
+        design process is dedicated to delivering user-centric solutions that
+        drive engagement and enhance your brand’s reputation.
+      </p>
 
       {/* Introduction */}
       <section className="my-8">
@@ -25,9 +36,9 @@ const UXDesignServices: FC = () => {
         </h2>
         <p className="my-4">
           UX design is more than just aesthetics—it’s about creating experiences
-          that are **intuitive, engaging, and accessible**. Our UX services
-          focus on **understanding user behavior** and ensuring seamless
-          interactions for your audience.
+          that are intuitive, engaging, and accessible. Our UX services focus on
+          understanding user behavior and ensuring seamless interactions for
+          your audience.
         </p>
       </section>
 
@@ -79,7 +90,7 @@ const UXDesignServices: FC = () => {
           Get Started Today
         </h2>
         <p className="my-4">
-          Ready to elevate your **user experience and increase engagement**?{" "}
+          Ready to elevate your user experience and increase engagement?{" "}
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}

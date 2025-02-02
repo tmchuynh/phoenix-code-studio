@@ -48,12 +48,10 @@ const JobListingsPage: FC = () => {
         {jobPositions.map((job, index) => (
           <section key={index} className="border-b pb-8">
             {/* Job Title */}
-            <h2 className="text-2xl font-semibold text-secondary">
-              {job.title}
-            </h2>
+            <h2 className="font-semibold text-secondary">{job.title}</h2>
 
             {/* Additional Information */}
-            <h3 className="mt-1 p-0 text-tertiary text-sm md:text-md lg:text-lg">
+            <h3 className="mt-1 p-0 text-accent-1 text-sm md:text-md lg:text-lg">
               {job.information}
             </h3>
 

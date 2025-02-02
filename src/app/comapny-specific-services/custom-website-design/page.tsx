@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import {
   websiteServicesData,
   toolsAndTechnologies,
-} from "@/lib/blog-constants";
+} from "@/lib/company-constant";
 import { companySpecificServices } from "@/lib/constants";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
@@ -19,6 +19,17 @@ const CustomWebsite: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Custom Website Design Services
       </h1>
+      <p>
+        Our Custom Website Design Services are tailored to help your business
+        make a powerful first impression. We understand that every business is
+        unique, and we focus on creating visually stunning, user-friendly
+        websites that reflect your brand's identity and values. Whether you need
+        a responsive design, a streamlined e-commerce platform, or an engaging
+        portfolio, our team is equipped to design websites that meet your
+        specific needs. With a focus on functionality, performance, and
+        aesthetics, we ensure your website is not only attractive but also
+        provides an exceptional user experience across all devices.
+      </p>
 
       <section className="my-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">

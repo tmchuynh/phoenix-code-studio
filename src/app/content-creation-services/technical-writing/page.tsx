@@ -17,6 +17,17 @@ const TechnicalWritingServices: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Technical Writing Services
       </h1>
+      <p>
+        Our Technical Writing Services provide clear, concise, and accurate
+        documentation to help users understand and effectively use your products
+        or services. We specialize in creating user manuals, API documentation,
+        technical specifications, knowledge bases, and more. With a focus on
+        precision and ease of use, our team ensures that even the most complex
+        information is communicated in a straightforward manner. Whether you
+        need to simplify technical processes, enhance user experiences, or meet
+        compliance standards, our technical writing solutions are tailored to
+        meet your needs.
+      </p>
 
       {/* Introduction */}
       <section className="my-8">

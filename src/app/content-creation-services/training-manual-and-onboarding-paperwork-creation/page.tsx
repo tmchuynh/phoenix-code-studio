@@ -17,19 +17,17 @@ const TrainingManualOnboardingPapers: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Training Manual and Onboarding Papers Creation Services
       </h1>
-
-      {/* Introduction */}
-      <section className="my-8">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-          Why Training Manuals and Onboarding Papers Matter
-        </h2>
-        <p className="my-4">
-          Professionally crafted training manuals and onboarding documents help
-          new hires **integrate seamlessly**, ensuring clarity, **standardized
-          processes**, and **improved retention**. These materials **empower
-          employees** by reducing learning curves and fostering productivity.
-        </p>
-      </section>
+      <p>
+        Our Training Manual and Onboarding Papers Creation Services help
+        businesses streamline the onboarding process for new employees. We craft
+        comprehensive, clear, and engaging training manuals and onboarding
+        documents that ensure a smooth transition for your team. Our materials
+        are designed to provide new hires with the information they need to get
+        up to speed quickly, ensuring they feel confident and prepared from day
+        one. Whether it’s a detailed manual for company procedures or
+        easy-to-follow onboarding papers, we deliver materials that enhance
+        employee engagement and productivity.
+      </p>
 
       {/* Dynamic Content Rendering for Sections */}
       {onboardingCreationData.map((section, index) => (
@@ -54,8 +52,12 @@ const TrainingManualOnboardingPapers: FC = () => {
           Pricing
         </h2>
         <p>
-          Pricing is based on document type, length, and complexity. We offer
-          flexible packages to suit your needs.
+          Our pricing is tailored to meet your specific needs based on the
+          document type, length, and complexity. We offer flexible packages
+          designed to accommodate a wide range of budgets and project
+          requirements. Whether you're looking for a simple one-page flyer or a
+          more detailed brochure, we can customize a solution that works for
+          you.
         </p>
         {contentCreationServices.map((service) => (
           <>

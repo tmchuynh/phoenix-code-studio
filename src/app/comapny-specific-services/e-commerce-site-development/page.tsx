@@ -21,6 +21,18 @@ const EcommerceWebsite: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         E-Commerce Website Development
       </h1>
+      <p>
+        Our E-Commerce Website Development services focus on creating dynamic,
+        secure, and user-friendly online stores that drive sales and enhance
+        customer experience. We specialize in building custom e-commerce
+        websites using the latest technologies to ensure scalability, mobile
+        responsiveness, and seamless integration with payment gateways. From
+        intuitive product catalogs to streamlined checkout processes, we craft a
+        personalized shopping experience that keeps your customers engaged and
+        coming back. Whether you're a small business or a large enterprise, our
+        solutions are designed to grow with your business and maximize online
+        sales.
+      </p>
 
       {/* Why Choose Custom eCommerce Development? */}
       <section className="my-8">

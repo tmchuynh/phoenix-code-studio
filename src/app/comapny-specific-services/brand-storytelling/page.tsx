@@ -17,6 +17,17 @@ const BrandStorytellingServices: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Brand Storytelling Services
       </h1>
+      <p>
+        Our Brand Storytelling Services help you craft a narrative that
+        resonates with your audience, builds emotional connections, and
+        strengthens your brand identity. We focus on developing a compelling
+        story that reflects your values, mission, and vision, allowing your
+        brand to stand out in a crowded market. From origin stories to value
+        propositions and customer-centric narratives, we help tell your story in
+        a way that engages, inspires, and drives loyalty. Let us help you
+        connect with your audience on a deeper level and leave a lasting
+        impression.
+      </p>
 
       {/* Introduction */}
       <section className="my-8">
@@ -24,11 +35,11 @@ const BrandStorytellingServices: FC = () => {
           Why Brand Storytelling Matters
         </h2>
         <p className="my-4">
-          Brand storytelling is **more than marketing**—it’s about crafting a
-          **compelling narrative** that resonates with your audience, builds
-          trust, and creates an emotional connection. A well-crafted brand story
-          **differentiates** your business in a crowded market, **clarifies your
-          mission**, and leaves a **lasting impression**.
+          Brand storytelling is more than marketing—it’s about crafting a
+          compelling narrative that resonates with your audience, builds trust,
+          and creates an emotional connection. A well-crafted brand story
+          differentiates your business in a crowded market, clarifies your
+          mission, and leaves a lasting impression.
         </p>
       </section>
 
@@ -80,7 +91,7 @@ const BrandStorytellingServices: FC = () => {
           Get Started Today
         </h2>
         <p className="my-4">
-          Ready to craft a **powerful brand story**?{" "}
+          Ready to craft a powerful brand story?{" "}
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}

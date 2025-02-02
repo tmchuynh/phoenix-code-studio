@@ -2,11 +2,15 @@
 
 import { Badge } from "@/components/ui/badge";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
+import { Button } from "@/components/ui/button";
 import { uxDesignResources } from "@/lib/blog-constants";
 import { blogs } from "@/lib/constants";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const BlogPage = () => {
+  const router = useRouter();
+
   return (
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
@@ -161,9 +165,13 @@ const BlogPage = () => {
               );
             })}
             , visit our{" "}
-            <a href="/blog" className="text-primary underline">
+            <Button
+              onClick={() => router.push("/blogs")}
+              className="m-0 p-0"
+              variant={"link"}
+            >
               Blog
-            </a>
+            </Button>{" "}
             . Stay connected with us for the latest trends in{" "}
             <strong>UX/UI Design</strong> and <strong>Web Design</strong>!
           </p>

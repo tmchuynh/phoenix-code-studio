@@ -17,6 +17,14 @@ const BrochuresAndFlyersServices: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Brochures and Flyers Design Services
       </h1>
+      <p>
+        Our Brochures and Flyers Design Services deliver visually compelling and
+        impactful marketing materials that capture your brand’s essence. Whether
+        you’re promoting a product, service, or event, our designs communicate
+        your message clearly and effectively. We create customized, high-quality
+        brochures and flyers that help you stand out and engage your audience,
+        making a lasting impression wherever they’re distributed.
+      </p>
 
       {/* Dynamic Section Rendering */}
       {brochuresFlyersData.map((section, index) => (

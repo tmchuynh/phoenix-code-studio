@@ -17,6 +17,17 @@ const WebsiteCopywritingServices: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Website Copywriting Services
       </h1>
+      <p>
+        Our Website Copywriting Services focus on crafting compelling, clear,
+        and engaging content that resonates with your audience while driving
+        conversions. From homepage copy to product descriptions, blog posts, and
+        CTAs, we create content that captures your brand voice and encourages
+        action. Our team ensures that each piece is optimized for SEO, improving
+        your visibility on search engines and helping you attract more visitors.
+        Whether you’re launching a new website or revamping an existing one, our
+        copywriting services deliver content that informs, engages, and
+        converts.
+      </p>
 
       {/* Introduction */}
       <section className="my-8">
@@ -24,10 +35,9 @@ const WebsiteCopywritingServices: FC = () => {
           Why Website Copywriting Matters
         </h2>
         <p className="my-4">
-          Your website serves as the **first impression** many potential
-          customers have of your brand. High-quality, persuasive copy is
-          **essential** for engaging visitors, communicating your value, and
-          **boosting conversions**.
+          Your website serves as the first impression many potential customers
+          have of your brand. High-quality, persuasive copy is essential for
+          engaging visitors, communicating your value, and boosting conversions.
         </p>
       </section>
 
@@ -81,7 +91,7 @@ const WebsiteCopywritingServices: FC = () => {
           Get Started Today
         </h2>
         <p className="my-4">
-          Ready to **transform your website** with engaging and high-converting
+          Ready to transform your website with engaging and high-converting
           copy?{" "}
           <Button
             variant={"link"}

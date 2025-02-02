@@ -16,6 +16,18 @@ const DatabaseServices: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Database Creation and Management Services
       </h1>
+      <p>
+        Our Database Creation and Management Services are designed to help
+        businesses efficiently manage and optimize their data. We specialize in
+        creating custom databases that are scalable, secure, and tailored to
+        meet your specific business needs. From relational databases like MySQL
+        and PostgreSQL to NoSQL solutions such as MongoDB, we offer
+        comprehensive services to ensure your data is well-organized and
+        accessible. Additionally, our team provides ongoing management,
+        optimization, and support to maintain high performance, improve query
+        times, and ensure data integrity, enabling your business to make
+        data-driven decisions with confidence.
+      </p>
 
       {/* Introduction Section */}
       <section className="my-8">
@@ -23,11 +35,11 @@ const DatabaseServices: FC = () => {
           Why Choose Our Database Services?
         </h2>
         <p className="my-4">
-          Our comprehensive database solutions ensure that your data is
-          **secure, scalable, and optimized for performance**. Whether you're
-          building a database from the ground up or need professional management
-          for an existing one, we provide **reliable, high-performance
-          solutions** tailored to your business needs.
+          Our comprehensive database solutions ensure that your data is secure,
+          scalable, and optimized for performance. Whether you're building a
+          database from the ground up or need professional management for an
+          existing one, we provide reliable, high-performance solutions tailored
+          to your business needs.
         </p>
       </section>
 

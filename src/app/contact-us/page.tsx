@@ -92,10 +92,12 @@ const ContactUsPage: FC = () => {
         Contact Us
       </h1>
       <p>
-        We would love to hear from you! Whether you have questions about our
-        services, need more information, or are ready to start your next
-        project, we’re here to help. Please fill out the form below, and one of
-        our team members will get back to you as soon as possible.
+        Have questions or ready to start a project? We’re here to help! Our team
+        is dedicated to providing you with the best support, whether you need
+        more information about our services or assistance with a specific
+        request. Reach out to us, and we’ll get back to you as quickly as
+        possible. We look forward to working with you and turning your ideas
+        into reality.
       </p>
 
       {/* Contact Form */}

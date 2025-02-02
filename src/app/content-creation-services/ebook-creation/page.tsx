@@ -17,6 +17,16 @@ const EbookCreationServices: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         E-Book Creation Services
       </h1>
+      <p>
+        Our E-Book Creation Services provide end-to-end solutions for
+        transforming your ideas into polished, professional e-books. From
+        content writing and editing to design and formatting, we ensure your
+        e-book is visually engaging and easy to read across all devices. Whether
+        you're looking to create an educational resource, a product guide, or a
+        thought leadership piece, we help you create a compelling e-book that
+        resonates with your target audience and positions your brand as an
+        authority in your field.
+      </p>
 
       {/* Dynamic Section Rendering */}
       {ebookData.map((section, index) => (

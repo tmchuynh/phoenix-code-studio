@@ -17,6 +17,14 @@ const BlogWritingServices: FC = () => {
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
         Blog Writing Services
       </h1>
+      <p>
+        Our Blog Writing Services help you create high-quality, engaging content
+        that connects with your audience. We focus on crafting well-researched
+        articles tailored to your brand’s voice and goals. Whether you're
+        looking to boost SEO, establish thought leadership, or engage readers,
+        our blog writing experts provide consistent, valuable content that
+        drives traffic, conversions, and brand recognition.
+      </p>
 
       {/* Dynamic Section Rendering */}
       {blogWritingData.map((section, index) => (

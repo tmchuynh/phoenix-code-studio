@@ -26,11 +26,14 @@ const PaymentPlansPage: FC = () => {
         </h1>
         <p className="mt-4">
           We offer flexible payment options designed to accommodate your budget
-          and project requirements. Whether you prefer a pay-as-you-go model or
-          an extended payment plan, our options are tailored to provide
-          convenience and financial flexibility. Choose the plan that works best
-          for you, and let us bring your vision to life seamlessly and
-          affordably.
+          and project requirements, making it easier for businesses of all sizes
+          to get started. Whether you prefer a pay-as-you-go model or an
+          extended payment plan, our options provide transparency, convenience,
+          and financial flexibility. Choose from a variety of plans tailored to
+          meet your needs, ensuring smooth collaboration throughout the project
+          lifecycle. With clear terms and no hidden fees, our payment plans
+          allow you to stay on track while bringing your vision to life
+          seamlessly and affordably.
         </p>
       </header>
 
