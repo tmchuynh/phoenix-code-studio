@@ -85,13 +85,6 @@ const BlogPage = () => {
             and industries solve problems and make decisions. With the explosion
             of data in today’s digital age, organizations are leveraging data
             science to uncover patterns, predict trends, and drive innovation.
-            In this blog, we’ll explore what data science is, how it works, and
-            the key components that transform raw data into actionable insights.
-            Data science is an interdisciplinary field that combines statistics,
-            computer science, and domain expertise to analyze and interpret
-            complex datasets. It goes beyond simply collecting data—it involves
-            cleaning, processing, and analyzing data to extract meaningful
-            patterns and insights that inform decision-making.
           </p>
           <p>
             At its core, data science is an interdisciplinary field that blends
@@ -263,7 +256,6 @@ const BlogPage = () => {
             automate repetitive tasks, and uncover valuable insights that drive
             business innovation.
           </p>
-
           <p>
             By integrating AI into data science workflows, organizations can
             streamline data processing, enhance model accuracy, and optimize

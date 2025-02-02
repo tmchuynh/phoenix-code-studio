@@ -80,9 +80,7 @@ const BlogPage = () => {
             <strong>Graphical User Interfaces (GUIs)</strong> are the
             cornerstone of modern digital experiences. A well-designed GUI
             bridges the gap between users and technology, making complex systems
-            intuitive and accessible. In this blog, we’ll delve into the
-            principles, tips, and techniques for designing user-friendly
-            interfaces that delight users and enhance functionality.
+            intuitive and accessible.
           </p>
           <p>
             A user-friendly GUI is one that is intuitive, visually appealing,

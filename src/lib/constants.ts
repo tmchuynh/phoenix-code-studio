@@ -893,26 +893,26 @@ export const testimonials: Testimonial[] = [
 
 export const blogs: BlogPost[] = [
   {
-    title: "What is Web Design? A Comprehensive Guide",
+    title: "Things to Consider When Looking For a Designer and/or Developer",
     author: "Tina Huynh",
-    date: "January 2, 2025",
+    date: "February 1, 2025",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Design", "UX/UI", "Business"],
+    topics: ["Career"],
     excerpt:
-      "Web design encompasses everything from layout and user interface to the functionality and user experience. This comprehensive guide will break down the essentials of web design and what makes a great website.",
-    slug: "/blogs/what-is-web-design",
+      "Choosing the right designer or developer is crucial for the success of your project. A designer or developer should not only be technically skilled but also have a strong understanding of your business needs and goals. Ensuring a good match between your project requirements and their expertise will result in a seamless collaboration and a final product that reflects your vision.",
+    slug: "/blogs/things-to-consider-when-looking-for-a-designer-or-developer",
   },
   {
-    title: "Things to Consider When Looking For a Designer and/or Developer",
+    title: "All About Google Analytics",
     author: "Tina Huynh",
     date: "January 4, 2025",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Design", "Career", "UX/UI"],
+    topics: ["Analytics", "Business"],
     excerpt:
-      "Choosing the right designer or developer is crucial for the success of your project. This blog outlines key factors to consider, from expertise and experience to communication and budget.",
-    slug: "/blogs/things-to-consider-when-looking-for-a-designer-or-developer",
+      "Google Analytics is an essential tool for tracking website performance and gaining valuable insights into user behavior. This post dives into what Google Analytics is, how to set it up, and how businesses can leverage its data to optimize their website and marketing efforts.",
+    slug: "/blogs/all-about-google-analytics",
   },
   {
     title: "Should The Customer Do Research? And Research What Before the Consultation?",
@@ -920,9 +920,9 @@ export const blogs: BlogPost[] = [
     date: "January 2, 2025",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Design", "Self-Development", "UX/UI"],
+    topics: ["Research"],
     excerpt:
-      "Understanding your industry and basic web design principles before your consultation can help streamline the process. This post explains why doing research will make your project move faster and more efficiently.",
+      "Having a basic understanding of your industry and web design principles before your consultation helps you communicate your goals more clearly. Knowing what you want and understanding some of the design basics will allow you to ask more targeted questions and give your designer the context needed to create a solution that aligns with your objectives. It also helps in refining your vision and getting the most out of the consultation.",
     slug: "/blogs/doing-research-before-the-consultation",
   },
   {
@@ -931,9 +931,9 @@ export const blogs: BlogPost[] = [
     date: "January 2, 2025",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Design", "UX/UI", "Business"],
+    topics: ["Research", "Business"],
     excerpt:
-      "Starting a design project is exciting, but clear communication is key. Learn what information you should provide your designer to ensure they understand your vision and create the perfect solution.",
+      "Clear communication with your designer is key to achieving the desired results in your project. Sharing your business goals, target audience, branding guidelines, and any specific design preferences upfront will help your designer create a design that fits your needs. Additionally, providing any necessary resources or inspirations can save time and ensure the project stays on track from the beginning.",
     slug: "/blogs/things-to-tell-your-designer-before-starting-a-project",
   },
   {
@@ -942,20 +942,31 @@ export const blogs: BlogPost[] = [
     date: "January 2, 2025",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Design", "Career", "UX/UI"],
+    topics: ["Business", "Research"],
     excerpt:
-      "A consultation is your opportunity to assess a designer’s expertise and vision for your project. This post covers the key questions to ask during your meeting to ensure you’re making an informed decision.",
+      "A consultation with a designer or developer is an opportunity to assess their skills, approach, and understanding of your project. Asking questions about their past experience, design process, and how they handle revisions ensures that you find a good fit for your needs. This is also the time to clarify your goals, timelines, and budget to ensure that everyone is aligned on expectations before the project begins.",
     slug: "/blogs/questions-for-a-consultation",
+  },
+  {
+    title: "What is Web Design? A Comprehensive Guide",
+    author: "Tina Huynh",
+    date: "January 2, 2025",
+    img: "/images/blog-placeholder.jpg",
+    featured: true,
+    topics: ["UX/UI"],
+    excerpt:
+      "Web design encompasses more than just aesthetics; it involves creating a seamless user experience and ensuring that your website is functional, responsive, and easy to navigate. It blends design principles with technical knowledge to craft interfaces that meet both the needs of users and the goals of a business. A well-designed website considers visual appeal, usability, performance, and accessibility, ensuring that visitors have a positive interaction.",
+    slug: "/blogs/what-is-web-design",
   },
   {
     title: "The Importance of User Experience in Web Design",
     author: "Tina Huynh",
-    date: "August 15, 2024",
+    date: "January 4, 2025",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Design", "UX/UI", "Business"],
+    topics: ["UX/UI"],
     excerpt:
-      "User experience (UX) is one of the most important aspects of web design. This post explains why UX design should be prioritized to create websites that are intuitive, functional, and enjoyable for users.",
+      "User experience (UX) plays a pivotal role in how visitors interact with a website. A website with a great UX makes it easy for users to find what they’re looking for, whether it’s information, products, or services. A positive UX leads to higher engagement, improved customer satisfaction, and increased conversions. Understanding user behavior and creating intuitive, user-friendly interfaces is essential for businesses aiming to succeed in the digital space.",
     slug: "/blogs/importance-of-user-experience",
   },
   {
@@ -964,9 +975,9 @@ export const blogs: BlogPost[] = [
     date: "August 15, 2024",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Accessibility", "Design", "Business"],
+    topics: ["Accessibility", "Research"],
     excerpt:
-      "Accessibility is a crucial element in web design. In this blog, we explore how to make your website more inclusive for all users, including those with disabilities, to ensure equal access to content.",
+      "Accessibility in web design ensures that your website is usable by people of all abilities. This includes making sure your content can be accessed by users with disabilities, such as visual, auditory, or motor impairments. Implementing accessible design practices—such as using screen reader-friendly layouts, providing alternative text for images, and ensuring keyboard navigation—makes your website more inclusive and provides a better experience for all users.",
     slug: "/blogs/incorporating-accessibility-into-web-design",
   },
   {
@@ -977,7 +988,7 @@ export const blogs: BlogPost[] = [
     featured: true,
     topics: ["Blockchain", "Architecture", "AI/ML"],
     excerpt:
-      "Blockchain technology is more than just cryptocurrency. This blog explores the architecture of blockchain, its foundational principles, and how it’s changing industries beyond finance.",
+      "Blockchain architecture is the foundation of decentralized systems and cryptocurrencies. It consists of a series of interconnected blocks that store transaction data and ensure secure, transparent, and immutable records. Blockchain enables peer-to-peer transactions without relying on central authorities, making it a disruptive technology for industries ranging from finance to healthcare. Understanding how blockchain works and its underlying architecture is crucial for businesses and developers exploring decentralized applications.",
     slug: "/blogs/understanding-blockchain-architecture",
   },
   {
@@ -986,9 +997,9 @@ export const blogs: BlogPost[] = [
     date: "August 15, 2024",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Design", "Architecture", "AI/ML"],
+    topics: ["Architecture", "AI/ML"],
     excerpt:
-      "A graphical user interface (GUI) is key to creating intuitive and user-friendly digital experiences. This post dives into GUI architectures and how they shape the design and functionality of applications.",
+      "Graphical User Interface (GUI) architecture is key to creating intuitive, user-friendly systems. A well-designed GUI allows users to interact with software in a natural and efficient way. This architecture encompasses the visual design, layout, and interactions of the interface, ensuring that it’s not only functional but also aesthetically pleasing. Understanding GUI design principles and architecture is essential for creating applications that deliver seamless user experiences.",
     slug: "/blogs/understanding-gui-architecture",
   },
   {
@@ -1027,7 +1038,7 @@ export const blogs: BlogPost[] = [
   {
     title: "Why Every Developer Should Write",
     author: "Tina Huynh",
-    date: "March 21, 2022",
+    date: "May 22, 2023",
     img: "/images/blog-placeholder.jpg",
     featured: false,
     topics: ["Career", "Self-Development"],
@@ -1038,7 +1049,7 @@ export const blogs: BlogPost[] = [
   {
     title: "How Tailwind CSS Can Speed Up Your Development Process",
     author: "Tina Huynh",
-    date: "October 15, 2023",
+    date: "November 20, 2024",
     img: "/images/blog-placeholder.jpg",
     featured: false,
     topics: ["UX/UI", "Design"],
@@ -1157,6 +1168,7 @@ export const blogs: BlogPost[] = [
     slug: "/blogs/stories-of-tech-entrepreneurs",
   },
 ];
+
 
 export const pastProjects: Project[] = [
   {

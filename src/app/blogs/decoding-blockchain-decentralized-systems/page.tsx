@@ -78,8 +78,7 @@ const BlogPage = () => {
             by offering secure, decentralized systems that go beyond traditional
             data storage and transaction methods. From cryptocurrency to supply
             chain management, the applications of blockchain are vast and
-            ever-expanding. In this blog, we’ll break down what blockchain is,
-            how it works, and its potential to reshape our digital landscape.
+            ever-expanding.
           </p>
           <p>
             At its core, blockchain is a distributed ledger technology (DLT)
@@ -137,11 +136,9 @@ const BlogPage = () => {
             Whether you’re a developer, entrepreneur, investor, or tech
             enthusiast, understanding blockchain is no longer optional—it’s a
             necessity. As this technology evolves, those who embrace and adapt
-            to it will be at the forefront of the digital revolution.
-          </p>
-          <p>
-            The future of blockchain is just beginning, and its transformative
-            impact is undeniable. The question is: How will you be a part of it?
+            to it will be at the forefront of the digital revolution. The future
+            of blockchain is just beginning, and its transformative impact is
+            undeniable. The question is: How will you be a part of it?
           </p>
         </section>
 

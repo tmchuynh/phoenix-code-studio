@@ -79,9 +79,7 @@ const BlogPage = () => {
             development project. Ensuring that your website is usable by people
             with disabilities not only opens your content to a wider audience
             but also improves user satisfaction, fosters inclusivity, and
-            complies with legal requirements. In this blog, we’ll discuss why
-            accessibility is crucial, the benefits it provides, and how to start
-            making your website more accessible today.
+            complies with legal requirements.
           </p>
           <p>
             Web accessibility refers to the practice of designing and developing
