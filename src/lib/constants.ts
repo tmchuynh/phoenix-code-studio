@@ -893,14 +893,69 @@ export const testimonials: Testimonial[] = [
 
 export const blogs: BlogPost[] = [
   {
+    title: "What is Web Design? A Comprehensive Guide",
+    author: "Tina Huynh",
+    date: "January 2, 2025",
+    img: "/images/blog-placeholder.jpg",
+    featured: true,
+    topics: ["Design", "UX/UI", "Business"],
+    excerpt:
+      "Web design encompasses everything from layout and user interface to the functionality and user experience. This comprehensive guide will break down the essentials of web design and what makes a great website.",
+    slug: "/blogs/what-is-web-design",
+  },
+  {
+    title: "Things to Consider When Looking For a Designer and/or Developer",
+    author: "Tina Huynh",
+    date: "January 4, 2025",
+    img: "/images/blog-placeholder.jpg",
+    featured: true,
+    topics: ["Design", "Career", "UX/UI"],
+    excerpt:
+      "Choosing the right designer or developer is crucial for the success of your project. This blog outlines key factors to consider, from expertise and experience to communication and budget.",
+    slug: "/blogs/things-to-consider-when-looking-for-a-designer-or-developer",
+  },
+  {
+    title: "Should The Customer Do Research? And Research What Before the Consultation?",
+    author: "Tina Huynh",
+    date: "January 2, 2025",
+    img: "/images/blog-placeholder.jpg",
+    featured: true,
+    topics: ["Design", "Self-Development", "UX/UI"],
+    excerpt:
+      "Understanding your industry and basic web design principles before your consultation can help streamline the process. This post explains why doing research will make your project move faster and more efficiently.",
+    slug: "/blogs/doing-research-before-the-consultation",
+  },
+  {
+    title: "Things To Tell Your Designer Before Starting A Project",
+    author: "Tina Huynh",
+    date: "January 2, 2025",
+    img: "/images/blog-placeholder.jpg",
+    featured: true,
+    topics: ["Design", "UX/UI", "Business"],
+    excerpt:
+      "Starting a design project is exciting, but clear communication is key. Learn what information you should provide your designer to ensure they understand your vision and create the perfect solution.",
+    slug: "/blogs/things-to-tell-your-designer-before-starting-a-project",
+  },
+  {
+    title: "What To Ask During A Consultation?",
+    author: "Tina Huynh",
+    date: "January 2, 2025",
+    img: "/images/blog-placeholder.jpg",
+    featured: true,
+    topics: ["Design", "Career", "UX/UI"],
+    excerpt:
+      "A consultation is your opportunity to assess a designer’s expertise and vision for your project. This post covers the key questions to ask during your meeting to ensure you’re making an informed decision.",
+    slug: "/blogs/questions-for-a-consultation",
+  },
+  {
     title: "The Importance of User Experience in Web Design",
     author: "Tina Huynh",
     date: "August 15, 2024",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Design", "Software Engineer"],
+    topics: ["Design", "UX/UI", "Business"],
     excerpt:
-      "User experience (UX) is one of the most important factors when designing a website. It directly impacts how users interact with your website, and ultimately affects conversion rates.",
+      "User experience (UX) is one of the most important aspects of web design. This post explains why UX design should be prioritized to create websites that are intuitive, functional, and enjoyable for users.",
     slug: "/blogs/importance-of-user-experience",
   },
   {
@@ -909,9 +964,9 @@ export const blogs: BlogPost[] = [
     date: "August 15, 2024",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Accessibility", "Design"],
+    topics: ["Accessibility", "Design", "Business"],
     excerpt:
-      "User experience (UX) is one of the most important factors when designing a website. It directly impacts how users interact with your website, and ultimately affects conversion rates.",
+      "Accessibility is a crucial element in web design. In this blog, we explore how to make your website more inclusive for all users, including those with disabilities, to ensure equal access to content.",
     slug: "/blogs/incorporating-accessibility-into-web-design",
   },
   {
@@ -920,9 +975,9 @@ export const blogs: BlogPost[] = [
     date: "August 15, 2024",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Blockchain", "Architecture", "AI/ML", "IoT",],
+    topics: ["Blockchain", "Architecture", "AI/ML"],
     excerpt:
-      "User experience (UX) is one of the most important factors when designing a website. It directly impacts how users interact with your website, and ultimately affects conversion rates.",
+      "Blockchain technology is more than just cryptocurrency. This blog explores the architecture of blockchain, its foundational principles, and how it’s changing industries beyond finance.",
     slug: "/blogs/understanding-blockchain-architecture",
   },
   {
@@ -931,9 +986,9 @@ export const blogs: BlogPost[] = [
     date: "August 15, 2024",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Design", "Architecture", "AI/ML", "VR"],
+    topics: ["Design", "Architecture", "AI/ML"],
     excerpt:
-      "User experience (UX) is one of the most important factors when designing a website. It directly impacts how users interact with your website, and ultimately affects conversion rates.",
+      "A graphical user interface (GUI) is key to creating intuitive and user-friendly digital experiences. This post dives into GUI architectures and how they shape the design and functionality of applications.",
     slug: "/blogs/understanding-gui-architecture",
   },
   {
@@ -944,7 +999,7 @@ export const blogs: BlogPost[] = [
     featured: false,
     topics: ["Self-Development", "Software Engineer", "Career"],
     excerpt:
-      "A career in tech demands constant learning and growth. But isn’t that true for any career? After all, continuous improvement is the key to success.",
+      "Continuous learning is key to success in tech. In this blog, discover a curated list of essential books for developers to enhance their skills, grow in their careers, and keep up with the ever-evolving field.",
     slug: "/blogs/books-to-read-as-developer",
   },
   {
@@ -953,9 +1008,9 @@ export const blogs: BlogPost[] = [
     date: "April 22, 2022",
     img: "/images/blog-placeholder.jpg",
     featured: false,
-    topics: ["Career", "Self-Development",],
+    topics: ["Career", "Self-Development"],
     excerpt:
-      `Even though "jack of all trades" sometimes is used as an insult, it did not begin as one. The complete saying goes "A jack of all trades is a master of none, but oftentimes better than a master of one."`,
+      "The debate between the jack of all trades and the master of one is a classic one. This post explores the pros and cons of each and how they apply to the tech industry and career development.",
     slug: "/blogs/jack-of-all-trades-or-master-of-one",
   },
   {
@@ -966,7 +1021,7 @@ export const blogs: BlogPost[] = [
     featured: true,
     topics: ["Career", "Resources"],
     excerpt:
-      `Contactless business cards are a modern, eco-friendly alternative to paper cards, allowing professionals to share contact details, social media profiles, and more with a simple tap or scan.`,
+      "Contactless business cards are modern and eco-friendly alternatives to traditional cards. Learn about the best options available to easily share your professional information with a tap or scan.",
     slug: "/blogs/best-contactless-business-card-options",
   },
   {
@@ -977,7 +1032,7 @@ export const blogs: BlogPost[] = [
     featured: false,
     topics: ["Career", "Self-Development"],
     excerpt:
-      `"In fact, the importance of writing has perhaps increased in the last decade or so, thanks to trends in technology...In matters of business, when every second counts, strong writing makes the difference between smooth operations and clumsy footing."`,
+      "Writing is an important skill for every developer, whether it’s for documentation, communication, or business. This post explores why developers should prioritize writing as part of their career growth.",
     slug: "/blogs/why-every-developer-should-write",
   },
   {
@@ -986,9 +1041,9 @@ export const blogs: BlogPost[] = [
     date: "October 15, 2023",
     img: "/images/blog-placeholder.jpg",
     featured: false,
-    topics: ["Software Engineer", "Design"],
+    topics: ["UX/UI", "Design"],
     excerpt:
-      "Tailwind CSS is a utility-first CSS framework that provides a highly customizable approach to building modern user interfaces. In this blog post, we'll explore how it can speed up your development process.",
+      "Tailwind CSS is a utility-first CSS framework that allows developers to quickly build custom, responsive, and attractive user interfaces. Discover how it can speed up your development process.",
     slug: "/blogs/how-tailwind-css-can-speed-up-your-development",
   },
   {
@@ -999,7 +1054,7 @@ export const blogs: BlogPost[] = [
     featured: false,
     topics: ["Resources", "Software Engineer"],
     excerpt:
-      "With the rapid evolution of JavaScript frameworks like React, Vue, and Angular, it's important to stay up-to-date with the latest trends. This article explores the future of JavaScript frameworks.",
+      "With the rapid evolution of JavaScript frameworks like React, Vue, and Angular, it’s essential to keep up with the latest trends. This blog discusses what’s next for JavaScript frameworks and how they’re shaping the web.",
     slug: "/blogs/future-of-javascript-frameworks",
   },
   {
@@ -1010,7 +1065,7 @@ export const blogs: BlogPost[] = [
     featured: true,
     topics: ["Accessibility", "Design", "Software Engineer"],
     excerpt:
-      "Accessibility should be a priority in every web development project. Ensuring that your website is usable by people with disabilities opens your content to a wider audience and improves user satisfaction.",
+      "Accessibility should be a priority in web development to ensure that your website is usable by everyone, including those with disabilities. This blog explores why accessibility matters and how to implement it effectively.",
     slug: "/blogs/why-accessibility-matters",
   },
   {
@@ -1021,7 +1076,7 @@ export const blogs: BlogPost[] = [
     featured: false,
     topics: ["Blockchain", "Resources"],
     excerpt:
-      "Blockchain technology is transforming industries by providing secure, decentralized systems. Discover the fundamentals and future potential of blockchain in this blog.",
+      "Blockchain is transforming industries by providing secure, decentralized systems. This blog explores the fundamentals of blockchain and its potential applications beyond cryptocurrency.",
     slug: "/blogs/decoding-blockchain-decentralized-systems",
   },
   {
@@ -1032,7 +1087,7 @@ export const blogs: BlogPost[] = [
     featured: false,
     topics: ["Data Science", "Analytics", "AI/ML", "IoT"],
     excerpt:
-      "Data science is changing how we solve problems and make decisions. Learn how data scientists turn raw data into insights that drive success.",
+      "Data science is changing how we solve problems and make decisions. Learn how data scientists turn raw data into valuable insights that drive success in business and beyond.",
     slug: "/blogs/demystifying-data-science",
   },
   {
@@ -1041,9 +1096,9 @@ export const blogs: BlogPost[] = [
     date: "January 15, 2023",
     img: "/images/blog-placeholder.jpg",
     featured: false,
-    topics: ["Blockchain", "IoT", "AI/ML", "Autonomous Systems",],
+    topics: ["Blockchain", "IoT", "AI/ML", "Autonomous Systems"],
     excerpt:
-      "The Internet of Things (IoT) is connecting the world like never before. Explore how IoT innovations are transforming industries and daily life.",
+      "The Internet of Things (IoT) is connecting the world in new and exciting ways. Explore how IoT innovations are transforming industries and improving everyday life.",
     slug: "/blogs/revolutionizing-connectivity-iot",
   },
   {
@@ -1054,7 +1109,7 @@ export const blogs: BlogPost[] = [
     featured: true,
     topics: ["Data Science", "Software Engineer", "Analytics"],
     excerpt:
-      "Web scraping opens up endless possibilities for collecting and analyzing data. Dive into the ethical and technical aspects of this powerful technique.",
+      "Web scraping is a powerful technique for collecting and analyzing data. This blog delves into the technical and ethical aspects of web scraping and how it can benefit your projects.",
     slug: "/blogs/creative-data-harvesting-web-scraping",
   },
   {
@@ -1065,7 +1120,7 @@ export const blogs: BlogPost[] = [
     featured: true,
     topics: ["Entrepreneurship", "Innovation"],
     excerpt:
-      "Tech startups are driving innovation in the digital age. Explore the challenges and successes behind the scenes of these groundbreaking companies.",
+      "Tech startups are reshaping industries. This blog shares the inspiring stories of how tech entrepreneurs have turned their startups into successful companies.",
     slug: "/blogs/insights-into-tech-startups",
   },
   {
@@ -1074,9 +1129,9 @@ export const blogs: BlogPost[] = [
     date: "November 20, 2024",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Innovation", "AI/ML", "Blockchain", "Quantum Computing", "VR", "Autonomous Systems", "IoT"],
+    topics: ["Innovation", "AI/ML", "Blockchain", "Quantum Computing"],
     excerpt:
-      "Stay ahead of the curve with a look at the latest technology trends reshaping the digital landscape and industries worldwide.",
+      "Stay ahead of the curve with a look at the latest technology trends reshaping industries worldwide. This blog explores emerging technologies and their potential impact.",
     slug: "/blogs/navigating-tech-trends",
   },
   {
@@ -1085,9 +1140,9 @@ export const blogs: BlogPost[] = [
     date: "March 23, 2022",
     img: "/images/blog-placeholder.jpg",
     featured: false,
-    topics: ["Design", "Software Engineer",],
+    topics: ["Design", "Software Engineer", "UX/UI"],
     excerpt:
-      "Great graphical user interfaces (GUIs) are key to intuitive user experiences. Discover tips and techniques for designing user-friendly interfaces.",
+      "A great graphical user interface (GUI) is essential for creating seamless user experiences. This blog offers tips and insights into mastering GUI design for intuitive interfaces.",
     slug: "/blogs/mastering-gui-design",
   },
   {
