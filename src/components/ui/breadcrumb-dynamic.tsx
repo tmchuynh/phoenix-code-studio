@@ -21,8 +21,8 @@ const DynamicBreadcrumb = () => {
     <Breadcrumb className="mb-4">
       <BreadcrumbList>
         <BreadcrumbItem>
-          <BreadcrumbLink asChild>
-            <Link href="/">Home</Link>
+          <BreadcrumbLink className="bg-muted px-3 py-2 rounded-lg cursor-default">
+            Home
           </BreadcrumbLink>
         </BreadcrumbItem>
 
@@ -35,10 +35,12 @@ const DynamicBreadcrumb = () => {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 {isLast ? (
-                  <BreadcrumbPage>{capitalize(segment)}</BreadcrumbPage>
+                  <BreadcrumbPage className="bg-muted px-3 py-2 rounded-lg cursor-default">
+                    {capitalize(segment)}
+                  </BreadcrumbPage>
                 ) : (
-                  <BreadcrumbLink asChild>
-                    <Link href={href}>{capitalize(segment)}</Link>
+                  <BreadcrumbLink className="bg-muted px-3 py-2 rounded-lg cursor-default">
+                    {capitalize(segment)}
                   </BreadcrumbLink>
                 )}
               </BreadcrumbItem>

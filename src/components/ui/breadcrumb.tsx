@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { ChevronRight, MoreHorizontal } from "lucide-react";
+import { HiOutlineSlash } from "react-icons/hi2";
 
 import { cn } from "@/lib/utils";
 
@@ -80,10 +81,10 @@ const BreadcrumbSeparator = ({
   <li
     role="presentation"
     aria-hidden="true"
-    className={cn("[&>svg]:w-3.5 [&>svg]:h-3.5", className)}
+    className={cn("[&>svg]:w-6 [&>svg]:h-6", className)}
     {...props}
   >
-    {children ?? <ChevronRight />}
+    {children ?? <HiOutlineSlash />}
   </li>
 );
 BreadcrumbSeparator.displayName = "BreadcrumbSeparator";
