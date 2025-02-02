@@ -34,6 +34,7 @@ const PastProjectsPage: FC = () => {
   const [selectedLibraries, setSelectedLibraries] = useState<string[]>([]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [filtersCleared, setFiltersCleared] = useState(false);
+  const [noResults, setNoResults] = useState(false);
 
   const [currentPage, setCurrentPage] = useState(1);
   const [projectsPerPage, setProjectsPerPage] = useState(5);
@@ -105,14 +106,23 @@ const PastProjectsPage: FC = () => {
     }
 
     if (filtered.length === 0) {
-      setTimeout(() => {
-        setSelectedLanguages([]);
-        setSelectedFrameworks([]);
-        setSelectedTechnologies([]);
-        setSelectedLibraries([]);
-        setSelectedTags([]);
-      }, 1000);
+      if (filtersCleared) {
+        setTimeout(() => setNoResults(true), 2500);
+      } else {
+        setNoResults(true);
+        setTimeout(() => {
+          setSelectedLanguages([]);
+          setSelectedFrameworks([]);
+          setSelectedTechnologies([]);
+          setSelectedLibraries([]);
+          setSelectedTags([]);
+        }, 1000);
+      }
       setFilteredProjects(pastProjects);
+      setTimeout(() => setNoResults(false), 4000);
+    } else {
+      setNoResults(false);
+      setFilteredProjects(filtered);
     }
   };
 
@@ -153,6 +163,7 @@ const PastProjectsPage: FC = () => {
     setSelectedLanguages([]);
     setSelectedFrameworks([]);
     setSelectedTags([]);
+    setNoResults(false);
     setFilteredProjects(pastProjects);
     setFiltersCleared(true);
     setTimeout(() => setFiltersCleared(false), 4000);
@@ -491,6 +502,16 @@ const PastProjectsPage: FC = () => {
           {filtersCleared && (
             <p className="text-secondary m-0 p-0">
               Filters have been cleared successfully!
+            </p>
+          )}
+        </div>
+
+        {/* No results warning */}
+        <div className="my-4 text-center">
+          {noResults && (
+            <p className="text-destructive m-0">
+              No projects match your selected filters. Filters have been
+              cleared.
             </p>
           )}
         </div>
