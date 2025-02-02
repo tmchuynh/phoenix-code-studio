@@ -151,10 +151,11 @@ const PastProjectsPage: FC = () => {
     );
   };
 
-  const handleTagChange = (tag: string, checked: boolean) => {
+  const handleTagChange = (tag: string) => {
     setSelectedTags((prev) =>
-      checked ? [...prev, tag] : prev.filter((t) => t !== tag)
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
     );
+    handleFilter(); // Trigger filtering when a tag is clicked
   };
 
   // Clear all filters
@@ -212,6 +213,9 @@ const PastProjectsPage: FC = () => {
         diverse client needs and goals. Get inspired by the impactful solutions
         we’ve created for businesses across various industries, demonstrating
         our ability to deliver high-quality results.
+      </p>
+      <p className="text-accent-5">
+        <i>Note: Click on the badges on each card to quickly filter by tag</i>
       </p>
 
       {/* Filter Controls */}
@@ -320,7 +324,7 @@ const PastProjectsPage: FC = () => {
                       type="checkbox"
                       id={tag}
                       checked={selectedTags.includes(tag)}
-                      onChange={(e) => handleTagChange(tag, e.target.checked)}
+                      onChange={() => handleTagChange(tag)}
                       className="mr-2"
                     />
                     <label htmlFor={tag}>
@@ -414,7 +418,7 @@ const PastProjectsPage: FC = () => {
                       type="checkbox"
                       id={tag}
                       checked={selectedTags.includes(tag)}
-                      onChange={(e) => handleTagChange(tag, e.target.checked)}
+                      onChange={() => handleTagChange(tag)}
                       className="mr-2"
                     />
                     <label htmlFor={tag}>
@@ -573,19 +577,20 @@ const PastProjectsPage: FC = () => {
               >
                 <div className="h-full flex flex-col justify-between">
                   <div>
-                    <h2 className="text-lg md:text-xl lg:text-2xl font-semibold">
-                      {project.title}
-                    </h2>
+                    <h2 className="font-semibold">{project.title}</h2>
 
                     {isSmallScreen ? null : isLargeScreen ? (
                       <div>
                         {project.tags.length > 0 && (
-                          <div className="mb-4 flex gap-4">
+                          <div className="mt-6 gap-2 flex flex-wrap">
                             {project.tags.map((tag, index) => (
                               <Badge
                                 key={index}
                                 variant={"secondary"}
-                                className="mr-2 cursor-default"
+                                className="mr-2 cursor-pointer"
+                                onClick={() => {
+                                  handleTagChange(tag);
+                                }}
                               >
                                 {tag}
                               </Badge>
@@ -597,7 +602,7 @@ const PastProjectsPage: FC = () => {
                       <>
                         <div>
                           {project.tags.length > 0 && (
-                            <div className="mb-4 flex gap-2">
+                            <div className="mt-6 gap-2 flex flex-wrap">
                               {project.tags.map((tag, index) => (
                                 <Badge
                                   key={index}

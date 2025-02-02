@@ -597,7 +597,7 @@ const BlogDisplayPage: FC = () => {
                   ) : (
                     <div className="mt-4 absolute bottom-4 md:text-md lg:text-lg">
                       {blog.topics.length > 0 && (
-                        <div className="mt-6">
+                        <div className="mt-6 gap-2 flex flex-wrap">
                           {blog.topics.map((topic, index) => (
                             <Badge
                               key={index}
