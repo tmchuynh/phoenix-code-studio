@@ -77,7 +77,7 @@ const ServicesPage: FC = () => {
                 className="flex flex-col md:flex-row justify-between md:items-end pb-4"
               >
                 <div>
-                  <h3 className="text-2xl font-semibold text-accent-5">
+                  <h3 className="font-semibold text-accent-5">
                     {service.name}
                   </h3>
                   <p>{!isMediumScreen ? service.info : service.details}</p>
@@ -112,7 +112,7 @@ const ServicesPage: FC = () => {
                 className="flex justify-between items-end pb-4"
               >
                 <div>
-                  <h3 className="text-2xl font-semibold text-accent-5">
+                  <h3 className="font-semibold text-accent-5">
                     {service.name}
                   </h3>
                   <p>{!isMediumScreen ? service.info : service.details}</p>
@@ -147,7 +147,7 @@ const ServicesPage: FC = () => {
                 className="flex justify-between items-end pb-4"
               >
                 <div>
-                  <h3 className="text-2xl font-semibold text-accent-5">
+                  <h3 className="font-semibold text-accent-5">
                     {service.name}
                   </h3>
                   <p>{!isMediumScreen ? service.info : service.details}</p>

@@ -11,7 +11,7 @@ const ServiceHighlights = () => {
         <div className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground">
           <FaDesktop className="text-4xl text-accent-5 mx-auto" />
 
-          <h3 className="text-xl md:text-2xl font-semibold text-center text-secondary mt-4">
+          <h3 className="font-semibold text-center text-secondary mt-4">
             Custom Website Design & Redesign
           </h3>
 
@@ -26,7 +26,7 @@ const ServiceHighlights = () => {
         <div className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground">
           <FaPen className="text-4xl text-accent-5 mx-auto" />
 
-          <h3 className="text-xl md:text-2xl font-semibold text-center text-secondary mt-4">
+          <h3 className="font-semibold text-center text-secondary mt-4">
             Content Creation
           </h3>
 
@@ -41,7 +41,7 @@ const ServiceHighlights = () => {
         <div className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground">
           <FaSearch className="text-4xl text-accent-5 mx-auto" />
 
-          <h3 className="text-xl md:text-2xl font-semibold text-center text-secondary mt-4">
+          <h3 className="font-semibold text-center text-secondary mt-4">
             Brand Rebranding & Storytelling
           </h3>
 

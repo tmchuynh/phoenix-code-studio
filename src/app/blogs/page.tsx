@@ -1,5 +1,6 @@
 "use client";
 
+import { Badge } from "@/components/ui/badge";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -15,12 +16,15 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { Input } from "@/components/ui/input";
 import {
   Pagination,
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import { blogs } from "@/lib/constants";
+import useBetweenLargeAndXL from "@/lib/onlyLargerScreens";
+import useSmallScreen from "@/lib/useSmallScreen";
 import { ChevronsUpDown } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
@@ -34,6 +38,9 @@ const BlogDisplayPage: FC = () => {
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  const isSmallDevice = useSmallScreen();
+  const isLargerScreen = useBetweenLargeAndXL();
 
   const [openCollapsible, setOpenCollapsible] = useState<string | null>(null);
 
@@ -131,16 +138,18 @@ const BlogDisplayPage: FC = () => {
     }
   };
 
-  const clearFilters = () => {
+  const clearFilters = (e?: string) => {
     setSelectedTopics([]);
     setSelectedDates([]);
     setSelectedAuthors([]);
     setSearchQuery("");
     setOpenCollapsible(null);
     setNoResults(false);
-    setFiltersCleared(true);
     setFilteredBlogs(blogs);
-    setTimeout(() => setFiltersCleared(false), 4000);
+    if (!e) {
+      setFiltersCleared(true);
+      setTimeout(() => setFiltersCleared(false), 4000);
+    }
   };
 
   const dates = Array.from(new Set(blogs.map((blog) => blog.date)));
@@ -212,6 +221,7 @@ const BlogDisplayPage: FC = () => {
   };
 
   const handleTopicClick = (topic: string) => {
+    clearFilters("topic");
     if (!selectedTopics.includes(topic)) {
       const updatedTopics = [...selectedTopics, topic];
       setSelectedTopics(updatedTopics);
@@ -251,14 +261,14 @@ const BlogDisplayPage: FC = () => {
                     <div className="flex items-center w-full">
                       <ChevronsUpDown className="h-4 w-4" />
                       <label htmlFor="topic" className="ml-2 text-lg w-full">
-                        Filter by Topic:
+                        <p>Filter by Topic:</p>
                       </label>
                       <span className="sr-only">Toggle</span>
                     </div>
                   </CollapsibleTrigger>
                 </div>
-                <CollapsibleContent className="space-y-2">
-                  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-start items-start w-full">
+                <CollapsibleContent className="space-y-2 ml-5">
+                  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 justify-start items-start w-full">
                     {topics.sort().map((topic) => (
                       <div key={topic} className="flex items-center mr-1">
                         <BpCheckbox
@@ -272,8 +282,12 @@ const BlogDisplayPage: FC = () => {
                           className="ml-2"
                           onClick={() => handleOpen("topic")}
                         >
-                          {topic}{" "}
-                          <span className="ml-1">( {topicCounts[topic]} )</span>
+                          <p>
+                            {topic}
+                            <span className="ml-1">
+                              ( {topicCounts[topic]} )
+                            </span>
+                          </p>
                         </label>
                       </div>
                     ))}
@@ -294,14 +308,14 @@ const BlogDisplayPage: FC = () => {
                     <div className="flex items-center w-full">
                       <ChevronsUpDown className="h-4 w-4" />
                       <label htmlFor="topic" className="ml-2 text-lg w-full">
-                        Filter by Date:
+                        <p>Filter by Date:</p>
                       </label>
                       <span className="sr-only">Toggle</span>
                     </div>
                   </CollapsibleTrigger>
                 </div>
-                <CollapsibleContent className="space-y-2">
-                  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-start items-start w-full">
+                <CollapsibleContent className="space-y-2 ml-5">
+                  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 justify-start items-start w-full">
                     {dates
                       .sort((a, b) => {
                         // Convert the date strings to Date objects
@@ -328,8 +342,13 @@ const BlogDisplayPage: FC = () => {
                             }`}
                             onClick={() => handleOpen("date")}
                           >
-                            {date}{" "}
-                            <span className="ml-1">( {dateCounts[date]} )</span>
+                            <p>
+                              {" "}
+                              {date}{" "}
+                              <span className="ml-1">
+                                ( {dateCounts[date]} )
+                              </span>
+                            </p>
                           </label>
                         </div>
                       ))}
@@ -350,14 +369,14 @@ const BlogDisplayPage: FC = () => {
                     <div className="flex items-center w-full">
                       <ChevronsUpDown className="h-4 w-4" />
                       <label htmlFor="author" className="ml-2 text-lg w-full">
-                        Filter by Author:
+                        <p>Filter by Author:</p>
                       </label>
                       <span className="sr-only">Toggle</span>
                     </div>
                   </CollapsibleTrigger>
                 </div>
-                <CollapsibleContent className="space-y-2">
-                  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-start items-start w-full">
+                <CollapsibleContent className="space-y-2 ml-5">
+                  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 justify-start items-start w-full">
                     {authors.sort().map((author) => (
                       <div key={author} className="flex items-center mr-1">
                         <BpCheckbox
@@ -376,10 +395,13 @@ const BlogDisplayPage: FC = () => {
                           }`}
                           onClick={() => handleOpen("date")}
                         >
-                          {author}{" "}
-                          <span className="ml-1">
-                            ( {authorCounts[author]} )
-                          </span>
+                          <p>
+                            {" "}
+                            {author}{" "}
+                            <span className="ml-1">
+                              ( {authorCounts[author]} )
+                            </span>
+                          </p>
                         </label>
                       </div>
                     ))}
@@ -392,12 +414,12 @@ const BlogDisplayPage: FC = () => {
 
         {/* Search Bar */}
         <section className="flex pb-5">
-          <input
+          <Input
             type="text"
             placeholder="Search by title or author"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="p-2 border rounded w-11/12 md:w-full mx-auto"
+            className="p-2 border rounded w-11/12 md:w-full mx-auto md:h-12 lg:h-14 md:text-md lg:text-xl"
           />
         </section>
 
@@ -406,7 +428,7 @@ const BlogDisplayPage: FC = () => {
           <Button
             variant={"destructive"}
             className="my-5"
-            onClick={clearFilters}
+            onClick={() => clearFilters()}
           >
             Clear Filters
           </Button>
@@ -414,32 +436,36 @@ const BlogDisplayPage: FC = () => {
           {/* Articles per page DropdownMenu */}
           <section className="flex flex-col md:flex-row md:justify-end items-center">
             <label htmlFor="articlesPerPage" className="mr-2">
-              Articles per page:
+              <p>Articles per page:</p>
             </label>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <button className="p-2 bg-muted text-sm rounded">
+                <button className="p-2 bg-muted text-sm md:text-md lg:text-lg rounded px-5">
                   {articlesPerPage} articles per page
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
                 <DropdownMenuItem
                   onClick={() => handleArticlesPerPageChange(10)}
+                  className="md:text-md lg:text-lg px-3"
                 >
                   10 articles per page
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => handleArticlesPerPageChange(15)}
+                  className="md:text-md lg:text-lg px-3"
                 >
                   15 articles per page
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => handleArticlesPerPageChange(25)}
+                  className="md:text-md lg:text-lg px-3"
                 >
                   25 articles per page
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => handleArticlesPerPageChange(50)}
+                  className="md:text-md lg:text-lg px-3"
                 >
                   50 articles per page
                 </DropdownMenuItem>
@@ -448,9 +474,9 @@ const BlogDisplayPage: FC = () => {
           </section>
         </section>
 
-        <section className="h-1 p-3">
+        <section className="h-12 p-1">
           {/* Confirmation Text for Filters Cleared */}
-          <div className="mt-4 text-center">
+          <div className="my-4 text-center">
             {filtersCleared && (
               <p className="text-destructive font-extrabold m-0 p-0">
                 Filters have been cleared successfully!
@@ -459,7 +485,7 @@ const BlogDisplayPage: FC = () => {
           </div>
 
           {/* No results warning */}
-          <div className="mt-4 text-center">
+          <div className="my-4 text-center">
             {noResults && (
               <p className="text-destructive font-extrabold m-0 p-0">
                 No blogs match your selected filters. Filters have been cleared.
@@ -484,7 +510,11 @@ const BlogDisplayPage: FC = () => {
         />
         <section className="text-center">
           {indexOfLastArticle >= filteredBlogs.length && totalPages === 1 ? (
-            <p>Showing all {filteredBlogs.length} blogs</p>
+            filteredBlogs.length === blogs.length ? (
+              <p>Showing all {filteredBlogs.length} blogs</p>
+            ) : (
+              <p>Showing all {filteredBlogs.length} filtered blogs</p>
+            )
           ) : (
             <p>
               Showing {indexOfFirstArticle + 1} to{" "}
@@ -510,7 +540,7 @@ const BlogDisplayPage: FC = () => {
 
       {/* Displaying filtered blog cards dynamically */}
       <section className="my-8">
-        <div className="flex flex-col xl:grid xl:grid-cols-3 2xl:flex-row gap-8 lg:grid lg:grid-cols-2">
+        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-2 xl:grid-cols-3 2xl:flex-row">
           {currentArticles.map((blog, index) => (
             <Card
               key={index}
@@ -522,43 +552,66 @@ const BlogDisplayPage: FC = () => {
                   alt={blog.title}
                   className="w-full h-36 rounded-t-md object-cover mx-auto mb-1"
                 />
-                <div className="px-4 pb-2 flex flex-col justify-between h-[25em]">
+                <div className="px-4 pb-2 flex flex-col justify-between h-[20em] md:h-[25em] 2xl:h-[30em] relative">
                   <div>
-                    <Button
-                      variant="ghost"
-                      className="text-primary underline underline-offset-2 px-0 mt-5 mb-2 font-SofiaSans text-xl tracking-wider font-bold hover:bg-transparent hover:text-primary hover:no-underline text-wrap text-left"
-                      onClick={() => {
-                        router.push(blog.slug);
-                      }}
-                    >
-                      {blog.title}
-                    </Button>
-                    <p className="mb-0 text-sm">
-                      <span>
-                        <strong className="text-foreground">By:</strong>{" "}
-                        {blog.author}
-                      </span>
+                    <p className="text-lg md:text-2xl">
+                      <Button
+                        variant="ghost"
+                        className="text-primary underline underline-offset-2 px-0 mt-5 mb-2 font-SofiaSans tracking-wider font-bold hover:bg-transparent hover:text-primary hover:no-underline text-wrap text-left"
+                        onClick={() => {
+                          router.push(blog.slug);
+                        }}
+                      >
+                        {blog.title}
+                      </Button>
+                    </p>
+                    <p className="mb-0 text-sm md:text-lg lg:text-lg">
+                      <strong className="text-foreground">By:</strong>{" "}
+                      {blog.author}
                     </p>
                     <p className="mt-0">
-                      <span className="italic text-sm">{blog.date}</span>
-                    </p>
-                    <p className="text-md py-4">{blog.excerpt}</p>
-                  </div>
-                  <div className="mt-4">
-                    <strong className="text-foreground">Topics:</strong>{" "}
-                    {blog.topics.map((topic, index) => (
-                      <span key={index}>
-                        <Button
-                          variant="link"
-                          className="p-0 m-0 lowercase"
-                          onClick={() => handleTopicClick(topic)}
-                        >
-                          {topic}
-                        </Button>
-                        {index !== blog.topics.length - 1 && ", "}
+                      <span className="italic text-sm lg:text-lg">
+                        {blog.date}
                       </span>
-                    ))}
+                    </p>
+                    <p className="py-4">{blog.excerpt}</p>
                   </div>
+
+                  {isSmallDevice ? null : isLargerScreen ? (
+                    <div className="mt-4 flex flex-col bottom-2 absolute md:text-md lg:text-lg">
+                      {blog.topics.length > 0 && (
+                        <div className="mt-6">
+                          {blog.topics.map((topic, index) => (
+                            <Badge
+                              key={index}
+                              variant={"secondary"}
+                              className="mr-2 cursor-pointer"
+                              onClick={() => handleTopicClick(topic)}
+                            >
+                              {topic}
+                            </Badge>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="mt-4 absolute bottom-4 md:text-md lg:text-lg">
+                      {blog.topics.length > 0 && (
+                        <div className="mt-6">
+                          {blog.topics.map((topic, index) => (
+                            <Badge
+                              key={index}
+                              variant={"secondary"}
+                              className="mr-2 cursor-pointer"
+                              onClick={() => handleTopicClick(topic)}
+                            >
+                              {topic}
+                            </Badge>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             </Card>

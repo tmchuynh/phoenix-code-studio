@@ -71,11 +71,11 @@ body {
     --tertiary-foreground: #0f0f0f;
     --muted: #3a3a3a;
     --muted-foreground: #9e9e9e;
-    --accent-1: #d9c29f;
+    --accent-1: #9fc9d9;
     --accent-2: #778da9;
     --accent-3: #a3b18a;
     --accent-4: #aa998f;
-    --accent-5: #ebcebb;
+    --accent-5: #f3a673;
     --accent-foreground: #ffffff;
     --destructive: #ff3e3edf;
     --destructive-foreground: #0f0f0f;
@@ -219,12 +219,20 @@ body {
     @apply bg-background text-foreground;
   }
 
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4;
+  }
+
   h3,
   h4 {
     @apply tracking-wider;
   }
+
+  h3 {
+    @apply text-xl lg:text-2xl 2xl:text-3xl font-semibold text-tertiary;
+  }
   p {
-    @apply text-sm md:text-lg xl:text-xl my-2;
+    @apply text-sm md:text-lg 2xl:text-xl my-2;
   }
 
   li {
