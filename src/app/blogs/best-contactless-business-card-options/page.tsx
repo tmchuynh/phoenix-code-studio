@@ -92,7 +92,7 @@ const ContactlessBusinessCardsBlog = () => {
             </h2>
             <p>{card.description}</p>
 
-            <h3 className="text-xl font-medium">Features:</h3>
+            <h3 className="font-medium">Features:</h3>
             <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-7">
               {card.features.map((feature, i) => (
                 <li key={i}>{feature}</li>
@@ -101,7 +101,7 @@ const ContactlessBusinessCardsBlog = () => {
 
             {card.productOptions && (
               <div>
-                <h3 className="text-xl font-medium">Product Options:</h3>
+                <h3 className="font-medium">Product Options:</h3>
                 <ul className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-7">
                   {card.productOptions.map((option, i) => (
                     <li key={i}>{option}</li>
@@ -112,7 +112,7 @@ const ContactlessBusinessCardsBlog = () => {
 
             {card.analytics && (
               <div>
-                <h3 className="text-xl font-medium">Analytics:</h3>
+                <h3 className="font-medium">Analytics:</h3>
                 <p>{card.analytics}</p>
               </div>
             )}

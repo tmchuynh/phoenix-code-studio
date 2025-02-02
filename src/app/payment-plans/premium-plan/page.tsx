@@ -227,7 +227,7 @@ const PremiumPlan = () => {
 
         {/* Monthly Retainer Payments */}
         <div className="mb-6">
-          <h3 className="text-2xl font-semibold text-tertiary mb-2">
+          <h3 className="font-semibold text-tertiary mb-2">
             Monthly Retainer Payments
           </h3>
           <p>
@@ -244,7 +244,7 @@ const PremiumPlan = () => {
 
         {/* Up to 12-Month Payment Terms */}
         <div className="mb-6">
-          <h3 className="text-2xl font-semibold text-tertiary mb-2">
+          <h3 className="font-semibold text-tertiary mb-2">
             Up to 12-Month Payment Terms
           </h3>
           <p>
@@ -260,7 +260,7 @@ const PremiumPlan = () => {
 
         {/* Full Service Including Ongoing Support */}
         <div className="mb-6">
-          <h3 className="text-2xl font-semibold text-tertiary mb-2">
+          <h3 className="font-semibold text-tertiary mb-2">
             Full Service Including Ongoing Support
           </h3>
           <p>

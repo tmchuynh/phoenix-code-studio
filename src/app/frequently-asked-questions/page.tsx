@@ -30,7 +30,9 @@ const FAQPage: FC = () => {
           {FAQs.map((question, index) => (
             <AccordionItem value={`${index}`}>
               <AccordionTrigger>{question.question}</AccordionTrigger>
-              <AccordionContent>{question.answer}</AccordionContent>
+              <AccordionContent>
+                <p>{question.answer}</p>
+              </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>

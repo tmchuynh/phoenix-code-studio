@@ -227,7 +227,7 @@ const CustomPlan = () => {
 
         {/* Flexible Payment Terms */}
         <div className="mb-6">
-          <h3 className="text-2xl font-semibold text-tertiary mb-2">
+          <h3 className="font-semibold text-tertiary mb-2">
             Flexible Payment Terms Based on Project Scope
           </h3>
           <p>
@@ -243,7 +243,7 @@ const CustomPlan = () => {
 
         {/* Ongoing Support and Scaling Options */}
         <div className="mb-6">
-          <h3 className="text-2xl font-semibold text-tertiary mb-2">
+          <h3 className="font-semibold text-tertiary mb-2">
             Options for Ongoing Support and Scaling
           </h3>
           <p>
@@ -259,7 +259,7 @@ const CustomPlan = () => {
 
         {/* Up to 24-Month Payment Term */}
         <div className="mb-6">
-          <h3 className="text-2xl font-semibold text-tertiary mb-2">
+          <h3 className="font-semibold text-tertiary mb-2">
             Up to 24-Month Payment Term
           </h3>
           <p>
@@ -276,7 +276,7 @@ const CustomPlan = () => {
 
         {/* Examples of Custom Payment Plans */}
         <div>
-          <h3 className="text-2xl font-semibold text-secondary mb-4">
+          <h3 className="font-semibold text-secondary mb-4">
             Examples of Custom Payment Plans
           </h3>
           <p>
@@ -293,7 +293,7 @@ const CustomPlan = () => {
 
           {/* Example 1 */}
           <div className="mb-6">
-            <h3 className="text-2xl font-semibold text-tertiary mb-2">
+            <h3 className="font-semibold text-tertiary mb-2">
               Example 1: Mid-Scale Web Development Project
             </h3>
             <ul>
@@ -324,7 +324,7 @@ const CustomPlan = () => {
 
           {/* Example 2 */}
           <div className="mb-6">
-            <h3 className="text-2xl font-semibold text-tertiary mb-2">
+            <h3 className="font-semibold text-tertiary mb-2">
               Example 2: Large-Scale Mobile App Development
             </h3>
             <ul>
@@ -356,7 +356,7 @@ const CustomPlan = () => {
 
           {/* Example 3 */}
           <div className="mb-6">
-            <h3 className="text-2xl font-semibold text-tertiary mb-2">
+            <h3 className="font-semibold text-tertiary mb-2">
               Example 3: Enterprise Software Integration
             </h3>
             <ul>
@@ -389,7 +389,7 @@ const CustomPlan = () => {
 
           {/* Example 4 */}
           <div className="mb-6">
-            <h3 className="text-2xl font-semibold text-tertiary mb-2">
+            <h3 className="font-semibold text-tertiary mb-2">
               Example 4: E-Commerce Website Development
             </h3>
             <ul>
@@ -419,7 +419,7 @@ const CustomPlan = () => {
 
           {/* Example 5 */}
           <div>
-            <h3 className="text-2xl font-semibold text-tertiary mb-2">
+            <h3 className="font-semibold text-tertiary mb-2">
               Example 5: SaaS Platform Development
             </h3>
             <ul>

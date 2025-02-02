@@ -210,7 +210,7 @@ const BasicPlan = () => {
 
         {/* Pay Per Service or Milestone */}
         <div className="mb-6">
-          <h3 className="text-2xl font-semibold text-tertiary mb-2">
+          <h3 className="font-semibold text-tertiary mb-2">
             Pay Per Service or Milestone
           </h3>
           <p>
@@ -227,9 +227,7 @@ const BasicPlan = () => {
 
         {/* Monthly Payments */}
         <div className="mb-6">
-          <h3 className="text-2xl font-semibold text-tertiary mb-2">
-            Monthly Payments
-          </h3>
+          <h3 className="font-semibold text-tertiary mb-2">Monthly Payments</h3>
           <p>
             For those who prioritize budget predictability and financial
             flexibility, our monthly payment option offers a convenient
@@ -244,7 +242,7 @@ const BasicPlan = () => {
 
         {/* Up to 3 Months Payment Term */}
         <div className="mb-6">
-          <h3 className="text-2xl font-semibold text-tertiary mb-2">
+          <h3 className="font-semibold text-tertiary mb-2">
             Up to 3 Months Payment Term
           </h3>
           <p>

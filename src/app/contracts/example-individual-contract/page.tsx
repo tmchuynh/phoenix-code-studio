@@ -870,7 +870,7 @@ const ServiceAgreementPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-8">
           {/* Client Signature */}
           <div className="border border-muted p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-2">Company A (Client)</h3>
+            <h3 className="font-semibold mb-2">Company A (Client)</h3>
             <p className="text-sm mb-6">Signature: _________________________</p>
             <p className="text-sm">Name: ____________________________</p>
             <p className="text-sm">Title: ____________________________</p>
@@ -879,9 +879,7 @@ const ServiceAgreementPage = () => {
 
           {/* Contractor Signature */}
           <div className="border border-muted p-6 rounded-lg">
-            <h3 className="text-xl font-semibold mb-2">
-              Company B (Contractor)
-            </h3>
+            <h3 className="font-semibold mb-2">Company B (Contractor)</h3>
             <p className="text-sm mb-6">Signature: _________________________</p>
             <p className="text-sm">Name: ____________________________</p>
             <p className="text-sm">Title: ____________________________</p>

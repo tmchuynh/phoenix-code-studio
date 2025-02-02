@@ -208,7 +208,7 @@ const StandardPlan = () => {
 
         {/* Split Payments into 3-6 Installments */}
         <div className="mb-6">
-          <h3 className="text-2xl font-semibold text-tertiary mb-2">
+          <h3 className="font-semibold text-tertiary mb-2">
             Split Payments into 3-6 Installments
           </h3>
           <p>
@@ -225,7 +225,7 @@ const StandardPlan = () => {
 
         {/* Priority Support During the Project */}
         <div className="mb-6">
-          <h3 className="text-2xl font-semibold text-tertiary mb-2">
+          <h3 className="font-semibold text-tertiary mb-2">
             Priority Support During the Project
           </h3>
           <p>
@@ -242,7 +242,7 @@ const StandardPlan = () => {
 
         {/* Up to 6 Months Payment Term */}
         <div className="mb-6">
-          <h3 className="text-2xl font-semibold text-tertiary mb-2">
+          <h3 className="font-semibold text-tertiary mb-2">
             Up to 6 Months Payment Term
           </h3>
           <p>

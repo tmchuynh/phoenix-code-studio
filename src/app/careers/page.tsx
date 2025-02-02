@@ -62,7 +62,7 @@ const JobListingsPage: FC = () => {
 
             {/* Responsibilities */}
             <div className="mt-4">
-              <h3 className="text-xl font-medium">Responsibilities:</h3>
+              <h3 className="font-medium">Responsibilities:</h3>
               <ul className="list-disc pl-6 mt-2 space-y-2">
                 {job.responsibilities.map((resp, i) => (
                   <li key={i}>{resp}</li>
@@ -72,7 +72,7 @@ const JobListingsPage: FC = () => {
 
             {/* Qualifications */}
             <div className="mt-4">
-              <h3 className="text-xl font-medium">Qualifications:</h3>
+              <h3 className="font-medium">Qualifications:</h3>
               <ul className="list-disc pl-6 mt-2 space-y-2">
                 {job.qualifications.map((qual, i) => (
                   <li key={i}>{qual}</li>
