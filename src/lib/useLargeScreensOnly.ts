@@ -1,14 +1,16 @@
+
+
 import { useState, useEffect } from "react";
 
 /**
- * Custom hook to determine if the screen size is small (<= 640px).
+ * Custom hook to determine if the medium size is small (>= 1024px).
  */
-const useSmallScreen = () => {
-  const [isSmallScreen, setIsSmallScreen] = useState( false );
+const useLargeScreensOnly = () => {
+  const [IsLargeScreen, setIsLargeScreen] = useState( false );
 
   useEffect( () => {
     const handleResize = () => {
-      setIsSmallScreen( window.innerWidth <= 640 );
+      setIsLargeScreen( window.innerWidth >= 1024 );
     };
 
     window.addEventListener( "resize", handleResize );
@@ -20,7 +22,7 @@ const useSmallScreen = () => {
     };
   }, [] );
 
-  return isSmallScreen;
+  return IsLargeScreen;
 };
 
-export default useSmallScreen;
+export default useLargeScreensOnly;

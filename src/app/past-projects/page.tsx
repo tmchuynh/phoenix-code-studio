@@ -15,6 +15,7 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import { pastProjects } from "@/lib/constants";
+import useLargeScreensOnly from "@/lib/useLargeScreensOnly";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
 import { FC, useState, useEffect } from "react";
@@ -22,6 +23,7 @@ import { FC, useState, useEffect } from "react";
 const PastProjectsPage: FC = () => {
   const isSmallScreen = useSmallScreen();
   const isMediumScreen = useMediumScreen();
+  const isLargeScreen = useLargeScreensOnly();
 
   // Filter states
   const [selectedLanguages, setSelectedLanguages] = useState<string[]>([]);
@@ -35,7 +37,7 @@ const PastProjectsPage: FC = () => {
   const [noResults, setNoResults] = useState(false);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [projectsPerPage, setProjectsPerPage] = useState(25);
+  const [projectsPerPage, setProjectsPerPage] = useState(5);
 
   // Calculate the indexes for pagination
   const indexOfLastProject = currentPage * projectsPerPage;
@@ -91,8 +93,8 @@ const PastProjectsPage: FC = () => {
 
     if (selectedLibraries.length > 0) {
       filtered = filtered.filter((project) =>
-        selectedLibraries.every(
-          (library) => project.libraries?.includes(library) // Fix: corrected key name
+        selectedLibraries.every((library) =>
+          project.libraries?.includes(library)
         )
       );
     }
@@ -161,8 +163,8 @@ const PastProjectsPage: FC = () => {
     setSelectedFrameworks([]);
     setSelectedTags([]);
     setNoResults(false);
-    setFiltersCleared(true);
     setFilteredProjects(pastProjects);
+    setFiltersCleared(true);
     setTimeout(() => setFiltersCleared(false), 4000);
   };
 
@@ -209,151 +211,286 @@ const PastProjectsPage: FC = () => {
       </p>
 
       {/* Filter Controls */}
-      <section className="my-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Languages Filter */}
-          <div>
-            <h3 className="text-lg font-semibold">Filter by Languages</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-start items-start w-full gap-2">
-              {allLanguages.map((language) => (
-                <div key={language} className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id={language}
-                    checked={selectedLanguages.includes(language)}
-                    onChange={(e) =>
-                      handleLanguageChange(language, e.target.checked)
-                    }
-                    className="mr-2"
-                  />
-                  <label htmlFor={language}>{language}</label>
-                </div>
-              ))}
+      {isSmallScreen ? (
+        <section className="my-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {/* Languages Filter */}
+            <div>
+              <h3 className="font-semibold">Filter by Languages</h3>
+              <div className="grid grid-cols-2 justify-start items-start w-full gap-x-2">
+                {allLanguages.map((language) => (
+                  <div key={language} className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id={language}
+                      checked={selectedLanguages.includes(language)}
+                      onChange={(e) =>
+                        handleLanguageChange(language, e.target.checked)
+                      }
+                      className="mr-2"
+                    />
+                    <label htmlFor={language}>
+                      <p>{language}</p>
+                    </label>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Frameworks Filter */}
-          <div>
-            <h3 className="text-lg font-semibold">Filter by Frameworks</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-start items-start w-full gap-2">
-              {allFrameworks.map((framework) => (
-                <div key={framework} className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id={framework}
-                    checked={selectedFrameworks.includes(framework)}
-                    onChange={(e) =>
-                      handleFrameworkChange(framework, e.target.checked)
-                    }
-                    className="mr-2"
-                  />
-                  <label htmlFor={framework}>{framework}</label>
-                </div>
-              ))}
+            {/* Frameworks Filter */}
+            <div>
+              <h3 className="font-semibold">Filter by Frameworks</h3>
+              <div className="grid grid-cols-2 justify-start items-start w-full gap-x-2">
+                {allFrameworks.map((framework) => (
+                  <div key={framework} className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id={framework}
+                      checked={selectedFrameworks.includes(framework)}
+                      onChange={(e) =>
+                        handleFrameworkChange(framework, e.target.checked)
+                      }
+                      className="mr-2"
+                    />
+                    <label htmlFor={framework}>
+                      <p>{framework}</p>
+                    </label>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Libraries Filter */}
-          <div>
-            <h3 className="text-lg font-semibold">Filter by Libraries</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-start items-start w-full gap-2">
-              {allLibraries.map((library) => (
-                <div key={library} className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id={library}
-                    checked={selectedLibraries.includes(library)}
-                    onChange={(e) =>
-                      handleLibrariesChange(library, e.target.checked)
-                    }
-                    className="mr-2"
-                  />
-                  <label htmlFor={library}>{library}</label>
-                </div>
-              ))}
+            {/* Libraries Filter */}
+            <div>
+              <h3 className="font-semibold">Filter by Libraries</h3>
+              <div className="grid grid-cols-2 justify-start items-start w-full gap-x-2">
+                {allLibraries.map((library) => (
+                  <div key={library} className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id={library}
+                      checked={selectedLibraries.includes(library)}
+                      onChange={(e) =>
+                        handleLibrariesChange(library, e.target.checked)
+                      }
+                      className="mr-2"
+                    />
+                    <label htmlFor={library}>
+                      <p>{library}</p>
+                    </label>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Technologies Filter */}
-          <div>
-            <h3 className="text-lg font-semibold">Filter by Technologies</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-start items-start w-full gap-2">
-              {allTechnologies.map((library) => (
-                <div key={library} className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id={library}
-                    checked={selectedTechnologies.includes(library)}
-                    onChange={(e) =>
-                      handleTechnologyChange(library, e.target.checked)
-                    }
-                    className="mr-2"
-                  />
-                  <label htmlFor={library}>{library}</label>
-                </div>
-              ))}
+            {/* Technologies Filter */}
+            <div>
+              <h3 className="font-semibold">Filter by Technologies</h3>
+              <div className="grid grid-cols-2 justify-start items-start w-full gap-x-2">
+                {allTechnologies.map((library) => (
+                  <div key={library} className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id={library}
+                      checked={selectedTechnologies.includes(library)}
+                      onChange={(e) =>
+                        handleTechnologyChange(library, e.target.checked)
+                      }
+                      className="mr-2"
+                    />
+                    <label htmlFor={library}>
+                      <p>{library}</p>
+                    </label>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Tags Filter */}
-          <div>
-            <h3 className="text-lg font-semibold">Filter by Tags</h3>
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 justify-start items-start w-full gap-2">
-              {allTags.map((tag) => (
-                <div key={tag} className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id={tag}
-                    checked={selectedTags.includes(tag)}
-                    onChange={(e) => handleTagChange(tag, e.target.checked)}
-                    className="mr-2"
-                  />
-                  <label htmlFor={tag}>{tag}</label>
-                </div>
-              ))}
+            {/* Tags Filter */}
+            <div>
+              <h3 className="font-semibold">Filter by Tags</h3>
+              <div className="grid grid-cols-2 justify-start items-start w-full gap-x-2">
+                {allTags.map((tag) => (
+                  <div key={tag} className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id={tag}
+                      checked={selectedTags.includes(tag)}
+                      onChange={(e) => handleTagChange(tag, e.target.checked)}
+                      className="mr-2"
+                    />
+                    <label htmlFor={tag}>
+                      <p>{tag}</p>
+                    </label>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : (
+        <section className="my-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {/* Frameworks Filter */}
+            <div>
+              <h3 className="font-semibold">Filter by Frameworks</h3>
+              <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
+                {allFrameworks.map((framework) => (
+                  <div key={framework} className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id={framework}
+                      checked={selectedFrameworks.includes(framework)}
+                      onChange={(e) =>
+                        handleFrameworkChange(framework, e.target.checked)
+                      }
+                      className="mr-2"
+                    />
+                    <label htmlFor={framework}>
+                      <p>{framework}</p>
+                    </label>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Languages Filter */}
+            <div>
+              <h3 className="font-semibold">Filter by Languages</h3>
+              <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
+                {allLanguages.map((language) => (
+                  <div key={language} className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id={language}
+                      checked={selectedLanguages.includes(language)}
+                      onChange={(e) =>
+                        handleLanguageChange(language, e.target.checked)
+                      }
+                      className="mr-2"
+                    />
+                    <label htmlFor={language}>
+                      <p>{language}</p>
+                    </label>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Libraries Filter */}
+            <div>
+              <h3 className="font-semibold">Filter by Libraries</h3>
+              <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
+                {allLibraries.map((library) => (
+                  <div key={library} className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id={library}
+                      checked={selectedLibraries.includes(library)}
+                      onChange={(e) =>
+                        handleLibrariesChange(library, e.target.checked)
+                      }
+                      className="mr-2"
+                    />
+                    <label htmlFor={library}>
+                      <p>{library}</p>
+                    </label>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Tags Filter */}
+            <div>
+              <h3 className="font-semibold">Filter by Tags</h3>
+              <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
+                {allTags.map((tag) => (
+                  <div key={tag} className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id={tag}
+                      checked={selectedTags.includes(tag)}
+                      onChange={(e) => handleTagChange(tag, e.target.checked)}
+                      className="mr-2"
+                    />
+                    <label htmlFor={tag}>
+                      <p>{tag}</p>
+                    </label>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Technologies Filter */}
+            <div>
+              <h3 className="font-semibold">Filter by Technologies</h3>
+              <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
+                {allTechnologies.map((library) => (
+                  <div key={library} className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id={library}
+                      checked={selectedTechnologies.includes(library)}
+                      onChange={(e) =>
+                        handleTechnologyChange(library, e.target.checked)
+                      }
+                      className="mr-2"
+                    />
+                    <label htmlFor={library}>
+                      <p>{library}</p>
+                    </label>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Clear Filters Button */}
       <section className="w-11/12 md:w-full mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center gap-7">
-        <Button variant="destructive" onClick={clearFilters}>
+        <Button variant="destructive" onClick={() => clearFilters()}>
           Clear Filters
         </Button>
 
         {/* Articles per page DropdownMenu */}
         <section className="flex flex-col md:flex-row md:justify-end items-center">
           <label htmlFor="articlesPerPage" className="mr-2">
-            Projects per page:
+            <p>Projects per page:</p>
           </label>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <button className="p-2 text-sm bg-muted rounded">
+              <button className="p-2 bg-muted text-sm md:text-md lg:text-lg rounded px-5">
                 {projectsPerPage} projects per page
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => handleProjectsPerPageChange(10)}>
+              <DropdownMenuItem
+                onClick={() => handleProjectsPerPageChange(5)}
+                className="md:text-md lg:text-lg px-3"
+              >
+                5 projects per page
+              </DropdownMenuItem>
+              <DropdownMenuItem
+                onClick={() => handleProjectsPerPageChange(10)}
+                className="md:text-md lg:text-lg px-3"
+              >
                 10 projects per page
               </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => handleProjectsPerPageChange(15)}>
+              <DropdownMenuItem
+                onClick={() => handleProjectsPerPageChange(15)}
+                className="md:text-md lg:text-lg px-3"
+              >
                 15 projects per page
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => handleProjectsPerPageChange(25)}>
-                25 projects per page
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => handleProjectsPerPageChange(50)}>
-                50 projects per page
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </section>
       </section>
 
-      <section className="h-14 p-3">
+      <section className="h-20 p-1">
         {/* Confirmation Text for Filters Cleared */}
-        <div className="mt-4 text-center">
+        <div className="my-4 text-center">
           {filtersCleared && (
             <p className="text-secondary m-0 p-0">
               Filters have been cleared successfully!
@@ -362,7 +499,7 @@ const PastProjectsPage: FC = () => {
         </div>
 
         {/* No results warning */}
-        <div className="mt-4 text-center">
+        <div className="my-4 text-center">
           {noResults && (
             <p className="text-destructive m-0">
               No projects match your selected filters. Filters have been
@@ -373,28 +510,50 @@ const PastProjectsPage: FC = () => {
       </section>
 
       {/* Pagination controls */}
-      <Pagination className="gap-5">
+      <Pagination className="gap-5 flex items-center">
         <PaginationPrevious
-          onClick={() => handlePageChange(currentPage - 1)}
-          className={currentPage === 1 ? "hidden" : ""}
+          onClick={() => {
+            if (currentPage > 1) {
+              handlePageChange(currentPage - 1);
+            }
+          }}
+          variant={currentPage === 1 ? "disabled" : "outline"}
+          className={
+            currentPage === 1 ? "cursor-not-allowed" : "cursor-default"
+          }
         />
+        <section className="text-center">
+          {indexOfLastProject >= filteredProjects.length && totalPages === 1 ? (
+            filteredProjects.length === pastProjects.length ? (
+              <p>Showing all {filteredProjects.length} projects</p>
+            ) : (
+              <p>Showing all {filteredProjects.length} filtered projects</p>
+            )
+          ) : (
+            <p>
+              Showing {indexOfFirstProject + 1} to{" "}
+              {indexOfLastProject > filteredProjects.length
+                ? filteredProjects.length
+                : indexOfLastProject}{" "}
+              of {filteredProjects.length} projects
+            </p>
+          )}
+        </section>
         <PaginationNext
-          onClick={() => handlePageChange(currentPage + 1)}
-          className={currentPage === totalPages ? "hidden" : ""}
+          onClick={() => {
+            if (currentPage < totalPages) {
+              handlePageChange(currentPage + 1);
+            }
+          }}
+          variant={currentPage === totalPages ? "disabled" : "outline"}
+          className={
+            currentPage === totalPages ? "cursor-not-allowed" : "cursor-default"
+          }
         />
       </Pagination>
 
       {/* Projects List */}
       <section className="my-8">
-        <section className="text-center my-4">
-          <p>
-            Showing {indexOfFirstProject + 1} to{" "}
-            {indexOfLastProject > filteredProjects.length
-              ? filteredProjects.length
-              : indexOfLastProject}{" "}
-            of {filteredProjects.length} projects
-          </p>
-        </section>
         <div className="grid md:grid-cols-1 xl:grid-cols-2 gap-8">
           {currentProjects.map((project, index) => (
             <Card
@@ -410,12 +569,49 @@ const PastProjectsPage: FC = () => {
               >
                 <div className="h-full flex flex-col justify-between">
                   <div>
-                    <h2 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2">
+                    <h2 className="text-lg md:text-xl lg:text-2xl font-semibold">
                       {project.title}
                     </h2>
+
+                    {isSmallScreen ? null : isLargeScreen ? (
+                      <div>
+                        {project.tags.length > 0 && (
+                          <div className="mb-4 flex gap-4">
+                            {project.tags.map((tag, index) => (
+                              <Badge
+                                key={index}
+                                variant={"secondary"}
+                                className="mr-2 cursor-default"
+                              >
+                                {tag}
+                              </Badge>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <>
+                        <div>
+                          {project.tags.length > 0 && (
+                            <div className="mb-4 flex gap-2">
+                              {project.tags.map((tag, index) => (
+                                <Badge
+                                  key={index}
+                                  variant={"secondary"}
+                                  className="mr-2 cursor-default"
+                                >
+                                  {tag}
+                                </Badge>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      </>
+                    )}
+
                     <p className="mb-4">{project.description}</p>
 
-                    <div className="text-sm lg:text-lg grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-2">
+                    <div className="text-sm lg:text-lg grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-2 2xl:grid-cols-4">
                       <div>
                         <p className="font-semibold">Languages:</p>
                         <ul>
@@ -459,28 +655,6 @@ const PastProjectsPage: FC = () => {
                       )}
                     </div>
                   </div>
-
-                  {/* Optional links */}
-                  <div className="flex justify-center items-center">
-                    {project.liveLink && (
-                      <Button
-                        variant="secondary"
-                        onClick={() => window.open(project.liveLink, "_blank")}
-                      >
-                        View Live Website
-                      </Button>
-                    )}
-                    {project.githubLink && (
-                      <Button
-                        variant="outline"
-                        onClick={() =>
-                          window.open(project.githubLink, "_blank")
-                        }
-                      >
-                        View GitHub Repo
-                      </Button>
-                    )}
-                  </div>
                 </div>
 
                 {project.img && (
@@ -510,16 +684,26 @@ const PastProjectsPage: FC = () => {
                   </div>
                 )}
               </CardContent>
-              <CardFooter className="mx-auto h-fit pb-1">
-                {project.tags.length > 0 && (
-                  <div className="mt-6">
-                    {project.tags.map((tag, index) => (
-                      <Badge key={index} variant={"secondary"} className="mr-2">
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                )}
+              <CardFooter className="h-fit py-3 flex flex-col items-start">
+                {/* Optional links */}
+                <div className="flex mx-auto">
+                  {project.liveLink && (
+                    <Button
+                      variant="secondary"
+                      onClick={() => window.open(project.liveLink, "_blank")}
+                    >
+                      View Live Website
+                    </Button>
+                  )}
+                  {project.githubLink && (
+                    <Button
+                      variant="outline"
+                      onClick={() => window.open(project.githubLink, "_blank")}
+                    >
+                      View GitHub Repo
+                    </Button>
+                  )}
+                </div>
               </CardFooter>
             </Card>
           ))}

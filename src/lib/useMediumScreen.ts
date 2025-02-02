@@ -1,9 +1,7 @@
-
-
 import { useState, useEffect } from "react";
 
 /**
- * Custom hook to determine if the medium size is small (<= 640px).
+ * Custom hook to determine if the medium size is small (<= 768px).
  */
 const useMediumScreen = () => {
   const [IsMediumScreen, setIsMediumScreen] = useState( false );
