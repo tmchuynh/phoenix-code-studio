@@ -134,9 +134,9 @@ const aboutUs = () => {
               style={{ fontSize: "24px" }}
             />
             <div>
-              <span className="font-BonaNovaSC_Bold text-secondary">
+              <strong className="font-BonaNovaSC_Bold">
                 Creativity and Innovation:{" "}
-              </span>
+              </strong>
               We blend creativity with the latest technologies to deliver
               impactful digital solutions that bring our clients’ visions to
               life. By thinking outside the box and embracing new trends, we
@@ -149,9 +149,9 @@ const aboutUs = () => {
               style={{ fontSize: "24px" }}
             />
             <div>
-              <span className="font-BonaNovaSC_Bold text-secondary">
+              <strong className="font-BonaNovaSC_Bold">
                 Adaptability & Growth:{" "}
-              </span>
+              </strong>
               Embracing new challenges is part of our DNA. We constantly adapt
               to the ever-changing digital landscape, ensuring that our
               solutions remain forward-thinking, flexible, and aligned with
@@ -164,9 +164,7 @@ const aboutUs = () => {
               style={{ fontSize: "24px" }}
             />
             <div>
-              <span className="font-BonaNovaSC_Bold text-secondary">
-                Authenticity:{" "}
-              </span>
+              <strong className="font-BonaNovaSC_Bold">Authenticity: </strong>
               We believe in creating digital experiences that are true to our
               clients’ identity and core values. Every solution is crafted with
               authenticity to reflect the unique voice of each brand and connect
@@ -179,9 +177,7 @@ const aboutUs = () => {
               style={{ fontSize: "24px" }}
             />
             <div>
-              <span className="font-BonaNovaSC_Bold text-secondary">
-                Excellence:{" "}
-              </span>
+              <strong className="font-BonaNovaSC_Bold">Excellence: </strong>
               We are committed to delivering exceptional, user-centric solutions
               that exceed expectations. Our dedication to continuous growth and
               innovation drives us to constantly improve and push the boundaries
@@ -194,9 +190,7 @@ const aboutUs = () => {
               style={{ fontSize: "24px" }}
             />
             <div>
-              <span className="font-BonaNovaSC_Bold text-secondary">
-                Empowerment:{" "}
-              </span>
+              <strong className="font-BonaNovaSC_Bold">Empowerment: </strong>
               We empower small businesses to thrive in the digital space. By
               providing the right tools, resources, and support, we help them
               grow and succeed in a competitive online marketplace, ensuring
@@ -209,9 +203,9 @@ const aboutUs = () => {
               style={{ fontSize: "24px" }}
             />
             <div>
-              <span className="font-BonaNovaSC_Bold text-secondary">
+              <strong className="font-BonaNovaSC_Bold">
                 Collaboration & Communication:{" "}
-              </span>
+              </strong>
               Open, transparent communication is key to success. We collaborate
               closely with our clients at every step of the process, ensuring
               their ideas and goals are central to every project, resulting in
@@ -224,9 +218,9 @@ const aboutUs = () => {
               style={{ fontSize: "24px" }}
             />
             <div>
-              <span className="font-BonaNovaSC_Bold text-secondary">
+              <strong className="font-BonaNovaSC_Bold">
                 Community Impact:{" "}
-              </span>
+              </strong>
               We are passionate about making a difference. Our work doesn’t just
               benefit our clients – we aim to create digital experiences that
               drive positive change in communities, helping businesses grow and
@@ -239,9 +233,7 @@ const aboutUs = () => {
               style={{ fontSize: "24px" }}
             />
             <div>
-              <span className="font-BonaNovaSC_Bold text-secondary">
-                Sustainability:{" "}
-              </span>
+              <strong className="font-BonaNovaSC_Bold">Sustainability: </strong>
               We recognize the importance of creating digital solutions that not
               only serve today’s needs but also contribute to long-term
               sustainability. We strive to design and develop solutions that are
