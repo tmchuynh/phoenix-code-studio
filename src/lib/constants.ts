@@ -900,6 +900,39 @@ export const blogs: BlogPost[] = [
     slug: "/blogs/importance-of-user-experience",
   },
   {
+    title: "Making the Web Inclusive: How to Incorporate Accessibility into Web Design",
+    author: "Tina Huynh",
+    date: "August 15, 2024",
+    img: "/images/blog-placeholder.jpg",
+    featured: true,
+    topics: ["Accessibility", "Design"],
+    excerpt:
+      "User experience (UX) is one of the most important factors when designing a website. It directly impacts how users interact with your website, and ultimately affects conversion rates.",
+    slug: "/blogs/incorporating-accessibility-into-web-design",
+  },
+  {
+    title: "Understanding Blockchain Architecture",
+    author: "Tina Huynh",
+    date: "August 15, 2024",
+    img: "/images/blog-placeholder.jpg",
+    featured: true,
+    topics: ["Blockchain", "Architecture"],
+    excerpt:
+      "User experience (UX) is one of the most important factors when designing a website. It directly impacts how users interact with your website, and ultimately affects conversion rates.",
+    slug: "/blogs/understanding-blockchain-architecture",
+  },
+  {
+    title: "Understanding GUI Architectures",
+    author: "Tina Huynh",
+    date: "August 15, 2024",
+    img: "/images/blog-placeholder.jpg",
+    featured: true,
+    topics: ["Design", "Architecture"],
+    excerpt:
+      "User experience (UX) is one of the most important factors when designing a website. It directly impacts how users interact with your website, and ultimately affects conversion rates.",
+    slug: "/blogs/understanding-gui-architecture",
+  },
+  {
     title: "Books to Read as a Developer",
     author: "Tina Huynh",
     date: "March 23, 2022",
@@ -946,7 +979,7 @@ export const blogs: BlogPost[] = [
   {
     title: "How Tailwind CSS Can Speed Up Your Development Process",
     author: "Tina Huynh",
-    date: "July 10, 2023",
+    date: "October 15, 2023",
     img: "/images/blog-placeholder.jpg",
     featured: false,
     topics: ["Software Engineer", "Design"],
@@ -957,7 +990,7 @@ export const blogs: BlogPost[] = [
   {
     title: "The Future of JavaScript Frameworks",
     author: "Tina Huynh",
-    date: "June 5, 2023",
+    date: "March 23, 2022",
     img: "/images/blog-placeholder.jpg",
     featured: false,
     topics: ["Resources", "Software Engineer"],
@@ -979,7 +1012,7 @@ export const blogs: BlogPost[] = [
   {
     title: "Decoding Blockchain: Exploring the World of Decentralized Systems",
     author: "Tina Huynh",
-    date: "April 10, 2024",
+    date: "May 22, 2023",
     img: "/images/blog-placeholder.jpg",
     featured: false,
     topics: ["Blockchain", "Resources"],
@@ -990,7 +1023,7 @@ export const blogs: BlogPost[] = [
   {
     title: "Demystifying Data Science: Transforming Data into Actionable Insights",
     author: "Tina Huynh",
-    date: "March 18, 2024",
+    date: "January 15, 2023",
     img: "/images/blog-placeholder.jpg",
     featured: false,
     topics: ["Data Science", "Analytics", "Machine Learning"],
@@ -1001,7 +1034,7 @@ export const blogs: BlogPost[] = [
   {
     title: "Revolutionizing Connectivity: Innovations in IoT Development",
     author: "Tina Huynh",
-    date: "February 25, 2023",
+    date: "January 15, 2023",
     img: "/images/blog-placeholder.jpg",
     featured: false,
     topics: ["Innovation"],
@@ -1012,7 +1045,7 @@ export const blogs: BlogPost[] = [
   {
     title: "Creative Data Harvesting: The Wonders of Web Scraping",
     author: "Tina Huynh",
-    date: "January 15, 2023",
+    date: "March 21, 2022",
     img: "/images/blog-placeholder.jpg",
     featured: true,
     topics: ["Data Science", "Software Engineer", "Analytics"],
@@ -1023,7 +1056,7 @@ export const blogs: BlogPost[] = [
   {
     title: "Behind the Code: Insights into the World of Tech Startups",
     author: "Tina Huynh",
-    date: "December 5, 2024",
+    date: "March 21, 2022",
     img: "/images/blog-placeholder.jpg",
     featured: true,
     topics: ["Entrepreneurship", "Innovation"],
@@ -1045,7 +1078,7 @@ export const blogs: BlogPost[] = [
   {
     title: "Mastering User-Friendly Design: Gems of GUI Development",
     author: "Tina Huynh",
-    date: "October 15, 2023",
+    date: "March 23, 2022",
     img: "/images/blog-placeholder.jpg",
     featured: false,
     topics: ["Design", "Software Engineer",],
@@ -1056,7 +1089,7 @@ export const blogs: BlogPost[] = [
   {
     title: "From Startup Garage to Tech Giant: Stories of Tech Entrepreneurs",
     author: "Tina Huynh",
-    date: "August 5, 2024",
+    date: "January 15, 2023",
     img: "/images/blog-placeholder.jpg",
     featured: false,
     topics: ["Entrepreneurship", "Innovation"],

@@ -66,10 +66,10 @@ const BlogPage = () => {
         {booksToRead.map((book, index) => (
           <section key={index}>
             <h2 className="text-3xl font-semibold mb-6 text-secondary">
-              {book.title}
+              {book.category}
             </h2>
             <p>{book.description}</p>
-            {book.details.map((details, index) => (
+            {book.trends?.map((details, index) => (
               <p key={index}>{details}</p>
             ))}
           </section>

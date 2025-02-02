@@ -102,9 +102,9 @@ const BlogPage = () => {
             (categoryItem, categoryIndex) =>
               categoryItem.category === "lessons" && (
                 <ul>
-                  {categoryItem.items.map((item, storyIndex) => (
+                  {categoryItem.items?.map((item, storyIndex) => (
                     <li key={categoryIndex}>
-                      <strong>{item.title}:</strong> {item.details}
+                      <strong>{item.title}:</strong> {item.description}
                     </li>
                   ))}
                 </ul>
@@ -128,9 +128,9 @@ const BlogPage = () => {
             (categoryItem, categoryIndex) =>
               categoryItem.category === "stories" && (
                 <ul>
-                  {categoryItem.items.map((item, storyIndex) => (
+                  {categoryItem.items?.map((item, storyIndex) => (
                     <li key={categoryIndex}>
-                      <strong>{item.title}:</strong> {item.details}
+                      <strong>{item.title}:</strong> {item.description}
                     </li>
                   ))}
                 </ul>

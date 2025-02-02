@@ -57,6 +57,16 @@ export interface BlogPost {
   slug: string;
 }
 
+export interface BlogContent {
+  category: string;
+  description?: string;
+  keyTopics?: { title: string; description: string; }[];
+  items?: { title: string; description: string; }[];
+  items_?: { title: string; details: string[]; }[];
+  _items_?: { title: string; details: string; }[];
+  trends?: string[];
+}
+
 export interface Project {
   title: string;
   img?: string[];

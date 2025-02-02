@@ -13,7 +13,7 @@ const JackOfAllTradesBlog = () => {
       <article className="space-y-8">
         <header>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
-            {jackOfAllTradesContent.intro.title}
+            Who's the Better Hire? - Jack of All Trades OR Master of One
           </h1>
           <div>
             {blogs.map((blog, index) => {
@@ -44,48 +44,64 @@ const JackOfAllTradesBlog = () => {
               );
             })}
           </div>
-          <p>{jackOfAllTradesContent.intro.description}</p>
         </header>
 
         <section>
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            {jackOfAllTradesContent.origin.title}
+            What's a Jack of All Trades?
           </h2>
-          <p>{jackOfAllTradesContent.origin.description}</p>
+          <p>
+            The phrase "Jack of all trades, master of none" refers to a person
+            who is competent in many skills but is not exactly outstanding in
+            any of them. Even though "jack of all trades" sometimes is used as
+            an insult, it did not begin as one. The complete saying goes "A jack
+            of all trades is a master of none, but oftentimes better than a
+            master of one." It\'s intended as a compliment and means that a
+            person as a generalist rather than a specialist, being versatile and
+            adept is better.
+          </p>
         </section>
 
         <section>
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            {jackOfAllTradesContent.benefits.title}
+            Origin of the Saying
           </h2>
-          <ul>
-            {jackOfAllTradesContent.benefits.points.map((benefit, index) => (
-              <li key={index}>
-                <strong>{benefit.title}:</strong> {benefit.description}
-              </li>
-            ))}
-          </ul>
+          <p>
+            The phrase dates back to the 14th century. At this time "Jack" was a
+            typical name to describe the ordinary man. The working class often
+            had to supplement their income by doing other jobs. A builder would
+            supplement his income by painting or farming as well. One very
+            well-known jack of all trades was William Shakespeare. He would help
+            with the stage, the set, the costumes, and try directing as well.
+          </p>
         </section>
 
         <section>
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            {jackOfAllTradesContent.howToBecome.title}
+            How to Become a Jack of All Trades?
           </h2>
-          <p>{jackOfAllTradesContent.howToBecome.description}</p>
+          <p>
+            When learning new skills (aka on your way to becoming a jack of all
+            trades), you learn very useful skills. Some of these benefits
+            include better understanding of your own strengths and weaknesses as
+            well as learning time management and healthy boundaries.
+          </p>
         </section>
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            {jackOfAllTradesContent.tips.title}
-          </h2>
-          <ul>
-            {jackOfAllTradesContent.tips.points.map((tip, index) => (
-              <li key={index}>
-                <strong>{tip.title}:</strong> {tip.description}
-              </li>
-            ))}
-          </ul>
-        </section>
+        {jackOfAllTradesContent.map((jack, index) => (
+          <section key={index}>
+            <h2 className="text-3xl font-semibold mb-6 text-secondary">
+              {jack.category}
+            </h2>
+            <ul>
+              {jack.items?.map((item, index) => (
+                <li key={index}>
+                  <strong>{item.title}:</strong> {item.description}
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
 
         <footer className="mt-8 text-center">
           <p>

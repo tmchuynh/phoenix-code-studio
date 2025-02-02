@@ -94,7 +94,7 @@ const BlogPage = () => {
             </h2>
             {categoryItem.category === "How Blockchain Works" ? (
               <ol className="list-decimal pl-6 space-y-2">
-                {categoryItem.items.map((item, itemIndex) => (
+                {categoryItem.items?.map((item, itemIndex) => (
                   <li key={itemIndex}>
                     <strong>{item.title}:</strong> {item.description}
                   </li>
@@ -102,7 +102,7 @@ const BlogPage = () => {
               </ol>
             ) : (
               <ul>
-                {categoryItem.items.map((item, itemIndex) => (
+                {categoryItem.items?.map((item, itemIndex) => (
                   <li key={itemIndex}>
                     <strong>{item.title}:</strong> {item.description}
                   </li>

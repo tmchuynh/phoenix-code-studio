@@ -114,7 +114,7 @@ const BlogPage = () => {
                   conclusions.
                 </p>
                 <ol className="list-decimal pl-6 space-y-2">
-                  {categoryItem.items.map((item, itemIndex) => (
+                  {categoryItem.items?.map((item, itemIndex) => (
                     <li key={itemIndex}>
                       <strong>{item.title}:</strong> {item.description}
                     </li>
@@ -123,7 +123,7 @@ const BlogPage = () => {
               </>
             ) : (
               <ul>
-                {categoryItem.items.map((item, itemIndex) => (
+                {categoryItem.items?.map((item, itemIndex) => (
                   <li key={itemIndex}>
                     <strong>{item.title}:</strong> {item.description}
                   </li>

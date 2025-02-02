@@ -139,7 +139,7 @@ const BlogPage = () => {
               {resource.category}
             </h2>
             <ul>
-              {resource.items.map((item, itemIndex) => (
+              {resource.items?.map((item, itemIndex) => (
                 <li key={itemIndex}>
                   <strong>{item.title}:</strong> {item.description}
                 </li>

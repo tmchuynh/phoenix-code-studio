@@ -92,7 +92,7 @@ const BlogPage = () => {
               <strong>Key Trends:</strong>
             </p>
             <ul>
-              {trendCategory.trends.map((trend, trendIndex) => (
+              {trendCategory.trends?.map((trend, trendIndex) => (
                 <li key={trendIndex}>{trend}</li>
               ))}
             </ul>

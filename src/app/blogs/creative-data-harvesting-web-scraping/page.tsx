@@ -99,7 +99,7 @@ const BlogPage = () => {
               </p>
             ) : null}
             <ul>
-              {categoryItem.items.map((item, itemIndex) => (
+              {categoryItem.items?.map((item, itemIndex) => (
                 <li key={itemIndex}>
                   <strong>{item.title}:</strong> {item.description}
                 </li>
