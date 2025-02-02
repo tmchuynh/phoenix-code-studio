@@ -34,7 +34,7 @@ body {
     --destructive-foreground: #1a1a1a;
     --border: #d1d5db;
     --input: #f4f4f4;
-    --ring: #d72638;
+    --ring: #d726386b;
     --radius: 0.5rem;
     --chart-1: #d72638;
     --chart-2: #ff6f3c;
@@ -71,17 +71,17 @@ body {
     --tertiary-foreground: #0f0f0f;
     --muted: #1a1a1a;
     --muted-foreground: #efefef;
-    --accent-1: #a3b18a;
+    --accent-1: #d7e9b8e3;
     --accent-3: #9fc9d9;
-    --accent-2: #778da9;
+    --accent-2: #9ae8fed3;
     --accent-4: #aa998f;
-    --accent-5: #f3a673;
+    --accent-5: #ffbea6c4;
     --accent-foreground: #040404;
     --destructive: #ff3e3edf;
     --destructive-foreground: #000000;
     --border: #686262;
-    --input: #2f2f2f;
-    --ring: #d72638;
+    --input: #404040;
+    --ring: #d726386b;
     --chart-1: #d72638;
     --chart-2: #ff6f3c;
     --chart-3: #ffc93c;
@@ -229,18 +229,20 @@ body {
   }
 
   h3 {
-    @apply text-xl lg:text-2xl 2xl:text-3xl font-semibold text-tertiary;
+    @apply text-xl lg:text-2xl 2xl:text-3xl font-semibold;
   }
+  li,
   p {
-    @apply text-sm md:text-lg 2xl:text-xl my-2;
+    @apply text-sm md:text-lg 2xl:text-xl;
   }
 
-  li {
-    @apply text-sm md:text-lg xl:text-xl;
+  p {
+    @apply my-2;
   }
 
+  h3,
   strong {
-    @apply text-tertiary;
+    @apply text-accent-2;
   }
 
   ul {
