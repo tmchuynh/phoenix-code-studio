@@ -29,12 +29,12 @@ const aboutUs = () => {
         <p>
           At Phoenix Code Studio, we merge cultural sophistication with
           cutting-edge technology to deliver bespoke digital experiences that
-          stand out. Inspired by the lotus flower—a timeless symbol of growth,
-          resilience, and beauty—we are committed to helping small businesses
-          not only establish their presence in the digital space but also
-          flourish in it. Just as the lotus rises and blooms, we aim to empower
-          your business to thrive in a competitive online world. Our
-          comprehensive services include{" "}
+          stand out. Inspired by the Phoenix—a powerful symbol of rebirth,
+          resilience, and transformation—we are committed to helping small
+          businesses not only establish their presence in the digital world but
+          also rise above their competition. Just as the Phoenix is reborn from
+          the ashes, we aim to help your business transform and thrive in an
+          ever-evolving online landscape. Our comprehensive services include{" "}
           <EmphasizeText>custom website development</EmphasizeText>,{" "}
           <EmphasizeText>brand revitalization</EmphasizeText>,{" "}
           <EmphasizeText>website redesigns</EmphasizeText>, and more all
