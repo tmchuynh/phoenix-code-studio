@@ -48,7 +48,6 @@ const BlogDisplayPage: FC = () => {
   const [filteredBlogs, setFilteredBlogs] = useState(blogs);
   const [selectedDates, setSelectedDates] = useState<string[]>([]);
   const [selectedAuthors, setSelectedAuthors] = useState<string[]>([]);
-  const [noResults, setNoResults] = useState(false);
   const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
   const [dropdownOpen, setDropdownOpen] = useState({
     topic: false,
@@ -121,20 +120,11 @@ const BlogDisplayPage: FC = () => {
     }
 
     if (filtered.length === 0) {
-      if (filtersCleared) {
-        setTimeout(() => setNoResults(true), 2500);
-      } else {
-        setNoResults(true);
-        setTimeout(() => {
-          setSelectedTopics([]);
-          setSelectedDates([]);
-        }, 1000);
-      }
+      setTimeout(() => {
+        setSelectedTopics([]);
+        setSelectedDates([]);
+      }, 1000);
       setFilteredBlogs(blogs);
-      setTimeout(() => setNoResults(false), 4000);
-    } else {
-      setNoResults(false);
-      setFilteredBlogs(filtered);
     }
   };
 
@@ -144,7 +134,6 @@ const BlogDisplayPage: FC = () => {
     setSelectedAuthors([]);
     setSearchQuery("");
     setOpenCollapsible(null);
-    setNoResults(false);
     setFilteredBlogs(blogs);
     if (!e) {
       setFiltersCleared(true);
@@ -480,15 +469,6 @@ const BlogDisplayPage: FC = () => {
             {filtersCleared && (
               <p className="text-destructive font-extrabold m-0 p-0">
                 Filters have been cleared successfully!
-              </p>
-            )}
-          </div>
-
-          {/* No results warning */}
-          <div className="my-4 text-center">
-            {noResults && (
-              <p className="text-destructive font-extrabold m-0 p-0">
-                No blogs match your selected filters. Filters have been cleared.
               </p>
             )}
           </div>
