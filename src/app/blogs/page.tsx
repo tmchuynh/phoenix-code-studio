@@ -358,7 +358,7 @@ const BlogDisplayPage: FC = () => {
             </div>
 
             {/* Author Filter */}
-            <div className="flex flex-wrap items-center">
+            {/* <div className="flex flex-wrap items-center">
               <Collapsible
                 open={openCollapsible === "author"}
                 onOpenChange={() => handleCollapsibleChange("author")}
@@ -408,7 +408,7 @@ const BlogDisplayPage: FC = () => {
                   </div>
                 </CollapsibleContent>
               </Collapsible>
-            </div>
+            </div> */}
           </div>
         </section>
 
