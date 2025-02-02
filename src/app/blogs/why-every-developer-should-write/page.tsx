@@ -93,7 +93,7 @@ const WhyWritingMattersBlog = () => {
         </section>
 
         <section className="relative flex flex-col w-full text-pretty pt-14 pb-6 border-t-2 border-b-2">
-          <FaQuoteLeft className="absolute size-7 top-7" />
+          <FaQuoteLeft className="absolute size-7 top-7 text-tertiary" />
           <p className="indent-10">
             {" "}
             In fact, the importance of writing has perhaps increased in the last
@@ -101,7 +101,7 @@ const WhyWritingMattersBlog = () => {
             business, when every second counts, strong writing makes the
             difference between smooth operations and clumsy footing.
           </p>
-          <FaQuoteRight className="absolute right-8 bottom-4 size-7" />
+          <FaQuoteRight className="absolute right-8 bottom-4 size-7 text-tertiary" />
           <p className="self-end mx-24">HuffPost</p>
         </section>
 
