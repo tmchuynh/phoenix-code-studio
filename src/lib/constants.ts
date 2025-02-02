@@ -1208,7 +1208,6 @@ export const jobPositions: JobPosition[] = [
       "Handle confidential and sensitive information with discretion and professionalism, exercising sound judgment when handling executive matters.",
       "Manage and prioritize incoming requests for the CEO’s time, ensuring critical issues are addressed promptly while delegating non-essential matters as needed.",
       "Assist in creating and maintaining internal systems that streamline operations and enhance productivity for executive functions.",
-      "Act as a liaison between the CEO and internal/external stakeholders, ensuring clear communication and fostering strong relationships."
     ],
     qualifications: [
       "Proven experience as an Executive Assistant, Personal Assistant, or in a similar administrative role, with a track record of supporting senior-level executives.",
@@ -1219,7 +1218,6 @@ export const jobPositions: JobPosition[] = [
       "Strong problem-solving skills and the ability to anticipate the needs of executives, offering proactive solutions.",
       "Experience handling confidential matters with discretion and maintaining a high level of trust and integrity.",
       "Ability to manage high-stakes situations, exercise sound judgment, and provide solutions in a fast-paced, high-pressure environment.",
-      "Proven ability to maintain strong relationships with clients, stakeholders, and cross-functional teams."
     ],
     information: "Contract | Remote | Flexible schedule",
   },
@@ -1230,11 +1228,9 @@ export const jobPositions: JobPosition[] = [
     responsibilities: [
       "Write, edit, and proofread engaging content, including blog posts, articles, newsletters, and website content, ensuring accuracy and alignment with brand messaging.",
       "Conduct in-depth research on industry-related topics, staying up to date with current trends to create authoritative, informative, and well-rounded content.",
-      "Collaborate with designers and marketers to develop content that complements visual branding and engages audiences across multiple platforms.",
       "Manage content calendars, plan ahead for campaigns, and ensure consistent publishing schedules while adhering to deadlines.",
       "Ensure all content aligns with brand voice, tone, and messaging guidelines, and optimize it for SEO to increase organic traffic and engagement.",
       "Create and optimize content for various digital platforms, including websites, blogs, email campaigns, and social media, while maintaining brand consistency.",
-      "Analyze audience insights and feedback to continuously improve content strategy and engagement.",
       "Conduct competitive research to stay ahead of industry content trends and incorporate best practices into writing.",
       "Support internal teams with content marketing strategies, including drafting engaging product descriptions, landing page content, and promotional material.",
       "Work with other team members to brainstorm, generate ideas, and contribute to creative content campaigns."
@@ -1291,7 +1287,6 @@ export const jobPositions: JobPosition[] = [
       "Investigate and respond to security incidents, ensuring that damage is minimized and that systems return to normal functionality as quickly as possible.",
       "Develop and implement cybersecurity policies, frameworks, and incident response plans that align with industry standards and company needs.",
       "Manage firewalls, encryption protocols, and security monitoring tools to protect organizational data and networks.",
-      "Collaborate with IT teams to ensure secure network configurations and protect against cyber threats.",
       "Provide regular cybersecurity awareness training to employees to ensure they follow best practices and are aware of the latest threats."
     ],
     qualifications: [
