@@ -31,7 +31,7 @@ const BlogPage = () => {
                         return (
                           <Badge
                             variant={"accent"}
-                            className="text-sm lowercase"
+                            className="text-sm lowercase cursor-default"
                             key={index}
                           >
                             #{topic}
@@ -110,10 +110,23 @@ const BlogPage = () => {
             Why Accessibility is a Continuous Process
           </h2>
           <p>
-            Web accessibility isn’t a one-and-done task—it’s an ongoing
-            commitment. Technology, user needs, and accessibility standards
-            evolve over time. Regularly test your website with tools like
-            Lighthouse, WAVE, or Axe to identify and fix accessibility issues.
+            Web accessibility isn’t a one-time fix—it’s an ongoing commitment to
+            inclusivity. As technology, user expectations, and accessibility
+            standards evolve, websites must continuously adapt to ensure an
+            equitable digital experience for all users. Regular testing and
+            updates are essential to identify and resolve accessibility
+            barriers. Utilize tools like Lighthouse, WAVE, and Axe to conduct
+            audits, detect issues, and implement improvements. Additionally,
+            engaging with real users, including those with disabilities,
+            provides valuable insights into usability challenges.
+          </p>
+          <p>
+            Accessibility should be integrated from the beginning of the design
+            and development process, ensuring a seamless and user-friendly
+            experience across all platforms and devices. By prioritizing
+            accessibility, businesses not only enhance user engagement but also
+            future-proof their websites against evolving compliance
+            requirements.
           </p>
         </section>
 
@@ -122,14 +135,20 @@ const BlogPage = () => {
             Conclusion
           </h2>
           <p>
-            Making web accessibility a priority ensures that your website is
-            inclusive, compliant, and optimized for all users. Beyond meeting
-            legal requirements, accessibility reflects your commitment to
-            creating a welcoming, user-friendly online environment.
+            Prioritizing web accessibility is not just about compliance—it’s
+            about creating a digital space that is welcoming, inclusive, and
+            user-friendly for everyone. Accessible design benefits all users,
+            improving navigation, readability, and usability, while also
+            reinforcing your brand’s commitment to inclusivity.
           </p>
           <p>
-            Start integrating accessibility into your web development process
-            today—it’s a step toward a better web for everyone.
+            Beyond the legal and SEO benefits, an accessible website fosters
+            trust, enhances engagement, and opens doors to a broader audience.
+            By making accessibility a core part of your web development
+            strategy, you are taking a step toward a more equitable digital
+            future. Start integrating accessibility into your workflow
+            today—because a truly great web experience is one that everyone can
+            access.
           </p>
         </section>
 

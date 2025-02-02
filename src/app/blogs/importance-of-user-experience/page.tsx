@@ -31,7 +31,7 @@ const BlogPage = () => {
                         return (
                           <Badge
                             variant={"accent"}
-                            className="text-sm lowercase"
+                            className="text-sm lowercase cursor-default"
                             key={index}
                           >
                             #{topic}
@@ -70,45 +70,30 @@ const BlogPage = () => {
             What is User Experience (UX)?
           </h2>
           <p>
-            <strong>User experience (UX)</strong> is a critical factor in web
-            design that determines how users engage with your website, shaping
-            their journey from the moment they land on a page. A well-optimized
-            UX ensures that visitors can navigate effortlessly, find the
-            information they need, and complete desired actions with minimal
-            friction. When a website is intuitive, fast, and visually appealing,
-            users are more likely to stay engaged, explore further, and convert
-            into customers or loyal followers. A poor UX, on the other hand,
-            leads to frustration, higher bounce rates, and lost opportunities.
-            If a site is difficult to use, slow to load, or cluttered with
-            unnecessary elements, visitors may abandon it in favor of a
-            competitor with a more seamless experience. Investing in UX design
-            not only improves customer satisfaction but also enhances brand
-            perception and credibility.
+            <strong>User experience (UX)</strong> is a vital aspect of web
+            design that directly influences how users interact with a website. A
+            well-crafted UX ensures seamless navigation, clear information flow,
+            and an intuitive design that guides visitors toward their goals with
+            minimal friction. When a website is fast, responsive, and easy to
+            use, users are more likely to stay engaged, complete desired
+            actions, and return for future visits. Conversely, a poor
+            UX—characterized by slow load times, confusing layouts, or
+            accessibility barriers—can lead to frustration, high bounce rates,
+            and lost opportunities. Investing in UX design not only enhances
+            user satisfaction but also strengthens brand credibility and fosters
+            long-term customer relationships.
           </p>
           <p>
-            User experience (UX) refers to the overall experience a person has
-            when interacting with a website or digital product. It encompasses
-            various elements such as usability, accessibility, visual design,
-            responsiveness, and the emotional connection users feel while
-            navigating your site. A well-designed UX ensures that users can
-            interact with your website smoothly and efficiently, making their
-            journey intuitive and frustration-free.
-          </p>
-          <p>
-            A great UX goes beyond aesthetics; it focuses on functionality, ease
-            of use, and user satisfaction. When visitors find a website easy to
-            navigate, fast-loading, and informative, they are more likely to
-            stay engaged, trust the brand, and take action—whether that means
-            making a purchase, signing up for a service, or returning for future
-            visits. A poor UX, on the other hand, can lead to high bounce rates,
-            lost conversions, and diminished brand credibility.
-          </p>
-          <p>
-            UX design is a critical component of any successful digital
-            presence, influencing everything from customer retention to business
-            growth. By prioritizing user experience, businesses can create
-            digital products that not only look great but also provide
-            meaningful, enjoyable interactions that leave a lasting impression.
+            Great UX goes beyond aesthetics; it prioritizes functionality, ease
+            of use, and accessibility to create a meaningful and enjoyable
+            experience. Every element, from responsive design and performance
+            optimization to thoughtful visual hierarchy and clear calls to
+            action, contributes to a website’s effectiveness. By focusing on UX
+            best practices, businesses can differentiate themselves in a crowded
+            digital landscape, improve customer retention, and drive
+            conversions. Prioritizing UX isn’t just about making a website look
+            good—it’s about delivering value, ensuring usability, and creating
+            lasting positive impressions.
           </p>
         </section>
 
@@ -129,18 +114,30 @@ const BlogPage = () => {
 
         <section>
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Final Thoughts
+            Conclusion: The Power of UX in Web Design
           </h2>
           <p>
-            User experience is more than just a buzzword—it’s a vital component
-            of successful web design. By prioritizing UX, you can create a
-            website that not only attracts visitors but also keeps them engaged
-            and compels them to act. Investing in UX design is investing in your
-            brand’s success.
+            User experience (UX) is more than just aesthetics—it's the
+            foundation of a successful website. A well-designed UX ensures that
+            visitors not only find what they need quickly but also enjoy their
+            interaction with your site, leading to higher engagement,
+            satisfaction, and conversions. A seamless, intuitive, and accessible
+            experience fosters trust, strengthens brand credibility, and builds
+            long-term relationships with users. By prioritizing UX, businesses
+            can create a digital presence that is not only visually appealing
+            but also functional and user-friendly. From improving site speed and
+            navigation to enhancing accessibility and responsiveness, every
+            aspect of UX contributes to making a website more effective. A
+            strong user experience doesn’t just benefit visitors—it drives
+            measurable business outcomes, from increased customer retention to
+            higher conversion rates.
           </p>
           <p>
-            If you’re looking to enhance your website’s UX or want to learn more
-            about best practices, follow our blog for expert insights and tips.
+            Whether you’re building a new website or optimizing an existing one,
+            focusing on UX is a smart investment that pays dividends in
+            engagement, customer satisfaction, and brand loyalty. The digital
+            landscape is constantly evolving, and keeping up with UX best
+            practices is essential for staying competitive.
           </p>
         </section>
 

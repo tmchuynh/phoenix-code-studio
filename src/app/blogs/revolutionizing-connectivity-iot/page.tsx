@@ -31,7 +31,7 @@ const BlogPage = () => {
                         return (
                           <Badge
                             variant={"accent"}
-                            className="text-sm lowercase"
+                            className="text-sm lowercase cursor-default"
                             key={index}
                           >
                             #{topic}
@@ -73,63 +73,31 @@ const BlogPage = () => {
             What is IoT?
           </h2>
           <p>
-            The <strong>Internet of Things (IoT)</strong> is transforming the
-            way we interact with technology, seamlessly connecting devices,
-            sensors, and systems to enable real-time data collection,
-            automation, and intelligent decision-making. From smart homes and
-            wearable tech to industrial automation and healthcare innovations,
-            IoT is enhancing efficiency, improving convenience, and reshaping
-            industries worldwide.
+            The <strong>Internet of Things (IoT)</strong> is revolutionizing how
+            we interact with technology by seamlessly connecting devices,
+            sensors, and systems for real-time data collection, automation, and
+            intelligent decision-making. From smart homes and wearables to
+            industrial automation and healthcare, IoT enhances efficiency,
+            convenience, and innovation across industries. Advancements like
+            edge computing for faster processing, AI-driven predictive
+            analytics, and enhanced security protocols keep IoT at the forefront
+            of digital transformation. Businesses use IoT to automate
+            operations, optimize supply chains, and improve decision-making,
+            while individuals benefit from greater convenience and
+            personalization.
           </p>
           <p>
-            As businesses and consumers increasingly integrate IoT into their
-            daily lives, the technology continues to evolve and expand, pushing
-            the boundaries of what’s possible. Innovations like edge computing
-            for faster processing, AI-driven predictive analytics, and enhanced
-            security protocols are ensuring that IoT remains at the forefront of
-            digital transformation. Whether it’s optimizing supply chains,
-            creating smarter cities, or delivering personalized user
-            experiences, IoT is unlocking new levels of efficiency and
-            connectivity.
-          </p>
-          <p>
-            At its core, IoT is a vast network of interconnected devices that
-            collect, share, and analyze data, bridging the gap between the
-            physical and digital worlds. These devices include everything from
-            consumer products like smart thermostats, connected cars, and
-            fitness trackers to industrial-grade solutions such as automated
-            agriculture, remote equipment monitoring, and smart grid systems. By
-            integrating IoT, businesses can automate processes, improve
-            decision-making, and drive cost efficiency, while individuals
-            benefit from greater convenience and personalization.
-          </p>
-          <p>
-            A key enabler of IoT’s rapid growth is edge computing, which
-            processes data closer to where it is generated, rather than relying
-            solely on centralized cloud systems. This reduces latency and
-            bandwidth usage, making it ideal for time-sensitive applications
-            like autonomous vehicles, real-time healthcare monitoring, and
-            industrial automation. By enabling instantaneous processing and
-            decision-making, edge computing enhances both the speed and security
-            of IoT applications.
-          </p>
-          <p>
-            Beyond technology, IoT is shaping the future of supply chain
-            management, smart cities, healthcare, and more. In logistics, IoT
-            helps track shipments, monitor inventory in real-time, and reduce
-            inefficiencies. In healthcare, remote patient monitoring and
-            AI-powered diagnostics are improving patient outcomes and
-            streamlining medical processes. Meanwhile, smart cities leverage IoT
-            to optimize traffic flow, reduce energy consumption, and enhance
-            public safety, making urban environments more sustainable and
-            livable.
-          </p>
-          <p>
-            As IoT adoption accelerates, its potential is limitless, driving
-            innovation, efficiency, and automation across virtually every
-            industry. Whether in business, healthcare, transportation, or
-            personal use, the Internet of Things is revolutionizing the way we
-            connect, communicate, and interact with the world.
+            IoT extends from consumer products like smart thermostats and
+            connected cars to industrial applications like automated
+            agriculture, remote monitoring, and smart grid systems. Edge
+            computing further enhances IoT by reducing latency and enabling
+            real-time processing, essential for autonomous vehicles, healthcare
+            monitoring, and industrial automation. Beyond technology, IoT is
+            transforming smart cities, logistics, and healthcare—from tracking
+            shipments and managing inventory to optimizing traffic flow and
+            improving patient care. As IoT adoption accelerates, its potential
+            is limitless, shaping a more connected, efficient, and intelligent
+            world.
           </p>
         </section>
 
@@ -153,11 +121,30 @@ const BlogPage = () => {
             Conclusion
           </h2>
           <p>
-            The Internet of Things is transforming how we connect and interact
-            with the world around us. By enabling smarter solutions, improving
-            efficiency, and fostering innovation, IoT is shaping a future where
-            connectivity knows no bounds. Whether in homes, industries, or
-            cities, IoT’s potential is limitless.
+            The Internet of Things (IoT) is revolutionizing the way we connect,
+            interact, and optimize the world around us. By seamlessly
+            integrating devices, data, and automation, IoT is bridging the gap
+            between the digital and physical realms, unlocking new levels of
+            efficiency, intelligence, and innovation across industries. From
+            smart homes and connected healthcare to industrial automation and
+            smart cities, IoT is transforming everyday life. Businesses are
+            leveraging its power to streamline operations, enhance
+            decision-making, and improve customer experiences, while consumers
+            enjoy greater convenience, personalization, and security in their
+            daily lives.
+          </p>
+          <p>
+            As IoT technology continues to evolve, advancements in AI-driven
+            analytics, edge computing, and enhanced security protocols will
+            further expand its capabilities, making our environments smarter,
+            more efficient, and more sustainable. The integration of IoT into
+            industries like logistics, agriculture, and urban development is
+            paving the way for a future where connectivity knows no bounds. The
+            future of IoT is limitless—whether optimizing businesses,
+            revolutionizing healthcare, or creating intelligent cities, it is
+            shaping a world that is more connected, automated, and data-driven
+            than ever before. The question is: How will you be part of this
+            transformation?
           </p>
         </section>
 

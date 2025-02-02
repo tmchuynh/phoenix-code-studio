@@ -62,7 +62,7 @@ export interface BlogContent {
   description?: string;
   keyTopics?: { title: string; description: string; }[];
   items?: { title: string; description: string; }[];
-  items_?: { title: string; details: string[]; }[];
+  items_?: { title: string; description?: string; details: string[]; }[];
   _items_?: { title: string; details: string; }[];
   trends?: string[];
 }

@@ -31,7 +31,7 @@ const BlogPage = () => {
                         return (
                           <Badge
                             variant={"accent"}
-                            className="text-sm lowercase"
+                            className="text-sm lowercase cursor-default"
                             key={index}
                           >
                             #{topic}
@@ -71,14 +71,20 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             What is the Digital Revolution?
           </h2>
-          <p>
-            The <strong>digital revolution</strong> is transforming industries,
-            redefining how we live and work, and driving technological
-            innovation at an unprecedented pace. Staying ahead of the curve in
-            this rapidly evolving landscape is essential for individuals and
-            businesses alike. In this blog, we’ll explore the top emerging tech
-            trends shaping the digital future and their potential to disrupt
-            industries worldwide.
+          <p className="mb-4">
+            The <strong>digital revolution</strong> is more than just
+            technological progress—it’s a paradigm shift reshaping how we
+            communicate, work, and innovate. From artificial intelligence and
+            blockchain to 5G, quantum computing, and the metaverse, emerging
+            technologies are transforming industries, automating processes, and
+            redefining human interaction.
+          </p>
+          <p className="mb-4">
+            Businesses that embrace digital transformation gain a competitive
+            edge, leveraging data-driven decision-making, automation, and
+            enhanced connectivity to streamline operations and drive innovation.
+            Meanwhile, individuals who adapt and stay informed can future-proof
+            their careers and capitalize on new opportunities.
           </p>
         </section>
 
@@ -105,7 +111,10 @@ const BlogPage = () => {
           </h2>
           <ul>
             {stayingAheadTips.map((tip, index) => (
-              <li key={index}>{tip}</li>
+              <li key={index}>
+                <strong>{tip.title}: </strong>
+                {tip.description}
+              </li>
             ))}
           </ul>
         </section>
@@ -115,10 +124,19 @@ const BlogPage = () => {
             Conclusion
           </h2>
           <p>
-            The digital revolution is more than a technological shift—it’s a
-            reimagining of how we live, work, and connect. By staying informed
-            about emerging trends, you can navigate this revolution with
-            confidence and leverage its potential to shape a better future.
+            The digital revolution is more than just a technological shift—it’s
+            a fundamental transformation in how we live, work, and connect with
+            the world. Innovations in AI, blockchain, IoT, quantum computing,
+            and beyond are reshaping industries, economies, and human
+            interactions at an unprecedented pace.
+          </p>
+          <p>
+            To thrive in this rapidly evolving landscape, staying informed,
+            adaptable, and proactive is key. By embracing emerging trends,
+            continuous learning, and collaboration, you can not only navigate
+            change effectively but also become a driving force in shaping the
+            future. The opportunities are limitless—the question is, how will
+            you leverage technology to innovate, create, and make an impact?
           </p>
         </section>
 

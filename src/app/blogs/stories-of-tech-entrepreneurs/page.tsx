@@ -31,7 +31,7 @@ const BlogPage = () => {
                         return (
                           <Badge
                             variant={"accent"}
-                            className="text-sm lowercase"
+                            className="text-sm lowercase cursor-default"
                             key={index}
                           >
                             #{topic}
@@ -45,15 +45,20 @@ const BlogPage = () => {
             })}
           </div>
           <p>
-            Tech entrepreneurs are redefining industries, revolutionizing how we
-            live, work, and interact with the world. With groundbreaking ideas,
-            relentless passion, and the ability to adapt to rapid technological
-            advancements, these innovators have created some of the most
-            influential companies of our time. Many of today’s biggest tech
-            giants—from Apple and Microsoft to Google and Tesla—began as small,
-            ambitious projects in garages, dorm rooms, or tiny offices. Their
-            stories serve as powerful testaments to creativity, perseverance,
-            and the willingness to take risks.
+            Tech entrepreneurs are not just building businesses—they are
+            reshaping entire industries and revolutionizing the way we live,
+            work, and connect with the world. With bold ideas, unwavering
+            passion, and the ability to navigate rapid technological shifts,
+            these innovators have created some of the most influential companies
+            in history. From Apple and Microsoft to Google and Tesla, many of
+            today’s biggest tech giants began as nothing more than ambitious
+            projects in garages, dorm rooms, or tiny offices. What set them
+            apart wasn’t just their groundbreaking ideas, but their persistence,
+            adaptability, and willingness to take risks in the face of
+            uncertainty. Their stories serve as powerful testaments to the
+            limitless potential of entrepreneurship—proving that innovation
+            starts with vision, grows through resilience, and succeeds through
+            relentless execution. What will your impact be?
           </p>
         </header>
 
@@ -62,79 +67,127 @@ const BlogPage = () => {
             The Journey of a Tech Entrepreneur
           </h2>
           <p>
-            Starting a tech company often involves a blend of ambition,
-            resilience, and a willingness to take risks. The path from a startup
-            idea to becoming a tech giant typically includes:
+            Launching a tech company is more than just having a great idea—it
+            requires ambition, resilience, and a willingness to take risks. The
+            road from a simple concept to becoming an industry-changing company
+            is filled with challenges, breakthroughs, and countless learning
+            experiences.
           </p>
-          <ol className="list-decimal pl-6 space-y-2">
+          <p>
+            Every successful tech entrepreneur follows a unique journey, but the
+            path often includes key milestones such as:
+          </p>
+          <ul>
             <li>
-              <strong>Identifying a Problem:</strong> Successful entrepreneurs
-              start by spotting a problem or gap in the market and coming up
-              with a unique solution.
+              <strong>Identifying a Problem:</strong> Every great startup begins
+              by recognizing a real-world problem and designing an innovative
+              solution to address it.
             </li>
             <li>
-              <strong>Building a Prototype:</strong> Most tech startups begin
-              with an MVP (Minimum Viable Product) to test their ideas and
-              gather feedback.
+              <strong>Building a Minimum Viable Product (MVP):</strong>{" "}
+              Entrepreneurs start small—creating a prototype or early version of
+              their product to test and validate their idea before scaling.
             </li>
             <li>
-              <strong>Overcoming Challenges:</strong> Entrepreneurs face
-              obstacles like funding shortages, competition, and technological
-              hurdles. Perseverance is key.
+              <strong>Securing Funding:</strong> From bootstrapping to venture
+              capital, funding is crucial for growth. Successful founders pitch
+              their vision and attract investors who believe in their potential.
             </li>
             <li>
-              <strong>Scaling and Innovating:</strong> Once the business gains
-              traction, scaling operations and staying ahead of the competition
-              through innovation become critical.
+              <strong>Navigating Setbacks and Pivots:</strong> The road to
+              success is rarely smooth. Adapting to market changes, learning
+              from failures, and iterating are key aspects of entrepreneurial
+              resilience.
             </li>
-          </ol>
+            <li>
+              <strong>Scaling the Business:</strong> Once a startup gains
+              traction, the focus shifts to expanding the product, growing the
+              team, and reaching new markets.
+            </li>
+            <li>
+              <strong>Becoming an Industry Leader:</strong> The most successful
+              entrepreneurs don’t just build companies—they disrupt industries,
+              set trends, and continuously innovate to stay ahead.
+            </li>
+          </ul>
+          <p className="mt-4">
+            While the journey is filled with uncertainties, every tech giant we
+            know today started with a simple idea and the courage to pursue it.
+            Whether you're at the beginning of your journey or already building
+            something great, the next big breakthrough could be yours.
+          </p>
         </section>
 
         <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Lessons from Successful Entrepreneurs
-          </h2>
-          <p>
-            The success stories of these tech entrepreneurs provide valuable
-            insights that can inspire and guide aspiring innovators.
-          </p>
-          {entrepreneurInsights.map(
-            (categoryItem, categoryIndex) =>
-              categoryItem.category === "lessons" && (
-                <ul>
+          {entrepreneurInsights.map((categoryItem, categoryIndex) =>
+            categoryItem.category === "stories" ? (
+              <>
+                <h2 className="text-3xl font-semibold mb-6 text-secondary">
+                  Inspiring Stories of Tech Entrepreneurs
+                </h2>
+                <p>
+                  Many of today’s most legendary tech companies started as
+                  small, passion-driven projects—often built in garages, dorm
+                  rooms, or tiny office spaces. They were fueled by bold ideas,
+                  a relentless drive to solve problems, and a desire to
+                  challenge the status quo. However, their journeys were far
+                  from smooth. These companies faced setbacks, financial
+                  struggles, and moments of uncertainty that could have easily
+                  led to failure. Yet, their founders refused to quit. They
+                  adapted, innovated, and turned obstacles into opportunities.
+                </p>
+                <p>
+                  The stories of Apple, Microsoft, Amazon, and Tesla remind us
+                  that great innovations don’t happen overnight. They are the
+                  result of resilience, continuous learning, and the courage to
+                  pursue ideas that others might doubt. Whether you're launching
+                  your first startup or working on a passion project, remember:
+                  Every big success starts as a small idea. The key is to keep
+                  pushing forward.
+                </p>
+                {categoryItem.items_?.map((item, storyIndex) => (
+                  <>
+                    <ul key={storyIndex}>
+                      <li key={categoryIndex}>
+                        {item.details}
+                        {item.description && (
+                          <ul className="list-none">
+                            <li>{item.description}</li>
+                          </ul>
+                        )}
+                      </li>
+                    </ul>
+                  </>
+                ))}
+              </>
+            ) : (
+              <>
+                <h2 className="text-3xl font-semibold mb-6 text-secondary">
+                  Lessons from Successful Entrepreneurs
+                </h2>
+                <p>
+                  The success stories of these tech entrepreneurs offer powerful
+                  lessons in innovation, resilience, and adaptability. They
+                  serve as a reminder that great achievements often start with a
+                  single idea, a bold vision, and the willingness to take risks.
+                  From overcoming failures to disrupting entire industries,
+                  these pioneers demonstrate that persistence, creativity, and
+                  continuous learning are key to success. Their journeys provide
+                  inspiration and practical strategies for aspiring innovators
+                  looking to make their mark in the world of technology. No
+                  matter where you are in your entrepreneurial journey, their
+                  experiences prove one thing: Success is built on perseverance,
+                  adaptability, and the courage to challenge the norm.
+                </p>
+                <ul key={`${categoryItem.items}`}>
                   {categoryItem.items?.map((item, storyIndex) => (
-                    <li key={categoryIndex}>
+                    <li key={storyIndex}>
                       <strong>{item.title}:</strong> {item.description}
                     </li>
                   ))}
                 </ul>
-              )
-          )}
-        </section>
-
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-secondary">
-            Inspiring Stories of Tech Entrepreneurs
-          </h2>
-          <p>
-            Many legendary tech companies began as small projects, often fueled
-            by a simple idea, a passion for solving problems, and a desire to
-            disrupt the status quo. These companies faced numerous obstacles,
-            failures, and moments of uncertainty, but their founders pushed
-            through, learned from setbacks, and continuously adapted to bring
-            their ideas to life.
-          </p>
-          {entrepreneurInsights.map(
-            (categoryItem, categoryIndex) =>
-              categoryItem.category === "stories" && (
-                <ul>
-                  {categoryItem.items?.map((item, storyIndex) => (
-                    <li key={categoryIndex}>
-                      <strong>{item.title}:</strong> {item.description}
-                    </li>
-                  ))}
-                </ul>
-              )
+              </>
+            )
           )}
         </section>
 
@@ -143,17 +196,25 @@ const BlogPage = () => {
             The Future of Tech Entrepreneurship
           </h2>
           <p>
-            As technology continues to advance, new opportunities for innovation
-            emerge every day. With the rise of AI, blockchain, IoT, and other
-            cutting-edge fields, the next generation of tech entrepreneurs has
-            endless possibilities to create groundbreaking solutions.
+            The future of technology is being shaped by bold thinkers, problem
+            solvers, and relentless innovators. As advancements in AI,
+            blockchain, IoT, biotechnology, and quantum computing accelerate,
+            new opportunities for groundbreaking solutions emerge every day. The
+            barriers to entry are lower than ever, and access to global markets,
+            funding, and cutting-edge tools is empowering a new generation of
+            entrepreneurs.
           </p>
           <p>
-            Whether you're an aspiring founder, an investor, or someone looking
-            to bring an idea to life, the stories of successful tech
-            entrepreneurs serve as motivation to take that first step. The next
-            game-changing company could be an idea you’re working on right
-            now—so keep innovating, keep learning, and never stop building.
+            From sustainable energy solutions to AI-driven automation,
+            decentralized finance, and next-gen healthcare, the possibilities
+            are limitless. The world is evolving rapidly, and those who embrace
+            change, experiment fearlessly, and adapt to new technologies will be
+            the ones shaping the industries of tomorrow. Whether you're an
+            aspiring founder, an investor, or someone with a vision waiting to
+            be realized, the success stories of tech pioneers serve as a
+            reminder that every great innovation begins with a single step. The
+            next game-changing company could be an idea you’re working on right
+            now.
           </p>
         </section>
 
@@ -162,14 +223,17 @@ const BlogPage = () => {
             Conclusion
           </h2>
           <p>
-            Tech entrepreneurship is not just about building products—it’s about
-            shaping the future. By taking risks, challenging the status quo, and
-            pushing the boundaries of what’s possible, today’s innovators are
-            paving the way for the next wave of technological breakthroughs.
+            Tech entrepreneurship is more than just building products—it’s about
+            shaping the future and redefining what’s possible. The greatest
+            innovations come from those who dare to take risks, challenge
+            conventional thinking, and push the boundaries of technology.
           </p>
           <p>
-            Who knows? The next revolutionary company could be your idea,
-            waiting to be brought to life. Are you ready to take that leap?
+            Every breakthrough—whether it’s in AI, blockchain, clean energy, or
+            biotechnology—starts with an idea and the determination to see it
+            through. The next game-changing company could come from you—a vision
+            waiting to be realized, a problem waiting to be solved, a technology
+            waiting to be built.
           </p>
         </section>
 

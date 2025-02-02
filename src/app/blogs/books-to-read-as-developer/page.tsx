@@ -29,7 +29,7 @@ const BlogPage = () => {
                         return (
                           <Badge
                             variant={"accent"}
-                            className="text-sm lowercase"
+                            className="text-sm lowercase cursor-default"
                             key={index}
                           >
                             #{topic}
@@ -80,13 +80,21 @@ const BlogPage = () => {
             Conclusion
           </h2>
           <p>
-            Are there any other must-read books you'd recommend? As new
-            developers enter the industry, fresh editions and groundbreaking
-            books continue to emerge. Which ones do you think deserve a spot on
-            this list? With so many valuable resources out there, no one can
-            read them all—but we can share and learn together!
+            The world of software development is constantly evolving, and so is
+            the knowledge that fuels it. Whether you're a beginner looking for
+            foundational books or an experienced developer searching for deeper
+            insights, there are countless resources that can enhance your
+            skills, expand your thinking, and help you stay ahead in the
+            industry.
           </p>
-          <p>Happy coding!</p>
+          <p>
+            But with so many books available, no one can read them all! That's
+            why we want to hear from you. Which programming, design, or
+            career-focused books have had the biggest impact on you? As new
+            developers join the industry and groundbreaking publications emerge,
+            sharing recommendations can help everyone discover hidden gems and
+            essential reads that make a difference.
+          </p>
         </section>
 
         <footer className="mt-8 text-center">

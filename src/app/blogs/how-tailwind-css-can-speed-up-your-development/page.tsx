@@ -2,11 +2,14 @@
 
 import { Badge } from "@/components/ui/badge";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
+import { Button } from "@/components/ui/button";
 import { tailwindCSSResources } from "@/lib/blog-constants";
 import { blogs } from "@/lib/constants";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const BlogPage = () => {
+  const router = useRouter();
   return (
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
@@ -31,7 +34,7 @@ const BlogPage = () => {
                         return (
                           <Badge
                             variant={"accent"}
-                            className="text-sm lowercase"
+                            className="text-sm lowercase cursor-default"
                             key={index}
                           >
                             #{topic}
@@ -75,17 +78,38 @@ const BlogPage = () => {
           <p>
             <strong>Tailwind CSS</strong> is a utility-first CSS framework that
             provides a highly customizable approach to building modern user
-            interfaces. In this post, we’ll explore why Tailwind CSS has become
-            a favorite among developers, how it can drastically improve your
-            workflow, and tips to get started with this powerful tool.
+            interfaces. Unlike traditional CSS frameworks that come with
+            predefined components and rigid styling rules, Tailwind offers a
+            low-level, utility-driven method that enables developers to
+            construct designs directly within their HTML. This approach
+            eliminates the need for writing extensive custom CSS while
+            maintaining full control over the styling of each element.
           </p>
           <p>
-            Tailwind CSS is a modern CSS framework that focuses on providing
-            utility classes—small, reusable CSS snippets for styling your
-            elements directly in the HTML. Unlike traditional CSS frameworks
-            that rely on predefined components, Tailwind offers unparalleled
-            flexibility, allowing developers to design unique, responsive, and
-            efficient user interfaces.
+            Tailwind CSS introduces a vast collection of utility classes, which
+            are small, reusable CSS snippets that can be applied directly to
+            elements. These classes cover a wide range of styling properties,
+            including spacing, typography, colors, flexbox, grid, animations,
+            and responsiveness. Instead of writing custom CSS stylesheets,
+            developers can compose unique designs by combining utility classes
+            within the HTML markup itself. This utility-first philosophy
+            streamlines development, enhances maintainability, and improves
+            performance by reducing unused CSS in production builds.
+          </p>
+          <p>
+            One of Tailwind’s standout features is its customizability. The
+            framework includes a powerful configuration file
+            (tailwind.config.js) that allows developers to extend default
+            styles, define custom themes, and modify breakpoints to fit the
+            specific needs of a project. By leveraging this configuration, teams
+            can maintain a consistent design system while avoiding CSS bloat and
+            unnecessary overrides. Tailwind CSS is particularly favored by
+            modern front-end developers due to its developer-friendly approach,
+            performance optimizations, and seamless integration with
+            component-based libraries like React, Vue, and Angular. Its JIT
+            (Just-In-Time) compiler generates only the CSS classes that are used
+            in the project, drastically reducing the final CSS file size and
+            improving load times.
           </p>
         </section>
 
@@ -108,36 +132,91 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Getting Started with Tailwind CSS
           </h2>
-          <ol className="list-decimal pl-6 space-y-2">
+          <p>
+            Setting up Tailwind CSS is a straightforward process that allows you
+            to quickly build modern, responsive, and highly customizable
+            designs. Follow these steps to install, configure, and start using
+            Tailwind CSS in your project.
+          </p>
+          <ol className="list-decimal pl-6 space-y-4">
             <li>
-              <strong>Install Tailwind CSS:</strong> Start by adding Tailwind to
-              your project using npm or your preferred package manager:
-              <pre className="bg-gray-100 p-4 text-sm rounded-md mt-2">
+              <strong>Install Tailwind CSS:</strong> Start by adding Tailwind
+              CSS to your project using npm, yarn, or your preferred package
+              manager.
+              <pre className="p-4 text-sm rounded-md mt-2 bg-muted text-muted-foreground">
+                # Install Tailwind CSS, PostCSS, and Autoprefixer
+                <br />
                 npm install -D tailwindcss postcss autoprefixer
                 <br />
-                npx tailwindcss init
+                <br />
+                # Generate the Tailwind config file
+                <br />
+                npx tailwindcss init -p
               </pre>
+              <p>
+                The `-p` flag automatically creates a `postcss.config.js` file,
+                which ensures compatibility with PostCSS for advanced
+                optimizations.
+              </p>
             </li>
+
             <li>
-              <strong>Set Up Your Configuration:</strong> Customize your
-              `tailwind.config.js` to define your project's color palette,
-              fonts, spacing, and more.
+              <strong>Set Up Your Configuration:</strong> Tailwind provides a
+              configuration file (`tailwind.config.js`) where you can customize
+              themes, colors, fonts, spacing, breakpoints, and other design
+              elements.
+              <pre className="p-4 text-sm rounded-md mt-2 bg-muted text-muted-foreground">
+                module.exports = {"{"}
+                theme: {"{"}
+                extend: {"{"}
+                colors: {"{"}
+                primary: '#1E40AF', secondary: '#9333EA',
+                {"}"},{"}"},{"}"}, plugins: [],
+                {"}"};
+              </pre>
+              <p>
+                Customizing this file helps you maintain a consistent design
+                system tailored to your project’s needs.
+              </p>
             </li>
+
             <li>
-              <strong>Add Tailwind to Your CSS:</strong> Include Tailwind's
-              base, components, and utilities in your CSS file:
-              <pre className="bg-gray-100 p-4 text-sm rounded-md mt-2">
+              <strong>Add Tailwind to Your CSS:</strong> Include Tailwind’s base
+              styles, component utilities, and global configurations in your
+              main CSS file.
+              <pre className="p-4 text-sm rounded-md mt-2 bg-muted text-muted-foreground">
                 @tailwind base;
                 <br />
                 @tailwind components;
                 <br />
                 @tailwind utilities;
               </pre>
+              <p>
+                These directives import Tailwind's utility classes and core
+                styling into your project, ensuring your HTML elements are ready
+                to be styled.
+              </p>
             </li>
+
             <li>
-              <strong>Start Building:</strong> Use Tailwind's extensive
-              documentation and examples to quickly style your components and
-              layouts.
+              <strong>Start Building:</strong> You’re now ready to use
+              Tailwind’s utility classes to style your elements directly in
+              HTML. For example:
+              <pre className="p-4 text-sm rounded-md mt-2 bg-muted text-muted-foreground">
+                {"<"}button className="bg-blue-500 hover:bg-blue-700 text-white
+                font-bold py-2 px-4 rounded"{">"}Click Me{"</"}button{">"}
+              </pre>
+              <p>
+                Explore the{" "}
+                <Button
+                  className="p-0 m-0"
+                  variant={"link"}
+                  onClick={() => router.push("https://tailwindcss.com/docs")}
+                >
+                  Tailwind documentation
+                </Button>{" "}
+                for more examples and best practices.
+              </p>
             </li>
           </ol>
         </section>
@@ -147,15 +226,28 @@ const BlogPage = () => {
             Final Thoughts
           </h2>
           <p>
-            Tailwind CSS is more than just a CSS framework—it’s a game-changer
-            for frontend development. By combining speed, flexibility, and
-            customization, it empowers developers to build modern, responsive
-            designs with ease.
+            Tailwind CSS is more than just a utility-first framework—it’s a
+            game-changer in modern frontend development. By offering a highly
+            flexible and scalable approach to styling, it allows developers to
+            design quickly, maintain consistency, and reduce unnecessary CSS
+            complexity. Unlike traditional frameworks that enforce pre-styled
+            components, Tailwind’s customizable, utility-driven philosophy
+            provides complete control over UI elements, making it ideal for
+            projects of any scale.
           </p>
           <p>
-            If you’re looking for a tool to enhance your development workflow,
-            give Tailwind CSS a try. Its versatility and efficiency make it an
-            invaluable asset for developers of all skill levels.
+            With mobile-first design, Just-In-Time (JIT) compilation, and
+            seamless integration with frameworks like React, Vue, and Angular,
+            Tailwind CSS enables developers to streamline their workflow and
+            improve performance. The ability to customize themes, create
+            reusable components, and optimize production builds ensures that
+            your project remains lean, maintainable, and efficient. Whether
+            you’re a beginner experimenting with frontend development or an
+            experienced developer building complex web applications, Tailwind
+            CSS offers a versatile, intuitive, and performance-focused approach
+            to modern UI development. If you haven’t tried it yet, now is the
+            perfect time to explore its powerful features and extensive
+            documentation to enhance your workflow.
           </p>
         </section>
 

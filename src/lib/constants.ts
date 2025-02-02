@@ -916,7 +916,7 @@ export const blogs: BlogPost[] = [
     date: "August 15, 2024",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Blockchain", "Architecture"],
+    topics: ["Blockchain", "Architecture", "AI/ML", "IoT",],
     excerpt:
       "User experience (UX) is one of the most important factors when designing a website. It directly impacts how users interact with your website, and ultimately affects conversion rates.",
     slug: "/blogs/understanding-blockchain-architecture",
@@ -927,7 +927,7 @@ export const blogs: BlogPost[] = [
     date: "August 15, 2024",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Design", "Architecture"],
+    topics: ["Design", "Architecture", "AI/ML", "VR"],
     excerpt:
       "User experience (UX) is one of the most important factors when designing a website. It directly impacts how users interact with your website, and ultimately affects conversion rates.",
     slug: "/blogs/understanding-gui-architecture",
@@ -949,7 +949,7 @@ export const blogs: BlogPost[] = [
     date: "April 22, 2022",
     img: "/images/blog-placeholder.jpg",
     featured: false,
-    topics: ["Career"],
+    topics: ["Career", "Self-Development",],
     excerpt:
       `Even though "jack of all trades" sometimes is used as an insult, it did not begin as one. The complete saying goes "A jack of all trades is a master of none, but oftentimes better than a master of one."`,
     slug: "/blogs/jack-of-all-trades-or-master-of-one",
@@ -1026,7 +1026,7 @@ export const blogs: BlogPost[] = [
     date: "January 15, 2023",
     img: "/images/blog-placeholder.jpg",
     featured: false,
-    topics: ["Data Science", "Analytics", "Machine Learning"],
+    topics: ["Data Science", "Analytics", "AI/ML", "IoT"],
     excerpt:
       "Data science is changing how we solve problems and make decisions. Learn how data scientists turn raw data into insights that drive success.",
     slug: "/blogs/demystifying-data-science",
@@ -1037,7 +1037,7 @@ export const blogs: BlogPost[] = [
     date: "January 15, 2023",
     img: "/images/blog-placeholder.jpg",
     featured: false,
-    topics: ["Innovation"],
+    topics: ["Blockchain", "IoT", "AI/ML", "Autonomous Systems",],
     excerpt:
       "The Internet of Things (IoT) is connecting the world like never before. Explore how IoT innovations are transforming industries and daily life.",
     slug: "/blogs/revolutionizing-connectivity-iot",
@@ -1070,7 +1070,7 @@ export const blogs: BlogPost[] = [
     date: "November 20, 2024",
     img: "/images/blog-placeholder.jpg",
     featured: true,
-    topics: ["Innovation"],
+    topics: ["Innovation", "AI/ML", "Blockchain", "Quantum Computing", "VR", "Autonomous Systems", "IoT"],
     excerpt:
       "Stay ahead of the curve with a look at the latest technology trends reshaping the digital landscape and industries worldwide.",
     slug: "/blogs/navigating-tech-trends",

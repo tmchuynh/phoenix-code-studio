@@ -31,7 +31,7 @@ const BlogPage = () => {
                         return (
                           <Badge
                             variant={"accent"}
-                            className="text-sm lowercase"
+                            className="text-sm lowercase cursor-default"
                             key={index}
                           >
                             #{topic}
@@ -116,17 +116,28 @@ const BlogPage = () => {
           <h2 className="text-3xl font-semibold mb-6 text-secondary">
             Conclusion
           </h2>
-          <p>
-            Blockchain technology is more than a buzzword—it’s a transformative
-            force with the power to disrupt industries and redefine the way we
-            interact with digital systems. By offering decentralization,
-            transparency, and security, blockchain is paving the way for a more
-            equitable and efficient future.
+          <p className="mb-4">
+            Blockchain technology is more than just a buzzword—it’s a
+            revolutionary force reshaping industries, enhancing security, and
+            redefining digital interactions. By enabling decentralization,
+            transparency, and immutability, blockchain is creating trustless
+            ecosystems that empower individuals and businesses alike.
+          </p>
+          <p className="mb-4">
+            From finance and healthcare to supply chain and intellectual
+            property, blockchain’s real-world applications continue to expand,
+            proving its potential to solve complex challenges and drive
+            innovation.
+          </p>
+          <p className="mb-4">
+            Whether you’re a developer, entrepreneur, investor, or tech
+            enthusiast, understanding blockchain is no longer optional—it’s a
+            necessity. As this technology evolves, those who embrace and adapt
+            to it will be at the forefront of the digital revolution.
           </p>
           <p>
-            Whether you’re a developer, entrepreneur, or tech enthusiast,
-            understanding blockchain is essential in today’s rapidly evolving
-            digital world.
+            The future of blockchain is just beginning, and its transformative
+            impact is undeniable. The question is: How will you be a part of it?
           </p>
         </section>
 
