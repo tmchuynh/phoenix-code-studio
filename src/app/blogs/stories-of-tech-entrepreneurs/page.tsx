@@ -117,8 +117,8 @@ const BlogPage = () => {
           <p className="mt-4">
             While the journey is filled with uncertainties, every tech giant we
             know today started with a simple idea and the courage to pursue it.
-            Whether you';re at the beginning of your journey or already building
-            something great, the next big breakthrough could be yours.
+            Whether you&apos;re at the beginning of your journey or already
+            building something great, the next big breakthrough could be yours.
           </p>
         </section>
 
@@ -144,7 +144,7 @@ const BlogPage = () => {
                   The stories of Apple, Microsoft, Amazon, and Tesla remind us
                   that great innovations don’t happen overnight. They are the
                   result of resilience, continuous learning, and the courage to
-                  pursue ideas that others might doubt. Whether you';re
+                  pursue ideas that others might doubt. Whether you&apos;re
                   launching your first startup or working on a passion project,
                   remember: Every big success starts as a small idea. The key is
                   to keep pushing forward.
@@ -213,7 +213,7 @@ const BlogPage = () => {
             decentralized finance, and next-gen healthcare, the possibilities
             are limitless. The world is evolving rapidly, and those who embrace
             change, experiment fearlessly, and adapt to new technologies will be
-            the ones shaping the industries of tomorrow. Whether you';re an
+            the ones shaping the industries of tomorrow. Whether you&apos;re an
             aspiring founder, an investor, or someone with a vision waiting to
             be realized, the success stories of tech pioneers serve as a
             reminder that every great innovation begins with a single step. The

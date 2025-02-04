@@ -19,7 +19,7 @@ const PricingPage: FC = () => {
       </h1>
       <p>
         Explore our flexible pricing options designed to suit a variety of needs
-        and budgets. Whether you';re looking for a basic package or a
+        and budgets. Whether you&apos;re looking for a basic package or a
         comprehensive solution, we offer service tiers that provide exceptional
         value and scalability. Choose the plan that aligns with your goals, and
         let us help you achieve success with tailored, high-quality services.
@@ -53,11 +53,11 @@ const PricingPage: FC = () => {
           adaptable as your business grows.
         </p>
         <p>
-          Whether you';re launching a new website, revamping an existing one, or
-          integrating advanced functionalities, our expert team will guide you
-          through every step of the process. Let us help you create a powerful
-          online presence that connects with your audience and drives measurable
-          results.
+          Whether you&apos;re launching a new website, revamping an existing
+          one, or integrating advanced functionalities, our expert team will
+          guide you through every step of the process. Let us help you create a
+          powerful online presence that connects with your audience and drives
+          measurable results.
         </p>
 
         {websiteServices.map((services, index) => (

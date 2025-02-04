@@ -23,7 +23,7 @@ const SPAServices: FC = () => {
         seamless, one-page applications that provide users with instant feedback
         and smooth navigation. SPAs load content dynamically, offering faster
         performance and enhanced user experience compared to traditional
-        multi-page websites. Whether you';re building a complex web app or a
+        multi-page websites. Whether you&apos;re building a complex web app or a
         simple user interface, we specialize in creating scalable, responsive
         SPAs that are tailored to your business needs and designed to optimize
         user engagement.

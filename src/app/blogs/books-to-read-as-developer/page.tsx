@@ -81,16 +81,16 @@ const BlogPage = () => {
           </h2>
           <p>
             The world of software development is constantly evolving, and so is
-            the knowledge that fuels it. Whether you';re a beginner looking for
-            foundational books or an experienced developer searching for deeper
-            insights, there are countless resources that can enhance your
+            the knowledge that fuels it. Whether you&apos;re a beginner looking
+            for foundational books or an experienced developer searching for
+            deeper insights, there are countless resources that can enhance your
             skills, expand your thinking, and help you stay ahead in the
             industry.
           </p>
           <p>
-            But with so many books available, no one can read them all! That';s
-            why we want to hear from you. Which programming, design, or
-            career-focused books have had the biggest impact on you? As new
+            But with so many books available, no one can read them all!
+            That&apos;s why we want to hear from you. Which programming, design,
+            or career-focused books have had the biggest impact on you? As new
             developers join the industry and groundbreaking publications emerge,
             sharing recommendations can help everyone discover hidden gems and
             essential reads that make a difference.

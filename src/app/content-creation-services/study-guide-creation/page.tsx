@@ -21,7 +21,7 @@ const StudyGuideCreation: FC = () => {
         Our Study Guide Creation Services are designed to help students and
         educators achieve academic success. We provide comprehensive,
         well-structured study materials tailored to specific subjects or exams.
-        Whether you';re preparing for a major exam or simply looking to
+        Whether you&apos;re preparing for a major exam or simply looking to
         reinforce key concepts, our expertly written study guides break down
         complex topics into easily digestible sections, enhancing retention and
         boosting confidence. With engaging visuals, summaries, and quizzes, we

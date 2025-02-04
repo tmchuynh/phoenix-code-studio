@@ -17,13 +17,13 @@ const JackOfAllTradesBlog = () => {
       <article className="space-y-8">
         <header>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
-            Who';s the Better Hire? - Jack of All Trades OR Master of One
+            Who&apos;s the Better Hire? - Jack of All Trades OR Master of One
           </h1>
           <div>
             {blogs.map((blog, index) => {
               return (
                 blog.title ===
-                  "Who';s the Better Hire? - Jack of All Trades OR Master of One" && (
+                  "Who&apos;s the Better Hire? - Jack of All Trades OR Master of One" && (
                   <>
                     <p key={index}>
                       <span className="font-bold">Written By: </span>
@@ -180,12 +180,12 @@ const JackOfAllTradesBlog = () => {
             demand, versatility is an asset that sets individuals apart. The
             ability to navigate multiple disciplines, think creatively, and
             collaborate across industries makes a well-rounded professional
-            indispensable in today';s dynamic world. While deep specialization
-            has its advantages, those who embrace a multifaceted approach bring
-            unique perspectives, bridge knowledge gaps, and drive innovation by
-            connecting ideas from different fields. They thrive in startups,
-            leadership roles, and multidisciplinary teams, where agility and
-            adaptability are essential for success.
+            indispensable in today&apos;s dynamic world. While deep
+            specialization has its advantages, those who embrace a multifaceted
+            approach bring unique perspectives, bridge knowledge gaps, and drive
+            innovation by connecting ideas from different fields. They thrive in
+            startups, leadership roles, and multidisciplinary teams, where
+            agility and adaptability are essential for success.
           </p>
           <p>
             The modern workforce values lifelong learners—those willing to
@@ -205,7 +205,7 @@ const JackOfAllTradesBlog = () => {
             {blogs.map((blog) => {
               return (
                 blog.title ===
-                  "Who';s the Better Hire? - Jack of All Trades OR Master of One" && (
+                  "Who&apos;s the Better Hire? - Jack of All Trades OR Master of One" && (
                   <>
                     {blog.topics.map((topic, index) => {
                       return (

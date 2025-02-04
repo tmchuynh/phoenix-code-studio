@@ -209,7 +209,7 @@ const PastProjectsPage: FC = () => {
         and dedication to delivering outstanding results. From innovative web
         designs to efficient applications, our past work highlights our
         commitment to quality and client satisfaction. Take a look at some of
-        the projects we';ve had the privilege to work on, each reflecting a
+        the projects we&apos;ve had the privilege to work on, each reflecting a
         unique challenge and solution. These projects highlight our ability to
         craft innovative, functional, and visually appealing designs that meet
         diverse client needs and goals. Get inspired by the impactful solutions

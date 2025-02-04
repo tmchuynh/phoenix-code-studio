@@ -46,7 +46,7 @@ export const contactlessCardOptions = [
   {
     name: "dot Cards",
     description:
-      "Dot cards offer a seamless and modern way to instantly share your professional and personal information, including LinkedIn, website, phone number, email, payment details (Venmo, PayPal, etc.), and social media accounts. Designed for effortless networking, Dot cards eliminate the need for physical business cards or manual contact exchanges. With just a tap or scan, you can instantly share your details without requiring an app, ensuring compatibility across both iPhone and Android devices. Whether you';re at a business meeting, networking event, or social gathering, Dot cards provide a smart, convenient, and contactless way to connect and leave a lasting impression.",
+      "Dot cards offer a seamless and modern way to instantly share your professional and personal information, including LinkedIn, website, phone number, email, payment details (Venmo, PayPal, etc.), and social media accounts. Designed for effortless networking, Dot cards eliminate the need for physical business cards or manual contact exchanges. With just a tap or scan, you can instantly share your details without requiring an app, ensuring compatibility across both iPhone and Android devices. Whether you&apos;re at a business meeting, networking event, or social gathering, Dot cards provide a smart, convenient, and contactless way to connect and leave a lasting impression.",
     features: [
       "Dynamically share what you want with who you want",
       "Profiles are viewed directly through a browser",
@@ -125,7 +125,7 @@ export const contactlessCardOptions = [
   {
     name: "popl Cards",
     description:
-      "Popl is an innovative contact-sharing solution that allows you to instantly share almost anything with a tap, scan, or send. Whether you need to exchange contact details, social media profiles, websites, payment apps, files, videos, or more, Popl provides a fast and seamless way to connect with others in any setting. Unlike traditional business cards, Popl ensures that your information is always up to date and accessible with just a single interaction. Whether you';re networking at events, meeting clients, or promoting your brand, Popl simplifies the process by eliminating the need for outdated paper cards while offering a modern, digital-first approach to making connections.",
+      "Popl is an innovative contact-sharing solution that allows you to instantly share almost anything with a tap, scan, or send. Whether you need to exchange contact details, social media profiles, websites, payment apps, files, videos, or more, Popl provides a fast and seamless way to connect with others in any setting. Unlike traditional business cards, Popl ensures that your information is always up to date and accessible with just a single interaction. Whether you&apos;re networking at events, meeting clients, or promoting your brand, Popl simplifies the process by eliminating the need for outdated paper cards while offering a modern, digital-first approach to making connections.",
     features: [
       "Connect to your existing SSO logins through Azure or Okta SAML 2.0 to ensure secure authentication company wide",
       "Scan ANY event badge, paper business card, or QR code into a digital contact",
@@ -154,11 +154,11 @@ export const contactlessCardOptions = [
   {
     name: "HiHello Cards",
     description:
-      "HiHello offers a smart and sustainable alternative to traditional business cards with its fully digital, customizable business cards. Designed to be environmentally friendly and cost-effective, HiHello eliminates the hassle of printing, carrying, and updating physical business cards, ensuring that your professional details are always current. With features such as QR code sharing, virtual backgrounds, and contact management, HiHello helps you make a strong first impression while promoting a paperless and modern networking experience. Whether you';re an individual professional or part of a larger team, HiHello provides a scalable and user-friendly way to exchange contact details in a seamless and eco-conscious manner.",
+      "HiHello offers a smart and sustainable alternative to traditional business cards with its fully digital, customizable business cards. Designed to be environmentally friendly and cost-effective, HiHello eliminates the hassle of printing, carrying, and updating physical business cards, ensuring that your professional details are always current. With features such as QR code sharing, virtual backgrounds, and contact management, HiHello helps you make a strong first impression while promoting a paperless and modern networking experience. Whether you&apos;re an individual professional or part of a larger team, HiHello provides a scalable and user-friendly way to exchange contact details in a seamless and eco-conscious manner.",
     features: [
       "Create multiple digital business cards",
       "Share your cards with anyone",
-      "Create virtual backgrounds with your card';s QR code",
+      "Create virtual backgrounds with your card&apos;s QR code",
       "Turn paper cards into digital contacts",
       "Manage contacts seamlessly with a Self-Healing Address Book™",
     ],
@@ -231,7 +231,7 @@ export const whyWritingMattersContent = {
   benefits: {
     title: "How It Benefits Your Future",
     description:
-      "Through writing about different topics, we are not only encouraged but forced to do essential research to put out the best information we can. This gives us the opportunity to learn more about these topics and get a better understanding of them. Therefore, we become a better developer by attaining a deeper knowledge base in both soft and technical skills.\n\nDuring the research, we are also exposed to learning about new technologies that are upcoming. This allows us to stay updated with the current trends and new versions of existing technologies. By posting and writing about all these topics, your articles also become your own personal notes for every topic you want to go back to while giving back to the community and helping newer developers following in your footsteps. It';s a win-win scenario!",
+      "Through writing about different topics, we are not only encouraged but forced to do essential research to put out the best information we can. This gives us the opportunity to learn more about these topics and get a better understanding of them. Therefore, we become a better developer by attaining a deeper knowledge base in both soft and technical skills.\n\nDuring the research, we are also exposed to learning about new technologies that are upcoming. This allows us to stay updated with the current trends and new versions of existing technologies. By posting and writing about all these topics, your articles also become your own personal notes for every topic you want to go back to while giving back to the community and helping newer developers following in your footsteps. It&apos;s a win-win scenario!",
   },
   howToStart: {
     title: "How to Start Today",
@@ -290,7 +290,7 @@ export const entrepreneurInsights: BlogContent[] = [
       {
         title: "Jeff Bezos (Amazon)",
         description:
-          "Amazon started as an online bookstore in 1994 and quickly evolved into the world’s largest e-commerce platform. Bezos'; commitment to customer satisfaction, fast delivery, and technological innovation led to the expansion of Amazon Web Services (AWS), Alexa, and one-day shipping—reshaping global commerce.",
+          "Amazon started as an online bookstore in 1994 and quickly evolved into the world’s largest e-commerce platform. Bezos&apos; commitment to customer satisfaction, fast delivery, and technological innovation led to the expansion of Amazon Web Services (AWS), Alexa, and one-day shipping—reshaping global commerce.",
         details: [
           "Bezos started Amazon as an online bookstore in his garage in 1994.",
           "Amazon is now a global leader in e-commerce, cloud computing, and AI.",
@@ -383,7 +383,7 @@ export const jackOfAllTradesContent: BlogContent[] = [
           "Not making a decision is, in itself, a decision. Time is limited, and every hour spent on one thing means less time for something else. Instead of being paralyzed by indecision, take action and commit to learning. Even if you choose to pursue multiple paths, recognize that prioritization is key to balancing them effectively.",
       },
       {
-        title: "Don';t Box Yourself Into One Path",
+        title: "Don&apos;t Box Yourself Into One Path",
         description:
           "Who says you have to stick to just one thing? If you believe you can handle multiple interests, give it a try. The worst-case scenario? You learn from failure. And that’s a win because most people never even take the first step. Adjust, refine, and try again. Need to delegate? Learn how. Need to balance responsibilities? Work on time management. You can achieve more than you think.",
       },
@@ -508,7 +508,7 @@ export const webScrapingResources: BlogContent[] = [
       {
         title: "Monitor and Maintain Scraping Scripts",
         description:
-          "Websites change their structure frequently, and these changes can break your scraping scripts. To ensure that your scrapers remain functional, it';s important to regularly test and update them. Monitoring the performance of your scraping scripts allows you to quickly address any issues and adapt to new changes in the website’s structure, ensuring a consistent data flow.",
+          "Websites change their structure frequently, and these changes can break your scraping scripts. To ensure that your scrapers remain functional, it&apos;s important to regularly test and update them. Monitoring the performance of your scraping scripts allows you to quickly address any issues and adapt to new changes in the website’s structure, ensuring a consistent data flow.",
       },
     ],
   },
@@ -518,8 +518,8 @@ export const booksToRead: BlogContent[] = [
   {
     category: "The Pragmatic Programmer",
     description:
-      "This book doesn';t focus on any one programming language but explains logic and provides wisdom for all languages. Topics include writing code, developing a great team, managing expectations, how expensive tools don';t produce better designs, and much more. A book by developers, for developers - not one to miss. Also, check out Pragmatic Programmer Tips.",
-    trends: ["Widely regarded as one of the most influential books in software development, The Pragmatic Programmer by Andrew Hunt and David Thomas offers timeless wisdom that extends beyond programming languages and frameworks. Rather than focusing on syntax or technical specifics, this book teaches developers how to think critically, write maintainable code, and cultivate a problem-solving mindset that leads to long-term success in the industry.", "The Pragmatic Programmer goes beyond coding techniques and delves into soft skills that are crucial for career growth. The book emphasizes the importance of communication, collaboration, and managing expectations—skills that are just as important as writing good code. It highlights why teamwork, adaptability, and taking ownership of one’s work are key factors in a developer’s success. The book also debunks the myth that expensive tools or fancy frameworks alone produce better software. Instead, it reinforces the idea that the best developers are those who approach problem-solving with a strategic, thoughtful mindset.", "Packed with practical tips, real-world examples, and engaging storytelling, The Pragmatic Programmer is a resource that developers return to throughout their careers. Whether you’re a beginner looking to build strong habits or an experienced engineer seeking to refine your craft, this book offers insights that remain relevant regardless of how technology evolves.", "For those eager to put these lessons into action, the Pragmatic Programmer Tips section provides quick, actionable advice that can be immediately applied to day-to-day coding practices. If you';re serious about writing better code, thinking like a true software craftsman, and continuously improving your skills, The Pragmatic Programmer is a must-read that will help shape your journey as a developer."]
+      "This book doesn&apos;t focus on any one programming language but explains logic and provides wisdom for all languages. Topics include writing code, developing a great team, managing expectations, how expensive tools don&apos;t produce better designs, and much more. A book by developers, for developers - not one to miss. Also, check out Pragmatic Programmer Tips.",
+    trends: ["Widely regarded as one of the most influential books in software development, The Pragmatic Programmer by Andrew Hunt and David Thomas offers timeless wisdom that extends beyond programming languages and frameworks. Rather than focusing on syntax or technical specifics, this book teaches developers how to think critically, write maintainable code, and cultivate a problem-solving mindset that leads to long-term success in the industry.", "The Pragmatic Programmer goes beyond coding techniques and delves into soft skills that are crucial for career growth. The book emphasizes the importance of communication, collaboration, and managing expectations—skills that are just as important as writing good code. It highlights why teamwork, adaptability, and taking ownership of one’s work are key factors in a developer’s success. The book also debunks the myth that expensive tools or fancy frameworks alone produce better software. Instead, it reinforces the idea that the best developers are those who approach problem-solving with a strategic, thoughtful mindset.", "Packed with practical tips, real-world examples, and engaging storytelling, The Pragmatic Programmer is a resource that developers return to throughout their careers. Whether you’re a beginner looking to build strong habits or an experienced engineer seeking to refine your craft, this book offers insights that remain relevant regardless of how technology evolves.", "For those eager to put these lessons into action, the Pragmatic Programmer Tips section provides quick, actionable advice that can be immediately applied to day-to-day coding practices. If you&apos;re serious about writing better code, thinking like a true software craftsman, and continuously improving your skills, The Pragmatic Programmer is a must-read that will help shape your journey as a developer."]
   },
   {
     category: "Refactoring: Improving the Design of Existing Code",
@@ -536,14 +536,14 @@ export const booksToRead: BlogContent[] = [
   {
     category: "Peopleware: Productive Projects and Teams",
     description:
-      "A book on managing and motivating programmers, not about programming itself. Software development is not an assembly line process. It';s a creative process!",
-    trends: ["Peopleware: Productive Projects and Teams by Tom DeMarco and Timothy Lister is a groundbreaking book that shifts the focus from programming techniques to the human side of software development. Unlike most technical books, Peopleware explores how to manage and motivate developers, emphasizing that software development is not just about writing code—it’s a creative process that thrives in the right environment.", "One of the book’s central themes is that people, not technology, are the most important factor in a successful project. DeMarco and Lister argue that many software failures stem not from technical shortcomings but from poor management, ineffective team structures, and unproductive work environments. They highlight how a toxic culture, constant interruptions, and micromanagement can stifle creativity and reduce productivity.", "The authors advocate for creating an environment where developers can do their best work, emphasizing the importance of quiet, uninterrupted workspaces, realistic deadlines, and strong team dynamics. They debunk the myth that software development is like an assembly line and instead compare it to a craft that requires focus, autonomy, and a supportive team culture.", "Peopleware also explores team-building, leadership strategies, and the psychology of motivation. The book provides valuable insights into how managers can foster collaboration, minimize burnout, and encourage innovation within their teams. Through real-world examples and case studies, the authors demonstrate what works—and what doesn’t—when it comes to managing software teams.", "Decades after its initial publication, Peopleware remains highly relevant, as the challenges of managing remote teams, maintaining work-life balance, and fostering a healthy company culture continue to evolve. Whether you';re a developer, team lead, or manager, this book offers timeless lessons on how to create productive, happy, and high-performing teams in the tech industry.",]
+      "A book on managing and motivating programmers, not about programming itself. Software development is not an assembly line process. It&apos;s a creative process!",
+    trends: ["Peopleware: Productive Projects and Teams by Tom DeMarco and Timothy Lister is a groundbreaking book that shifts the focus from programming techniques to the human side of software development. Unlike most technical books, Peopleware explores how to manage and motivate developers, emphasizing that software development is not just about writing code—it’s a creative process that thrives in the right environment.", "One of the book’s central themes is that people, not technology, are the most important factor in a successful project. DeMarco and Lister argue that many software failures stem not from technical shortcomings but from poor management, ineffective team structures, and unproductive work environments. They highlight how a toxic culture, constant interruptions, and micromanagement can stifle creativity and reduce productivity.", "The authors advocate for creating an environment where developers can do their best work, emphasizing the importance of quiet, uninterrupted workspaces, realistic deadlines, and strong team dynamics. They debunk the myth that software development is like an assembly line and instead compare it to a craft that requires focus, autonomy, and a supportive team culture.", "Peopleware also explores team-building, leadership strategies, and the psychology of motivation. The book provides valuable insights into how managers can foster collaboration, minimize burnout, and encourage innovation within their teams. Through real-world examples and case studies, the authors demonstrate what works—and what doesn’t—when it comes to managing software teams.", "Decades after its initial publication, Peopleware remains highly relevant, as the challenges of managing remote teams, maintaining work-life balance, and fostering a healthy company culture continue to evolve. Whether you&apos;re a developer, team lead, or manager, this book offers timeless lessons on how to create productive, happy, and high-performing teams in the tech industry.",]
   },
   {
     category: "Head First Design Patterns",
     description:
-      "13 essential patterns of basic design explained with plenty of examples and illustrations. It';s not another book with endless pages of text blocks. Hand-drawn diagrams and illustrations keep you engaged while learning the concepts.",
-    trends: ["Head First Design Patterns by Eric Freeman, Elisabeth Robson, Bert Bates, and Kathy Sierra is a fun, engaging, and visually rich introduction to design patterns—one of the most important concepts in software development. Unlike traditional programming books that can feel dense and overwhelming, Head First Design Patterns uses illustrations, analogies, real-world examples, and interactive exercises to make learning design patterns intuitive and enjoyable.", "The book covers 13 essential design patterns, including Singleton, Factory, Observer, Decorator, Strategy, and more. These patterns provide reusable solutions to common software design problems, helping developers write more efficient, scalable, and maintainable code. Instead of memorizing abstract concepts, readers learn through storytelling, humorous examples, and hands-on coding exercises, reinforcing their understanding in a practical and engaging way.", "What makes this book stand out is its visual approach. Instead of long-winded explanations, it breaks down complex ideas into easy-to-digest illustrations, hand-drawn diagrams, and real-world metaphors. This helps developers grasp not just how design patterns work but also why they are useful and when to apply them in real-world projects.", "Whether you';re a beginner looking to improve your coding skills or an experienced developer wanting to write cleaner, more maintainable software, Head First Design Patterns is a must-read. Its interactive, brain-friendly format makes learning design patterns less intimidating and more enjoyable, helping you become a better software architect in no time.",]
+      "13 essential patterns of basic design explained with plenty of examples and illustrations. It&apos;s not another book with endless pages of text blocks. Hand-drawn diagrams and illustrations keep you engaged while learning the concepts.",
+    trends: ["Head First Design Patterns by Eric Freeman, Elisabeth Robson, Bert Bates, and Kathy Sierra is a fun, engaging, and visually rich introduction to design patterns—one of the most important concepts in software development. Unlike traditional programming books that can feel dense and overwhelming, Head First Design Patterns uses illustrations, analogies, real-world examples, and interactive exercises to make learning design patterns intuitive and enjoyable.", "The book covers 13 essential design patterns, including Singleton, Factory, Observer, Decorator, Strategy, and more. These patterns provide reusable solutions to common software design problems, helping developers write more efficient, scalable, and maintainable code. Instead of memorizing abstract concepts, readers learn through storytelling, humorous examples, and hands-on coding exercises, reinforcing their understanding in a practical and engaging way.", "What makes this book stand out is its visual approach. Instead of long-winded explanations, it breaks down complex ideas into easy-to-digest illustrations, hand-drawn diagrams, and real-world metaphors. This helps developers grasp not just how design patterns work but also why they are useful and when to apply them in real-world projects.", "Whether you&apos;re a beginner looking to improve your coding skills or an experienced developer wanting to write cleaner, more maintainable software, Head First Design Patterns is a must-read. Its interactive, brain-friendly format makes learning design patterns less intimidating and more enjoyable, helping you become a better software architect in no time.",]
   },
   {
     category: "Clean Code",
@@ -720,7 +720,7 @@ export const dataScienceResources: BlogContent[] = [
       {
         title: "Problem Definition",
         description:
-          "Clearly defining the problem ensures that the data science project aligns with business objectives. This involves identifying key questions, understanding the stakeholders'; needs, and setting measurable goals."
+          "Clearly defining the problem ensures that the data science project aligns with business objectives. This involves identifying key questions, understanding the stakeholders&apos; needs, and setting measurable goals."
       },
       {
         title: "Data Collection",
@@ -1020,7 +1020,7 @@ export const tailwindCSSResources: BlogContent[] = [
       {
         title: "Intuitive Class Names",
         description:
-          "Tailwind';s utility classes follow a logical naming convention that makes styling straightforward. Classes like `p-4` (padding: 1rem), `text-lg` (larger text), and `bg-blue-500` (blue background) allow developers to style elements with minimal effort, reducing the need to memorize complex CSS properties."
+          "Tailwind&apos;s utility classes follow a logical naming convention that makes styling straightforward. Classes like `p-4` (padding: 1rem), `text-lg` (larger text), and `bg-blue-500` (blue background) allow developers to style elements with minimal effort, reducing the need to memorize complex CSS properties."
       },
       {
         title: "Rich Component Ecosystem",
@@ -1257,7 +1257,7 @@ export const uxDesignResources: BlogContent[] = [
       {
         title: "Augmented Reality (AR) & Virtual Reality (VR)",
         description:
-          "AR/VR technologies are revolutionizing UX by offering immersive experiences in sectors like e-commerce, real estate, and education. By integrating AR and VR, users can interact with products in a more engaging way, whether it';s visualizing how furniture looks in their home or experiencing virtual property tours.",
+          "AR/VR technologies are revolutionizing UX by offering immersive experiences in sectors like e-commerce, real estate, and education. By integrating AR and VR, users can interact with products in a more engaging way, whether it&apos;s visualizing how furniture looks in their home or experiencing virtual property tours.",
       },
       {
         title: "Dark Mode & Adaptive Design",
@@ -1383,7 +1383,7 @@ export const guiDesignResources: BlogContent[] = [
       {
         title: "Simplicity",
         description:
-          "Simplicity in design emphasizes focusing on the essential elements while removing any unnecessary components. A minimalist design helps keep the interface intuitive and focused, enabling users to easily find what they need. Avoiding excessive visual elements, complicated layouts, and distracting animations ensures that users can perform their tasks without distractions, making the interface efficient and effective. The principle of ';less is more'; plays a key role in creating user-friendly and straightforward designs.",
+          "Simplicity in design emphasizes focusing on the essential elements while removing any unnecessary components. A minimalist design helps keep the interface intuitive and focused, enabling users to easily find what they need. Avoiding excessive visual elements, complicated layouts, and distracting animations ensures that users can perform their tasks without distractions, making the interface efficient and effective. The principle of &apos;less is more&apos; plays a key role in creating user-friendly and straightforward designs.",
       },
       {
         title: "Accessibility",
@@ -1403,7 +1403,7 @@ export const guiDesignResources: BlogContent[] = [
       {
         title: "Use Visual Hierarchy",
         description:
-          "Establish a clear visual hierarchy by arranging elements in a way that guides the user';s attention toward the most important actions or information. Use size, contrast, color, and spacing to indicate relative importance. For example, larger and bolder fonts are often used for headings, while subtle typography and smaller elements might be reserved for secondary information. A clear visual hierarchy helps users understand what actions to take first, improving task efficiency and reducing decision fatigue.",
+          "Establish a clear visual hierarchy by arranging elements in a way that guides the user&apos;s attention toward the most important actions or information. Use size, contrast, color, and spacing to indicate relative importance. For example, larger and bolder fonts are often used for headings, while subtle typography and smaller elements might be reserved for secondary information. A clear visual hierarchy helps users understand what actions to take first, improving task efficiency and reducing decision fatigue.",
       },
       {
         title: "Design for Responsiveness",
@@ -1428,7 +1428,7 @@ export const guiDesignResources: BlogContent[] = [
       {
         title: "Figma",
         description:
-          "Figma is a powerful and collaborative design tool for creating wireframes, prototypes, and high-fidelity designs. It allows real-time collaboration among team members, making it ideal for remote teams and organizations. Figma';s cloud-based platform means that designs are always up to date and accessible from any device. Its comprehensive features make it a top choice for designing both simple and complex user interfaces.",
+          "Figma is a powerful and collaborative design tool for creating wireframes, prototypes, and high-fidelity designs. It allows real-time collaboration among team members, making it ideal for remote teams and organizations. Figma&apos;s cloud-based platform means that designs are always up to date and accessible from any device. Its comprehensive features make it a top choice for designing both simple and complex user interfaces.",
       },
       {
         title: "Adobe XD",
@@ -1478,7 +1478,7 @@ export const guiDesignResources: BlogContent[] = [
       {
         title: "Understanding User Behavior",
         description:
-          "Effective GUI design is based on understanding how users behave, think, and make decisions. Psychological principles such as cognitive load, attention span, and pattern recognition guide how users process information and interact with interfaces. Designers must craft experiences that align with human cognition, ensuring that interfaces are intuitive and responsive to users'; mental models.",
+          "Effective GUI design is based on understanding how users behave, think, and make decisions. Psychological principles such as cognitive load, attention span, and pattern recognition guide how users process information and interact with interfaces. Designers must craft experiences that align with human cognition, ensuring that interfaces are intuitive and responsive to users&apos; mental models.",
       },
       {
         title: "Color Psychology in UI Design",
@@ -2185,7 +2185,7 @@ export const blockchainContent: BlogContent[] = [
       {
         title: "Proof of Stake (PoS)",
         description:
-          "Proof of Stake (PoS) selects validators based on the amount of cryptocurrency they hold and are willing to ';stake'; or lock up as collateral. This mechanism is more energy-efficient than PoW and is used by Ethereum 2.0, Cardano, and Solana."
+          "Proof of Stake (PoS) selects validators based on the amount of cryptocurrency they hold and are willing to &apos;stake&apos; or lock up as collateral. This mechanism is more energy-efficient than PoW and is used by Ethereum 2.0, Cardano, and Solana."
       },
       {
         title: "Delegated Proof of Stake (DPoS)",
@@ -2200,7 +2200,7 @@ export const blockchainContent: BlogContent[] = [
       {
         title: "Proof of Burn (PoB)",
         description:
-          "In Proof of Burn (PoB), validators ';burn'; tokens to gain the right to mine new blocks. This reduces the token supply, increasing scarcity and potentially increasing the value of the remaining tokens."
+          "In Proof of Burn (PoB), validators &apos;burn&apos; tokens to gain the right to mine new blocks. This reduces the token supply, increasing scarcity and potentially increasing the value of the remaining tokens."
       },
       {
         title: "Proof of Authority (PoA)",
@@ -2311,7 +2311,7 @@ export const guiArchitectures: BlogContent[] = [
       {
         title: "Model",
         description:
-          "The Model represents the application';s data, business logic, and backend interactions. It remains independent of the user interface (UI) components, ensuring that any changes to data do not directly affect how data is displayed."
+          "The Model represents the application&apos;s data, business logic, and backend interactions. It remains independent of the user interface (UI) components, ensuring that any changes to data do not directly affect how data is displayed."
       },
       {
         title: "View",
@@ -2326,7 +2326,7 @@ export const guiArchitectures: BlogContent[] = [
       {
         title: "Use Cases",
         description:
-          "MVC is commonly used in web frameworks like Django, Ruby on Rails, and ASP.NET. It';s also used in desktop applications that require a structured and organized approach to managing complex user interfaces."
+          "MVC is commonly used in web frameworks like Django, Ruby on Rails, and ASP.NET. It&apos;s also used in desktop applications that require a structured and organized approach to managing complex user interfaces."
       },
     ],
   },
@@ -2504,7 +2504,7 @@ export const webDesignResources: BlogContent[] = [
       {
         title: "Research and Discovery",
         description:
-          "The first step in web design is understanding the client';s goals and audience. Research helps define the purpose of the website, the target demographic, and the content structure.",
+          "The first step in web design is understanding the client&apos;s goals and audience. Research helps define the purpose of the website, the target demographic, and the content structure.",
       },
       {
         title: "Wireframing and Prototyping",
@@ -2567,9 +2567,9 @@ export const startingAProject: BlogContent[] = [
       {
         title: "Your Business Goals",
         description:
-          `Before starting the design process, it';s crucial to tell your
+          `Before starting the design process, it&apos;s crucial to tell your
             designer about your business goals. What do you want to achieve with
-            this project? Whether it';s increasing brand awareness, generating
+            this project? Whether it&apos;s increasing brand awareness, generating
             leads, or improving user experience, your designer needs to know
             what success looks like to you. This helps them tailor the design to
             support your objectives.`,
@@ -2589,15 +2589,15 @@ export const startingAProject: BlogContent[] = [
           `Your brand’s identity—colors, fonts, imagery, and messaging—should
             be consistent across all touchpoints. Be sure to provide any brand
             guidelines or assets that should be incorporated into the design. If
-            you';re in the process of rebranding, this is also the perfect
-            opportunity to discuss how you';d like your new identity to be
+            you&apos;re in the process of rebranding, this is also the perfect
+            opportunity to discuss how you&apos;d like your new identity to be
             represented.`
       },
       {
         title: "Inspiration & Examples",
         description:
           ` Sharing inspiration is a great way to give your designer an idea of
-            the design direction you';re aiming for. This could be examples of
+            the design direction you&apos;re aiming for. This could be examples of
             websites, logos, or designs that you admire. You don’t have to
             recreate them, but providing a reference helps your designer
             understand the style and tone you want to convey.`,
@@ -2606,7 +2606,7 @@ export const startingAProject: BlogContent[] = [
         title: "Functionality & Features",
         description:
           ` If your project involves a website, make sure to outline any
-            specific features or functionality you need. Whether it';s an
+            specific features or functionality you need. Whether it&apos;s an
             e-commerce platform, contact forms, or integrations with third-party
             tools, being clear about the functionalities required will ensure
             the design is both visually appealing and functional.`,
@@ -2773,7 +2773,7 @@ export const researchBeforeConsultation: BlogContent[] = [
       {
         title: "Time Efficiency",
         description:
-          "The more you know about your industry and what you';re looking for, the quicker the project will get off the ground. You’ll spend less time on back-and-forth communication and more time focusing on the creative and functional aspects.",
+          "The more you know about your industry and what you&apos;re looking for, the quicker the project will get off the ground. You’ll spend less time on back-and-forth communication and more time focusing on the creative and functional aspects.",
       },
       {
         title: "Clearer Vision",
@@ -2803,7 +2803,7 @@ export const researchBeforeConsultation: BlogContent[] = [
       {
         title: "Define Your Website’s Purpose",
         description:
-          "Be clear about what you want your website to achieve. Whether it’s generating leads, showcasing your work, or selling products, defining your website';s purpose helps your designer create the right design for your goals.",
+          "Be clear about what you want your website to achieve. Whether it’s generating leads, showcasing your work, or selling products, defining your website&apos;s purpose helps your designer create the right design for your goals.",
       },
       {
         title: "Know Your Budget and Timeline",
@@ -2964,12 +2964,12 @@ export const googleAnalyticsContent: BlogContent[] = [
       {
         title: "Real-Time Reports",
         description:
-          "One of the most powerful features of Google Analytics is its real-time reporting. Real-time reports give you a live view of your website';s traffic, allowing you to see how many users are currently on your site, which pages they are viewing, and where they are coming from. This feature is especially useful for monitoring the impact of marketing campaigns, promotions, or social media posts in real-time. It helps you track user engagement as it happens, giving you immediate feedback on your online strategies.",
+          "One of the most powerful features of Google Analytics is its real-time reporting. Real-time reports give you a live view of your website&apos;s traffic, allowing you to see how many users are currently on your site, which pages they are viewing, and where they are coming from. This feature is especially useful for monitoring the impact of marketing campaigns, promotions, or social media posts in real-time. It helps you track user engagement as it happens, giving you immediate feedback on your online strategies.",
       },
       {
         title: "Audience Reports",
         description:
-          "Audience reports provide detailed information about the people who visit your website. This includes demographics such as age, gender, and interests, as well as insights into the devices and browsers they are using. Audience reports help you understand the composition of your visitors, allowing you to tailor content and marketing efforts to suit your audience';s preferences. By knowing who your visitors are, you can create more personalized and effective strategies to enhance engagement and improve conversion rates.",
+          "Audience reports provide detailed information about the people who visit your website. This includes demographics such as age, gender, and interests, as well as insights into the devices and browsers they are using. Audience reports help you understand the composition of your visitors, allowing you to tailor content and marketing efforts to suit your audience&apos;s preferences. By knowing who your visitors are, you can create more personalized and effective strategies to enhance engagement and improve conversion rates.",
       },
       {
         title: "Acquisition Reports",
@@ -2984,7 +2984,7 @@ export const googleAnalyticsContent: BlogContent[] = [
       {
         title: "Setting Up Goals and Conversions",
         description:
-          "Google Analytics allows you to set up goals to track specific actions users take on your website, such as completing a purchase, signing up for a newsletter, or clicking on a particular button. These actions are referred to as conversions. By setting up and tracking these goals, you can measure the effectiveness of your website and marketing efforts. For example, if you want to measure how many users are filling out a contact form, you can set up a goal to track that conversion. This data is invaluable for understanding your website';s performance and improving your conversion rates.",
+          "Google Analytics allows you to set up goals to track specific actions users take on your website, such as completing a purchase, signing up for a newsletter, or clicking on a particular button. These actions are referred to as conversions. By setting up and tracking these goals, you can measure the effectiveness of your website and marketing efforts. For example, if you want to measure how many users are filling out a contact form, you can set up a goal to track that conversion. This data is invaluable for understanding your website&apos;s performance and improving your conversion rates.",
       },
       {
         title: "Custom Dashboards and Reports",
