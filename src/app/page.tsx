@@ -9,6 +9,7 @@ import JoinUs from "@/components/JoinUs";
 import ServiceHighlights from "@/components/ServiceHighlights";
 import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
 import { GoRocket } from "react-icons/go";
@@ -23,6 +24,16 @@ const WelcomePage: FC = () => {
 
   return (
     <main className="mx-auto py-6">
+      <section className="mb-16 mx-auto w-11/12 text-center">
+        <Image
+          src="/images/logo.png"
+          alt="Phoenix Code Studio Logo"
+          width={500}
+          height={500}
+          className="w-72 h-72 rounded-t-md object-cover mx-auto mb-1"
+        />
+      </section>
+
       {/* Welcome Section */}
       <section className="my-16 mx-auto w-11/12 text-center">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">

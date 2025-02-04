@@ -6,6 +6,7 @@ import {
   contentCreationServices,
   paymentPlans,
 } from "@/lib/constants";
+import Image from "next/image";
 import { BpCheckbox } from "@/components/ui/checkbox-custom";
 import {
   DropdownMenu,
@@ -88,17 +89,28 @@ const ContactUsPage: FC = () => {
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        Contact Us
-      </h1>
-      <p>
-        Have questions or ready to start a project? We’re here to help! Our team
-        is dedicated to providing you with the best support, whether you need
-        more information about our services or assistance with a specific
-        request. Reach out to us, and we’ll get back to you as quickly as
-        possible. We look forward to working with you and turning your ideas
-        into reality.
-      </p>
+      <div className="flex items-end">
+        <div>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
+            Contact Us
+          </h1>
+          <p>
+            Have questions or ready to start a project? We’re here to help! Our
+            team is dedicated to providing you with the best support, whether
+            you need more information about our services or assistance with a
+            specific request. Reach out to us, and we’ll get back to you as
+            quickly as possible. We look forward to working with you and turning
+            your ideas into reality.
+          </p>
+        </div>
+        <Image
+          src="/images/logo.png"
+          alt="Phoenix Code Studio Logo"
+          width={500}
+          height={500}
+          className="w-72 h-72 rounded-t-md object-cover mb-1"
+        />
+      </div>
 
       {/* Contact Form */}
       <section className="my-8">

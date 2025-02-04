@@ -4,6 +4,7 @@ import CallToAction from "@/components/CallToAction";
 import EmphasizeText from "@/components/Highlighted";
 import { Button } from "@/components/ui/button";
 import { SidebarSeparator } from "@/components/ui/sidebar";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import {
   FaHandshake,
@@ -20,60 +21,71 @@ const AboutUs = () => {
   const router = useRouter();
 
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto py-6">
+    <main className="w-10/12 md:w-11/12 mx-auto pb-6">
       {/* About Us */}
-      <section className="py-3">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-          About Us
-        </h1>
-        <p>
-          At Phoenix Code Studio, we merge cultural sophistication with
-          cutting-edge technology to deliver bespoke digital experiences that
-          stand out. Inspired by the Phoenix—a powerful symbol of rebirth,
-          resilience, and transformation—we are committed to helping small
-          businesses not only establish their presence in the digital world but
-          also rise above their competition. Just as the Phoenix is reborn from
-          the ashes, we aim to help your business transform and thrive in an
-          ever-evolving online landscape. Our comprehensive services include{" "}
-          <EmphasizeText>custom website development</EmphasizeText>,{" "}
-          <EmphasizeText>brand revitalization</EmphasizeText>,{" "}
-          <EmphasizeText>website redesigns</EmphasizeText>, and more all
-          tailored to bring your unique vision to life. From designing visually
-          stunning and highly functional websites to reimagining your brand
-          identity, we focus on crafting solutions that resonate deeply with
-          your audience. Whether you’re starting from scratch or seeking to
-          refresh your existing digital presence, our goal is to translate your
-          business’s core values into designs that inspire and engage.
-        </p>
+      <section className="pt-3 pb-7 grid grid-cols-1 md:grid-cols-4">
+        <div className="mx-auto flex items-center">
+          <Image
+            src="/images/logo.png"
+            alt="Phoenix Code Studio Logo"
+            width={500}
+            height={500}
+            className="w-72 h-72 rounded-t-md object-cover mx-auto mb-1"
+          />
+        </div>
+        <div className="col-span-3">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
+            About Us
+          </h1>
+          <p>
+            At Phoenix Code Studio, we merge cultural sophistication with
+            cutting-edge technology to deliver bespoke digital experiences that
+            stand out. Inspired by the Phoenix—a powerful symbol of rebirth,
+            resilience, and transformation—we are committed to helping small
+            businesses not only establish their presence in the digital world
+            but also rise above their competition. Just as the Phoenix is reborn
+            from the ashes, we aim to help your business transform and thrive in
+            an ever-evolving online landscape. Our comprehensive services
+            include <EmphasizeText>custom website development</EmphasizeText>,{" "}
+            <EmphasizeText>brand revitalization</EmphasizeText>,{" "}
+            <EmphasizeText>website redesigns</EmphasizeText>, and more all
+            tailored to bring your unique vision to life. From designing
+            visually stunning and highly functional websites to reimagining your
+            brand identity, we focus on crafting solutions that resonate deeply
+            with your audience. Whether you’re starting from scratch or seeking
+            to refresh your existing digital presence, our goal is to translate
+            your business’s core values into designs that inspire and engage.
+          </p>
 
-        <p>
-          What sets Phoenix Code Studio apart is our unwavering dedication to
-          excellence, creativity, and authenticity. We believe in more than just
-          delivering websites; we create experiences that reflect your
-          individuality and tell your story. By prioritizing modern design,
-          intuitive functionality, and a personal touch, we ensure your online
-          presence feels <EmphasizeText>approachable</EmphasizeText>,{" "}
-          <EmphasizeText>professional</EmphasizeText>, and{" "}
-          <EmphasizeText>impactful</EmphasizeText>. With a focus on
-          collaboration and innovation, we work closely with you every step of
-          the way to understand your business goals and translate them into a
-          digital presence that drives results. At Phoenix Code Studio, we don’t
-          just build websites; we build partnerships, empowering you to grow and
-          succeed in the ever-evolving digital landscape.
-        </p>
+          <p>
+            What sets Phoenix Code Studio apart is our unwavering dedication to
+            excellence, creativity, and authenticity. We believe in more than
+            just delivering websites; we create experiences that reflect your
+            individuality and tell your story. By prioritizing modern design,
+            intuitive functionality, and a personal touch, we ensure your online
+            presence feels <EmphasizeText>approachable</EmphasizeText>,{" "}
+            <EmphasizeText>professional</EmphasizeText>, and{" "}
+            <EmphasizeText>impactful</EmphasizeText>. With a focus on
+            collaboration and innovation, we work closely with you every step of
+            the way to understand your business goals and translate them into a
+            digital presence that drives results. At Phoenix Code Studio, we
+            don’t just build websites; we build partnerships, empowering you to
+            grow and succeed in the ever-evolving digital landscape.
+          </p>
 
-        <p>
-          Let’s work together to transform your online presence into something
-          truly remarkable. With Phoenix Code Studio by your side, your business
-          has the tools to bloom and achieve its full potential in the digital
-          world.
-        </p>
-        <Button
-          onClick={() => router.push("/frequently-asked-questions")}
-          className="mt-6"
-        >
-          Check Our Frequently Asked Questions
-        </Button>
+          <p>
+            Let’s work together to transform your online presence into something
+            truly remarkable. With Phoenix Code Studio by your side, your
+            business has the tools to bloom and achieve its full potential in
+            the digital world.
+          </p>
+          <Button
+            onClick={() => router.push("/frequently-asked-questions")}
+            className="mt-6"
+          >
+            Check Our Frequently Asked Questions
+          </Button>
+        </div>
       </section>
 
       {/* Mission Statement */}
