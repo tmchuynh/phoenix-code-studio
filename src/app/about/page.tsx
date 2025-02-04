@@ -109,8 +109,8 @@ const AboutUs = () => {
         <p>
           Our passionate team of experts is dedicated to excellence, constantly
           pushing boundaries to deliver results that exceed expectations.
-          Whether it&apos;s crafting a brand-new digital identity, reimagining
-          an existing one, or building a robust platform to support business
+          Whether it's crafting a brand-new digital identity, reimagining an
+          existing one, or building a robust platform to support business
           growth, we approach every project with creativity, precision, and a
           personal touch. At Phoenix Code Studio, we don’t just build
           websites—we build partnerships. Together, we can transform your

@@ -53,15 +53,15 @@ const BlogPage = () => {
             that the final product not only meets but exceeds your expectations.
             A designer plays a pivotal role in bringing your vision to life, and
             their work should align with your business goals and target
-            audience. Whether you&apos;re looking for a web designer to create
-            an engaging online presence, a graphic designer to enhance your
-            brand identity, or a UI/UX expert to improve user interaction and
+            audience. Whether you're looking for a web designer to create an
+            engaging online presence, a graphic designer to enhance your brand
+            identity, or a UI/UX expert to improve user interaction and
             experience, there are several key factors to consider before making
-            your choice. It&apos;s important to evaluate their expertise,
-            portfolio, and design process to ensure that they have the skills
-            and experience to deliver the results you need. Moreover, consider
-            their communication style and approach to collaboration—working with
-            a designer who understands your needs and can effectively bring your
+            your choice. It's important to evaluate their expertise, portfolio,
+            and design process to ensure that they have the skills and
+            experience to deliver the results you need. Moreover, consider their
+            communication style and approach to collaboration—working with a
+            designer who understands your needs and can effectively bring your
             ideas to life will ultimately lead to a smoother design process and
             a more successful final product.
           </p>

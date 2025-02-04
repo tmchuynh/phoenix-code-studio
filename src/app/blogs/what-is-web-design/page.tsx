@@ -122,8 +122,8 @@ const BlogPage = () => {
           <p className="mb-4">
             The future of web design continues to focus on enhancing user
             experiences through speed, accessibility, and interactivity. Whether
-            you&apos;re designing for desktop or mobile, the goal remains the
-            same—to create a website that is both functional and beautiful.
+            you're designing for desktop or mobile, the goal remains the same—to
+            create a website that is both functional and beautiful.
           </p>
           <p>
             So, how will you make your mark on the web? The possibilities are

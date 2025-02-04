@@ -49,7 +49,7 @@ const BlogPage = () => {
             })}
           </div>
           <p>
-            In today&apos;s digital age, data is more than just numbers—it’s a
+            In today's digital age, data is more than just numbers—it’s a
             powerful asset that drives decision-making and fuels innovation.
             Data science is the art of extracting meaningful insights from raw
             data, using statistics, machine learning, and analytical techniques
@@ -102,19 +102,19 @@ const BlogPage = () => {
             Why Data Science Matters?
           </h2>
           <p>
-            In today&apos;s digital world, data is one of the most valuable
-            assets. Every interaction, transaction, and behavior generates data,
-            and organizations have access to more data than ever before.
-            However, raw data is only valuable when it can be processed,
-            understood, and turned into actionable insights. This is where data
-            science plays a critical role. Data science enables businesses to
-            analyze vast amounts of data, identify trends, and uncover hidden
-            patterns. By using sophisticated algorithms and statistical models,
-            organizations can make better decisions, improve operational
-            efficiency, and reduce risks. For instance, retailers can use data
-            science to predict customer behavior, optimize inventory, and
-            personalize marketing campaigns, ultimately leading to better
-            customer engagement and increased sales.
+            In today's digital world, data is one of the most valuable assets.
+            Every interaction, transaction, and behavior generates data, and
+            organizations have access to more data than ever before. However,
+            raw data is only valuable when it can be processed, understood, and
+            turned into actionable insights. This is where data science plays a
+            critical role. Data science enables businesses to analyze vast
+            amounts of data, identify trends, and uncover hidden patterns. By
+            using sophisticated algorithms and statistical models, organizations
+            can make better decisions, improve operational efficiency, and
+            reduce risks. For instance, retailers can use data science to
+            predict customer behavior, optimize inventory, and personalize
+            marketing campaigns, ultimately leading to better customer
+            engagement and increased sales.
           </p>
           <p>
             Furthermore, data science has revolutionized industries like
@@ -126,7 +126,7 @@ const BlogPage = () => {
             companies with a competitive edge in the marketplace.
           </p>
           <p>
-            Ultimately, data science is not just about numbers—it&apos;s about
+            Ultimately, data science is not just about numbers—it's about
             translating data into value. As businesses continue to collect more
             data, the ability to analyze and interpret it will be crucial in
             maintaining relevance, improving customer experiences, and driving
@@ -156,7 +156,7 @@ const BlogPage = () => {
             One of the key responsibilities of a data scientist is to clean and
             prepare data. Raw data is often incomplete, inconsistent, or
             formatted in ways that make it difficult to analyze. A significant
-            portion of a data scientist&apos;s time is spent on data
+            portion of a data scientist's time is spent on data
             preprocessing—removing outliers, handling missing values, and
             ensuring the data is in a usable state for analysis.
           </p>
@@ -171,10 +171,10 @@ const BlogPage = () => {
           </p>
           <p>
             As the demand for data-driven decision-making continues to rise, the
-            role of the data scientist has become more central to
-            organizations&apos; success. Data scientists are not just number
-            crunchers—they are business leaders who use data to drive
-            innovation, optimize processes, and create value.
+            role of the data scientist has become more central to organizations'
+            success. Data scientists are not just number crunchers—they are
+            business leaders who use data to drive innovation, optimize
+            processes, and create value.
           </p>
         </section>
 

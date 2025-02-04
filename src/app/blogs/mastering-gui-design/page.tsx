@@ -99,8 +99,8 @@ const BlogPage = () => {
             interface) design. While UI focuses on the aesthetic and functional
             aspects of a product—such as layout, colors, typography, and
             buttons—UX design ensures that the interface not only looks good but
-            also provides a smooth, intuitive experience that meets the
-            user&apos;s needs effectively.
+            also provides a smooth, intuitive experience that meets the user's
+            needs effectively.
           </p>
           <p>
             UI Design is primarily concerned with the "look and feel" of the

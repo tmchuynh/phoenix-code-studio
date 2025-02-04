@@ -97,7 +97,7 @@ const ApplicantSubmissionPage = () => {
         {/* Job Positions Selection */}
         <section>
           <h2 className="text-secondary mb-3">
-            Select the position(s) you&apos;re applying for:
+            Select the position(s) you're applying for:
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {jobPositions.map((position) => (

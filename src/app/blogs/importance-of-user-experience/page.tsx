@@ -121,7 +121,7 @@ const BlogPage = () => {
             Conclusion: The Power of UX in Web Design
           </h2>
           <p>
-            User experience (UX) is more than just aesthetics—it&apos;s the
+            User experience (UX) is more than just aesthetics—it's the
             foundation of a successful website. A well-designed UX ensures that
             visitors not only find what they need quickly but also enjoy their
             interaction with your site, leading to higher engagement,

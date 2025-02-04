@@ -55,7 +55,7 @@ export const websiteCopywritingData = [
       {
         title: "Call-to-Actions (CTAs)",
         description:
-          "Effective CTAs drive visitors to take action. We craft impactful CTAs that clearly guide users toward the next step—whether it&apos;s making a purchase, signing up for a newsletter, or getting in touch."
+          "Effective CTAs drive visitors to take action. We craft impactful CTAs that clearly guide users toward the next step—whether it's making a purchase, signing up for a newsletter, or getting in touch."
       },
     ],
   },
@@ -208,7 +208,7 @@ export const tutorialCreationData = [
       {
         title: "Content Creation",
         description:
-          "We create detailed, step-by-step instructions for the tutorial. Whether it&apos;s written content, video, or interactive elements, we ensure that the instructions are clear, engaging, and easy to follow."
+          "We create detailed, step-by-step instructions for the tutorial. Whether it's written content, video, or interactive elements, we ensure that the instructions are clear, engaging, and easy to follow."
       },
       {
         title: "Review and Feedback",
@@ -552,7 +552,7 @@ export const studyGuideData = [
       {
         title: "Custom Formats",
         description:
-          "We deliver study guides in a variety of formats, including PDFs, print-ready documents, and digital files for e-learning platforms, offering flexibility based on the learner&apos;s needs."
+          "We deliver study guides in a variety of formats, including PDFs, print-ready documents, and digital files for e-learning platforms, offering flexibility based on the learner's needs."
       },
     ],
   },
@@ -582,7 +582,7 @@ export const studyGuideData = [
       {
         title: "Final Delivery",
         description:
-          "Once finalized, we deliver the study guide in your preferred format, whether it&apos;s digital or print-ready, and ensure it&apos;s ready for distribution or immediate use."
+          "Once finalized, we deliver the study guide in your preferred format, whether it's digital or print-ready, and ensure it's ready for distribution or immediate use."
       },
     ],
   },
@@ -635,7 +635,7 @@ export const productGuideData = [
       {
         title: "Build Trust",
         description:
-          "Providing high-quality, clear, and comprehensive product guides demonstrates professionalism. It shows that you care about your customers&apos; success and are committed to providing the best possible experience with your product."
+          "Providing high-quality, clear, and comprehensive product guides demonstrates professionalism. It shows that you care about your customers' success and are committed to providing the best possible experience with your product."
       },
       {
         title: "Ensure Compliance",
@@ -730,7 +730,7 @@ export const productGuideData = [
       {
         title: "Microsoft Word",
         description:
-          "Microsoft Word is used for drafting and structuring content. It&apos;s a great tool for collaborative editing and formatting text-based content."
+          "Microsoft Word is used for drafting and structuring content. It's a great tool for collaborative editing and formatting text-based content."
       },
       {
         title: "Grammarly",
@@ -961,7 +961,7 @@ export const newsletterData = [
       {
         title: "Writing and Design",
         description:
-          "Our team creates high-quality written content and pairs it with visually appealing layouts that align with your brand&apos;s aesthetics. We ensure that the message is clear and engaging, while the design is responsive and user-friendly."
+          "Our team creates high-quality written content and pairs it with visually appealing layouts that align with your brand's aesthetics. We ensure that the message is clear and engaging, while the design is responsive and user-friendly."
       },
       {
         title: "Review and Feedback",
@@ -986,7 +986,7 @@ export const newsletterData = [
       {
         title: "Canva",
         description:
-          "Canva is used for designing visually engaging graphics and templates that match your brand&apos;s style. It&apos;s an intuitive tool that allows us to create eye-catching visuals for your newsletters."
+          "Canva is used for designing visually engaging graphics and templates that match your brand's style. It's an intuitive tool that allows us to create eye-catching visuals for your newsletters."
       },
       {
         title: "Adobe Creative Suite",
@@ -1094,7 +1094,7 @@ export const ebookData = [
       {
         title: "Final Delivery",
         description:
-          "Provide the e-book in the desired formats, ready for distribution. We ensure it&apos;s compatible with various e-book platforms and ready for download."
+          "Provide the e-book in the desired formats, ready for distribution. We ensure it's compatible with various e-book platforms and ready for download."
       },
     ],
   },
@@ -1162,7 +1162,7 @@ export const blogWritingData = [
       {
         title: "Topic Ideation",
         description:
-          "We generate creative and engaging blog topics that align with your audience&apos;s interests, helping you stay relevant and ahead of trends."
+          "We generate creative and engaging blog topics that align with your audience's interests, helping you stay relevant and ahead of trends."
       },
       {
         title: "SEO Optimization",

@@ -233,8 +233,8 @@ const CustomPlan = () => {
           <p>
             We understand that every project is unique, which is why our payment
             terms are tailored to match the size, complexity, and scope of your
-            initiative. Whether you&apos;re working on a straightforward project
-            or a large-scale, multi-phase endeavor, we can customize the payment
+            initiative. Whether you're working on a straightforward project or a
+            large-scale, multi-phase endeavor, we can customize the payment
             structure to suit your financial planning. This flexibility ensures
             that you can move forward with confidence, knowing your budget and
             project requirements are perfectly aligned.
@@ -247,7 +247,7 @@ const CustomPlan = () => {
             Options for Ongoing Support and Scaling
           </h3>
           <p>
-            The Custom Plan is designed with your project&apos;s growth in mind,
+            The Custom Plan is designed with your project's growth in mind,
             offering options for ongoing support and scalability. As your needs
             evolve, we provide post-launch maintenance, feature updates, and
             scaling solutions to keep your project relevant and effective.

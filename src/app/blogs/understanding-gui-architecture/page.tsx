@@ -57,10 +57,10 @@ const BlogPage = () => {
             From traditional MVC and MVVM patterns to modern component-based
             architectures, state management solutions like Flux and Redux, and
             Micro Frontends, different approaches offer unique benefits tailored
-            to specific use cases. Whether you&apos;re building desktop
-            applications, mobile experiences, or immersive UIs in AR/VR,
-            understanding GUI architectures is essential to crafting seamless,
-            user-friendly digital experiences.
+            to specific use cases. Whether you're building desktop applications,
+            mobile experiences, or immersive UIs in AR/VR, understanding GUI
+            architectures is essential to crafting seamless, user-friendly
+            digital experiences.
           </p>
         </header>
 
