@@ -14,6 +14,7 @@ const eslintConfig = [
   {
     rules: {
       "react-hooks/exhaustive-deps": "off", // Disable the exhaustive-deps rule
+      "react/no-unescaped-entities": "off",
       "no-unused-vars": "off", // Disable unused-vars rule
     },
   },

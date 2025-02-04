@@ -28,7 +28,7 @@ const FAQPage: FC = () => {
       <section className="mb-8">
         <Accordion type="single" collapsible className="w-full">
           {FAQs.map((question, index) => (
-            <AccordionItem value={`${index}`}>
+            <AccordionItem value={`${index}`} key={index}>
               <AccordionTrigger>{question.question}</AccordionTrigger>
               <AccordionContent>
                 <p>{question.answer}</p>

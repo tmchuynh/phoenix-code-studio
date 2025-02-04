@@ -201,7 +201,7 @@ const BlogDisplayPage: FC = () => {
   };
 
   const dates = Array.from(new Set(blogs.map((blog) => blog.date)));
-  const authors = Array.from(new Set(blogs.map((blog) => blog.author)));
+  // const authors = Array.from(new Set(blogs.map((blog) => blog.author)));
 
   const topicCounts: Record<string, number> = blogs.reduce((acc, blog) => {
     blog.topics.forEach((topic) => {
