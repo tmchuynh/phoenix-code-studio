@@ -414,8 +414,8 @@ const ServiceAgreementPage = () => {
             secrets, client lists, and any other sensitive information disclosed
             during the course of this Agreement. The Contractor agrees that such
             information shall not be disclosed, shared, or used for any purpose
-            outside the scope of this Agreement without the Client&apos;s
-            explicit written consent.
+            outside the scope of this Agreement without the Client';s explicit
+            written consent.
           </p>
 
           <p>
@@ -677,9 +677,8 @@ const ServiceAgreementPage = () => {
               <strong>Force Majeure:</strong> Neither party shall be held liable
               for any failure or delay in performing its obligations under this
               Agreement due to causes beyond its reasonable control, provided
-              that such causes are not the result of the party&apos;s negligence
-              or willful misconduct. Such events include, but are not limited
-              to:
+              that such causes are not the result of the party';s negligence or
+              willful misconduct. Such events include, but are not limited to:
               <ul className="list-disc pl-6 space-y-2">
                 <li>
                   Acts of God, including but not limited to earthquakes,

@@ -22,9 +22,9 @@ const EbookCreationServices: FC = () => {
         transforming your ideas into polished, professional e-books. From
         content writing and editing to design and formatting, we ensure your
         e-book is visually engaging and easy to read across all devices. Whether
-        you&apos;re looking to create an educational resource, a product guide,
-        or a thought leadership piece, we help you create a compelling e-book
-        that resonates with your target audience and positions your brand as an
+        you';re looking to create an educational resource, a product guide, or a
+        thought leadership piece, we help you create a compelling e-book that
+        resonates with your target audience and positions your brand as an
         authority in your field.
       </p>
 

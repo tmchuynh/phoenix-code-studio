@@ -52,8 +52,8 @@ const BlogPage = () => {
             serving as the foundation for defining your goals, expectations, and
             the overall scope of the project. This is your opportunity to ensure
             that both you and the designer are aligned on the vision and
-            objectives before any work begins. Whether you&apos;re meeting with
-            a designer for a website, branding, or any other digital service,
+            objectives before any work begins. Whether you';re meeting with a
+            designer for a website, branding, or any other digital service,
             asking the right questions during the consultation is crucial. By
             discussing the project’s goals, timeline, budget, and key
             deliverables upfront, you can establish a clear direction and avoid

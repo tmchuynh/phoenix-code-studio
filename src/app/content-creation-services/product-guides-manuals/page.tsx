@@ -23,9 +23,9 @@ const ProductGuidesManualsServices: FC = () => {
         using your products. From user manuals to installation guides and
         technical documentation, we ensure that each guide is expertly crafted
         to improve user experience, reduce support queries, and help your
-        customers get the most out of your products. Whether you&apos;re
-        launching a new product or updating an existing one, we deliver
-        high-quality, detailed guides that are both informative and accessible.
+        customers get the most out of your products. Whether you';re launching a
+        new product or updating an existing one, we deliver high-quality,
+        detailed guides that are both informative and accessible.
       </p>
 
       {/* Dynamic Section Rendering */}

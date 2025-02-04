@@ -28,10 +28,10 @@ const BasicPlan = () => {
             essential tools and services required to establish a strong online
             presence. As your business grows and your needs evolve, the Basic
             Plan allows you to scale and adapt, ensuring long-term support for
-            your success. Whether you&apos;re building a small website, starting
-            an e-commerce venture, or enhancing your brand&apos;s digital
-            footprint, the Basic Plan offers everything you need to get started
-            while keeping future growth in mind.
+            your success. Whether you';re building a small website, starting an
+            e-commerce venture, or enhancing your brand';s digital footprint,
+            the Basic Plan offers everything you need to get started while
+            keeping future growth in mind.
           </p>
         )}
         {!isMediumScreen && (
@@ -252,8 +252,8 @@ const BasicPlan = () => {
             balance your budget and allocate resources effectively. By choosing
             this extended term, you can focus on other areas of your business
             while still ensuring that your project progresses smoothly and is
-            completed on time. It&apos;s a practical way to manage finances
-            without compromising on results.
+            completed on time. It';s a practical way to manage finances without
+            compromising on results.
           </p>
         </div>
       </section>

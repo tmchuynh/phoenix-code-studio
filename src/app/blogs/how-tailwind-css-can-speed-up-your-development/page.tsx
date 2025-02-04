@@ -55,7 +55,7 @@ const BlogPage = () => {
             come with predefined styles and components, Tailwind CSS takes a
             utility-first approach, allowing developers to style elements
             directly in their HTML with small, reusable utility classes. One of
-            Tailwind&apos;s biggest advantages is its flexibility and speed. By
+            Tailwind';s biggest advantages is its flexibility and speed. By
             eliminating the need for writing extensive custom CSS, developers
             can rapidly prototype, adjust layouts on the fly, and maintain
             consistency across projects. Its responsive design utilities,
@@ -170,7 +170,7 @@ const BlogPage = () => {
                 theme: {"{"}
                 extend: {"{"}
                 colors: {"{"}
-                primary: &apos;#1E40AF&apos;, secondary: &apos;#9333EA&apos;,
+                primary: ';#1E40AF';, secondary: ';#9333EA';,
                 {"}"},{"}"},{"}"}, plugins: [],
                 {"}"};
               </pre>
@@ -192,7 +192,7 @@ const BlogPage = () => {
                 @tailwind utilities;
               </pre>
               <p>
-                These directives import Tailwind&apos;s utility classes and core
+                These directives import Tailwind';s utility classes and core
                 styling into your project, ensuring your HTML elements are ready
                 to be styled.
               </p>

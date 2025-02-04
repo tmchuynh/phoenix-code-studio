@@ -127,7 +127,7 @@ export const ecommerceData = [
       {
         title: "Mobile Optimization",
         description:
-          "Mobile optimization is essential to provide a responsive design that adapts seamlessly across different screen sizes. With the growing trend of mobile shopping, it&apos;s critical that your e-commerce website is fully responsive, ensuring customers have a consistent experience on all devices."
+          "Mobile optimization is essential to provide a responsive design that adapts seamlessly across different screen sizes. With the growing trend of mobile shopping, it';s critical that your e-commerce website is fully responsive, ensuring customers have a consistent experience on all devices."
       },
       {
         title: "SEO-Friendly Structure",
@@ -236,7 +236,7 @@ export const databaseServicesData = [
       {
         title: "Scalability",
         description:
-          "We design databases that scale as your business grows. Whether you&apos;re handling large data sets or experiencing an influx of data, we ensure your database infrastructure can scale efficiently without compromising performance."
+          "We design databases that scale as your business grows. Whether you';re handling large data sets or experiencing an influx of data, we ensure your database infrastructure can scale efficiently without compromising performance."
       },
       {
         title: "Migration Services",
@@ -354,7 +354,7 @@ export const companyRebrandingData = [
       {
         title: "Brand Identity Overhaul",
         description:
-          "We offer a comprehensive overhaul of your brand&apos;s visual elements, including logo redesign, color scheme adjustment, and typography updates. This ensures that your brand&apos;s visual presence is modern, memorable, and aligned with your company values and goals."
+          "We offer a comprehensive overhaul of your brand';s visual elements, including logo redesign, color scheme adjustment, and typography updates. This ensures that your brand';s visual presence is modern, memorable, and aligned with your company values and goals."
       },
       {
         title: "Messaging Strategy",
@@ -427,7 +427,7 @@ export const brandStorytellingData = [
       {
         title: "Emotional Connection",
         description:
-          "Stories are powerful tools for creating emotional connections with your audience. By crafting narratives that resonate with people&apos;s values, struggles, and aspirations, your brand builds trust and loyalty, making it more memorable and relatable."
+          "Stories are powerful tools for creating emotional connections with your audience. By crafting narratives that resonate with people';s values, struggles, and aspirations, your brand builds trust and loyalty, making it more memorable and relatable."
       },
       {
         title: "Clarity and Purpose",
@@ -452,7 +452,7 @@ export const brandStorytellingData = [
       {
         title: "Core Narrative Development",
         description:
-          "We help define and develop your brand’s core narrative, focusing on your purpose, vision, and mission. This narrative is the backbone of your brand&apos;s storytelling and ensures consistency across all touchpoints, from marketing to customer interactions."
+          "We help define and develop your brand’s core narrative, focusing on your purpose, vision, and mission. This narrative is the backbone of your brand';s storytelling and ensures consistency across all touchpoints, from marketing to customer interactions."
       },
       {
         title: "Customer-Centric Storytelling",
@@ -462,7 +462,7 @@ export const brandStorytellingData = [
       {
         title: "Origin Stories",
         description:
-          "We craft compelling origin stories that share the history, inspiration, and journey behind your brand. Whether you&apos;re a startup or an established company, a well-told origin story can create a sense of authenticity and purpose that resonates with your audience."
+          "We craft compelling origin stories that share the history, inspiration, and journey behind your brand. Whether you';re a startup or an established company, a well-told origin story can create a sense of authenticity and purpose that resonates with your audience."
       },
       {
         title: "Value Proposition Stories",
@@ -472,7 +472,7 @@ export const brandStorytellingData = [
       {
         title: "Social Media Narratives",
         description:
-          "We adapt your brand story for social media platforms like Instagram, Twitter, and LinkedIn, ensuring it aligns with the platform&apos;s tone and audience while maintaining consistency with your overall brand narrative. These short-form stories can drive engagement and build community."
+          "We adapt your brand story for social media platforms like Instagram, Twitter, and LinkedIn, ensuring it aligns with the platform';s tone and audience while maintaining consistency with your overall brand narrative. These short-form stories can drive engagement and build community."
       },
     ],
   },
@@ -482,7 +482,7 @@ export const brandStorytellingData = [
       {
         title: "Discovery",
         description:
-          "We begin with a discovery phase to deeply understand your brand’s core values, mission, and vision. We also gain insights into your target audience, their needs, and pain points, ensuring that your brand story aligns with both your business goals and your audience&apos;s expectations."
+          "We begin with a discovery phase to deeply understand your brand’s core values, mission, and vision. We also gain insights into your target audience, their needs, and pain points, ensuring that your brand story aligns with both your business goals and your audience';s expectations."
       },
       {
         title: "Story Development",
@@ -620,7 +620,7 @@ export const websiteServicesData = [
       {
         title: "SSL Certificates",
         description:
-          "We provide SSL certificates to enhance security and improve SEO rankings. An SSL certificate ensures that your site’s connection is encrypted, providing a secure browsing experience for your users and boosting your site&apos;s credibility in search engines."
+          "We provide SSL certificates to enhance security and improve SEO rankings. An SSL certificate ensures that your site’s connection is encrypted, providing a secure browsing experience for your users and boosting your site';s credibility in search engines."
       },
       {
         title: "99.9% Uptime Guarantee",
@@ -630,7 +630,7 @@ export const websiteServicesData = [
       {
         title: "Scalable Hosting Plans",
         description:
-          "We offer flexible hosting plans that grow with your business. Whether you&apos;re just starting or expecting large traffic spikes, our scalable hosting solutions can be adjusted to fit your current and future needs."
+          "We offer flexible hosting plans that grow with your business. Whether you';re just starting or expecting large traffic spikes, our scalable hosting solutions can be adjusted to fit your current and future needs."
       },
     ],
   },

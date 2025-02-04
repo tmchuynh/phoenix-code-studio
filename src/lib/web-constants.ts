@@ -118,7 +118,7 @@ export const seoOptimizationData = [
     category: "Our SEO Optimization Services",
     items: [
       { title: "On-Page SEO", description: "Optimize website elements such as titles, meta descriptions, headings, and content for search engines." },
-      { title: "Off-Page SEO", description: "Improve your website&apos;s authority by building high-quality backlinks from reputable sources." },
+      { title: "Off-Page SEO", description: "Improve your website';s authority by building high-quality backlinks from reputable sources." },
       { title: "Technical SEO", description: "Optimize the technical aspects of your website, such as loading speed, mobile-friendliness, and crawlability." },
       { title: "Local SEO", description: "Optimize for location-based searches to improve visibility in local search results." },
       { title: "Content Optimization", description: "Ensure that the content on your site is high-quality, relevant, and keyword-optimized." },
@@ -129,7 +129,7 @@ export const seoOptimizationData = [
     items: [
       { title: "SEO Audit", description: "We start by performing a comprehensive SEO audit to identify areas for improvement on your website." },
       { title: "Keyword Research", description: "Conduct thorough research to identify the most valuable and relevant keywords for your business." },
-      { title: "On-Page Optimization", description: "Optimize your website&apos;s content, meta tags, images, and internal linking to ensure that it’s aligned with SEO best practices." },
+      { title: "On-Page Optimization", description: "Optimize your website';s content, meta tags, images, and internal linking to ensure that it’s aligned with SEO best practices." },
       { title: "Off-Page SEO & Link Building", description: "Develop a strategy for acquiring high-quality backlinks and improving domain authority." },
       { title: "Technical SEO Improvements", description: "Ensure that your website is technically sound, improving loading speeds, mobile responsiveness, and more." },
       { title: "Content Strategy & Creation", description: "Create SEO-optimized content such as blogs, articles, and landing pages to engage users and drive traffic." },

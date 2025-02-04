@@ -8,12 +8,12 @@ const JoinUs = () => {
         Come Be a Part of Our Team
       </h1>
       <p>
-        Ready to take your career to the next level? At our company, we&apos;re
+        Ready to take your career to the next level? At our company, we';re
         looking for <EmphasizeText>passionate</EmphasizeText>,{" "}
         <EmphasizeText>talented</EmphasizeText> individuals eager to make a real
-        impact in a dynamic, innovative environment. Whether you&apos;re a
+        impact in a dynamic, innovative environment. Whether you';re a
         developer, designer, marketer, or someone who thrives on solving
-        challenges, there&apos;s a place for you here.
+        challenges, there';s a place for you here.
       </p>
 
       <p>

@@ -54,10 +54,10 @@ const ContactlessBusinessCardsBlog = () => {
             app, ensuring effortless connections wherever you go. Beyond
             convenience, these modern business cards leave a lasting impression,
             showcasing innovation and adaptability in an increasingly digital
-            landscape. Whether you&apos;re an entrepreneur, freelancer, or
-            corporate professional, making the switch to contactless networking
-            helps you stay ahead while reducing waste and embracing a smarter
-            way to connect.
+            landscape. Whether you';re an entrepreneur, freelancer, or corporate
+            professional, making the switch to contactless networking helps you
+            stay ahead while reducing waste and embracing a smarter way to
+            connect.
           </p>
         </header>
 
@@ -66,7 +66,7 @@ const ContactlessBusinessCardsBlog = () => {
             How Can Analytics Help You?
           </h2>
           <p>
-            In today&apos;s data-driven world, leveraging analytics provides
+            In today';s data-driven world, leveraging analytics provides
             actionable insights that can help you optimize networking, improve
             engagement, and enhance marketing efforts. By tracking key metrics,
             you gain valuable information that allows you to refine strategies,
@@ -239,7 +239,7 @@ const ContactlessBusinessCardsBlog = () => {
             conversion rates.
           </p>
           <p>
-            Whether you&apos;re tracking networking interactions, personalizing
+            Whether you';re tracking networking interactions, personalizing
             outreach, or measuring marketing performance, analytics provide the
             insights needed to continuously refine and improve your strategy.
             The key is not just collecting data, but acting on it—using it to

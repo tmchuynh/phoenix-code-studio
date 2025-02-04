@@ -98,7 +98,7 @@ export const websites: Menu[] = [
     title: "SEO Optimization",
     href: "/website-services/seo-optimization",
     description:
-      "Boost your website&apos;s visibility with strategies to improve search engine rankings.",
+      "Boost your website';s visibility with strategies to improve search engine rankings.",
   },
   {
     title: "User Experience (UX) Design",
@@ -194,7 +194,7 @@ export const companies: Menu[] = [
     title: "Brand Storytelling",
     href: "/comapny-specific-services/brand-storytelling",
     description:
-      "Craft compelling narratives to communicate your brand&apos;s mission, vision, and values.",
+      "Craft compelling narratives to communicate your brand';s mission, vision, and values.",
   },
   {
     title: "Custom Website Design",
@@ -226,7 +226,7 @@ export const websiteServices: Services[] = [
   {
     name: "User Experience Design",
     startingPrice: 3500,
-    info: "We specialize in designing intuitive, functional interfaces that seamlessly blend usability, accessibility, and aesthetic appeal. By conducting in-depth user research, we gain valuable insights into your target audience&apos;s needs, behaviors, and pain points. This understanding guides every step of our process, from wireframing and prototyping to rigorous testing and refinement. Our goal is to create designs that not only look stunning but also provide practical solutions to real user challenges. By prioritizing accessibility, we ensure that our interfaces are inclusive and can be enjoyed by all users, regardless of their abilities. The result is a seamless, engaging, and memorable user experience that leaves a lasting positive impression and drives meaningful interactions..",
+    info: "We specialize in designing intuitive, functional interfaces that seamlessly blend usability, accessibility, and aesthetic appeal. By conducting in-depth user research, we gain valuable insights into your target audience';s needs, behaviors, and pain points. This understanding guides every step of our process, from wireframing and prototyping to rigorous testing and refinement. Our goal is to create designs that not only look stunning but also provide practical solutions to real user challenges. By prioritizing accessibility, we ensure that our interfaces are inclusive and can be enjoyed by all users, regardless of their abilities. The result is a seamless, engaging, and memorable user experience that leaves a lasting positive impression and drives meaningful interactions..",
     details:
       "Our UX design services focus on creating seamless and engaging user experiences. By conducting thorough research and usability testing, we deliver designs that simplify interactions and enhance effectiveness. Services include user research, wireframing, prototyping, and testing.",
     pricingTiers: [
@@ -269,14 +269,14 @@ export const websiteServices: Services[] = [
   {
     name: "SEO Optimization",
     startingPrice: 1000,
-    info: "Our SEO optimization services are designed to enhance your website&apos;s visibility, attract organic traffic, and improve search engine rankings. Through comprehensive keyword research, on-page optimization, content improvement, and strategic link-building, we tailor solutions to meet your specific goals. By staying up-to-date with the latest search engine algorithms and best practices, we ensure your website remains competitive and relevant in an ever-changing digital landscape. Let us help you reach your audience effectively and maximize your online potential.",
+    info: "Our SEO optimization services are designed to enhance your website';s visibility, attract organic traffic, and improve search engine rankings. Through comprehensive keyword research, on-page optimization, content improvement, and strategic link-building, we tailor solutions to meet your specific goals. By staying up-to-date with the latest search engine algorithms and best practices, we ensure your website remains competitive and relevant in an ever-changing digital landscape. Let us help you reach your audience effectively and maximize your online potential.",
     details:
-      "Our SEO optimization services focus on enhancing your website’s visibility in search engines. From keyword research to link-building, we implement effective techniques to drive organic traffic and improve your site&apos;s ranking and overall performance.",
+      "Our SEO optimization services focus on enhancing your website’s visibility in search engines. From keyword research to link-building, we implement effective techniques to drive organic traffic and improve your site';s ranking and overall performance.",
     pricingTiers: [
       {
         name: "SEO Audit",
         startingPrice: 1000,
-        info: "Starting at $1,000, this audit evaluates your site&apos;s current SEO performance and identifies areas for improvement."
+        info: "Starting at $1,000, this audit evaluates your site';s current SEO performance and identifies areas for improvement."
       },
       {
         name: "On-Page SEO",
@@ -325,7 +325,7 @@ export const companySpecificServices: Services[] = [
   {
     name: "Custom Website Design",
     startingPrice: 2500,
-    info: "We design custom websites that don’t just look amazing but also work hard for your business. Aligned with your goals and tailored to reflect your unique brand identity, every website we create is a seamless blend of creativity and functionality. Fully responsive and optimized for performance, our designs deliver flawless experiences across all devices—from desktops to smartphones. With intuitive navigation, lightning-fast load times, and captivating visuals, we craft websites that engage your audience, inspire action, and fuel your business&apos;s growth. Let us help you make a lasting impression online and achieve success like never before.",
+    info: "We design custom websites that don’t just look amazing but also work hard for your business. Aligned with your goals and tailored to reflect your unique brand identity, every website we create is a seamless blend of creativity and functionality. Fully responsive and optimized for performance, our designs deliver flawless experiences across all devices—from desktops to smartphones. With intuitive navigation, lightning-fast load times, and captivating visuals, we craft websites that engage your audience, inspire action, and fuel your business';s growth. Let us help you make a lasting impression online and achieve success like never before.",
     details:
       "We specialize in creating custom websites that align with your brand and business objectives. From layout design to functionality, we ensure a seamless user experience.",
     pricingTiers: [
@@ -447,7 +447,7 @@ export const companySpecificServices: Services[] = [
       {
         name: "Core Narrative Development",
         startingPrice: 2000,
-        info: "Starting at $2,500, this tier develops your brand&apos;s core story, highlighting your values, mission, and unique identity."
+        info: "Starting at $2,500, this tier develops your brand';s core story, highlighting your values, mission, and unique identity."
       },
       {
         name: "Comprehensive Storytelling Strategy",
@@ -462,7 +462,7 @@ export const contentCreationServices: Services[] = [
   {
     name: "Website Copywriting",
     startingPrice: 1500,
-    info: "We create clear, persuasive, and SEO-optimized website content that effectively conveys your brand&apos;s message while engaging your audience. Our expertly crafted copy not only captivates visitors but also improves search engine visibility, driving organic traffic to your site. By aligning with your brand voice and audience needs, our content enhances user experience, encourages conversions, and helps establish your online presence as authoritative and trustworthy.",
+    info: "We create clear, persuasive, and SEO-optimized website content that effectively conveys your brand';s message while engaging your audience. Our expertly crafted copy not only captivates visitors but also improves search engine visibility, driving organic traffic to your site. By aligning with your brand voice and audience needs, our content enhances user experience, encourages conversions, and helps establish your online presence as authoritative and trustworthy.",
     details: "Our copywriting services deliver tailored content that is both engaging and optimized for search engines. From homepage messaging to service descriptions, we ensure your website communicates effectively while boosting visibility.",
     pricingTiers: [
       {
@@ -508,7 +508,7 @@ export const contentCreationServices: Services[] = [
   {
     name: "Blog Writing",
     startingPrice: 200,
-    info: "We craft engaging and informative blog posts that captivate your audience while improving your website&apos;s SEO performance. Each post is carefully tailored to reflect your brand voice, ensuring consistency and authenticity. By delivering valuable, relevant content, we help establish your authority in your industry, drive organic traffic, and foster stronger connections with your readers, enhancing your overall online presence..",
+    info: "We craft engaging and informative blog posts that captivate your audience while improving your website';s SEO performance. Each post is carefully tailored to reflect your brand voice, ensuring consistency and authenticity. By delivering valuable, relevant content, we help establish your authority in your industry, drive organic traffic, and foster stronger connections with your readers, enhancing your overall online presence..",
     details: "We write engaging and informative blog posts that keep your audience interested while improving your SEO. Our blog content is tailored to your brand voice, ensuring that every post is relevant and valuable to your readers.",
     pricingTiers: [
       {
@@ -531,7 +531,7 @@ export const contentCreationServices: Services[] = [
   {
     name: "Technical Writing",
     startingPrice: 750,
-    info: "Our technical writing services specialize in converting complex concepts into clear, precise, and accessible documentation. Whether it&apos;s software manuals, technical guides, or white papers, we deliver content that is both accurate and user-friendly. By focusing on clarity and detail, we ensure your audience can easily understand and utilize the information, enhancing their overall experience and confidence in your product or service.",
+    info: "Our technical writing services specialize in converting complex concepts into clear, precise, and accessible documentation. Whether it';s software manuals, technical guides, or white papers, we deliver content that is both accurate and user-friendly. By focusing on clarity and detail, we ensure your audience can easily understand and utilize the information, enhancing their overall experience and confidence in your product or service.",
     details: "Our technical writing services focus on making complex information accessible. Whether it’s software documentation, user manuals, or technical reports, we ensure that the content is clear, precise, and easy to follow.",
     pricingTiers: [
       {
@@ -723,10 +723,10 @@ export const FAQs: FAQ[] = [
   {
     question: "What sets Phoenix Code Studio apart?",
     answer:
-      "At Phoenix Code Studio, we transcend conventional digital solutions by seamlessly merging cultural depth with cutting-edge technology, creating digital experiences that are both highly functional and deeply transformative. Our work isn’t just about design—it’s about crafting meaningful, intuitive, and powerful digital solutions that drive growth and innovation. Inspired by the legendary phoenix, a symbol of rebirth, resilience, and boundless potential, we approach every project with the same spirit of renewal and reinvention. Just as the phoenix rises from the ashes, we believe in turning challenges into opportunities, breathing new life into digital experiences, and helping brands soar to new heights. At Phoenix Code Studio, we blend artistry and technology to create web designs, branding, UI/UX solutions, and digital strategies that ignite engagement and fuel success. Whether you’re launching a new venture or revitalizing an existing brand, we ensure that your digital presence is not only visually striking but also strategically optimized for long-term impact. When you partner with us, you&apos;re not just investing in a service—you’re embracing a philosophy of constant evolution and fearless innovation. Rise, transform, and lead—with Phoenix Code Studio by your side, the future of your brand is limitless."
+      "At Phoenix Code Studio, we transcend conventional digital solutions by seamlessly merging cultural depth with cutting-edge technology, creating digital experiences that are both highly functional and deeply transformative. Our work isn’t just about design—it’s about crafting meaningful, intuitive, and powerful digital solutions that drive growth and innovation. Inspired by the legendary phoenix, a symbol of rebirth, resilience, and boundless potential, we approach every project with the same spirit of renewal and reinvention. Just as the phoenix rises from the ashes, we believe in turning challenges into opportunities, breathing new life into digital experiences, and helping brands soar to new heights. At Phoenix Code Studio, we blend artistry and technology to create web designs, branding, UI/UX solutions, and digital strategies that ignite engagement and fuel success. Whether you’re launching a new venture or revitalizing an existing brand, we ensure that your digital presence is not only visually striking but also strategically optimized for long-term impact. When you partner with us, you';re not just investing in a service—you’re embracing a philosophy of constant evolution and fearless innovation. Rise, transform, and lead—with Phoenix Code Studio by your side, the future of your brand is limitless."
   },
   {
-    question: "What does &apos;bespoke&apos; mean in the context of your services?",
+    question: "What does ';bespoke'; mean in the context of your services?",
     answer:
       "In the context of our services, ‘bespoke’ means that every project we create is uniquely tailored to your specific needs, goals, and brand identity. We don’t rely on generic, one-size-fits-all templates or cookie-cutter solutions. Instead, we take the time to understand your business, industry, and audience to craft customized digital experiences that set you apart from the competition. Whether it’s a custom website, brand reimagining, UX/UI design, SEO strategy, or content creation, every element is designed with precision and purpose to ensure it aligns perfectly with your business objectives. From functionality to aesthetics, our bespoke approach ensures your digital presence is not just effective but memorable, distinctive, and impactful."
   },
@@ -741,7 +741,7 @@ export const FAQs: FAQ[] = [
   {
     question: "What services do you offer?",
     answer:
-      "At Phoenix Code Studio, we offer a comprehensive range of digital solutions designed to help businesses establish a strong online presence and elevate their brand. Our services include company rebranding, where we refine and modernize your brand identity to align with your vision, and custom website development, crafting tailored, user-friendly websites that captivate and engage audiences. We specialize in database management, ensuring secure and efficient data handling, and UX/UI design, including wireframing and prototyping, to create seamless digital experiences. Our expertise extends to SEO optimization, enhancing your website’s visibility, and website copywriting, crafting compelling content that resonates with your audience. Additionally, we provide brand storytelling to communicate your unique value effectively, along with the creation of product guides, manuals, training materials, onboarding paperwork, study guides, eBooks, newsletters, and marketing collateral like brochures and flyers. For businesses seeking knowledge-sharing solutions, we develop online courses, tutorials, technical documentation, and blog content to establish authority in your industry. Whether you&apos;re looking to reimagine your brand, optimize your digital presence, or create impactful content, Phoenix Code Studio is your partner in innovation and growth."
+      "At Phoenix Code Studio, we offer a comprehensive range of digital solutions designed to help businesses establish a strong online presence and elevate their brand. Our services include company rebranding, where we refine and modernize your brand identity to align with your vision, and custom website development, crafting tailored, user-friendly websites that captivate and engage audiences. We specialize in database management, ensuring secure and efficient data handling, and UX/UI design, including wireframing and prototyping, to create seamless digital experiences. Our expertise extends to SEO optimization, enhancing your website’s visibility, and website copywriting, crafting compelling content that resonates with your audience. Additionally, we provide brand storytelling to communicate your unique value effectively, along with the creation of product guides, manuals, training materials, onboarding paperwork, study guides, eBooks, newsletters, and marketing collateral like brochures and flyers. For businesses seeking knowledge-sharing solutions, we develop online courses, tutorials, technical documentation, and blog content to establish authority in your industry. Whether you';re looking to reimagine your brand, optimize your digital presence, or create impactful content, Phoenix Code Studio is your partner in innovation and growth."
   },
   {
     question: "What industries do you work with?",
@@ -773,7 +773,7 @@ export const FAQs: FAQ[] = [
   {
     question: "Can you help with rebranding my business?",
     answer:
-      "Absolutely! Our brand reimagining service is designed to breathe new life into your business, ensuring your digital presence aligns seamlessly with your evolving goals and vision. Whether you&apos;re looking to refine your logo, color palette, typography, or overall brand aesthetics, we create a cohesive and modern identity that resonates with your audience. Our team specializes in website redesign, delivering an updated, engaging, and user-friendly experience that reflects your refreshed brand personality. Beyond visuals, we enhance brand storytelling, crafting compelling messaging and website copy to establish a strong emotional connection with your customers. Additionally, we offer SEO optimization, content strategy, and marketing collateral development, ensuring consistency across all touchpoints—from your website and social media presence to brochures, newsletters, and promotional materials. With Phoenix Code Studio, your rebrand won’t just be a facelift—it will be a strategic transformation that elevates your business and sets you apart in your industry."
+      "Absolutely! Our brand reimagining service is designed to breathe new life into your business, ensuring your digital presence aligns seamlessly with your evolving goals and vision. Whether you';re looking to refine your logo, color palette, typography, or overall brand aesthetics, we create a cohesive and modern identity that resonates with your audience. Our team specializes in website redesign, delivering an updated, engaging, and user-friendly experience that reflects your refreshed brand personality. Beyond visuals, we enhance brand storytelling, crafting compelling messaging and website copy to establish a strong emotional connection with your customers. Additionally, we offer SEO optimization, content strategy, and marketing collateral development, ensuring consistency across all touchpoints—from your website and social media presence to brochures, newsletters, and promotional materials. With Phoenix Code Studio, your rebrand won’t just be a facelift—it will be a strategic transformation that elevates your business and sets you apart in your industry."
   },
   {
     question: "Do you offer ongoing support after a project is completed?",
@@ -787,7 +787,7 @@ export const FAQs: FAQ[] = [
   {
     question: "How do you tailor your services for small businesses?",
     answer:
-      "At Phoenix Code Studio, we understand that small businesses have unique challenges, from limited budgets to the need for a strong digital presence in a competitive market. That’s why we offer bespoke, scalable solutions tailored to your specific goals, industry, and vision. We work closely with you to understand your brand, target audience, and business objectives, ensuring every project—whether it&apos;s a custom website, branding refresh, SEO strategy, or content creation—is aligned with your needs. Our approach is cost-effective and strategic, providing high-quality results without unnecessary complexity. We prioritize user-friendly designs, mobile responsiveness, and SEO best practices to help you attract and retain customers. Additionally, we offer flexible maintenance and support plans, empowering you to grow at your own pace while we handle the technical details. With Phoenix Code Studio, small businesses get enterprise-level solutions without the hefty price tag, ensuring long-term success in the digital landscape."
+      "At Phoenix Code Studio, we understand that small businesses have unique challenges, from limited budgets to the need for a strong digital presence in a competitive market. That’s why we offer bespoke, scalable solutions tailored to your specific goals, industry, and vision. We work closely with you to understand your brand, target audience, and business objectives, ensuring every project—whether it';s a custom website, branding refresh, SEO strategy, or content creation—is aligned with your needs. Our approach is cost-effective and strategic, providing high-quality results without unnecessary complexity. We prioritize user-friendly designs, mobile responsiveness, and SEO best practices to help you attract and retain customers. Additionally, we offer flexible maintenance and support plans, empowering you to grow at your own pace while we handle the technical details. With Phoenix Code Studio, small businesses get enterprise-level solutions without the hefty price tag, ensuring long-term success in the digital landscape."
   },
 ];
 
@@ -855,9 +855,9 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     position: "Data Scientist",
     quote:
-      `It&apos;s not often you meet someone as driven and talented as Tina. I had the pleasure of working alongside her in Theta Tau, a professional engineering fraternity at California State University, Fullerton. Her leadership stood out immediately—she consistently took initiative, introduced innovative ideas, and guided the team through challenges with confidence and resilience.  
+      `It';s not often you meet someone as driven and talented as Tina. I had the pleasure of working alongside her in Theta Tau, a professional engineering fraternity at California State University, Fullerton. Her leadership stood out immediately—she consistently took initiative, introduced innovative ideas, and guided the team through challenges with confidence and resilience.  
 
-      Beyond her leadership, Tina&apos;s eagerness to learn and adapt is truly inspiring. Whether mastering technical skills or building a business, she embraces new challenges with enthusiasm and determination. Her dedication, resourcefulness, and unwavering drive make her an invaluable asset to any team.`,
+      Beyond her leadership, Tina';s eagerness to learn and adapt is truly inspiring. Whether mastering technical skills or building a business, she embraces new challenges with enthusiasm and determination. Her dedication, resourcefulness, and unwavering drive make her an invaluable asset to any team.`,
   },
   {
     name: "Spencer DeMera",
@@ -885,7 +885,7 @@ export const testimonials: Testimonial[] = [
     rating: 4.5,
     position: "Data Analyst",
     quote:
-      `Tina&apos;s commitment to her craft is evident in everything she does. She is not only a skilled developer but also a quick learner who thrives on challenges. Her ability to teach herself new technologies and implement them effectively is a rare and valuable trait.
+      `Tina';s commitment to her craft is evident in everything she does. She is not only a skilled developer but also a quick learner who thrives on challenges. Her ability to teach herself new technologies and implement them effectively is a rare and valuable trait.
 
       Her personal portfolio stands as proof of her technical expertise and innovative thinking, highlighting her ability to create impactful digital solutions. She is a driven professional who brings energy, creativity, and determination to every project she takes on—an asset to any team or organization.`,
   },
@@ -1014,7 +1014,7 @@ export const blogs: BlogPost[] = [
     slug: "/blogs/books-to-read-as-developer",
   },
   {
-    title: "Who&apos;s the Better Hire? - Jack of All Trades OR Master of One",
+    title: "Who';s the Better Hire? - Jack of All Trades OR Master of One",
     author: "Tina Huynh",
     date: "April 22, 2022",
     img: "/images/blog-placeholder.jpg",
@@ -1175,7 +1175,7 @@ export const pastProjects: Project[] = [
     title: "Quiz Application",
     img: ["/images/quizlet-application.png", "/images/quizlet-app-3.png"],
     featured: true,
-    description: "This is a simple Next.js project.It&apos;s a web-based quiz platform designed to offer a variety of quizzes across multiple subjects, including Chemistry, History, Math, and more. The application supports user registration, tracks progress, and allows users to select quizzes based on difficulty and subject. Users can register, reset their passwords, and manage their profiles with the ability to update personal information and choose default profile pictures. The application includes features like quiz progress tracking, score tracking, and a leaderboard to encourage competition. It also stores quiz data in localStorage, ensuring users can resume where they left off. Built with a responsive UI and accessibility features, the app provides a seamless experience across devices. Data management is handled using MySQL, Sequelize, and Next-Auth for secure user authentication and information retrieval.",
+    description: "This is a simple Next.js project.It';s a web-based quiz platform designed to offer a variety of quizzes across multiple subjects, including Chemistry, History, Math, and more. The application supports user registration, tracks progress, and allows users to select quizzes based on difficulty and subject. Users can register, reset their passwords, and manage their profiles with the ability to update personal information and choose default profile pictures. The application includes features like quiz progress tracking, score tracking, and a leaderboard to encourage competition. It also stores quiz data in localStorage, ensuring users can resume where they left off. Built with a responsive UI and accessibility features, the app provides a seamless experience across devices. Data management is handled using MySQL, Sequelize, and Next-Auth for secure user authentication and information retrieval.",
     short: "This Next.js app, a conversion of Quizlet-Plus, offers quizzes in subjects like Chemistry, History, and Math. It features user registration, progress tracking, profile management, and a leaderboard. Data is stored in localStorage, with MySQL, Sequelize, and Next-Auth handling authentication. The app is responsive and includes accessibility features for a seamless experience.",
     tags: ["User Auth", "Progress Tracking", "Dynamic", "Data Filtering"],
     languages: ["HTML", "TypeScript"],
@@ -1188,7 +1188,7 @@ export const pastProjects: Project[] = [
     title: "Bootstrap Website Mock",
     img: ["/images/bootstrap-1.png", "/images/bootstrap-2.png", "/images/bootstrap-3.png", "/images/bootstrap-4.png"],
     featured: true,
-    description: "This is a simple Next.js project.It&apos;s a web-based quiz platform designed to offer a variety of quizzes across multiple subjects, including Chemistry, History, Math, and more. The application supports user registration, tracks progress, and allows users to select quizzes based on difficulty and subject. Users can register, reset their passwords, and manage their profiles with the ability to update personal information and choose default profile pictures. The application includes features like quiz progress tracking, score tracking, and a leaderboard to encourage competition. It also stores quiz data in localStorage, ensuring users can resume where they left off. Built with a responsive UI and accessibility features, the app provides a seamless experience across devices. Data management is handled using MySQL, Sequelize, and Next-Auth for secure user authentication and information retrieval.",
+    description: "This is a simple Next.js project.It';s a web-based quiz platform designed to offer a variety of quizzes across multiple subjects, including Chemistry, History, Math, and more. The application supports user registration, tracks progress, and allows users to select quizzes based on difficulty and subject. Users can register, reset their passwords, and manage their profiles with the ability to update personal information and choose default profile pictures. The application includes features like quiz progress tracking, score tracking, and a leaderboard to encourage competition. It also stores quiz data in localStorage, ensuring users can resume where they left off. Built with a responsive UI and accessibility features, the app provides a seamless experience across devices. Data management is handled using MySQL, Sequelize, and Next-Auth for secure user authentication and information retrieval.",
     short: "This Next.js app, a conversion of Quizlet-Plus, offers quizzes in subjects like Chemistry, History, and Math. It features user registration, progress tracking, profile management, and a leaderboard. Data is stored in localStorage, with MySQL, Sequelize, and Next-Auth handling authentication. The app is responsive and includes accessibility features for a seamless experience.",
     tags: ["Mock Up", "Dynamic", "Data Filtering"],
     languages: ["HTML", "JavaScript", "CSS", "SCSS"],
@@ -1212,7 +1212,7 @@ export const pastProjects: Project[] = [
     title: "IAC Company Website",
     img: ["/images/iac.png", "/images/iac-1.png", "/images/iac-website.png", "/images/iac-2.png"],
     featured: true,
-    description: "The International Activities Club (IAC) website is a user-friendly platform that showcases the organization&apos;s educational programs and after-school activities. It highlights the A.R.C. Initiative, focusing on hands-on learning and real-world application of classroom knowledge. The site provides detailed information about the diverse extracurricular options, such as chess, sports, and creative writing, offered to students from 1st grade through high school. With easy navigation, the website ensures parents and schools can explore IAC’s services and find enriching learning opportunities for students.",
+    description: "The International Activities Club (IAC) website is a user-friendly platform that showcases the organization';s educational programs and after-school activities. It highlights the A.R.C. Initiative, focusing on hands-on learning and real-world application of classroom knowledge. The site provides detailed information about the diverse extracurricular options, such as chess, sports, and creative writing, offered to students from 1st grade through high school. With easy navigation, the website ensures parents and schools can explore IAC’s services and find enriching learning opportunities for students.",
     short: "The IAC website highlights educational programs, the A.R.C. Initiative, and after-school activities like chess, sports, and creative writing, offering enriching opportunities for students. It’s designed for easy navigation by parents and schools to explore IAC’s services.",
     tags: ["Educational", "Dynamic"],
     languages: ["JavaScript", "HTML", "CSS"],
@@ -1224,7 +1224,7 @@ export const pastProjects: Project[] = [
   {
     title: "Emoji Finder",
     featured: true,
-    description: "The International Activities Club (IAC) website is a user-friendly platform that showcases the organization&apos;s educational programs and after-school activities. It highlights the A.R.C. Initiative, focusing on hands-on learning and real-world application of classroom knowledge. The site provides detailed information about the diverse extracurricular options, such as chess, sports, and creative writing, offered to students from 1st grade through high school. With easy navigation, the website ensures parents and schools can explore IAC’s services and find enriching learning opportunities for students.",
+    description: "The International Activities Club (IAC) website is a user-friendly platform that showcases the organization';s educational programs and after-school activities. It highlights the A.R.C. Initiative, focusing on hands-on learning and real-world application of classroom knowledge. The site provides detailed information about the diverse extracurricular options, such as chess, sports, and creative writing, offered to students from 1st grade through high school. With easy navigation, the website ensures parents and schools can explore IAC’s services and find enriching learning opportunities for students.",
     short: "The IAC website highlights educational programs, the A.R.C. Initiative, and after-school activities like chess, sports, and creative writing, offering enriching opportunities for students. It’s designed for easy navigation by parents and schools to explore IAC’s services.",
     tags: ["Fun", "Dynamic"],
     languages: ["JavaScript", "HTML", "CSS"],
@@ -1251,7 +1251,7 @@ export const pastProjects: Project[] = [
   {
     title: "Chess Game",
     featured: true,
-    description: "The code creates a 2D array of points. The first row is the x-axis and the second row is the y-axis. Each point in the array represents an evaluation of white&apos;s king position. The first value in each point is black&apos;s evaluation of white&apos;s king position, and the second value is white&apos;s evaluation of black&apos;s king position. [2, 3] evaluates to 0 for both values because it falls on both axes (x and y). [1, 2] evaluates to -1 for both values because it falls on both axes (x and y). [3, 4] evaluates to -4 for white but +5 for black because it falls on only.",
+    description: "The code creates a 2D array of points. The first row is the x-axis and the second row is the y-axis. Each point in the array represents an evaluation of white';s king position. The first value in each point is black';s evaluation of white';s king position, and the second value is white';s evaluation of black';s king position. [2, 3] evaluates to 0 for both values because it falls on both axes (x and y). [1, 2] evaluates to -1 for both values because it falls on both axes (x and y). [3, 4] evaluates to -4 for white but +5 for black because it falls on only.",
     short: `chessboard.js is a standalone JavaScript Chess Board. It is designed to be "just a board" and expose a powerful API so that it can be used in different ways.The code starts by creating a board and setting up the game. The positionCount variable is used to keep track of how many chess pieces are on the board. var pawnEvalWhite = [ [0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [5.0, 5.0, 5.0, 5.0], [1., 1., 2., 3.]] var knightEval = [ [-5., -4., -3.]] var bishopEvalWhite = [ [-2., -1.]] var rookEvalWhite = [ [-2.]`,
     tags: ["Fun", "Dynamic"],
     languages: ["JavaScript", "HTML", "CSS"],
@@ -1268,7 +1268,7 @@ export const jobPositions: JobPosition[] = [
     responsibilities: [
       "Manage executive calendars, schedule meetings, and coordinate appointments across multiple time zones (if applicable), ensuring optimal use of time and avoiding conflicts.",
       "Handle incoming and outgoing correspondence, including emails, phone calls, and reports, maintaining a high level of confidentiality and professionalism.",
-      "Prepare presentations, reports, and documentation for internal and external meetings, ensuring all materials are accurate, polished, and align with the CEO&apos;s vision.",
+      "Prepare presentations, reports, and documentation for internal and external meetings, ensuring all materials are accurate, polished, and align with the CEO';s vision.",
       "Coordinate domestic and international travel arrangements, including accommodations and itineraries, ensuring seamless travel experiences and cost-efficiency.",
       "Oversee administrative operations, including expense tracking, record-keeping, and file management, maintaining an organized and efficient filing system.",
       "Assist with project management tasks and ensure timely follow-ups on key initiatives, collaborating with different departments to track progress and ensure deadlines are met.",
@@ -1346,7 +1346,7 @@ export const jobPositions: JobPosition[] = [
   {
     title: "Cybersecurity Specialist",
     description:
-      "We are looking for a highly skilled Cybersecurity Specialist to protect our organization&apos;s data, networks, and digital assets from cyber threats. The ideal candidate will have experience implementing security protocols, identifying vulnerabilities, and responding to security incidents. You will work closely with the development teams to ensure compliance with industry standards and best practices, as well as train staff on security awareness and risk mitigation.",
+      "We are looking for a highly skilled Cybersecurity Specialist to protect our organization';s data, networks, and digital assets from cyber threats. The ideal candidate will have experience implementing security protocols, identifying vulnerabilities, and responding to security incidents. You will work closely with the development teams to ensure compliance with industry standards and best practices, as well as train staff on security awareness and risk mitigation.",
     responsibilities: [
       "Train employees on cybersecurity best practices and risk awareness, ensuring that all staff are aware of security protocols and potential threats.",
       "Conduct security risk assessments, penetration testing, and vulnerability scanning to identify and mitigate threats to the organization’s infrastructure.",

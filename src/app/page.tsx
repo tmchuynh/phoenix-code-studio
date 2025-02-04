@@ -39,9 +39,9 @@ const WelcomePage: FC = () => {
           Your vision deserves more than just a blueprint—it deserves a
           transformation. At <EmphasizeText>Phoenix Code Studio</EmphasizeText>,
           we bring creativity, strategy, and cutting-edge technology together to
-          craft digital experiences that leave a lasting impact. Whether
-          you&apos;re launching a brand, enhancing your online presence, or
-          creating something entirely new, we’re here to make it happen.
+          craft digital experiences that leave a lasting impact. Whether you';re
+          launching a brand, enhancing your online presence, or creating
+          something entirely new, we’re here to make it happen.
         </p>
         <p className="text-lg md:text-xl lg:text-2xl my-4">
           From sleek, high-performing websites to engaging content and tailored
