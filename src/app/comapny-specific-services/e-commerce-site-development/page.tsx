@@ -29,9 +29,9 @@ const EcommerceWebsite: FC = () => {
         responsiveness, and seamless integration with payment gateways. From
         intuitive product catalogs to streamlined checkout processes, we craft a
         personalized shopping experience that keeps your customers engaged and
-        coming back. Whether you're a small business or a large enterprise, our
-        solutions are designed to grow with your business and maximize online
-        sales.
+        coming back. Whether you&apos;re a small business or a large enterprise,
+        our solutions are designed to grow with your business and maximize
+        online sales.
       </p>
 
       {/* Why Choose Custom eCommerce Development? */}

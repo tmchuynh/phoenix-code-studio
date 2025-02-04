@@ -37,10 +37,10 @@ const CompanyRebranding: FC = () => {
         <p className="my-4">
           Company rebranding is a transformative process that involves
           revitalizing your business identity to better align with market
-          trends, audience expectations, and growth strategies. Whether you're
-          looking to modernize your brand, refresh your messaging, or redesign
-          your website, our comprehensive services help you create a powerful,
-          cohesive, and future-ready brand identity.
+          trends, audience expectations, and growth strategies. Whether
+          you&apos;re looking to modernize your brand, refresh your messaging,
+          or redesign your website, our comprehensive services help you create a
+          powerful, cohesive, and future-ready brand identity.
         </p>
       </section>
 
@@ -92,7 +92,7 @@ const CompanyRebranding: FC = () => {
           Get Started Today
         </h2>
         <p className="my-4">
-          Ready to transform your company's brand?{" "}
+          Ready to transform your company&apos;s brand?{" "}
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}

@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 import { useRouter } from "next/navigation";
 import { paymentPlans } from "@/lib/constants";
 import { useTheme } from "next-themes";
@@ -9,12 +9,7 @@ import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 
 const PaymentPlansPage: FC = () => {
   const router = useRouter();
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const { theme } = useTheme();
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">

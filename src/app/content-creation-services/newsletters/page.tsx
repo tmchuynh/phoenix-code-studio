@@ -20,12 +20,12 @@ const NewsletterServices: FC = () => {
       <p>
         Our Newsletter Writing and Design Services are designed to help you
         engage your audience with compelling, well-crafted content and visually
-        stunning designs. Whether you're sharing company updates, promoting
+        stunning designs. Whether you&apos;re sharing company updates, promoting
         offers, or providing valuable insights, we ensure that every newsletter
-        is tailored to your brand's voice and goals. From writing engaging copy
-        to creating eye-catching layouts, we handle every aspect to ensure your
-        newsletters capture attention, drive conversions, and strengthen your
-        relationship with subscribers.
+        is tailored to your brand&apos;s voice and goals. From writing engaging
+        copy to creating eye-catching layouts, we handle every aspect to ensure
+        your newsletters capture attention, drive conversions, and strengthen
+        your relationship with subscribers.
       </p>
 
       {/* Dynamic Section Rendering */}

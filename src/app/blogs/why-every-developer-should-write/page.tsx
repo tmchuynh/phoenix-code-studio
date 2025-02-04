@@ -69,8 +69,8 @@ const WhyWritingMattersBlog = () => {
           </p>
           <p>
             Moreover, writing proficiency is a skill that transcends industries
-            and career paths. Whether you're a developer documenting code, a
-            business leader drafting proposals, or a creative professional
+            and career paths. Whether you&apos;re a developer documenting code,
+            a business leader drafting proposals, or a creative professional
             storytelling through blogs, the ability to write persuasively and
             concisely enhances your effectiveness. As technology advances and
             communication continues to evolve, the demand for clear, structured,

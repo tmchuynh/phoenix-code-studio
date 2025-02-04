@@ -29,14 +29,14 @@ const JobListingsPage: FC = () => {
       <p>
         Here, we foster a culture of <EmphasizeText>innovation</EmphasizeText>,{" "}
         <EmphasizeText>teamwork</EmphasizeText>, and{" "}
-        <EmphasizeText>growth</EmphasizeText>. You'll have the chance to work on
-        groundbreaking projects, refine your expertise, and contribute to
-        shaping the future of business and technology. Browse our open positions
-        and see where your talents fit in.
+        <EmphasizeText>growth</EmphasizeText>. You&apos;ll have the chance to
+        work on groundbreaking projects, refine your expertise, and contribute
+        to shaping the future of business and technology. Browse our open
+        positions and see where your talents fit in.
       </p>
 
       <p>
-        Don't settle—
+        Don&apos;t settle—
         <span className="text-primary font-extrabold">ELEVATE</span> your
         career. Join a team that values your ideas, celebrates your
         contributions, and supports your ambitions. Together, we’ll create

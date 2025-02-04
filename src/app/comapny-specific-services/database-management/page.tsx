@@ -36,8 +36,8 @@ const DatabaseServices: FC = () => {
         </h2>
         <p className="my-4">
           Our comprehensive database solutions ensure that your data is secure,
-          scalable, and optimized for performance. Whether you're building a
-          database from the ground up or need professional management for an
+          scalable, and optimized for performance. Whether you&apos;re building
+          a database from the ground up or need professional management for an
           existing one, we provide reliable, high-performance solutions tailored
           to your business needs.
         </p>

@@ -5,6 +5,7 @@ import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { BpCheckbox } from "@/components/ui/checkbox-custom";
+import Image from "next/image";
 import {
   Collapsible,
   CollapsibleContent,
@@ -27,19 +28,11 @@ import useBetweenLargeAndXL from "@/lib/onlyLargerScreens";
 import useSmallScreen from "@/lib/useSmallScreen";
 import { formatDate } from "@/lib/utils";
 import { ChevronsUpDown } from "lucide-react";
-import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import { FC, useEffect, useState } from "react";
 
 const BlogDisplayPage: FC = () => {
   const router = useRouter();
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   const isSmallDevice = useSmallScreen();
   const isLargerScreen = useBetweenLargeAndXL();
 
@@ -222,10 +215,10 @@ const BlogDisplayPage: FC = () => {
     return acc;
   }, {} as Record<string, number>);
 
-  const authorCounts = authors.reduce((acc, author) => {
-    acc[author] = blogs.filter((blog) => blog.author === author).length;
-    return acc;
-  }, {} as Record<string, number>);
+  // const authorCounts = authors.reduce((acc, author) => {
+  //   acc[author] = blogs.filter((blog) => blog.author === author).length;
+  //   return acc;
+  // }, {} as Record<string, number>);
 
   const topics = Object.keys(topicCounts).sort();
 
@@ -237,7 +230,13 @@ const BlogDisplayPage: FC = () => {
   useEffect(() => {
     handleFilter();
     console.log(blogs.map((blog) => blog.topics));
-  }, [selectedTopics, selectedDates, selectedAuthors, searchQuery]);
+  }, [
+    selectedTopics,
+    selectedDates,
+    selectedAuthors,
+    searchQuery,
+    handleFilter,
+  ]);
 
   function handleOpen(dropdown: "topic" | "date" | "author") {
     setDropdownOpen({
@@ -255,16 +254,16 @@ const BlogDisplayPage: FC = () => {
     handleOpen("topic");
   };
 
-  const handleAuthorCheckboxChange = (author: string, checked: boolean) => {
-    if (checked) {
-      setSelectedAuthors((prevAuthors) => [...prevAuthors, author]);
-    } else {
-      setSelectedAuthors((prevAuthors) =>
-        prevAuthors.filter((t) => t !== author)
-      );
-    }
-    handleOpen("author");
-  };
+  // const handleAuthorCheckboxChange = (author: string, checked: boolean) => {
+  //   if (checked) {
+  //     setSelectedAuthors((prevAuthors) => [...prevAuthors, author]);
+  //   } else {
+  //     setSelectedAuthors((prevAuthors) =>
+  //       prevAuthors.filter((t) => t !== author)
+  //     );
+  //   }
+  //   handleOpen("author");
+  // };
 
   const handleDateCheckboxChange = (date: string, checked: boolean) => {
     if (checked) {
@@ -611,8 +610,10 @@ const BlogDisplayPage: FC = () => {
               className="border-2 border-transparent dark:hover:border-border rounded-lg shadow-lg hover:shadow-xl transition-shadow flex flex-col justify-between"
             >
               <div>
-                <img
+                <Image
                   src={blog.img}
+                  width={500}
+                  height={300}
                   alt={blog.title}
                   className="w-full h-36 rounded-t-md object-cover mx-auto mb-1"
                 />

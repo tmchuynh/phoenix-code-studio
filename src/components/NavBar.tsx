@@ -27,7 +27,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 
 const NavBar = () => {
   const router = useRouter();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [_, setIsMenuOpen] = useState(false);
 
   return (
     <>

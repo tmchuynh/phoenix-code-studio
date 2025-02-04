@@ -55,9 +55,9 @@ const TrainingManualOnboardingPapers: FC = () => {
           Our pricing is tailored to meet your specific needs based on the
           document type, length, and complexity. We offer flexible packages
           designed to accommodate a wide range of budgets and project
-          requirements. Whether you're looking for a simple one-page flyer or a
-          more detailed brochure, we can customize a solution that works for
-          you.
+          requirements. Whether you&apos;re looking for a simple one-page flyer
+          or a more detailed brochure, we can customize a solution that works
+          for you.
         </p>
         {contentCreationServices.map((service) => (
           <>

@@ -18,10 +18,10 @@ const ExampleContractsPage: FC = () => {
       <p>
         Explore a range of contract examples tailored to various hiring
         scenarios. These examples showcase how we structure agreements to
-        address different project needs, timelines, and budgets. Whether you're
-        hiring for a short-term engagement, a long-term partnership, or a highly
-        specialized project, these examples illustrate the flexibility and
-        customization we offer to meet diverse requirements.
+        address different project needs, timelines, and budgets. Whether
+        you&apos;re hiring for a short-term engagement, a long-term partnership,
+        or a highly specialized project, these examples illustrate the
+        flexibility and customization we offer to meet diverse requirements.
       </p>
       <p>
         Each example provides insights into how we handle unique situations,

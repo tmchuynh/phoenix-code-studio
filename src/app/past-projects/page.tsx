@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import Image from "next/image";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -194,6 +195,7 @@ const PastProjectsPage: FC = () => {
     selectedTags,
     selectedTechnologies,
     selectedLibraries,
+    handleFilter,
   ]);
 
   return (
@@ -207,7 +209,7 @@ const PastProjectsPage: FC = () => {
         and dedication to delivering outstanding results. From innovative web
         designs to efficient applications, our past work highlights our
         commitment to quality and client satisfaction. Take a look at some of
-        the projects we've had the privilege to work on, each reflecting a
+        the projects we&apos;ve had the privilege to work on, each reflecting a
         unique challenge and solution. These projects highlight our ability to
         craft innovative, functional, and visually appealing designs that meet
         diverse client needs and goals. Get inspired by the impactful solutions
@@ -672,7 +674,10 @@ const PastProjectsPage: FC = () => {
                       ? project.img.map(
                           (img, index) =>
                             index === 0 && (
-                              <img
+                              <Image
+                                key={index}
+                                width={500}
+                                height={300}
                                 src={`${img}`}
                                 alt={project.title}
                                 className="w-full h-40 my-4 object-contain"
@@ -680,7 +685,10 @@ const PastProjectsPage: FC = () => {
                             )
                         )
                       : project.img.map((img, index) => (
-                          <img
+                          <Image
+                            key={index}
+                            width={500}
+                            height={300}
                             src={`${img}`}
                             alt={project.title}
                             className={

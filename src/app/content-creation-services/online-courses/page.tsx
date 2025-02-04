@@ -22,9 +22,10 @@ const OnlineCoursesServices: FC = () => {
         create engaging, educational, and interactive learning experiences. From
         course planning and content development to multimedia creation and
         platform integration, we offer comprehensive solutions tailored to your
-        audience. Whether you're launching a new course or enhancing an existing
-        one, we ensure that your online courses are not only informative but
-        also engaging and optimized for effective learning outcomes.
+        audience. Whether you&apos;re launching a new course or enhancing an
+        existing one, we ensure that your online courses are not only
+        informative but also engaging and optimized for effective learning
+        outcomes.
       </p>
 
       {/* Dynamic Section Rendering */}

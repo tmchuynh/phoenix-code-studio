@@ -69,4 +69,6 @@ const ModeButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   }
 );
 
+ModeButton.displayName = "ModeButton";
+
 export { ModeButton };

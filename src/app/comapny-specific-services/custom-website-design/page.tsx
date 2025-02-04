@@ -23,10 +23,10 @@ const CustomWebsite: FC = () => {
         Our Custom Website Design Services are tailored to help your business
         make a powerful first impression. We understand that every business is
         unique, and we focus on creating visually stunning, user-friendly
-        websites that reflect your brand's identity and values. Whether you need
-        a responsive design, a streamlined e-commerce platform, or an engaging
-        portfolio, our team is equipped to design websites that meet your
-        specific needs. With a focus on functionality, performance, and
+        websites that reflect your brand&apos;s identity and values. Whether you
+        need a responsive design, a streamlined e-commerce platform, or an
+        engaging portfolio, our team is equipped to design websites that meet
+        your specific needs. With a focus on functionality, performance, and
         aesthetics, we ensure your website is not only attractive but also
         provides an exceptional user experience across all devices.
       </p>
