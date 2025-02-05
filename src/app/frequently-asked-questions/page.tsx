@@ -29,7 +29,9 @@ const FAQPage: FC = () => {
         <Accordion type="single" collapsible className="w-full">
           {FAQs.map((question, index) => (
             <AccordionItem value={`${index}`} key={index}>
-              <AccordionTrigger>{question.question}</AccordionTrigger>
+              <AccordionTrigger className="text-start">
+                {question.question}
+              </AccordionTrigger>
               <AccordionContent>
                 <p>{question.answer}</p>
               </AccordionContent>
