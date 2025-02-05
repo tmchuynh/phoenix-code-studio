@@ -5,6 +5,7 @@ import "./globals.css";
 import { Providers } from "./providers";
 import BackToTop from "@/components/BackToTop";
 import Navbar from "@/components/NavBar";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function RootLayout({
   children,
@@ -43,6 +44,7 @@ const MainContent = ({ children }: { children: React.ReactNode }) => {
       <main className="mx-auto py-10 overflow-hidden">
         <Navbar />
         {children}
+        <Analytics />
         <BackToTop />
       </main>
     </>
