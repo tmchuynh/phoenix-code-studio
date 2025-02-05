@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 import BackToTop from "@/components/BackToTop";
 import Navbar from "@/components/NavBar";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function RootLayout({
   children,
@@ -45,6 +46,7 @@ const MainContent = ({ children }: { children: React.ReactNode }) => {
         <Navbar />
         {children}
         <Analytics />
+        <SpeedInsights />
         <BackToTop />
       </main>
     </>
