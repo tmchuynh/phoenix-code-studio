@@ -222,81 +222,12 @@ export const companies: Menu[] = [
   },
 ];
 
-export const websiteServices: Services[] = [
-  {
-    name: "User Experience Design",
-    startingPrice: 3500,
-    info: "We specialize in designing intuitive, functional interfaces that seamlessly blend usability, accessibility, and aesthetic appeal. By conducting in-depth user research, we gain valuable insights into your target audience's needs, behaviors, and pain points. This understanding guides every step of our process, from wireframing and prototyping to rigorous testing and refinement. Our goal is to create designs that not only look stunning but also provide practical solutions to real user challenges. By prioritizing accessibility, we ensure that our interfaces are inclusive and can be enjoyed by all users, regardless of their abilities. The result is a seamless, engaging, and memorable user experience that leaves a lasting positive impression and drives meaningful interactions..",
-    details:
-      "Our UX design services focus on creating seamless and engaging user experiences. By conducting thorough research and usability testing, we deliver designs that simplify interactions and enhance effectiveness. Services include user research, wireframing, prototyping, and testing.",
-    pricingTiers: [
-      {
-        name: "User Research & Prototyping",
-        startingPrice: 3500,
-        info: "Starting at $3,500, this package covers user research, interviews, and detailed prototyping to understand and design for user needs."
-      },
-      {
-        name: "Comprehensive UX Design",
-        startingPrice: 5000,
-        info: "Starting at $5,000, this package includes end-to-end UX design, incorporating research, prototyping, usability testing, and final design delivery."
-      }
-    ]
-  },
-  {
-    name: "Wireframing & Prototyping",
-    startingPrice: 1000,
-    info: "Our wireframing and prototyping services turn your ideas into tangible, user-centric designs. Starting with low-fidelity wireframes, we outline the structure, navigation, and layout to establish a clear blueprint. Then, we develop high-fidelity prototypes that simulate real interactions, providing a dynamic preview of the final product. These tools not only help you visualize and refine the user journey but also streamline the design process, saving time and ensuring practicality and functionality before full-scale development begins.",
-    details:
-      "We provide wireframing and prototyping services to help you visualize user interactions and refine design ideas before development begins. These tools are essential for identifying usability issues and ensuring an optimal user experience.",
-    pricingTiers: [
-      {
-        name: "Low-Fidelity Wireframes",
-        startingPrice: 1000,
-        info: "Starting at $1,000, these quick, basic sketches outline the layout and navigation of your site or app."
-      },
-      {
-        name: "High-Fidelity Wireframes",
-        startingPrice: 2000,
-        info: "Starting at $2,000, these detailed wireframes showcase user interface designs with a focus on usability and aesthetics."
-      },
-      {
-        name: "Interactive Prototypes",
-        startingPrice: 2500,
-        info: "Starting at $2,500, this tier provides clickable prototypes that simulate real user interactions for testing and validation."
-      }
-    ]
-  },
-  {
-    name: "SEO Optimization",
-    startingPrice: 1000,
-    info: "Our SEO optimization services are designed to enhance your website's visibility, attract organic traffic, and improve search engine rankings. Through comprehensive keyword research, on-page optimization, content improvement, and strategic link-building, we tailor solutions to meet your specific goals. By staying up-to-date with the latest search engine algorithms and best practices, we ensure your website remains competitive and relevant in an ever-changing digital landscape. Let us help you reach your audience effectively and maximize your online potential.",
-    details:
-      "Our SEO optimization services focus on enhancing your website’s visibility in search engines. From keyword research to link-building, we implement effective techniques to drive organic traffic and improve your site's ranking and overall performance.",
-    pricingTiers: [
-      {
-        name: "SEO Audit",
-        startingPrice: 1000,
-        info: "Starting at $1,000, this audit evaluates your site's current SEO performance and identifies areas for improvement."
-      },
-      {
-        name: "On-Page SEO",
-        startingPrice: 1500,
-        info: "Starting at $1,500, this package optimizes on-page elements like meta tags, content, images, and internal linking for better rankings."
-      },
-      {
-        name: "Full SEO Package",
-        startingPrice: 3000,
-        info: "Starting at $3,000, this comprehensive package includes an SEO audit, on-page optimization, link-building, and performance tracking."
-      }
-    ]
-  }
-];
-
 export const companySpecificServices: Services[] = [
   {
-    name: "Company Rebranding",
+    name: "Transform Your Brand with Our Rebranding Services",
+    description: "Marketing Strategy",
     startingPrice: 5000,
-    info: "Our comprehensive rebranding services are designed to breathe new life into your company’s identity, delivering a fresh, modern transformation that resonates deeply with your audience and aligns perfectly with your business goals. We specialize in redefining every aspect of your brand, from striking logo designs and compelling messaging to a cohesive, forward-thinking brand strategy. By crafting a unique and authentic identity, we help your business rise above the competition, build lasting customer trust, and leave a powerful impression that drives meaningful growth and long-term success.",
+    info: "Our comprehensive rebranding services give your company a fresh, modern identity that truly connects with your audience and aligns with your business goals. We specialize in logo design, brand messaging, visual identity, and strategic positioning, ensuring every element reflects your brand’s unique vision. By crafting a cohesive, future-ready brand strategy, we help you stand out from the competition, build trust, and create a lasting impact. Elevate your business with a powerful transformation that fuels growth and long-term success.",
     details:
       "Our rebranding services include a full strategy to redefine your brand image. From logo redesign to complete brand strategies, we ensure your company stands out and connects with your audience.",
     pricingTiers: [
@@ -323,9 +254,10 @@ export const companySpecificServices: Services[] = [
     ]
   },
   {
-    name: "Custom Website Design",
+    name: "Custom Websites Designed for Impact and Performance",
+    description: "Brand Differentiation",
     startingPrice: 2500,
-    info: "We design custom websites that don’t just look amazing but also work hard for your business. Aligned with your goals and tailored to reflect your unique brand identity, every website we create is a seamless blend of creativity and functionality. Fully responsive and optimized for performance, our designs deliver flawless experiences across all devices—from desktops to smartphones. With intuitive navigation, lightning-fast load times, and captivating visuals, we craft websites that engage your audience, inspire action, and fuel your business's growth. Let us help you make a lasting impression online and achieve success like never before.",
+    info: "We create custom websites that do more than just look great—they work strategically to drive your business forward. Every website we design is a seamless blend of creativity and functionality, tailored to reflect your brand identity and business goals. Our fully responsive, high-performance designs ensure flawless experiences across desktops, tablets, and smartphones. With intuitive navigation, fast load speeds, and engaging visuals, we craft websites that captivate audiences, boost conversions, and fuel growth. Let’s build a digital presence that makes a lasting impact and sets your brand apart.",
     details:
       "We specialize in creating custom websites that align with your brand and business objectives. From layout design to functionality, we ensure a seamless user experience.",
     pricingTiers: [
@@ -352,9 +284,10 @@ export const companySpecificServices: Services[] = [
     ]
   },
   {
-    name: "E-Commerce Site Development",
+    name: "E-Commerce Solutions Built for Growth and Success",
+    description: "Selling Online",
     startingPrice: 3500,
-    info: "We design scalable, secure, and user-friendly e-commerce platforms tailored to elevate customer experience and drive sales. With intuitive navigation, seamless payment integration, and robust security, our platforms make shopping easy and secure. Built for growth, they include advanced features like personalized recommendations, inventory management, and analytics to optimize performance. Whether launching a new store or upgrading an existing one, we deliver solutions that showcase your brand and maximize success.",
+    info: "We design scalable, secure, and user-friendly e-commerce platforms that enhance the customer experience and drive sales growth. With intuitive navigation, seamless checkout, and robust security, our platforms ensure a smooth and secure shopping experience for your customers. Designed for long-term success, our solutions include personalized recommendations, inventory management, and in-depth analytics to optimize performance. Whether you're launching a new online store or upgrading an existing platform, we deliver tailored e-commerce solutions that showcase your brand, increase conversions, and maximize your success.",
     details:
       "We create e-commerce websites designed for security, scalability, and user satisfaction. From product pages to checkout systems, we provide the tools for a successful online store.",
     pricingTiers: [
@@ -381,9 +314,10 @@ export const companySpecificServices: Services[] = [
     ]
   },
   {
-    name: "Single Page Application",
+    name: "High-Performance Single-Page Applications (SPAs) for a Seamless User Experience",
+    description: "Enhanced UX",
     startingPrice: 2000,
-    info: "We specialize in developing dynamic, fast-loading single-page applications (SPAs) that prioritize seamless navigation, real-time updates, and exceptional performance. By leveraging modern frameworks and technologies, our SPAs provide an engaging, interactive experience that adapts flawlessly to various devices and screen sizes. Designed with both speed and user retention in mind, our applications ensure smooth transitions, reduced load times, and responsive interactions, creating a user experience that is not only efficient but also memorable. Whether it’s enhancing functionality or optimizing performance, our SPAs are tailored to meet the unique needs of your audience.",
+    info: "We specialize in building fast, dynamic, and highly responsive single-page applications (SPAs) that deliver real-time updates, seamless navigation, and top-tier performance. Using cutting-edge frameworks and modern development techniques, our SPAs provide an engaging, app-like experience that works flawlessly across all devices and screen sizes. Designed for speed and user retention, our applications feature smooth transitions, minimal load times, and interactive elements that keep users engaged. Whether you're looking to enhance functionality, streamline performance, or create an immersive user journey, our SPAs are tailored to meet your business objectives and audience needs.",
     details:
       "We create SPAs optimized for speed and interactivity, dynamically loading content to ensure seamless experiences and boost user engagement..",
     pricingTiers: [
@@ -410,9 +344,10 @@ export const companySpecificServices: Services[] = [
     ]
   },
   {
-    name: "Database Management",
+    name: "Optimized & Secure Database Management Solutions",
+    description: "Data Security",
     startingPrice: 1500,
-    info: "Our database management services deliver secure, scalable, and efficient solutions designed to store, organize, and access your data with ease. Tailored to meet your specific needs, we optimize database performance to ensure fast and reliable operations, even as your data grows. Advanced security measures protect sensitive information, maintaining compliance with industry standards and safeguarding against potential threats. With seamless scalability, our solutions are built to adapt to your evolving business requirements, empowering your organization with the tools to handle complex data demands and support sustained growth.",
+    info: "Our database management services provide secure, scalable, and high-performance solutions that streamline data storage, organization, and accessibility. Designed to meet your unique business needs, we ensure fast and reliable operations with optimized performance, even as your data scales. Advanced security protocols safeguard sensitive information, ensuring compliance with industry standards and protecting against potential threats. Whether you need real-time data processing, seamless integrations, or scalable storage solutions, our expert database management empowers your business to handle complex data demands while supporting long-term growth and efficiency.",
     details:
       "Our database management services ensure that your data is stored, organized, and accessible. We design databases that can scale as your business grows, integrate real-time data, and ensure high levels of security to protect sensitive information.",
     pricingTiers: [
@@ -439,9 +374,10 @@ export const companySpecificServices: Services[] = [
     ]
   },
   {
-    name: "Brand Storytelling",
+    name: "Authentic Brand Storytelling That Captivates & Connects",
+    description: "Brand Awareness",
     startingPrice: 2000,
-    info: "We craft compelling brand narratives that authentically define your identity and deeply resonate with your audience. By leveraging the power of strategic storytelling, we bridge the gap between your brand and your audience’s emotions, creating a connection that goes beyond transactions. Our approach builds a meaningful story around your values, mission, and vision, fostering loyalty, trust, and long-term engagement. Whether it’s through messaging, visuals, or campaigns, we ensure your brand stands out and remains memorable in a competitive marketplace..",
+    info: "We craft compelling brand narratives that authentically define your identity and create a deep emotional connection with your audience. Through strategic storytelling, we go beyond transactions—bridging the gap between your brand’s values, mission, and vision to build trust and long-term loyalty. Our approach ensures that every message, visual, and campaign aligns seamlessly, reinforcing a strong, memorable presence in a competitive marketplace. Whether launching a new brand or revitalizing an existing one, we help you tell your story in a way that inspires, engages, and resonates.",
     details: "We help brands tell their unique stories, building a narrative that reflects your values, vision, and goals. Through strategic storytelling, we connect with your target audience on an emotional level, strengthening brand loyalty.",
     pricingTiers: [
       {
@@ -458,12 +394,86 @@ export const companySpecificServices: Services[] = [
   },
 ];
 
+export const websiteServices: Services[] = [
+  {
+    name: "User-Centered Interface Design for Seamless Experiences",
+    description: "Tailored UX",
+    startingPrice: 3500,
+    info: "We design intuitive, functional interfaces that strike the perfect balance between usability, accessibility, and aesthetic appeal. Through in-depth user research, we uncover insights into your audience’s behaviors, needs, and pain points—ensuring every design decision is data-driven. Our process, from wireframing and prototyping to rigorous testing and refinement, prioritizes both beauty and functionality. By integrating accessibility best practices, we create inclusive experiences that cater to all users, regardless of ability. The result? Engaging, seamless, and user-friendly interfaces that leave a lasting impression and drive meaningful interactions.",
+    details:
+      "Our UX design services focus on creating seamless and engaging user experiences. By conducting thorough research and usability testing, we deliver designs that simplify interactions and enhance effectiveness. Services include user research, wireframing, prototyping, and testing.",
+    pricingTiers: [
+      {
+        name: "User Research & Prototyping",
+        startingPrice: 3500,
+        info: "Starting at $3,500, this package covers user research, interviews, and detailed prototyping to understand and design for user needs."
+      },
+      {
+        name: "Comprehensive UX Design",
+        startingPrice: 5000,
+        info: "Starting at $5,000, this package includes end-to-end UX design, incorporating research, prototyping, usability testing, and final design delivery."
+      }
+    ]
+  },
+  {
+    name: "From Concept to Clickable: Wireframing & Prototyping Services",
+    description: "User-Centric Designs",
+    startingPrice: 1000,
+    info: "Our wireframing and prototyping services transform your ideas into functional, user-centric designs that serve as the foundation for a seamless user experience. We begin with low-fidelity wireframes, mapping out the structure, navigation, and layout to establish a clear design blueprint. From there, we create high-fidelity prototypes that mimic real interactions, allowing you to experience and refine the user journey before development begins. These interactive previews help streamline decision-making, improve design efficiency, and ensure practicality and usability, ultimately saving time and resources while optimizing the final product.",
+    details:
+      "We provide wireframing and prototyping services to help you visualize user interactions and refine design ideas before development begins. These tools are essential for identifying usability issues and ensuring an optimal user experience.",
+    pricingTiers: [
+      {
+        name: "Low-Fidelity Wireframes",
+        startingPrice: 1000,
+        info: "Starting at $1,000, these quick, basic sketches outline the layout and navigation of your site or app."
+      },
+      {
+        name: "High-Fidelity Wireframes",
+        startingPrice: 2000,
+        info: "Starting at $2,000, these detailed wireframes showcase user interface designs with a focus on usability and aesthetics."
+      },
+      {
+        name: "Interactive Prototypes",
+        startingPrice: 2500,
+        info: "Starting at $2,500, this tier provides clickable prototypes that simulate real user interactions for testing and validation."
+      }
+    ]
+  },
+  {
+    name: "Maximize Your Online Reach with Expert SEO Optimization",
+    description: "Organic Traffic",
+    startingPrice: 1000,
+    info: "Our SEO optimization services are designed to increase your website’s visibility, attract high-quality organic traffic, and drive conversions—whether that means boosting e-commerce sales, growing newsletter subscriptions, or enhancing brand awareness. We implement data-driven strategies that include in-depth keyword research, on-page optimization, high-value content improvements, and strategic link-building to improve your search engine rankings. By staying ahead of algorithm updates and industry best practices, we ensure your site remains competitive, relevant, and optimized for long-term success in an evolving digital landscape. Let us help you connect with the right audience and maximize your online potential.",
+    details:
+      "Our SEO optimization services focus on enhancing your website’s visibility in search engines. From keyword research to link-building, we implement effective techniques to drive organic traffic and improve your site's ranking and overall performance.",
+    pricingTiers: [
+      {
+        name: "SEO Audit",
+        startingPrice: 1000,
+        info: "Starting at $1,000, this audit evaluates your site's current SEO performance and identifies areas for improvement."
+      },
+      {
+        name: "On-Page SEO",
+        startingPrice: 1500,
+        info: "Starting at $1,500, this package optimizes on-page elements like meta tags, content, images, and internal linking for better rankings."
+      },
+      {
+        name: "Full SEO Package",
+        startingPrice: 3000,
+        info: "Starting at $3,000, this comprehensive package includes an SEO audit, on-page optimization, link-building, and performance tracking."
+      }
+    ]
+  }
+];
+
 export const contentCreationServices: Services[] = [
   {
-    name: "Website Copywriting",
+    name: "Engaging, SEO-Optimized Website Content That Converts",
+    description: "Engaging Readers",
     startingPrice: 1500,
-    info: "We create clear, persuasive, and SEO-optimized website content that effectively conveys your brand's message while engaging your audience. Our expertly crafted copy not only captivates visitors but also improves search engine visibility, driving organic traffic to your site. By aligning with your brand voice and audience needs, our content enhances user experience, encourages conversions, and helps establish your online presence as authoritative and trustworthy.",
-    details: "Our copywriting services deliver tailored content that is both engaging and optimized for search engines. From homepage messaging to service descriptions, we ensure your website communicates effectively while boosting visibility.",
+    info: "We craft clear, compelling, and SEO-driven website content designed to captivate your audience, enhance brand messaging, and improve search engine rankings. Our expertly written copy aligns with your brand voice, effectively communicates your value proposition, and guides visitors toward conversions. By integrating strategic keywords and user-focused storytelling, we help establish your online authority, boost organic traffic, and create a seamless user experience that fosters trust and engagement. Whether you need landing pages, service descriptions, or blog content, our tailored approach ensures your message resonates and drives results.",
+    details: "Our copywriting services craft SEO-optimized, engaging content that boosts visibility and drives conversions. From web pages to service descriptions, we ensure your message is clear and compelling.",
     pricingTiers: [
       {
         name: "Basic",
@@ -483,10 +493,11 @@ export const contentCreationServices: Services[] = [
     ]
   },
   {
-    name: "Product Guides/Manuals",
+    name: "Comprehensive, User-Friendly Product Guides & Manuals",
+    description: "User Education",
     startingPrice: 750,
-    info: "We develop detailed, user-friendly product guides and manuals that break down complex information into clear and accessible content. Designed with your audience in mind, our guides ensure that users can quickly and easily understand your products, enhancing their overall experience. With a focus on clarity, precision, and practical usability, our manuals provide step-by-step instructions and helpful visuals that empower customers to confidently navigate and utilize your offerings.",
-    details: "Our product guides and manuals are designed to help users understand and get the most out of your products. We provide clear, step-by-step instructions and troubleshooting tips to ensure a positive user experience.",
+    info: "We specialize in creating detailed, easy-to-follow product guides and manuals that transform complex information into clear, accessible content. Designed with usability and clarity in mind, our guides help users quickly understand your products, improving their overall experience and satisfaction. With step-by-step instructions, engaging visuals, and concise explanations, we ensure that customers can confidently navigate, assemble, troubleshoot, and maximize the use of your offerings. Whether it's a technical manual, instructional booklet, or digital user guide, our expertly crafted content enhances customer support, reduces confusion, and builds trust in your brand.",
+    details: "Our product guides and manuals simplify complex information with clear, step-by-step instructions and troubleshooting tips. Designed for usability and clarity, they enhance the user experience, reduce confusion, and help customers get the most out of your products.",
     pricingTiers: [
       {
         name: "Quick Start Guides",
@@ -506,10 +517,11 @@ export const contentCreationServices: Services[] = [
     ]
   },
   {
-    name: "Blog Writing",
+    name: "SEO-Optimized, Engaging Blog Content",
+    description: "Web Traffic",
     startingPrice: 200,
-    info: "We craft engaging and informative blog posts that captivate your audience while improving your website's SEO performance. Each post is carefully tailored to reflect your brand voice, ensuring consistency and authenticity. By delivering valuable, relevant content, we help establish your authority in your industry, drive organic traffic, and foster stronger connections with your readers, enhancing your overall online presence..",
-    details: "We write engaging and informative blog posts that keep your audience interested while improving your SEO. Our blog content is tailored to your brand voice, ensuring that every post is relevant and valuable to your readers.",
+    info: "We create compelling, informative blog posts that not only captivate your audience but also enhance your website’s SEO performance. Every post is carefully crafted to align with your brand voice and industry expertise, ensuring authenticity and consistency. By delivering valuable, relevant content, we help establish your brand as an authority in your field, boost organic traffic, and foster deeper connections with your audience. Our blogs are designed to educate, inspire, and engage, driving higher visibility, increased engagement, and long-term growth for your online presence.",
+    details: "Our blog writing services deliver engaging, SEO-optimized content that captivates your audience and boosts search rankings. Tailored to your brand voice and industry, our blog posts provide valuable insights, drive organic traffic, and establish your authority online.",
     pricingTiers: [
       {
         name: "Single Blog Post",
@@ -529,10 +541,11 @@ export const contentCreationServices: Services[] = [
     ]
   },
   {
-    name: "Technical Writing",
+    name: "Expert Technical Writing for Clarity & Precision",
+    description: "Documentation",
     startingPrice: 750,
-    info: "Our technical writing services specialize in converting complex concepts into clear, precise, and accessible documentation. Whether it's software manuals, technical guides, or white papers, we deliver content that is both accurate and user-friendly. By focusing on clarity and detail, we ensure your audience can easily understand and utilize the information, enhancing their overall experience and confidence in your product or service.",
-    details: "Our technical writing services focus on making complex information accessible. Whether it’s software documentation, user manuals, or technical reports, we ensure that the content is clear, precise, and easy to follow.",
+    info: "Our technical writing services transform complex concepts into clear, concise, and user-friendly documentation. Whether you need software manuals, API documentation, white papers, or technical guides, we deliver accurate, well-structured content that enhances understanding and usability. By prioritizing clarity, precision, and accessibility, we ensure your audience can easily navigate and apply the information, improving their experience and confidence in your product or service. Our expertly crafted documents support seamless adoption, reduced learning curves, and enhanced user engagement across technical and non-technical audiences alike.",
+    details: "Our technical writing services transform complex information into clear, concise, and user-friendly documentation. Whether it's software guides, user manuals, or technical reports, we ensure accuracy, readability, and a seamless user experience.",
     pricingTiers: [
       {
         name: "Short Guides or SOPs",
@@ -552,10 +565,11 @@ export const contentCreationServices: Services[] = [
     ]
   },
   {
-    name: "Online Courses",
+    name: "Engaging & Interactive Online Course Development",
+    description: "Diverse Learning Styles",
     startingPrice: 2000,
-    info: "We design and develop interactive online courses that seamlessly integrate multimedia elements to educate and engage your audience. Whether you’re sharing industry expertise, training employees, or providing educational content, our courses are customized to align with your objectives and deliver impactful learning experiences. With a focus on user engagement, clear structure, and accessibility, our solutions captivate learners and ensure effective knowledge transfer for lasting results.",
-    details: "We help you create online courses that provide real value to your audience. From video tutorials to quizzes, we ensure your courses are engaging, informative, and structured in a way that enhances learning.",
+    info: "We design and develop interactive online courses that combine multimedia, intuitive design, and engaging content to provide impactful learning experiences. Whether you're offering industry training, employee development, or educational programs, our courses are tailored to align with your objectives and audience needs. By integrating videos, quizzes, and interactive elements, we ensure maximum engagement, knowledge retention, and accessibility. With a focus on structured content, user-friendly navigation, and effective knowledge transfer, our solutions empower learners to gain valuable skills and insights that drive lasting success.",
+    details: "We design engaging, interactive online courses that deliver real value to your audience. From video tutorials and quizzes to structured learning modules, we ensure your courses are informative, user-friendly, and optimized for effective knowledge retention.",
     pricingTiers: [
       {
         name: "Short Courses (1–3 modules)",
@@ -575,10 +589,11 @@ export const contentCreationServices: Services[] = [
     ]
   },
   {
-    name: "Tutorial Creation",
+    name: "Step-by-Step Tutorials for Seamless Learning",
+    description: "Knowledge Sharing",
     startingPrice: 200,
-    info: "We develop step-by-step tutorials that simplify complex tasks and empower users to achieve their goals with ease. Designed to be clear, concise, and highly user-friendly, our tutorials provide straightforward instructions and practical guidance. By breaking down processes into manageable steps, we ensure your audience can confidently follow along, enhancing their understanding and success.",
-    details: "We create tutorials that break down complex tasks into manageable steps. Whether for software, hardware, or services, our tutorials ensure users can follow along easily and achieve their goals.",
+    info: "We create clear, concise, and user-friendly tutorials that simplify complex tasks and guide users through each step with ease. Designed for maximum clarity and accessibility, our tutorials break down technical processes, software usage, and product functionalities into easy-to-follow instructions. By incorporating visual aids, structured guidance, and practical examples, we empower users to confidently navigate challenges, master new skills, and achieve their goals efficiently.",
+    details: "We develop clear, step-by-step tutorials that simplify complex tasks for users. Whether for software, hardware, or services, our tutorials provide easy-to-follow instructions that enhance user experience, boost engagement, and ensure successful implementation.",
     pricingTiers: [
       {
         name: "Quick Start Guides",
@@ -593,10 +608,11 @@ export const contentCreationServices: Services[] = [
     ]
   },
   {
-    name: "Brochures and/or Flyers",
+    name: "Eye-Catching Brochures and Flyers That Make an Impact",
+    description: "Promoting Services",
     startingPrice: 50,
-    info: "We create visually stunning brochures and flyers that effectively highlight your products and services. Combining clear, persuasive messaging with impactful visuals, our designs are crafted to captivate your audience and communicate your value. Whether for promotions, events, or brand storytelling, our brochures and flyers ensure you stand out and leave a memorable impression.",
-    details: "Our brochure and flyer design services help you market your products effectively. We focus on making sure your message is clear and the design stands out, giving your marketing materials maximum impact.",
+    info: "We design visually compelling brochures and flyers that effectively showcase your products, services, and brand message. By blending engaging visuals, persuasive copy, and strategic layouts, we create marketing materials that capture attention, communicate value, and inspire action. Whether for promotions, events, or corporate branding, our designs ensure your message stands out and leaves a lasting impression on your audience.",
+    details: "Our brochure and flyer design services create eye-catching, high-impact marketing materials that effectively showcase your products and services. We ensure clear messaging, compelling visuals, and strategic layouts to maximize engagement and brand awareness.",
     pricingTiers: [
       {
         name: "Flyers (One Page)",
@@ -621,10 +637,11 @@ export const contentCreationServices: Services[] = [
     ]
   },
   {
-    name: "Training Manual and Onboarding Paperwork Creation",
+    name: "Seamless Onboarding with Clear and Engaging Training Materials",
+    description: "Reducing Training Time",
     startingPrice: 500,
-    info: "We create comprehensive and professional training materials and onboarding documents to simplify and enhance the onboarding process for employees, clients, or users. Designed with clarity and engagement in mind, our materials provide step-by-step guidance, ensuring smooth transitions and successful integration. By addressing key needs and goals, we help you deliver a seamless onboarding experience that fosters confidence and alignment.",
-    details: "We create thorough and easy-to-understand training manuals and onboarding paperwork. These documents help onboard new employees, clients, or users with the necessary information to succeed.",
+    info: "We develop comprehensive and professional training materials that streamline the onboarding process for employees, clients, and users. Our content is designed for clarity, engagement, and ease of understanding, ensuring smooth transitions and successful integration into your organization. With step-by-step guidance, interactive elements, and tailored resources, we help you deliver an effective onboarding experience that fosters confidence, productivity, and long-term alignment with your goals.",
+    details: "We develop clear, structured training manuals and onboarding documents that streamline the transition for employees, clients, or users. Designed for efficiency and clarity, our materials ensure a smooth onboarding process, improving engagement and retention.",
     pricingTiers: [
       {
         name: "Basic Onboarding Documents",
@@ -649,10 +666,11 @@ export const contentCreationServices: Services[] = [
     ]
   },
   {
-    name: "Study Guide Creation",
+    name: "Master Any Subject with Comprehensive Study Guides",
+    description: "Focused Learning",
     startingPrice: 500,
-    info: "We design and create comprehensive study guides that help students and professionals master their subjects with confidence. Tailored to simplify complex concepts, our guides are structured to enhance understanding, boost retention, and support effective learning strategies. Whether for academic success or professional growth, our study guides provide the clarity and focus needed to achieve your goals.",
-    details: "We craft comprehensive study guides that help learners understand and retain critical information. Whether for academic or professional use, our study guides are designed to make complex material easy to grasp.",
+    info: "We craft detailed and easy-to-follow study guides designed to simplify complex concepts and enhance learning retention. Whether for students preparing for exams or professionals seeking to expand their knowledge, our guides provide clear explanations, structured layouts, and effective learning strategies. With a focus on clarity, comprehension, and application, our study materials help you grasp key topics, boost confidence, and achieve your academic or professional goals.",
+    details: "We create comprehensive, easy-to-understand study guides that simplify complex concepts for students and professionals. Designed for effective learning and retention, our guides enhance comprehension, making studying more efficient and engaging.",
     pricingTiers: [
       {
         name: "Basic Study Guides (5–10 pages)",
@@ -677,10 +695,11 @@ export const contentCreationServices: Services[] = [
     ]
   },
   {
-    name: "eBook Creation",
+    name: "Engaging & Professional eBook Creation",
+    description: "Lead Generation",
     startingPrice: 2500,
-    info: "We specialize in creating professional eBooks designed to meet educational, marketing, or publishing objectives. From crafting compelling, high-quality content to delivering visually appealing designs, our eBooks are tailored to captivate readers and effectively convey your message. Whether you aim to educate, promote, or inspire, our eBooks are crafted to engage your audience and achieve your goals.",
-    details: "Our eBook creation service combines writing and design expertise to deliver a professional, polished product. Whether for marketing, education, or publishing, we ensure your eBook is well-written and visually appealing.",
+    info: "We specialize in crafting high-quality, visually appealing eBooks tailored to your educational, marketing, or publishing needs. From compelling content development to eye-catching design, we ensure your eBook effectively conveys your message and captivates your audience. Whether you're looking to educate, inform, or promote, our expertly designed eBooks provide an engaging, polished, and impactful reading experience that aligns with your goals.",
+    details: "Our eBook creation service delivers professionally written, visually compelling content optimized for marketing, education, and publishing. We craft SEO-friendly, engaging eBooks that enhance credibility, attract readers, and drive conversions.",
     pricingTiers: [
       {
         name: "Basic eBook",
@@ -695,10 +714,11 @@ export const contentCreationServices: Services[] = [
     ]
   },
   {
-    name: "Newsletters",
+    name: "Engaging & Impactful Newsletters",
+    description: "Measurable Results",
     startingPrice: 300,
-    info: "We design and create engaging newsletters that help you connect with your audience, keeping them informed and inspired. Whether it’s a one-time update or a recurring series, our newsletters combine compelling content with visually appealing layouts to ensure your message is effective and memorable. Perfect for building relationships and maintaining a strong connection with your audience.",
-    details: "Our newsletter services ensure you stay connected with your audience by providing valuable, timely content. We handle both the writing and design, ensuring that your newsletter stands out in inboxes.",
+    info: "We design and craft engaging, visually appealing newsletters that keep your audience informed, inspired, and connected. Whether it’s a one-time announcement or a recurring series, our newsletters blend compelling content, strategic messaging, and eye-catching design to ensure maximum impact. Ideal for building relationships, boosting engagement, and strengthening brand loyalty, our newsletters help you stay top-of-mind with your audience.",
+    details: "We create well-crafted, visually appealing newsletters that keep your audience engaged. From compelling content to strategic design, we ensure your message stands out while optimizing for open rates, readability, and conversions.",
     pricingTiers: [
       {
         name: "Single Newsletter",
@@ -739,7 +759,7 @@ export const FAQs: FAQ[] = [
     answer: "Yes! We provide four structured pricing plans to accommodate businesses of all sizes and budgets: Basic, Standard, Premium, and Custom Plans. The Basic Plan is perfect for startups or small businesses needing a professional yet simple online presence, while the Standard Plan includes additional design elements and optimization features. Our Premium Plan offers a more advanced, feature-rich solution with custom functionality, SEO strategies, and enhanced branding, while the Custom Plan is designed for businesses requiring unique, fully tailored solutions like e-commerce platforms, membership sites, or specialized integrations. We also offer flexible payment options and installment plans to make it easier for businesses to invest in their digital transformation without financial strain. During our consultation, we’ll help you determine the best plan for your needs, ensuring you receive the most value from our services."
   },
   {
-    question: "What services do you offer?",
+    question: "What Web Development Services does Phoenix Code Studio offer?",
     answer:
       "At Phoenix Code Studio, we offer a comprehensive range of digital solutions designed to help businesses establish a strong online presence and elevate their brand. Our services include company rebranding, where we refine and modernize your brand identity to align with your vision, and custom website development, crafting tailored, user-friendly websites that captivate and engage audiences. We specialize in database management, ensuring secure and efficient data handling, and UX/UI design, including wireframing and prototyping, to create seamless digital experiences. Our expertise extends to SEO optimization, enhancing your website’s visibility, and website copywriting, crafting compelling content that resonates with your audience. Additionally, we provide brand storytelling to communicate your unique value effectively, along with the creation of product guides, manuals, training materials, onboarding paperwork, study guides, eBooks, newsletters, and marketing collateral like brochures and flyers. For businesses seeking knowledge-sharing solutions, we develop online courses, tutorials, technical documentation, and blog content to establish authority in your industry. Whether you're looking to reimagine your brand, optimize your digital presence, or create impactful content, Phoenix Code Studio is your partner in innovation and growth."
   },
@@ -768,7 +788,7 @@ export const FAQs: FAQ[] = [
   },
   {
     question: "Do you provide SEO services, and how does SEO benefit my website?",
-    answer: "Yes! SEO optimization is an essential part of our website services, designed to improve your search engine rankings, drive organic traffic, and increase online visibility. We implement a combination of on-page, off-page, and technical SEO strategies to ensure your website performs well in search results. This includes keyword research and optimization, meta tag enhancements, internal linking strategies, site speed improvements, mobile responsiveness, and structured data markup. By optimizing your website for user experience and search engines, we help you attract the right audience, improve engagement, and boost conversions. A strong SEO strategy ensures that your business remains competitive and discoverable, ultimately leading to long-term growth and online success."
+    answer: "Yes! Yes, we offer SEO services tailored to enhance your digital presence, attracting more traffic to your site. SEO optimization is an essential part of our website services, designed to improve your search engine rankings, drive organic traffic, and increase online visibility. We implement a combination of on-page, off-page, and technical SEO strategies to ensure your website performs well in search results. This includes keyword research and optimization, meta tag enhancements, internal linking strategies, site speed improvements, mobile responsiveness, and structured data markup. By optimizing your website for user experience and search engines, we help you attract the right audience, improve engagement, and boost conversions. A strong SEO strategy ensures that your business remains competitive and discoverable, ultimately leading to long-term growth and online success."
   },
   {
     question: "Can you help with rebranding my business?",
@@ -1173,10 +1193,9 @@ export const blogs: BlogPost[] = [
 export const pastProjects: Project[] = [
   {
     title: "Quiz Application",
-    img: ["/images/quizlet-application.png", "/images/quizlet-app-3.png"],
     featured: true,
-    description: "This is a simple Next.js project.It's a web-based quiz platform designed to offer a variety of quizzes across multiple subjects, including Chemistry, History, Math, and more. The application supports user registration, tracks progress, and allows users to select quizzes based on difficulty and subject. Users can register, reset their passwords, and manage their profiles with the ability to update personal information and choose default profile pictures. The application includes features like quiz progress tracking, score tracking, and a leaderboard to encourage competition. It also stores quiz data in localStorage, ensuring users can resume where they left off. Built with a responsive UI and accessibility features, the app provides a seamless experience across devices. Data management is handled using MySQL, Sequelize, and Next-Auth for secure user authentication and information retrieval.",
-    short: "This Next.js app, a conversion of Quizlet-Plus, offers quizzes in subjects like Chemistry, History, and Math. It features user registration, progress tracking, profile management, and a leaderboard. Data is stored in localStorage, with MySQL, Sequelize, and Next-Auth handling authentication. The app is responsive and includes accessibility features for a seamless experience.",
+    description: "This Next.js-based quiz platform delivers an engaging and interactive way to test knowledge across a wide range of subjects, including Chemistry, History, and Math. Designed for a seamless user experience, it features intuitive quiz selection based on difficulty and subject, along with robust user management options like registration, password recovery, and profile customization—including personal detail updates and avatar selection. Users can track their quiz progress, monitor scores, and compete on a dynamic leaderboard while enjoying the convenience of localStorage-powered session resumption. Built with a responsive and accessible UI, the platform ensures smooth performance across all devices. Secure authentication and data management are handled through MySQL, Sequelize, and Next-Auth, providing a reliable and secure foundation for an immersive learning experience.",
+    short: "This Next.js-based quiz platform offers an interactive way to test knowledge across various subjects like Chemistry, History, and Math. With intuitive quiz selection, progress tracking, and a competitive leaderboard, users can personalize their experience while enjoying seamless navigation across devices. Secure authentication and efficient data management ensure a reliable and engaging learning environment.",
     tags: ["User Auth", "Progress Tracking", "Dynamic", "Data Filtering"],
     languages: ["HTML", "TypeScript"],
     frameworks: ["Next.js",],
@@ -1186,34 +1205,34 @@ export const pastProjects: Project[] = [
   },
   {
     title: "Bootstrap Website Mock",
-    img: ["/images/bootstrap-1.png", "/images/bootstrap-2.png", "/images/bootstrap-3.png", "/images/bootstrap-4.png"],
     featured: true,
-    description: "This is a simple Next.js project.It's a web-based quiz platform designed to offer a variety of quizzes across multiple subjects, including Chemistry, History, Math, and more. The application supports user registration, tracks progress, and allows users to select quizzes based on difficulty and subject. Users can register, reset their passwords, and manage their profiles with the ability to update personal information and choose default profile pictures. The application includes features like quiz progress tracking, score tracking, and a leaderboard to encourage competition. It also stores quiz data in localStorage, ensuring users can resume where they left off. Built with a responsive UI and accessibility features, the app provides a seamless experience across devices. Data management is handled using MySQL, Sequelize, and Next-Auth for secure user authentication and information retrieval.",
-    short: "This Next.js app, a conversion of Quizlet-Plus, offers quizzes in subjects like Chemistry, History, and Math. It features user registration, progress tracking, profile management, and a leaderboard. Data is stored in localStorage, with MySQL, Sequelize, and Next-Auth handling authentication. The app is responsive and includes accessibility features for a seamless experience.",
+    description: "The Bootstrap Icons Library website is a sleek and user-friendly platform designed to provide developers with a comprehensive collection of high-quality, scalable icons for modern web projects. Featuring an intuitive search function, category-based browsing, and easy-to-use copy-and-paste functionality, the site allows users to quickly find and integrate icons into their designs. With a focus on simplicity and customization, each icon is available in multiple styles and can be adjusted for size, color, and stroke width to fit any project. Whether building a website, web app, or UI component, the Bootstrap Icons Library offers a seamless experience for accessing and implementing visually appealing icons.",
+    short: "The Bootstrap Icons Library is a user-friendly platform offering a vast collection of scalable icons for web development. With intuitive search, category-based browsing, and simple copy-and-paste functionality, finding and integrating icons is quick and effortless. Easily customize icons to match your design needs and enhance projects with clean, adaptable visuals.",
     tags: ["Mock Up", "Dynamic", "Data Filtering"],
     languages: ["HTML", "JavaScript", "CSS", "SCSS"],
     frameworks: ["Bootstrap CSS",],
     libraries: ["jQuery"],
+    liveLink: "https://tmchuynh.github.io/Bootstrap-Icon-Mock/",
     githubLink: "https://github.com/tmchuynh/Bootstrap-Icon-Mock",
   },
   {
     title: "Military Fitness Calculator",
     featured: true,
-    description: "Army physical fitness test score is calculated by assigning a number of points to doing sit-ups, push-ups, and the time in which you do a 2-mile run. The maximum APFT score is 100 points per discipline, which gives a total of 300 points. To pass the test, it is required to get at least 60 points (60%) in each category. This means that the minimum total score is 180 points. The APFT calculator shows the overall score in the last field. The US Army service members are also obliged to meet body fat standards which take height, neck, waist, and hip measurements into consideration.",
+    description: "The Army Physical Fitness Test (APFT) evaluates physical readiness by scoring three key exercises: sit-ups, push-ups, and a timed 2-mile run. Each category is worth a maximum of 100 points, with a perfect total score of 300. To pass, service members must earn at least 60 points in each discipline, requiring a minimum overall score of 180. The APFT calculator provides an easy way to determine an individual’s total score based on performance. Additionally, U.S. Army personnel must adhere to body fat standards, which consider height, neck, waist, and hip measurements to ensure overall fitness and health compliance.",
     short: "It is obligatory for US Army service members to go through the fitness test twice a year. It is designed so that soldiers can prove their muscular strength, endurance, and cardiovascular respiratory fitness.",
     tags: ["Educational", "Dynamic"],
     languages: ["JavaScript", "HTML", "CSS"],
     frameworks: ["Materialize CSS"],
     libraries: ["jQuery",],
     technologies: ["vanilla-tilt.js", "Ajax"],
+    liveLink: "https://tmchuynh.github.io/Military-Fitness-Calculator/",
     githubLink: "https://github.com/tmchuynh/Military-Fitness-Calculator",
   },
   {
     title: "IAC Company Website",
-    img: ["/images/iac.png", "/images/iac-1.png", "/images/iac-website.png", "/images/iac-2.png"],
     featured: true,
-    description: "The International Activities Club (IAC) website is a user-friendly platform that showcases the organization's educational programs and after-school activities. It highlights the A.R.C. Initiative, focusing on hands-on learning and real-world application of classroom knowledge. The site provides detailed information about the diverse extracurricular options, such as chess, sports, and creative writing, offered to students from 1st grade through high school. With easy navigation, the website ensures parents and schools can explore IAC’s services and find enriching learning opportunities for students.",
-    short: "The IAC website highlights educational programs, the A.R.C. Initiative, and after-school activities like chess, sports, and creative writing, offering enriching opportunities for students. It’s designed for easy navigation by parents and schools to explore IAC’s services.",
+    description: "The International Activities Club (IAC) website is an engaging and easy-to-navigate platform designed to highlight the organization’s diverse educational programs and after-school activities. It prominently features the A.R.C. Initiative, which emphasizes hands-on learning and real-world applications of classroom knowledge. The site provides comprehensive details on a wide range of extracurricular options, including chess, sports, and creative writing, catering to students from 1st grade through high school. With a user-friendly interface, the website allows parents, educators, and schools to seamlessly explore IAC’s offerings, ensuring students have access to enriching and developmentally beneficial learning experiences.",
+    short: "The IAC website showcases its educational programs, the A.R.C. Initiative, and a variety of after-school activities, including chess, sports, and creative writing. With a user-friendly design, it enables parents and schools to easily explore enriching opportunities for students.",
     tags: ["Educational", "Dynamic"],
     languages: ["JavaScript", "HTML", "CSS"],
     frameworks: ["Express", "Bootstrap CSS",],
@@ -1224,8 +1243,8 @@ export const pastProjects: Project[] = [
   {
     title: "Emoji Finder",
     featured: true,
-    description: "The International Activities Club (IAC) website is a user-friendly platform that showcases the organization's educational programs and after-school activities. It highlights the A.R.C. Initiative, focusing on hands-on learning and real-world application of classroom knowledge. The site provides detailed information about the diverse extracurricular options, such as chess, sports, and creative writing, offered to students from 1st grade through high school. With easy navigation, the website ensures parents and schools can explore IAC’s services and find enriching learning opportunities for students.",
-    short: "The IAC website highlights educational programs, the A.R.C. Initiative, and after-school activities like chess, sports, and creative writing, offering enriching opportunities for students. It’s designed for easy navigation by parents and schools to explore IAC’s services.",
+    description: "The Emoji Finder website is a fast and intuitive tool that helps users quickly search and discover the perfect emoji for any situation. Designed to function like an emoji keyboard, it allows users to browse, filter, and copy emojis with ease. Featuring a powerful search bar, category-based navigation, and real-time suggestions, the site ensures a seamless experience for finding emojis by keyword, emotion, or symbol. Whether for messaging, social media, or creative projects, the Emoji Finder makes it effortless to express yourself with just a click.",
+    short: "The Emoji Finder is a quick and intuitive tool that helps you search, browse, and copy emojis with ease. Designed to function like an emoji keyboard, it allows users to find the perfect emoji by keyword, category, or emotion. Whether for messaging, social media, or creative projects, this tool makes expressing yourself effortless.",
     tags: ["Fun", "Dynamic"],
     languages: ["JavaScript", "HTML", "CSS"],
     libraries: ["React"],
@@ -1234,13 +1253,9 @@ export const pastProjects: Project[] = [
   },
   {
     title: "FirstGalaxy Company Website",
-    img: ["/images/firstgalaxy-website.png", "/images/firstgalaxy.png", "/images/firstgalaxy-1.png", "/images/firstgalaxy-2.png"],
     featured: false,
-    description: `
-      The FirstGalaxy NPM version Build Status website is designed to showcase the benefits of joining FirstGalaxy Inc. as a real estate agent. It provides helpful resources for starting a real estate career and offers easy access to agent listings.
-
-      The code demonstrates how to filter data by importing an agents object from ./data.js. It uses strict mode, establishes a dropdown menu for filtering options, and toggles its visibility when clicked. The glossary module is also imported to display terms dynamically on the page. Each term is iterated over and printed to the screen, allowing users to easily view the glossary content.`,
-    short: "The FirstGalaxy NPM version Build Status website showcases the benefits of joining FirstGalaxy Inc., offers resources for starting a real estate career, and connects users to agent listings. The code demonstrates data filtering, toggling dropdown visibility, and dynamically displaying glossary terms imported from ./data.js.",
+    description: "The FirstGalaxy website is a modern and intuitive platform designed to showcase a diverse range of properties, from residential homes to commercial spaces. It provides comprehensive listings with high-quality images, virtual tours, and detailed property descriptions, helping buyers and investors make informed decisions. With advanced search filters, users can effortlessly browse properties based on location, price, size, and amenities, ensuring a seamless house-hunting experience. The site also offers resources such as mortgage calculators, neighborhood insights, and expert real estate guidance to support clients at every step of their journey. Whether buying, selling, or renting, the platform connects users with top real estate professionals, making property transactions smooth and efficient.",
+    short: "The FirstGalaxy website offers a seamless way to browse, buy, sell, or rent properties with ease. Featuring high-quality listings, virtual tours, and advanced search filters, users can quickly find homes or commercial spaces that match their needs. With expert guidance, market insights, and mortgage tools, the platform simplifies the real estate journey for buyers, sellers, and investors alike.",
     tags: ["Real Estate", "Data Filtering", "Dynamic"],
     languages: ["JavaScript", "HTML", "CSS"],
     libraries: ["jQuery"],
@@ -1251,13 +1266,37 @@ export const pastProjects: Project[] = [
   {
     title: "Chess Game",
     featured: true,
-    description: "The code creates a 2D array of points. The first row is the x-axis and the second row is the y-axis. Each point in the array represents an evaluation of white's king position. The first value in each point is black's evaluation of white's king position, and the second value is white's evaluation of black's king position. [2, 3] evaluates to 0 for both values because it falls on both axes (x and y). [1, 2] evaluates to -1 for both values because it falls on both axes (x and y). [3, 4] evaluates to -4 for white but +5 for black because it falls on only.",
-    short: `chessboard.js is a standalone JavaScript Chess Board. It is designed to be "just a board" and expose a powerful API so that it can be used in different ways.The code starts by creating a board and setting up the game. The positionCount variable is used to keep track of how many chess pieces are on the board. var pawnEvalWhite = [ [0.0, 0.0, 0.0, 0.0, 0.0, 0.0], [5.0, 5.0, 5.0, 5.0], [1., 1., 2., 3.]] var knightEval = [ [-5., -4., -3.]] var bishopEvalWhite = [ [-2., -1.]] var rookEvalWhite = [ [-2.]`,
-    tags: ["Fun", "Dynamic"],
+    description: "This project is a web-based chess game built using Chessboard.js, providing an interactive and visually appealing chess experience. The game initializes a dynamic chessboard where users can play against each other or analyze chess positions. It incorporates a positional evaluation system, using a 2D array to assess board states, helping AI-driven decision-making. The evaluation matrix assigns values to different board positions, influencing how the AI determines the best move. Additionally, move validation, game tracking, and piece evaluation are integrated to ensure a realistic and strategic gameplay experience.",
+    short: "An interactive chess game using Chessboard.js, featuring a dynamic board setup, move validation, and AI-powered piece evaluation. With a built-in scoring system and real-time position tracking, the game ensures an engaging and strategic chess-playing experience.",
+    tags: ["Game", "Interactive", "Chess", "Strategy"],
     languages: ["JavaScript", "HTML", "CSS"],
-    technologies: ["Chessboard.js", "Node.js"],
-    githubLink: "https://github.com/tmchuynh/Chess-Game",
+    technologies: ["Chessboard.js", "Chess.js", "Node.js"],
+    liveLink: "https://tmchuynh.github.io/Chess-Game/",
+    githubLink: "https://github.com/tmchuynh/Chess-Game"
   },
+  {
+    title: "Meta Tic Tac Toe",
+    featured: false,
+    description: "This project is an advanced take on the classic Tic Tac Toe game, introducing a multi-board strategic layer where players must compete across nine interconnected mini-games. Built with an intuitive and interactive interface, Meta Tic Tac Toe challenges players to think ahead, control multiple boards, and outmaneuver their opponents. The game enforces dynamic move mechanics, where each turn dictates the opponent's next board, adding a layer of unpredictability and skill. Featuring a fully responsive design, score tracking, and strategic depth, this game offers a fresh and engaging experience for casual players and strategy enthusiasts alike.",
+    short: "A strategic twist on classic Tic Tac Toe, featuring nine interconnected mini-boards, dynamic move mechanics, and competitive gameplay. Plan ahead, control key boards, and outsmart your opponent in this multi-layered challenge.",
+    tags: ["Game", "Interactive", "Strategy", "Tic Tac Toe"],
+    languages: ["JavaScript", "HTML", "CSS"],
+    technologies: ["React.js", "Node.js"],
+    liveLink: "https://tmchuynh.github.io/meta_tic_tac_toe/",
+    githubLink: "https://github.com/tmchuynh/meta_tic_tac_toe"
+  },
+  {
+    title: "Sudoku Game",
+    featured: false,
+    description: "This project is a fully interactive Sudoku game that allows players to test their problem-solving skills across different difficulty levels. Users can choose from preset modes—Easy, Medium, and Hard—or customize the number of removed cells to create their own challenge. The game features an intuitive grid system, real-time error checking, and a clean, responsive interface. With smooth interactions and logical game mechanics, this Sudoku game provides an enjoyable experience for both beginners and seasoned puzzle solvers.",
+    short: "An engaging and interactive Sudoku game with preset difficulty levels and customizable challenges. Enjoy real-time validation, a responsive grid, and a clean UI for a seamless puzzle-solving experience.",
+    tags: ["Game", "Puzzle", "Sudoku", "Logic"],
+    languages: ["JavaScript", "HTML", "CSS"],
+    technologies: ["Vanilla JavaScript", "DOM Manipulation"],
+    liveLink: "https://tmchuynh.github.io/sudoku/",
+    githubLink: "https://github.com/tmchuynh/sudoku"
+  }
+
 ];
 
 export const jobPositions: JobPosition[] = [

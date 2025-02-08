@@ -25,6 +25,7 @@ export interface PricingTier {
 
 export interface Services {
   name: string;
+  description: string;
   startingPrice: number;
   info: string;
   details: string;
@@ -69,7 +70,6 @@ export interface BlogContent {
 
 export interface Project {
   title: string;
-  img?: string[];
   featured: boolean;
   description: string;
   short: string;
