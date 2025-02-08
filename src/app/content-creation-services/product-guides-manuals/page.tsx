@@ -56,7 +56,8 @@ const ProductGuidesManualsServices: FC = () => {
         </p>
         {contentCreationServices.map((service) => (
           <>
-            {service.name === "Product Guides/Manuals" && (
+            {service.name ===
+              "Comprehensive, User-Friendly Product Guides & Manuals" && (
               <ul>
                 {service.pricingTiers.map((pricing) => (
                   <li key={pricing.name}>

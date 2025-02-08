@@ -123,7 +123,8 @@ const EcommerceWebsite: FC = () => {
         <ul>
           {companySpecificServices.map(
             (service) =>
-              service.name === "E-Commerce Site Development" &&
+              service.name ===
+                "E-Commerce Solutions Built for Growth and Success" &&
               service.pricingTiers.map((tiers, index) => (
                 <li key={index}>
                   <span className="font-bold text-secondary">

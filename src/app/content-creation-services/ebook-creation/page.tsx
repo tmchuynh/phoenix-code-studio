@@ -53,7 +53,7 @@ const EbookCreationServices: FC = () => {
         <p>Pricing is tailored to your specific needs and project scope.</p>
         {contentCreationServices.map((service) => (
           <>
-            {service.name === "eBook Creation" && (
+            {service.name === "Engaging & Professional eBook Creation" && (
               <ul>
                 {service.pricingTiers.map((pricing) => (
                   <li key={pricing.name}>

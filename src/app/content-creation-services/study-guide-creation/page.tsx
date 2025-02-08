@@ -57,7 +57,8 @@ const StudyGuideCreation: FC = () => {
         </p>
         {contentCreationServices.map((service) => (
           <>
-            {service.name === "Study Guide Creation" && (
+            {service.name ===
+              "Master Any Subject with Comprehensive Study Guides" && (
               <ul>
                 {service.pricingTiers.map((pricing) => (
                   <li key={pricing.name}>

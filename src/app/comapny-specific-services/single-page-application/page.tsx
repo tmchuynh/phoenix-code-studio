@@ -87,7 +87,8 @@ const SPAServices: FC = () => {
         <ul>
           {companySpecificServices.map(
             (service) =>
-              service.name === "Single Page Application" &&
+              service.name ===
+                "High-Performance Single-Page Applications (SPAs) for a Seamless User Experience" &&
               service.pricingTiers.map((tiers, index) => (
                 <li key={index}>
                   <span className="font-bold text-secondary">

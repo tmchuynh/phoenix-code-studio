@@ -70,7 +70,8 @@ const TechnicalWritingServices: FC = () => {
         </p>
         {contentCreationServices.map((service) => (
           <>
-            {service.name === "Technical Writing" && (
+            {service.name ===
+              "Expert Technical Writing for Clarity & Precision" && (
               <ul>
                 {service.pricingTiers.map((pricing) => (
                   <li key={pricing.name}>

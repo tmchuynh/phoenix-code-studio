@@ -71,7 +71,8 @@ const WireframingPrototypingServices: FC = () => {
         <ul>
           {websiteServices.map(
             (service) =>
-              service.name === "Wireframing & Prototyping" &&
+              service.name ===
+                "From Concept to Clickable: Wireframing & Prototyping Services" &&
               service.pricingTiers.map((tiers, index) => (
                 <li key={index}>
                   <span className="font-bold text-secondary">

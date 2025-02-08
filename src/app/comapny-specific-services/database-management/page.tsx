@@ -72,7 +72,8 @@ const DatabaseServices: FC = () => {
         <ul>
           {companySpecificServices.map(
             (service) =>
-              service.name === "Database Management" &&
+              service.name ===
+                "Optimized & Secure Database Management Solutions" &&
               service.pricingTiers.map((tiers, index) => (
                 <li key={index}>
                   <span className="font-bold text-secondary">

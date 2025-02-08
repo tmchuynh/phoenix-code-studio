@@ -73,7 +73,8 @@ const CompanyRebranding: FC = () => {
         <ul>
           {companySpecificServices.map(
             (service) =>
-              service.name === "Company Rebranding" &&
+              service.name ===
+                "Transform Your Brand with Our Rebranding Services" &&
               service.pricingTiers.map((tiers, index) => (
                 <li key={index}>
                   <span className="font-bold text-secondary">

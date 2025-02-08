@@ -69,7 +69,8 @@ const WebsiteCopywritingServices: FC = () => {
         </p>
         {contentCreationServices.map((service) => (
           <>
-            {service.name === "Website Copywriting" && (
+            {service.name ===
+              "Engaging, SEO-Optimized Website Content That Converts" && (
               <ul>
                 {service.pricingTiers.map((pricing) => (
                   <li key={pricing.name}>

@@ -541,24 +541,28 @@ const PastProjectsPage: FC = () => {
                 currentPage === 1 ? "cursor-not-allowed" : "cursor-default"
               }
             />
-            <section className="text-center">
-              {indexOfLastProject >= filteredProjects.length &&
-              totalPages === 1 ? (
-                filteredProjects.length === pastProjects.length ? (
-                  <p>Showing all {filteredProjects.length} projects</p>
+            {isSmallScreen ? null : (
+              <section className="text-center">
+                {indexOfLastProject >= filteredProjects.length &&
+                totalPages === 1 ? (
+                  filteredProjects.length === pastProjects.length ? (
+                    <p>Showing all {filteredProjects.length} projects</p>
+                  ) : (
+                    <p>
+                      Showing all {filteredProjects.length} filtered projects
+                    </p>
+                  )
                 ) : (
-                  <p>Showing all {filteredProjects.length} filtered projects</p>
-                )
-              ) : (
-                <p>
-                  Showing {indexOfFirstProject + 1} to{" "}
-                  {indexOfLastProject > filteredProjects.length
-                    ? filteredProjects.length
-                    : indexOfLastProject}{" "}
-                  of {filteredProjects.length} projects
-                </p>
-              )}
-            </section>
+                  <p>
+                    Showing {indexOfFirstProject + 1} to{" "}
+                    {indexOfLastProject > filteredProjects.length
+                      ? filteredProjects.length
+                      : indexOfLastProject}{" "}
+                    of {filteredProjects.length} projects
+                  </p>
+                )}
+              </section>
+            )}
             <PaginationNext
               onClick={() => {
                 if (currentPage < totalPages) {
@@ -591,7 +595,7 @@ const PastProjectsPage: FC = () => {
                   >
                     <div className="h-full flex flex-col justify-between">
                       <div>
-                        <h2 className="font-semibold">{project.title}</h2>
+                        <h2 className="font-semibold mt-5">{project.title}</h2>
 
                         {isSmallScreen ? null : isLargeScreen ? (
                           <div>
@@ -679,46 +683,14 @@ const PastProjectsPage: FC = () => {
                         </div>
                       </div>
                     </div>
-
-                    {project.img && (
-                      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-2 pt-9">
-                        {isSmallScreen
-                          ? project.img.map(
-                              (img, index) =>
-                                index === 0 && (
-                                  <Image
-                                    key={index}
-                                    width={500}
-                                    height={300}
-                                    src={`${img}`}
-                                    alt={project.title}
-                                    className="w-full h-40 my-4 object-contain"
-                                  />
-                                )
-                            )
-                          : project.img.map((img, index) => (
-                              <Image
-                                key={index}
-                                width={500}
-                                height={300}
-                                src={`${img}`}
-                                alt={project.title}
-                                className={
-                                  isMediumScreen
-                                    ? "w-48 h-full ml-3 object-contain mx-auto"
-                                    : "w-72 h-full object-contain mx-auto"
-                                }
-                              />
-                            ))}
-                      </div>
-                    )}
                   </CardContent>
-                  <CardFooter className="h-fit py-3 flex flex-col items-start">
+                  <CardFooter className="h-fit md:py-3 flex flex-col items-start">
                     {/* Optional links */}
-                    <div className="flex mx-auto">
+                    <div className="flex flex-col gap-4 mx-auto">
                       {project.liveLink && (
                         <Button
                           variant="secondary"
+                          size={isSmallScreen ? "sm" : "default"}
                           onClick={() =>
                             window.open(project.liveLink, "_blank")
                           }
@@ -729,6 +701,7 @@ const PastProjectsPage: FC = () => {
                       {project.githubLink && (
                         <Button
                           variant="outline"
+                          size={isSmallScreen ? "sm" : "default"}
                           onClick={() =>
                             window.open(project.githubLink, "_blank")
                           }
@@ -756,24 +729,28 @@ const PastProjectsPage: FC = () => {
                 currentPage === 1 ? "cursor-not-allowed" : "cursor-default"
               }
             />
-            <section className="text-center">
-              {indexOfLastProject >= filteredProjects.length &&
-              totalPages === 1 ? (
-                filteredProjects.length === pastProjects.length ? (
-                  <p>Showing all {filteredProjects.length} projects</p>
+            {isSmallScreen ? null : (
+              <section className="text-center">
+                {indexOfLastProject >= filteredProjects.length &&
+                totalPages === 1 ? (
+                  filteredProjects.length === pastProjects.length ? (
+                    <p>Showing all {filteredProjects.length} projects</p>
+                  ) : (
+                    <p>
+                      Showing all {filteredProjects.length} filtered projects
+                    </p>
+                  )
                 ) : (
-                  <p>Showing all {filteredProjects.length} filtered projects</p>
-                )
-              ) : (
-                <p>
-                  Showing {indexOfFirstProject + 1} to{" "}
-                  {indexOfLastProject > filteredProjects.length
-                    ? filteredProjects.length
-                    : indexOfLastProject}{" "}
-                  of {filteredProjects.length} projects
-                </p>
-              )}
-            </section>
+                  <p>
+                    Showing {indexOfFirstProject + 1} to{" "}
+                    {indexOfLastProject > filteredProjects.length
+                      ? filteredProjects.length
+                      : indexOfLastProject}{" "}
+                    of {filteredProjects.length} projects
+                  </p>
+                )}
+              </section>
+            )}
             <PaginationNext
               onClick={() => {
                 if (currentPage < totalPages) {

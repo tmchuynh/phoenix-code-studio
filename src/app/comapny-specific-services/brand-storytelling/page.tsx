@@ -72,7 +72,8 @@ const BrandStorytellingServices: FC = () => {
         <ul>
           {companySpecificServices.map(
             (service) =>
-              service.name === "Brand Storytelling" &&
+              service.name ===
+                "Authentic Brand Storytelling That Captivates & Connects" &&
               service.pricingTiers.map((tiers, index) => (
                 <li key={index}>
                   <span className="font-bold text-secondary">

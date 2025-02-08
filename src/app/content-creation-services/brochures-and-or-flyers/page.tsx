@@ -54,7 +54,8 @@ const BrochuresAndFlyersServices: FC = () => {
         </p>
         {contentCreationServices.map((service) => (
           <>
-            {service.name === "Brochures and/or Flyers" && (
+            {service.name ===
+              "Eye-Catching Brochures and Flyers That Make an Impact" && (
               <ul>
                 {service.pricingTiers.map((pricing) => (
                   <li key={pricing.name}>

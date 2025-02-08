@@ -71,7 +71,8 @@ const SEOOptimization: FC = () => {
         <ul>
           {websiteServices.map(
             (service) =>
-              service.name === "SEO Optimization" &&
+              service.name ===
+                "Maximize Your Online Reach with Expert SEO Optimization" &&
               service.pricingTiers.map((tiers, index) => (
                 <li key={index}>
                   <span className="font-bold text-secondary">

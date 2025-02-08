@@ -56,7 +56,7 @@ const NewsletterServices: FC = () => {
         </p>
         {contentCreationServices.map((service) => (
           <>
-            {service.name === "Newsletters" && (
+            {service.name === "Engaging & Impactful Newsletters" && (
               <ul>
                 {service.pricingTiers.map((pricing) => (
                   <li key={pricing.name}>

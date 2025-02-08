@@ -54,7 +54,7 @@ const BlogWritingServices: FC = () => {
         </p>
         {contentCreationServices.map((service) => (
           <>
-            {service.name === "Blog Writing" && (
+            {service.name === "SEO-Optimized, Engaging Blog Content" && (
               <ul>
                 {service.pricingTiers.map((pricing) => (
                   <li key={pricing.name}>

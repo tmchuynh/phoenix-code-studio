@@ -71,7 +71,8 @@ const UXDesignServices: FC = () => {
         <ul>
           {websiteServices.map(
             (service) =>
-              service.name === "User Experience Design" &&
+              service.name ===
+                "User-Centered Interface Design for Seamless Experiences" &&
               service.pricingTiers.map((tiers, index) => (
                 <li key={index}>
                   <span className="font-bold text-secondary">

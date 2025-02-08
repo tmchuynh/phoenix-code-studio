@@ -72,7 +72,8 @@ const TutorialCreationServices: FC = () => {
         {contentCreationServices.map((service) => {
           return (
             <>
-              {service.name === "Tutorial Creation" && (
+              {service.name ===
+                "Step-by-Step Tutorials for Seamless Learning" && (
                 <ul>
                   {service.pricingTiers.map((pricing) => (
                     <li key={pricing.name}>

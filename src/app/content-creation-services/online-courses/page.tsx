@@ -55,7 +55,8 @@ const OnlineCoursesServices: FC = () => {
         </p>
         {contentCreationServices.map((service) => (
           <>
-            {service.name === "Online Courses" && (
+            {service.name ===
+              "Engaging & Interactive Online Course Development" && (
               <ul>
                 {service.pricingTiers.map((pricing) => (
                   <li key={pricing.name}>
