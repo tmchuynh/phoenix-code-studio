@@ -7,10 +7,15 @@ import { paymentPlans } from "@/lib/constants";
 import { useTheme } from "next-themes";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import RootLayout from "../layout";
+import useSmallScreen from "@/lib/useSmallScreen";
+import { cn } from "@/lib/utils";
+import useMediumScreen from "@/lib/useMediumScreen";
 
 const PaymentPlansPage: FC = () => {
   const router = useRouter();
   const { theme } = useTheme();
+  const isMediumScreen = useMediumScreen();
+  const isSmallScreen = useSmallScreen();
 
   return (
     <>
@@ -26,45 +31,54 @@ const PaymentPlansPage: FC = () => {
               Our Payment Plans
             </h1>
             <p className="mt-4">
-              We offer flexible payment options designed to accommodate your
-              budget and project requirements, making it easier for businesses
-              of all sizes to get started. Whether you prefer a pay-as-you-go
-              model or an extended payment plan, our options provide
-              transparency, convenience, and financial flexibility. Choose from
-              a variety of plans tailored to meet your needs, ensuring smooth
-              collaboration throughout the project lifecycle. With clear terms
-              and no hidden fees, our payment plans allow you to stay on track
-              while bringing your vision to life seamlessly and affordably.
+              We provide flexible payment options tailored to fit your budget
+              and business needs, making it easier to invest in your digital
+              growth. Whether you choose a pay-as-you-go model or an extended
+              payment method, our straightforward pricing ensures economical web
+              design, SEO services, and content creation without undisclosed
+              fees or unexpected expenses. Designed for startups and enterprises
+              alike, our installment plans offer fiscal adaptability so you can
+              scale your project with conviction.
             </p>
           </header>
 
           {/* Displaying each plan in a vertical layout similar to blogs */}
-          <section className="space-y-8">
+          <section className="space-y-5">
             {paymentPlans.map((plan, index) => (
               <div key={index}>
-                <div className="flex flex-col w-full">
-                  {/* Plan Title */}
-                  <h3>{plan.title}</h3>
+                <div
+                  className={cn(
+                    "flex flex-col lg:flex-row justify-between md:items-end relative lg:pb-16",
+                    index !== paymentPlans.length - 1 ? "pb-5 lg:pb-20" : ""
+                  )}
+                >
+                  <div>
+                    {/* Plan Title */}
+                    <h3>{plan.title}</h3>
 
-                  {/* Plan Description */}
-                  <p className="mb-6">{plan.description}</p>
+                    {/* Plan Description */}
+                    <p className="mb-6">{plan.description}</p>
 
-                  {/* Plan Details */}
-                  <ul className="text-lg">
-                    {plan.details.map((detail, i) => (
-                      <li key={i}>{detail}</li>
-                    ))}
-                  </ul>
-
-                  {/* Learn More Button */}
+                    {/* Plan Details */}
+                    <ul className="text-lg">
+                      {plan.details.map((detail, i) => (
+                        <li key={i}>{detail}</li>
+                      ))}
+                    </ul>
+                  </div>
                   <Button
                     variant={theme === "dark" ? "outline" : "secondary"}
-                    className="my-7 w-1/3 self-end"
+                    size={isSmallScreen ? "sm" : "default"}
                     onClick={() => {
                       router.push(plan.route);
                     }}
+                    className={
+                      isMediumScreen
+                        ? "text-xs md:text-md relative md:w-64"
+                        : "absolute bottom-5 right-4 w-64 2xl:w-80 2xl:px-44"
+                    }
                   >
-                    Learn More
+                    More Information on Our {plan.title}
                   </Button>
                 </div>
                 {index !== paymentPlans.length - 1 && <hr />}

@@ -815,48 +815,49 @@ export const paymentPlans: PaymentPlan[] = [
   {
     title: "Basic Plan",
     description:
-      "Ideal for small projects or businesses just getting started, the Basic Plan offers straightforward, flexible payment options to help you manage your budget effectively while ensuring high-quality service delivery.",
+      "Affordable and flexible, the Basic Plan is ideal for startups and small businesses needing cost-effective payment options for web development, SEO, and digital marketing services.",
     details: [
-      "Pay per service or milestone to maintain financial control and avoid upfront costs",
-      "Monthly payments available for added convenience, making budgeting easier for smaller projects",
-      "Up to 3 months payment term to suit short-term projects and quick timelines"
+      "Pay per service or milestone to maintain financial control with no large upfront costs",
+      "Budget-friendly monthly payments to spread out expenses and keep projects manageable",
+      "Short-term plans with up to 3 months of payments for quick-turnaround projects"
     ],
     route: "/payment-plans/basic-plan"
   },
   {
     title: "Standard Plan",
     description:
-      "Perfect for medium-sized projects, the Standard Plan provides more flexibility with manageable payment installments. It also includes enhanced support, ensuring that your project stays on track with consistent communication and collaboration.",
+      "Ideal for growing businesses, the Standard Plan provides structured installment payments with added priority support to keep your project running smoothly.",
     details: [
-      "Split payments into 3-6 installments for better cash flow management and affordability",
-      "Priority support during the project, with dedicated resources for smoother execution and timely delivery",
-      "Up to 6 months payment term to accommodate medium-term project timelines and milestones"
+      "Split payments into 3-6 installments for improved cash flow and financial flexibility",
+      "Priority support and dedicated project management to ensure timely execution",
+      "Up to 6 months of payment terms for mid-size projects needing structured affordability"
     ],
     route: "/payment-plans/standard-plan"
   },
   {
     title: "Premium Plan",
     description:
-      "Designed for large-scale or ongoing projects, the Premium Plan offers flexible and extended payment options. This plan also includes comprehensive support to address evolving needs, ensuring that your business or project continues to grow without financial strain.",
+      "Designed for long-term or high-budget projects, the Premium Plan offers extended payment options with comprehensive service coverage, including ongoing maintenance and optimization.",
     details: [
-      "Monthly retainer payments for predictable budgeting and consistent cash flow management",
-      "Up to 12-month payment terms to manage long-term commitments and ensure financial flexibility",
-      "Full-service coverage including ongoing support, regular updates, and strategic advice to align with your objectives"
+      "Monthly retainer payments for predictable budgeting and consistent project funding",
+      "Extended payment terms of up to 12 months for maximum financial ease",
+      "Full-service support, including strategic consultation, regular updates, and long-term success planning"
     ],
     route: "/payment-plans/premium-plan"
   },
   {
     title: "Custom Plan",
     description:
-      "Tailored for complex or unique projects, the Custom Plan allows us to collaborate with you to create a flexible payment structure that aligns with your specific needs, timeline, and budget. This plan offers maximum flexibility to accommodate large-scale or unconventional projects.",
+      "Fully customizable payment plans for large-scale or enterprise-level projects, offering maximum flexibility in structure, duration, and financial management.",
     details: [
-      "Flexible payment terms based on the size and scope of your project, with room for adjustment as needs evolve",
-      "Options for scaling and ongoing support to ensure continued success and project optimization over time",
-      "Up to 24 months payment term, with terms mutually agreed upon to best fit long-term and evolving projects"
+      "Bespoke payment terms tailored to your project scope, with the option to adjust as needed",
+      "Scalable solutions, including phased implementation and ongoing project support",
+      "Up to 24-month payment terms to accommodate evolving business needs and budget planning"
     ],
     route: "/payment-plans/custom-plan"
   }
 ];
+
 
 export const testimonials: Testimonial[] = [
   {
@@ -910,6 +911,7 @@ export const testimonials: Testimonial[] = [
       Her personal portfolio stands as proof of her technical expertise and innovative thinking, highlighting her ability to create impactful digital solutions. She is a driven professional who brings energy, creativity, and determination to every project she takes on—an asset to any team or organization.`,
   },
 ];
+
 
 export const blogs: BlogPost[] = [
   {
