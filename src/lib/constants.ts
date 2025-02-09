@@ -1195,6 +1195,7 @@ export const blogs: BlogPost[] = [
 export const pastProjects: Project[] = [
   {
     title: "Quiz Application",
+    name: "Engage, Learn, and Compete with Our Next.js Quiz Platform",
     featured: true,
     description: "Experience the ultimate interactive learning experience with our Next.js-powered quiz platform, designed to make knowledge testing fun, engaging, and seamless. Covering a diverse range of subjects such as Chemistry, History, Math, and more, this platform allows users to select quizzes based on difficulty, track progress, and compete for top scores on a dynamic leaderboard. Built for optimal performance and user engagement, this responsive, mobile-friendly platform ensures a smooth experience across all devices. With secure authentication, efficient data management, and real-time progress tracking, users can confidently challenge themselves while enjoying an intuitive and gamified learning environment. Whether you're a student, educator, or lifelong learner, our SEO-optimized, high-performance quiz platform delivers an immersive and rewarding way to test and expand your knowledge.",
     short: "Our Next.js-powered quiz platform offers an engaging and interactive way to test knowledge across subjects like Chemistry, History, and Math. With intuitive quiz selection, progress tracking, and a competitive leaderboard, users enjoy a seamless experience across devices. Secure authentication, efficient data management, and responsive design ensure a smooth and reliable learning environment, making knowledge testing both fun and rewarding.",
@@ -1206,8 +1207,9 @@ export const pastProjects: Project[] = [
     githubLink: "https://github.com/tmchuynh/knowledge_knockout",
   },
   {
-    title: "Bootstrap Website Mock",
-    featured: true,
+    title: "Bootstrap Icons",
+    name: "Scalable, Customizable Icons for Modern Web Development",
+    featured: false,
     description: "The Bootstrap Icons Library is a comprehensive, user-friendly resource for web developers and designers, offering a wide array of scalable icons that are perfect for any project. Whether you’re working on a website, mobile app, or dashboard, Bootstrap Icons enhances your design with sleek, adaptable visuals. With an intuitive search feature and categorized icons, you can quickly find the perfect match for your project. The simple copy-and-paste functionality makes integration effortless, while the flexibility to easily customize each icon ensures they align with your brand’s design. Bootstrap Icons is the ideal solution for creating modern, professional user interfaces that provide clarity and usability. Elevate your web development projects with this clean, versatile library and transform your website with stunning, customizable icons today.",
     short: "The Bootstrap Icons Library is a versatile and user-friendly platform offering a vast collection of scalable icons for seamless integration into web development projects. With intuitive search and easy categorization, finding the right icon is quick and hassle-free. Customize icons to perfectly align with your design needs and integrate them effortlessly into your site. Enhance your web projects with clean, adaptable visuals that bring clarity and style to your interface, making Bootstrap Icons the perfect choice for developers and designers.",
     tags: ["Mock Up", "Dynamic", "Data Filtering"],
@@ -1219,6 +1221,7 @@ export const pastProjects: Project[] = [
   },
   {
     title: "Military Fitness Calculator",
+    name: "Effortlessly Calculate Your Army Physical Fitness Test Score",
     featured: true,
     description: "The Military Fitness Calculator simplifies the process of calculating your Army Physical Fitness Test (APFT) score by assessing performance in three critical exercises: sit-ups, push-ups, and a timed 2-mile run. Each exercise is graded on a scale of 0-100, with a perfect score of 300 points, and service members must achieve at least 60 points in each category to pass. The APFT calculator provides an accurate and straightforward way to determine your total score based on your performance. Additionally, the calculator takes into account the U.S. Army's body fat standards, factoring in height, neck, waist, and hip measurements to ensure fitness compliance. This tool is an essential resource for service members aiming to meet the rigorous physical readiness standards set by the U.S. Army, helping track performance and maintain overall health and fitness.",
     short: "The Military Fitness Calculator allows service members to quickly calculate their Army Physical Fitness Test (APFT) score, which includes sit-ups, push-ups, and a 2-mile run. Each exercise is worth up to 100 points, and the tool provides an easy way to calculate your total score. The calculator also includes body fat standards, taking into account measurements like height, neck, waist, and hips to ensure fitness compliance with U.S. Army guidelines. Keep track of your physical readiness and meet the Army’s strict fitness standards with this essential tool.",
@@ -1231,7 +1234,8 @@ export const pastProjects: Project[] = [
     githubLink: "https://github.com/tmchuynh/Military-Fitness-Calculator",
   },
   {
-    title: "IAC Company Website",
+    title: "International Activities Club",
+    name: "Empowering Education through Extracurricular Activities",
     featured: true,
     description: "The International Activities Club (IAC) website is an engaging and user-friendly platform designed to showcase the organization's diverse educational programs and after-school activities. At the forefront of the site is the A.R.C. Initiative, which focuses on providing students with hands-on learning experiences that bridge the gap between classroom theory and real-world applications. The website offers a detailed look into a wide range of extracurricular options, including chess, sports, and creative writing, all of which cater to students from 1st grade through high school. With a clean, intuitive interface, the site ensures that parents, educators, and schools can easily explore IAC's offerings, helping students access valuable opportunities for personal growth, skill development, and enrichment. This platform highlights IAC’s commitment to providing students with enriching experiences that foster both academic and personal growth outside the traditional classroom setting.",
     short: "The International Activities Club (IAC) website is designed to highlight the organization’s diverse programs, including the A.R.C. Initiative for hands-on learning. The site offers a range of extracurricular activities such as chess, sports, and creative writing for students from 1st grade through high school. With its easy-to-navigate interface, the website allows parents, educators, and schools to explore IAC’s offerings, providing students with enriching, developmentally beneficial experiences outside the classroom.",
@@ -1244,17 +1248,19 @@ export const pastProjects: Project[] = [
   },
   {
     title: "Emoji Finder",
-    featured: true,
+    name: "Effortlessly Discover the Perfect Emoji for Every Occasion",
+    featured: false,
     description: "The Emoji Finder website is a fast, intuitive tool designed to help users quickly search for and discover the ideal emoji for any situation. Operating much like an emoji keyboard, the platform allows users to easily browse, filter, and copy emojis with just a few clicks. With a powerful search bar, category-based navigation, and real-time suggestions, the site offers a seamless experience for finding emojis by keyword, emotion, or symbol. Whether you're looking to enhance your messages, express yourself on social media, or add some creativity to a project, the Emoji Finder ensures you have the perfect emoji at your fingertips. This user-friendly tool makes it simple to find and share emojis that help you communicate with personality, making digital interactions more fun and expressive.",
     short: "The Emoji Finder website is an intuitive tool that allows users to quickly search, browse, and copy emojis. With a powerful search bar, category navigation, and real-time suggestions, it makes finding the perfect emoji for any situation effortless. Whether for messaging, social media, or creative projects, the Emoji Finder enhances your digital expressions with ease.",
-    tags: ["Fun", "Dynamic"],
+    tags: ["Fun", "Dynamic", "Data Filtering",],
     languages: ["JavaScript", "HTML", "CSS"],
     libraries: ["React"],
     technologies: ["jest-dom",],
     githubLink: "https://github.com/tmchuynh/Emoji-Finder",
   },
   {
-    title: "FirstGalaxy Company Website",
+    title: "FirstGalaxy Inc",
+    name: "The Ultimate Real Estate Platform",
     featured: false,
     description: "The FirstGalaxy website is a modern and intuitive platform crafted to showcase a diverse range of properties, from residential homes to commercial spaces. It offers comprehensive listings complete with high-quality images, immersive virtual tours, and detailed property descriptions, making it easier for buyers and investors to make informed decisions. Featuring advanced search filters, users can effortlessly browse properties based on location, price, size, and amenities, ensuring a smooth and tailored house-hunting experience. The website also provides essential resources such as mortgage calculators, neighborhood insights, and expert real estate guidance, supporting clients throughout their entire journey. Whether you’re buying, selling, or renting, the platform connects users with top real estate professionals, ensuring every property transaction is seamless, efficient, and stress-free.",
     short: "The FirstGalaxy website offers a modern platform to browse residential and commercial properties. With high-quality images, virtual tours, and advanced search filters, users can easily find properties by location, price, size, and amenities. The site also provides helpful tools like mortgage calculators and expert real estate advice, making it easy to navigate every step of buying, selling, or renting. Whether you're a buyer, seller, or renter, FirstGalaxy connects you with top real estate professionals for smooth, efficient transactions.",
@@ -1266,50 +1272,55 @@ export const pastProjects: Project[] = [
     githubLink: "https://github.com/tmchuynh/firstgalaxy",
   },
   {
-    title: "Chess Game",
+    title: "Chess",
+    name: "Web-Based Chess Game with AI-Powered Evaluation",
     featured: true,
     description: "This project is a web-based chess game developed using Chessboard.js, offering a highly interactive and visually appealing chess experience. Upon initialization, a dynamic chessboard is generated, allowing users to play against one another or analyze various chess positions. The game integrates a sophisticated positional evaluation system, using a 2D array to assess board states and enhance AI-driven decision-making. This evaluation matrix assigns values to different positions on the board, influencing the AI’s choice of the best move. Moreover, the game features essential mechanics such as move validation, game tracking, and piece evaluation, ensuring a realistic, engaging, and strategic gameplay experience. Whether you're playing against friends or analyzing positions for improvement, this web-based chess game offers a seamless and intelligent chess-playing environment.",
     short: "This web-based chess game built with Chessboard.js offers an interactive chess experience, where users can play against each other or analyze positions. It features a powerful positional evaluation system that uses a 2D array to assess board states, aiding AI in making strategic moves. The game includes move validation, game tracking, and piece evaluation to ensure a realistic and engaging chess experience.",
-    tags: ["Game", "Interactive", "Chess", "Strategy"],
+    tags: ["Game", "Fun",],
     languages: ["JavaScript", "HTML", "CSS"],
+    frameworks: ["Bootstrap CSS",],
     technologies: ["Chessboard.js", "Chess.js", "Node.js"],
     liveLink: "https://tmchuynh.github.io/Chess-Game/",
     githubLink: "https://github.com/tmchuynh/Chess-Game"
   },
   {
     title: "Meta Tic Tac Toe",
-    featured: false,
+    name: "An Advanced Strategic Twist on the Classic Game",
+    featured: true,
     description: "Meta Tic Tac Toe is an advanced evolution of the classic Tic Tac Toe game, introducing a multi-board strategic layer where players compete across nine interconnected mini-games. With an intuitive and interactive interface, this version challenges players to think several moves ahead, control multiple boards, and outmaneuver their opponents in a deeper, more complex gameplay experience. The game incorporates dynamic move mechanics, where each player’s turn dictates the opponent’s next board, adding an element of unpredictability and skill to the match. Featuring a fully responsive design, score tracking, and strategic depth, Meta Tic Tac Toe offers a refreshing and engaging experience for both casual players and strategy enthusiasts, combining the simplicity of Tic Tac Toe with a thrilling new level of tactical challenge.",
     short: "Meta Tic Tac Toe takes the classic Tic Tac Toe game to the next level with a multi-board system where players compete across nine interconnected mini-games. Each move influences the opponent's next board, adding an exciting layer of strategy and unpredictability. With a responsive design, score tracking, and enhanced gameplay mechanics, this game offers an engaging experience for both casual players and those seeking deeper strategic challenges.",
-    tags: ["Game", "Interactive", "Strategy", "Tic Tac Toe"],
+    tags: ["Game", "Fun",],
     languages: ["JavaScript", "HTML", "CSS"],
     technologies: ["React.js", "Node.js"],
+    frameworks: ["Bootstrap CSS",],
     liveLink: "https://tmchuynh.github.io/meta_tic_tac_toe/",
     githubLink: "https://github.com/tmchuynh/meta_tic_tac_toe"
   },
   {
-    title: "Sudoku Game",
-    featured: false,
+    title: "Sudoku",
+    name: "Test Your Problem-Solving Skills Across Multiple Difficulty Levels",
+    featured: true,
     description: "This interactive Sudoku game provides players with the opportunity to test and enhance their problem-solving skills across various difficulty levels. Players can choose from preset modes—Easy, Medium, and Hard—or customize the number of removed cells to create a unique challenge. Featuring an intuitive grid system, real-time error checking, and a clean, responsive interface, the game ensures smooth interactions and logical gameplay mechanics. Whether you're a beginner or a seasoned puzzle solver, this Sudoku game offers an engaging, enjoyable experience, combining both ease of use and the thrill of solving increasingly complex puzzles.",
     short: "This interactive Sudoku game lets players test their skills with preset modes (Easy, Medium, Hard) or customize their own puzzle challenge. Featuring an intuitive grid, real-time error checking, and a responsive interface, it provides an enjoyable experience for both beginners and experienced solvers, ensuring smooth gameplay and logical challenges at every level.",
-    tags: ["Game", "Puzzle", "Sudoku", "Logic"],
+    tags: ["Game", "Fun",],
     languages: ["JavaScript", "HTML", "CSS"],
+    frameworks: ["Bootstrap CSS",],
     technologies: ["Vanilla JavaScript", "DOM Manipulation"],
     liveLink: "https://tmchuynh.github.io/sudoku/",
     githubLink: "https://github.com/tmchuynh/sudoku"
   }
-
 ];
 
 export const jobPositions: JobPosition[] = [
   {
     title: "Executive Assistant",
     description:
-      "We are looking for a highly organized and detail-oriented Executive Assistant to provide administrative and operational support to the CEO. This role requires a proactive and resourceful individual who can efficiently manage schedules, coordinate meetings, handle correspondence, and ensure the smooth operation of executive functions. You will serve as a critical point of contact, requiring professionalism, discretion, and excellent communication skills. The ideal candidate will have experience in executive support, project coordination, and administrative management, with a proven ability to multitask and prioritize effectively.",
+      "We are looking for a highly organized and detail-oriented Executive Assistant to provide administrative and operational support to the CEO. This executive support role requires a proactive and resourceful individual who can efficiently manage schedules, coordinate meetings, handle correspondence, and ensure the smooth operation of executive functions. As an administrative assistant, you will serve as a critical point of contact, requiring professionalism, discretion, and excellent communication skills. The ideal candidate will have experience in executive support, project coordination, and administrative management, with a proven ability to multitask, prioritize, and handle complex tasks in a fast-paced environment. Strong organizational skills, attention to detail, and a solution-oriented mindset are essential for success in this position. Experience with Microsoft Office and other office software is required, along with a background in executive operations and office management. This role offers an exciting opportunity for a highly motivated individual to contribute to the smooth running of the company’s executive operations.",
     responsibilities: [
       "Manage executive calendars, schedule meetings, and coordinate appointments across multiple time zones (if applicable), ensuring optimal use of time and avoiding conflicts.",
       "Handle incoming and outgoing correspondence, including emails, phone calls, and reports, maintaining a high level of confidentiality and professionalism.",
-      "Prepare presentations, reports, and documentation for internal and external meetings, ensuring all materials are accurate, polished, and align with the CEO's vision.",
+      "Prepare presentations, reports, and documentation for internal and external meetings, ensuring all materials are accurate, polished, and aligned with the CEO's vision.",
       "Coordinate domestic and international travel arrangements, including accommodations and itineraries, ensuring seamless travel experiences and cost-efficiency.",
       "Oversee administrative operations, including expense tracking, record-keeping, and file management, maintaining an organized and efficient filing system.",
       "Assist with project management tasks and ensure timely follow-ups on key initiatives, collaborating with different departments to track progress and ensure deadlines are met.",
@@ -1332,101 +1343,101 @@ export const jobPositions: JobPosition[] = [
   {
     title: "Content Writer",
     description:
-      "We are seeking a creative and detail-oriented Content Writer to produce high-quality, engaging, and informative content for a variety of digital platforms. The ideal candidate will have excellent writing, editing, and research skills, with a strong understanding of content marketing, SEO optimization, and audience engagement. In this role, you will be responsible for crafting compelling blog posts, articles, email campaigns, social media content, and marketing materials. You should be able to adapt your writing style to different audiences and industries, ensuring that all content aligns with brand messaging and goals.",
+      "We are seeking a creative and detail-oriented Content Writer to produce high-quality, engaging, and informative content for a variety of digital platforms. The ideal candidate will have excellent writing, editing, and research skills, with a strong understanding of content marketing, SEO optimization, and audience engagement. In this role, you will be responsible for crafting compelling blog posts, articles, email campaigns, social media content, and marketing materials. You should be able to adapt your writing style to different audiences and industries, ensuring that all content aligns with brand messaging and business goals. Keyword research, content strategy, and the ability to create content that drives conversions are essential for this role. Experience with WordPress and other content management systems (CMS) is preferred. A strong understanding of SEO best practices and the ability to optimize content for both search engines and users is crucial. This is an exciting opportunity to contribute to a brand’s online presence and help shape its voice across various digital platforms.",
     responsibilities: [
-      "Write, edit, and proofread engaging content, including blog posts, articles, newsletters, and website content, ensuring accuracy and alignment with brand messaging.",
-      "Conduct in-depth research on industry-related topics, staying up to date with current trends to create authoritative, informative, and well-rounded content.",
+      "Write, edit, and proofread engaging content, including blog posts, articles, newsletters, and website content, ensuring accuracy and alignment with brand messaging and tone.",
+      "Conduct in-depth research on industry-related topics, staying up to date with current trends to create authoritative, informative, and well-rounded content that drives audience engagement.",
       "Manage content calendars, plan ahead for campaigns, and ensure consistent publishing schedules while adhering to deadlines.",
       "Ensure all content aligns with brand voice, tone, and messaging guidelines, and optimize it for SEO to increase organic traffic and engagement.",
       "Create and optimize content for various digital platforms, including websites, blogs, email campaigns, and social media, while maintaining brand consistency.",
-      "Conduct competitive research to stay ahead of industry content trends and incorporate best practices into writing.",
-      "Support internal teams with content marketing strategies, including drafting engaging product descriptions, landing page content, and promotional material.",
-      "Work with other team members to brainstorm, generate ideas, and contribute to creative content campaigns."
+      "Conduct competitive research to stay ahead of industry content trends and incorporate best practices into writing, ensuring the content remains fresh and relevant.",
+      "Support internal teams with content marketing strategies, including drafting engaging product descriptions, landing page content, and promotional materials.",
+      "Work with other team members to brainstorm, generate ideas, and contribute to creative content campaigns that align with overall business objectives."
     ],
     qualifications: [
       "Exceptional writing, editing, and proofreading skills, with a keen eye for detail and an ability to adapt tone and style to different audiences.",
-      "Familiarity with SEO best practices, keyword research, and optimization strategies to increase content visibility and engagement.",
+      "Familiarity with SEO best practices, keyword research, and optimization strategies to increase content visibility and audience engagement.",
       "Proven experience writing for various industries and adapting content for different formats, including blogs, emails, and marketing materials.",
-      "Proficiency in content management systems (WordPress, Webflow, etc.), and familiarity with web publishing tools.",
+      "Proficiency in content management systems (WordPress, Webflow, etc.), and familiarity with web publishing tools to manage and publish content efficiently.",
       "Strong attention to detail, with an ability to meet tight deadlines and manage multiple projects simultaneously.",
-      "Experience with content strategy, including developing editorial calendars and tracking content performance.",
+      "Experience with content strategy, including developing editorial calendars and tracking content performance to ensure content meets business goals.",
       "Solid understanding of digital marketing principles and the ability to integrate SEO, SEM, and social media strategies into written content.",
-      "Ability to work collaboratively with designers, developers, and other team members to create visually engaging and optimized content.",
-      "Excellent organizational and time-management skills, with the ability to prioritize tasks in a fast-paced work environment."
+      "Ability to work collaboratively with designers, developers, and other team members to create visually engaging and optimized content that supports brand objectives.",
+      "Excellent organizational and time-management skills, with the ability to prioritize tasks in a fast-paced work environment and handle multiple projects effectively."
     ],
     information: "Contract | Remote | Flexible schedule",
   },
   {
     title: "Graphic Designer/Illustrator",
     description:
-      "We are seeking a talented and highly creative Graphic Designer/Illustrator to develop visually appealing designs and branding materials that captivate audiences. This role requires a strong eye for aesthetics, a deep understanding of design principles, and the ability to translate concepts into compelling visuals. The ideal candidate should be proficient in digital and print design, branding, UI/UX design, and illustration. You will work closely with marketing, content, and web development teams to create stunning visuals that enhance brand storytelling and user engagement.",
+      "We are seeking a talented and highly creative Graphic Designer/Illustrator to develop visually appealing designs and branding materials that captivate audiences. This role requires a strong eye for aesthetics, a deep understanding of design principles, and the ability to translate concepts into compelling visuals. The ideal candidate should be proficient in digital and print design, branding, UI/UX design, and illustration. In this role, you will work closely with the marketing, content, and web development teams to create stunning visuals that enhance brand storytelling and user engagement. The Graphic Designer will be responsible for crafting dynamic graphics for websites, social media, advertisements, and print materials. Expertise in industry-standard design tools like Adobe Creative Suite, Illustrator, and Photoshop is essential. A keen understanding of user experience (UX) and user interface (UI) design will also be key to delivering a cohesive and engaging visual experience across all digital platforms. The successful candidate will be able to balance creativity with functionality to create designs that effectively communicate brand messages.",
     responsibilities: [
-      "Design compelling graphics for websites, social media, advertising, and print materials that align with the brand identity.",
+      "Design compelling graphics for websites, social media, advertising, and print materials that align with the brand identity and visually communicate key messages.",
       "Create custom illustrations and visual assets that enhance the company’s storytelling, marketing campaigns, and overall brand appeal.",
-      "Collaborate with the marketing and web development teams to enhance user experience through design and ensure a seamless, visually compelling interface.",
-      "Develop brand identity elements, including logos, typography, color schemes, and other visual assets to maintain a consistent brand image.",
+      "Collaborate with the marketing and web development teams to enhance user experience through design, ensuring a seamless, visually compelling interface across both digital and print formats.",
+      "Develop brand identity elements, including logos, typography, color schemes, and other visual assets to maintain a consistent and recognizable brand image.",
       "Manage multiple design projects simultaneously while meeting deadlines and maintaining high-quality output.",
-      "Stay up to date with the latest design trends, tools, and technologies, incorporating fresh ideas into projects.",
+      "Stay up to date with the latest design trends, tools, and technologies, incorporating fresh ideas into projects to keep designs modern and engaging.",
       "Ensure design consistency across all marketing and branding materials, from digital to print formats.",
       "Work with other creatives, such as content writers and developers, to create cohesive brand experiences across all channels.",
-      "Provide guidance and mentorship to junior designers and illustrators, if applicable, fostering a collaborative work environment."
+      "Provide guidance and mentorship to junior designers and illustrators, fostering a collaborative work environment."
     ],
     qualifications: [
-      "A strong portfolio showcasing previous design and illustration work, demonstrating creativity, originality, and versatility.",
-      "Ability to create original illustrations and conceptual designs based on brief or creative direction.",
-      "Strong understanding of branding, typography, color theory, and composition, with an eye for detail.",
+      "A strong portfolio showcasing previous design and illustration work, demonstrating creativity, originality, and versatility across multiple design disciplines.",
+      "Ability to create original illustrations and conceptual designs based on briefs or creative direction.",
+      "Strong understanding of branding, typography, color theory, and composition, with an excellent eye for detail.",
       "Proficiency in Adobe Creative Suite (Photoshop, Illustrator, InDesign, After Effects) and other relevant design software.",
-      "Experience in UI/UX design and familiarity with tools like Figma or Sketch.",
-      "Solid knowledge of design principles and industry standards for both digital and print media.",
-      "Excellent communication skills to collaborate effectively with internal teams and clients.",
-      "Ability to handle constructive feedback and iterate quickly on designs to meet client needs and expectations.",
-      "Experience with responsive design and designing for different screen sizes and platforms."
+      "Experience in UI/UX design and familiarity with tools like Figma or Sketch for designing user interfaces and creating engaging experiences.",
+      "Solid knowledge of design principles and industry standards for both digital and print media, ensuring designs are compatible across various platforms and devices.",
+      "Excellent communication skills to collaborate effectively with internal teams and clients, ensuring design objectives are met.",
+      "Ability to handle constructive feedback and iterate quickly on designs to meet client needs and expectations, maintaining flexibility in design execution.",
+      "Experience with responsive design and designing for different screen sizes and platforms, ensuring optimal user experiences across all devices."
     ],
     information: "Contract | Remote | Flexible schedule",
   },
   {
     title: "Cybersecurity Specialist",
     description:
-      "We are looking for a highly skilled Cybersecurity Specialist to protect our organization's data, networks, and digital assets from cyber threats. The ideal candidate will have experience implementing security protocols, identifying vulnerabilities, and responding to security incidents. You will work closely with the development teams to ensure compliance with industry standards and best practices, as well as train staff on security awareness and risk mitigation.",
+      "We are looking for a highly skilled Cybersecurity Specialist to protect our organization's data, networks, and digital assets from cyber threats. The ideal candidate will have experience implementing security protocols, identifying vulnerabilities, and responding to security incidents. In this role, you will work closely with development teams to ensure compliance with industry standards and best practices, as well as train staff on security awareness and risk mitigation. You will be responsible for monitoring network activity, conducting security audits, and ensuring that proper security measures are in place to safeguard company data and systems from cyberattacks. Expertise in tools like firewalls, intrusion detection systems (IDS), and penetration testing is essential. Additionally, the ability to stay updated with the latest cybersecurity trends, regulations, and technologies will be crucial for maintaining the organization’s overall cybersecurity posture.",
     responsibilities: [
-      "Train employees on cybersecurity best practices and risk awareness, ensuring that all staff are aware of security protocols and potential threats.",
-      "Conduct security risk assessments, penetration testing, and vulnerability scanning to identify and mitigate threats to the organization’s infrastructure.",
-      "Monitor and analyze security threats, vulnerabilities, and breaches across all company systems and networks, taking quick action to minimize damage.",
-      "Investigate and respond to security incidents, ensuring that damage is minimized and that systems return to normal functionality as quickly as possible.",
-      "Develop and implement cybersecurity policies, frameworks, and incident response plans that align with industry standards and company needs.",
-      "Manage firewalls, encryption protocols, and security monitoring tools to protect organizational data and networks.",
-      "Provide regular cybersecurity awareness training to employees to ensure they follow best practices and are aware of the latest threats."
+      "Train employees on cybersecurity best practices and risk awareness, ensuring that all staff are aware of security protocols and potential cyber threats.",
+      "Conduct security risk assessments, penetration testing, and vulnerability scanning to identify and mitigate threats to the organization’s network infrastructure.",
+      "Monitor and analyze security threats, vulnerabilities, and breaches across all company systems and networks, taking quick action to minimize damage and prevent future incidents.",
+      "Investigate and respond to security incidents, ensuring that damage is minimized and that systems return to normal functionality as quickly as possible, adhering to incident response protocols.",
+      "Develop and implement cybersecurity policies, frameworks, and incident response plans that align with industry standards and the company's security needs.",
+      "Manage firewalls, encryption protocols, and security monitoring tools to protect organizational data and networks from unauthorized access and cyberattacks.",
+      "Provide regular cybersecurity awareness training to employees, ensuring they follow best practices and stay informed on the latest cybersecurity threats and prevention methods."
     ],
     qualifications: [
-      "Relevant cybersecurity certifications (CISSP, CEH, CISM) are preferred, though not required if the candidate has demonstrated experience.",
+      "Relevant cybersecurity certifications such as CISSP, CEH, and CISM are preferred, though not required if the candidate has demonstrated experience in network security or IT security.",
       "Proven experience in cybersecurity, network security, or IT security roles, with a strong understanding of risk assessment and management.",
-      "Familiarity with security frameworks such as ISO 27001, NIST, and CIS, and experience in implementing security best practices.",
-      "Knowledge of ethical hacking techniques, intrusion detection, and threat intelligence tools.",
-      "Strong problem-solving skills and the ability to handle high-pressure security situations and incidents.",
-      "Excellent communication skills to work with stakeholders and explain complex security concepts in simple terms.",
-      "Experience working with firewalls, intrusion detection systems, encryption protocols, and other security technologies."
+      "Familiarity with security frameworks such as ISO 27001, NIST, and CIS, and experience in implementing security best practices across company systems.",
+      "In-depth knowledge of ethical hacking techniques, intrusion detection, and threat intelligence tools used to identify and counter cyber threats.",
+      "Strong problem-solving skills and the ability to handle high-pressure security situations and incidents, ensuring rapid incident resolution.",
+      "Excellent communication skills to work with stakeholders and explain complex security concepts and technical issues in simple terms, aiding decision-making and training.",
+      "Experience working with firewalls, intrusion detection systems (IDS), encryption protocols, and other advanced security technologies to protect critical infrastructure and data."
     ],
     information: "Contract | Remote | Growth opportunities",
   },
   {
     title: "Sales Representative",
     description:
-      "We are looking for an enthusiastic and results-driven Sales Representative to identify and engage potential clients, build strong customer relationships, and drive business growth. The ideal candidate is a natural communicator with excellent negotiation skills and a proven track record in sales. You will play a crucial role in increasing revenue and expanding our customer base by promoting our products and services to a global audience.",
+      "We are looking for an enthusiastic and results-driven Sales Representative to identify and engage potential clients, build strong customer relationships, and drive business growth. The ideal candidate is a natural communicator with excellent negotiation skills and a proven track record in sales. In this role, you will play a crucial part in increasing revenue and expanding our customer base by promoting our products and services to a global audience. You will be responsible for generating leads, managing client accounts, and closing sales, while consistently meeting or exceeding sales targets. Experience in B2B sales, cold calling, and sales presentations will be highly beneficial. The successful candidate will demonstrate a deep understanding of customer needs, actively work to identify opportunities, and effectively communicate the value of our offerings to prospective clients.",
     responsibilities: [
-      "Develop and deliver compelling sales presentations and proposals to potential clients, ensuring that all offerings are tailored to meet their needs.",
+      "Develop and deliver compelling sales presentations and proposals to potential clients, ensuring that all offerings are tailored to meet their specific business needs.",
       "Negotiate contracts, close deals, and meet or exceed sales targets through active prospecting and relationship management.",
-      "Identify, reach out to, and qualify potential clients through multiple channels, including phone, email, networking, and online research.",
-      "Maintain strong client relationships and provide exceptional customer service, ensuring repeat business and long-term partnerships.",
-      "Track sales metrics and report on performance using CRM software, identifying opportunities for improvement and driving results.",
-      "Manage the full sales lifecycle from prospecting to closing, including lead generation, follow-up, and contract negotiations."
+      "Identify, reach out to, and qualify potential clients through multiple channels, including phone, email, networking, and online research to generate high-quality sales leads.",
+      "Maintain strong client relationships and provide exceptional customer service, ensuring repeat business and fostering long-term partnerships.",
+      "Track sales metrics and report on performance using CRM software (e.g., Salesforce, HubSpot), identifying opportunities for improvement and driving sales results.",
+      "Manage the full sales lifecycle, from prospecting to closing sales, including lead generation, follow-up, and contract negotiations."
     ],
     qualifications: [
-      "Proven experience in sales, business development, or account management, with a track record of meeting or exceeding targets.",
-      "Excellent communication, negotiation, and interpersonal skills, with the ability to build strong relationships.",
-      "Strong understanding of branding, marketing, and digital services, with the ability to convey value propositions effectively.",
-      "Ability to work independently and proactively pursue new business opportunities, with a passion for achieving results.",
-      "Familiarity with CRM software (Salesforce, HubSpot, etc.) and sales reporting tools.",
-      "Ability to understand and articulate complex products and services to a diverse range of potential clients."
+      "Proven experience in sales, business development, or account management, with a track record of meeting or exceeding sales targets.",
+      "Excellent communication, negotiation, and interpersonal skills, with the ability to build strong relationships with clients.",
+      "Strong understanding of branding, marketing, and digital services, with the ability to convey value propositions effectively to prospective clients.",
+      "Ability to work independently and proactively pursue new business opportunities, with a passion for achieving sales results.",
+      "Familiarity with CRM software (Salesforce, HubSpot, etc.) and sales reporting tools to track performance and manage leads effectively.",
+      "Ability to understand and articulate complex products and services to a diverse range of potential clients, ensuring alignment with their needs."
     ],
     information: "Commission-based | Remote | Growth opportunities",
   },

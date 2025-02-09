@@ -16,7 +16,7 @@ const FeaturedBlogs = () => {
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
         Featured Blogs
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6 w-full">
         {blogs.map(
           (blog, index) =>
             blog.featured && (

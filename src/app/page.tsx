@@ -36,9 +36,7 @@ const WelcomePage: FC = () => {
 
       {/* Welcome Section */}
       <section className="my-16 mx-auto w-11/12 text-center">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-          Welcome to Phoenix Code Studio
-        </h1>
+        <h1>Welcome to Phoenix Code Studio</h1>
         <h2 className="inline-flex items-center gap-3">
           <GoRocket className="text-accent-1" />
           <GoRocket className="text-accent-1" />
@@ -46,7 +44,7 @@ const WelcomePage: FC = () => {
           <GoRocket className="text-accent-1" />
           <GoRocket className="text-accent-1" />
         </h2>
-        <p className="text-lg md:text-xl lg:text-2xl my-4">
+        <p>
           Your vision is more than just an idea—it’s a future waiting to be
           built. At Phoenix Code Studio, we merge strategic creativity,
           innovative technology, and bold design to craft transformative digital
@@ -55,14 +53,14 @@ const WelcomePage: FC = () => {
           entirely groundbreaking, we’re here to turn your aspirations into
           reality.
         </p>
-        <p className="text-lg md:text-xl lg:text-2xl my-4">
+        <p>
           We create high-performance, visually stunning websites, engaging
           content, and tailored digital solutions designed to enhance user
           experience, drive engagement, and accelerate business growth. Our
           expertise in SEO optimization, responsive design, and cutting-edge
           development ensures that your brand doesn’t just compete—it leads.
         </p>
-        <p className="text-lg md:text-xl lg:text-2xl my-4">
+        <p>
           At Phoenix Code Studio, we don’t just build—we ignite possibilities,
           empower brands, and shape the future of digital success.
         </p>

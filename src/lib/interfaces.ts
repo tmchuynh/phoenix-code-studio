@@ -70,6 +70,7 @@ export interface BlogContent {
 
 export interface Project {
   title: string;
+  name: string;
   featured: boolean;
   description: string;
   short: string;
