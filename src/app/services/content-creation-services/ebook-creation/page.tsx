@@ -14,17 +14,39 @@ const EbookCreationServices: FC = () => {
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
       {/* Page Header */}
-      <h1>E-Book Creation Services</h1>
+      <h1>Transform Your Ideas into Engaging E-Books</h1>
       <p>
-        Our E-Book Creation Services provide end-to-end solutions for
-        transforming your ideas into polished, professional e-books. From
-        content writing and editing to design and formatting, we ensure your
-        e-book is visually engaging and easy to read across all devices. Whether
-        you're looking to create an educational resource, a product guide, or a
-        thought leadership piece, we help you create a compelling e-book that
-        resonates with your target audience and positions your brand as an
-        authority in your field.
+        Our E-Book Creation Services offer a complete solution to bring your
+        content to life in a visually stunning and professionally formatted
+        e-book. Whether you're crafting an educational resource, industry guide,
+        or lead-generating e-book, we ensure your content is clear, compelling,
+        and designed for maximum impact across all devices.
       </p>
+
+      <section className="my-8">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Why Choose Our E-Book Creation Services?
+        </h2>
+        <p className="my-4">
+          ✅ Expert Writing & Editing – Engaging, high-quality content tailored
+          to your audience ✅ Professional Design & Formatting – Visually
+          appealing layouts optimized for readability ✅ Multi-Device
+          Compatibility – Seamless experience across desktops, tablets, and
+          e-readers
+        </p>
+      </section>
+
+      <section className="my-8">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Boost Engagement & Establish Authority
+        </h2>
+        <p className="my-4">
+          An e-book is more than just content—it’s a powerful marketing tool
+          that builds credibility, attracts leads, and positions you as an
+          expert in your field. Let’s create an e-book that captivates readers
+          and strengthens your brand.
+        </p>
+      </section>
 
       {/* Dynamic Section Rendering */}
       {ebookData.map((section, index) => (

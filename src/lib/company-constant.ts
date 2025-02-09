@@ -1,65 +1,5 @@
 export const spaDevelopmentData = [
   {
-    category: "Key Features of Single Page Applications (SPAs)",
-    items: [
-      {
-        title: "Faster Load Times",
-        description:
-          "SPAs load faster compared to traditional multi-page applications since only a single HTML page is loaded initially, and subsequent content is dynamically loaded as needed. This reduces the time spent waiting for new pages to load, improving the overall user experience."
-      },
-      {
-        title: "Improved User Experience",
-        description:
-          "With SPAs, users can enjoy a smoother experience as they navigate through the app without the interruption of full page reloads. Navigation feels instant because the necessary content is updated dynamically without needing a page refresh, providing a seamless interaction flow."
-      },
-      {
-        title: "Highly Interactive",
-        description:
-          "SPAs are designed for highly interactive user experiences. With the ability to incorporate features like real-time updates, animations, and interactive forms, SPAs offer engaging interfaces that support rich interactivity, allowing users to feel more connected to the content."
-      },
-      {
-        title: "Cross-Platform Compatibility",
-        description:
-          "SPAs work smoothly across a variety of devices and platforms. Whether the user is on a desktop, tablet, or mobile device, the SPA can provide a consistent experience, making it an ideal choice for applications with diverse user bases."
-      },
-      {
-        title: "Efficient Resource Usage",
-        description:
-          "Since SPAs rely on client-side rendering, they significantly reduce the load on servers. After the initial page load, all future interactions and requests are handled by the client, leading to less frequent server calls and lower bandwidth usage."
-      },
-    ],
-  },
-  {
-    category: "Our SPA Development Services",
-    items: [
-      {
-        title: "Custom SPA Development",
-        description:
-          "We specialize in building SPAs using modern, efficient frameworks like React, Angular, and Vue. Our custom SPAs are tailored to meet your specific business goals, ensuring a robust and scalable application."
-      },
-      {
-        title: "Responsive Design",
-        description:
-          "We ensure that every SPA we develop is optimized for all screen sizes, from large desktops to mobile devices. By using responsive design techniques, we guarantee that your users will have a consistent and optimal experience, no matter how they access the app."
-      },
-      {
-        title: "API Integration",
-        description:
-          "We integrate your SPA with powerful APIs, including RESTful and GraphQL APIs, ensuring that data is dynamically fetched and displayed in real-time. This allows for flexible, scalable, and efficient communication between the front-end and back-end systems."
-      },
-      {
-        title: "Real-Time Functionality",
-        description:
-          "We incorporate live updates into your SPA using WebSockets or similar technologies. Whether it’s a live chat feature, stock ticker, or social media updates, we can add real-time capabilities to keep users engaged with fresh content at all times."
-      },
-      {
-        title: "Progressive Web App (PWA) Transformation",
-        description:
-          "We can convert your SPA into a Progressive Web App (PWA) to provide offline capabilities and improved performance. PWAs offer the best of both web and native apps, allowing users to access your app without an internet connection and providing a seamless experience even in low-network conditions."
-      },
-    ],
-  },
-  {
     category: "Our Development Process",
     items: [
       {
@@ -96,14 +36,6 @@ export const spaDevelopmentData = [
   },
 ];
 
-export const technologiesUsed = [
-  "React.js and Next.js",
-  "Vue.js and Nuxt.js",
-  "Angular",
-  "GraphQL and RESTful APIs",
-  "WebSockets for real-time communication",
-  "Tailwind CSS for responsive design",
-];
 
 export const ecommerceData = [
   {

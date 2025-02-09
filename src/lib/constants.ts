@@ -41,7 +41,7 @@ export const about: Menu[] = [
 
 export const services: Menu[] = [
   {
-    title: "Overview",
+    title: "Digital Services",
     href: "/services",
     description:
       "Explore our pricing options and find the perfect plan for your needs.",
@@ -53,7 +53,7 @@ export const services: Menu[] = [
       "Explore our pricing options and find the perfect plan for your needs.",
   },
   {
-    title: "Pricing",
+    title: "Our Pricing and Service Tiers",
     href: "/services/pricing",
     description:
       "Explore our pricing options and find the perfect plan for your needs.",
@@ -62,7 +62,7 @@ export const services: Menu[] = [
 
 export const paymentOptions: Menu[] = [
   {
-    title: "Overview",
+    title: "Flexible Pricing Plans",
     href: "/services/pricing/payment-plans",
     description:
       "Explore our pricing options and find the perfect plan for your needs.",
@@ -216,7 +216,7 @@ export const companies: Menu[] = [
   },
   {
     title: "Database Management",
-    href: "/comapny-specific-services/database-management",
+    href: "/services/comapny-specific-services/database-management",
     description:
       "Ensure secure and efficient management of your data with scalable database solutions.",
   },

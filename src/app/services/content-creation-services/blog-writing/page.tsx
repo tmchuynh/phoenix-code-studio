@@ -14,15 +14,30 @@ const BlogWritingServices: FC = () => {
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
       {/* Page Header */}
-      <h1>Blog Writing Services</h1>
+      <h1>
+        Engaging Blog Writing Services That Drive Traffic & Build Authority
+      </h1>
       <p>
-        Our Blog Writing Services help you create high-quality, engaging content
-        that connects with your audience. We focus on crafting well-researched
-        articles tailored to your brand’s voice and goals. Whether you're
-        looking to boost SEO, establish thought leadership, or engage readers,
-        our blog writing experts provide consistent, valuable content that
-        drives traffic, conversions, and brand recognition.
+        Capture your audience’s attention with high-quality, SEO-optimized blog
+        content that informs, inspires, and converts. Our blog writing services
+        help brands establish thought leadership, boost search engine rankings,
+        and engage readers with well-researched, compelling articles tailored to
+        their industry. Whether you need long-form educational content, trending
+        topics, or conversion-driven posts, we craft content that aligns with
+        your brand’s voice and marketing goals.
       </p>
+
+      <section className="my-8">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Content That Keeps Your Audience Coming Back
+        </h2>
+        <p className="my-4">
+          From in-depth industry insights to engaging listicles, our blog
+          content is structured to enhance readability, improve engagement, and
+          drive results. Let’s tell your story, boost your brand, and turn
+          readers into loyal customers!
+        </p>
+      </section>
 
       {/* Dynamic Section Rendering */}
       {blogWritingData.map((section, index) => (

@@ -14,15 +14,26 @@ const BrochuresAndFlyersServices: FC = () => {
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
       {/* Page Header */}
-      <h1>Brochures and Flyers Design Services</h1>
+      <h1>Eye-Catching Brochures & Flyers That Elevate Your Brand</h1>
       <p>
-        Our Brochures and Flyers Design Services deliver visually compelling and
-        impactful marketing materials that capture your brand’s essence. Whether
-        you’re promoting a product, service, or event, our designs communicate
-        your message clearly and effectively. We create customized, high-quality
-        brochures and flyers that help you stand out and engage your audience,
-        making a lasting impression wherever they’re distributed.
+        Make a lasting impact with professionally designed brochures and flyers
+        that showcase your brand, products, or services with clarity and
+        creativity. Our design experts craft visually compelling marketing
+        materials that capture attention, communicate key messages effectively,
+        and leave a memorable impression.
       </p>
+
+      <section className="my-8">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
+          Marketing Materials That Drive Action
+        </h2>
+        <p className="my-4">
+          Whether you’re launching a new product, promoting an event, or
+          increasing brand awareness, our brochures and flyers are designed to
+          engage your audience and inspire action. Let’s create marketing
+          materials that truly make an impact!
+        </p>
+      </section>
 
       {/* Dynamic Section Rendering */}
       {brochuresFlyersData.map((section, index) => (

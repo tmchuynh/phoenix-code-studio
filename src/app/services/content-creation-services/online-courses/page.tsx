@@ -14,15 +14,27 @@ const OnlineCoursesServices: FC = () => {
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
       {/* Page Header */}
-      <h1>Online Courses Development Services</h1>
+      <h1>Transform Learning with Engaging Online Courses</h1>
       <p>
-        Our Online Courses Development Services provide everything you need to
-        create engaging, educational, and interactive learning experiences. From
-        course planning and content development to multimedia creation and
-        platform integration, we offer comprehensive solutions tailored to your
-        audience. Whether you're launching a new course or enhancing an existing
-        one, we ensure that your online courses are not only informative but
-        also engaging and optimized for effective learning outcomes.
+        Our Online Course Development Services provide everything you need to
+        create impactful, interactive, and engaging learning experiences.
+        Whether you’re developing educational courses, corporate training
+        programs, or membership-based e-learning content, we ensure that your
+        courses are structured for maximum knowledge retention and engagement.
+        From course planning and content development to multimedia integration
+        and interactive assessments, we craft tailored solutions that align with
+        your learning objectives. We specialize in designing user-friendly
+        interfaces, incorporating video lessons, quizzes, and gamified elements
+        that enhance the learning journey.
+      </p>
+      <p>
+        By leveraging cutting-edge learning management systems (LMS) and
+        intuitive course structures, we ensure seamless accessibility across all
+        devices. Whether you're launching a brand-new course or enhancing an
+        existing one, our expertise in instructional design and digital
+        education helps you create high-quality courses that captivate learners
+        and drive measurable results. Let us help you bring your educational
+        vision to life with professionally designed online courses.
       </p>
 
       {/* Dynamic Section Rendering */}

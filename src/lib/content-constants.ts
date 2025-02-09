@@ -60,36 +60,6 @@ export const websiteCopywritingData = [
     ],
   },
   {
-    category: "Our Process",
-    items: [
-      {
-        title: "Discovery",
-        description:
-          "Our process begins with understanding your business, goals, audience, and current messaging. This helps us create a tailored copy strategy that aligns with your vision and objectives."
-      },
-      {
-        title: "Research",
-        description:
-          "We conduct thorough market research, competitor analysis, and keyword research to inform our copy. This ensures that our messaging is not only relevant but also competitive and optimized for search engines."
-      },
-      {
-        title: "Drafting",
-        description:
-          "Our team creates clear, engaging, and optimized copy based on our research and discovery phase. We focus on writing content that resonates with your audience while adhering to SEO best practices."
-      },
-      {
-        title: "Review and Feedback",
-        description:
-          "We collaborate with your team to refine the copy. Your feedback is crucial to ensure the content aligns with your brand voice and meets your objectives."
-      },
-      {
-        title: "Final Delivery",
-        description:
-          "Once the content is finalized, we provide ready-to-publish copy that is tailored for your CMS or platform. The content is optimized for easy integration into your website."
-      },
-    ],
-  },
-  {
     category: "Tools We Use",
     items: [
       {
@@ -116,26 +86,6 @@ export const websiteCopywritingData = [
         title: "Google Docs",
         description:
           "Google Docs facilitates collaboration and content structuring. We use it to share drafts, get feedback, and maintain a streamlined workflow."
-      },
-    ],
-  },
-  {
-    category: "Pricing",
-    items: [
-      {
-        title: "Basic Copywriting Package",
-        description:
-          "This package is ideal for small projects with basic copy needs, including one or two pages of copy such as a homepage or service page."
-      },
-      {
-        title: "Advanced Copywriting Package",
-        description:
-          "This package includes in-depth research, competitor analysis, and SEO optimization. Ideal for larger websites or projects that require a strategic approach to messaging and SEO."
-      },
-      {
-        title: "Premium Copywriting Package",
-        description:
-          "Our premium package offers comprehensive website copywriting, including ongoing refinements and updates. Perfect for businesses looking for continuous content development and optimization."
       },
     ],
   },
@@ -189,36 +139,6 @@ export const tutorialCreationData = [
         title: "Custom Formats",
         description:
           "We offer tailored tutorial formats to suit your specific needs, whether it’s PDFs, HTML pages, or LMS (Learning Management System) integration. We can create content that fits seamlessly with your platform, ensuring a smooth user experience."
-      },
-    ],
-  },
-  {
-    category: "Our Process",
-    items: [
-      {
-        title: "Discovery",
-        description:
-          "Our process starts with understanding your objectives, target audience, and the type of tutorial required. We ensure that the content we create aligns with your goals and addresses the needs of your users."
-      },
-      {
-        title: "Planning",
-        description:
-          "We develop a clear structure and outline for the tutorial. This includes defining the scope, breaking down the content into digestible sections, and planning any necessary visuals or interactive elements."
-      },
-      {
-        title: "Content Creation",
-        description:
-          "We create detailed, step-by-step instructions for the tutorial. Whether it's written content, video, or interactive elements, we ensure that the instructions are clear, engaging, and easy to follow."
-      },
-      {
-        title: "Review and Feedback",
-        description:
-          "Once the content is drafted, we collaborate with your team to refine it. We incorporate your feedback to ensure the tutorial is accurate, easy to understand, and effective for your audience."
-      },
-      {
-        title: "Final Delivery",
-        description:
-          "We provide the final tutorial in your preferred format, fully optimized for your platform. Whether it’s an HTML page, PDF, or integrated into your LMS, we ensure it’s ready for immediate use and distribution."
       },
     ],
   },
@@ -307,36 +227,6 @@ export const onboardingCreationData = [
         title: "Multimedia Integration",
         description:
           "We incorporate multimedia elements such as visuals, infographics, and video links to make training materials more engaging and accessible. These elements can help clarify complex topics and appeal to different learning styles."
-      },
-    ],
-  },
-  {
-    category: "Our Process",
-    items: [
-      {
-        title: "Discovery",
-        description:
-          "We begin by understanding your company’s goals, team structure, and training needs. This helps us create a customized onboarding plan that aligns with your values and objectives."
-      },
-      {
-        title: "Content Development",
-        description:
-          "Our content development phase focuses on creating clear, concise, and effective training materials that are tailored to meet the specific needs of your employees. We ensure that the content is engaging and informative."
-      },
-      {
-        title: "Design and Formatting",
-        description:
-          "We design visually appealing training materials that are easy to navigate and align with your brand identity. Professional formatting enhances readability and ensures that employees can quickly find the information they need."
-      },
-      {
-        title: "Review and Refinement",
-        description:
-          "We collaborate with you to review the training materials, ensuring accuracy and alignment with your company’s values and objectives. Feedback is incorporated to refine the documents and make any necessary adjustments."
-      },
-      {
-        title: "Final Delivery",
-        description:
-          "Once the materials are finalized, we provide them in your preferred formats—whether it’s digital PDFs, printed documents, or integrated into your Learning Management System (LMS)—ready for deployment."
       },
     ],
   },
@@ -434,36 +324,6 @@ export const technicalWritingData = [
     ],
   },
   {
-    category: "Our Process",
-    items: [
-      {
-        title: "Discovery",
-        description:
-          "We start by understanding your audience, business goals, and technical requirements. This helps us ensure that the documentation will be relevant, useful, and aligned with your strategic objectives."
-      },
-      {
-        title: "Content Planning",
-        description:
-          "We outline the structure, format, and key elements of the document, ensuring a logical flow of information. This planning phase ensures clarity and consistency throughout the final product."
-      },
-      {
-        title: "Content Creation",
-        description:
-          "Our writers produce clear, concise, and accurate technical content tailored to your specific audience. We prioritize usability and clarity, ensuring that your documentation is easy to understand and navigate."
-      },
-      {
-        title: "Review and Revision",
-        description:
-          "Once the content is created, we collaborate with your team to review and refine the documents. This iterative process ensures technical accuracy and alignment with your business goals."
-      },
-      {
-        title: "Final Delivery",
-        description:
-          "After revisions, we deliver the final documentation in your preferred format (PDF, HTML, etc.). We ensure the content is ready for use and optimized for its intended platform or distribution method."
-      },
-    ],
-  },
-  {
     category: "Tools We Use",
     items: [
       {
@@ -557,36 +417,6 @@ export const studyGuideData = [
     ],
   },
   {
-    category: "Our Process",
-    items: [
-      {
-        title: "Discovery",
-        description:
-          "We begin by understanding the subject matter, audience, and objectives for the study guide. This ensures that we tailor the content to meet specific learning goals and create relevant material."
-      },
-      {
-        title: "Content Development",
-        description:
-          "Our team researches and writes clear, accurate, and engaging content that is tailored to the learning needs of your target audience. We focus on making complex topics easy to understand."
-      },
-      {
-        title: "Design and Layout",
-        description:
-          "We format the study guide with clean, professional layouts that incorporate visuals, infographics, and user-friendly design principles, ensuring that the guide is both informative and visually appealing."
-      },
-      {
-        title: "Review and Feedback",
-        description:
-          "We collaborate with you to review the guide, making necessary revisions based on your input to ensure the content is accurate, aligned with learning objectives, and meets your expectations."
-      },
-      {
-        title: "Final Delivery",
-        description:
-          "Once finalized, we deliver the study guide in your preferred format, whether it's digital or print-ready, and ensure it's ready for distribution or immediate use."
-      },
-    ],
-  },
-  {
     category: "Tools We Use",
     items: [
       {
@@ -676,41 +506,6 @@ export const productGuideData = [
         title: "Regulatory and Safety Manuals",
         description:
           "We help you meet industry regulations and safety standards by providing compliance-focused manuals that highlight necessary precautions and procedures."
-      },
-    ],
-  },
-  {
-    category: "Our Process",
-    items: [
-      {
-        title: "Discovery",
-        description:
-          "We begin by understanding your product, target audience, and documentation requirements. This ensures we create the right content to meet your needs and expectations."
-      },
-      {
-        title: "Content Planning",
-        description:
-          "We work with you to outline the structure and key elements of the guide or manual. This planning phase ensures that the content is organized and addresses the most important aspects of your product."
-      },
-      {
-        title: "Content Creation",
-        description:
-          "Our team writes clear, concise, and accurate content, making use of visuals and step-by-step instructions to improve understanding and usability."
-      },
-      {
-        title: "Design and Formatting",
-        description:
-          "We ensure the product guide is visually appealing and easy to navigate, aligning with your brand identity. Our design team works on typography, layout, and visual elements to enhance the user experience."
-      },
-      {
-        title: "Review and Feedback",
-        description:
-          "We collaborate with your team to review the guide and gather feedback. This ensures the content is accurate, complete, and aligned with your expectations."
-      },
-      {
-        title: "Delivery and Updates",
-        description:
-          "Once finalized, we provide the manual in your desired format (PDF, print-ready, HTML). We also offer ongoing support for future updates as your product evolves."
       },
     ],
   },
@@ -813,41 +608,6 @@ export const onlineCourseData = [
     ],
   },
   {
-    category: "Our Process",
-    items: [
-      {
-        title: "Discovery",
-        description:
-          "We start by understanding your target audience, your goals, and the subject matter of the course. This ensures the content is both relevant and impactful, and aligns with your overall objectives."
-      },
-      {
-        title: "Course Outline Creation",
-        description:
-          "We create a clear and structured course outline, which includes defining modules, lessons, and key learning objectives. This helps ensure that the course flows logically and meets educational standards."
-      },
-      {
-        title: "Content Development",
-        description:
-          "We develop high-quality, engaging course content that includes written materials, multimedia, and interactive elements. This phase focuses on creating clear, accurate, and engaging educational resources."
-      },
-      {
-        title: "LMS Setup",
-        description:
-          "We set up and organize your course materials on the desired Learning Management System (LMS). This ensures the course is easy to navigate and that all content is accessible to your students."
-      },
-      {
-        title: "Testing and Feedback",
-        description:
-          "We conduct test sessions with users to ensure that the course is engaging, easy to follow, and delivers the intended learning outcomes. We collect feedback to make necessary improvements."
-      },
-      {
-        title: "Launch and Support",
-        description:
-          "We launch the course and provide ongoing support, ensuring that any technical issues are promptly resolved and that course content is regularly updated as needed."
-      },
-    ],
-  },
-  {
     category: "Tools We Use",
     items: [
       {
@@ -946,36 +706,6 @@ export const newsletterData = [
     ],
   },
   {
-    category: "Our Process",
-    items: [
-      {
-        title: "Discovery",
-        description:
-          "We begin by understanding your brand, audience, and marketing goals. This discovery phase ensures that the content and design will resonate with your subscribers and meet your objectives."
-      },
-      {
-        title: "Content Planning",
-        description:
-          "We work with you to create a detailed content plan that outlines the topics, schedule, and type of content to be featured in each newsletter. This structured approach ensures consistency and alignment with your marketing strategy."
-      },
-      {
-        title: "Writing and Design",
-        description:
-          "Our team creates high-quality written content and pairs it with visually appealing layouts that align with your brand's aesthetics. We ensure that the message is clear and engaging, while the design is responsive and user-friendly."
-      },
-      {
-        title: "Review and Feedback",
-        description:
-          "Before finalizing the newsletter, we collaborate with your team to gather feedback and make necessary revisions. This ensures that the content and design meet your standards and are ready for distribution."
-      },
-      {
-        title: "Delivery and Optimization",
-        description:
-          "Once approved, we send the newsletter through your chosen email marketing platform. We also analyze performance data to ensure maximum reach and engagement, continuously optimizing for future campaigns."
-      },
-    ],
-  },
-  {
     category: "Tools We Use",
     items: [
       {
@@ -1060,41 +790,6 @@ export const ebookData = [
         title: "E-Book Formatting",
         description:
           "Optimize your e-book for various platforms (PDF, EPUB, MOBI). We ensure the final product is compatible with all e-reader devices and easy to access."
-      },
-    ],
-  },
-  {
-    category: "Our Process",
-    items: [
-      {
-        title: "Discovery",
-        description:
-          "Understand your objectives, audience, and topic. The discovery phase allows us to tailor the e-book to meet your specific needs and expectations."
-      },
-      {
-        title: "Outline Creation",
-        description:
-          "Develop a clear structure and outline for your e-book, ensuring the content is logically organized and easy to follow."
-      },
-      {
-        title: "Content Writing",
-        description:
-          "Draft high-quality, engaging content that aligns with your goals, providing valuable insights and actionable steps for your readers."
-      },
-      {
-        title: "Design and Layout",
-        description:
-          "Incorporate your branding into a professionally designed e-book, ensuring the layout is visually appealing and enhances the user experience."
-      },
-      {
-        title: "Review and Feedback",
-        description:
-          "Refine the e-book based on your input, ensuring it aligns with your vision and meets your expectations before finalizing the product."
-      },
-      {
-        title: "Final Delivery",
-        description:
-          "Provide the e-book in the desired formats, ready for distribution. We ensure it's compatible with various e-book platforms and ready for download."
       },
     ],
   },
@@ -1187,36 +882,6 @@ export const blogWritingData = [
     ],
   },
   {
-    category: "Our Process",
-    items: [
-      {
-        title: "Discovery",
-        description:
-          "We begin by understanding your brand, audience, and content goals to tailor the blogs to meet your specific needs."
-      },
-      {
-        title: "Research",
-        description:
-          "We conduct thorough research, identifying industry trends, keywords, and relevant topics to ensure the content is impactful and aligned with your strategy."
-      },
-      {
-        title: "Content Creation",
-        description:
-          "Our team of writers creates engaging, informative, and SEO-friendly blogs that capture your brand’s voice and provide value to your readers."
-      },
-      {
-        title: "Editing & Proofreading",
-        description:
-          "We ensure every blog is polished, accurate, and error-free with detailed editing and proofreading, maintaining the highest quality standards."
-      },
-      {
-        title: "Delivery",
-        description:
-          "Once approved, we deliver the ready-to-publish blog content, or we can directly upload it to your CMS for seamless publishing."
-      },
-    ],
-  },
-  {
     category: "Tools We Use",
     items: [
       {
@@ -1301,36 +966,6 @@ export const brochuresFlyersData = [
         title: "Print-Ready Formats",
         description:
           "We deliver high-quality, print-ready files (PDF, AI, or EPS) with the appropriate resolution to ensure your printed materials stand out."
-      },
-    ],
-  },
-  {
-    category: "Our Process",
-    items: [
-      {
-        title: "Discovery",
-        description:
-          "We start by understanding your goals, target audience, and branding requirements to ensure the design aligns with your vision."
-      },
-      {
-        title: "Concept Development",
-        description:
-          "We create initial design concepts based on your preferences and provide options for you to choose from."
-      },
-      {
-        title: "Design Execution",
-        description:
-          "We refine the chosen concept, integrating content and visuals to create a polished, visually appealing layout."
-      },
-      {
-        title: "Review and Revisions",
-        description:
-          "We collaborate closely with you to refine the design, ensuring all revisions meet your expectations."
-      },
-      {
-        title: "Final Delivery",
-        description:
-          "Once approved, we provide you with high-resolution, print-ready files in your preferred format for immediate use."
       },
     ],
   },
