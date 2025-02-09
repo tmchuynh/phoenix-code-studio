@@ -14,13 +14,15 @@ const CallToAction = () => {
         Ready to Get Started?
       </h1>
       <p className="mt-4">
-        We’re excited to help bring your vision to life! Whether you need a
-        custom website, brand transformation, or digital strategy, we’re here to
-        guide you every step of the way.
+        We’re excited to help you bring your digital vision to life! Whether you
+        need a custom website design, a brand transformation, or a comprehensive
+        digital strategy, we’re here to guide you through every step of the
+        process.
       </p>
       <p>
         Let’s collaborate to create something extraordinary. Contact us today to
-        discuss your goals and explore tailored solutions that drive results!
+        discuss your business goals and discover tailored digital solutions that
+        deliver measurable results!
       </p>
       <Button
         className="w-1/2 my-3"
