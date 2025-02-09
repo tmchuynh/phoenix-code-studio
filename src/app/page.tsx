@@ -4,7 +4,6 @@ import AboutSection from "@/components/AboutSection";
 import CallToAction from "@/components/CallToAction";
 import FeaturedBlogs from "@/components/FeaturedBlogs";
 import FeaturedProjects from "@/components/FeaturedProjects";
-import EmphasizeText from "@/components/Highlighted";
 import JoinUs from "@/components/JoinUs";
 import ServiceHighlights from "@/components/ServiceHighlights";
 import Testimonials from "@/components/Testimonials";
@@ -58,10 +57,8 @@ const WelcomePage: FC = () => {
           content, and tailored digital solutions designed to enhance user
           experience, drive engagement, and accelerate business growth. Our
           expertise in SEO optimization, responsive design, and cutting-edge
-          development ensures that your brand doesn’t just compete—it leads.
-        </p>
-        <p>
-          At Phoenix Code Studio, we don’t just build—we ignite possibilities,
+          development ensures that your brand doesn’t just compete—it leads. At
+          Phoenix Code Studio, we don’t just build—we ignite possibilities,
           empower brands, and shape the future of digital success.
         </p>
         <Button

@@ -22,17 +22,20 @@ const PaymentPlansPage: FC = () => {
       {/* Page Header */}
       <header className="mb-8">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-          Our Payment Plans
+          Flexible Pricing Plans to Fit Your Needs
         </h1>
         <p className="mt-4">
-          We provide flexible payment options tailored to fit your budget and
-          business needs, making it easier to invest in your digital growth.
-          Whether you choose a pay-as-you-go model or an extended payment
-          method, our straightforward pricing ensures economical web design, SEO
-          services, and content creation without undisclosed fees or unexpected
-          expenses. Designed for startups and enterprises alike, our installment
-          plans offer fiscal adaptability so you can scale your project with
-          conviction.
+          We offer customizable pricing options designed to accommodate
+          businesses of all sizes and budgets. Whether you need a basic package
+          for a smaller project or a comprehensive solution for a large-scale
+          initiative, our pricing tiers ensure exceptional value, flexibility,
+          and scalability.
+        </p>
+        <p>
+          Each plan is structured to align with your specific goals, offering
+          transparent pricing, high-quality service, and no hidden fees. Explore
+          our options and choose the plan that best suits your needs. Need a
+          custom quote? Contact us to discuss a tailored solution!
         </p>
       </header>
 

@@ -12,26 +12,32 @@ import {
   FaStar,
   FaUsers,
 } from "react-icons/fa";
+import { useTheme } from "next-themes";
+import { cn } from "@/lib/utils";
 import { GrGrow } from "react-icons/gr";
 
 const AboutUs = () => {
+  const { theme } = useTheme();
   const router = useRouter();
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto pb-6">
       <DynamicBreadcrumb />
       {/* About Us */}
-      <section className="pt-3 pb-7 items-center grid grid-cols-1 md:grid-cols-4">
-        <div className="mx-auto flex items-center">
+      <section className="pt-3 pb-7 items-center grid grid-cols-1 lg:grid-cols-7 lg:gap-x-7 gap-y-6">
+        <div className="w-full col-span-2 lg:col-span-2 md:order-2">
           <Image
             src="/images/logo.png"
             alt="Phoenix Code Studio Logo"
             width={500}
             height={500}
-            className="w-72 h-72 rounded-t-md object-cover mx-auto mb-1"
+            className={cn(
+              "w-44 md:w-64 lg:w-80 rounded-t-md object-cover mx-auto mb-1",
+              theme === "dark" ? "bg-muted border rounded-full p-5" : ""
+            )}
           />
         </div>
-        <div className="col-span-3">
+        <div className="col-span-3 lg:col-span-5">
           <h1>About Phoenix Code Studio</h1>
           <p>
             At Phoenix Code Studio, we seamlessly blend technological innovation
@@ -148,7 +154,7 @@ const AboutUs = () => {
         </p>
         <ul className="p-0 grid gap-4 grid-cols-1 md:grid-cols-2">
           <li className="flex mt-2 md:p-1 lg:flex-col lg:items-center lg:space-y-4">
-            <FaRegLightbulb className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-secondary lg:bg-muted lg:p-5 lg:rounded-full" />
+            <FaRegLightbulb className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-accent-4 lg:bg-muted lg:p-5 lg:rounded-full" />
             <div>
               <strong className="font-BonaNovaSC_Bold">
                 Creativity and Innovation:{" "}
@@ -160,7 +166,7 @@ const AboutUs = () => {
             </div>
           </li>
           <li className="flex mt-2 md:p-1 lg:flex-col lg:items-center lg:space-y-4">
-            <GrGrow className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-secondary lg:bg-muted lg:p-5 lg:rounded-full" />
+            <GrGrow className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-accent-4 lg:bg-muted lg:p-5 lg:rounded-full" />
             <div>
               <strong className="font-BonaNovaSC_Bold">
                 Adaptability & Growth:{" "}
@@ -172,7 +178,7 @@ const AboutUs = () => {
             </div>
           </li>
           <li className="flex mt-2 md:p-1 lg:flex-col lg:items-center lg:space-y-4">
-            <FaSeedling className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-secondary lg:bg-muted lg:p-5 lg:rounded-full" />
+            <FaSeedling className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-accent-4 lg:bg-muted lg:p-5 lg:rounded-full" />
             <div>
               <strong className="font-BonaNovaSC_Bold">Authenticity: </strong>
               Your brand deserves to stand out with originality. We craft
@@ -182,7 +188,7 @@ const AboutUs = () => {
             </div>
           </li>
           <li className="flex mt-2 md:p-1 lg:flex-col lg:items-center lg:space-y-4">
-            <FaStar className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-secondary lg:bg-muted lg:p-5 lg:rounded-full" />
+            <FaStar className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-accent-4 lg:bg-muted lg:p-5 lg:rounded-full" />
             <div>
               <strong className="font-BonaNovaSC_Bold">Excellence: </strong>
               We hold ourselves to the highest standards in web design,
@@ -192,7 +198,7 @@ const AboutUs = () => {
             </div>
           </li>
           <li className="flex mt-2 md:p-1 lg:flex-col lg:items-center lg:space-y-4">
-            <FaHandsHelping className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-secondary lg:bg-muted lg:p-5 lg:rounded-full" />
+            <FaHandsHelping className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-accent-4 lg:bg-muted lg:p-5 lg:rounded-full" />
             <div>
               <strong className="font-BonaNovaSC_Bold">Empowerment: </strong>
               We believe in helping small businesses succeed. Through expert
@@ -202,7 +208,7 @@ const AboutUs = () => {
             </div>
           </li>
           <li className="flex mt-2 md:p-1 lg:flex-col lg:items-center lg:space-y-4">
-            <FaHandshake className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-secondary lg:bg-muted lg:p-5 lg:rounded-full" />
+            <FaHandshake className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-accent-4 lg:bg-muted lg:p-5 lg:rounded-full" />
             <div>
               <strong className="font-BonaNovaSC_Bold">
                 Collaboration & Communication:{" "}
@@ -214,7 +220,7 @@ const AboutUs = () => {
             </div>
           </li>
           <li className="flex mt-2 md:p-1 lg:flex-col lg:items-center lg:space-y-4">
-            <FaUsers className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-secondary lg:bg-muted lg:p-5 lg:rounded-full" />
+            <FaUsers className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-accent-4 lg:bg-muted lg:p-5 lg:rounded-full" />
             <div>
               <strong className="font-BonaNovaSC_Bold">
                 Community Impact:{" "}
@@ -226,7 +232,7 @@ const AboutUs = () => {
             </div>
           </li>
           <li className="flex mt-2 md:p-1 lg:flex-col lg:items-center lg:space-y-4">
-            <FaRecycle className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-secondary lg:bg-muted lg:p-5 lg:rounded-full" />
+            <FaRecycle className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-accent-4 lg:bg-muted lg:p-5 lg:rounded-full" />
             <div>
               <strong className="font-BonaNovaSC_Bold">Sustainability: </strong>
               We build future-proof, scalable digital solutions designed to

@@ -287,16 +287,23 @@ const BlogDisplayPage: FC = () => {
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        Web Development Blogs
+        Phoenix Code Studio Blogs
       </h1>
       <p className="mt-4">
-        Stay informed with our latest insights, tips, and trends in web
-        development. From cutting-edge technologies and design best practices to
-        practical strategies for enhancing user experience and driving online
-        growth, we share valuable knowledge to keep you ahead in the
-        ever-evolving digital landscape. Explore expert advice, industry
-        updates, and innovative ideas to elevate your web presence and achieve
-        your business goals.
+        Stay ahead in the ever-evolving world of web development, UX design, and
+        digital strategy with expert insights, cutting-edge trends, and
+        actionable best practices. Whether you’re looking to optimize
+        performance, boost conversions, or leverage emerging technologies, our
+        content provides practical solutions to enhance your online presence,
+        user engagement, and business growth.
+      </p>
+      <p>
+        Explore a wealth of industry updates, innovative strategies, and expert
+        tips designed to keep you competitive, informed, and inspired. From
+        conversion-driven design to SEO optimization and user experience
+        enhancements, our blogs equip you with the knowledge to build for the
+        future. Stay informed, stay inspired, and stay ahead with Phoenix Code
+        Studio.
       </p>
 
       {/* Filter Options */}

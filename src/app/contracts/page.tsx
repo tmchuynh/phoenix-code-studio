@@ -13,32 +13,30 @@ const ExampleContractsPage: FC = () => {
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
       <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        Example Contracts
+        Explore Our Contract Examples
       </h1>
       <p>
-        Explore a range of contract examples tailored to various hiring
-        scenarios. These examples showcase how we structure agreements to
-        address different project needs, timelines, and budgets. Whether you're
-        hiring for a short-term engagement, a long-term partnership, or a highly
-        specialized project, these examples illustrate the flexibility and
-        customization we offer to meet diverse requirements.
+        Discover a variety of contract structures designed to accommodate
+        different hiring needs, project scopes, and budgets. Whether you're
+        seeking a short-term agreement, long-term partnership, or a specialized
+        project contract, our examples illustrate the flexibility and
+        customization we offer to align with your specific requirements.
       </p>
       <p>
-        Each example provides insights into how we handle unique situations,
-        from milestone-based payments to comprehensive, end-to-end service
-        contracts. Our approach ensures clarity, fairness, and alignment with
-        your specific goals. If your situation falls outside these examples,
-        don’t worry - we’re ready to create a custom contract that suits your
-        exact needs.
+        Each example showcases key elements such as milestone-based payments,
+        structured deliverables, and end-to-end service agreements—ensuring
+        transparency, fairness, and seamless collaboration. If your project
+        requires a customized contract, we’re ready to tailor an agreement that
+        fits your needs perfectly.
       </p>
       <p>
-        Take a look at the scenarios below to see how we can help structure a
-        contract that works for you.If you have questions or need something more
-        specific,{" "}
+        Browse our contract examples below to find the right fit for your
+        project. Need something more specific?
         <Button variant={"link"} className="p-0 m-0 h-fit">
-          reach out to us for a personalized consultation
+          Contact us today
         </Button>
-        .
+        for a personalized consultation to create a contract that works best for
+        you.
       </p>
 
       {/* Company Contract */}
