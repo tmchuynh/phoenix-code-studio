@@ -32,8 +32,8 @@ export const about: Menu[] = [
       "Read success stories and reviews from our satisfied customers.",
   },
   {
-    title: "Past Projects",
-    href: "/past-projects",
+    title: "Portfolio",
+    href: "/portfolio",
     description:
       "Learn more about our mission, vision, and what drives us forward.",
   },

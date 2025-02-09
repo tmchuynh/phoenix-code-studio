@@ -10,14 +10,16 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import useSmallScreen from "@/lib/useSmallScreen";
 import { capitalize } from "@/lib/utils";
 
 const DynamicBreadcrumb = () => {
   const pathname = usePathname();
   const pathSegments = pathname.split("/").filter((segment) => segment);
+  const isSmallScreen = useSmallScreen();
 
   return (
-    <Breadcrumb className="mb-4">
+    <Breadcrumb className={isSmallScreen ? "hidden" : "my-4"}>
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink className="bg-muted px-3 py-2 rounded-lg cursor-default">
