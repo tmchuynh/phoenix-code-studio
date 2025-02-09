@@ -224,12 +224,10 @@ const BlogDisplayPage: FC = () => {
 
   const handleTopicChange = (updatedTopics: string[]) => {
     setSelectedTopics(updatedTopics);
-    console.log(updatedTopics);
   };
 
   useEffect(() => {
     handleFilter();
-    console.log(blogs.map((blog) => blog.topics));
   }, [
     selectedTopics,
     selectedDates,
