@@ -3,7 +3,6 @@ import { Badge } from "@/components/ui/badge";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import Image from "next/image";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,15 +16,17 @@ import {
 } from "@/components/ui/pagination";
 import { pastProjects } from "@/lib/constants";
 import useLargeScreensOnly from "@/lib/useLargeScreensOnly";
-import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
-import { FC, useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+import { useRouter } from "next/navigation";
+import { FC, useEffect, useState } from "react";
 import RootLayout from "../layout";
 
 const PastProjectsPage: FC = () => {
+  const { theme } = useTheme();
   const isSmallScreen = useSmallScreen();
-  const isMediumScreen = useMediumScreen();
   const isLargeScreen = useLargeScreensOnly();
+  const router = useRouter();
 
   // Filter states
   const [selectedLanguages, setSelectedLanguages] = useState<string[]>([]);
@@ -207,9 +208,7 @@ const PastProjectsPage: FC = () => {
       >
         <main className="w-10/12 md:w-11/12 mx-auto py-6">
           <DynamicBreadcrumb />
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-            Explore Our Portfolio of Successful Projects
-          </h1>
+          <h1>Explore Our Portfolio of Successful Projects</h1>
           <p>
             Discover a showcase of our best work, where innovation meets
             functionality. From custom web designs to high-performance
@@ -226,7 +225,11 @@ const PastProjectsPage: FC = () => {
           </p>
           <p>
             Take a look at our proven track record, and{" "}
-            <Button variant={"link"} className="p-0 m-0 h-fit">
+            <Button
+              variant={"link"}
+              onClick={() => router.push("/contact-us")}
+              className="p-0 m-0 h-fit"
+            >
               let’s discuss how we can bring your next project to life!
             </Button>
           </p>
@@ -602,7 +605,7 @@ const PastProjectsPage: FC = () => {
                   >
                     <div className="h-full flex flex-col justify-between">
                       <div>
-                        <h2 className="font-semibold mt-5">{project.title}</h2>
+                        <h2 className="font-semibold mt-5">{project.name}</h2>
 
                         {isSmallScreen ? null : isLargeScreen ? (
                           <div>
@@ -693,10 +696,10 @@ const PastProjectsPage: FC = () => {
                   </CardContent>
                   <CardFooter className="h-fit md:py-3 flex flex-col items-start">
                     {/* Optional links */}
-                    <div className="flex flex-col gap-4 mx-auto">
+                    <div className="flex flex-col md:flex-row gap-4 mx-auto md:w-full md:justify-around">
                       {project.liveLink && (
                         <Button
-                          variant="secondary"
+                          variant={theme === "dark" ? "tertiary" : "secondary"}
                           size={isSmallScreen ? "sm" : "default"}
                           onClick={() =>
                             window.open(project.liveLink, "_blank")
