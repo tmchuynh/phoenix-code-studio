@@ -17,9 +17,7 @@ const TestimonialsPage: FC = () => {
       >
         <main className="w-10/12 md:w-11/12 mx-auto py-6">
           <DynamicBreadcrumb />
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-            Real Success Stories
-          </h1>
+          <h1>Real Success Stories</h1>
           <h2>How Our Clients Thrive with Our Solutions</h2>
           <p>
             Discover how our tailored digital solutions have transformed

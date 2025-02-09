@@ -16,9 +16,7 @@ const CustomWebsite: FC = () => {
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        Custom Website Design Services
-      </h1>
+      <h1>Custom Website Design Services</h1>
       <p>
         Our Custom Website Design Services are tailored to help your business
         make a powerful first impression. We understand that every business is

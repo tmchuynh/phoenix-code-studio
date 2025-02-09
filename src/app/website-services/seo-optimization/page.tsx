@@ -14,9 +14,7 @@ const SEOOptimization: FC = () => {
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
       {/* Page Header */}
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        SEO Optimization Services
-      </h1>
+      <h1>SEO Optimization Services</h1>
       <p>
         Our SEO Optimization Services are designed to help your website rank
         higher on search engines and drive more organic traffic. By implementing

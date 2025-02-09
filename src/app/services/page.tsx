@@ -54,9 +54,7 @@ const ServicesPage: FC = () => {
           <DynamicBreadcrumb />
           {/* Introduction Section */}
           <section className="mb-8">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-              Digital Services by Phoenix Code Studio
-            </h1>
+            <h1>Digital Services by Phoenix Code Studio</h1>
             <p>
               Unlock your business’s full potential with our all-embracing
               digital solutions. From cutting-edge web development that delivers

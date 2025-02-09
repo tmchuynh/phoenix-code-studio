@@ -27,9 +27,7 @@ const PaymentPlansPage: FC = () => {
           <DynamicBreadcrumb />
           {/* Page Header */}
           <header className="mb-8">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-              Our Payment Plans
-            </h1>
+            <h1>Our Payment Plans</h1>
             <p className="mt-4">
               We provide flexible payment options tailored to fit your budget
               and business needs, making it easier to invest in your digital

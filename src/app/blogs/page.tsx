@@ -293,9 +293,7 @@ const BlogDisplayPage: FC = () => {
         <main className="w-10/12 md:w-11/12 mx-auto py-6">
           <DynamicBreadcrumb />
           <section>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-              Phoenix Code Studio Blogs
-            </h1>
+            <h1>Phoenix Code Studio Blogs</h1>
             <h2>Insights, Trends & Strategies for Digital Success</h2>
             <p>
               Stay ahead in the fast-paced world of web development, UX design,

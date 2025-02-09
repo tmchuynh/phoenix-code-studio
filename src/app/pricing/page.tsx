@@ -10,9 +10,12 @@ import {
 } from "@/lib/constants";
 import { FC } from "react";
 import RootLayout from "../layout";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
 const PricingPage: FC = () => {
+  const router = useRouter();
+
   return (
     <>
       <RootLayout
@@ -21,9 +24,7 @@ const PricingPage: FC = () => {
       >
         <main className="w-10/12 md:w-11/12 mx-auto py-6">
           <DynamicBreadcrumb />
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-            Flexible Pricing Plans to Fit Your Needs
-          </h1>
+          <h1>Flexible Pricing Plans to Fit Your Needs</h1>
           <p>
             We offer customizable pricing options designed to accommodate
             businesses of all sizes and budgets. Whether you need a basic
@@ -36,7 +37,11 @@ const PricingPage: FC = () => {
             transparent pricing, high-quality service, and no hidden fees.
             Explore our options and choose the plan that best suits your needs.
             Need a custom quote?{" "}
-            <Button variant={"link"} className="p-0 m-0 h-fit">
+            <Button
+              variant={"link"}
+              onClick={() => router.push("/contact-us")}
+              className="p-0 m-0 h-fit"
+            >
               Contact us to discuss a tailored solution!
             </Button>
           </p>

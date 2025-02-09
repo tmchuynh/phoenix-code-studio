@@ -18,9 +18,7 @@ const ExampleContractsPage: FC = () => {
       >
         <main className="w-10/12 md:w-11/12 mx-auto py-6">
           <DynamicBreadcrumb />
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-            Explore Our Contract Examples
-          </h1>
+          <h1>Explore Our Contract Examples</h1>
           <p>
             We offer a variety of contract examples designed to accommodate
             different hiring scenarios, project scopes, and budgets. Whether

@@ -13,9 +13,7 @@ const DatabaseServices: FC = () => {
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        Database Creation and Management Services
-      </h1>
+      <h1>Database Creation and Management Services</h1>
       <p>
         Our Database Creation and Management Services are designed to help
         businesses efficiently manage and optimize their data. We specialize in

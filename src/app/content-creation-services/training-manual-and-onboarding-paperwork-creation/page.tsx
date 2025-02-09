@@ -14,9 +14,7 @@ const TrainingManualOnboardingPapers: FC = () => {
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
       {/* Page Header */}
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        Training Manual and Onboarding Papers Creation Services
-      </h1>
+      <h1>Training Manual and Onboarding Papers Creation Services</h1>
       <p>
         Our Training Manual and Onboarding Papers Creation Services help
         businesses streamline the onboarding process for new employees. We craft

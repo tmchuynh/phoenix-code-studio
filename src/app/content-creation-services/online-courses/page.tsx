@@ -14,9 +14,7 @@ const OnlineCoursesServices: FC = () => {
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
       {/* Page Header */}
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        Online Courses Development Services
-      </h1>
+      <h1>Online Courses Development Services</h1>
       <p>
         Our Online Courses Development Services provide everything you need to
         create engaging, educational, and interactive learning experiences. From

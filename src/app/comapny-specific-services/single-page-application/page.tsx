@@ -13,9 +13,7 @@ const SPAServices: FC = () => {
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        Single Page Application (SPA) Development Services
-      </h1>
+      <h1>Single Page Application (SPA) Development Services</h1>
       <p>
         Our Single Page Application (SPA) Development services focus on
         delivering fast, dynamic, and highly interactive web experiences. By

@@ -14,9 +14,7 @@ const EbookCreationServices: FC = () => {
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
       {/* Page Header */}
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        E-Book Creation Services
-      </h1>
+      <h1>E-Book Creation Services</h1>
       <p>
         Our E-Book Creation Services provide end-to-end solutions for
         transforming your ideas into polished, professional e-books. From

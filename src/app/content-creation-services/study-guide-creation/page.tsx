@@ -14,9 +14,7 @@ const StudyGuideCreation: FC = () => {
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
       {/* Page Header */}
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        Study Guide Creation Services
-      </h1>
+      <h1>Study Guide Creation Services</h1>
       <p>
         Our Study Guide Creation Services are designed to help students and
         educators achieve academic success. We provide comprehensive,

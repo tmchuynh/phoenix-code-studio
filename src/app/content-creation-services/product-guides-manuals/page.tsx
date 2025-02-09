@@ -14,9 +14,7 @@ const ProductGuidesManualsServices: FC = () => {
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
       {/* Page Header */}
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        Product Guides and Manuals Writing Services
-      </h1>
+      <h1>Product Guides and Manuals Writing Services</h1>
       <p>
         Our Product Guides and Manuals Writing Services are designed to provide
         your customers with clear, concise, and easy-to-follow instructions for

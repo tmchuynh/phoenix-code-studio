@@ -97,9 +97,7 @@ const ContactUsPage: FC = () => {
           <DynamicBreadcrumb />
           <div className="flex items-end">
             <div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-                Let’s Connect!
-              </h1>
+              <h1>Let’s Connect!</h1>
               <p>
                 Have questions or ready to kick off your next project? We’re
                 here to help! Whether you need more details about our services,

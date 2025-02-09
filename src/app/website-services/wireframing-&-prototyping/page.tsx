@@ -14,9 +14,7 @@ const WireframingPrototypingServices: FC = () => {
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
       {/* Page Header */}
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        Wireframing & Prototyping Services
-      </h1>
+      <h1>Wireframing & Prototyping Services</h1>
       <p>
         Our Wireframing & Prototyping Services help bring your ideas to life
         with clear, interactive blueprints that guide the development process.

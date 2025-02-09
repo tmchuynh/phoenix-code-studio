@@ -14,9 +14,7 @@ const NewsletterServices: FC = () => {
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
       {/* Page Header */}
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        Newsletter Writing and Design Services
-      </h1>
+      <h1>Newsletter Writing and Design Services</h1>
       <p>
         Our Newsletter Writing and Design Services are designed to help you
         engage your audience with compelling, well-crafted content and visually

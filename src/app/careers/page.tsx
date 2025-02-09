@@ -23,9 +23,7 @@ const JobListingsPage: FC = () => {
           <div className="flex gap-4">
             <div>
               {/* Page Title */}
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-                Elevate Your Career with Us
-              </h1>
+              <h1>Elevate Your Career with Us</h1>
               <p>
                 Looking for a career that challenges, inspires, and drives your
                 success? We’re seeking passionate professionals ready to make an

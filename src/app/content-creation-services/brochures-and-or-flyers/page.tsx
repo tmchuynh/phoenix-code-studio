@@ -14,9 +14,7 @@ const BrochuresAndFlyersServices: FC = () => {
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
       {/* Page Header */}
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        Brochures and Flyers Design Services
-      </h1>
+      <h1>Brochures and Flyers Design Services</h1>
       <p>
         Our Brochures and Flyers Design Services deliver visually compelling and
         impactful marketing materials that capture your brand’s essence. Whether
