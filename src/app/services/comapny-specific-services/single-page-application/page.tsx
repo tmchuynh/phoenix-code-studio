@@ -2,7 +2,6 @@
 
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
-import { spaDevelopmentData, technologiesUsed } from "@/lib/company-constant";
 import { companySpecificServices } from "@/lib/constants";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
