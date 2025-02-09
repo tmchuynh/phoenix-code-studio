@@ -288,32 +288,29 @@ const BlogDisplayPage: FC = () => {
     <>
       <RootLayout
         title="Blogs - Phoenix Code Studio"
-        description="Explore Our Web Development Blogs for Digital Growth and User Experience Insights"
+        description="Explore Our Technology Blogs for Digital Growth and User Experience Insights"
       >
         <main className="w-10/12 md:w-11/12 mx-auto py-6">
           <DynamicBreadcrumb />
-          <section className="pb-4">
+          <section>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-              Web Development Blogs
+              Phoenix Code Studio Blogs
             </h1>
-            <p className="mt-4">
-              Stay informed with our latest insights, tips, and trends in web
-              development. From cutting-edge technologies and design best
-              practices to practical strategies for enhancing user experience
-              and driving online growth, we share valuable knowledge to keep you
-              ahead in the ever-evolving digital landscape. Explore expert
-              advice, industry updates, and innovative ideas to elevate your web
-              presence and achieve your business goals.
-            </p>
-          </section>
-
-          <section className="py-6 border-t-2 border-b-2">
-            <h2>Stay Updated!</h2>
+            <h2>Insights, Trends & Strategies for Digital Success</h2>
             <p>
-              Subscribe to our newsletter for the latest in web development
-              blogs and tips.
+              Stay ahead in the fast-paced world of web development, UX design,
+              and digital strategy with expert insights, the latest trends, and
+              actionable best practices. Our blog covers everything from
+              emerging technologies and performance optimization to
+              conversion-driven design and user experience enhancements.
             </p>
-            <Button>Subscribe Now</Button>
+            <p>
+              Discover industry updates, practical tips, and innovative
+              solutions designed to help you elevate your online presence,
+              engage your audience, and drive business growth. Keep learning,
+              stay competitive, and build for the future with Phoenix Code
+              Studio.
+            </p>
           </section>
 
           {/* Filter Options */}

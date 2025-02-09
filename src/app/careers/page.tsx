@@ -23,35 +23,27 @@ const JobListingsPage: FC = () => {
           <div className="flex gap-4">
             <div>
               {/* Page Title */}
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary text-center mb-10">
-                Open Positions
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
+                Elevate Your Career with Us
               </h1>
               <p>
-                Looking for a career that challenges, inspires, and propels you
-                forward? We’re on the hunt for{" "}
-                <EmphasizeText>driven</EmphasizeText> and{" "}
-                <EmphasizeText>skilled</EmphasizeText> professionals eager to
-                leave a mark in a fast-paced, innovative environment. Whether
-                you specialize in development, design, marketing, or
-                problem-solving, we have a role where you can thrive.
+                Looking for a career that challenges, inspires, and drives your
+                success? We’re seeking passionate professionals ready to make an
+                impact in a fast-paced, innovative environment. Whether you
+                specialize in development, design, marketing, or strategy, we
+                offer opportunities where you can thrive, grow, and lead.
               </p>
               <p>
-                Here, we foster a culture of{" "}
-                <EmphasizeText>innovation</EmphasizeText>,{" "}
-                <EmphasizeText>teamwork</EmphasizeText>, and{" "}
-                <EmphasizeText>growth</EmphasizeText>. You'll have the chance to
-                work on groundbreaking projects, refine your expertise, and
-                contribute to shaping the future of business and technology.
-                Browse our open positions and see where your talents fit in.
+                At our company, innovation, collaboration, and career growth are
+                at the core of what we do. Work on cutting-edge projects,
+                sharpen your expertise, and help shape the future of business
+                and technology.
               </p>
               <p>
-                Don't settle—
-                <span className="text-primary font-extrabold">
-                  ELEVATE
-                </span>{" "}
-                your career. Join a team that values your ideas, celebrates your
-                contributions, and supports your ambitions. Together, we’ll
-                create something extraordinary.
+                Don’t just settle—ELEVATE your career. Join a team that values
+                your ideas, celebrates your achievements, and supports your
+                ambitions. Explore our open positions and take the next step in
+                building something extraordinary.
               </p>
             </div>
             <Image

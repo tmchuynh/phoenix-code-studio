@@ -15,13 +15,22 @@ const AboutSection = () => {
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
         Who We Are
       </h2>
+      <p className="text-center mx-auto">
+        At Phoenix Code Studio, we are more than just web developers, designers,
+        and content creators—we are digital innovators dedicated to helping
+        businesses thrive in an ever-evolving online world. Our team specializes
+        in customized solutions that blend cutting-edge technology, strategic
+        design, and compelling content to create high-impact digital
+        experiences.
+      </p>
       <p className="text-center mx-auto mb-8">
-        At Phoenix Code Studio, we are a passionate team of web developers,
-        designers, and content creators. Our goal is to help businesses thrive
-        by offering customized solutions, from high-quality websites to
-        impactful marketing content. We work closely with each client to
-        understand their needs, ensuring that our solutions deliver results that
-        exceed expectations.
+        We take a collaborative approach, working closely with each client to
+        understand their unique vision, goals, and challenges. Whether it’s
+        crafting high-performance websites, optimizing for SEO, or developing
+        engaging marketing content, we ensure every solution is tailored for
+        success and delivers measurable results that exceed expectations. At
+        Phoenix Code Studio, we don’t just build brands—we help them rise,
+        evolve, and lead in the digital space.
       </p>
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-7 w-full md:w-11/12 lg:w-full mx-auto">
         {/* Creativity & Innovation */}
@@ -29,10 +38,10 @@ const AboutSection = () => {
           <FaRegLightbulb className="text-6xl text-accent-5 mx-auto mb-4" />
           <h3 className="font-bold text-secondary">Creativity & Innovation</h3>
           <p>
-            We blend creativity with the latest technologies to deliver
-            impactful digital solutions that bring our clients’ visions to life.
-            By thinking outside the box and embracing new trends, we ensure that
-            each project is unique and relevant.
+            We combine imagination and technology to craft unique,
+            forward-thinking digital solutions. By embracing emerging trends and
+            pushing creative boundaries, we deliver impactful, future-ready
+            experiences that set your brand apart.
           </p>
         </div>
 
@@ -41,10 +50,10 @@ const AboutSection = () => {
           <GrGrow className="text-6xl text-accent-5 mx-auto mb-4" />
           <h3 className="font-bold text-secondary">Adaptability & Growth</h3>
           <p>
-            Embracing new challenges is part of our DNA. We constantly adapt to
-            the ever-changing digital landscape, ensuring that our solutions
-            remain forward-thinking, flexible, and aligned with emerging trends
-            and technologies.
+            We thrive on change and innovation, continuously evolving to stay
+            ahead in the digital landscape. Our solutions are flexible,
+            future-proof, and aligned with emerging trends, ensuring long-term
+            success.
           </p>
         </div>
 
@@ -53,10 +62,9 @@ const AboutSection = () => {
           <FaSeedling className="text-6xl text-accent-5 mx-auto mb-4" />
           <h3 className="font-bold text-secondary">Authenticity</h3>
           <p>
-            We believe in creating digital experiences that are true to our
-            clients’ identity and core values. Every solution is crafted with
-            authenticity to reflect the unique voice of each brand and connect
-            with their audience on a deeper level.
+            We craft genuine digital experiences that reflect each brand’s
+            unique identity and values. Our solutions build authentic
+            connections with audiences, ensuring a lasting impact.
           </p>
         </div>
 
@@ -65,10 +73,9 @@ const AboutSection = () => {
           <FaStar className="text-6xl text-accent-5 mx-auto mb-4" />
           <h3 className="font-bold text-secondary">Excellence</h3>
           <p>
-            We are committed to delivering exceptional, user-centric solutions
-            that exceed expectations. Our dedication to continuous growth and
-            innovation drives us to constantly improve and push the boundaries
-            of what’s possible in web development and design.
+            We deliver exceptional, user-focused solutions that go beyond
+            expectations. Driven by innovation and continuous growth, we push
+            boundaries to create cutting-edge web experiences.
           </p>
         </div>
 
@@ -77,10 +84,9 @@ const AboutSection = () => {
           <FaHandsHelping className="text-6xl text-accent-5 mx-auto mb-4" />
           <h3 className="font-bold text-secondary">Empowerment</h3>
           <p>
-            We empower small businesses to thrive in the digital space. By
-            providing the right tools, resources, and support, we help them grow
-            and succeed in a competitive online marketplace, ensuring they can
-            make the most of their digital presence.
+            We equip small businesses with the tools, resources, and support
+            needed to thrive online. Our goal is to help them grow, compete, and
+            succeed in the ever-evolving digital marketplace.
           </p>
         </div>
 
@@ -91,10 +97,9 @@ const AboutSection = () => {
             Collaboration & Communication
           </h3>
           <p>
-            Open, transparent communication is key to success. We collaborate
-            closely with our clients at every step of the process, ensuring
-            their ideas and goals are central to every project, resulting in
-            solutions that truly meet their needs.
+            Success starts with clear, open communication. We work closely with
+            our clients, ensuring their ideas and goals shape every project,
+            leading to tailored solutions that truly deliver results.
           </p>
         </div>
 
@@ -103,10 +108,9 @@ const AboutSection = () => {
           <FaUsers className="text-6xl text-accent-5 mx-auto mb-4" />
           <h3 className="font-bold text-secondary">Community Impact</h3>
           <p>
-            We are passionate about making a difference. Our work doesn’t just
-            benefit our clients – we aim to create digital experiences that
-            drive positive change in communities, helping businesses grow and
-            contribute to the greater good.
+            We believe in using technology for positive change. Our work goes
+            beyond serving clients—we create digital solutions that empower
+            businesses, strengthen communities, and drive meaningful impact.
           </p>
         </div>
 
@@ -115,11 +119,11 @@ const AboutSection = () => {
           <FaRecycle className="text-6xl text-accent-5 mx-auto mb-4" />
           <h3 className="font-bold text-secondary">Sustainability</h3>
           <p>
-            We recognize the importance of creating digital solutions that not
-            only serve today’s needs but also contribute to long-term
-            sustainability. We strive to design and develop solutions that are
-            scalable, eco-friendly, and future-proof, ensuring a better digital
-            future for everyone.
+            We prioritize scalable, eco-friendly, and future-proof digital
+            solutions that support long-term sustainability. By integrating
+            efficient design, responsible development practices, and adaptable
+            technology, we help create a more sustainable digital future for
+            businesses and communities alike.
           </p>
         </div>
       </div>

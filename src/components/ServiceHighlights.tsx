@@ -16,9 +16,12 @@ const ServiceHighlights = () => {
           </h3>
 
           <p className="text-center mt-4">
-            Elevate your online presence with expertly crafted UX/UI design, SEO
-            optimization, and custom website solutions tailored to your business
-            needs.
+            Transform your online presence with custom-crafted websites that
+            blend stunning UX/UI design, seamless functionality, and SEO
+            optimization. Whether you're launching a new brand or refreshing an
+            existing site, our tailored solutions ensure a visually compelling,
+            high-performing, and user-friendly experience that drives engagement
+            and growth.
           </p>
         </div>
 
@@ -31,9 +34,12 @@ const ServiceHighlights = () => {
           </h3>
 
           <p className="text-center mt-4">
-            Engage your audience with compelling content—from blog posts and
-            newsletters to eBooks, technical writing, and onboarding materials.
-            We craft content that resonates.
+            Captivate your audience with high-impact, engaging content designed
+            to inform, inspire, and convert. From SEO-optimized blog posts and
+            newsletters to eBooks, technical documentation, and onboarding
+            materials, we craft compelling narratives that strengthen your
+            brand, enhance visibility, and drive meaningful connections. Let
+            your content do the talking—and the selling!
           </p>
         </div>
 
@@ -46,10 +52,13 @@ const ServiceHighlights = () => {
           </h3>
 
           <p className="text-center mt-4">
-            Elevate your brand with strategic rebranding and compelling
-            storytelling. We help you connect with a wider audience, build
-            lasting customer trust, and create a brand identity that keeps
-            customers coming back.
+            Transform your brand into a powerful, memorable identity with
+            strategic rebranding and storytelling that captivates and connects.
+            We craft compelling narratives that resonate with your audience,
+            build trust, and foster brand loyalty. Whether you’re refreshing
+            your image or redefining your message, we help you create an
+            authentic, impactful brand that stands out and keeps customers
+            coming back.
           </p>
         </div>
       </div>

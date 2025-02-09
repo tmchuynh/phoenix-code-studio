@@ -10,6 +10,7 @@ import {
 } from "@/lib/constants";
 import { FC } from "react";
 import RootLayout from "../layout";
+import { Button } from "@/components/ui/button";
 
 const PricingPage: FC = () => {
   return (
@@ -21,15 +22,23 @@ const PricingPage: FC = () => {
         <main className="w-10/12 md:w-11/12 mx-auto py-6">
           <DynamicBreadcrumb />
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-            Our Pricing and Service Tiers
+            Flexible Pricing Plans to Fit Your Needs
           </h1>
           <p>
-            Explore our flexible pricing options designed to suit a variety of
-            needs and budgets. Whether you're looking for a basic package or a
-            comprehensive solution, we offer service tiers that provide
-            exceptional value and scalability. Choose the plan that aligns with
-            your goals, and let us help you achieve success with tailored,
-            high-quality services.
+            We offer customizable pricing options designed to accommodate
+            businesses of all sizes and budgets. Whether you need a basic
+            package for a smaller project or a comprehensive solution for a
+            large-scale initiative, our pricing tiers ensure exceptional value,
+            flexibility, and scalability.
+          </p>
+          <p>
+            Each plan is structured to align with your specific goals, offering
+            transparent pricing, high-quality service, and no hidden fees.
+            Explore our options and choose the plan that best suits your needs.
+            Need a custom quote?{" "}
+            <Button variant={"link"} className="p-0 m-0 h-fit">
+              Contact us to discuss a tailored solution!
+            </Button>
           </p>
 
           {/* Service 1: Website Services */}

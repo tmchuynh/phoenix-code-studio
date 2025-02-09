@@ -43,57 +43,60 @@ const AboutUs = () => {
             </div>
             <div className="col-span-3">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-                About Us
+                About Phoenix Code Studio
               </h1>
               <p>
-                At Phoenix Code Studio, we merge cultural sophistication with
-                cutting-edge technology to deliver bespoke digital experiences
-                that stand out. Inspired by the Phoenix—a powerful symbol of
-                rebirth, resilience, and transformation—we are committed to
-                helping small businesses not only establish their presence in
-                the digital world but also rise above their competition. Just as
-                the Phoenix is reborn from the ashes, we aim to help your
-                business transform and thrive in an ever-evolving online
-                landscape. Our comprehensive services include{" "}
-                <EmphasizeText>custom website development</EmphasizeText>,{" "}
-                <EmphasizeText>brand revitalization</EmphasizeText>,{" "}
-                <EmphasizeText>website redesigns</EmphasizeText>, and more all
-                tailored to bring your unique vision to life. From designing
-                visually stunning and highly functional websites to reimagining
-                your brand identity, we focus on crafting solutions that
-                resonate deeply with your audience. Whether you’re starting from
-                scratch or seeking to refresh your existing digital presence,
-                our goal is to translate your business’s core values into
-                designs that inspire and engage.
+                At Phoenix Code Studio, we seamlessly blend technological
+                innovation with creative storytelling to craft exceptional
+                digital experiences that elevate brands and set them apart.
+                Inspired by the Phoenix—a timeless symbol of resilience,
+                transformation, and limitless potential—we empower businesses to
+                not just establish an online presence, but to rise, evolve, and
+                thrive in the competitive digital landscape.
               </p>
-
               <p>
-                What sets Phoenix Code Studio apart is our unwavering dedication
-                to excellence, creativity, and authenticity. We believe in more
-                than just delivering websites; we create experiences that
-                reflect your individuality and tell your story. By prioritizing
-                modern design, intuitive functionality, and a personal touch, we
-                ensure your online presence feels{" "}
-                <EmphasizeText>approachable</EmphasizeText>,{" "}
-                <EmphasizeText>professional</EmphasizeText>, and{" "}
-                <EmphasizeText>impactful</EmphasizeText>. With a focus on
-                collaboration and innovation, we work closely with you every
-                step of the way to understand your business goals and translate
-                them into a digital presence that drives results. At Phoenix
-                Code Studio, we don’t just build websites; we build
-                partnerships, empowering you to grow and succeed in the
-                ever-evolving digital landscape.
+                We specialize in custom website development, brand
+                revitalization, and website redesigns, tailoring every project
+                to bring your unique vision to life. Whether you’re launching a
+                brand-new venture or redefining your online identity, our
+                mission is to translate your business’s core values into
+                visually stunning, strategically designed, and highly engaging
+                digital platforms. By combining intuitive functionality with
+                modern aesthetics, we create solutions that not only captivate
+                your audience but also drive results and build lasting
+                connections.
               </p>
-
+              <h2>Why Choose Phoenix Code Studio?</h2>
               <p>
-                Let’s work together to transform your online presence into
-                something truly remarkable. With Phoenix Code Studio by your
-                side, your business has the tools to bloom and achieve its full
-                potential in the digital world.
+                What sets us apart is our commitment to excellence,
+                authenticity, and innovation. We don’t just build websites—we
+                craft meaningful digital experiences that reflect your brand’s
+                essence and tell your unique story. Our approach is rooted in
+                collaboration, ensuring that we fully understand your goals and
+                transform them into a powerful online presence that fosters
+                growth, credibility, and engagement.
               </p>
+              <p>
+                At Phoenix Code Studio, we prioritize user experience, strategic
+                design, and cutting-edge technology to deliver solutions that
+                feel approachable, professional, and high-impact. Our process is
+                guided by data-driven insights and industry best practices,
+                ensuring that your website isn’t just visually appealing—it’s
+                optimized for performance, accessibility, and search engine
+                visibility.
+              </p>
+              <h2>Your Digital Transformation Starts Here</h2>
+              <p>
+                Let’s work together to create an online presence that sets your
+                business apart and fuels your success. With Phoenix Code Studio
+                as your trusted digital partner, your brand has the tools to
+                flourish, captivate audiences, and achieve its full potential in
+                the digital world.
+              </p>
+              <p>Ready to take the next step?</p>
               <Button
                 onClick={() => router.push("/frequently-asked-questions")}
-                className="mt-6"
+                className="mt-2"
               >
                 Check Our Frequently Asked Questions
               </Button>
@@ -102,56 +105,57 @@ const AboutUs = () => {
 
           {/* Mission Statement */}
           <section className="py-3">
-            <h2>Mission Statement</h2>
+            <h1>Our Mission at Phoenix Code Studio</h1>
             <p>
-              At Phoenix Code Studio, our mission is to empower small businesses
-              by transforming their digital presence into a bespoke reflection
-              of their unique brand identity. Rooted in the values of
-              creativity, authenticity, and cultural sophistication, we craft
-              modern, approachable web solutions that drive growth, foster
-              meaningful connections, and enable businesses to thrive in today’s
-              ever-changing digital landscape. We specialize in delivering
-              innovative, custom digital experiences designed to inspire,
-              empower, and create lasting value. By combining thoughtful design
-              with cutting-edge technology, we ensure every solution is tailored
-              to reflect the distinct goals, visions, and personality of each
-              client. From seamless functionality to visually striking
-              aesthetics, our work goes beyond mere usability, creating websites
-              and platforms that tell your story and resonate with your
-              audience.
-            </p>
-
-            <p>
-              More than just delivering exceptional products, we are committed
-              to fostering a community that values collaboration and supports
-              our clients every step of the way. We believe in creating
-              relationships that extend beyond the launch of a project, offering
-              ongoing support and guidance to ensure long-term success. At
-              Phoenix Code Studio, we take pride in understanding the unique
-              needs of each client, translating them into digital experiences
-              that are as functional as they are inspiring.
+              At Phoenix Code Studio, we are dedicated to empowering small
+              businesses by transforming their digital presence into a bespoke,
+              authentic reflection of their brand identity. Rooted in
+              creativity, innovation, and cultural sophistication, we craft
+              modern, user-friendly web solutions that do more than just
+              function—they captivate, connect, and drive meaningful growth. Our
+              mission is to help businesses thrive in today’s fast-paced digital
+              world by delivering custom, high-impact digital experiences that
+              inspire, engage, and create lasting value.
             </p>
             <p>
-              Our passionate team of experts is dedicated to excellence,
-              constantly pushing boundaries to deliver results that exceed
-              expectations. Whether it's crafting a brand-new digital identity,
-              reimagining an existing one, or building a robust platform to
-              support business growth, we approach every project with
-              creativity, precision, and a personal touch. At Phoenix Code
-              Studio, we don’t just build websites—we build partnerships.
-              Together, we can transform your digital presence into something
-              truly extraordinary, ensuring that your business stands out and
-              leaves a meaningful impact in an increasingly digital world.
+              By seamlessly blending thoughtful design with cutting-edge
+              technology, we ensure every solution is tailored to reflect the
+              distinct goals, vision, and personality of each client. From
+              visually striking aesthetics to seamless functionality, we go
+              beyond usability to create immersive digital experiences that tell
+              your story and leave a lasting impression.
             </p>
+            <h2>More Than Just Websites—We Build Relationships</h2>
+            <p>
+              At Phoenix Code Studio, our commitment extends far beyond project
+              delivery. We foster strong client relationships, ensuring
+              continued support and strategic guidance long after launch. We
+              believe in a collaborative approach, where your success is our
+              success. Whether it’s crafting a new digital identity, enhancing
+              an existing brand, or building a scalable platform, we approach
+              every project with creativity, precision, and a personal touch.
+            </p>
+            <p>
+              Our team is passionate about excellence, continuously pushing
+              boundaries to exceed expectations. At Phoenix Code Studio, we
+              don’t just build websites—we build strategic partnerships that
+              empower businesses to stand out, grow, and make a lasting impact
+              in an increasingly digital world.
+            </p>
+            <Button onClick={() => router.push("/contact-us")} className="my-6">
+              Let’s create something extraordinary together.
+            </Button>
           </section>
-
-          <SidebarSeparator className="bg-muted h-0.5" />
-          <CallToAction />
-          <SidebarSeparator className="bg-muted h-0.5" />
 
           {/* Core Values */}
           <section className="py-3">
-            <h2>Core Values</h2>
+            <h1>Core Values</h1>
+            <p>
+              At Phoenix Code Studio, our values shape everything we create. We
+              believe in designing and developing digital experiences that are
+              not only innovative but also meaningful, impactful, and
+              purpose-driven.
+            </p>
             <ul className="flex flex-col gap-2">
               <li className="flex">
                 <FaRegLightbulb
@@ -162,10 +166,10 @@ const AboutUs = () => {
                   <strong className="font-BonaNovaSC_Bold">
                     Creativity and Innovation:{" "}
                   </strong>
-                  We blend creativity with the latest technologies to deliver
-                  impactful digital solutions that bring our clients’ visions to
-                  life. By thinking outside the box and embracing new trends, we
-                  ensure that each project is unique and relevant.
+                  We combine cutting-edge technology with imaginative thinking
+                  to craft original, high-performing digital solutions. By
+                  staying ahead of trends and pushing creative boundaries, we
+                  bring your vision to life in ways that captivate and engage.
                 </div>
               </li>
               <li className="flex">
@@ -177,10 +181,10 @@ const AboutUs = () => {
                   <strong className="font-BonaNovaSC_Bold">
                     Adaptability & Growth:{" "}
                   </strong>
-                  Embracing new challenges is part of our DNA. We constantly
-                  adapt to the ever-changing digital landscape, ensuring that
-                  our solutions remain forward-thinking, flexible, and aligned
-                  with emerging trends and technologies.
+                  The digital landscape is ever-changing, and so are we. We
+                  embrace new challenges, emerging technologies, and evolving
+                  industry trends to ensure that our solutions remain scalable,
+                  forward-thinking, and effective in a dynamic online world.
                 </div>
               </li>
               <li className="flex">
@@ -192,10 +196,10 @@ const AboutUs = () => {
                   <strong className="font-BonaNovaSC_Bold">
                     Authenticity:{" "}
                   </strong>
-                  We believe in creating digital experiences that are true to
-                  our clients’ identity and core values. Every solution is
-                  crafted with authenticity to reflect the unique voice of each
-                  brand and connect with their audience on a deeper level.
+                  Your brand deserves to stand out with originality. We craft
+                  genuine, meaningful digital experiences that truly reflect
+                  your brand’s unique voice, values, and identity, helping you
+                  build deeper connections with your audience.
                 </div>
               </li>
               <li className="flex">
@@ -205,11 +209,10 @@ const AboutUs = () => {
                 />
                 <div>
                   <strong className="font-BonaNovaSC_Bold">Excellence: </strong>
-                  We are committed to delivering exceptional, user-centric
-                  solutions that exceed expectations. Our dedication to
-                  continuous growth and innovation drives us to constantly
-                  improve and push the boundaries of what’s possible in web
-                  development and design.
+                  We hold ourselves to the highest standards in web design,
+                  development, and digital strategy. Our commitment to quality,
+                  precision, and user-focused experiences ensures that every
+                  project we deliver exceeds expectations.
                 </div>
               </li>
               <li className="flex">
@@ -221,10 +224,10 @@ const AboutUs = () => {
                   <strong className="font-BonaNovaSC_Bold">
                     Empowerment:{" "}
                   </strong>
-                  We empower small businesses to thrive in the digital space. By
-                  providing the right tools, resources, and support, we help
-                  them grow and succeed in a competitive online marketplace,
-                  ensuring they can make the most of their digital presence.
+                  We believe in helping small businesses succeed. Through expert
+                  guidance, tailored strategies, and innovative tools, we equip
+                  businesses with the resources they need to thrive and grow in
+                  today’s competitive digital space.
                 </div>
               </li>
               <li className="flex">
@@ -236,10 +239,11 @@ const AboutUs = () => {
                   <strong className="font-BonaNovaSC_Bold">
                     Collaboration & Communication:{" "}
                   </strong>
-                  Open, transparent communication is key to success. We
-                  collaborate closely with our clients at every step of the
-                  process, ensuring their ideas and goals are central to every
-                  project, resulting in solutions that truly meet their needs.
+                  We don’t just work for our clients—we work with them. Through
+                  transparent communication and a collaborative approach, we
+                  ensure that your ideas, goals, and feedback are at the core of
+                  every project, leading to results that truly align with your
+                  vision.
                 </div>
               </li>
               <li className="flex">
@@ -251,10 +255,10 @@ const AboutUs = () => {
                   <strong className="font-BonaNovaSC_Bold">
                     Community Impact:{" "}
                   </strong>
-                  We are passionate about making a difference. Our work doesn’t
-                  just benefit our clients – we aim to create digital
-                  experiences that drive positive change in communities, helping
-                  businesses grow and contribute to the greater good.
+                  Our work extends beyond individual projects. We strive to
+                  create digital solutions that uplift businesses, strengthen
+                  communities, and contribute to positive change, fostering
+                  growth for everyone involved.
                 </div>
               </li>
               <li className="flex">
@@ -266,49 +270,55 @@ const AboutUs = () => {
                   <strong className="font-BonaNovaSC_Bold">
                     Sustainability:{" "}
                   </strong>
-                  We recognize the importance of creating digital solutions that
-                  not only serve today’s needs but also contribute to long-term
-                  sustainability. We strive to design and develop solutions that
-                  are scalable, eco-friendly, and future-proof, ensuring a
-                  better digital future for everyone.
+                  We build future-proof, scalable digital solutions designed to
+                  adapt and grow with your business. By focusing on sustainable,
+                  eco-friendly practices, we ensure that our work has lasting
+                  value in an ever-evolving digital world.
                 </div>
               </li>
             </ul>
+            <p>
+              At Phoenix Code Studio, we don’t just build websites—we create
+              meaningful digital experiences that inspire, connect, and drive
+              success.
+            </p>
           </section>
 
           {/* Vision Statement */}
           <section className="py-3">
-            <h2>Vision Statement</h2>
+            <h1>Our Vision</h1>
             <p>
-              At Phoenix Code Studio, our vision is to transform the way small
-              businesses establish and grow their digital presence. We are
-              dedicated to providing bespoke, impactful solutions that go far
-              beyond functionality, capturing the unique identity, values, and
-              aspirations of every client we serve. By crafting meaningful
-              digital experiences, we empower businesses to connect with their
-              audiences, foster growth, and leave a lasting impression in an
-              increasingly digital world. Our ultimate goal is to become a
-              trusted leader in digital transformation—pioneering a future where
-              businesses of all sizes can leverage innovation to achieve their
-              dreams. By combining dedication, expertise, and an unwavering
-              passion for excellence, we are committed to helping small
-              businesses reach their full potential and establish a meaningful
-              presence in the digital landscape.
+              At Phoenix Code Studio, we envision a world where small businesses
+              thrive through impactful digital experiences. We are committed to
+              reshaping the digital landscape by providing tailored, strategic
+              solutions that not only enhance online presence but also capture
+              the heart and essence of each brand. Our goal is to empower
+              businesses with the tools, innovation, and expertise needed to
+              stand out, grow, and leave a lasting impression in an
+              ever-evolving digital world.
             </p>
             <p>
-              We aspire to set a new standard in web development by seamlessly
-              merging creativity, cultural sophistication, and state-of-the-art
-              technology. Our focus extends beyond delivering visually stunning
-              designs; we prioritize user-centered solutions that are intuitive,
-              engaging, and tailored to the evolving needs of our clients. Each
-              project is an opportunity to create digital experiences that
-              inspire and engage. Central to our vision is the belief that every
-              small business deserves the tools and opportunities to thrive
-              online. We see ourselves as partners in their journey,
-              collaborating to craft solutions that inspire trust, drive
-              tangible results, and unlock new possibilities. Through this
-              partnership, we aim to empower businesses to build deeper
-              connections with their audience and achieve sustainable success.
+              We strive to be more than just a web development agency; we aspire
+              to be a trusted partner in digital transformation. By seamlessly
+              blending creativity, cultural depth, and cutting-edge technology,
+              we set a new standard in user-focused, results-driven design. Our
+              solutions go beyond aesthetics—we create intuitive, engaging, and
+              scalable platforms that drive real business impact.
+            </p>
+            <p>
+              At the heart of our vision is the belief that every small business
+              deserves the opportunity to succeed online. We are committed to
+              removing barriers, providing affordable yet high-quality
+              solutions, and ensuring that our clients have the resources,
+              knowledge, and support to navigate the digital world with
+              confidence.
+            </p>
+            <p>
+              Through collaboration, innovation, and an unwavering passion for
+              excellence, we aim to build lasting relationships with businesses,
+              helping them establish a strong, meaningful, and influential
+              digital presence. With Phoenix Code Studio, your brand doesn’t
+              just exist online—it thrives, inspires, and leads.
             </p>
           </section>
         </main>

@@ -208,20 +208,27 @@ const PastProjectsPage: FC = () => {
         <main className="w-10/12 md:w-11/12 mx-auto py-6">
           <DynamicBreadcrumb />
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-            Past Projects
+            Explore Our Portfolio of Successful Projects
           </h1>
           <p>
-            Explore our portfolio of successful projects that showcase our
-            expertise and dedication to delivering outstanding results. From
-            innovative web designs to efficient applications, our past work
-            highlights our commitment to quality and client satisfaction. Take a
-            look at some of the projects we've had the privilege to work on,
-            each reflecting a unique challenge and solution. These projects
-            highlight our ability to craft innovative, functional, and visually
-            appealing designs that meet diverse client needs and goals. Get
-            inspired by the impactful solutions we’ve created for businesses
-            across various industries, demonstrating our ability to deliver
-            high-quality results.
+            Discover a showcase of our best work, where innovation meets
+            functionality. From custom web designs to high-performance
+            applications, our portfolio highlights the expertise, creativity,
+            and problem-solving approach we bring to every project.
+          </p>
+          <p>
+            Each case study reflects a unique challenge and tailored solution,
+            demonstrating our commitment to quality, user experience, and client
+            satisfaction. Whether you're looking for inspiration or evaluating
+            our capabilities, these projects showcase our ability to deliver
+            scalable, efficient, and visually stunning digital experiences
+            across industries.
+          </p>
+          <p>
+            Take a look at our proven track record, and{" "}
+            <Button variant={"link"} className="p-0 m-0 h-fit">
+              let’s discuss how we can bring your next project to life!
+            </Button>
           </p>
           <p className="text-accent-5">
             <i>

@@ -5,32 +5,24 @@ const JoinUs = () => {
   return (
     <section className="py-16 w-10/12 mx-auto text-balance text-end space-y-7">
       <h1 className="text-3xl md:text-4xl font-bold text-primary">
-        Come Be a Part of Our Team
+        Join Our Team – Build the Future with Us
       </h1>
       <p>
-        Ready to take your career to the next level? At our company, we're
-        looking for <EmphasizeText>passionate</EmphasizeText>,{" "}
-        <EmphasizeText>talented</EmphasizeText> individuals eager to make a real
-        impact in a dynamic, innovative environment. Whether you're a developer,
-        designer, marketer, or someone who thrives on solving challenges,
-        there's a place for you here.
+        Are you ready to elevate your career and be part of something truly
+        impactful? At Phoenix Code Studio, we’re seeking passionate, driven
+        professionals who are eager to innovate, collaborate, and create
+        cutting-edge digital solutions. Whether you specialize in development,
+        design, marketing, or strategy, we have a place for you.
       </p>
 
       <p>
-        Join a culture that values <EmphasizeText>creativity</EmphasizeText>,{" "}
-        <EmphasizeText>collaboration</EmphasizeText>, and{" "}
-        <EmphasizeText>growth</EmphasizeText>. Work on exciting projects, expand
-        your skill set, and help shape the future of technology and business.
-        Explore our open positions and find out how you can play a key role in
-        our success while advancing your own career.
-      </p>
-
-      <p>
-        Don’t just work —{" "}
-        <span className="text-primary font-extrabold">THRIVE</span>. Be part of
-        a team where your ideas matter, your contributions are valued, and your
-        career aspirations are supported. Let’s grow and achieve greatness
-        together.
+        Here, you’ll work on exciting, high-impact projects, expand your skill
+        set, and contribute to shaping the future of technology and business. We
+        foster a culture of creativity, growth, and teamwork, where your ideas
+        are valued, and your potential is limitless. We believe in fostering
+        talent, encouraging collaboration, and empowering our team to push
+        boundaries. Here, your ideas matter, your skills grow, and your
+        contributions make a difference.
       </p>
 
       <Button

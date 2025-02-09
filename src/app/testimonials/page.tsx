@@ -18,16 +18,18 @@ const TestimonialsPage: FC = () => {
         <main className="w-10/12 md:w-11/12 mx-auto py-6">
           <DynamicBreadcrumb />
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-            Testimonials from Our Clients
+            Real Success Stories
           </h1>
+          <h2>How Our Clients Thrive with Our Solutions</h2>
           <p>
-            Discover the stories of our satisfied clients who have experienced
-            firsthand the transformative impact of our services. From achieving
-            their business goals to elevating their brands, our clients share
-            how our tailored solutions have made a meaningful difference. Their
-            success is a testament to our commitment to delivering exceptional
-            results and building lasting partnerships. Hear directly from those
-            who have trusted us to bring their visions to life.
+            Discover how our tailored digital solutions have transformed
+            businesses, elevated brands, and helped clients achieve their goals.
+            From boosting online visibility to enhancing customer engagement and
+            increasing conversions, our clients share their journeys of success.
+            Their testimonials reflect the exceptional results, strategic
+            innovation, and lasting partnerships we build with every project.
+            See firsthand how our expertise drives measurable growth and
+            long-term impact.
           </p>
 
           {/* Displaying testimonials dynamically */}

@@ -47,17 +47,24 @@ const WelcomePage: FC = () => {
           <GoRocket className="text-accent-1" />
         </h2>
         <p className="text-lg md:text-xl lg:text-2xl my-4">
-          Your vision deserves more than just a blueprint—it deserves a
-          transformation. At <EmphasizeText>Phoenix Code Studio</EmphasizeText>,
-          we bring creativity, strategy, and cutting-edge technology together to
-          craft digital experiences that leave a lasting impact. Whether you're
-          launching a brand, enhancing your online presence, or creating
-          something entirely new, we’re here to make it happen.
+          Your vision is more than just an idea—it’s a future waiting to be
+          built. At Phoenix Code Studio, we merge strategic creativity,
+          innovative technology, and bold design to craft transformative digital
+          experiences that don’t just exist but thrive. Whether you're launching
+          a brand, redefining your online presence, or building something
+          entirely groundbreaking, we’re here to turn your aspirations into
+          reality.
         </p>
         <p className="text-lg md:text-xl lg:text-2xl my-4">
-          From sleek, high-performing websites to engaging content and tailored
-          digital solutions, we turn ideas into reality. Let’s build something
-          extraordinary—together.
+          We create high-performance, visually stunning websites, engaging
+          content, and tailored digital solutions designed to enhance user
+          experience, drive engagement, and accelerate business growth. Our
+          expertise in SEO optimization, responsive design, and cutting-edge
+          development ensures that your brand doesn’t just compete—it leads.
+        </p>
+        <p className="text-lg md:text-xl lg:text-2xl my-4">
+          At Phoenix Code Studio, we don’t just build—we ignite possibilities,
+          empower brands, and shape the future of digital success.
         </p>
         <Button
           className="w-2/3 md:w-1/2 my-2 py-3 text-lg font-semibold"

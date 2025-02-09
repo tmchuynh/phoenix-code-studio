@@ -98,15 +98,17 @@ const ContactUsPage: FC = () => {
           <div className="flex items-end">
             <div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-                Contact Us
+                Let’s Connect!
               </h1>
               <p>
-                Have questions or ready to start a project? We’re here to help!
-                Our team is dedicated to providing you with the best support,
-                whether you need more information about our services or
-                assistance with a specific request. Reach out to us, and we’ll
-                get back to you as quickly as possible. We look forward to
-                working with you and turning your ideas into reality.
+                Have questions or ready to kick off your next project? We’re
+                here to help! Whether you need more details about our services,
+                expert guidance, or assistance with a specific request, our team
+                is ready to support you.
+              </p>
+              <p>
+                Reach out today, and we’ll respond promptly. We look forward to
+                collaborating with you and bringing your ideas to life!
               </p>
             </div>
             <Image
