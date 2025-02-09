@@ -55,10 +55,15 @@ export interface BlogPost {
   author: string;
   date: string;
   img: string;
-  featured: boolean;
+  featured?: boolean;
   topics: string[];
-  excerpt: string;
+  intro: string;
   slug: string;
+  categories?: {
+    category: string;
+    items: { title: string; description: string; }[];
+  }[];
+  conculsions: string[];
 }
 
 export interface BlogContent {
