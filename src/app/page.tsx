@@ -37,11 +37,7 @@ const WelcomePage: FC = () => {
       <section className="my-16 mx-auto w-11/12 text-center">
         <h1>Welcome to Phoenix Code Studio</h1>
         <h2 className="inline-flex items-center gap-3">
-          <GoRocket className="text-accent-1" />
-          <GoRocket className="text-accent-1" />
           This Is Where Ideas Take Flight!
-          <GoRocket className="text-accent-1" />
-          <GoRocket className="text-accent-1" />
         </h2>
         <p>
           Your vision is more than just an idea—it’s a future waiting to be

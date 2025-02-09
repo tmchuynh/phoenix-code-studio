@@ -13,7 +13,7 @@ const Testimonials = () => {
   const router = useRouter();
 
   const navigateToTestimonials = () => {
-    router.push("/about-us/testimonials");
+    router.push("/info/testimonials");
   };
 
   return (

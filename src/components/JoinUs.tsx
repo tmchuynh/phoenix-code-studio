@@ -28,7 +28,7 @@ const JoinUs = () => {
       <Button
         className="my-3 w-1/2"
         variant={"secondary"}
-        onClick={() => (window.location.href = "/about-us/career")}
+        onClick={() => (window.location.href = "/info/career")}
       >
         View Open Positions
       </Button>

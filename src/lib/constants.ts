@@ -3,37 +3,37 @@ import { BlogPost, FAQ, JobPosition, Menu, PaymentPlan, Project, Services, Testi
 export const about: Menu[] = [
   {
     title: "About",
-    href: "/about-us/about",
+    href: "/info/about-us",
     description:
       "Learn more about our mission, vision, and what drives us forward.",
   },
   {
     title: "Careers",
-    href: "/about-us/careers",
+    href: "/info/careers",
     description:
       "Learn more about our mission, vision, and what drives us forward.",
   },
   {
     title: "Blogs",
-    href: "/about-us/blogs",
+    href: "/info/blogs",
     description:
       "Stay updated with the latest news, tips, and insights from our blog.",
   },
   {
     title: "FAQs",
-    href: "/about-us/frequently-asked-questions",
+    href: "/info/frequently-asked-questions",
     description:
       "Find answers to common questions about our products and services.",
   },
   {
     title: "Testimonials",
-    href: "/about-us/testimonials",
+    href: "/info/testimonials",
     description:
       "Read success stories and reviews from our satisfied customers.",
   },
   {
     title: "Portfolio",
-    href: "/about-us/portfolio",
+    href: "/info/portfolio",
     description:
       "Learn more about our mission, vision, and what drives us forward.",
   },
@@ -923,7 +923,7 @@ export const blogs: BlogPost[] = [
     topics: ["Career"],
     excerpt:
       "Choosing the right designer or developer is crucial for the success of your project. A designer or developer should not only be technically skilled but also have a strong understanding of your business needs and goals. Ensuring a good match between your project requirements and their expertise will result in a seamless collaboration and a final product that reflects your vision.",
-    slug: "/about-us/blogs/things-to-consider-when-looking-for-a-designer-or-developer",
+    slug: "/info/blogs/things-to-consider-when-looking-for-a-designer-or-developer",
   },
   {
     title: "All About Google Analytics",
@@ -934,7 +934,7 @@ export const blogs: BlogPost[] = [
     topics: ["Analytics", "Business"],
     excerpt:
       "Google Analytics is an essential tool for tracking website performance and gaining valuable insights into user behavior. This post dives into what Google Analytics is, how to set it up, and how businesses can leverage its data to optimize their website and marketing efforts.",
-    slug: "/about-us/blogs/all-about-google-analytics",
+    slug: "/info/blogs/all-about-google-analytics",
   },
   {
     title: "Should The Customer Do Research? And Research What Before the Consultation?",
@@ -945,7 +945,7 @@ export const blogs: BlogPost[] = [
     topics: ["Research"],
     excerpt:
       "Having a basic understanding of your industry and web design principles before your consultation helps you communicate your goals more clearly. Knowing what you want and understanding some of the design basics will allow you to ask more targeted questions and give your designer the context needed to create a solution that aligns with your objectives. It also helps in refining your vision and getting the most out of the consultation.",
-    slug: "/about-us/blogs/doing-research-before-the-consultation",
+    slug: "/info/blogs/doing-research-before-the-consultation",
   },
   {
     title: "Things To Tell Your Designer Before Starting A Project",
@@ -956,7 +956,7 @@ export const blogs: BlogPost[] = [
     topics: ["Research", "Business"],
     excerpt:
       "Clear communication with your designer is key to achieving the desired results in your project. Sharing your business goals, target audience, branding guidelines, and any specific design preferences upfront will help your designer create a design that fits your needs. Additionally, providing any necessary resources or inspirations can save time and ensure the project stays on track from the beginning.",
-    slug: "/about-us/blogs/things-to-tell-your-designer-before-starting-a-project",
+    slug: "/info/blogs/things-to-tell-your-designer-before-starting-a-project",
   },
   {
     title: "What To Ask During A Consultation?",
@@ -967,7 +967,7 @@ export const blogs: BlogPost[] = [
     topics: ["Business", "Research"],
     excerpt:
       "A consultation with a designer or developer is an opportunity to assess their skills, approach, and understanding of your project. Asking questions about their past experience, design process, and how they handle revisions ensures that you find a good fit for your needs. This is also the time to clarify your goals, timelines, and budget to ensure that everyone is aligned on expectations before the project begins.",
-    slug: "/about-us/blogs/questions-for-a-consultation",
+    slug: "/info/blogs/questions-for-a-consultation",
   },
   {
     title: "What is Web Design? A Comprehensive Guide",
@@ -978,7 +978,7 @@ export const blogs: BlogPost[] = [
     topics: ["UX/UI"],
     excerpt:
       "Web design encompasses more than just aesthetics; it involves creating a seamless user experience and ensuring that your website is functional, responsive, and easy to navigate. It blends design principles with technical knowledge to craft interfaces that meet both the needs of users and the goals of a business. A well-designed website considers visual appeal, usability, performance, and accessibility, ensuring that visitors have a positive interaction.",
-    slug: "/about-us/blogs/what-is-web-design",
+    slug: "/info/blogs/what-is-web-design",
   },
   {
     title: "The Importance of User Experience in Web Design",
@@ -989,7 +989,7 @@ export const blogs: BlogPost[] = [
     topics: ["UX/UI"],
     excerpt:
       "User experience (UX) plays a pivotal role in how visitors interact with a website. A website with a great UX makes it easy for users to find what they’re looking for, whether it’s information, products, or services. A positive UX leads to higher engagement, improved customer satisfaction, and increased conversions. Understanding user behavior and creating intuitive, user-friendly interfaces is essential for businesses aiming to succeed in the digital space.",
-    slug: "/about-us/blogs/importance-of-user-experience",
+    slug: "/info/blogs/importance-of-user-experience",
   },
   {
     title: "Making the Web Inclusive: How to Incorporate Accessibility into Web Design",
@@ -1000,7 +1000,7 @@ export const blogs: BlogPost[] = [
     topics: ["Accessibility", "Research"],
     excerpt:
       "Accessibility in web design ensures that your website is usable by people of all abilities. This includes making sure your content can be accessed by users with disabilities, such as visual, auditory, or motor impairments. Implementing accessible design practices—such as using screen reader-friendly layouts, providing alternative text for images, and ensuring keyboard navigation—makes your website more inclusive and provides a better experience for all users.",
-    slug: "/about-us/blogs/incorporating-accessibility-into-web-design",
+    slug: "/info/blogs/incorporating-accessibility-into-web-design",
   },
   {
     title: "Understanding Blockchain Architecture",
@@ -1011,7 +1011,7 @@ export const blogs: BlogPost[] = [
     topics: ["Blockchain", "Architecture", "AI/ML"],
     excerpt:
       "Blockchain architecture is the foundation of decentralized systems and cryptocurrencies. It consists of a series of interconnected blocks that store transaction data and ensure secure, transparent, and immutable records. Blockchain enables peer-to-peer transactions without relying on central authorities, making it a disruptive technology for industries ranging from finance to healthcare. Understanding how blockchain works and its underlying architecture is crucial for businesses and developers exploring decentralized applications.",
-    slug: "/about-us/blogs/understanding-blockchain-architecture",
+    slug: "/info/blogs/understanding-blockchain-architecture",
   },
   {
     title: "Understanding GUI Architectures",
@@ -1022,7 +1022,7 @@ export const blogs: BlogPost[] = [
     topics: ["Architecture", "AI/ML"],
     excerpt:
       "Graphical User Interface (GUI) architecture is key to creating intuitive, user-friendly systems. A well-designed GUI allows users to interact with software in a natural and efficient way. This architecture encompasses the visual design, layout, and interactions of the interface, ensuring that it’s not only functional but also aesthetically pleasing. Understanding GUI design principles and architecture is essential for creating applications that deliver seamless user experiences.",
-    slug: "/about-us/blogs/understanding-gui-architecture",
+    slug: "/info/blogs/understanding-gui-architecture",
   },
   {
     title: "Books to Read as a Developer",
@@ -1033,7 +1033,7 @@ export const blogs: BlogPost[] = [
     topics: ["Self-Development", "Software Engineer", "Career"],
     excerpt:
       "Continuous learning is key to success in tech. In this blog, discover a curated list of essential books for developers to enhance their skills, grow in their careers, and keep up with the ever-evolving field.",
-    slug: "/about-us/blogs/books-to-read-as-developer",
+    slug: "/info/blogs/books-to-read-as-developer",
   },
   {
     title: "Who's the Better Hire? - Jack of All Trades OR Master of One",
@@ -1044,7 +1044,7 @@ export const blogs: BlogPost[] = [
     topics: ["Career", "Self-Development"],
     excerpt:
       "While specialists excel in deep expertise within a single domain, generalists bring versatility, adaptability, and a broad skill set that allows them to navigate diverse challenges. Ultimately, the ideal path depends on individual goals, industry demands, and the need for either deep specialization or flexible, cross-disciplinary knowledge.",
-    slug: "/about-us/blogs/jack-of-all-trades-or-master-of-one",
+    slug: "/info/blogs/jack-of-all-trades-or-master-of-one",
   },
   {
     title: "Best Contactless Business Card Options",
@@ -1055,7 +1055,7 @@ export const blogs: BlogPost[] = [
     topics: ["Career", "Resources"],
     excerpt:
       "Contactless business cards are modern, eco-friendly alternatives to traditional paper cards, offering a seamless way to share information digitally. Using technologies like NFC (Near Field Communication) and QR codes, they allow professionals to instantly exchange contact details with a simple tap or scan. Not only do they reduce paper waste, but they also provide a more convenient, customizable, and interactive networking experience.",
-    slug: "/about-us/blogs/best-contactless-business-card-options",
+    slug: "/info/blogs/best-contactless-business-card-options",
   },
   {
     title: "Why Every Developer Should Write",
@@ -1066,7 +1066,7 @@ export const blogs: BlogPost[] = [
     topics: ["Career", "Self-Development"],
     excerpt:
       "Writing is a crucial skill for developers, playing a key role in documentation, communication, and business success. Clear and concise documentation ensures that code is understandable and maintainable, while effective communication helps developers collaborate efficiently with teams, stakeholders, and users.",
-    slug: "/about-us/blogs/why-every-developer-should-write",
+    slug: "/info/blogs/why-every-developer-should-write",
   },
   {
     title: "How Tailwind CSS Can Speed Up Your Development Process",
@@ -1077,7 +1077,7 @@ export const blogs: BlogPost[] = [
     topics: ["UX/UI", "Design"],
     excerpt:
       "Tailwind CSS is a utility-first CSS framework that enables developers to rapidly create custom, responsive, and visually appealing user interfaces. Instead of writing custom CSS for each component, it offers pre-defined utility classes that can be combined directly in HTML to style elements, significantly speeding up development.",
-    slug: "/about-us/blogs/how-tailwind-css-can-speed-up-your-development",
+    slug: "/info/blogs/how-tailwind-css-can-speed-up-your-development",
   },
   {
     title: "The Future of JavaScript Frameworks",
@@ -1088,7 +1088,7 @@ export const blogs: BlogPost[] = [
     topics: ["Resources", "Software Engineer"],
     excerpt:
       "With the rapid evolution of JavaScript frameworks like React, Vue, and Angular, staying updated on the latest trends is crucial for developers aiming to build modern, efficient web applications. New features, best practices, and performance optimizations are constantly emerging, making continuous learning essential to leverage these frameworks effectively. ",
-    slug: "/about-us/blogs/future-of-javascript-frameworks",
+    slug: "/info/blogs/future-of-javascript-frameworks",
   },
   {
     title: "Why Accessibility Matters in Web Development",
@@ -1099,7 +1099,7 @@ export const blogs: BlogPost[] = [
     topics: ["Accessibility", "Design", "Software Engineer"],
     excerpt:
       "Accessibility should be a priority in web development to ensure that your website is inclusive and usable by everyone, including individuals with disabilities. By implementing best practices such as keyboard navigation, screen reader compatibility, and proper color contrast, developers can create digital experiences that are more user-friendly, compliant with accessibility standards, and beneficial to a wider audience.",
-    slug: "/about-us/blogs/why-accessibility-matters",
+    slug: "/info/blogs/why-accessibility-matters",
   },
   {
     title: "Decoding Blockchain: Exploring the World of Decentralized Systems",
@@ -1110,7 +1110,7 @@ export const blogs: BlogPost[] = [
     topics: ["Blockchain", "Resources"],
     excerpt:
       "Blockchain is revolutionizing industries by offering secure, transparent, and decentralized systems that enhance trust and efficiency. By eliminating the need for intermediaries, it streamlines transactions, reduces costs, and increases security across sectors such as finance, supply chain, and healthcare.",
-    slug: "/about-us/blogs/decoding-blockchain-decentralized-systems",
+    slug: "/info/blogs/decoding-blockchain-decentralized-systems",
   },
   {
     title: "Demystifying Data Science: Transforming Data into Actionable Insights",
@@ -1121,7 +1121,7 @@ export const blogs: BlogPost[] = [
     topics: ["Data Science", "Analytics", "AI/ML", "IoT"],
     excerpt:
       "Data science is transforming the way we approach problem-solving and decision-making across various industries. By leveraging large volumes of data and advanced analytical techniques, it enables organizations to uncover hidden patterns, predict future trends, and make data-driven decisions that were once difficult or impossible. ",
-    slug: "/about-us/blogs/demystifying-data-science",
+    slug: "/info/blogs/demystifying-data-science",
   },
   {
     title: "Revolutionizing Connectivity: Innovations in IoT Development",
@@ -1132,7 +1132,7 @@ export const blogs: BlogPost[] = [
     topics: ["Blockchain", "IoT", "AI/ML", "Autonomous Systems"],
     excerpt:
       "This interconnected network allows devices, from home appliances to industrial machinery, to exchange information and automate processes, improving efficiency and convenience. IoT has opened up endless possibilities across industries, driving innovation in areas like smart homes, healthcare, manufacturing, and transportation, ultimately transforming how we live and work.",
-    slug: "/about-us/blogs/revolutionizing-connectivity-iot",
+    slug: "/info/blogs/revolutionizing-connectivity-iot",
   },
   {
     title: "Creative Data Harvesting: The Wonders of Web Scraping",
@@ -1143,7 +1143,7 @@ export const blogs: BlogPost[] = [
     topics: ["Data Science", "Software Engineer", "Analytics"],
     excerpt:
       "Web scraping is a powerful technique for extracting, collecting, and analyzing data from websites, enabling businesses and researchers to gain valuable insights. By automating data retrieval, web scraping allows users to track market trends, monitor competitors, gather research data, and optimize decision-making processes more efficiently than manual methods.",
-    slug: "/about-us/blogs/creative-data-harvesting-web-scraping",
+    slug: "/info/blogs/creative-data-harvesting-web-scraping",
   },
   {
     title: "Behind the Code: Insights into the World of Tech Startups",
@@ -1154,7 +1154,7 @@ export const blogs: BlogPost[] = [
     topics: ["Entrepreneurship", "Innovation"],
     excerpt:
       "Tech startups are reshaping industries by introducing innovative solutions, disrupting traditional business models, and driving digital transformation. By leveraging emerging technologies such as artificial intelligence, blockchain, and cloud computing, these startups are creating more efficient, scalable, and user-centric products and services that redefine how businesses and consumers interact.",
-    slug: "/about-us/blogs/insights-into-tech-startups",
+    slug: "/info/blogs/insights-into-tech-startups",
   },
   {
     title: "Navigating the Digital Revolution: Emerging Tech Trends",
@@ -1165,7 +1165,7 @@ export const blogs: BlogPost[] = [
     topics: ["Innovation", "AI/ML", "Blockchain", "Quantum Computing"],
     excerpt:
       "Stay ahead of the curve by exploring the latest technology trends that are revolutionizing industries across the globe. From AI and machine learning to blockchain and the Internet of Things (IoT), these innovations are transforming how businesses operate, communicate, and deliver value to customers. Understanding these trends is crucial for staying competitive and adapting to the rapid pace of change in today’s digital landscape.",
-    slug: "/about-us/blogs/navigating-tech-trends",
+    slug: "/info/blogs/navigating-tech-trends",
   },
   {
     title: "Mastering User-Friendly Design: Gems of GUI Development",
@@ -1176,7 +1176,7 @@ export const blogs: BlogPost[] = [
     topics: ["Design", "Software Engineer", "UX/UI"],
     excerpt:
       "A great graphical user interface (GUI) is essential for creating a seamless and intuitive user experience, ensuring that users can interact with software efficiently and effortlessly. Well-designed GUIs prioritize usability, accessibility, and responsiveness, making applications more engaging and user-friendly. By incorporating clear navigation, visually appealing layouts, and interactive elements, a strong GUI enhances productivity and satisfaction across various digital platforms.",
-    slug: "/about-us/blogs/mastering-gui-design",
+    slug: "/info/blogs/mastering-gui-design",
   },
   {
     title: "From Startup Garage to Tech Giant: Stories of Tech Entrepreneurs",
@@ -1187,7 +1187,7 @@ export const blogs: BlogPost[] = [
     topics: ["Entrepreneurship", "Innovation"],
     excerpt:
       "Tech entrepreneurs are transforming the world by developing groundbreaking innovations that address real-world challenges and drive progress. By harnessing technologies such as artificial intelligence, blockchain, and the Internet of Things (IoT), they are revolutionizing industries and shaping the future of business and society. From disruptive startups to global tech leaders, their vision and creativity are redefining how we work, communicate, and interact with the digital world.",
-    slug: "/about-us/blogs/stories-of-tech-entrepreneurs",
+    slug: "/info/blogs/stories-of-tech-entrepreneurs",
   },
 ];
 

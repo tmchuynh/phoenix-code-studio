@@ -8,7 +8,7 @@ const FeaturedProjects = () => {
   const router = useRouter();
 
   const navigateToPastProjects = () => {
-    router.push("/about-us/portfolio");
+    router.push("/info/portfolio");
   };
 
   return (
