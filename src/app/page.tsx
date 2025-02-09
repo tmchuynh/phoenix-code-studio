@@ -8,6 +8,8 @@ import JoinUs from "@/components/JoinUs";
 import ServiceHighlights from "@/components/ServiceHighlights";
 import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
@@ -16,6 +18,7 @@ import "swiper/css";
 
 const WelcomePage: FC = () => {
   const router = useRouter();
+  const { theme } = useTheme();
 
   const navigateToServices = () => {
     router.push("/services");
@@ -29,7 +32,10 @@ const WelcomePage: FC = () => {
           alt="Phoenix Code Studio Logo"
           width={500}
           height={500}
-          className="w-72 h-72 rounded-t-md object-cover mx-auto mb-1"
+          className={cn(
+            "w-44 md:w-64 lg:w-80 rounded-t-md object-cover mx-auto mb-1",
+            theme === "dark" ? "bg-muted border rounded-full p-5" : ""
+          )}
         />
       </section>
 

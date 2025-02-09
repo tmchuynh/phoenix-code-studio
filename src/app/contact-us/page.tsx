@@ -16,8 +16,12 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { FaChevronDown } from "react-icons/fa";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
+import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 
 const ContactUsPage: FC = () => {
+  const { theme } = useTheme();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -108,7 +112,10 @@ const ContactUsPage: FC = () => {
           alt="Phoenix Code Studio Logo"
           width={500}
           height={500}
-          className="w-72 h-72 rounded-t-md object-cover mb-1"
+          className={cn(
+            "w-44 md:w-64 lg:w-80 rounded-t-md object-cover mx-auto mb-1",
+            theme === "dark" ? "bg-muted border rounded-full p-5" : ""
+          )}
         />
       </div>
 

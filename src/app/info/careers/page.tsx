@@ -3,12 +3,15 @@
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { jobPositions } from "@/lib/constants";
+import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
 
 const JobListingsPage: FC = () => {
   const router = useRouter();
+  const { theme } = useTheme();
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
@@ -45,7 +48,10 @@ const JobListingsPage: FC = () => {
           alt="Phoenix Code Studio Logo"
           width={500}
           height={500}
-          className="w-72 h-72 rounded-t-md object-cover mb-1"
+          className={cn(
+            "w-44 md:w-64 lg:w-80 rounded-t-md object-cover mx-auto mb-1",
+            theme === "dark" ? "bg-muted border rounded-full p-5" : ""
+          )}
         />
       </div>
 
