@@ -12,8 +12,11 @@ import { FAQs } from "@/lib/constants";
 import { FC } from "react";
 import RootLayout from "@/app/layout"; // Assuming RootLayout is imported
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 const FAQPage: FC = () => {
+  const router = useRouter();
+
   return (
     <RootLayout
       title="Frequently Asked Questions - Phoenix Code Studio"
@@ -21,9 +24,7 @@ const FAQPage: FC = () => {
     >
       <main className="w-10/12 md:w-11/12 mx-auto py-6">
         <DynamicBreadcrumb />
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-          Welcome to Our FAQs Page!
-        </h1>
+        <h1>Welcome to Our FAQs Page!</h1>
         <p className="mt-4">
           Got questions? We’ve got answers! This page is your go-to resource for
           quick, clear information about our services, products, and processes.
@@ -32,7 +33,11 @@ const FAQPage: FC = () => {
         </p>
         <p>
           Can’t find what you’re looking for?{" "}
-          <Button variant={"link"} className="p-0 m-0 h-fit">
+          <Button
+            variant={"link"}
+            onClick={() => router.push("/contact-us")}
+            className="p-0 m-0 h-fit"
+          >
             Reach out to us anytime
           </Button>{" "}
           - we’re happy to help!
