@@ -61,6 +61,7 @@ export const services: Menu[] = [
   },
 ];
 
+
 export const paymentOptions: Menu[] = [
   {
     title: "Flexible Pricing Plans",
@@ -1332,6 +1333,7 @@ export const pastProjects: Project[] = [
     githubLink: "https://github.com/tmchuynh/sudoku"
   }
 ];
+
 
 export const jobPositions: JobPosition[] = [
   {

@@ -2,6 +2,12 @@ import { pastProjects } from "@/lib/constants";
 import useSmallScreen from "@/lib/useSmallScreen";
 import { useRouter } from "next/navigation";
 import { Button } from "./ui/button";
+import {
+  Pagination,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
+import { useState } from "react";
 
 const FeaturedProjects = () => {
   const isSmallScreen = useSmallScreen();
@@ -11,13 +17,72 @@ const FeaturedProjects = () => {
     router.push("/info/portfolio");
   };
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const [projectsPerPage, setProjectsPerPage] = useState(6);
+
+  // Filtered blogs
+  const featuredProjects = pastProjects.filter(
+    (pastProjects) => pastProjects.featured === true
+  );
+
+  // Pagination logic
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = featuredProjects.slice(
+    indexOfFirstProject,
+    indexOfLastProject
+  );
+
+  const handlePageChange = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const totalPages = Math.ceil(featuredProjects.length / projectsPerPage);
+
   return (
     <section className="my-16 w-11/12 mx-auto">
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
         Featured Projects
       </h2>
+      <Pagination className="gap-5 flex items-center pb-5">
+        <PaginationPrevious
+          onClick={() => {
+            if (currentPage > 1) {
+              handlePageChange(currentPage - 1);
+            }
+          }}
+          variant={currentPage === 1 ? "disabled" : "outline"}
+          className={
+            currentPage === 1 ? "cursor-not-allowed" : "cursor-default"
+          }
+        />
+        <section className="text-center">
+          {currentProjects.length > 0 ? (
+            <p>
+              Showing {indexOfFirstProject + 1} to{" "}
+              {indexOfLastProject > featuredProjects.length
+                ? featuredProjects.length
+                : indexOfLastProject}{" "}
+              of {featuredProjects.length} featured blogs
+            </p>
+          ) : (
+            <p>No featured blogs available</p>
+          )}
+        </section>
+        <PaginationNext
+          onClick={() => {
+            if (currentPage < totalPages) {
+              handlePageChange(currentPage + 1);
+            }
+          }}
+          variant={currentPage === totalPages ? "disabled" : "outline"}
+          className={
+            currentPage === totalPages ? "cursor-not-allowed" : "cursor-default"
+          }
+        />
+      </Pagination>
       <div className="w-11/12 lg:w-full mx-auto gap-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {pastProjects.map(
+        {currentProjects.map(
           (project, index) =>
             project.featured && (
               <div
