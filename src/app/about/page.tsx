@@ -1,9 +1,6 @@
 "use client";
-
-import CallToAction from "@/components/CallToAction";
-import EmphasizeText from "@/components/Highlighted";
+import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
-import { SidebarSeparator } from "@/components/ui/sidebar";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import {
@@ -17,7 +14,6 @@ import {
 } from "react-icons/fa";
 import { GrGrow } from "react-icons/gr";
 import RootLayout from "../layout";
-import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 
 const AboutUs = () => {
   const router = useRouter();
@@ -31,7 +27,7 @@ const AboutUs = () => {
         <main className="w-10/12 md:w-11/12 mx-auto pb-6">
           <DynamicBreadcrumb />
           {/* About Us */}
-          <section className="pt-3 pb-7 grid grid-cols-1 md:grid-cols-4">
+          <section className="pt-3 pb-7 items-center grid grid-cols-1 md:grid-cols-4">
             <div className="mx-auto flex items-center">
               <Image
                 src="/images/logo.png"
@@ -42,9 +38,7 @@ const AboutUs = () => {
               />
             </div>
             <div className="col-span-3">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-                About Phoenix Code Studio
-              </h1>
+              <h1>About Phoenix Code Studio</h1>
               <p>
                 At Phoenix Code Studio, we seamlessly blend technological
                 innovation with creative storytelling to craft exceptional
@@ -66,41 +60,46 @@ const AboutUs = () => {
                 your audience but also drive results and build lasting
                 connections.
               </p>
-              <h2>Why Choose Phoenix Code Studio?</h2>
-              <p>
-                What sets us apart is our commitment to excellence,
-                authenticity, and innovation. We don’t just build websites—we
-                craft meaningful digital experiences that reflect your brand’s
-                essence and tell your unique story. Our approach is rooted in
-                collaboration, ensuring that we fully understand your goals and
-                transform them into a powerful online presence that fosters
-                growth, credibility, and engagement.
-              </p>
-              <p>
-                At Phoenix Code Studio, we prioritize user experience, strategic
-                design, and cutting-edge technology to deliver solutions that
-                feel approachable, professional, and high-impact. Our process is
-                guided by data-driven insights and industry best practices,
-                ensuring that your website isn’t just visually appealing—it’s
-                optimized for performance, accessibility, and search engine
-                visibility.
-              </p>
-              <h2>Your Digital Transformation Starts Here</h2>
-              <p>
-                Let’s work together to create an online presence that sets your
-                business apart and fuels your success. With Phoenix Code Studio
-                as your trusted digital partner, your brand has the tools to
-                flourish, captivate audiences, and achieve its full potential in
-                the digital world.
-              </p>
-              <p>Ready to take the next step?</p>
-              <Button
-                onClick={() => router.push("/frequently-asked-questions")}
-                className="mt-2"
-              >
-                Check Our Frequently Asked Questions
-              </Button>
             </div>
+          </section>
+
+          <section className="pb-5">
+            <h2>Why Choose Phoenix Code Studio?</h2>
+            <p>
+              What sets us apart is our commitment to excellence, authenticity,
+              and innovation. We don’t just build websites—we craft meaningful
+              digital experiences that reflect your brand’s essence and tell
+              your unique story. Our approach is rooted in collaboration,
+              ensuring that we fully understand your goals and transform them
+              into a powerful online presence that fosters growth, credibility,
+              and engagement.
+            </p>
+            <p>
+              At Phoenix Code Studio, we prioritize user experience, strategic
+              design, and cutting-edge technology to deliver solutions that feel
+              approachable, professional, and high-impact. Our process is guided
+              by data-driven insights and industry best practices, ensuring that
+              your website isn’t just visually appealing—it’s optimized for
+              performance, accessibility, and search engine visibility.
+            </p>
+            <h2>Your Digital Transformation Starts Here</h2>
+            <p>
+              Let’s work together to create an online presence that sets your
+              business apart and fuels your success. With Phoenix Code Studio as
+              your trusted digital partner, your brand has the tools to
+              flourish, captivate audiences, and achieve its full potential in
+              the digital world.
+            </p>
+            <p>
+              Ready to take the next step?{" "}
+              <Button
+                variant={"link"}
+                onClick={() => router.push("/contact-us")}
+                className="p-0 m-0 h-fit"
+              >
+                Contact us to discuss a tailored solution!
+              </Button>
+            </p>
           </section>
 
           {/* Mission Statement */}
@@ -319,6 +318,16 @@ const AboutUs = () => {
               helping them establish a strong, meaningful, and influential
               digital presence. With Phoenix Code Studio, your brand doesn’t
               just exist online—it thrives, inspires, and leads.
+            </p>
+            <p>
+              Ready to get started?{" "}
+              <Button
+                variant={"link"}
+                onClick={() => router.push("/contact-us")}
+                className="p-0 m-0 h-fit"
+              >
+                Contact us for a personalized consultation!
+              </Button>
             </p>
           </section>
         </main>
