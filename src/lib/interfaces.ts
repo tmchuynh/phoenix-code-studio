@@ -29,6 +29,9 @@ export interface Services {
   startingPrice: number;
   info: string;
   details: string;
+  short: string;
+  featured: boolean;
+  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   pricingTiers: PricingTier[];
 }
 

@@ -1,3 +1,4 @@
+import { FaDesktop, FaPen, FaSearch } from "react-icons/fa";
 import { BlogPost, FAQ, JobPosition, Menu, PaymentPlan, Project, Services, Testimonial } from "./interfaces";
 
 export const about: Menu[] = [
@@ -236,6 +237,9 @@ export const companySpecificServices: Services[] = [
     info: "Our comprehensive rebranding services give your company a fresh, modern identity that truly connects with your audience and aligns with your business goals. We specialize in logo design, brand messaging, visual identity, and strategic positioning, ensuring every element reflects your brand’s unique vision. By crafting a cohesive, future-ready brand strategy, we help you stand out from the competition, build trust, and create a lasting impact. Elevate your business with a powerful transformation that fuels growth and long-term success.",
     details:
       "Our rebranding services include a full strategy to redefine your brand image. From logo redesign to complete brand strategies, we ensure your company stands out and connects with your audience.",
+    short: "Transform your brand into a powerful, memorable identity with strategic rebranding and storytelling that captivates and connects. We craft compelling narratives that resonate with your audience, build trust, and foster brand loyalty. Whether you’re refreshing your image or redefining your message, we help you create an authentic, impactful brand that stands out and keeps customers coming back.",
+    featured: true,
+    Icon: FaDesktop,
     pricingTiers: [
       {
         name: "Brand Identity Overhaul",
@@ -266,6 +270,9 @@ export const companySpecificServices: Services[] = [
     info: "We create custom websites that do more than just look great—they work strategically to drive your business forward. Every website we design is a seamless blend of creativity and functionality, tailored to reflect your brand identity and business goals. Our fully responsive, high-performance designs ensure flawless experiences across desktops, tablets, and smartphones. With intuitive navigation, fast load speeds, and engaging visuals, we craft websites that captivate audiences, boost conversions, and fuel growth. Let’s build a digital presence that makes a lasting impact and sets your brand apart.",
     details:
       "We specialize in creating custom websites that align with your brand and business objectives. From layout design to functionality, we ensure a seamless user experience.",
+    short: "Transform your online presence with custom-crafted websites that blend stunning UX/UI design, seamless functionality, and SEO optimization. Whether you're launching a new brand or refreshing an existing site, our tailored solutions ensure a visually compelling, high-performing, and user-friendly experience that drives engagement and growth.",
+    featured: true,
+    Icon: FaDesktop,
     pricingTiers: [
       {
         name: "Basic",
@@ -296,6 +303,9 @@ export const companySpecificServices: Services[] = [
     info: "We design scalable, secure, and user-friendly e-commerce platforms that enhance the customer experience and drive sales growth. With intuitive navigation, seamless checkout, and robust security, our platforms ensure a smooth and secure shopping experience for your customers. Designed for long-term success, our solutions include personalized recommendations, inventory management, and in-depth analytics to optimize performance. Whether you're launching a new online store or upgrading an existing platform, we deliver tailored e-commerce solutions that showcase your brand, increase conversions, and maximize your success.",
     details:
       "We create e-commerce websites designed for security, scalability, and user satisfaction. From product pages to checkout systems, we provide the tools for a successful online store.",
+    short: "",
+    featured: true,
+    Icon: FaDesktop,
     pricingTiers: [
       {
         name: "Starter Package",
@@ -326,6 +336,9 @@ export const companySpecificServices: Services[] = [
     info: "We specialize in building fast, dynamic, and highly responsive single-page applications (SPAs) that deliver real-time updates, seamless navigation, and top-tier performance. Using cutting-edge frameworks and modern development techniques, our SPAs provide an engaging, app-like experience that works flawlessly across all devices and screen sizes. Designed for speed and user retention, our applications feature smooth transitions, minimal load times, and interactive elements that keep users engaged. Whether you're looking to enhance functionality, streamline performance, or create an immersive user journey, our SPAs are tailored to meet your business objectives and audience needs.",
     details:
       "We create SPAs optimized for speed and interactivity, dynamically loading content to ensure seamless experiences and boost user engagement..",
+    short: "",
+    featured: true,
+    Icon: FaDesktop,
     pricingTiers: [
       {
         name: "Starter Package",
@@ -356,6 +369,9 @@ export const companySpecificServices: Services[] = [
     info: "Our database management services provide secure, scalable, and high-performance solutions that streamline data storage, organization, and accessibility. Designed to meet your unique business needs, we ensure fast and reliable operations with optimized performance, even as your data scales. Advanced security protocols safeguard sensitive information, ensuring compliance with industry standards and protecting against potential threats. Whether you need real-time data processing, seamless integrations, or scalable storage solutions, our expert database management empowers your business to handle complex data demands while supporting long-term growth and efficiency.",
     details:
       "Our database management services ensure that your data is stored, organized, and accessible. We design databases that can scale as your business grows, integrate real-time data, and ensure high levels of security to protect sensitive information.",
+    short: "",
+    featured: true,
+    Icon: FaDesktop,
     pricingTiers: [
       {
         name: "Starter Package",
@@ -385,6 +401,9 @@ export const companySpecificServices: Services[] = [
     startingPrice: 2000,
     info: "We craft compelling brand narratives that authentically define your identity and create a deep emotional connection with your audience. Through strategic storytelling, we go beyond transactions—bridging the gap between your brand’s values, mission, and vision to build trust and long-term loyalty. Our approach ensures that every message, visual, and campaign aligns seamlessly, reinforcing a strong, memorable presence in a competitive marketplace. Whether launching a new brand or revitalizing an existing one, we help you tell your story in a way that inspires, engages, and resonates.",
     details: "We help brands tell their unique stories, building a narrative that reflects your values, vision, and goals. Through strategic storytelling, we connect with your target audience on an emotional level, strengthening brand loyalty.",
+    short: "",
+    featured: true,
+    Icon: FaDesktop,
     pricingTiers: [
       {
         name: "Core Narrative Development",
@@ -409,6 +428,9 @@ export const websiteServices: Services[] = [
     info: "We design intuitive, functional interfaces that strike the perfect balance between usability, accessibility, and aesthetic appeal. Through in-depth user research, we uncover insights into your audience’s behaviors, needs, and pain points—ensuring every design decision is data-driven. Our process, from wireframing and prototyping to rigorous testing and refinement, prioritizes both beauty and functionality. By integrating accessibility best practices, we create inclusive experiences that cater to all users, regardless of ability. The result? Engaging, seamless, and user-friendly interfaces that leave a lasting impression and drive meaningful interactions.",
     details:
       "Our UX design services focus on creating seamless and engaging user experiences. By conducting thorough research and usability testing, we deliver designs that simplify interactions and enhance effectiveness. Services include user research, wireframing, prototyping, and testing.",
+    short: "",
+    featured: true,
+    Icon: FaDesktop,
     pricingTiers: [
       {
         name: "User Research & Prototyping",
@@ -429,6 +451,9 @@ export const websiteServices: Services[] = [
     info: "Our wireframing and prototyping services transform your ideas into functional, user-centric designs that serve as the foundation for a seamless user experience. We begin with low-fidelity wireframes, mapping out the structure, navigation, and layout to establish a clear design blueprint. From there, we create high-fidelity prototypes that mimic real interactions, allowing you to experience and refine the user journey before development begins. These interactive previews help streamline decision-making, improve design efficiency, and ensure practicality and usability, ultimately saving time and resources while optimizing the final product.",
     details:
       "We provide wireframing and prototyping services to help you visualize user interactions and refine design ideas before development begins. These tools are essential for identifying usability issues and ensuring an optimal user experience.",
+    short: "",
+    featured: true,
+    Icon: FaDesktop,
     pricingTiers: [
       {
         name: "Low-Fidelity Wireframes",
@@ -454,6 +479,9 @@ export const websiteServices: Services[] = [
     info: "Our SEO optimization services are designed to increase your website’s visibility, attract high-quality organic traffic, and drive conversions—whether that means boosting e-commerce sales, growing newsletter subscriptions, or enhancing brand awareness. We implement data-driven strategies that include in-depth keyword research, on-page optimization, high-value content improvements, and strategic link-building to improve your search engine rankings. By staying ahead of algorithm updates and industry best practices, we ensure your site remains competitive, relevant, and optimized for long-term success in an evolving digital landscape. Let us help you connect with the right audience and maximize your online potential.",
     details:
       "Our SEO optimization services focus on enhancing your website’s visibility in search engines. From keyword research to link-building, we implement effective techniques to drive organic traffic and improve your site's ranking and overall performance.",
+    short: "",
+    featured: true,
+    Icon: FaSearch,
     pricingTiers: [
       {
         name: "SEO Audit",
@@ -482,6 +510,9 @@ export const contentCreationServices: Services[] = [
     startingPrice: 1500,
     info: "We craft clear, compelling, and SEO-driven website content designed to captivate your audience, enhance brand messaging, and improve search engine rankings. Our expertly written copy aligns with your brand voice, effectively communicates your value proposition, and guides visitors toward conversions. By integrating strategic keywords and user-focused storytelling, we help establish your online authority, boost organic traffic, and create a seamless user experience that fosters trust and engagement. Whether you need landing pages, service descriptions, or blog content, our tailored approach ensures your message resonates and drives results.",
     details: "Our copywriting services craft SEO-optimized, engaging content that boosts visibility and drives conversions. From web pages to service descriptions, we ensure your message is clear and compelling.",
+    short: "Captivate your audience with high-impact, engaging content designed to inform, inspire, and convert. From SEO-optimized blog posts and newsletters to eBooks, technical documentation, and onboarding materials, we craft compelling narratives that strengthen your brand, enhance visibility, and drive meaningful connections. Let your content do the talking—and the selling!",
+    featured: true,
+    Icon: FaPen,
     pricingTiers: [
       {
         name: "Basic",
@@ -506,6 +537,9 @@ export const contentCreationServices: Services[] = [
     startingPrice: 750,
     info: "We specialize in creating detailed, easy-to-follow product guides and manuals that transform complex information into clear, accessible content. Designed with usability and clarity in mind, our guides help users quickly understand your products, improving their overall experience and satisfaction. With step-by-step instructions, engaging visuals, and concise explanations, we ensure that customers can confidently navigate, assemble, troubleshoot, and maximize the use of your offerings. Whether it's a technical manual, instructional booklet, or digital user guide, our expertly crafted content enhances customer support, reduces confusion, and builds trust in your brand.",
     details: "Our product guides and manuals simplify complex information with clear, step-by-step instructions and troubleshooting tips. Designed for usability and clarity, they enhance the user experience, reduce confusion, and help customers get the most out of your products.",
+    short: "",
+    featured: true,
+    Icon: FaDesktop,
     pricingTiers: [
       {
         name: "Quick Start Guides",
@@ -530,6 +564,9 @@ export const contentCreationServices: Services[] = [
     startingPrice: 200,
     info: "We create compelling, informative blog posts that not only captivate your audience but also enhance your website’s SEO performance. Every post is carefully crafted to align with your brand voice and industry expertise, ensuring authenticity and consistency. By delivering valuable, relevant content, we help establish your brand as an authority in your field, boost organic traffic, and foster deeper connections with your audience. Our blogs are designed to educate, inspire, and engage, driving higher visibility, increased engagement, and long-term growth for your online presence.",
     details: "Our blog writing services deliver engaging, SEO-optimized content that captivates your audience and boosts search rankings. Tailored to your brand voice and industry, our blog posts provide valuable insights, drive organic traffic, and establish your authority online.",
+    short: "",
+    featured: true,
+    Icon: FaDesktop,
     pricingTiers: [
       {
         name: "Single Blog Post",
@@ -554,6 +591,9 @@ export const contentCreationServices: Services[] = [
     startingPrice: 750,
     info: "Our technical writing services transform complex concepts into clear, concise, and user-friendly documentation. Whether you need software manuals, API documentation, white papers, or technical guides, we deliver accurate, well-structured content that enhances understanding and usability. By prioritizing clarity, precision, and accessibility, we ensure your audience can easily navigate and apply the information, improving their experience and confidence in your product or service. Our expertly crafted documents support seamless adoption, reduced learning curves, and enhanced user engagement across technical and non-technical audiences alike.",
     details: "Our technical writing services transform complex information into clear, concise, and user-friendly documentation. Whether it's software guides, user manuals, or technical reports, we ensure accuracy, readability, and a seamless user experience.",
+    short: "",
+    featured: true,
+    Icon: FaDesktop,
     pricingTiers: [
       {
         name: "Short Guides or SOPs",
@@ -578,6 +618,9 @@ export const contentCreationServices: Services[] = [
     startingPrice: 2000,
     info: "We design and develop interactive online courses that combine multimedia, intuitive design, and engaging content to provide impactful learning experiences. Whether you're offering industry training, employee development, or educational programs, our courses are tailored to align with your objectives and audience needs. By integrating videos, quizzes, and interactive elements, we ensure maximum engagement, knowledge retention, and accessibility. With a focus on structured content, user-friendly navigation, and effective knowledge transfer, our solutions empower learners to gain valuable skills and insights that drive lasting success.",
     details: "We design engaging, interactive online courses that deliver real value to your audience. From video tutorials and quizzes to structured learning modules, we ensure your courses are informative, user-friendly, and optimized for effective knowledge retention.",
+    short: "",
+    featured: true,
+    Icon: FaDesktop,
     pricingTiers: [
       {
         name: "Short Courses (1–3 modules)",
@@ -602,6 +645,9 @@ export const contentCreationServices: Services[] = [
     startingPrice: 200,
     info: "We create clear, concise, and user-friendly tutorials that simplify complex tasks and guide users through each step with ease. Designed for maximum clarity and accessibility, our tutorials break down technical processes, software usage, and product functionalities into easy-to-follow instructions. By incorporating visual aids, structured guidance, and practical examples, we empower users to confidently navigate challenges, master new skills, and achieve their goals efficiently.",
     details: "We develop clear, step-by-step tutorials that simplify complex tasks for users. Whether for software, hardware, or services, our tutorials provide easy-to-follow instructions that enhance user experience, boost engagement, and ensure successful implementation.",
+    short: "",
+    featured: true,
+    Icon: FaDesktop,
     pricingTiers: [
       {
         name: "Quick Start Guides",
@@ -621,6 +667,9 @@ export const contentCreationServices: Services[] = [
     startingPrice: 50,
     info: "We design visually compelling brochures and flyers that effectively showcase your products, services, and brand message. By blending engaging visuals, persuasive copy, and strategic layouts, we create marketing materials that capture attention, communicate value, and inspire action. Whether for promotions, events, or corporate branding, our designs ensure your message stands out and leaves a lasting impression on your audience.",
     details: "Our brochure and flyer design services create eye-catching, high-impact marketing materials that effectively showcase your products and services. We ensure clear messaging, compelling visuals, and strategic layouts to maximize engagement and brand awareness.",
+    short: "",
+    featured: true,
+    Icon: FaDesktop,
     pricingTiers: [
       {
         name: "Flyers (One Page)",
@@ -650,6 +699,9 @@ export const contentCreationServices: Services[] = [
     startingPrice: 500,
     info: "We develop comprehensive and professional training materials that streamline the onboarding process for employees, clients, and users. Our content is designed for clarity, engagement, and ease of understanding, ensuring smooth transitions and successful integration into your organization. With step-by-step guidance, interactive elements, and tailored resources, we help you deliver an effective onboarding experience that fosters confidence, productivity, and long-term alignment with your goals.",
     details: "We develop clear, structured training manuals and onboarding documents that streamline the transition for employees, clients, or users. Designed for efficiency and clarity, our materials ensure a smooth onboarding process, improving engagement and retention.",
+    short: "",
+    featured: true,
+    Icon: FaDesktop,
     pricingTiers: [
       {
         name: "Basic Onboarding Documents",
@@ -679,6 +731,9 @@ export const contentCreationServices: Services[] = [
     startingPrice: 500,
     info: "We craft detailed and easy-to-follow study guides designed to simplify complex concepts and enhance learning retention. Whether for students preparing for exams or professionals seeking to expand their knowledge, our guides provide clear explanations, structured layouts, and effective learning strategies. With a focus on clarity, comprehension, and application, our study materials help you grasp key topics, boost confidence, and achieve your academic or professional goals.",
     details: "We create comprehensive, easy-to-understand study guides that simplify complex concepts for students and professionals. Designed for effective learning and retention, our guides enhance comprehension, making studying more efficient and engaging.",
+    short: "",
+    featured: true,
+    Icon: FaDesktop,
     pricingTiers: [
       {
         name: "Basic Study Guides (5–10 pages)",
@@ -708,6 +763,9 @@ export const contentCreationServices: Services[] = [
     startingPrice: 2500,
     info: "We specialize in crafting high-quality, visually appealing eBooks tailored to your educational, marketing, or publishing needs. From compelling content development to eye-catching design, we ensure your eBook effectively conveys your message and captivates your audience. Whether you're looking to educate, inform, or promote, our expertly designed eBooks provide an engaging, polished, and impactful reading experience that aligns with your goals.",
     details: "Our eBook creation service delivers professionally written, visually compelling content optimized for marketing, education, and publishing. We craft SEO-friendly, engaging eBooks that enhance credibility, attract readers, and drive conversions.",
+    short: "",
+    featured: true,
+    Icon: FaDesktop,
     pricingTiers: [
       {
         name: "Basic eBook",
@@ -727,6 +785,9 @@ export const contentCreationServices: Services[] = [
     startingPrice: 300,
     info: "We design and craft engaging, visually appealing newsletters that keep your audience informed, inspired, and connected. Whether it’s a one-time announcement or a recurring series, our newsletters blend compelling content, strategic messaging, and eye-catching design to ensure maximum impact. Ideal for building relationships, boosting engagement, and strengthening brand loyalty, our newsletters help you stay top-of-mind with your audience.",
     details: "We create well-crafted, visually appealing newsletters that keep your audience engaged. From compelling content to strategic design, we ensure your message stands out while optimizing for open rates, readability, and conversions.",
+    short: "",
+    featured: true,
+    Icon: FaDesktop,
     pricingTiers: [
       {
         name: "Single Newsletter",
