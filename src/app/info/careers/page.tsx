@@ -63,12 +63,23 @@ const JobListingsPage: FC = () => {
             <h2 className="font-semibold text-secondary">{job.title}</h2>
 
             {/* Additional Information */}
-            <h3 className="mt-1 p-0 text-accent-1 text-sm md:text-md lg:text-lg">
+            <h3 className="mt-1 p-0 text-accent-5 text-sm md:text-md lg:text-lg">
               {job.information}
             </h3>
 
             {/* Job Description */}
-            <p className="mt-3 text-lg">{job.description}</p>
+            <p className="mt-3">{job.description}</p>
+
+            {/* Call to Action */}
+            <div className="mt-6">
+              <Button
+                variant={"accent"}
+                onClick={() => router.push("/applicant-submission")}
+                className="py-3 w-2/5 text-lg"
+              >
+                Apply Now For The {job.title} Position
+              </Button>
+            </div>
 
             {/* Responsibilities */}
             <div className="mt-4">
@@ -88,17 +99,6 @@ const JobListingsPage: FC = () => {
                   <li key={i}>{qual}</li>
                 ))}
               </ul>
-            </div>
-
-            {/* Call to Action */}
-            <div className="mt-6">
-              <Button
-                variant={"secondary"}
-                onClick={() => router.push("/applicant-submission")}
-                className="px-6 py-3 w-1/4 text-lg"
-              >
-                Apply Now
-              </Button>
             </div>
           </section>
         ))}
