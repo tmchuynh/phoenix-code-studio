@@ -74,16 +74,19 @@ const NavBar = () => {
               ))}
               <MenubarSub>
                 <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
-                  Payment Plans
+                  Flexible Payment Plans
                 </MenubarSubTrigger>
-                <MenubarSubContent className="mx-4">
+                <MenubarSubContent className="mx-4 grid grid-cols-3 gap-2">
                   {paymentOptions.map((plan, index) => (
                     <MenubarItem
                       key={index}
                       onClick={() => router.push(plan.href)}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                      className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72 rounded-lg"
                     >
-                      {plan.title}
+                      <p className="text-tertiary font-semibold mb-0">
+                        {plan.title}
+                      </p>
+                      <small>{plan.description}</small>
                     </MenubarItem>
                   ))}
                 </MenubarSubContent>
@@ -93,14 +96,17 @@ const NavBar = () => {
                 <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                   Website Services
                 </MenubarSubTrigger>
-                <MenubarSubContent className="mx-4 w-72">
+                <MenubarSubContent className="mx-4 grid grid-cols-3 gap-2">
                   {websites.map((website, index) => (
                     <MenubarItem
                       key={index}
                       onClick={() => router.push(website.href)}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                      className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72"
                     >
-                      {website.title}
+                      <p className="text-tertiary font-semibold mb-0">
+                        {website.title}
+                      </p>
+                      <small>{website.description}</small>
                     </MenubarItem>
                   ))}
                 </MenubarSubContent>
@@ -109,14 +115,17 @@ const NavBar = () => {
                 <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                   Content Creation
                 </MenubarSubTrigger>
-                <MenubarSubContent className="mx-4 w-72">
+                <MenubarSubContent className="mx-4 grid grid-cols-3 gap-2">
                   {content.map((content, index) => (
                     <MenubarItem
                       key={index}
                       onClick={() => router.push(content.href)}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                      className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72"
                     >
-                      {content.title}
+                      <p className="text-tertiary font-semibold mb-0">
+                        {content.title}
+                      </p>
+                      <small>{content.description}</small>
                     </MenubarItem>
                   ))}
                 </MenubarSubContent>
@@ -125,14 +134,17 @@ const NavBar = () => {
                 <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                   Company Specific Services
                 </MenubarSubTrigger>
-                <MenubarSubContent className="mx-4 w-72">
+                <MenubarSubContent className="mx-4 grid grid-cols-3 gap-2">
                   {companies.map((company, index) => (
                     <MenubarItem
                       key={index}
                       onClick={() => router.push(company.href)}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                      className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72"
                     >
-                      {company.title}
+                      <p className="text-tertiary font-semibold mb-0">
+                        {company.title}
+                      </p>
+                      <small>{company.description}</small>
                     </MenubarItem>
                   ))}
                 </MenubarSubContent>
@@ -198,7 +210,7 @@ const NavBar = () => {
               ))}
               <MenubarSub>
                 <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
-                  Payment Plans
+                  Flexible Payment Plans
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4">
                   {paymentOptions.map((plan, index) => (
