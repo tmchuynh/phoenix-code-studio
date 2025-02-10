@@ -1,5 +1,5 @@
 import { FaDesktop, FaPen, FaSearch } from "react-icons/fa";
-import { BlogPost, FAQ, JobPosition, Menu, PaymentPlan, Project, Services, Testimonial } from "./interfaces";
+import { FAQ, JobPosition, Menu, PaymentPlan, Project, Testimonial } from "./interfaces";
 
 export const about: Menu[] = [
   {
@@ -49,7 +49,7 @@ export const services: Menu[] = [
       "Explore our pricing options and find the perfect plan for your needs.",
   },
   {
-    title: "Example Contracts",
+    title: "Contract Examples",
     href: "/services/contracts",
     description:
       "Explore our pricing options and find the perfect plan for your needs.",
@@ -68,36 +68,42 @@ export const paymentOptions: Menu[] = [
     title: "Flexible Pricing Plans",
     href: "/services/pricing/payment-plans",
     description:
-      "Explore our pricing options and find the perfect plan for your needs.",
+      "Explore our pricing options and find the .",
   },
   {
-    title: "Basic Plan",
+    title: "Bronze Pricing Plan",
     href: "/services/pricing/payment-plans/bronze-pricing-plan",
     description:
-      "Explore our pricing options and find the perfect plan for your needs.",
+      "Explore our pricing options and your needs.",
   },
   {
-    title: "Standard Plan",
+    title: "Silver Pricine Plan",
     href: "/services/pricing/payment-plans/silver-pricing-plan",
     description:
-      "Explore our pricing options and find the perfect plan for your needs.",
+      "Explore our pricing options  plan for your needs.",
   },
   {
-    title: "Premium Plan",
+    title: "Gold Pricing Plan",
     href: "/services/pricing/payment-plans/gold-pricing-plan",
     description:
-      "Discover flexible payment plans tailored to suit different budgets.",
+      "Discover flexible payment plans tailored to budgets.",
   },
   {
     title: "Custom Plan",
     href: "/services/pricing/payment-plans/custom-plan",
     description:
-      "Discover flexible payment plans tailored to suit different budgets.",
+      "Discover flexible  to suit different budgets.",
   },
 ];
 
 
 export const websites: Menu[] = [
+  {
+    title: "Wireframing & Prototyping",
+    href: "/services/website-services/wireframing-&-prototyping",
+    description:
+      "Visualize and test design concepts through effective wireframes and prototypes.",
+  },
   {
     title: "SEO Optimization",
     href: "/services/website-services/seo-optimization",
@@ -109,12 +115,6 @@ export const websites: Menu[] = [
     href: "/services/website-services/user-experience-design",
     description:
       "Craft intuitive and engaging designs that enhance user satisfaction and accessibility.",
-  },
-  {
-    title: "Wireframing & Prototyping",
-    href: "/services/website-services/wireframing-&-prototyping",
-    description:
-      "Visualize and test design concepts through effective wireframes and prototypes.",
   },
 ];
 
@@ -191,18 +191,6 @@ export const content: Menu[] = [
 
 export const companies: Menu[] = [
   {
-    title: "Company Rebranding",
-    href: "/services/comapny-specific-services/company-rebranding",
-    description:
-      "Transform your company’s identity with a refreshed logo, messaging, and brand strategy.",
-  },
-  {
-    title: "Brand Storytelling",
-    href: "/services/comapny-specific-services/brand-storytelling",
-    description:
-      "Craft compelling narratives to communicate your brand's mission, vision, and values.",
-  },
-  {
     title: "Custom Website Design",
     href: "/services/comapny-specific-services/custom-website-design",
     description:
@@ -213,6 +201,18 @@ export const companies: Menu[] = [
     href: "/services/comapny-specific-services/e-commerce-site-development",
     description:
       "Develop seamless online shopping experiences to boost sales and customer engagement.",
+  },
+  {
+    title: "Company Rebranding",
+    href: "/services/comapny-specific-services/company-rebranding",
+    description:
+      "Transform your company’s identity with a refreshed logo, messaging, and brand strategy.",
+  },
+  {
+    title: "Brand Storytelling",
+    href: "/services/comapny-specific-services/brand-storytelling",
+    description:
+      "Craft compelling narratives to communicate your brand's mission, vision, and values.",
   },
   {
     title: "Single-Page Applications (SPAs)",
@@ -229,7 +229,7 @@ export const companies: Menu[] = [
 ];
 
 
-export const companySpecificServices: Services[] = [
+export const companySpecificServices = [
   {
     name: "Transform Your Brand with Our Rebranding Services",
     description: "Marketing Strategy",
@@ -420,7 +420,7 @@ export const companySpecificServices: Services[] = [
 ];
 
 
-export const websiteServices: Services[] = [
+export const websiteServices = [
   {
     name: "User-Centered Interface Design for Seamless Experiences",
     description: "Tailored UX",
@@ -503,7 +503,7 @@ export const websiteServices: Services[] = [
 ];
 
 
-export const contentCreationServices: Services[] = [
+export const contentCreationServices = [
   {
     name: "Engaging, SEO-Optimized Website Content That Converts",
     description: "Engaging Readers",

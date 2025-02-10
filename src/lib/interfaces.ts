@@ -3,13 +3,6 @@ export interface FAQ {
   answer: string;
 }
 
-export interface CollapsibleItemProps {
-  question: string;
-  answer: string;
-  isOpen: boolean;
-  onToggle: () => void;
-}
-
 export interface Menu {
   title: string;
   href: string;
@@ -22,7 +15,17 @@ export interface PricingTier {
   info: string;
 }
 
-export interface Services {
+export interface ServiceInfo {
+  description: string;
+  subServices: string[];
+}
+
+export interface ServiceItem {
+  name: string;
+  info: ServiceInfo;
+}
+
+export interface SubServiceInfo {
   name: string;
   description: string;
   startingPrice: number;
@@ -32,6 +35,12 @@ export interface Services {
   featured: boolean;
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   pricingTiers: PricingTier[];
+}
+
+export interface SubServiceItem {
+  category: string;
+  name: string;
+  info: SubServiceInfo;
 }
 
 export interface PaymentPlan {
@@ -77,16 +86,6 @@ export interface BlogPost {
     }[];
   }[];
   conculsions: string[];
-}
-
-export interface BlogContent {
-  category: string;
-  description?: string;
-  keyTopics?: { title: string; description: string; }[];
-  items?: { title: string; description: string; }[];
-  items_?: { title: string; description?: string; details: string[]; }[];
-  _items_?: { title: string; details: string; }[];
-  trends?: string[];
 }
 
 export interface Project {
