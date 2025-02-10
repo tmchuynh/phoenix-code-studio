@@ -67,20 +67,31 @@ const ServicesPage: FC = () => {
       {/* Company Services Section */}
       <section className="my-16">
         <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
-          Corporate Digital Solutions for Growth & Competitive Edge
+          Scalable Corporate Solutions for Growth & Digital Success
         </h2>
         <p>
-          Our corporate solutions empower businesses of all sizes to strengthen
-          their online presence, streamline digital operations, and enhance user
-          experiences. Whether you need custom web development, e-commerce
-          solutions, UX/UI design, or data-driven digital marketing strategies,
-          we deliver SEO-optimized, results-driven solutions tailored to your
-          business objectives. Our team of experts in web design, branding, and
-          conversion optimization works to boost search rankings, increase
-          traffic, and maximize engagement, ensuring your brand stands out in a
-          crowded digital marketplace. Let us help you turn visitors into loyal
-          customers, drive long-term success, and establish a lasting
-          competitive advantage.
+          Our corporate digital solutions are designed to help businesses of all
+          sizes enhance their online visibility, optimize digital operations,
+          and improve user engagement. Whether you need custom web development,
+          high-converting e-commerce solutions, intuitive UX/UI design, or
+          data-driven digital marketing strategies, we provide SEO-optimized,
+          performance-focused solutions tailored to your specific business
+          objectives.
+        </p>
+        <p>
+          Our team of web design experts, branding specialists, and conversion
+          optimization strategists works to boost search engine rankings,
+          increase organic traffic, and maximize audience engagement, ensuring
+          that your brand outshines the competition in today’s saturated digital
+          marketplace.
+        </p>
+        <p>
+          By leveraging advanced SEO strategies, responsive web design, and
+          conversion-driven digital experiences, we help businesses turn website
+          visitors into loyal customers, accelerate revenue growth, and
+          establish a powerful competitive edge. Partner with us to create
+          scalable, future-proof digital solutions that drive long-term success
+          and position your business as a leader in your industry.
         </p>
         <div>
           {companySpecificServices.map((service, index) => (
@@ -133,20 +144,31 @@ const ServicesPage: FC = () => {
       {/* Website Services Section */}
       <section className="my-16">
         <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
-          Comprehensive Website Solutions for Growth & Visibility
+          End-to-End Website Solutions for a High-Performing Digital Presence
         </h2>
         <p>
-          Our website services provide end-to-end solutions to help businesses
-          establish, enhance, and scale their digital presence effectively.
-          Whether you need a custom website design, high-performance
-          development, or seamless functionality, we deliver tailored solutions
-          to meet your unique needs. Our expertise includes responsive web
-          design, e-commerce integrations, SEO optimization, and UX
-          enhancements, ensuring your site is both visually striking and
-          conversion-driven. With a strong emphasis on speed, accessibility, and
-          mobile-first design, we create websites that engage visitors, improve
-          search rankings, and fuel business growth—helping you stay ahead in
-          today’s competitive digital landscape.
+          Our website development services provide comprehensive, scalable
+          solutions to help businesses establish, optimize, and grow their
+          online presence. Whether you need a custom website design, high-speed
+          development, or seamless functionality, we create tailored digital
+          experiences that enhance brand visibility, user engagement, and
+          conversions.
+        </p>
+        <p>
+          With expertise in responsive web design, e-commerce development,
+          advanced SEO strategies, and UX/UI enhancements, we ensure your
+          website is visually compelling, mobile-optimized, and search
+          engine-friendly. Our focus on fast-loading pages, intuitive
+          navigation, and conversion-driven architecture ensures that your
+          visitors enjoy a seamless experience while boosting your search
+          rankings and online authority.
+        </p>
+        <p>
+          By integrating the latest SEO best practices, accessibility standards,
+          and mobile-first design principles, we craft websites that not only
+          attract and retain customers but also drive sustainable business
+          growth. Stay ahead of the competition with a high-performance website
+          that delivers real results and maximizes your digital potential.
         </p>
         <div>
           {websiteServices.map((service, index) => (
@@ -199,20 +221,29 @@ const ServicesPage: FC = () => {
       {/* Content Creation Services Section */}
       <section className="my-16">
         <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
-          SEO-Optimized Content Creation for Maximum Brand Impact
+          SEO-Optimized Content Creation Services That Elevate Your Brand &
+          Drive Results
         </h2>
         <p>
-          Our Content Creation Services are designed to enhance your online
-          visibility, drive organic traffic, and engage your target audience
-          with compelling, high-quality, and search engine-optimized content.
+          Our Content Creation Services are designed to boost online visibility,
+          attract organic traffic, and engage your target audience with
+          compelling, high-quality, SEO-optimized content. We craft content that
+          is strategic, audience-focused, and built to rank, ensuring your brand
+          stands out in search engine results and captivates readers.
+        </p>
+        <p>
           From SEO-friendly blog articles and persuasive website copy to
-          engaging social media posts and conversion-driven product
-          descriptions, we craft content that not only captivates readers but
-          also ranks higher on search engines. Whether you aim to increase brand
-          awareness, boost audience engagement, or establish authority in your
-          industry, our expertly crafted content strategies ensure your brand
-          stands out. Let us help you create content that fuels growth, builds
-          trust, and maximizes your digital presence.
+          engaging social media content and high-converting product
+          descriptions, we create content that drives engagement, builds brand
+          authority, and increases conversions. Whether your goal is to enhance
+          brand awareness, improve search rankings, or establish credibility in
+          your industry, our tailored content marketing strategies help you
+          achieve measurable success.
+        </p>
+        <p>
+          Let us help you create content that fuels business growth, strengthens
+          customer trust, and maximizes your digital presence—all while ensuring
+          that every word works toward your SEO and marketing goals.
         </p>
         <div>
           {contentCreationServices.map((service, index) => (
