@@ -72,19 +72,19 @@ export const paymentOptions: Menu[] = [
   },
   {
     title: "Basic Plan",
-    href: "/services/pricing/payment-plans/basic-plan",
+    href: "/services/pricing/payment-plans/bronze-pricing-plan",
     description:
       "Explore our pricing options and find the perfect plan for your needs.",
   },
   {
     title: "Standard Plan",
-    href: "/services/pricing/payment-plans/standard-plan",
+    href: "/services/pricing/payment-plans/silver-pricing-plan",
     description:
       "Explore our pricing options and find the perfect plan for your needs.",
   },
   {
     title: "Premium Plan",
-    href: "/services/pricing/payment-plans/premium-plan",
+    href: "/services/pricing/payment-plans/gold-pricing-plan",
     description:
       "Discover flexible payment plans tailored to suit different budgets.",
   },
@@ -904,7 +904,7 @@ export const paymentPlans: PaymentPlan[] = [
       "Budget-friendly monthly payments to spread out expenses and keep projects manageable",
       "Short-term plans with up to 3 months of payments for quick-turnaround projects"
     ],
-    route: "/services/pricing/payment-plans/basic-plan"
+    route: "/services/pricing/payment-plans/bronze-pricing-plan"
   },
   {
     title: "Standard Plan",
@@ -915,7 +915,7 @@ export const paymentPlans: PaymentPlan[] = [
       "Priority support and dedicated project management to ensure timely execution",
       "Up to 6 months of payment terms for mid-size projects needing structured affordability"
     ],
-    route: "/services/pricing/payment-plans/standard-plan"
+    route: "/services/pricing/payment-plans/silver-pricing-plan"
   },
   {
     title: "Premium Plan",
@@ -926,7 +926,7 @@ export const paymentPlans: PaymentPlan[] = [
       "Extended payment terms of up to 12 months for maximum financial ease",
       "Full-service support, including strategic consultation, regular updates, and long-term success planning"
     ],
-    route: "/services/pricing/payment-plans/premium-plan"
+    route: "/services/pricing/payment-plans/gold-pricing-plan"
   },
   {
     title: "Custom Plan",
