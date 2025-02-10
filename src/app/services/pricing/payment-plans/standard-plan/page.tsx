@@ -8,7 +8,7 @@ const StandardPlan = () => {
   const isSmallScreen = useSmallScreen();
   const isMediumScreen = useMediumScreen();
   return (
-    <main className="my-16 w-11/12 mx-auto">
+    <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
       {/* Page Header */}
       <section className="mb-8">
