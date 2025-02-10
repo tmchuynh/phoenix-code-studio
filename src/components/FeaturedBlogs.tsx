@@ -1,4 +1,3 @@
-import { blogs } from "@/lib/constants";
 import useSmallScreen from "@/lib/useSmallScreen";
 import { useRouter } from "next/navigation";
 import { Button } from "./ui/button";
@@ -8,6 +7,8 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import { useState } from "react";
+import { blogs } from "@/lib/blog-posts";
+import { setSlug } from "@/lib/utils";
 
 const FeaturedBlogs = () => {
   const isSmallScreen = useSmallScreen();
@@ -99,7 +100,7 @@ const FeaturedBlogs = () => {
             <Button
               variant={"accent"}
               onClick={() => {
-                router.push(blog.slug);
+                router.push(setSlug(blog.title));
               }}
               className="mt-7"
             >
