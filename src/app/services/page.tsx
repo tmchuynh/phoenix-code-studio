@@ -9,7 +9,7 @@ import {
   companySpecificServices,
 } from "@/lib/constants";
 import useSmallScreen from "@/lib/useSmallScreen";
-import { cn, formatCurrency } from "@/lib/utils";
+import { cn, formatCurrency, setSlug } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import useMediumScreen from "@/lib/useMediumScreen";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
@@ -37,10 +37,7 @@ const ServicesPage: FC = () => {
   };
 
   const navigateToContentService = (serviceName: string) => {
-    const formattedServiceName = serviceName
-      .toLowerCase()
-      .replace(/ /g, "-")
-      .replace(/\//g, "-");
+    const formattedServiceName = setSlug(serviceName);
 
     router.push(`/services/content-creation-services/${formattedServiceName}`);
   };
