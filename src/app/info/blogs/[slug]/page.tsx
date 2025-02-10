@@ -17,7 +17,7 @@ const BlogPostPage = () => {
   useEffect(() => {
     async function fetchBlog() {
       try {
-        const response = await fetch(`/api/blog/${slug}`);
+        const response = await fetch(`/api/blogs/${slug}`);
         if (!response.ok) {
           throw new Error("Blog post not found");
         }
@@ -58,22 +58,74 @@ const BlogPostPage = () => {
                     className="text-sm lowercase cursor-default"
                     key={index}
                   >
-                    #{topic}
+                    #&thinsp;{topic}
                   </Badge>
                 );
               })}
             </div>
           </div>
-          <p>{post?.intro}</p>
+          {post?.intro.map((intro) => (
+            <p>{intro}</p>
+          ))}
         </header>
 
-        {post?.categories?.map((section, index) => (
+        {post?.list && (
+          <>
+            <h2>{post?.list?.title}</h2>
+            {post?.list?.description && <p>{post?.list?.description}</p>}
+            <ul className="list-disc pl-6 space-y-4">
+              {post?.list?.details.map((item, index) => (
+                <li key={index}>
+                  {item.title && <strong>{item.title}: </strong>}
+                  <ul className="pl-6">
+                    {item.info.map((text, index) => (
+                      <li key={index}>{text}</li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {post?.categories.map((section, index) => (
           <section key={index}>
             <h2>{section.category}</h2>
-            {section.items.map((item, index) => (
-              <div key={index}>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
+
+            {/* Render section intro */}
+            {section.intro?.map((text, i) => (
+              <p key={i}>{text}</p>
+            ))}
+
+            {/* Render items */}
+            {section.items?.map((item, i) => (
+              <div key={i}>
+                {item.description.length > 1 ? (
+                  <ul className="list-none">
+                    <li>
+                      {item.title && <h3 className="-ml-5">{item.title} </h3>}
+                      {item.description.map((description, j) => (
+                        <p key={j}>{description}</p>
+                      ))}
+                    </li>
+                  </ul>
+                ) : (
+                  <ul>
+                    <li>
+                      {item.title && <strong>{item.title}: </strong>}
+                      {item.description}
+                    </li>
+                  </ul>
+                )}
+
+                {/* Render item details if available */}
+                {item.details && (
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-7">
+                    {item.details.map((detail, j) => (
+                      <li key={j}>{detail}</li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </section>
@@ -86,18 +138,7 @@ const BlogPostPage = () => {
           ))}
         </section>
 
-        <footer className="mt-8 text-center space-y-3">
-          <p>
-            Share this post on{" "}
-            <a
-              href={`https://twitter.com/intent/tweet?url=${window.location.href}&text=${post?.title}`}
-            >
-              Twitter
-            </a>
-          </p>
-
-          <hr />
-
+        <footer className="mt-8 text-center">
           <p>
             Read more related posts about{" "}
             {post?.topics.map((topic, index) => (

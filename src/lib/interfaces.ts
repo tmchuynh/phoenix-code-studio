@@ -16,7 +16,6 @@ export interface Menu {
   description: string;
 }
 
-
 export interface PricingTier {
   name: string;
   startingPrice: number;
@@ -54,14 +53,28 @@ export interface BlogPost {
   title: string;
   author: string;
   date: string;
-  img: string;
+  description: string;
+  excerpt: string;
   featured?: boolean;
+  img: string;
   topics: string[];
-  intro: string;
-  slug: string;
-  categories?: {
+  intro: string[];
+  list?: {
+    title: string;
+    description?: string[];
+    details: {
+      title?: string;
+      info: string[];
+    }[];
+  };
+  categories: {
     category: string;
-    items: { title: string; description: string; }[];
+    intro?: string[];
+    items?: {
+      title?: string;
+      description: string[];
+      details?: string[];
+    }[];
   }[];
   conculsions: string[];
 }

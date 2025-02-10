@@ -23,13 +23,13 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { blogs } from "@/lib/constants";
 import useBetweenLargeAndXL from "@/lib/onlyLargerScreens";
 import useSmallScreen from "@/lib/useSmallScreen";
-import { formatDate } from "@/lib/utils";
+import { formatDate, setSlug } from "@/lib/utils";
 import { ChevronsUpDown } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useState, useCallback } from "react";
+import { blogs } from "@/lib/blog-posts";
 
 const BlogDisplayPage: FC = () => {
   const router = useRouter();
@@ -83,7 +83,7 @@ const BlogDisplayPage: FC = () => {
     setOpenCollapsible(openCollapsible === collapsible ? null : collapsible); // Toggle the collapsible or close it
   };
 
-  const handleFilter = () => {
+  const handleFilter = useCallback(() => {
     let filtered = blogs;
 
     // Filter by topics
@@ -124,6 +124,8 @@ const BlogDisplayPage: FC = () => {
           setSelectedDates([]);
         }, 1000);
       }
+
+      // Sort original blogs
       setFilteredBlogs(
         blogs.sort((a, b) => {
           const dateA = new Date(formatDate(a.date));
@@ -143,9 +145,11 @@ const BlogDisplayPage: FC = () => {
           return dateA.getDate() - dateB.getDate();
         })
       );
+
       setTimeout(() => setNoResults(false), 4000);
     } else {
       setNoResults(false);
+      // Sort filtered
       setFilteredBlogs(
         filtered.sort((a, b) => {
           const dateA = new Date(formatDate(a.date));
@@ -166,7 +170,14 @@ const BlogDisplayPage: FC = () => {
         })
       );
     }
-  };
+  }, [
+    blogs,
+    selectedTopics,
+    selectedDates,
+    selectedAuthors,
+    searchQuery,
+    filtersCleared,
+  ]);
 
   const clearFilters = (e?: string) => {
     setSelectedTopics([]);
@@ -228,13 +239,7 @@ const BlogDisplayPage: FC = () => {
 
   useEffect(() => {
     handleFilter();
-  }, [
-    selectedTopics,
-    selectedDates,
-    selectedAuthors,
-    searchQuery,
-    handleFilter,
-  ]);
+  }, [handleFilter]);
 
   function handleOpen(dropdown: "topic" | "date" | "author") {
     setDropdownOpen({
@@ -630,7 +635,7 @@ const BlogDisplayPage: FC = () => {
                         variant="ghost"
                         className="text-primary underline underline-offset-2 px-0 mt-5 mb-2 font-SofiaSans tracking-wider font-bold hover:bg-transparent hover:text-primary hover:no-underline text-wrap text-left text-md md:text-lg lg:text-xl 2xl:text-2xl"
                         onClick={() => {
-                          router.push(blog.slug);
+                          router.push(`/info/blogs/${setSlug(blog.title)}`);
                         }}
                       >
                         {blog.title}

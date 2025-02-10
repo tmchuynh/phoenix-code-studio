@@ -37,3 +37,11 @@ export const formatDate = ( dateString: string ): string => {
 
   return `${ year }-${ month }-${ day }`;
 };
+
+export function setSlug( title: string ): string {
+  const slug = title
+    .toLowerCase()
+    .replace( /[!@#$?%/^&*]/g, "" )
+    .replace( /[\s-]+/g, "-" );
+  return slug;
+}
