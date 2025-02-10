@@ -621,13 +621,15 @@ const BlogDisplayPage: FC = () => {
               className="border-2 border-transparent dark:hover:border-border rounded-lg shadow-lg hover:shadow-xl transition-shadow flex flex-col justify-between"
             >
               <div>
-                <Image
-                  src={blog.img}
-                  width={500}
-                  height={300}
-                  alt={blog.title}
-                  className="w-full h-36 rounded-t-md object-cover mx-auto mb-1"
-                />
+                {blog.img !== "" && (
+                  <Image
+                    src={blog.img}
+                    width={500}
+                    height={300}
+                    alt={blog.title}
+                    className="w-full h-36 rounded-t-md object-cover mx-auto mb-1"
+                  />
+                )}
                 <div className="px-4 pb-2 flex flex-col justify-between h-[20em] md:h-[25em] 2xl:h-[35em] relative">
                   <div>
                     <p>
