@@ -25,10 +25,14 @@ const FeaturedProjects = () => {
     (pastProjects) => pastProjects.featured === true
   );
 
+  const sortedProjects = featuredProjects.sort((a, b) => {
+    return b.title.localeCompare(a.title);
+  });
+
   // Pagination logic
   const indexOfLastProject = currentPage * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
-  const currentProjects = featuredProjects.slice(
+  const currentProjects = sortedProjects.slice(
     indexOfFirstProject,
     indexOfLastProject
   );
@@ -37,7 +41,7 @@ const FeaturedProjects = () => {
     setCurrentPage(pageNumber);
   };
 
-  const totalPages = Math.ceil(featuredProjects.length / projectsPerPage);
+  const totalPages = Math.ceil(sortedProjects.length / projectsPerPage);
 
   return (
     <section className="my-16 w-11/12 mx-auto">

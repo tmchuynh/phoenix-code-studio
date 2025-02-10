@@ -12,25 +12,30 @@ import { GrGrow } from "react-icons/gr";
 const AboutSection = () => {
   return (
     <section className="my-16 w-11/12 mx-auto">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-0 text-center">
         Who We Are
       </h2>
+      <h3 className="text-center mb-4">
+        Elevating Brands with Cutting-Edge Digital Solutions
+      </h3>
       <p className="text-center mx-auto">
-        At Phoenix Code Studio, we are more than just web developers, designers,
-        and content creators—we are digital innovators dedicated to helping
-        businesses thrive in an ever-evolving online world. Our team specializes
-        in customized solutions that blend cutting-edge technology, strategic
-        design, and compelling content to create high-impact digital
-        experiences.
+        At Phoenix Code Studio, we are more than just web developers, UX
+        designers, and content creators—we are digital strategists committed to
+        helping businesses dominate the online marketplace. Our expertise lies
+        in custom web development, UX/UI design, SEO optimization, and content
+        marketing, creating high-performance digital experiences that engage
+        users and drive measurable results.
       </p>
       <p className="text-center mx-auto mb-8">
-        We take a collaborative approach, working closely with each client to
-        understand their unique vision, goals, and challenges. Whether it’s
-        crafting high-performance websites, optimizing for SEO, or developing
-        engaging marketing content, we ensure every solution is tailored for
-        success and delivers measurable results that exceed expectations. At
-        Phoenix Code Studio, we don’t just build brands—we help them rise,
-        evolve, and lead in the digital space.
+        We take a collaborative, data-driven approach, ensuring that every
+        website, brand strategy, and digital solution is optimized for search
+        engines, mobile responsiveness, and seamless user experience. Whether
+        you need a SEO-optimized website, a conversion-driven eCommerce
+        platform, or engaging content marketing, our solutions are tailored to
+        boost online visibility, improve brand positioning, and maximize
+        conversions. At Phoenix Code Studio, we don’t just build websites—we
+        empower brands to lead, grow, and thrive in the ever-evolving digital
+        landscape.
       </p>
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-7 w-full md:w-11/12 lg:w-full mx-auto">
         {/* Creativity & Innovation */}
@@ -119,11 +124,10 @@ const AboutSection = () => {
           <FaRecycle className="text-6xl text-accent-5 mx-auto mb-4" />
           <h3 className="font-bold text-secondary">Sustainability</h3>
           <p>
-            We prioritize scalable, eco-friendly, and future-proof digital
-            solutions that support long-term sustainability. By integrating
-            efficient design, responsible development practices, and adaptable
-            technology, we help create a more sustainable digital future for
-            businesses and communities alike.
+            We create scalable, eco-friendly, and future-proof digital solutions
+            through efficient design, responsible development, and adaptable
+            technology, ensuring long-term sustainability for businesses and
+            communities.
           </p>
         </div>
       </div>

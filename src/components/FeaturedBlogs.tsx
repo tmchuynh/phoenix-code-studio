@@ -24,10 +24,14 @@ const FeaturedBlogs = () => {
   // Filtered blogs
   const featuredBlogs = blogs.filter((blog) => blog.featured === true);
 
+  const sortedBlogs = featuredBlogs.sort((a, b) => {
+    return a.title.localeCompare(b.title);
+  });
+
   // Pagination logic
   const indexOfLastArticle = currentPage * articlesPerPage;
   const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
-  const currentBlogs = featuredBlogs.slice(
+  const currentBlogs = sortedBlogs.slice(
     indexOfFirstArticle,
     indexOfLastArticle
   );
@@ -36,7 +40,7 @@ const FeaturedBlogs = () => {
     setCurrentPage(pageNumber);
   };
 
-  const totalPages = Math.ceil(featuredBlogs.length / articlesPerPage);
+  const totalPages = Math.ceil(sortedBlogs.length / articlesPerPage);
 
   return (
     <section className="my-16 w-11/12 mx-auto">
@@ -84,25 +88,27 @@ const FeaturedBlogs = () => {
         {currentBlogs.map((blog, index) => (
           <div
             key={index}
-            className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground flex flex-col justify-around"
+            className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground flex flex-col justify-between"
           >
-            <div>
-              <h3 className="font-semibold text-center text-tertiary">
+            <div className="flex flex-col justify-around">
+              <h3 className="font-semibold text-center text-tertiary h-32 flex justify-center items-center">
                 {blog.title}
               </h3>
-              <h5 className="text-center text-md">{blog.date}</h5>
-              <p className="text-pretty mt-4">
-                {isSmallScreen
-                  ? `${blog.excerpt.substring(0, 60)}...`
-                  : `${blog.excerpt.substring(0, 360)}...`}
-              </p>
+              <div>
+                <h5 className="text-center text-md">{blog.date}</h5>
+                <p className="text-pretty mt-4">
+                  {isSmallScreen
+                    ? `${blog.excerpt.substring(0, 60)}...`
+                    : `${blog.excerpt.substring(0, 360)}...`}
+                </p>
+              </div>
             </div>
             <Button
               variant={"accent"}
               onClick={() => {
                 router.push(setSlug(blog.title));
               }}
-              className="mt-7"
+              className="mt-7 w-full"
             >
               Read More
             </Button>

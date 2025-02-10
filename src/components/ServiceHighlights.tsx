@@ -18,7 +18,7 @@ const IconDisplay: FC<{
   return (
     <div>
       {/* Render the icon */}
-      <Icon className="text-4xl text-accent-5 mx-auto" />
+      <Icon className="text-4xl text-accent-5 mx-auto my-5" />
     </div>
   );
 };
@@ -32,16 +32,20 @@ const ServiceHighlights = () => {
     ...contentCreationServices,
   ];
 
+  const sortedServices = allServices.sort((a, b) => {
+    return a.name.localeCompare(b.name);
+  });
+
   const [currentPage, setCurrentPage] = useState(1);
   const [servicesPerPage, setServicesPerPage] = useState(6);
 
-  const featuredServices = allServices.filter(
+  const featuredServices = sortedServices.filter(
     (service) => service.featured === true
   );
 
   const indexOfLastService = currentPage * servicesPerPage;
   const indexOfFirstService = indexOfLastService - servicesPerPage;
-  const currentServices = featuredServices.slice(
+  const currentServices = sortedServices.slice(
     indexOfFirstService,
     indexOfLastService
   );
@@ -50,7 +54,7 @@ const ServiceHighlights = () => {
     setCurrentPage(pageNumber);
   };
 
-  const totalPages = Math.ceil(featuredServices.length / servicesPerPage);
+  const totalPages = Math.ceil(sortedServices.length / servicesPerPage);
 
   const navigateToServices = () => {
     router.push("/info/blogs");
@@ -107,7 +111,7 @@ const ServiceHighlights = () => {
             {/* Pass the correct Icon component */}
             <IconDisplay Icon={service.Icon} />
 
-            <h3 className="font-semibold text-center text-secondary mt-4">
+            <h3 className="font-semibold text-center text-secondary h-32 px-5 flex justify-center items-center">
               {service.name}
             </h3>
 

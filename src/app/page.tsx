@@ -43,25 +43,27 @@ const WelcomePage: FC = () => {
       <section className="my-16 mx-auto w-11/12 text-center">
         <h1>Welcome to Phoenix Code Studio</h1>
         <h2 className="inline-flex items-center gap-3">
-          This Is Where Ideas Take Flight!
+          Turn Your Vision into Digital Excellence
         </h2>
         <p>
-          Your vision is more than just an idea—it’s a future waiting to be
-          built. At Phoenix Code Studio, we merge strategic creativity,
-          innovative technology, and bold design to craft transformative digital
-          experiences that don’t just exist but thrive. Whether you're launching
-          a brand, redefining your online presence, or building something
-          entirely groundbreaking, we’re here to turn your aspirations into
-          reality.
+          Your vision is more than just an idea—it’s the foundation of something
+          extraordinary. At Phoenix Code Studio, we merge strategic creativity,
+          innovative technology, and cutting-edge design to craft transformative
+          digital experiences that don’t just exist—they thrive. Whether you’re
+          launching a brand, redefining your online presence, or creating a
+          revolutionary digital platform, we bring your aspirations to life with
+          custom, results-driven solutions.
         </p>
         <p>
-          We create high-performance, visually stunning websites, engaging
-          content, and tailored digital solutions designed to enhance user
-          experience, drive engagement, and accelerate business growth. Our
-          expertise in SEO optimization, responsive design, and cutting-edge
-          development ensures that your brand doesn’t just compete—it leads. At
-          Phoenix Code Studio, we don’t just build—we ignite possibilities,
-          empower brands, and shape the future of digital success.
+          Our expertise spans high-performance web development, visually
+          compelling UX/UI design, SEO optimization, and digital branding—all
+          tailored to elevate user engagement, enhance online visibility, and
+          accelerate business growth. With a focus on responsive design,
+          seamless functionality, and data-driven strategies, we ensure that
+          your brand doesn’t just compete—it leads. At Phoenix Code Studio, we
+          don’t just build websites—we ignite possibilities, empower brands, and
+          shape the future of digital success. Ready to make an impact? Let’s
+          build something extraordinary together.
         </p>
         <Button
           className="w-2/3 md:w-1/2 my-2 py-3 text-lg font-semibold"
