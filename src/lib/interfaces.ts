@@ -15,14 +15,20 @@ export interface PricingTier {
   info: string;
 }
 
+export interface ServiceCategory {
+  name: string;
+  info: ServiceInfo;
+}
+
 export interface ServiceInfo {
   description: string;
   subServices: string[];
 }
 
-export interface ServiceItem {
+export interface SubServiceItem {
+  category: string;
   name: string;
-  info: ServiceInfo;
+  info: SubServiceInfo;
 }
 
 export interface SubServiceInfo {
@@ -37,10 +43,14 @@ export interface SubServiceInfo {
   pricingTiers: PricingTier[];
 }
 
-export interface SubServiceItem {
-  category: string;
-  name: string;
-  info: SubServiceInfo;
+export interface SubServiceDetail {
+  intro: string[];
+  lists: {
+    title: string;
+    description?: string;
+    info: string[];
+  }[];
+  cta: string;
 }
 
 export interface PaymentPlan {
