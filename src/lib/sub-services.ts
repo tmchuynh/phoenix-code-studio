@@ -4,7 +4,7 @@ import { SubServiceItem } from "./interfaces";
 export const subServiceDetails: SubServiceItem[] = [
   {
     category: "scalable-corporate-digital-solutions",
-    name: "branding-storytelling",
+    name: "authentic-brand-storytelling-that-captivates-connects",
     info: {
       name: "Authentic Brand Storytelling That Captivates & Connects",
       description: "Brand Awareness",
@@ -30,7 +30,7 @@ export const subServiceDetails: SubServiceItem[] = [
   },
   {
     category: "scalable-corporate-digital-solutions",
-    name: "company-rebranding-and-design-services",
+    name: "transform-your-brand-with-our-rebranding-services",
     info: {
       name: "Transform Your Brand with Our Rebranding Services",
       description: "Marketing Strategy",
@@ -67,7 +67,7 @@ export const subServiceDetails: SubServiceItem[] = [
   },
   {
     category: "comprehensive-website-solutions",
-    name: "e-commerce-site-development",
+    name: "e-commerce-solutions-built-for-growth-and-success",
     info: {
       name: "E-Commerce Solutions Built for Growth and Success",
       description: "Selling Online",
@@ -104,7 +104,7 @@ export const subServiceDetails: SubServiceItem[] = [
   },
   {
     category: "comprehensive-website-solutions",
-    name: "single-page-application-development",
+    name: "high-performance-single-page-applications-spas-for-a-seamless-user-experience",
     info: {
       name: "High-Performance Single-Page Applications (SPAs) for a Seamless User Experience",
       description: "Enhanced UX",
@@ -141,7 +141,7 @@ export const subServiceDetails: SubServiceItem[] = [
   },
   {
     category: "comprehensive-website-solutions",
-    name: "custom-website-development",
+    name: "custom-websites-designed-for-impact-and-performance",
     info: {
       name: "Custom Websites Designed for Impact and Performance",
       description: "Brand Differentiation",
@@ -178,7 +178,7 @@ export const subServiceDetails: SubServiceItem[] = [
   },
   {
     category: "comprehensive-website-solutions",
-    name: "user-experience-and-user-interface-design-services",
+    name: "user-centered-interface-design-for-seamless-experiences",
     info: {
       name: "User-Centered Interface Design for Seamless Experiences",
       description: "Tailored UX",
@@ -205,7 +205,7 @@ export const subServiceDetails: SubServiceItem[] = [
   },
   {
     category: "scalable-corporate-digital-solutions",
-    name: "blog-writing-and-management",
+    name: "seo-optimized-engaging-blog-content",
     info: {
       name: "SEO-Optimized, Engaging Blog Content",
       description: "Web Traffic",
@@ -236,7 +236,7 @@ export const subServiceDetails: SubServiceItem[] = [
   },
   {
     category: "scalable-corporate-digital-solutions",
-    name: "technical-writing-services",
+    name: "expert-technical-writing-clarity-precision",
     info: {
       name: "Expert Technical Writing for Clarity & Precision",
       description: "Documentation",
@@ -267,7 +267,7 @@ export const subServiceDetails: SubServiceItem[] = [
   },
   {
     category: "seo-optimized-content-creation",
-    name: "online-courses-creation",
+    name: "engaging-interactive-online-course-development",
     info: {
       name: "Engaging & Interactive Online Course Development",
       description: "Diverse Learning Styles",
@@ -298,7 +298,7 @@ export const subServiceDetails: SubServiceItem[] = [
   },
   {
     category: "scalable-corporate-digital-solutions",
-    name: "newsletter-creation-services",
+    name: "engaging-impactful-newsletters",
     info: {
       name: "Engaging & Impactful Newsletters",
       description: "Measurable Results",
@@ -329,7 +329,7 @@ export const subServiceDetails: SubServiceItem[] = [
   },
   {
     category: "scalable-corporate-digital-solutions",
-    name: "database-creation-and-management",
+    name: "optimized-secure-database-management-solutions",
     info: {
       name: "Optimized & Secure Database Management Solutions",
       description: "Data Security",
@@ -366,7 +366,7 @@ export const subServiceDetails: SubServiceItem[] = [
   },
   {
     category: "seo-optimized-content-creation",
-    name: "product-guide-manual-creation",
+    name: "comprehensive-user-friendly-product-guides-manuals",
     info: {
       name: "Comprehensive, User-Friendly Product Guides & Manuals",
       description: "User Education",
@@ -397,7 +397,7 @@ export const subServiceDetails: SubServiceItem[] = [
   },
   {
     category: "comprehensive-website-solutions",
-    name: "seo-optimization",
+    name: "maximize-your-online-reach-with-expert-seo-optimization",
     info: {
       name: "Maximize Your Online Reach with Expert SEO Optimization",
       description: "Organic Traffic",
@@ -429,7 +429,7 @@ export const subServiceDetails: SubServiceItem[] = [
   },
   {
     category: "comprehensive-website-solutions",
-    name: "wireframing-and-prototyping-services",
+    name: "from-concept-to-clickable-wireframing-prototyping-services",
     info: {
       name: "From Concept to Clickable: Wireframing & Prototyping Services",
       description: "User-Centric Designs",
@@ -461,7 +461,7 @@ export const subServiceDetails: SubServiceItem[] = [
   },
   {
     category: "comprehensive-website-solutions",
-    name: "website-copywriting",
+    name: "engaging-seo-optimized-website-content-that-converts",
     info: {
       name: "Engaging, SEO-Optimized Website Content That Converts",
       description: "Engaging Readers",
@@ -492,7 +492,7 @@ export const subServiceDetails: SubServiceItem[] = [
   },
   {
     category: "scalable-corporate-digital-solutions",
-    name: "technical-tutorial-creation-services",
+    name: "step-by-step-tutorials-for-seamless-learning",
     info: {
       name: "Step-by-Step Tutorials for Seamless Learning",
       description: "Knowledge Sharing",
@@ -518,7 +518,7 @@ export const subServiceDetails: SubServiceItem[] = [
   },
   {
     category: "seo-optimized-content-creation",
-    name: "brochures-and-or-flyers-creation-services",
+    name: "eye-catching-brochures-and-flyers-that-make-an-impact",
     info: {
       name: "Eye-Catching Brochures and Flyers That Make an Impact",
       description: "Promoting Services",
@@ -554,7 +554,7 @@ export const subServiceDetails: SubServiceItem[] = [
   },
   {
     category: "scalable-corporate-digital-solutions",
-    name: "training-manual-and-onboarding-paperwork-creation-and-design-services",
+    name: "seamless-onboarding-with-clear-and-engaging-training-materials",
     info: {
       name: "Seamless Onboarding with Clear and Engaging Training Materials",
       description: "Reducing Training Time",
@@ -590,7 +590,7 @@ export const subServiceDetails: SubServiceItem[] = [
   },
   {
     category: "seo-optimized-content-creation",
-    name: "study-guide-creation",
+    name: "master-any-subject-with-comprehensive-study-guides",
     info: {
       name: "Master Any Subject with Comprehensive Study Guides",
       description: "Focused Learning",
@@ -626,7 +626,7 @@ export const subServiceDetails: SubServiceItem[] = [
   },
   {
     category: "seo-optimized-content-creation",
-    name: "ebook-creation-and-publication-services",
+    name: "engaging-professional-ebook-creation",
     info: {
       name: "Engaging & Professional eBook Creation",
       description: "Lead Generation",
