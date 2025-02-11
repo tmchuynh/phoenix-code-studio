@@ -20,7 +20,7 @@ export default function CategoryPage() {
         if (!response.ok) {
           throw new Error("Services post not found");
         }
-        const data = (await response.json()) as ServiceCategory;
+        const data = await response.json();
         setService(data);
       } catch (err) {
         setError(err instanceof Error ? err.message : String(err));
@@ -44,15 +44,21 @@ export default function CategoryPage() {
     <main className="p-6">
       <h1 className="text-2xl font-bold mb-4">
         {/* Convert hyphens in the category name to spaces for display */}
-        {service?.name.replace(/-/g, " ")}
+        {service?.name}
       </h1>
-      <p className="mb-4">{service?.info.description}</p>
+      <p className="mb-4">{service?.info?.description}</p>
 
       <h2 className="text-xl font-semibold">Sub-Services:</h2>
       <ul className="list-disc list-inside">
-        {service?.info.subServices?.length ? (
-          service.info.subServices.map((sub: string) => (
-            <li key={sub}>{sub.replace(/-/g, " ")}</li>
+        {service?.info?.subServices?.length ? (
+          service.info?.subServices.map((sub: string) => (
+            <li key={sub}>
+              {" "}
+              {sub
+                .split("-")
+                .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(" ")}{" "}
+            </li>
           ))
         ) : (
           <li>No sub-services found.</li>

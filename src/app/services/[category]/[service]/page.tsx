@@ -29,7 +29,8 @@ export default function ServicePage() {
           throw new Error("Services post not found");
         }
 
-        const data = (await response.json()) as SubServiceItem;
+        const data = await response.json();
+        console.log(data);
         setServiceData(data);
       } catch (err) {
         // If the error is an Error object, use err.message

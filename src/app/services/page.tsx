@@ -22,7 +22,7 @@ const ServicesPage: FC = () => {
 
   const navigateToCompanyService = (serviceName: string) => {
     router.push(
-      `/services/comapny-specific-services/${serviceName
+      `/services/scalable-corporate-digital-solutions/${serviceName
         .toLowerCase()
         .replace(/ /g, "-")}`
     );
@@ -30,7 +30,7 @@ const ServicesPage: FC = () => {
 
   const navigateToWebService = (serviceName: string) => {
     router.push(
-      `/services/website-services/${serviceName
+      `/services/comprehensive-website-solutions/${serviceName
         .toLowerCase()
         .replace(/ /g, "-")}`
     );
@@ -39,7 +39,9 @@ const ServicesPage: FC = () => {
   const navigateToContentService = (serviceName: string) => {
     const formattedServiceName = setSlug(serviceName);
 
-    router.push(`/services/content-creation-services/${formattedServiceName}`);
+    router.push(
+      `/services/seo-optimized-content-creation/${formattedServiceName}`
+    );
   };
 
   return (
