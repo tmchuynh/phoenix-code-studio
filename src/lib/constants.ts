@@ -106,7 +106,7 @@ export const websites: Menu[] = [
   },
   {
     title: "SEO Optimization",
-    href: "/services/website-services/seo-optimization",
+    href: "/services/website-services/maximize-your-online-reach-with-expert-seo-optimization",
     description:
       "Boost your website's visibility with strategies to improve search engine rankings.",
   },
@@ -122,7 +122,7 @@ export const websites: Menu[] = [
 export const content: Menu[] = [
   {
     title: "Website Copywriting",
-    href: "/services/content-creation-services/website-copywriting",
+    href: "/services/content-creation-services/engaging-seo-optimized-website-content-that-converts",
     description:
       "Create compelling and optimized website content that drives engagement and conversions.",
   },
@@ -146,7 +146,7 @@ export const content: Menu[] = [
   },
   {
     title: "Study Guides",
-    href: "/services/content-creation-services/study-guide-creation",
+    href: "/services/content-creation-services/master-any-subject-with-comprehensive-study-guides",
     description:
       "Design and develop comprehensive online courses to educate and inspire learners.",
   },
@@ -198,7 +198,7 @@ export const companies: Menu[] = [
   },
   {
     title: "E-Commerce Site Development",
-    href: "/services/comapny-specific-services/e-commerce-site-development",
+    href: "/services/comapny-specific-services/e-commerce-solutions-built-for-growth-and-success",
     description:
       "Develop seamless online shopping experiences to boost sales and customer engagement.",
   },

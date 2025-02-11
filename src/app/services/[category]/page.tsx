@@ -1,6 +1,6 @@
 "use client";
 
-import { ServiceItem } from "@/lib/interfaces";
+import { ServiceCategory } from "@/lib/interfaces";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -9,7 +9,7 @@ export default function CategoryPage() {
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [service, setService] = useState<ServiceItem | null>(null);
+  const [service, setService] = useState<ServiceCategory | null>(null);
 
   useEffect(() => {
     if (!category) return;
@@ -20,7 +20,7 @@ export default function CategoryPage() {
         if (!response.ok) {
           throw new Error("Services post not found");
         }
-        const data = (await response.json()) as ServiceItem;
+        const data = (await response.json()) as ServiceCategory;
         setService(data);
       } catch (err) {
         setError(err instanceof Error ? err.message : String(err));
