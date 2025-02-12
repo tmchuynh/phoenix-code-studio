@@ -27,6 +27,199 @@ export const subServiceDetails: SubServiceItem[] = [
         }
       ]
     },
+    details: [
+      {
+        title: "Why Brand Storytelling is the Key to Your Success",
+        intro: ["Brand storytelling is more than just a marketing tool—it’s the emotional foundation that differentiates your business from the competition. A well-crafted story helps you:"],
+        lists: [
+          {
+            title: "Build brand trust & authenticity",
+            description:
+              "Customers are drawn to brands with relatable and meaningful stories. By crafting authentic brand narratives, you create a strong, memorable presence in a competitive marketplace."
+          },
+          {
+            title: "Drive customer loyalty",
+            description:
+              "Authentic brand storytelling helps you build trust and loyalty by connecting with your target audience on an emotional level. By engaging with your audience through compelling narratives, you help them understand your brand and why they should choose you."
+          },
+          {
+            title: "Create a lasting impact",
+            description:
+              "Authentic brand storytelling helps you create a lasting impact by building trust and loyalty. By crafting compelling narratives that resonate with your audience, you help them remember your brand and make a positive impact on their lives."
+          }
+        ]
+      },
+      {
+        title: "How to Build a Compelling Authentic Brand Story",
+        intro: ["To build a compelling authentic brand story, follow these steps:"],
+        lists: [
+          {
+            title: "Identify your brand's core values",
+            description:
+              "Understand your brand's core values, mission, and vision. This will help you craft a compelling authentic brand story that resonates with your audience."
+          },
+          {
+            title: "Develop a compelling story framework",
+            description:
+              "Create a story framework that outlines your brand's core values, mission, and vision. This will help you craft a compelling authentic brand story that resonates with your audience."
+          },
+          {
+            title: "Create a compelling narrative",
+            description:
+              "Craft a compelling narrative that showcases your brand's core values, mission, and vision. This will help you craft a compelling authentic brand story that resonates with your audience."
+          },
+        ]
+      },
+      {
+        title: "How to Engage Your Audience through Authentic Brand Storytelling",
+        intro: ["To engage your audience through authentic brand storytelling, follow these steps:"],
+        lists: [
+          {
+            title: "Create compelling content",
+            description:
+              "Create engaging and informative content that showcases your brand's core values, mission, and vision. This will help you engage your audience through authentic brand storytelling."
+          },
+          {
+            title: "Offer actionable insights",
+            description:
+              "Offer actionable insights and content that resonates with your target audience, creating a loyal readership and encouraging ongoing engagement."
+          },
+          {
+            title: "Drive conversions",
+            description:
+              "Use blogs strategically as part of your content marketing funnel to educate your audience and convert them into paying customers."
+          }
+        ]
+      },
+      {
+        title: "Examples of Authentic Brand Storytelling",
+        intro: ["Here are some examples of authentic brand storytelling:"],
+        lists: [
+          {
+            title: "Apple",
+            description:
+              "Apple has been a pioneer in innovation and technology, and their authentic brand story is a testament to their commitment to innovation and the power of technology. They have created a revolutionary, sustainable, and inclusive brand that is both a symbol of innovation and a powerful tool for businesses and consumers."
+          },
+          {
+            title: "Google",
+            description:
+              "Google has been a pioneer in technology and innovation, and their authentic brand story is a testament to their commitment to innovation and the power of technology. They have created a revolutionary, sustainable, and inclusive brand that is both a symbol of innovation and a powerful tool for businesses and consumers."
+          },
+        ]
+      },
+      {
+        title: "Our Approach to Brand Storytelling",
+        lists: [
+          {
+            title: "1. Discover & Define Your Unique Brand Story",
+            description: "We begin by understanding your business, mission, and target audience . Through research and brand discovery sessions, we identify the key elements of your story that align with your brand’s voice and customer expectations."
+          },
+          {
+            title: "2. Craft Emotionally Engaging Narratives",
+            description: "Using powerful storytelling techniques, we develop compelling content that connects with your audience on ahuman level. Whether it’s your brand’s origin story, customer success stories, or value-driven messaging , we ensure every piece is engaging and impactful."
+          },
+          {
+            title: "3. Integrate Your Story Across Multiple Channels",
+            description: "A strong brand story should be present across all platforms, from your website and social media to marketing campaigns and product descriptions. We optimize your messaging for maximum impact across all touchpoints."
+          },
+          {
+            title: "4. Drive Meaningful Engagement & Conversions",
+            description: "Our storytelling strategies are designed to increase audience engagement, build brand credibility, and drive conversions . By creating relatable, authentic, and inspiring content, we help turn visitors into loyal customers. We use blogs, social media, and other engaging channels to drive meaningful engagement and conversions. By creating a strong, engaging brand presence, we help you build loyalty and drive sales."
+          }
+        ]
+      },
+      {
+        title: "Benefits of Brand Storytelling",
+        lists: [
+          {
+            title: "Emotional Connection",
+            description:
+              "Stories are powerful tools for creating emotional connections with your audience. By crafting narratives that resonate with people's values, struggles, and aspirations, your brand builds trust and loyalty, making it more memorable and relatable."
+          },
+          {
+            title: "Clarity and Purpose",
+            description:
+              "A strong brand story clearly communicates your brand’s mission, vision, and values. It provides direction and purpose, helping your audience understand what your brand stands for and why it exists, which makes it easier for them to connect on a deeper level."
+          },
+          {
+            title: "Differentiation",
+            description:
+              "In today’s crowded market, brand storytelling helps you stand out by telling a unique and authentic story. It differentiates your brand from competitors by showing your values, history, and personality, making your brand more distinctive and appealing."
+          },
+          {
+            title: "Memorability",
+            description:
+              "A well-crafted brand story has the power to leave a lasting impression. Memorable stories not only stick in the minds of your audience but also encourage them to share your brand with others, amplifying your message organically."
+          },
+        ]
+      },
+      {
+        title: "Our Brand Storytelling Services",
+        lists: [
+          {
+            title: "Core Narrative Development",
+            description:
+              "We help define and develop your brand’s core narrative, focusing on your purpose, vision, and mission. This narrative is the backbone of your brand's storytelling and ensures consistency across all touchpoints, from marketing to customer interactions."
+          },
+          {
+            title: "Customer-Centric Storytelling",
+            description:
+              "Our customer-centric approach places your audience at the heart of your brand story. We highlight how your brand solves real problems and creates value, allowing customers to see themselves in the narrative and fostering a stronger connection."
+          },
+          {
+            title: "Origin Stories",
+            description:
+              "We craft compelling origin stories that share the history, inspiration, and journey behind your brand. Whether you're a startup or an established company, a well-told origin story can create a sense of authenticity and purpose that resonates with your audience."
+          },
+          {
+            title: "Value Proposition Stories",
+            description:
+              "We help articulate the unique benefits of your products or services through storytelling. By weaving your value proposition into an engaging narrative, we make it more impactful and relatable, helping potential customers understand why they should choose your brand."
+          },
+          {
+            title: "Social Media Narratives",
+            description:
+              "We adapt your brand story for social media platforms like Instagram, Twitter, and LinkedIn, ensuring it aligns with the platform's tone and audience while maintaining consistency with your overall brand narrative. These short-form stories can drive engagement and build community."
+          },
+        ],
+      },
+      {
+        title: "Our Process",
+        lists: [
+          {
+            title: "Discovery",
+            description:
+              "We begin with a discovery phase to deeply understand your brand’s core values, mission, and vision. We also gain insights into your target audience, their needs, and pain points, ensuring that your brand story aligns with both your business goals and your audience's expectations."
+          },
+          {
+            title: "Story Development",
+            description:
+              "We work closely with you to develop a compelling narrative that aligns with your brand’s mission and resonates with your audience. This involves identifying key moments, emotions, and messages that will shape your story and make it impactful."
+          },
+          {
+            title: "Content Creation",
+            description:
+              "We translate your brand story into various content formats, including blog posts, videos, social media updates, and case studies. Our goal is to create engaging and shareable content that communicates your story across multiple channels and touchpoints."
+          },
+          {
+            title: "Delivery",
+            description:
+              "We ensure your brand story reaches your audience effectively through the right channels, whether it’s your website, email campaigns, social media, or advertising. We ensure that the story is communicated consistently and authentically at every touchpoint."
+          },
+          {
+            title: "Refinement",
+            description:
+              "Brand storytelling is an ongoing process. After launching your brand story, we gather feedback, analyze performance, and make adjustments to keep your narrative fresh, relevant, and aligned with evolving audience needs and market trends."
+          },
+        ],
+      },
+    ],
+    cta: {
+      title: "Let’s Bring Your Brand Story to Life",
+      intro: "Your brand’s story is its most powerful asset. It’s what makes your business unique, memorable, and emotionally impactful. Let us help you craft a brand story that captivates, inspires, and converts . Whether you’re launching a startup or revitalizing an established brand, our storytelling expertise ensures your message leaves a lasting impact.",
+      text: "Your story is your competitive edge. Make it unforgettable. Ready to craft a powerful brand story?",
+      button: "Contact us for a free consultation and customized quote."
+    }
   },
   {
     category: "scalable-corporate-digital-solutions",
@@ -64,6 +257,165 @@ export const subServiceDetails: SubServiceItem[] = [
         }
       ]
     },
+    details: [
+      {
+        title: "What is Company Rebranding?",
+        description: "Company rebranding is more than just a visual makeover—it’s a strategic reinvention that ensures your business stays relevant, competitive, and aligned with your evolving vision. A successful rebrand helps you strengthen brand identity, clarify messaging, and engage with new and existing audiences . Whether your goal is to modernize your look, enhance your reputation, or reposition yourself in the market, we help you create a powerful, future-proof brand that resonates, inspires trust, and drives long-term growth."
+      },
+      {
+        title: "How to Begin a Company Rebranding",
+        description:
+          "To begin a company rebranding, we recommend a comprehensive strategy that includes market research, target audience analysis, competitor benchmarking, and a brand messaging strategy. This process ensures consistency and effective communication, ultimately leading to a more cohesive and authentic brand identity."
+      },
+      {
+        title: "Brand Identity Overhaul",
+        description:
+          "Our comprehensive rebranding services include a full strategy to redefine your brand image. From logo redesign to complete brand strategies, we ensure your company stands out and connects with your audience."
+      },
+      {
+        title: "Why Rebranding Matters",
+        description: "Rebranding is essential for businesses looking to stay ahead in a fast-evolving marketplace. If your brand no longer reflects your business goals, struggles to attract the right audience, or lacks a cohesive identity, it may be time for a transformation. Our expert-led rebranding services help you:",
+        lists: [
+          {
+            description: "Stand out from competitors with a distinctive and memorable brand identity."
+          },
+          {
+            description: "Strengthen brand loyalty by creating a deeper emotional connection with your audience."
+          },
+          {
+            description: "Align with market trends to stay relevant and ahead of industry shifts."
+          },
+          {
+            description: "Enhance brand consistency across all digital and physical touchpoints."
+          },
+          {
+            description: "Increase customer engagement with compelling storytelling and a refined brand message."
+          }
+        ]
+      },
+      {
+        title: "Why Choose Us?",
+        description: "Our expertise in branding, design, and digital strategy allows us to deliver comprehensive rebranding solutions tailored to your unique needs. Here’s why businesses trust us:",
+        lists: [
+          {
+            title: "Strategic Branding Alignment",
+            description: "We ensure your new brand reflects your vision, values, and market position."
+          },
+          {
+            title: "Comprehensive Visual Overhaul",
+            description: "From logo design and typography to website revamps, we create a polished, professional brand identity."
+          },
+          {
+            title: "Authentic Messaging & Storytelling",
+            description: "We create a cohesive brand messaging that resonates with your audience and helps them feel heard, valued, and loved. We refine your brand voice, tone, and messaging to craft a compelling narrative."
+          },
+          {
+            title: "Seamless Transition & Implementation",
+            description: "We help you transition your website from a legacy platform to a modern, seamless, and user-friendly e-commerce platform. Our process ensures a smooth transition without losing audience trust."
+          }
+        ]
+      },
+      {
+        title: "Our Rebranding Process",
+        lists: [
+          {
+            title: "1. Brand Discovery & Market Research",
+            description: "We begin with an in-depth brand analysis, competitor research, and audience insights to define your brand’s positioning, values, and unique selling points."
+          },
+          {
+            title: "2. Visual Identity & Logo Design",
+            description: "A compelling visual identity is key to rebranding success. We craft a polished, professional brand identity, including logo design, typography, color palettes, and graphic elements , ensuring a cohesive look that resonates with your audience. We create a cohesive visual identity for your brand, including a unique logo, color scheme, and visual style guide. Our designers ensure your brand is visually appealing, user-friendly, and consistent across all platforms."
+          },
+          {
+            title: "3. Brand Messaging & Storytelling",
+            description: "Your brand voice matters. We refine your messaging, tone, and positioning to craft an authentic and impactful brand story that builds trust and emotional connections with customers. We create a cohesive brand messaging that resonates with your audience and helps them feel heard, valued, and loved. We refine your brand voice, tone, and messaging to craft a compelling narrative that drives sales and customer loyalty."
+          },
+          {
+            title: "4. Website Revamp & Digital Presence",
+            description: "A rebrand is incomplete without a modernized website and digital experience. We redesign your website, optimize for SEO, and ensure seamless user experiences across all platforms. Our digital presence is crucial to rebranding success. We help you transition your website from a legacy platform to a modern, seamless, and user-friendly e-commerce platform. Our process ensures a smooth transition without losing audience trust, and we create a polished, professional, and user-friendly e-commerce platform that showcases your brand, offers personalized recommendations, and provides a seamless shopping experience for your customers."
+          },
+          {
+            title: "5. Seamless Implementation & Rollout",
+            description: "Once your website and digital presence are in place, we help you launch your e-commerce platform and roll out the changes to your customers. We ensure a smooth and secure shopping experience for your customers, and we create a polished, professional, and user-friendly e-commerce platform that showcases your brand, offers personalized recommendations, and provides a seamless shopping experience for your customers. We provide a strategic rollout plan, ensuring a smooth transition without losing existing brand recognition or audience trust. Our process includes internal branding guidelines, marketing collateral updates, and a digital launch strategy."
+          }
+        ]
+      },
+      {
+        title: "Key Features of Our Rebranding Services",
+        lists: [
+          {
+            title: "Brand Identity Overhaul",
+            description:
+              "We offer a comprehensive overhaul of your brand's visual elements, including logo redesign, color scheme adjustment, and typography updates. This ensures that your brand's visual presence is modern, memorable, and aligned with your company values and goals."
+          },
+          {
+            title: "Messaging Strategy",
+            description:
+              "Refining or completely redefining your brand voice to resonate with your target audience. This involves understanding their pain points, desires, and needs, and creating a messaging strategy that emotionally connects with them."
+          },
+          {
+            title: "Website Rebranding",
+            description:
+              "We update or redesign your website to reflect the new brand identity, ensuring that your online presence is aligned with your brand’s new vision. This includes UI/UX design improvements, enhanced user journeys, and mobile optimization."
+          },
+          {
+            title: "Marketing Collateral",
+            description:
+              "We refresh all of your marketing materials, from brochures and flyers to social media templates, to reflect your updated brand identity. Our designs are crafted to ensure consistency and convey your message effectively across all touchpoints."
+          },
+          {
+            title: "Internal Culture Alignment",
+            description:
+              "Rebranding goes beyond external appearance. We help align your internal culture with the new brand identity, ensuring that your team is motivated and unified behind the new vision. This includes internal communication tools, presentations, and team-building exercises."
+          },
+        ],
+      },
+      {
+        title: "Our Company Rebranding Process",
+        lists: [
+          {
+            title: "Discovery",
+            description:
+              "The first step of the process is a deep dive into understanding your current brand identity and assessing how it aligns with your business goals. We collaborate with you to understand your vision, values, and the reason behind your desire to rebrand."
+          },
+          {
+            title: "Research",
+            description:
+              "Thorough market research is key to a successful rebrand. We conduct competitor analysis, review industry trends, and gather audience insights to ensure that the new brand identity resonates with your target market and stands out from the competition."
+          },
+          {
+            title: "Concept Development",
+            description:
+              "Based on the insights gathered during the discovery and research phases, we develop design concepts, visual identity, and messaging frameworks. This is a collaborative phase where we present ideas and refine them based on your feedback to ensure they reflect the desired brand direction."
+          },
+          {
+            title: "Implementation",
+            description:
+              "Once the concepts are finalized, we begin refining the design and creating new assets. We implement the changes across your website, marketing materials, and internal communications. Our goal is to seamlessly integrate the new brand identity into every facet of your business."
+          },
+          {
+            title: "Feedback & Refinement",
+            description:
+              "After the initial implementation, we gather feedback from key stakeholders within your company. Based on their input, we make any necessary refinements to ensure that the new brand identity is consistent, impactful, and fully representative of your company’s values."
+          },
+          {
+            title: "Launch",
+            description:
+              "With all refinements in place, we roll out the new brand identity across all channels. This includes updating your online presence, releasing marketing campaigns, and distributing new brand guidelines to ensure consistency across all future materials."
+          },
+          {
+            title: "Ongoing Support",
+            description:
+              "Rebranding is an ongoing process. We provide continuous updates and refinements to your brand as your company grows. This could include adjustments to messaging, marketing materials, and the integration of new technologies or channels."
+          },
+        ],
+      },
+    ],
+    cta: {
+      title: "Ready to Reimagine Your Brand?",
+      intro: "Whether you're launching a new vision or modernizing your existing identity, our expert team is here to help. Let’s create a brand that reflects your values, inspires loyalty, and drives success.",
+      button: "Contact us today to start your rebranding journey!"
+    }
   },
   {
     category: "comprehensive-website-solutions",

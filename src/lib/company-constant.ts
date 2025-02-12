@@ -281,8 +281,8 @@ export const databaseServicesData = [
 
 export const companyRebrandingData = [
   {
-    category: "Key Features of Our Rebranding Services",
-    items: [
+    title: "Key Features of Our Rebranding Services",
+    lists: [
       {
         title: "Brand Identity Overhaul",
         description:
@@ -311,8 +311,8 @@ export const companyRebrandingData = [
     ],
   },
   {
-    category: "Our Company Rebranding Process",
-    items: [
+    title: "Our Company Rebranding Process",
+    lists: [
       {
         title: "Discovery",
         description:
@@ -354,7 +354,7 @@ export const companyRebrandingData = [
 
 export const brandStorytellingData = [
   {
-    category: "Benefits of Brand Storytelling",
+    title: "Benefits of Brand Storytelling",
     items: [
       {
         title: "Emotional Connection",
@@ -379,7 +379,7 @@ export const brandStorytellingData = [
     ],
   },
   {
-    category: "Our Brand Storytelling Services",
+    title: "Our Brand Storytelling Services",
     items: [
       {
         title: "Core Narrative Development",
@@ -409,7 +409,7 @@ export const brandStorytellingData = [
     ],
   },
   {
-    category: "Our Process",
+    title: "Our Process",
     items: [
       {
         title: "Discovery",

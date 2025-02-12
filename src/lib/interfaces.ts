@@ -44,13 +44,20 @@ export interface SubServiceInfo {
 }
 
 export interface SubServiceDetail {
-  intro: string[];
+  title: string;
+  intro?: string[];
   lists: {
-    title: string;
-    description?: string;
-    info: string[];
+    title?: string;
+    description: string;
+    info?: string[];
   }[];
-  cta: string;
+}
+
+export interface CTA {
+  title: string;
+  intro: string;
+  text: string;
+  button: string;
 }
 
 export interface PaymentPlan {
