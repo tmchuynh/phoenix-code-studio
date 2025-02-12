@@ -4,10 +4,6 @@ import { SubServiceItem } from "@/lib/interfaces";
 import { useParams } from "next/navigation";
 import { FC, useEffect, useState } from "react";
 
-type ServicePageProps = {
-  params: { category: string; service: string };
-};
-
 export default function ServicePage() {
   // Retrieve dynamic route params via useParams() in a client component
   const { category, service } = useParams() as {
@@ -29,12 +25,10 @@ export default function ServicePage() {
           throw new Error("Services post not found");
         }
 
-        const data = await response.json();
-        console.log(data);
+        const data: SubServiceItem = await response.json();
+        console.log("Fetched Service Data:", data);
         setServiceData(data);
       } catch (err) {
-        // If the error is an Error object, use err.message
-        // Otherwise, cast it to a string
         setError(err instanceof Error ? err.message : String(err));
       } finally {
         setLoading(false);
@@ -54,7 +48,6 @@ export default function ServicePage() {
 
   return (
     <main className="p-6">
-      {/* Example usage: adjust this to match your actual data structure */}
       <h1 className="text-2xl font-bold mb-4">
         {serviceData?.info.name || service.replace(/-/g, " ")}
       </h1>

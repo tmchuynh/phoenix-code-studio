@@ -56,8 +56,9 @@ export interface SubServiceDetail {
 export interface CTA {
   title: string;
   intro: string;
-  text: string;
+  text?: string;
   button: string;
+  afterButtonText?: string;
 }
 
 export interface PaymentPlan {

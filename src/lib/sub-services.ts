@@ -453,6 +453,207 @@ export const subServiceDetails: SubServiceItem[] = [
         }
       ]
     },
+    details: [
+      {
+        title: "Why Invest in a Custom E-Commerce Website?",
+        intro: ["Our platforms are built for speed, SEO, and user-friendly navigation, ensuring that your customers enjoy a fast, intuitive, and memorable shopping experience.", "A custom-built e-commerce platform offers far more flexibility and brand identity than generic templates. We create tailored solutions that align with your business goals, incorporating:"],
+        lists: [
+          {
+            title: "Optimized Checkout Flows",
+            description: "Reduce cart abandonment and enhance user convenience. A seamless checkout process that ensures that customers have a smooth and efficient experience when making purchases."
+          },
+          {
+            title: "Advanced Product Filtering",
+            description: "Make it easier for customers to find exactly what they need."
+          },
+          {
+            title: "Personalized Recommendations",
+            description: "Enhance customer satisfaction by offering personalized product recommendations based on their browsing history, purchase history, and behavior patterns."
+          },
+          {
+            title: "Seamless Third-Party Integrations",
+            description: "Connect with third-party payment gateways, shipping services, and loyalty programs without the need for custom integration."
+          },
+          {
+            title: "Enhanced Security",
+            description: "Implement robust security measures to protect your customers' information and maintain data integrity."
+          },
+          {
+            title: "In-depth Analytics",
+            description: "Gain insights into your e-commerce platform's performance, customer behavior, and sales trends."
+          },
+          {
+            title: "Scalability & Performance Optimization",
+            description: "Optimize your e-commerce platform for performance, ensuring that it can handle a large number of concurrent users and deliver seamless shopping experiences."
+          },
+          {
+            title: "SEO-Optimized Performance",
+            description: "Optimize your e-commerce platform for search engine optimization (SEO) by ensuring that your website's content is high-quality, relevant, and easily discoverable."
+          }
+        ]
+      },
+      {
+        title: "Future-Proof Your Business with Scalable E-Commerce Solutions",
+        intro: ["Whether you’re launching a new store or expanding your existing e-commerce business, our solutions are built for growth. We incorporate AI-powered recommendations, automated inventory management, and multi-channel sales integrations , ensuring your store stays competitive in an evolving market. Our e-commerce platforms are designed to handle increasing traffic and product expansion, making them the perfect solution for businesses looking to scale."]
+      },
+      {
+        title: "How We Work Together",
+        intro: ["We work closely with our clients to develop custom e-commerce solutions that align with their business goals and requirements. Our team of experts includes experienced web developers, UI/UX designers, and backend developers, ensuring that we deliver high-quality, scalable, and user-friendly e-commerce platforms. Through regular collaboration, we create a seamless, efficient, and engaging online store experience for your customers. Our commitment to customer satisfaction and continuous improvement is what sets us apart from competitors."]
+      },
+      {
+        title: "What Sets Our E-Commerce Development Services Apart?",
+        lists: [
+          {
+            title: "Customizable & Scalable",
+            description: "Our e-commerce platforms are built using cutting-edge technologies, ensuring that you can easily integrate new features and enhancements without the need for significant development efforts."
+          },
+          {
+            title: "Fast & Secure Transactions",
+            description: "Our e-commerce platforms are designed to handle high-traffic loads and deliver fast, secure transactions to your customers."
+          },
+          {
+            title: "Conversion-Focused UX/UI",
+            description: "Our e-commerce platforms are designed with a focus on user experience and user-friendly navigation, ensuring that your customers feel like they're interacting with a familiar, intuitive interface."
+          },
+          {
+            title: "Data-Driven Insights",
+            description: "Our e-commerce platforms are designed to provide in-depth analytics and data-driven insights to help you optimize performance, identify areas for improvement, and make data-driven decisions."
+          }
+        ]
+      },
+      {
+        title: "Key Features of Custom E-Commerce Websites",
+        lists: [
+          {
+            title: "Unique Design",
+            description:
+              "A custom-designed e-commerce website allows you to create a store that reflects your brand identity, helping to differentiate your business from competitors. A unique design ensures that your website looks professional and provides a memorable experience for customers."
+          },
+          {
+            title: "Enhanced Shopping Experience",
+            description:
+              "A seamless shopping experience includes intuitive navigation, fast checkout processes, and personalized recommendations. Features such as product search, wish lists, and user reviews enhance usability and customer satisfaction, increasing conversion rates."
+          },
+          {
+            title: "Advanced Features",
+            description:
+              "Custom-built features such as custom filters, advanced inventory management, and integrated loyalty programs help streamline your operations and provide customers with an enhanced shopping experience. These features support larger inventories and create more efficient business processes."
+          },
+          {
+            title: "Mobile Optimization",
+            description:
+              "Mobile optimization is essential to provide a responsive design that adapts seamlessly across different screen sizes. With the growing trend of mobile shopping, it's critical that your e-commerce website is fully responsive, ensuring customers have a consistent experience on all devices."
+          },
+          {
+            title: "SEO-Friendly Structure",
+            description:
+              "An SEO-friendly e-commerce website structure helps to attract more traffic by ensuring search engines can easily crawl and index the website. Features like proper URL structure, metadata optimization, and page load speed are critical to improving organic search rankings."
+          },
+        ],
+      },
+      {
+        title: "Product Catalog Management",
+        lists: [
+          {
+            title: "Dynamic Categories",
+            description:
+              "A well-organized product catalog with dynamic categories allows you to group products in a way that makes sense for your customers. Easy-to-manage categories help streamline the browsing experience and make products easier to find."
+          },
+          {
+            title: "Custom Attributes",
+            description:
+              "Adding custom attributes such as size, color, material, and brand allows for better filtering and sorting options. This enhances the customer experience by enabling them to find the products they want more easily and make more informed purchasing decisions."
+          },
+          {
+            title: "Bulk Import/Export",
+            description:
+              "E-commerce platforms often involve managing large inventories. Bulk import/export features allow you to quickly and efficiently manage product data in bulk, reducing the time and effort spent on manual entry. This is especially important for businesses with thousands of products."
+          },
+        ],
+      },
+      {
+        title: "Our E-Commerce Development Process",
+        lists: [
+          {
+            title: "Consultation",
+            description:
+              "Our process begins with a detailed consultation to understand your business model, target audience, and specific goals. We collaborate with you to define the scope of the project and ensure that we align our strategy with your vision."
+          },
+          {
+            title: "Planning",
+            description:
+              "We create a detailed roadmap that outlines key milestones and deliverables. This includes wireframes and a feature list, helping you visualize the final product and ensuring that every aspect of the project is carefully planned and executed."
+          },
+          {
+            title: "Design",
+            description:
+              "Our design phase focuses on crafting an intuitive, user-friendly interface that aligns with your brand identity. We ensure that the design is both aesthetically pleasing and functional, with easy navigation and a clear call-to-action for a great user experience."
+          },
+          {
+            title: "Development",
+            description:
+              "During the development phase, we bring your e-commerce website to life using modern technologies. This includes coding the back-end infrastructure, front-end design, and all necessary integrations to ensure the website functions as intended."
+          },
+          {
+            title: "Integration",
+            description:
+              "We integrate various tools and services, including payment gateways, shipping providers, analytics, and third-party APIs, to extend the functionality of your e-commerce site and streamline your business processes."
+          },
+          {
+            title: "Testing",
+            description:
+              "Our testing phase ensures that your e-commerce website performs optimally across all devices and browsers. We rigorously test for security, performance, usability, and accessibility to ensure a flawless user experience and minimize potential issues."
+          },
+          {
+            title: "Launch & Support",
+            description:
+              "After testing and final approval, we deploy your site to the live environment. Following launch, we provide ongoing support, including updates, maintenance, and troubleshooting to ensure that your website continues to perform at its best."
+          },
+        ],
+      },
+      {
+        title: "Secure Payment Gateways",
+        intro: ["We offer seamless payment integration with secure and trusted providers:"],
+        lists: [
+          {
+            description: "Credit/Debit Cards"
+          },
+          {
+            description: "PayPal"
+          },
+          {
+            description: "Apple Pay, Google Pay, and other mobile wallets"
+          },
+          {
+            description: "Buy Now, Pay Later integrations"
+          }
+        ]
+      },
+      {
+        title: "Shipping & Fulfillment",
+        intro: ["We offer seamless shipping integration with popular shipping providers:"],
+        lists: [
+          {
+            description: "Fedex"
+          },
+          {
+            description: "UPS"
+          },
+          {
+            description: "USPS"
+          },
+          {
+            description: "DHL"
+          }
+        ]
+      }
+    ],
+    cta: {
+      title: "Take Your Online Business to the Next Level",
+      intro: "Ready to build an e-commerce website that sells, scales, and succeeds?",
+      button: "Contact us today",
+      afterButtonText: "to discuss your vision and let’s create a custom online store that boosts sales and delivers an exceptional shopping experience."
+    }
   },
   {
     category: "comprehensive-website-solutions",
@@ -490,6 +691,155 @@ export const subServiceDetails: SubServiceItem[] = [
         }
       ]
     },
+    details: [
+      {
+        title: "Why Choose Single Page Applications (SPAs)?",
+        intro: ["SPAs revolutionize user experience by eliminating unnecessary page reloads and enabling real-time content updates. This results in:"],
+        lists: [
+          {
+            title: "Blazing-Fast Load Times",
+            description: "Lower page load times, allowing users to enjoy your content more quickly and efficiently."
+          },
+          {
+            title: "Interactive and Engaging Content",
+            description: "Create engaging content, such as interactive forms, animations, and dynamic content, that keeps users informed and engaged."
+          },
+          {
+            title: "Smooth Navigation",
+            description: "Easily navigate your website, from the homepage to the most important pages, with smooth transitions and animations."
+          },
+          {
+            title: "Highly Interactive UI",
+            description: "Create visually appealing, responsive interfaces that work seamlessly across all devices and screen sizes."
+          },
+          {
+            title: "Optimized Performance",
+            description: "Achieve high-performance, responsive websites that load quickly and efficiently, ensuring a smooth user experience across all devices and screen sizes."
+          },
+          {
+            title: "Mobile-Friendly & Responsive",
+            description: "Make your website mobile-friendly and responsive, ensuring a seamless user experience on any device."
+          }
+        ]
+      },
+      {
+        title: "Key Features of Our SPA Development Services",
+        intro: ["Our Single Page Applications (SPAs) are designed to provide seamless, high-performance web experiences tailored to your business needs. By leveraging the latest technologies, we create dynamic and responsive SPAs that enhance user engagement and optimize functionality."],
+        lists: [
+          {
+            title: "Custom-Tailored Solutions",
+            description: "Every SPA is uniquely built to align with your business objectives. We develop scalable and responsive applications that adapt to evolving requirements, ensuring a future-proof digital solution. We create websites that are tailored to your specific brand identity, target audience, and business goals. Our designs are custom-designed, responsive, and optimized to deliver a seamless user experience across all devices and screen sizes."
+          },
+          {
+            title: "SEO-Optimized Architecture",
+            description: "Our SPAs are built using modern web technologies, including HTML5, CSS3, and JavaScript. We use cutting-edge frameworks like React, Angular, or Vue.js to create a seamless and efficient user interface. Our SEO-optimized architecture ensures that your website ranks high in search engine results, increasing visibility and attracting new users."
+          },
+          {
+            title: "API Integration & Data Handling",
+            description: "We integrate with popular APIs, such as Shopify, WooCommerce, or Magento, to create dynamic, engaging content and offer features like product recommendations, social media integration, and email marketing. Our API integration ensures that your website is always up-to-date with the latest products, promotions, and news."
+          },
+          {
+            title: "Faster Load Times",
+            description: "Our SPAs are built using modern web technologies, such as React, Angular, or Vue.js, which provide a high-performance user interface. We optimize the website's performance by implementing features like lazy loading, caching, and server-side rendering. Our faster load times ensure that your website is accessible and enjoyable for users, even on slower connections."
+          },
+          {
+            title: "Improved User Experience",
+            description: "Our SPAs are designed to be user-friendly, intuitive, and easy to navigate. We create a seamless user experience that allows users to easily find, access, and interact with your content. Our intuitive navigation, fast load times, and engaging visuals make your website a favorite among users, increasing conversion rates and driving business growth."
+          },
+          {
+            title: "Highly Interactive & Engaging Interfaces",
+            description: "Our SPAs support rich interactivity, including real-time updates, animations, and interactive elements. These features create a dynamic and immersive user experience, keeping users engaged with your application."
+          },
+          {
+            title: "Cross-Platform Compatibility",
+            description: "Designed for accessibility across various devices, SPAs provide a consistent experience on desktops, tablets, and mobile devices. This ensures a seamless interaction for users, regardless of the platform they are using."
+          }
+        ]
+      },
+      {
+        title: "Benefits of SPAs for Your Business",
+        intro: ["Investing in a Single Page Application delivers significant advantages:"],
+        lists: [
+          {
+            title: "Enhanced User Experience",
+            description: "Our websites are designed to be user-friendly, intuitive, and easy to navigate. We create a seamless user experience that allows users to easily find, access, and interact with your content. Our intuitive navigation, fast load times, and engaging visuals make your website a favorite among users, increasing conversion rates and driving business growth."
+          },
+          {
+            title: "Cross-Platform Compatibility",
+            description: "Designed for accessibility across various devices, SPAs provide a consistent experience on desktops, tablets, and mobile devices. This ensures a seamless interaction for users, regardless of the platform they are using."
+          },
+          {
+            title: "Improved Conversion Rates",
+            description: "A seamless, fluid experience leads to higher conversions."
+          },
+          {
+            title: "Lower Maintenance Costs",
+            description: "Reduced maintenance costs, including website updates, security patches, and ongoing support, can help you stay ahead of technological changes and stay competitive in the market."
+          }
+        ]
+      },
+      {
+        title: "Our SPA Development Services",
+        lists: [
+          {
+            title: "Custom SPA Development",
+            description: "We build fully customized SPAs using modern, high-performance frameworks like React, Angular, and Vue. Our applications are tailored to your business needs, providing robust, scalable, and future-ready solutions."
+          },
+          {
+            title: "Responsive Design",
+            description: "Our websites are designed with a responsive layout that adapts to different screen sizes and devices. This ensures a seamless user experience across all devices and screen sizes, from desktops to smartphones. Every SPA we develop is optimized for all screen sizes, from desktops to mobile devices. With responsive design techniques, we guarantee a seamless and intuitive user experience across all platforms."
+          },
+          {
+            title: "API Integration",
+            description: "We seamlessly integrate your SPA with powerful APIs, including RESTful and GraphQL, ensuring real-time data updates and smooth communication between the frontend and backend. This creates a dynamic and efficient web application that enhances usability."
+          },
+          {
+            title: "Real-Time Functionality",
+            description: "Our SPA solutions incorporate live updates using WebSockets or similar technologies. Whether you need real-time chat, stock market tickers, or live notifications, we enhance engagement by ensuring your app stays fresh with continuously updated content."
+          },
+          {
+            title: "Progressive Web App (PWA) Transformation",
+            description: "Take your SPA to the next level with Progressive Web App (PWA) capabilities. PWAs combine the best features of web and native apps, offering offline access, enhanced speed, and improved performance. Your users can enjoy a seamless browsing experience even in low-network conditions, keeping them engaged at all times."
+          }
+        ]
+      },
+      {
+        title: "Our Development Process",
+        lists: [
+          {
+            title: "Consultation",
+            description: "We start by gaining a deep understanding of your project’s goals, target audience, and specific requirements. This collaborative phase ensures that we align with your vision and create a clear strategy for your SPA’s success."
+          },
+          {
+            title: "Planning",
+            description: "We develop a detailed plan for your website, including the layout, content, and functionality. In the planning stage, we establish a detailed roadmap for your application. This includes designing wireframes, mockups, and prototypes to visualize the user interface and functionality. This structured approach guarantees alignment with stakeholders before moving into development. This plan ensures that we cover all aspects of your project and create a seamless and effective solution."
+          },
+          {
+            title: "Development",
+            description: "We develop your website using modern web technologies, such as HTML5, CSS3, and JavaScript. Using modern, high-performance frameworks like React, Vue, or Angular, we build a scalable and efficient Single Page Application. Our agile development approach focuses on optimizing speed, functionality, and seamless user experiences. We use cutting-edge frameworks like React, Angular, or Vue.js to create a seamless and efficient user interface. Our development process ensures that we cover all aspects of your project and create a seamless and effective solution."
+          },
+          {
+            title: "Testing",
+            description: "Quality is our priority. We conduct extensive performance, usability, and security testing to ensure a flawless experience. Every feature is rigorously tested to eliminate bugs, optimize functionality, and enhance security before deployment. We thoroughly test your website to ensure it functions correctly, handles edge cases, and meets all user requirements. This phase ensures that your website is reliable, secure, and easy to use. We use cutting-edge testing frameworks like Jest, Cypress, or Selenium to automate testing and ensure that your website meets all user requirements."
+          },
+          {
+            title: "Deployment",
+            description: "Once your website is fully developed and tested, we deploy it to a web hosting provider. We use industry-standard web servers and security measures to ensure a reliable and secure experience for your users. We offer various hosting options, including shared hosting, VPS hosting, and dedicated servers, depending on your needs and budget. This phase ensures that your website is accessible and reliable to users, regardless of their location."
+          },
+          {
+            title: "Ongoing Support & Maintenance",
+            description: "After deployment, we offer ongoing support and maintenance to help you maintain and optimize your website. Our partnership doesn’t end at launch. We provide continuous support, updates, and maintenance to keep your SPA secure, up-to-date, and running at peak performance. Whether you need bug fixes, new feature integrations, or performance enhancements, we’ve got you covered.  We regularly update our technologies and frameworks to ensure your website remains up-to-date and secure. We also provide guidance on optimizing your website for search engines, improving performance, and enhancing user experience. We use cutting-edge tools and resources to help you stay ahead of technological changes and ensure that your website remains a valuable and engaging resource for your users."
+          }
+        ]
+      }
+    ],
+    cta: {
+      title: "Future-Proof Your Digital Presence",
+      description: "Whether you're looking to develop a progressive web app (PWA), interactive dashboard, or enterprise-level solution , our expert SPA development team delivers high-performance, scalable applications built for the modern web. Ready to take your digital experience to the next level?",
+      text: "Let’s build a high-performance, scalable SPA that drives engagement and growth. Get in touch with us today to bring your vision to life!",
+      button: "Contact us today",
+      afterButtonText: "and let’s build an SPA that drives results."
+    }
   },
   {
     category: "comprehensive-website-solutions",
@@ -527,6 +877,224 @@ export const subServiceDetails: SubServiceItem[] = [
         }
       ]
     },
+    details: [
+      {
+        title: "Why Custom Website Design is Essential for Your Business",
+        intro: ["A custom website is the key to establishing a strong digital presence. Unlike generic templates, a custom-built website offers full flexibility, brand consistency, and superior performance optimization. With a fast, mobile-responsive, and SEO-optimized website, your business gains the competitive edge needed to attract, engage, and convert visitors into loyal customers."],
+        lists: [
+          {
+            title: "Unique & Brand-Aligned",
+            description: "A fully customized design that reflects your brand identity, values, and business objectives."
+          },
+          {
+            title: "SEO & Mobile Optimized",
+            description: "Built with search engine best practices and mobile-first design to maximize traffic and visibility."
+          },
+          {
+            title: "Scalability & Custom Features",
+            description: "Custom functionalities and integrations that cater to your business needs, making your website more dynamic and engaging."
+          }
+        ]
+      },
+      {
+        title: "What Makes a Custom Website Stand Out?",
+        lists: [
+          {
+            title: "Unique & Brand-Aligned",
+            description: "Your website should reflect your brand’s identity, values, and business objectives. We design fully customized solutions tailored to your specific goals, ensuring that every element is aligned with your brand strategy."
+          },
+          {
+            title: "SEO & Mobile Optimization",
+            description: "Built with search engine best practices and mobile-first design to maximize traffic and visibility. Our custom-built websites are optimized for SEO and mobile, ensuring that your website is accessible, engaging, and relevant to your audience. A website built with SEO best practices ensures that your business ranks higher on search engines, increasing visibility and organic traffic. Additionally, our mobile-first design approach ensures seamless performance across all screen sizes."
+          },
+          {
+            title: "Scalable & Custom Features",
+            description: "Custom functionalities and integrations that cater to your business needs, making your website more dynamic and engaging. We provide guidance on integrating with various platforms, APIs, and services to enhance your website's capabilities and functionality. Your website should grow with your business. We develop scalable, custom-built solutions that allow for future updates, integrations, and advanced functionality tailored to your evolving needs."
+          },
+          {
+            title: "Intuitive User Experience & Navigation",
+            description: "A custom-built website should have intuitive navigation, clear, and easy-to-follow interfaces. Our designers create navigation that is easy to understand, accessible, and easy to navigate. We also provide guidance on creating a seamless user experience, ensuring that users can easily find and access the information they need. A website’s design should not only look great but also be easy to use. Our UX-focused approach ensures intuitive navigation, clear call-to-actions, and a seamless user journey , enhancing engagement and conversions."
+          }
+        ]
+      },
+      {
+        title: "Why Choose Us?",
+        lists: [
+          {
+            title: "Expert Custom Design",
+            description: "We create custom designs that are tailored to your brand, business goals, and user needs. Our designers have extensive experience in user research, usability testing, and creating intuitive interfaces. We work closely with you to understand your audience, needs, and pain points, ensuring that every design decision is based on data and best practices."
+          },
+          {
+            title: "Conversion-Focused",
+            description: "We focus on conversion-focused designs that drive meaningful interactions and conversions. Our designers create interfaces that are easy to use, intuitive, and visually appealing. We prioritize user experience, accessibility, and usability, ensuring that every interaction is enjoyable and results in valuable conversions."
+          },
+          {
+            title: "Scalable & Future-Proof",
+            description: "We create scalable and future-proof designs that can be easily updated, modified, and expanded in the future. Our designers are skilled in agile methodologies, continuous improvement, and user-centered design, ensuring that your website remains up-to-date and valuable to your audience. We also work closely with you to understand your business needs, goals, and pain points, ensuring that every design decision is based on data and best practices."
+          },
+          {
+            title: "Dedicated Support",
+            description: "We provide dedicated support to help you navigate your website development process. Our team of experts is skilled in various areas, from user research to website design, and we are here to help you stay on track and make the most of your website development efforts. Our dedicated support ensures that your website is built with confidence and success."
+          }
+        ]
+      },
+      {
+        title: "Key Benefits of Custom Website Design",
+        lists: [
+          {
+            title: "Unique Branding",
+            description:
+              "Custom website design ensures that every aspect of your site reflects your brand’s unique identity. From color schemes and typography to imagery and layout, every detail aligns with your brand’s core values and personality, ensuring a cohesive and memorable experience."
+          },
+          {
+            title: "Tailored Functionality",
+            description:
+              "We create custom features and integrations that specifically address your business needs, such as booking systems, e-commerce functionalities, product filters, CRM integrations, and more. These tailored functionalities ensure that your website works seamlessly for your specific industry and operations."
+          },
+          {
+            title: "Scalability",
+            description:
+              "We design your website with scalability in mind. As your business grows, your website can evolve with it, accommodating new features, increased traffic, and expanded content without losing performance or usability."
+          },
+          {
+            title: "SEO Optimization",
+            description:
+              "Our custom websites are structured with SEO in mind from the start. We focus on clean code, fast loading speeds, and mobile optimization to improve your site’s visibility on search engines, helping you rank higher and attract more organic traffic."
+          },
+          {
+            title: "Enhanced User Experience",
+            description:
+              "User experience is at the heart of our design process. We create intuitive, accessible, and user-friendly interfaces that make it easy for your audience to find information and complete actions, enhancing engagement and conversions."
+          },
+        ],
+      },
+      {
+        title: "Our Web Design Process",
+        lists: [
+          {
+            title: "Consultation",
+            description:
+              "We begin by getting to know your business, goals, and target audience. Through in-depth discussions, we understand your vision and challenges, ensuring the design aligns with your objectives and resonates with your customers."
+          },
+          {
+            title: "Planning",
+            description:
+              "We develop a detailed plan that includes a sitemap, wireframes, and a comprehensive strategy. This planning phase ensures that we are aligned on the site structure, features, and goals, providing a clear roadmap for the project."
+          },
+          {
+            title: "Design",
+            description:
+              "Our design team creates high-fidelity prototypes that bring your vision to life. During this phase, we incorporate your feedback at every stage, refining the design until it meets your expectations and captures your brand’s essence."
+          },
+          {
+            title: "Development",
+            description:
+              "Once the design is finalized, we begin development using the latest technologies and best practices. We focus on building a responsive, high-performance website that works flawlessly across devices and browsers."
+          },
+          {
+            title: "Testing",
+            description:
+              "We conduct rigorous testing to ensure functionality, compatibility, speed, and accessibility. Our testing process covers everything from performance under high traffic loads to ensuring that the site meets WCAG accessibility standards."
+          },
+          {
+            title: "Launch",
+            description:
+              "Once everything is thoroughly tested, we launch your website with secure hosting and domain registration. We ensure a smooth transition and monitor the site for any immediate issues."
+          },
+          {
+            title: "Ongoing Support",
+            description:
+              "Post-launch, we offer continuous support and maintenance. This includes regular updates, security patches, and ongoing improvements to ensure your website continues to meet your business needs."
+          },
+        ],
+      },
+      {
+        title: "Domain Registration",
+        lists: [
+          {
+            title: "Domain Name Selection",
+            description:
+              "We help you choose a domain name that best represents your brand and is easy to remember. A well-chosen domain name is essential for your website’s visibility and branding."
+          },
+          {
+            title: "Extensions",
+            description:
+              "We offer a variety of domain extensions (.com, .org, .net, etc.) to suit your business type and target audience. Whether you need a global reach or a local presence, we guide you in selecting the right domain extension for your needs."
+          },
+          {
+            title: "Privacy Protection",
+            description:
+              "We offer domain privacy protection to safeguard your personal information. This feature prevents your contact details from being exposed in the WHOIS database, enhancing your privacy and security."
+          },
+          {
+            title: "Management",
+            description:
+              "We handle seamless renewals and updates for your domain, ensuring your website remains active and doesn’t face any unexpected disruptions due to domain expiry."
+          },
+        ],
+      },
+      {
+        title: "Web Hosting",
+        lists: [
+          {
+            title: "Managed Hosting",
+            description:
+              "We offer managed hosting services, where we take care of everything related to your hosting, including updates, backups, and security. This allows you to focus on running your business while we ensure your website is always up and running."
+          },
+          {
+            title: "Optimized Performance",
+            description:
+              "We use fast, secure servers optimized for high-speed websites. Our hosting solutions are designed to handle high volumes of traffic while maintaining top-tier performance, ensuring your site loads quickly and efficiently."
+          },
+          {
+            title: "SSL Certificates",
+            description:
+              "We provide SSL certificates to enhance security and improve SEO rankings. An SSL certificate ensures that your site’s connection is encrypted, providing a secure browsing experience for your users and boosting your site's credibility in search engines."
+          },
+          {
+            title: "99.9% Uptime Guarantee",
+            description:
+              "Our hosting solutions come with a 99.9% uptime guarantee, meaning your website will be up and running almost all the time. We ensure that your website is always accessible to your visitors."
+          },
+          {
+            title: "Scalable Hosting Plans",
+            description:
+              "We offer flexible hosting plans that grow with your business. Whether you're just starting or expecting large traffic spikes, our scalable hosting solutions can be adjusted to fit your current and future needs."
+          },
+        ],
+      },
+      {
+        title: "Tools and Technologies",
+        intro: ["We leverage industry-leading tools and technologies to create efficient, scalable, and secure websites:"],
+        lists: [
+          {
+            description: "Next.js for fast, SEO-friendly development"
+          },
+          {
+            description: "React.js for efficient, scalable, and maintainable front-end development"
+          },
+          {
+            description: "Tailwind CSS for responsive, accessible designs"
+          },
+          {
+            description: "Vercel for continuous integration and deployment"
+          },
+          {
+            description: "Google Analytics for tracking performance"
+          }
+        ]
+      },
+      {
+        title: "Your Vision, Our Expertise—Let’s Build Something Extraordinary",
+        intro: ["Don’t settle for ordinary. Let’s create a custom website that works for you—driving engagement, conversions, and long-term success. Ready to bring your vision to life? Let’s build something extraordinary!"]
+      }
+    ],
+    cta: {
+      title: "Your Vision, Our Expertise",
+      intro: "Ready to transform your online presence? Our team is here to create a custom website that sets your brand apart and drives measurable results.",
+      button: "Contact us today",
+      afterButtonText: "to start your custom website design journey!"
+    }
   },
   {
     category: "comprehensive-website-solutions",

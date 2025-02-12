@@ -39,8 +39,8 @@ export const spaDevelopmentData = [
 
 export const ecommerceData = [
   {
-    category: "Key Features of Custom E-Commerce Websites",
-    items: [
+    title: "Key Features of Custom E-Commerce Websites",
+    lists: [
       {
         title: "Unique Design",
         description:
@@ -69,8 +69,8 @@ export const ecommerceData = [
     ],
   },
   {
-    category: "Product Catalog Management",
-    items: [
+    title: "Product Catalog Management",
+    lists: [
       {
         title: "Dynamic Categories",
         description:
@@ -89,8 +89,8 @@ export const ecommerceData = [
     ],
   },
   {
-    category: "Our E-Commerce Development Process",
-    items: [
+    title: "Our E-Commerce Development Process",
+    lists: [
       {
         title: "Consultation",
         description:
@@ -442,8 +442,8 @@ export const brandStorytellingData = [
 
 export const websiteServicesData = [
   {
-    category: "Key Benefits of Custom Website Design",
-    items: [
+    title: "Key Benefits of Custom Website Design",
+    lists: [
       {
         title: "Unique Branding",
         description:
@@ -472,8 +472,8 @@ export const websiteServicesData = [
     ],
   },
   {
-    category: "Our Web Design Process",
-    items: [
+    title: "Our Web Design Process",
+    lists: [
       {
         title: "Consultation",
         description:
@@ -512,8 +512,8 @@ export const websiteServicesData = [
     ],
   },
   {
-    category: "Domain Registration",
-    items: [
+    title: "Domain Registration",
+    lists: [
       {
         title: "Domain Name Selection",
         description:
@@ -537,8 +537,8 @@ export const websiteServicesData = [
     ],
   },
   {
-    category: "Web Hosting",
-    items: [
+    title: "Web Hosting",
+    lists: [
       {
         title: "Managed Hosting",
         description:
