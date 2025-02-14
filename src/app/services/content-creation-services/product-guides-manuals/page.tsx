@@ -47,7 +47,7 @@ const ProductGuidesManualsServices: FC = () => {
           <ul>
             {section.items.map((item, itemIndex) => (
               <li key={itemIndex}>
-                <span className="font-bold text-secondary">{item.title}:</span>{" "}
+                <span className="font-bold text-secondary">{item.title}:</span>
                 {item.description}
               </li>
             ))}
@@ -89,7 +89,7 @@ const ProductGuidesManualsServices: FC = () => {
           Get Started Today
         </h2>
         <p>
-          Ready to create clear, professional product guides and manuals?{" "}
+          Ready to create clear, professional product guides and manuals?
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}

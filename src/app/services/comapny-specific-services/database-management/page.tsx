@@ -19,11 +19,11 @@ const DatabaseServices: FC = () => {
       <p>
         Your data is one of your most valuable assets—organize, optimize, and
         protect it with expert database solutions. Our Database Creation and
-        Management Services ensure your business operates with{" "}
-        <strong>efficient, secure, and scalable databases</strong> tailored to
-        your needs. Whether you require relational databases like{" "}
-        <strong>MySQL, PostgreSQL</strong>, or NoSQL solutions such as{" "}
-        <strong>MongoDB</strong>, we design structured, high-performance systems
+        Management Services ensure your business operates with
+        efficient, secure, and scalable databases tailored to
+        your needs. Whether you require relational databases like
+        MySQL, PostgreSQL, or NoSQL solutions such as
+        MongoDB, we design structured, high-performance systems
         that enhance accessibility, reliability, and data-driven
         decision-making.
       </p>
@@ -36,8 +36,8 @@ const DatabaseServices: FC = () => {
         <p>
           Our comprehensive database solutions provide a secure, scalable, and
           optimized foundation for your business. Whether you're building a new
-          database or need expert management for an existing one, we deliver{" "}
-          <strong>high-performance, customized database solutions</strong> to
+          database or need expert management for an existing one, we deliver
+          high-performance, customized database solutions to
           enhance your business operations.
         </p>
       </section>
@@ -55,33 +55,33 @@ const DatabaseServices: FC = () => {
         <h3>1. Custom Database Architecture</h3>
         <p>
           We design scalable and structured databases to support your business
-          growth, ensuring{" "}
-          <strong>
+          growth, ensuring
+          
             fast query execution, seamless data integration, and optimized
             performance
-          </strong>
+          
           . Whether you need a small-scale database for internal use or an
           enterprise-level solution, our systems are built for efficiency.
         </p>
 
         <h3>2. Advanced Security & Compliance</h3>
         <p>
-          Protect sensitive data with advanced security measures, including{" "}
-          <strong>
+          Protect sensitive data with advanced security measures, including
+          
             data encryption, access controls, backup solutions, and compliance
             with industry regulations
-          </strong>
-          . We ensure your business meets{" "}
-          <strong>GDPR, HIPAA, or other regulatory standards</strong>,
+          
+          . We ensure your business meets
+          GDPR, HIPAA, or other regulatory standards,
           safeguarding your information against cyber threats.
         </p>
 
         <h3>3. Performance Optimization & Speed</h3>
         <p>
-          We eliminate database bottlenecks through{" "}
-          <strong>
+          We eliminate database bottlenecks through
+          
             query optimization, indexing strategies, and performance tuning
-          </strong>
+          
           . Our experts fine-tune database structures to enhance speed and
           responsiveness, ensuring maximum efficiency for real-time data access
           and business applications.
@@ -89,8 +89,8 @@ const DatabaseServices: FC = () => {
 
         <h3>4. Reliable Data Backup & Recovery</h3>
         <p>
-          Minimize downtime and prevent data loss with our robust{" "}
-          <strong>automated backup and disaster recovery solutions</strong>. Our
+          Minimize downtime and prevent data loss with our robust
+          automated backup and disaster recovery solutions. Our
           fail-safe recovery mechanisms ensure that your critical business data
           is always accessible and protected from unexpected failures.
         </p>
@@ -98,11 +98,11 @@ const DatabaseServices: FC = () => {
         <h3>5. Scalable & Future-Ready Solutions</h3>
         <p>
           As your business grows, so do your data needs. We design databases
-          that can scale with your operations, providing flexibility for{" "}
-          <strong>
+          that can scale with your operations, providing flexibility for
+          
             big data processing, cloud database integration, and high-volume
             transactions
-          </strong>
+          
           .
         </p>
       </section>
@@ -150,23 +150,23 @@ const DatabaseServices: FC = () => {
 
         <ul>
           <li>
-            <strong>Custom-Tailored Database Solutions:</strong> Designed to fit
+            Custom-Tailored Database Solutions: Designed to fit
             your unique business needs.
           </li>
           <li>
-            <strong>Security & Compliance:</strong> Protecting your data with
+            Security & Compliance: Protecting your data with
             industry-leading security protocols.
           </li>
           <li>
-            <strong>Performance-Driven Optimization:</strong> Ensuring fast,
+            Performance-Driven Optimization: Ensuring fast,
             efficient, and reliable database operations.
           </li>
           <li>
-            <strong>Scalability & Growth-Focused:</strong> Future-ready database
+            Scalability & Growth-Focused: Future-ready database
             solutions to support business expansion.
           </li>
           <li>
-            <strong>Expert Support & Maintenance:</strong> Ongoing database
+            Expert Support & Maintenance: Ongoing database
             monitoring, updates, and troubleshooting.
           </li>
         </ul>
@@ -181,7 +181,7 @@ const DatabaseServices: FC = () => {
           <ul>
             {section.items.map((item, itemIndex) => (
               <li key={itemIndex}>
-                <span className="font-bold text-secondary">{item.title}:</span>{" "}
+                <span className="font-bold text-secondary">{item.title}:</span>
                 {item.description}
               </li>
             ))}
@@ -195,8 +195,8 @@ const DatabaseServices: FC = () => {
           Pricing Tiers
         </h2>
         <p className="my-4">
-          Our company rebranding services are{" "}
-          <strong>tailored to your needs</strong>. Below are our pricing tiers:
+          Our company rebranding services are
+          tailored to your needs. Below are our pricing tiers:
         </p>
         <ul>
           {companySpecificServices.map(
@@ -207,7 +207,7 @@ const DatabaseServices: FC = () => {
                 <li key={index}>
                   <span className="font-bold text-secondary">
                     {tiers.name}:
-                  </span>{" "}
+                  </span>
                   {tiers.info}
                 </li>
               ))
@@ -231,7 +231,7 @@ const DatabaseServices: FC = () => {
         </p>
         <p>
           Ready to enhance your business with an efficient, secure, and scalable
-          database?{" "}
+          database?
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}

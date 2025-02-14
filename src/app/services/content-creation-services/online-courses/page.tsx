@@ -46,7 +46,7 @@ const OnlineCoursesServices: FC = () => {
           <ul>
             {section.items.map((item, itemIndex) => (
               <li key={itemIndex}>
-                <span className="font-bold text-secondary">{item.title}:</span>{" "}
+                <span className="font-bold text-secondary">{item.title}:</span>
                 {item.description}
               </li>
             ))}
@@ -88,7 +88,7 @@ const OnlineCoursesServices: FC = () => {
           Get Started Today
         </h2>
         <p>
-          Ready to launch your online course and share your expertise?{" "}
+          Ready to launch your online course and share your expertise?
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}

@@ -48,7 +48,7 @@ const BlogWritingServices: FC = () => {
           <ul>
             {section.items.map((item, itemIndex) => (
               <li key={itemIndex}>
-                <span className="font-bold text-secondary">{item.title}:</span>{" "}
+                <span className="font-bold text-secondary">{item.title}:</span>
                 {item.description}
               </li>
             ))}
@@ -89,7 +89,7 @@ const BlogWritingServices: FC = () => {
           Get Started Today
         </h2>
         <p>
-          Ready to elevate your brand with high-quality blog content?{" "}
+          Ready to elevate your brand with high-quality blog content?
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}

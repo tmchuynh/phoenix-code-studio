@@ -149,18 +149,18 @@ const WireframingPrototypingServices: FC = () => {
 
         <p>
           One of the primary advantages of wireframing and prototyping is their
-          ability to <strong>identify potential issues early</strong> in the
+          ability to identify potential issues early in the
           design process. By mapping out navigation flows and testing
           interactive elements, designers can spot usability challenges before
           development begins, reducing the risk of costly post-launch revisions.
-          This approach allows businesses to{" "}
-          <strong>save time and resources</strong> while ensuring that the final
+          This approach allows businesses to
+          save time and resources while ensuring that the final
           product meets user expectations and business objectives.
         </p>
 
         <p>
-          Additionally, these tools facilitate{" "}
-          <strong>efficient collaboration</strong> between designers,
+          Additionally, these tools facilitate
+          efficient collaboration between designers,
           developers, and project stakeholders. Wireframes provide a structured
           framework that clearly communicates page structure, functionality, and
           content hierarchy, eliminating ambiguity in the design and development
@@ -171,8 +171,8 @@ const WireframingPrototypingServices: FC = () => {
         </p>
 
         <p>
-          Another key benefit is the ability to{" "}
-          <strong>create user-centered designs</strong>. Wireframes and
+          Another key benefit is the ability to
+          create user-centered designs. Wireframes and
           prototypes help validate design concepts with end-users through
           usability testing. This process ensures that the final product is not
           only aesthetically pleasing but also highly functional and accessible.
@@ -182,8 +182,8 @@ const WireframingPrototypingServices: FC = () => {
         </p>
 
         <p>
-          Wireframing and prototyping also{" "}
-          <strong>accelerate the development process</strong> by providing
+          Wireframing and prototyping also
+          accelerate the development process by providing
           developers with a clear roadmap for implementation. Instead of making
           design decisions during coding, development teams can work with
           well-defined layouts and interactive models, ensuring a seamless
@@ -192,8 +192,8 @@ const WireframingPrototypingServices: FC = () => {
         </p>
 
         <p>
-          In today’s competitive digital landscape, businesses must prioritize{" "}
-          <strong>creating intuitive and engaging experiences</strong>.
+          In today’s competitive digital landscape, businesses must prioritize
+          creating intuitive and engaging experiences.
           Wireframing and prototyping allow brands to refine their products with
           precision, ensuring seamless navigation, user-friendly interfaces, and
           a polished final product. Whether developing a website, mobile app, or
@@ -282,24 +282,24 @@ const WireframingPrototypingServices: FC = () => {
 
         <ul>
           <li>
-            <strong>Improved User Experience:</strong> Ensures intuitive
+            Improved User Experience: Ensures intuitive
             navigation and optimized interaction flows.
           </li>
           <li>
-            <strong>Reduced Development Costs:</strong> Identifies usability
+            Reduced Development Costs: Identifies usability
             issues early, reducing costly post-development fixes.
           </li>
           <li>
-            <strong>Faster Time-to-Market:</strong> Streamlines the design and
+            Faster Time-to-Market: Streamlines the design and
             development process, accelerating project completion.
           </li>
           <li>
-            <strong>Better Stakeholder Collaboration:</strong> Provides a clear
+            Better Stakeholder Collaboration: Provides a clear
             visual representation for effective communication and
             decision-making.
           </li>
           <li>
-            <strong>Enhanced Conversion Potential:</strong> Helps create
+            Enhanced Conversion Potential: Helps create
             engaging, conversion-focused designs that maximize user retention.
           </li>
         </ul>
@@ -316,23 +316,23 @@ const WireframingPrototypingServices: FC = () => {
 
         <ul>
           <li>
-            <strong>E-Commerce:</strong> Enhances product page layouts, checkout
+            E-Commerce: Enhances product page layouts, checkout
             flows, and mobile responsiveness.
           </li>
           <li>
-            <strong>Healthcare:</strong> Improves patient portals, telemedicine
+            Healthcare: Improves patient portals, telemedicine
             platforms, and health apps for usability.
           </li>
           <li>
-            <strong>FinTech:</strong> Optimizes banking apps, financial
+            FinTech: Optimizes banking apps, financial
             dashboards, and secure transaction interfaces.
           </li>
           <li>
-            <strong>Education:</strong> Creates user-friendly e-learning
+            Education: Creates user-friendly e-learning
             platforms with interactive course navigation.
           </li>
           <li>
-            <strong>Software & SaaS:</strong> Ensures seamless workflows,
+            Software & SaaS: Ensures seamless workflows,
             intuitive dashboards, and efficient product onboarding.
           </li>
         </ul>
@@ -344,8 +344,8 @@ const WireframingPrototypingServices: FC = () => {
           Pricing Tiers
         </h2>
         <p className="my-4">
-          Our company rebranding services are{" "}
-          <strong>tailored to your needs</strong>. Below are our pricing tiers:
+          Our company rebranding services are
+          tailored to your needs. Below are our pricing tiers:
         </p>
         <ul>
           {websiteServices.map(
@@ -356,7 +356,7 @@ const WireframingPrototypingServices: FC = () => {
                 <li key={index}>
                   <span className="font-bold text-secondary">
                     {tiers.name}:
-                  </span>{" "}
+                  </span>
                   {tiers.info}
                 </li>
               ))
@@ -372,14 +372,14 @@ const WireframingPrototypingServices: FC = () => {
           Take the first step in building a high-performance, user-friendly
           digital experience. Our UX wireframing and interactive prototyping
           services help brands create intuitive, conversion-focused websites and
-          applications.{" "}
+          applications.
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}
             className="p-0 inline-flex m-0"
           >
             Contact us today
-          </Button>{" "}
+          </Button>
           to learn how we can refine your digital product before launch,
           ensuring an optimized user experience that drives engagement and
           business growth.

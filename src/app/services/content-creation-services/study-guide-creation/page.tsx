@@ -48,7 +48,7 @@ const StudyGuideCreation: FC = () => {
           <ul>
             {section.items.map((item, itemIndex) => (
               <li key={itemIndex}>
-                <span className="font-bold text-secondary">{item.title}:</span>{" "}
+                <span className="font-bold text-secondary">{item.title}:</span>
                 {item.description}
               </li>
             ))}
@@ -91,7 +91,7 @@ const StudyGuideCreation: FC = () => {
         </h2>
         <p>
           Ready to create study guides that simplify learning and improve
-          outcomes?{" "}
+          outcomes?
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}

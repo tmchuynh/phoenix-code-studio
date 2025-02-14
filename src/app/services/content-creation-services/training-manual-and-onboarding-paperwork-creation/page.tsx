@@ -55,7 +55,7 @@ const TrainingManualOnboardingPapers: FC = () => {
           <ul>
             {section.items.map((item, itemIndex) => (
               <li key={itemIndex}>
-                <span className="font-bold text-secondary">{item.title}:</span>{" "}
+                <span className="font-bold text-secondary">{item.title}:</span>
                 {item.description}
               </li>
             ))}
@@ -101,7 +101,7 @@ const TrainingManualOnboardingPapers: FC = () => {
           Get Started Today
         </h2>
         <p>
-          Ready to empower your team with effective training materials?{" "}
+          Ready to empower your team with effective training materials?
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}

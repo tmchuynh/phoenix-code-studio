@@ -44,7 +44,7 @@ const BrochuresAndFlyersServices: FC = () => {
           <ul>
             {section.items.map((item, itemIndex) => (
               <li key={itemIndex}>
-                <span className="font-bold text-secondary">{item.title}:</span>{" "}
+                <span className="font-bold text-secondary">{item.title}:</span>
                 {item.description}
               </li>
             ))}
@@ -87,7 +87,7 @@ const BrochuresAndFlyersServices: FC = () => {
         </h2>
         <p>
           Ready to create stunning brochures and flyers that captivate your
-          audience?{" "}
+          audience?
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}

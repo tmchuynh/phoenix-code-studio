@@ -69,7 +69,7 @@ const TechnicalWritingServices: FC = () => {
           <ul>
             {section.items.map((item, itemIndex) => (
               <li key={itemIndex}>
-                <span className="font-bold text-secondary">{item.title}:</span>{" "}
+                <span className="font-bold text-secondary">{item.title}:</span>
                 {item.description}
               </li>
             ))}
@@ -111,7 +111,7 @@ const TechnicalWritingServices: FC = () => {
           Get Started Today
         </h2>
         <p>
-          Ready to enhance your technical documentation?{" "}
+          Ready to enhance your technical documentation?
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}

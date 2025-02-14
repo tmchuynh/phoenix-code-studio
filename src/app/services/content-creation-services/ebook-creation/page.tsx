@@ -57,7 +57,7 @@ const EbookCreationServices: FC = () => {
           <ul>
             {section.items.map((item, itemIndex) => (
               <li key={itemIndex}>
-                <span className="font-bold text-secondary">{item.title}:</span>{" "}
+                <span className="font-bold text-secondary">{item.title}:</span>
                 {item.description}
               </li>
             ))}
@@ -95,7 +95,7 @@ const EbookCreationServices: FC = () => {
           Get Started Today
         </h2>
         <p>
-          Ready to create a captivating e-book that elevates your brand?{" "}
+          Ready to create a captivating e-book that elevates your brand?
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}

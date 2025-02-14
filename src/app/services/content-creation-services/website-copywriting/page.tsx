@@ -199,7 +199,7 @@ const WebsiteCopywritingServices: FC = () => {
           <ul>
             {section.items.map((item, itemIndex) => (
               <li key={itemIndex}>
-                <span className="font-bold text-secondary">{item.title}:</span>{" "}
+                <span className="font-bold text-secondary">{item.title}:</span>
                 {item.description}
               </li>
             ))}
@@ -242,7 +242,7 @@ const WebsiteCopywritingServices: FC = () => {
         </h2>
         <p className="my-4">
           Ready to transform your website with engaging and high-converting
-          copy?{" "}
+          copy?
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}

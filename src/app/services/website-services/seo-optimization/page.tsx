@@ -29,8 +29,8 @@ const SEOOptimization: FC = () => {
         <h2>Why SEO Optimization is Essential for Your Business</h2>
 
         <p>
-          In today’s highly competitive digital landscape,{" "}
-          <strong>ranking high on search engines</strong> like Google is not
+          In today’s highly competitive digital landscape,
+          ranking high on search engines like Google is not
           just an advantage—it’s a necessity. Search Engine Optimization (SEO)
           ensures that your website appears in relevant search results, driving
           targeted traffic and increasing brand visibility. Without a strong SEO
@@ -39,9 +39,9 @@ const SEOOptimization: FC = () => {
         </p>
 
         <p>
-          <strong>
+          
             Increase Website Traffic and Attract More Potential Customers:
-          </strong>{" "}
+          
           SEO helps your website gain visibility by optimizing it for relevant
           keywords and search queries. By appearing on the first page of Google,
           your site can attract high-quality, organic traffic from users
@@ -51,7 +51,7 @@ const SEOOptimization: FC = () => {
         </p>
 
         <p>
-          <strong>Enhance Online Credibility and Authority:</strong> Websites
+          Enhance Online Credibility and Authority: Websites
           that rank higher in search results are often perceived as more
           trustworthy and authoritative. A well-optimized site with high-quality
           content, backlinks, and user-friendly navigation signals credibility
@@ -60,19 +60,19 @@ const SEOOptimization: FC = () => {
         </p>
 
         <p>
-          <strong>Improve User Experience:</strong> SEO isn’t just about
+          Improve User Experience: SEO isn’t just about
           ranking—it’s about providing an excellent user experience. Search
-          engines prioritize websites that are{" "}
-          <strong>fast-loading, mobile-friendly, and easy to navigate</strong>.
+          engines prioritize websites that are
+          fast-loading, mobile-friendly, and easy to navigate.
           A well-structured website with optimized content, clear
           call-to-actions, and a seamless user experience encourages visitors to
           stay longer, explore your offerings, and take meaningful actions.
         </p>
 
         <p>
-          <strong>Generate Long-Term, Cost-Effective Organic Growth:</strong>{" "}
+          Generate Long-Term, Cost-Effective Organic Growth:
           Unlike paid advertising, which requires continuous investment, SEO
-          provides <strong>sustainable, long-term results</strong>. A
+          provides sustainable, long-term results. A
           well-optimized site continues to attract organic traffic without
           ongoing ad spend. With strategic content creation, keyword targeting,
           and regular updates, SEO becomes a powerful tool for consistent
@@ -80,9 +80,9 @@ const SEOOptimization: FC = () => {
         </p>
 
         <p>
-          <strong>
+          
             Outperform Competitors and Secure Top Search Rankings:
-          </strong>{" "}
+          
           In highly competitive markets, businesses that implement strong SEO
           strategies gain a significant advantage. By optimizing your site for
           search engines, you can outrank competitors, capture more leads, and
@@ -111,12 +111,12 @@ const SEOOptimization: FC = () => {
 
         <h3>Comprehensive Keyword Research</h3>
         <p>
-          Effective SEO starts with in-depth keyword research. We identify{" "}
-          <strong>high-performing, low-competition keywords</strong>
-          that align with your business goals. Our team analyzes{" "}
-          <strong>
+          Effective SEO starts with in-depth keyword research. We identify
+          high-performing, low-competition keywords
+          that align with your business goals. Our team analyzes
+          
             search intent, competitor strategies, and user behavior
-          </strong>
+          
           to target keywords that generate qualified leads, improve search
           rankings, and maximize website traffic.
         </p>
@@ -124,17 +124,17 @@ const SEOOptimization: FC = () => {
         <h3>On-Page SEO Optimization</h3>
         <p>
           We optimize every element of your website to ensure it aligns with the
-          latest <strong>SEO best practices</strong>. Our on-page SEO strategies
+          latest SEO best practices. Our on-page SEO strategies
           include:
         </p>
         <ul>
           <li>
-            Optimizing{" "}
-            <strong>title tags, meta descriptions, and header tags</strong> with
+            Optimizing
+            title tags, meta descriptions, and header tags with
             relevant keywords.
           </li>
           <li>
-            Enhancing <strong>URL structures</strong> for better crawlability
+            Enhancing URL structures for better crawlability
             and indexability.
           </li>
           <li>
@@ -142,25 +142,25 @@ const SEOOptimization: FC = () => {
             keyword density balance.
           </li>
           <li>
-            Improving{" "}
-            <strong>
+            Improving
+            
               website speed, mobile responsiveness, and user experience
-            </strong>{" "}
+            
             to enhance rankings.
           </li>
         </ul>
 
         <h3>Content Optimization & SEO Copywriting</h3>
         <p>
-          <strong>High-quality, keyword-rich content</strong> is the foundation
-          of successful SEO. Our content strategy focuses on creating{" "}
-          <strong>engaging, search-optimized content</strong> that attracts
+          High-quality, keyword-rich content is the foundation
+          of successful SEO. Our content strategy focuses on creating
+          engaging, search-optimized content that attracts
           users and improves rankings. We specialize in:
         </p>
         <ul>
           <li>
-            SEO-optimized{" "}
-            <strong>blog posts, landing pages, and product descriptions</strong>{" "}
+            SEO-optimized
+            blog posts, landing pages, and product descriptions
             that enhance user engagement.
           </li>
           <li>
@@ -168,7 +168,7 @@ const SEOOptimization: FC = () => {
             Expertise, Authority, Trustworthiness) principles.
           </li>
           <li>
-            Developing targeted <strong>service pages</strong> that drive
+            Developing targeted service pages that drive
             conversions and lead generation.
           </li>
         </ul>
@@ -181,36 +181,36 @@ const SEOOptimization: FC = () => {
         </p>
         <ul>
           <li>
-            Fixing <strong>broken links</strong> and optimizing{" "}
-            <strong>internal linking structure</strong> for better navigation.
+            Fixing broken links and optimizing
+            internal linking structure for better navigation.
           </li>
           <li>
-            Boosting <strong>page speed</strong> and optimizing images for
+            Boosting page speed and optimizing images for
             faster load times.
           </li>
           <li>
-            Implementing <strong>schema markup</strong> to improve search
+            Implementing schema markup to improve search
             visibility and enhance rich snippets.
           </li>
           <li>
-            Optimizing for <strong>mobile usability</strong> and ensuring a
+            Optimizing for mobile usability and ensuring a
             seamless browsing experience.
           </li>
           <li>
-            Configuring <strong>XML sitemaps and robots.txt</strong> for
+            Configuring XML sitemaps and robots.txt for
             efficient search engine crawling and indexing.
           </li>
         </ul>
 
         <h3>Link Building & Off-Page SEO</h3>
         <p>
-          Building a strong <strong>backlink profile</strong> is essential for
+          Building a strong backlink profile is essential for
           increasing domain authority and search rankings. We implement
           strategic link-building campaigns that focus on:
         </p>
         <ul>
           <li>
-            Acquiring <strong>high-quality backlinks</strong> from
+            Acquiring high-quality backlinks from
             authoritative, industry-related websites.
           </li>
           <li>
@@ -218,33 +218,33 @@ const SEOOptimization: FC = () => {
             boost credibility.
           </li>
           <li>
-            Building <strong>social signals</strong> and brand mentions to
+            Building social signals and brand mentions to
             enhance online visibility.
           </li>
         </ul>
 
         <h3>Local SEO Optimization</h3>
         <p>
-          If your business serves a local audience, our{" "}
-          <strong>local SEO strategies</strong> help you appear in
+          If your business serves a local audience, our
+          local SEO strategies help you appear in
           location-based searches and Google Maps results. Our approach
           includes:
         </p>
         <ul>
           <li>
-            Optimizing your <strong>Google My Business (GMB) profile</strong> to
+            Optimizing your Google My Business (GMB) profile to
             increase visibility.
           </li>
           <li>
-            Ensuring accurate and consistent <strong>local citations</strong> in
+            Ensuring accurate and consistent local citations in
             business directories.
           </li>
           <li>
-            Using <strong>geo-targeted keywords</strong> to attract customers
+            Using geo-targeted keywords to attract customers
             searching for local services.
           </li>
           <li>
-            Maintaining <strong>NAP (Name, Address, Phone)</strong> consistency
+            Maintaining NAP (Name, Address, Phone) consistency
             across online platforms.
           </li>
         </ul>
@@ -257,15 +257,15 @@ const SEOOptimization: FC = () => {
         </p>
         <ul>
           <li>
-            <strong>Keyword ranking improvements</strong> and competitive
+            Keyword ranking improvements and competitive
             analysis.
           </li>
           <li>
-            Insights on{" "}
-            <strong>traffic growth, user behavior, and bounce rates.</strong>
+            Insights on
+            traffic growth, user behavior, and bounce rates.
           </li>
           <li>
-            Evaluation of <strong>backlink profile</strong> and domain
+            Evaluation of backlink profile and domain
             authority.
           </li>
           <li>
@@ -326,8 +326,8 @@ const SEOOptimization: FC = () => {
           Pricing Tiers
         </h2>
         <p className="my-4">
-          Our company rebranding services are{" "}
-          <strong>tailored to your needs</strong>. Below are our pricing tiers:
+          Our company rebranding services are
+          tailored to your needs. Below are our pricing tiers:
         </p>
         <ul>
           {websiteServices.map(
@@ -338,7 +338,7 @@ const SEOOptimization: FC = () => {
                 <li key={index}>
                   <span className="font-bold text-secondary">
                     {tiers.name}:
-                  </span>{" "}
+                  </span>
                   {tiers.info}
                 </li>
               ))
@@ -352,7 +352,7 @@ const SEOOptimization: FC = () => {
           Get Started Today
         </h2>
         <p>
-          <strong>Let’s maximize your online potential.</strong> Whether you’re
+          Let’s maximize your online potential. Whether you’re
           looking to dominate search rankings, increase organic traffic, or
           drive more conversions, our expert SEO services ensure measurable,
           long-term results for your business.
@@ -372,9 +372,9 @@ const SEOOptimization: FC = () => {
             className="p-0 inline-flex m-0"
           >
             Contact us for a free consultation
-          </Button>{" "}
+          </Button>
           to discuss your SEO goals and let’s take your website to the top of
-          search rankings!{" "}
+          search rankings!
         </p>
       </section>
     </main>

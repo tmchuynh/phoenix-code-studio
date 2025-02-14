@@ -32,8 +32,8 @@ const UXDesignServices: FC = () => {
         <p>
           User Experience (UX) design is more than just making a website or
           application look visually appealing—it’s about ensuring every
-          interaction with your platform is{" "}
-          <strong>smooth, efficient, and enjoyable</strong>. A well-crafted UX
+          interaction with your platform is
+          smooth, efficient, and enjoyable. A well-crafted UX
           enhances usability, improves accessibility, and creates a frictionless
           experience that keeps users engaged. Whether you’re building an
           e-commerce store, a SaaS platform, or a mobile app, an intuitive user
@@ -41,8 +41,8 @@ const UXDesignServices: FC = () => {
         </p>
 
         <p>
-          One of the core benefits of UX design is its impact on{" "}
-          <strong>user retention and engagement</strong>. Users are more likely
+          One of the core benefits of UX design is its impact on
+          user retention and engagement. Users are more likely
           to stay on a website or application when they can easily navigate,
           find information, and complete actions without frustration. Poor UX
           leads to high bounce rates, abandoned carts, and lost opportunities.
@@ -52,8 +52,8 @@ const UXDesignServices: FC = () => {
         </p>
 
         <p>
-          Another critical advantage of UX design is its role in{" "}
-          <strong>improving conversion rates</strong>. Whether it’s making a
+          Another critical advantage of UX design is its role in
+          improving conversion rates. Whether it’s making a
           purchase, signing up for a service, or filling out a form, a seamless
           UX ensures that users can complete key actions effortlessly. Through
           strategic design, clear call-to-actions (CTAs), and minimal friction
@@ -62,8 +62,8 @@ const UXDesignServices: FC = () => {
         </p>
 
         <p>
-          UX design also plays a significant role in{" "}
-          <strong>strengthening brand loyalty and trust</strong>. When users
+          UX design also plays a significant role in
+          strengthening brand loyalty and trust. When users
           have a positive experience with a digital product, they are more
           likely to return, recommend it to others, and develop a strong
           connection with the brand. A well-designed UX builds credibility and
@@ -74,8 +74,8 @@ const UXDesignServices: FC = () => {
         </p>
 
         <p>
-          Our UX design process is built on{" "}
-          <strong>data-driven insights and extensive user research</strong> to
+          Our UX design process is built on
+          data-driven insights and extensive user research to
           ensure that every design decision is backed by real user behavior and
           expectations. We conduct usability testing, analyze user flows, and
           leverage feedback to refine and optimize the experience. By
@@ -85,8 +85,8 @@ const UXDesignServices: FC = () => {
         </p>
 
         <p>
-          Additionally, UX design improves{" "}
-          <strong>accessibility and inclusivity</strong>. A truly great user
+          Additionally, UX design improves
+          accessibility and inclusivity. A truly great user
           experience ensures that digital platforms are accessible to all users,
           including those with disabilities. By following web accessibility
           standards (WCAG), implementing clear navigation, and optimizing for
@@ -95,8 +95,8 @@ const UXDesignServices: FC = () => {
         </p>
 
         <p>
-          The impact of UX design extends beyond user satisfaction—it also{" "}
-          <strong>enhances business growth and revenue</strong>. Companies that
+          The impact of UX design extends beyond user satisfaction—it also
+          enhances business growth and revenue. Companies that
           prioritize UX design see higher customer satisfaction rates, increased
           ROI, and reduced customer support costs. A well-structured and
           easy-to-use interface minimizes confusion and frustration, reducing
@@ -224,8 +224,8 @@ const UXDesignServices: FC = () => {
           Pricing Tiers
         </h2>
         <p className="my-4">
-          Our company rebranding services are{" "}
-          <strong>tailored to your needs</strong>. Below are our pricing tiers:
+          Our company rebranding services are
+          tailored to your needs. Below are our pricing tiers:
         </p>
         <ul>
           {websiteServices.map(
@@ -236,7 +236,7 @@ const UXDesignServices: FC = () => {
                 <li key={index}>
                   <span className="font-bold text-secondary">
                     {tiers.name}:
-                  </span>{" "}
+                  </span>
                   {tiers.info}
                 </li>
               ))
@@ -261,7 +261,7 @@ const UXDesignServices: FC = () => {
             className="p-0 inline-flex m-0"
           >
             Contact us today
-          </Button>{" "}
+          </Button>
           to create a user experience that drives engagement, improves
           conversions, and elevates your brand!
         </p>

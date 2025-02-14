@@ -69,7 +69,7 @@ const TutorialCreationServices: FC = () => {
           <ul>
             {section.items.map((item, itemIndex) => (
               <li key={itemIndex}>
-                <span className="font-bold text-secondary">{item.title}:</span>{" "}
+                <span className="font-bold text-secondary">{item.title}:</span>
                 {item.description}
               </li>
             ))}
@@ -113,7 +113,7 @@ const TutorialCreationServices: FC = () => {
           Get Started Today
         </h2>
         <p>
-          Ready to create tutorials that educate and engage your audience?{" "}
+          Ready to create tutorials that educate and engage your audience?
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}
