@@ -16,6 +16,12 @@ const Testimonials = () => {
     router.push("/info/testimonials");
   };
 
+  const featuredTestimonials = testimonials
+    .filter((testimonial) => testimonial.featured === true)
+    .sort((a, b) => {
+      return a.name.localeCompare(b.name);
+    });
+
   return (
     <>
       {!isSmallScreen && (
@@ -39,7 +45,7 @@ const Testimonials = () => {
             className="mySwiper"
             slidesPerView={1}
           >
-            {testimonials.map((testimonial) => (
+            {featuredTestimonials.map((testimonial) => (
               <SwiperSlide key={testimonial.name} className="p-6 mx-auto">
                 {testimonial.featured && (
                   <div className="p-6 rounded-lg border-2 bg-card text-card-foreground mx-10 mb-8">
