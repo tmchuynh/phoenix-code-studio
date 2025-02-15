@@ -22,16 +22,16 @@ const FeaturedBlogs = () => {
   const [articlesPerPage, setArticlesPerPage] = useState(6);
 
   // Filtered blogs
-  const featuredBlogs = blogs.filter((blog) => blog.featured === true);
-
-  const sortedBlogs = featuredBlogs.sort((a, b) => {
-    return a.title.localeCompare(b.title);
-  });
+  const featuredBlogs = blogs
+    .filter((blog) => blog.featured === true)
+    .sort((a, b) => {
+      return a.title.localeCompare(b.title);
+    });
 
   // Pagination logic
   const indexOfLastArticle = currentPage * articlesPerPage;
   const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
-  const currentBlogs = sortedBlogs.slice(
+  const currentBlogs = featuredBlogs.slice(
     indexOfFirstArticle,
     indexOfLastArticle
   );
@@ -40,7 +40,7 @@ const FeaturedBlogs = () => {
     setCurrentPage(pageNumber);
   };
 
-  const totalPages = Math.ceil(sortedBlogs.length / articlesPerPage);
+  const totalPages = Math.ceil(featuredBlogs.length / articlesPerPage);
 
   return (
     <section className="w-10/12 md:w-11/12 mx-auto py-6">
