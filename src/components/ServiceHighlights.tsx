@@ -1,8 +1,3 @@
-import {
-  companySpecificServices,
-  websiteServices,
-  contentCreationServices,
-} from "@/lib/constants";
 import { FC, useState } from "react";
 import {
   Pagination,
@@ -11,6 +6,7 @@ import {
 } from "@/components/ui/pagination";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
+import { subServiceDetails } from "@/lib/sub-services";
 
 const IconDisplay: FC<{
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
@@ -26,26 +22,16 @@ const IconDisplay: FC<{
 const ServiceHighlights = () => {
   const router = useRouter();
 
-  const allServices = [
-    ...companySpecificServices,
-    ...websiteServices,
-    ...contentCreationServices,
-  ];
-
-  const sortedServices = allServices.sort((a, b) => {
-    return a.name.localeCompare(b.name);
-  });
-
   const [currentPage, setCurrentPage] = useState(1);
   const [servicesPerPage, setServicesPerPage] = useState(6);
 
-  const featuredServices = sortedServices.filter(
-    (service) => service.featured === true
-  );
+  const featuredServices = subServiceDetails
+    .filter((service) => service.info.featured === true)
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   const indexOfLastService = currentPage * servicesPerPage;
   const indexOfFirstService = indexOfLastService - servicesPerPage;
-  const currentServices = sortedServices.slice(
+  const currentServices = featuredServices.slice(
     indexOfFirstService,
     indexOfLastService
   );
@@ -54,7 +40,7 @@ const ServiceHighlights = () => {
     setCurrentPage(pageNumber);
   };
 
-  const totalPages = Math.ceil(sortedServices.length / servicesPerPage);
+  const totalPages = Math.ceil(featuredServices.length / servicesPerPage);
 
   const navigateToServices = () => {
     router.push("/info/blogs");
@@ -109,13 +95,13 @@ const ServiceHighlights = () => {
             className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground"
           >
             {/* Pass the correct Icon component */}
-            <IconDisplay Icon={service.Icon} />
+            <IconDisplay Icon={service.info.Icon} />
 
             <h3 className="font-semibold text-center text-secondary h-32 px-5 flex justify-center items-center">
-              {service.name}
+              {service.info.name}
             </h3>
 
-            <p className="text-center mt-4">{service.short}</p>
+            <p className="text-center mt-4">{service.info.short}</p>
           </div>
         ))}
       </div>
