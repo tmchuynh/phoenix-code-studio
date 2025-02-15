@@ -6,15 +6,14 @@ export async function GET(
   { params }: { params: { category: string; }; }
 ) {
   const { category } = params;
-  // Find the matching category in the allServices array
+
+  // Find the matching item in allServices
   const serviceItem = allServices.find( ( item ) => item.name === category );
-  // If no matching item is found, return a 404
+
   if ( !serviceItem ) {
     return NextResponse.json( { error: "Category not found" }, { status: 404 } );
   }
-  // Return the category name along with its info
-  return NextResponse.json( {
-    category: serviceItem.name,
-    ...serviceItem.info,
-  } );
+
+  // Return the whole object { name, info: { description, subServices } }
+  return NextResponse.json( serviceItem );
 }
