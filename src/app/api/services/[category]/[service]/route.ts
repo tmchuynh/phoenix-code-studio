@@ -1,12 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
 import { subServiceDetails } from "@/lib/sub-services";
 
+interface RouteContext {
+  params: {
+    category: string;
+    service: string;
+  };
+}
+
 export async function GET(
   req: NextRequest,
-  context: { params: { category: string; service: string; }; }
+  { params }: RouteContext
 ) {
-  // Destructure directly from context.params
-  const { category, service } = context.params;
+  // Now TypeScript knows params.category & params.service are strings
+  const { category, service } = params;
 
   const subService = subServiceDetails.find(
     ( item ) => item.category === category && item.name === service
