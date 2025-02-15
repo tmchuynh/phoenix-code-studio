@@ -1,11 +1,8 @@
 "use client";
+
 import { FC, useState } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  websiteServices,
-  contentCreationServices,
-  paymentPlans,
-} from "@/lib/constants";
+import { paymentPlans } from "@/lib/constants";
 import Image from "next/image";
 import { BpCheckbox } from "@/components/ui/checkbox-custom";
 import {
@@ -16,27 +13,44 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { FaChevronDown } from "react-icons/fa";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
-import { cn } from "@/lib/utils";
+import { capitalize, cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
+import { allServices } from "@/lib/service-categories";
+
+export type ServiceTypeKeys =
+  | "comprehensiveWebsiteSolutions"
+  | "seoOptimizedContentCreationServices"
+  | "corporateDigitalSolutions";
+
+export interface FormDataType {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+  paymentPlan: string;
+  comprehensiveWebsiteSolutions: string[];
+  seoOptimizedContentCreationServices: string[];
+  corporateDigitalSolutions: string[];
+}
 
 const ContactUsPage: FC = () => {
   const { theme } = useTheme();
 
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormDataType>({
     name: "",
     email: "",
     subject: "",
     message: "",
-    websiteServices: [] as string[],
-    contentCreationServices: [] as string[],
     paymentPlan: "",
+    comprehensiveWebsiteSolutions: [],
+    seoOptimizedContentCreationServices: [],
+    corporateDigitalSolutions: [],
   });
 
   const [submitted, setSubmitted] = useState(false);
-  const [showWebsiteServices, setShowWebsiteServices] = useState(false);
-  const [showContentCreationServices, setShowContentCreationServices] =
-    useState(false);
+  const [expandedServices, setExpandedServices] = useState<string[]>([]);
 
+  // Handle text input and textarea changes
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -47,20 +61,11 @@ const ContactUsPage: FC = () => {
     }));
   };
 
-  const handleServiceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, checked } = e.target;
-
-    if (name === "websiteServices") {
-      setShowWebsiteServices(checked);
-    } else if (name === "contentCreationServices") {
-      setShowContentCreationServices(checked);
-    }
-  };
-
-  const handleServiceSelect = (
+  // Handle checking/unchecking a specific service
+  function handleServiceSelect(
     e: React.ChangeEvent<HTMLInputElement>,
-    serviceType: "websiteServices" | "contentCreationServices"
-  ) => {
+    serviceType: ServiceTypeKeys
+  ) {
     const { value, checked } = e.target;
     setFormData((prevState) => {
       const updatedServices = checked
@@ -72,20 +77,64 @@ const ContactUsPage: FC = () => {
         [serviceType]: updatedServices,
       };
     });
+  }
+
+  const handleMainServiceCheck = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    serviceType: string
+  ) => {
+    const { checked } = e.target;
+
+    setExpandedServices((prev) => {
+      if (checked) {
+        // Add this serviceType if not already in array
+        return prev.includes(serviceType) ? prev : [...prev, serviceType];
+      } else {
+        // Remove serviceType if it was there
+        return prev.filter((type) => type !== serviceType);
+      }
+    });
   };
 
+  const handleSubServiceSelect = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    serviceType: ServiceTypeKeys
+  ) => {
+    const { value, checked } = e.target;
+    setFormData((prev) => {
+      const currentArr = prev[serviceType];
+      let updatedArr: string[];
+
+      if (checked) {
+        updatedArr = currentArr.includes(value)
+          ? currentArr
+          : [...currentArr, value];
+      } else {
+        updatedArr = currentArr.filter((sub) => sub !== value);
+      }
+
+      return {
+        ...prev,
+        [serviceType]: updatedArr,
+      };
+    });
+  };
+
+  // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
+    console.log("Submitted formData:", formData);
 
     setSubmitted(true);
+    // Reset form if desired
     setFormData({
       name: "",
       email: "",
       subject: "",
       message: "",
-      websiteServices: [],
-      contentCreationServices: [],
+      comprehensiveWebsiteSolutions: [],
+      seoOptimizedContentCreationServices: [],
+      corporateDigitalSolutions: [],
       paymentPlan: "",
     });
   };
@@ -99,12 +148,10 @@ const ContactUsPage: FC = () => {
             Contact Us
           </h1>
           <p>
-            Have questions or ready to start a project? We’re here to help! Our
-            team is dedicated to providing you with the best support, whether
-            you need more information about our services or assistance with a
-            specific request. Reach out to us, and we’ll get back to you as
-            quickly as possible. We look forward to working with you and turning
-            your ideas into reality.
+            Have questions or ready to start a project? We’re here to help!
+            Whether you need more information about our services or assistance
+            with a specific request, reach out to us and we’ll respond as soon
+            as possible.
           </p>
         </div>
         <Image
@@ -193,75 +240,44 @@ const ContactUsPage: FC = () => {
               />
             </div>
 
-            {/* Website Services Section */}
-            <div className="mb-4">
-              <label className="inline-flex items-center text-lg font-semibold">
-                <BpCheckbox
-                  name="websiteServices"
-                  checked={showWebsiteServices}
-                  onChange={handleServiceChange}
-                  className="mr-2"
-                />
-                Website Services
-              </label>
-              {showWebsiteServices && (
-                <div className="pl-4 grid grid-cols md:grid-cols-2 lg:grid-cols-3">
-                  {websiteServices.map((service, index) => (
-                    <div key={index} className="my-2">
-                      <label className="inline-flex items-center text-lg font-semibold text-accent-1">
-                        <BpCheckbox
-                          value={service.name}
-                          checked={formData.websiteServices.includes(
-                            service.name
-                          )}
-                          onChange={(e) =>
-                            handleServiceSelect(e, "websiteServices")
-                          }
-                          className="mr-2"
-                        />
-                        {service.name}
-                      </label>
+            {/* Dynamically Render All Services */}
+            <h2 className="text-xl font-semibold mt-6 mb-2">Select Services</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pl-2">
+              {allServices.map((service, index) => (
+                <div key={index} className="my-2">
+                  <label className="inline-flex items-center text-lg font-semibold">
+                    <BpCheckbox
+                      // "expanded" or "checked" state based on expandedServices
+                      checked={expandedServices.includes(service.type)}
+                      onChange={(e) => handleMainServiceCheck(e, service.type)}
+                      className="mr-2"
+                    />
+                    {capitalize(service.name.replace(/-/g, " "))}
+                  </label>
+
+                  {expandedServices.includes(service.type) && (
+                    <div className="pl-6 mt-2 space-y-2">
+                      {service.info.subServices.map((sub) => (
+                        <label key={sub} className="flex items-center">
+                          <BpCheckbox
+                            value={sub}
+                            checked={formData[service.type].includes(sub)}
+                            onChange={(e) =>
+                              handleSubServiceSelect(e, service.type)
+                            }
+                            className="mr-2"
+                          />
+                          {capitalize(sub.replace(/-/g, " "))}
+                        </label>
+                      ))}
                     </div>
-                  ))}
+                  )}
                 </div>
-              )}
+              ))}
             </div>
 
-            {/* Content Creation Services Section */}
-            <div className="mb-4">
-              <label className="inline-flex items-center text-lg font-semibold">
-                <BpCheckbox
-                  name="contentCreationServices"
-                  checked={showContentCreationServices}
-                  onChange={handleServiceChange}
-                  className="mr-2"
-                />
-                Content Creation Services
-              </label>
-              {showContentCreationServices && (
-                <div className="pl-4 grid grid-cols md:grid-cols-2 lg:grid-cols-3">
-                  {contentCreationServices.map((service, index) => (
-                    <div key={index} className="my-2">
-                      <label className="inline-flex items-center text-lg font-semibold text-accent-1">
-                        <BpCheckbox
-                          value={service.name}
-                          checked={formData.contentCreationServices.includes(
-                            service.name
-                          )}
-                          onChange={(e) =>
-                            handleServiceSelect(e, "contentCreationServices")
-                          }
-                          className="mr-2"
-                        />
-                        {service.name}
-                      </label>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <div className="mb-4">
+            {/* Payment Plan (Dropdown) */}
+            <div className="mt-6 mb-4">
               <DropdownMenu className="w-full">
                 <DropdownMenuTrigger asChild>
                   <button className="w-full text-start p-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary flex items-center justify-between">
@@ -276,7 +292,7 @@ const ContactUsPage: FC = () => {
                       onClick={() => {
                         setFormData((prevState) => ({
                           ...prevState,
-                          paymentPlan: plan.title, // Update selected payment plan
+                          paymentPlan: plan.title,
                         }));
                       }}
                     >
