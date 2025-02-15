@@ -14,14 +14,14 @@ const StarRating: React.FC<StarRatingProps> = ({ rating, maxStars = 5 }) => {
           return (
             <Star
               key={index}
-              className="w-6 h-6 text-yellow-500 fill-yellow-500 stroke-yellow-500"
+              className="w-6 h-6 text-accent-5 fill-accent-5 stroke-accent-5"
             />
           );
         } else if (rating >= starValue - 0.5) {
           return (
             <div key={index} className="relative w-6 h-6">
               <Star className="absolute w-6 h-6 text-muted stroke-muted" />
-              <StarHalf className="absolute w-6 h-6 text-yellow-500" />
+              <StarHalf className="absolute w-6 h-6 text-accent-5" />
             </div>
           );
         } else {
