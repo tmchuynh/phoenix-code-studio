@@ -1,4 +1,3 @@
-// app/api/services/[category]/route.ts
 import { allServices } from "@/lib/service-categories";
 import { NextRequest, NextResponse } from "next/server";
 

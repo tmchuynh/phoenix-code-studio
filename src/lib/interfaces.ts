@@ -17,11 +17,14 @@ export interface PricingTier {
 
 export interface ServiceCategory {
   name: string;
+  title: string;
+  short: string;
   info: ServiceInfo;
 }
 
 export interface ServiceInfo {
-  description: string;
+  description: string[];
+  short: string;
   subServices: string[];
 }
 
@@ -29,6 +32,8 @@ export interface SubServiceItem {
   category: string;
   name: string;
   info: SubServiceInfo;
+  details: SubServiceDetail[];
+  cta: CTA;
 }
 
 export interface SubServiceInfo {
@@ -46,7 +51,7 @@ export interface SubServiceInfo {
 export interface SubServiceDetail {
   title: string;
   intro?: string[];
-  lists: {
+  lists?: {
     title?: string;
     description: string;
     info?: string[];
@@ -55,7 +60,7 @@ export interface SubServiceDetail {
 
 export interface CTA {
   title: string;
-  intro: string;
+  intro?: string;
   text?: string;
   button: string;
   afterButtonText?: string;
