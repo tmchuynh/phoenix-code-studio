@@ -1,15 +1,10 @@
-import { NextResponse } from "next/server";
 import { subServiceDetails } from "@/lib/sub-services";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(
-  request: Request,
-  context: any // or just omit the type
-) {
-  // Destructure from context.params
-  const { category, service } = context.params as {
-    category: string;
-    service: string;
-  };
+export async function GET( request: NextRequest ) {
+  const { searchParams } = new URL( request.url );
+  const category = searchParams.get( 'category' );
+  const service = searchParams.get( 'service' );
 
   const subService = subServiceDetails.find(
     ( item ) => item.category === category && item.name === service
