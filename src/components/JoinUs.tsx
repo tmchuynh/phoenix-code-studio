@@ -1,9 +1,8 @@
-import EmphasizeText from "@/components/Highlighted";
 import { Button } from "./ui/button";
 
 const JoinUs = () => {
   return (
-    <section className="py-16 w-10/12 mx-auto text-balance text-end space-y-7">
+    <section className="py-16 px-20 mx-auto text-balance text-end space-y-7">
       <h1 className="text-3xl md:text-4xl font-bold text-primary">
         Join Our Team – Build the Future with Us
       </h1>
@@ -27,7 +26,7 @@ const JoinUs = () => {
 
       <Button
         className="my-3 w-1/2"
-        variant={"secondary"}
+        variant={"accent"}
         onClick={() => (window.location.href = "/info/career")}
       >
         View Open Positions
