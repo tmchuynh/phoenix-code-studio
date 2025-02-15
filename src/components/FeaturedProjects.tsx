@@ -21,13 +21,11 @@ const FeaturedProjects = () => {
   const [projectsPerPage, setProjectsPerPage] = useState(6);
 
   // Filtered blogs
-  const featuredProjects = pastProjects.filter(
-    (pastProjects) => pastProjects.featured === true
-  );
-
-  const sortedProjects = featuredProjects.sort((a, b) => {
-    return b.title.localeCompare(a.title);
-  });
+  const sortedProjects = pastProjects
+    .filter((pastProjects) => pastProjects.featured === true)
+    .sort((a, b) => {
+      return b.title.localeCompare(a.title);
+    });
 
   // Pagination logic
   const indexOfLastProject = currentPage * projectsPerPage;
@@ -64,10 +62,10 @@ const FeaturedProjects = () => {
           {currentProjects.length > 0 ? (
             <p>
               Showing {indexOfFirstProject + 1} to{" "}
-              {indexOfLastProject > featuredProjects.length
-                ? featuredProjects.length
+              {indexOfLastProject > sortedProjects.length
+                ? sortedProjects.length
                 : indexOfLastProject}{" "}
-              of {featuredProjects.length} featured blogs
+              of {sortedProjects.length} featured blogs
             </p>
           ) : (
             <p>No featured blogs available</p>
