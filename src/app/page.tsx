@@ -1,5 +1,4 @@
 "use client";
-
 import AboutSection from "@/components/AboutSection";
 import CallToAction from "@/components/CallToAction";
 import FeaturedBlogs from "@/components/FeaturedBlogs";
@@ -13,7 +12,6 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FC } from "react";
-import { GoRocket } from "react-icons/go";
 import "swiper/css";
 
 const WelcomePage: FC = () => {
