@@ -236,7 +236,7 @@ const PastProjectsPage: FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {/* Languages Filter */}
             <div>
-              <h3 className="font-semibold">Filter by Languages</h3>
+              <h3>Filter by Languages</h3>
               <div className="grid grid-cols-2 justify-start items-start w-full gap-x-2">
                 {allLanguages.map((language) => (
                   <div key={language} className="flex items-center">
@@ -259,7 +259,7 @@ const PastProjectsPage: FC = () => {
 
             {/* Frameworks Filter */}
             <div>
-              <h3 className="font-semibold">Filter by Frameworks</h3>
+              <h3>Filter by Frameworks</h3>
               <div className="grid grid-cols-2 justify-start items-start w-full gap-x-2">
                 {allFrameworks.map((framework) => (
                   <div key={framework} className="flex items-center">
@@ -282,7 +282,7 @@ const PastProjectsPage: FC = () => {
 
             {/* Libraries Filter */}
             <div>
-              <h3 className="font-semibold">Filter by Libraries</h3>
+              <h3>Filter by Libraries</h3>
               <div className="grid grid-cols-2 justify-start items-start w-full gap-x-2">
                 {allLibraries.map((library) => (
                   <div key={library} className="flex items-center">
@@ -305,7 +305,7 @@ const PastProjectsPage: FC = () => {
 
             {/* Technologies Filter */}
             <div>
-              <h3 className="font-semibold">Filter by Technologies</h3>
+              <h3>Filter by Technologies</h3>
               <div className="grid grid-cols-2 justify-start items-start w-full gap-x-2">
                 {allTechnologies.map((library) => (
                   <div key={library} className="flex items-center">
@@ -328,7 +328,7 @@ const PastProjectsPage: FC = () => {
 
             {/* Tags Filter */}
             <div>
-              <h3 className="font-semibold">Filter by Tags</h3>
+              <h3>Filter by Tags</h3>
               <div className="grid grid-cols-2 justify-start items-start w-full gap-x-2">
                 {allTags.map((tag) => (
                   <div key={tag} className="flex items-center">
@@ -353,7 +353,7 @@ const PastProjectsPage: FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {/* Frameworks Filter */}
             <div>
-              <h3 className="font-semibold">Filter by Frameworks</h3>
+              <h3>Filter by Frameworks</h3>
               <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
                 {allFrameworks.sort().map((framework) => (
                   <div key={framework} className="flex items-center">
@@ -376,7 +376,7 @@ const PastProjectsPage: FC = () => {
 
             {/* Languages Filter */}
             <div>
-              <h3 className="font-semibold">Filter by Languages</h3>
+              <h3>Filter by Languages</h3>
               <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
                 {allLanguages.sort().map((language) => (
                   <div key={language} className="flex items-center">
@@ -399,7 +399,7 @@ const PastProjectsPage: FC = () => {
 
             {/* Libraries Filter */}
             <div>
-              <h3 className="font-semibold">Filter by Libraries</h3>
+              <h3>Filter by Libraries</h3>
               <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
                 {allLibraries.sort().map((library) => (
                   <div key={library} className="flex items-center">
@@ -422,7 +422,7 @@ const PastProjectsPage: FC = () => {
 
             {/* Tags Filter */}
             <div>
-              <h3 className="font-semibold">Filter by Tags</h3>
+              <h3>Filter by Tags</h3>
               <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
                 {allTags.sort().map((tag) => (
                   <div key={tag} className="flex items-center">
@@ -443,7 +443,7 @@ const PastProjectsPage: FC = () => {
 
             {/* Technologies Filter */}
             <div>
-              <h3 className="font-semibold">Filter by Technologies</h3>
+              <h3>Filter by Technologies</h3>
               <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
                 {allTechnologies.sort().map((library) => (
                   <div key={library} className="flex items-center">

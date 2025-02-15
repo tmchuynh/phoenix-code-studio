@@ -75,7 +75,7 @@ const BlogPostPage = () => {
             post?.list?.description.map((description, index) => (
               <p key={index}>{description}</p>
             ))}
-          <ul className="list-disc pl-6 space-y-4">
+          <ul>
             {post?.list?.details.map((item, index) =>
               item.title ? (
                 <>

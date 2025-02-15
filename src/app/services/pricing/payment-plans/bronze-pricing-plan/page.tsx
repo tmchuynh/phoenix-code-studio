@@ -13,9 +13,7 @@ const BasicPlan = () => {
       <DynamicBreadcrumb />
       {/* Page Header */}
       <section className="mb-8">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
-          Basic Plan
-        </h1>
+        <h1>Basic Plan</h1>
         {isSmallScreen && (
           <p>
             Ideal for small projects or businesses just getting started. Pay as
@@ -52,9 +50,7 @@ const BasicPlan = () => {
       {/* Features Explanation */}
       <section className="space-y-8">
         <div className="mb-6">
-          <h2 className="text-2xl font-semibold text-secondary mb-2">
-            Features
-          </h2>
+          <h2>Features</h2>
           <ul className="text-lg grid gap-4 grid-cols-1 md:grid-cols-2">
             <li className="flex items-center">
               <svg
@@ -198,9 +194,7 @@ const BasicPlan = () => {
 
       {/* Pricing and Explanation */}
       <section>
-        <h2 className="text-2xl font-semibold text-secondary mb-4">
-          How it Works
-        </h2>
+        <h2>How it Works</h2>
         <p>
           The Basic Plan allows you to start small and scale your payments as
           you grow. You have the flexibility to choose how you want to pay based
@@ -210,9 +204,7 @@ const BasicPlan = () => {
 
         {/* Pay Per Service or Milestone */}
         <div className="mb-6">
-          <h3 className="font-semibold text-tertiary mb-2">
-            Pay Per Service or Milestone
-          </h3>
+          <h3>Pay Per Service or Milestone</h3>
           <p>
             Our "Pay Per Service or Milestone" option gives you the ultimate
             flexibility to control your budget by paying only for what you need.
@@ -227,7 +219,7 @@ const BasicPlan = () => {
 
         {/* Monthly Payments */}
         <div className="mb-6">
-          <h3 className="font-semibold text-tertiary mb-2">Monthly Payments</h3>
+          <h3>Monthly Payments</h3>
           <p>
             For those who prioritize budget predictability and financial
             flexibility, our monthly payment option offers a convenient
@@ -242,9 +234,7 @@ const BasicPlan = () => {
 
         {/* Up to 3 Months Payment Term */}
         <div className="mb-6">
-          <h3 className="font-semibold text-tertiary mb-2">
-            Up to 3 Months Payment Term
-          </h3>
+          <h3>Up to 3 Months Payment Term</h3>
           <p>
             For larger or more complex projects, we offer payment terms of up to
             three months to provide added flexibility. This option allows you to

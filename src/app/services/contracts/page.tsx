@@ -12,9 +12,7 @@ const ExampleContractsPage: FC = () => {
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        Explore Our Contract Examples
-      </h1>
+      <h1>Explore Our Contract Examples</h1>
       <p>
         Discover a variety of contract structures designed to accommodate
         different hiring needs, project scopes, and budgets. Whether you're
@@ -42,9 +40,7 @@ const ExampleContractsPage: FC = () => {
       {/* Company Contract */}
       <section className="my-8 flex flex-col justify-between">
         <div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-            1. Companies Hiring Phoenix Code Studio
-          </h2>
+          <h2>1. Companies Hiring Phoenix Code Studio</h2>
           <p>
             This contract serves as a comprehensive agreement for companies
             hiring Phoenix Code Studio for a project. It is designed to
@@ -60,56 +56,41 @@ const ExampleContractsPage: FC = () => {
             every detail has been carefully considered to ensure a successful
             partnership.
           </p>
-          <ul className="list-disc pl-6 space-y-1">
+          <ul>
             <li>
-              <span className="font-bold text-secondary">Project Scope:</span> A
-              comprehensive description of the project, including detailed
-              deliverables, timelines, and any specific requirements or
-              constraints.
+              <span>Project Scope:</span> A comprehensive description of the
+              project, including detailed deliverables, timelines, and any
+              specific requirements or constraints.
             </li>
             <li>
-              <span className="font-bold text-secondary">Payment Terms:</span> A
-              structured payment plan, typically including an initial deposit,
-              milestone payments tied to project phases, and a final payment
-              upon project completion.
+              <span>Payment Terms:</span> A structured payment plan, typically
+              including an initial deposit, milestone payments tied to project
+              phases, and a final payment upon project completion.
             </li>
             <li>
-              <span className="font-bold text-secondary">
-                Confidentiality and NDA:
-              </span>{" "}
-              An agreement ensuring all proprietary information, trade secrets,
-              and intellectual property remain confidential and are protected.
+              <span>Confidentiality and NDA:</span> An agreement ensuring all
+              proprietary information, trade secrets, and intellectual property
+              remain confidential and are protected.
             </li>
             <li>
-              <span className="font-bold text-secondary">
-                Project Timeline:
-              </span>{" "}
-              Clearly defined project phases, deadlines, and milestones, with
-              built-in checkpoints for client review and feedback to ensure
-              alignment.
+              <span>Project Timeline:</span> Clearly defined project phases,
+              deadlines, and milestones, with built-in checkpoints for client
+              review and feedback to ensure alignment.
             </li>
             <li>
-              <span className="font-bold text-secondary">
-                Revisions and Feedback:
-              </span>{" "}
-              Details on how client feedback is collected, the number of
-              revisions included within the project scope, and processes for
-              additional changes if needed.
+              <span>Revisions and Feedback:</span> Details on how client
+              feedback is collected, the number of revisions included within the
+              project scope, and processes for additional changes if needed.
             </li>
             <li>
-              <span className="font-bold text-secondary">
-                Ownership of Deliverables:
-              </span>{" "}
-              Clarification of ownership rights, ensuring the client receives
-              full rights to the final deliverables upon project completion and
-              final payment.
+              <span>Ownership of Deliverables:</span> Clarification of ownership
+              rights, ensuring the client receives full rights to the final
+              deliverables upon project completion and final payment.
             </li>
             <li>
-              <span className="font-bold text-secondary">
-                Support and Maintenance:
-              </span>{" "}
-              Optional terms for post-project support or maintenance, outlining
-              services, duration, and associated costs if applicable.
+              <span>Support and Maintenance:</span> Optional terms for
+              post-project support or maintenance, outlining services, duration,
+              and associated costs if applicable.
             </li>
           </ul>
         </div>
@@ -129,9 +110,7 @@ const ExampleContractsPage: FC = () => {
       {/* Individual Contract */}
       <section className="my-8 flex flex-col justify-between">
         <div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-            2. Individuals Hiring Phoenix Code Studio
-          </h2>
+          <h2>2. Individuals Hiring Phoenix Code Studio</h2>
           <p>
             This contract is specifically designed for individuals seeking to
             hire Phoenix Code Studio for a personalized project. Whether it’s a
@@ -147,55 +126,44 @@ const ExampleContractsPage: FC = () => {
             their specific goals and requirements are being met with
             professionalism and care.
           </p>
-          <ul className="list-disc pl-6 space-y-1">
+          <ul>
             <li>
-              <span className="font-bold text-secondary">Project Scope:</span> A
-              detailed outline of the project goals, expectations, and specific
-              final deliverables. Flexibility is provided to accommodate
-              personal preferences and adjustments.
+              <span>Project Scope:</span> A detailed outline of the project
+              goals, expectations, and specific final deliverables. Flexibility
+              is provided to accommodate personal preferences and adjustments.
             </li>
             <li>
-              <span className="font-bold text-secondary">Payment Terms:</span>{" "}
-              Various payment options, including upfront payments, hourly rates,
-              or installments. The structure is designed to provide flexibility
-              based on the individual’s budget and project size.
+              <span>Payment Terms:</span> Various payment options, including
+              upfront payments, hourly rates, or installments. The structure is
+              designed to provide flexibility based on the individual’s budget
+              and project size.
             </li>
             <li>
-              <span className="font-bold text-secondary">
-                Revisions and Feedback:
-              </span>{" "}
-              Inclusion of a specified number of revisions to ensure the final
-              product meets the individual’s expectations. A process for
-              providing feedback and incorporating changes is clearly outlined.
+              <span>Revisions and Feedback:</span> Inclusion of a specified
+              number of revisions to ensure the final product meets the
+              individual’s expectations. A process for providing feedback and
+              incorporating changes is clearly outlined.
             </li>
             <li>
-              <span className="font-bold text-secondary">
-                Intellectual Property:
-              </span>{" "}
-              An agreement clarifying ownership rights of the final
-              deliverables, ensuring the individual has full rights to the
-              completed work upon final payment.
+              <span>Intellectual Property:</span> An agreement clarifying
+              ownership rights of the final deliverables, ensuring the
+              individual has full rights to the completed work upon final
+              payment.
             </li>
             <li>
-              <span className="font-bold text-secondary">Timeline:</span> A
-              clear timeline for project milestones and expected completion
-              dates, with built-in flexibility to adapt to the client’s needs
-              and schedule.
+              <span>Timeline:</span> A clear timeline for project milestones and
+              expected completion dates, with built-in flexibility to adapt to
+              the client’s needs and schedule.
             </li>
             <li>
-              <span className="font-bold text-secondary">
-                Termination Clause:
-              </span>{" "}
-              Terms detailing how the agreement can be terminated by either
-              party, including notice periods and any applicable refund
-              policies.
+              <span>Termination Clause:</span> Terms detailing how the agreement
+              can be terminated by either party, including notice periods and
+              any applicable refund policies.
             </li>
             <li>
-              <span className="font-bold text-secondary">
-                Additional Services:
-              </span>{" "}
-              Options for add-ons such as post-project support or training to
-              help the individual maximize the value of the final deliverables.
+              <span>Additional Services:</span> Options for add-ons such as
+              post-project support or training to help the individual maximize
+              the value of the final deliverables.
             </li>
           </ul>
         </div>
@@ -215,9 +183,7 @@ const ExampleContractsPage: FC = () => {
       {/* Additional Contract Information */}
       <section className="my-8 flex flex-col justify-between">
         <div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-            Custom Contracts
-          </h2>
+          <h2>Custom Contracts</h2>
           <p>
             Our team will take the time to understand your objectives,
             challenges, and expectations, ensuring that every detail is

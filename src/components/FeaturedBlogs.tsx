@@ -44,9 +44,7 @@ const FeaturedBlogs = () => {
 
   return (
     <section className="w-10/12 md:w-11/12 mx-auto py-6">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
-        Featured Blogs
-      </h2>
+      <h2>Featured Blogs</h2>
       <Pagination className="gap-5 flex items-center pb-5">
         <PaginationPrevious
           onClick={() => {
@@ -91,7 +89,7 @@ const FeaturedBlogs = () => {
             className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground flex flex-col justify-between"
           >
             <div className="flex flex-col justify-around">
-              <h3 className="font-semibold text-center text-tertiary h-32 flex justify-center items-center">
+              <h3 className="font-semibold text-center h-32 flex justify-center items-center">
                 {blog.title}
               </h3>
               <div>

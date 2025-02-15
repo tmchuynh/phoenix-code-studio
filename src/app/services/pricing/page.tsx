@@ -27,9 +27,7 @@ const PricingPage: FC = () => {
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        Our Pricing and Service Tiers
-      </h1>
+      <h1>Our Pricing and Service Tiers</h1>
       <p>
         Explore our flexible pricing options designed to suit a variety of needs
         and budgets. Whether you're looking for a basic package or a
@@ -48,9 +46,7 @@ const PricingPage: FC = () => {
       {allServices.map((service, index) => (
         <section className="my-8" key={index}>
           <div className="pb-3 flex flex-col">
-            <h2 className="txt-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-              {service.short}
-            </h2>
+            <h2>{service.short}</h2>
             {service.info.description.map((info, SIndex) => (
               <p key={SIndex}>{info}</p>
             ))}

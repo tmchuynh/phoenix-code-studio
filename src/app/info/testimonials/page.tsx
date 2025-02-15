@@ -11,9 +11,7 @@ const TestimonialsPage: FC = () => {
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-        Testimonials from Our Clients
-      </h1>
+      <h1>Testimonials from Our Clients</h1>
       <p>
         Discover the stories of our satisfied clients who have experienced
         firsthand the transformative impact of our services. From achieving

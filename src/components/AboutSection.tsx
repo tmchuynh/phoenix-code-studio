@@ -12,9 +12,7 @@ import { GrGrow } from "react-icons/gr";
 const AboutSection = () => {
   return (
     <section className="w-10/12 md:w-11/12 mx-auto py-6">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-0 text-center">
-        Who We Are
-      </h2>
+      <h2>Who We Are</h2>
       <h3 className="text-center mb-4">
         Elevating Brands with Cutting-Edge Digital Solutions
       </h3>
@@ -41,7 +39,7 @@ const AboutSection = () => {
         {/* Creativity & Innovation */}
         <div className="text-center">
           <FaRegLightbulb className="text-6xl text-accent-5 mx-auto mb-4" />
-          <h3 className="font-bold text-secondary">Creativity & Innovation</h3>
+          <h3>Creativity & Innovation</h3>
           <p>
             We combine imagination and technology to craft unique,
             forward-thinking digital solutions. By embracing emerging trends and
@@ -53,7 +51,7 @@ const AboutSection = () => {
         {/* Adaptability & Growth */}
         <div className="text-center">
           <GrGrow className="text-6xl text-accent-5 mx-auto mb-4" />
-          <h3 className="font-bold text-secondary">Adaptability & Growth</h3>
+          <h3>Adaptability & Growth</h3>
           <p>
             We thrive on change and innovation, continuously evolving to stay
             ahead in the digital landscape. Our solutions are flexible,
@@ -65,7 +63,7 @@ const AboutSection = () => {
         {/* Authenticity */}
         <div className="text-center">
           <FaSeedling className="text-6xl text-accent-5 mx-auto mb-4" />
-          <h3 className="font-bold text-secondary">Authenticity</h3>
+          <h3>Authenticity</h3>
           <p>
             We craft genuine digital experiences that reflect each brand’s
             unique identity and values. Our solutions build authentic
@@ -76,7 +74,7 @@ const AboutSection = () => {
         {/* Excellence */}
         <div className="text-center">
           <FaStar className="text-6xl text-accent-5 mx-auto mb-4" />
-          <h3 className="font-bold text-secondary">Excellence</h3>
+          <h3>Excellence</h3>
           <p>
             We deliver exceptional, user-focused solutions that go beyond
             expectations. Driven by innovation and continuous growth, we push
@@ -87,7 +85,7 @@ const AboutSection = () => {
         {/* Empowerment */}
         <div className="text-center">
           <FaHandsHelping className="text-6xl text-accent-5 mx-auto mb-4" />
-          <h3 className="font-bold text-secondary">Empowerment</h3>
+          <h3>Empowerment</h3>
           <p>
             We equip small businesses with the tools, resources, and support
             needed to thrive online. Our goal is to help them grow, compete, and
@@ -98,9 +96,7 @@ const AboutSection = () => {
         {/* Collaboration & Communication */}
         <div className="text-center">
           <FaHandshake className="text-6xl text-accent-5 mx-auto mb-4" />
-          <h3 className="font-bold text-secondary">
-            Collaboration & Communication
-          </h3>
+          <h3>Collaboration & Communication</h3>
           <p>
             Success starts with clear, open communication. We work closely with
             our clients, ensuring their ideas and goals shape every project,
@@ -111,7 +107,7 @@ const AboutSection = () => {
         {/* Community Impact */}
         <div className="text-center">
           <FaUsers className="text-6xl text-accent-5 mx-auto mb-4" />
-          <h3 className="font-bold text-secondary">Community Impact</h3>
+          <h3>Community Impact</h3>
           <p>
             We believe in using technology for positive change. Our work goes
             beyond serving clients—we create digital solutions that empower
@@ -122,7 +118,7 @@ const AboutSection = () => {
         {/* Sustainability */}
         <div className="text-center">
           <FaRecycle className="text-6xl text-accent-5 mx-auto mb-4" />
-          <h3 className="font-bold text-secondary">Sustainability</h3>
+          <h3>Sustainability</h3>
           <p>
             We create scalable, eco-friendly, and future-proof digital solutions
             through efficient design, responsible development, and adaptable

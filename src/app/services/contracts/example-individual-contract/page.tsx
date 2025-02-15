@@ -49,9 +49,7 @@ const ServiceAgreementPage = () => {
       {/* Agreement Sections */}
       <section className="space-y-10">
         <div>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
-            1. SERVICES
-          </h2>
+          <h2>1. SERVICES</h2>
 
           <p>
             <strong>1.1 Scope of Services:</strong> The Contractor agrees to
@@ -59,7 +57,7 @@ const ServiceAgreementPage = () => {
             terms of this Agreement:
           </p>
 
-          <ul className="list-disc pl-6 space-y-2">
+          <ul>
             <li>Detailed description of Service 1</li>
             <li>Detailed description of Service 2</li>
             <li>Detailed description of Service 3</li>
@@ -99,9 +97,7 @@ const ServiceAgreementPage = () => {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
-            2. COMPENSATION
-          </h2>
+          <h2>2. COMPENSATION</h2>
 
           <p>
             <strong>2.1 Payment Terms:</strong> The Client agrees to pay the
@@ -116,7 +112,7 @@ const ServiceAgreementPage = () => {
             according to the following schedule:
           </p>
 
-          <ul className="list-disc pl-6 space-y-2">
+          <ul>
             <li>
               <strong>First Payment:</strong>{" "}
               <EmphasizeText>[Amount]</EmphasizeText> due upon signing this
@@ -154,7 +150,7 @@ const ServiceAgreementPage = () => {
             made using one of the following accepted methods:
           </p>
 
-          <ul className="list-disc pl-6 space-y-2">
+          <ul>
             <li>
               <strong>Zelle:</strong> Payments must be sent to the Contractor’s
               designated Zelle account. The Client is responsible for ensuring
@@ -188,7 +184,7 @@ const ServiceAgreementPage = () => {
             funds have cleared in the Contractor’s account.
           </p>
 
-          <ul className="list-disc pl-6 space-y-2">
+          <ul>
             <li>
               All checks will be subject to bank verification, which may take{" "}
               <EmphasizeText>[X] </EmphasizeText>business days.
@@ -238,9 +234,7 @@ const ServiceAgreementPage = () => {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
-            3. EXPENSES
-          </h2>
+          <h2>3. EXPENSES</h2>
 
           <p>
             <strong>3.1 Contractor’s Responsibility:</strong> The Contractor
@@ -282,9 +276,7 @@ const ServiceAgreementPage = () => {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
-            4. OWNERSHIP AND INTELLECTUAL PROPERTY
-          </h2>
+          <h2>4. OWNERSHIP AND INTELLECTUAL PROPERTY</h2>
 
           <p>
             <strong>4.1 Contractor Ownership:</strong> The Contractor shall
@@ -343,9 +335,7 @@ const ServiceAgreementPage = () => {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
-            5. REVISIONS AND FEEDBACK
-          </h2>
+          <h2>5. REVISIONS AND FEEDBACK</h2>
 
           <p>
             <strong>5.1 Client Feedback Collection:</strong> Client feedback
@@ -372,7 +362,7 @@ const ServiceAgreementPage = () => {
             <strong>5.4 Process for Additional Changes:</strong>
           </p>
 
-          <ul className="list-disc pl-6 space-y-2">
+          <ul>
             <li>
               <strong>Formal Submission:</strong> All revision requests must be
               clearly documented and submitted in writing through email, a
@@ -400,9 +390,7 @@ const ServiceAgreementPage = () => {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
-            6. CONFIDENTIALITY
-          </h2>
+          <h2>6. CONFIDENTIALITY</h2>
 
           <p>
             <strong>6.1 Confidential Information Protection:</strong> The
@@ -431,7 +419,7 @@ const ServiceAgreementPage = () => {
             not apply to information that:
           </p>
 
-          <ul className="list-disc pl-6 space-y-2">
+          <ul>
             <li>
               Was already in the public domain at the time of disclosure or
               becomes publicly available without breach of this Agreement.
@@ -468,9 +456,7 @@ const ServiceAgreementPage = () => {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
-            7. TERM AND TERMINATION
-          </h2>
+          <h2>7. TERM AND TERMINATION</h2>
 
           <p>
             <strong>7.1 Term of Agreement:</strong> This Agreement shall take
@@ -489,7 +475,7 @@ const ServiceAgreementPage = () => {
             met:
           </p>
 
-          <ul className="list-disc pl-6 space-y-2">
+          <ul>
             <li>
               <strong>Material Breach:</strong> Either party commits a
               significant breach of contract, including but not limited to
@@ -529,7 +515,7 @@ const ServiceAgreementPage = () => {
             termination fee, which shall be calculated as follows:
           </p>
 
-          <ul className="list-disc pl-6 space-y-2">
+          <ul>
             <li>Payment for all work completed up to the termination date.</li>
             <li>
               Reimbursement for any non-refundable expenses incurred by the
@@ -561,9 +547,7 @@ const ServiceAgreementPage = () => {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
-            8. LIABILITY AND INDEMNIFICATION
-          </h2>
+          <h2>8. LIABILITY AND INDEMNIFICATION</h2>
           <p>
             <strong>8.1 Limitation of Liability:</strong> The Contractor shall
             not be held liable for any indirect, incidental, special,
@@ -582,7 +566,7 @@ const ServiceAgreementPage = () => {
             any claims, demands, damages, liabilities, losses, costs, and
             expenses (including reasonable attorney fees) arising from:
           </p>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul>
             <li>
               Any third-party claims related to the Client’s use of the services
               provided under this Agreement, including but not limited to claims
@@ -602,11 +586,9 @@ const ServiceAgreementPage = () => {
         </div>
 
         <div>
-          <h2 className="text-2xl font-semibold text-secondary mb-4">
-            9. GENERAL PROVISIONS
-          </h2>
+          <h2>9. GENERAL PROVISIONS</h2>
 
-          <ul className="list-disc pl-6 space-y-2">
+          <ul>
             <li>
               <strong>Governing Law:</strong> This Agreement shall be governed
               by and interpreted in accordance with the laws of the State of
@@ -626,7 +608,7 @@ const ServiceAgreementPage = () => {
               both parties. No verbal agreements, implied modifications, or
               informal communications shall be recognized as valid amendments to
               this Agreement, as outlined in Section 5.4.
-              <ul className="list-disc pl-6 space-y-2">
+              <ul>
                 <li>
                   Any proposed amendment must clearly state the specific
                   sections being modified, along with the rationale for the
@@ -677,7 +659,7 @@ const ServiceAgreementPage = () => {
               Agreement due to causes beyond its reasonable control, provided
               that such causes are not the result of the party's negligence or
               willful misconduct. Such events include, but are not limited to:
-              <ul className="list-disc pl-6 space-y-2">
+              <ul>
                 <li>
                   Acts of God, including but not limited to earthquakes,
                   hurricanes, floods, wildfires, or other natural disasters.
@@ -708,7 +690,7 @@ const ServiceAgreementPage = () => {
                 </li>
               </ul>
               In the event of a Force Majeure event:
-              <ul className="list-disc pl-6 space-y-2">
+              <ul>
                 <li>
                   The affected party must promptly notify the other party in
                   writing, detailing the nature of the event and its expected
@@ -738,7 +720,7 @@ const ServiceAgreementPage = () => {
               party. Any attempted assignment, transfer, or delegation without
               such consent shall be considered null and void. Notwithstanding
               the foregoing:
-              <ul className="list-disc pl-6 space-y-2">
+              <ul>
                 <li>
                   The Contractor may engage subcontractors or independent
                   contractors to assist in the provision of services, provided
@@ -786,7 +768,7 @@ const ServiceAgreementPage = () => {
               interpretation, performance, breach, or termination of this
               Agreement, shall first be resolved through good faith negotiations
               between the parties.
-              <ul className="list-disc pl-6 space-y-2">
+              <ul>
                 <li>
                   <strong>Negotiation and Mediation:</strong> If a dispute
                   arises, the parties agree to engage in good faith discussions

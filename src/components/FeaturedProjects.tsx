@@ -43,9 +43,7 @@ const FeaturedProjects = () => {
 
   return (
     <section className="w-10/12 md:w-11/12 mx-auto py-6">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 text-center">
-        Featured Projects
-      </h2>
+      <h2>Featured Projects</h2>
       <Pagination className="gap-5 flex items-center pb-5">
         <PaginationPrevious
           onClick={() => {

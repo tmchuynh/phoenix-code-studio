@@ -13,9 +13,7 @@ const CustomPlan = () => {
       <DynamicBreadcrumb />
       {/* Page Header */}
       <section className="mb-8">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
-          Custom Plan
-        </h1>
+        <h1>Custom Plan</h1>
         {isSmallScreen && (
           <p>
             Tailored payment options based on the complexity and size of your
@@ -52,9 +50,7 @@ const CustomPlan = () => {
       {/* Features Explanation */}
       <section className="space-y-8">
         <div className="mb-6">
-          <h2 className="text-2xl font-semibold text-secondary mb-2">
-            Features
-          </h2>
+          <h2>Features</h2>
           <ul className="text-lg grid gap-4 grid-cols-1 md:grid-cols-2">
             <li className="flex items-center">
               <svg
@@ -215,9 +211,7 @@ const CustomPlan = () => {
 
       {/* Pricing and Explanation */}
       <section>
-        <h2 className="text-2xl font-semibold text-secondary mb-4">
-          How it Works
-        </h2>
+        <h2>How it Works</h2>
         <p>
           The Custom Plan is designed to meet the specific needs of large and
           complex projects. We work with you to understand your project scope
@@ -227,9 +221,7 @@ const CustomPlan = () => {
 
         {/* Flexible Payment Terms */}
         <div className="mb-6">
-          <h3 className="font-semibold text-tertiary mb-2">
-            Flexible Payment Terms Based on Project Scope
-          </h3>
+          <h3>Flexible Payment Terms Based on Project Scope</h3>
           <p>
             We understand that every project is unique, which is why our payment
             terms are tailored to match the size, complexity, and scope of your
@@ -243,9 +235,7 @@ const CustomPlan = () => {
 
         {/* Ongoing Support and Scaling Options */}
         <div className="mb-6">
-          <h3 className="font-semibold text-tertiary mb-2">
-            Options for Ongoing Support and Scaling
-          </h3>
+          <h3>Options for Ongoing Support and Scaling</h3>
           <p>
             The Custom Plan is designed with your project's growth in mind,
             offering options for ongoing support and scalability. As your needs
@@ -259,9 +249,7 @@ const CustomPlan = () => {
 
         {/* Up to 24-Month Payment Term */}
         <div className="mb-6">
-          <h3 className="font-semibold text-tertiary mb-2">
-            Up to 24-Month Payment Term
-          </h3>
+          <h3>Up to 24-Month Payment Term</h3>
           <p>
             For large-scale and long-term projects, we offer extended payment
             terms of up to 24 months, providing maximum financial flexibility.
@@ -276,9 +264,7 @@ const CustomPlan = () => {
 
         {/* Examples of Custom Payment Plans */}
         <div>
-          <h3 className="font-semibold text-secondary mb-4">
-            Examples of Custom Payment Plans
-          </h3>
+          <h3>Examples of Custom Payment Plans</h3>
           <p>
             To give you a better understanding of how we can customize payment
             options to meet the unique needs of your project, we’ve compiled a
@@ -293,9 +279,7 @@ const CustomPlan = () => {
 
           {/* Example 1 */}
           <div className="mb-6">
-            <h3 className="font-semibold text-tertiary mb-2">
-              Example 1: Mid-Scale Web Development Project
-            </h3>
+            <h3>Example 1: Mid-Scale Web Development Project</h3>
             <ul>
               <li>
                 <strong className="text-accent-3">Project Scope:</strong> Design
@@ -324,9 +308,7 @@ const CustomPlan = () => {
 
           {/* Example 2 */}
           <div className="mb-6">
-            <h3 className="font-semibold text-tertiary mb-2">
-              Example 2: Large-Scale Mobile App Development
-            </h3>
+            <h3>Example 2: Large-Scale Mobile App Development</h3>
             <ul>
               <li>
                 <strong className="text-accent-3">Project Scope:</strong>{" "}
@@ -356,9 +338,7 @@ const CustomPlan = () => {
 
           {/* Example 3 */}
           <div className="mb-6">
-            <h3 className="font-semibold text-tertiary mb-2">
-              Example 3: Enterprise Software Integration
-            </h3>
+            <h3>Example 3: Enterprise Software Integration</h3>
             <ul>
               <li>
                 <strong className="text-accent-3">Project Scope:</strong>{" "}
@@ -389,9 +369,7 @@ const CustomPlan = () => {
 
           {/* Example 4 */}
           <div className="mb-6">
-            <h3 className="font-semibold text-tertiary mb-2">
-              Example 4: E-Commerce Website Development
-            </h3>
+            <h3>Example 4: E-Commerce Website Development</h3>
             <ul>
               <li>
                 <strong className="text-accent-3">Project Scope:</strong> Design
@@ -419,9 +397,7 @@ const CustomPlan = () => {
 
           {/* Example 5 */}
           <div>
-            <h3 className="font-semibold text-tertiary mb-2">
-              Example 5: SaaS Platform Development
-            </h3>
+            <h3>Example 5: SaaS Platform Development</h3>
             <ul>
               <li>
                 <strong className="text-accent-3">Project Scope:</strong>{" "}

@@ -21,9 +21,7 @@ const PaymentPlansPage: FC = () => {
       <DynamicBreadcrumb />
       {/* Page Header */}
       <header className="mb-8">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-          Flexible Pricing Plans to Fit Your Needs
-        </h1>
+        <h1>Flexible Pricing Plans to Fit Your Needs</h1>
         <p className="mt-4">
           We offer customizable pricing options designed to accommodate
           businesses of all sizes and budgets. Whether you need a basic package
@@ -57,7 +55,7 @@ const PaymentPlansPage: FC = () => {
                 <p>{plan.description}</p>
 
                 {/* Plan Details */}
-                <ul className="text-lg">
+                <ul>
                   {plan.details.map((detail, i) => (
                     <li key={i}>{detail}</li>
                   ))}

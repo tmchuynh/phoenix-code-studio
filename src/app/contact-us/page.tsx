@@ -144,9 +144,7 @@ const ContactUsPage: FC = () => {
       <DynamicBreadcrumb />
       <div className="flex items-end">
         <div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary">
-            Contact Us
-          </h1>
+          <h1>Contact Us</h1>
           <p>
             Have questions or ready to start a project? We’re here to help!
             Whether you need more information about our services or assistance

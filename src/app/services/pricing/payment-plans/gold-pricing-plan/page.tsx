@@ -12,9 +12,7 @@ const PremiumPlan = () => {
       <DynamicBreadcrumb />
       {/* Page Header */}
       <section className="mb-8">
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
-          Premium Plan
-        </h1>
+        <h1>Premium Plan</h1>
         {isSmallScreen && (
           <p>
             For large-scale, ongoing projects requiring continuous work and
@@ -49,9 +47,7 @@ const PremiumPlan = () => {
       {/* Features Explanation */}
       <section className="space-y-8">
         <div className="mb-6">
-          <h2 className="text-2xl font-semibold text-secondary mb-2">
-            Features
-          </h2>
+          <h2>Features</h2>
           <ul className="text-lg grid gap-4 grid-cols-1 md:grid-cols-2">
             <li className="flex items-center">
               <svg
@@ -212,9 +208,7 @@ const PremiumPlan = () => {
 
       {/* Pricing and Explanation */}
       <section>
-        <h2 className="text-2xl font-semibold text-secondary mb-4">
-          How it Works
-        </h2>
+        <h2>How it Works</h2>
         <p>
           The Premium Plan is crafted for large-scale, ongoing projects that
           demand continuous collaboration and expert support. This plan offers
@@ -227,9 +221,7 @@ const PremiumPlan = () => {
 
         {/* Monthly Retainer Payments */}
         <div className="mb-6">
-          <h3 className="font-semibold text-tertiary mb-2">
-            Monthly Retainer Payments
-          </h3>
+          <h3>Monthly Retainer Payments</h3>
           <p>
             The Premium Plan offers the convenience of a monthly retainer
             payment structure, making it easier to manage expenses for long-term
@@ -244,9 +236,7 @@ const PremiumPlan = () => {
 
         {/* Up to 12-Month Payment Terms */}
         <div className="mb-6">
-          <h3 className="font-semibold text-tertiary mb-2">
-            Up to 12-Month Payment Terms
-          </h3>
+          <h3>Up to 12-Month Payment Terms</h3>
           <p>
             For larger and more complex projects, the Premium Plan provides the
             option to extend payment terms up to 12 months. This flexibility
@@ -260,9 +250,7 @@ const PremiumPlan = () => {
 
         {/* Full Service Including Ongoing Support */}
         <div className="mb-6">
-          <h3 className="font-semibold text-tertiary mb-2">
-            Full Service Including Ongoing Support
-          </h3>
+          <h3>Full Service Including Ongoing Support</h3>
           <p>
             The Premium Plan provides a comprehensive service package that
             includes ongoing support and maintenance to ensure the long-term
