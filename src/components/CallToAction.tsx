@@ -9,7 +9,7 @@ const CallToAction = () => {
   };
 
   return (
-    <section className="w-9/12 mx-auto space-y-6 py-9">
+    <section className="mx-auto space-y-6 px-4 py-9">
       <h1 className="text-3xl md:text-4xl font-bold text-primary">
         Ready to Get Started?
       </h1>
