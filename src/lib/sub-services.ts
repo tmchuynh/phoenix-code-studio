@@ -15,7 +15,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create an emotional connection with your audience through authentic brand storytelling. We craft compelling narratives that reflect your brand's values, mission, and vision, building trust and loyalty while ensuring your message resonates in a competitive market.",
       featured: true,
-      icon: FaDesktop,
+      Icon: FaDesktop,
       pricingTiers: [
         {
           name: "Core Narrative Development",
@@ -283,7 +283,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Revitalize your brand with impactful rebranding services that combine strategic storytelling and design to engage your audience. We help you craft a distinctive, authentic brand identity that builds trust, fosters loyalty, and makes a lasting impression, whether you’re refreshing your look or redefining your brand message.",
       featured: false,
-      icon: FaDesktop,
+      Icon: FaDesktop,
       pricingTiers: [
         {
           name: "Brand Identity Overhaul",
@@ -513,7 +513,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Unlock the potential of your online store with custom e-commerce solutions that drive growth and deliver exceptional customer experiences. From intuitive navigation and secure transactions to personalized recommendations and powerful analytics, we craft scalable platforms that optimize performance and increase conversions, helping your business thrive in the digital marketplace.",
       featured: true,
-      icon: FaDesktop,
+      Icon: FaDesktop,
       pricingTiers: [
         {
           name: "Starter Package",
@@ -751,7 +751,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create fast, dynamic, and user-friendly single-page applications (SPAs) that deliver seamless navigation and real-time updates. With cutting-edge frameworks and minimal load times, our SPAs provide a smooth, app-like experience across all devices, keeping users engaged and driving performance for your business.",
       featured: false,
-      icon: FaDesktop,
+      Icon: FaDesktop,
       pricingTiers: [
         {
           name: "Starter Package",
@@ -970,7 +970,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Elevate your digital presence with custom-built websites that combine exceptional UX/UI design, smooth functionality, and SEO optimization. Whether you’re starting fresh or redesigning an existing site, our personalized solutions deliver a visually appealing, high-performing, and intuitive experience that enhances user engagement and drives business growth.",
       featured: true,
-      icon: FaDesktop,
+      Icon: FaDesktop,
       pricingTiers: [
         {
           name: "Basic",
@@ -1249,7 +1249,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Design seamless, engaging, and user-friendly interfaces that combine beauty with functionality. Through in-depth user research and rigorous testing, we create intuitive experiences that prioritize accessibility, enhance usability, and leave a lasting impression on all users.",
       featured: false,
-      icon: FaDesktop,
+      Icon: FaDesktop,
       pricingTiers: [
         {
           name: "User Research & Prototyping",
@@ -1429,7 +1429,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create SEO-optimized, engaging blog content that drives organic traffic and boosts search rankings. Tailored to your brand voice and industry, our blog posts provide valuable insights that foster audience engagement, establish authority, and support long-term growth.",
       featured: true,
-      icon: FaDesktop,
+      Icon: FaDesktop,
       pricingTiers: [
         {
           name: "Single Blog Post",
@@ -1511,7 +1511,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Transform complex information into clear, concise, and user-friendly technical documentation. From software manuals to API guides, we create precise, accessible content that enhances understanding, reduces learning curves, and ensures seamless adoption for both technical and non-technical audiences.",
       featured: true,
-      icon: FaDesktop,
+      Icon: FaDesktop,
       pricingTiers: [
         {
           name: "Short Guides or SOPs",
@@ -1624,7 +1624,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create engaging, interactive online courses that combine multimedia, quizzes, and intuitive design to deliver impactful learning experiences. Tailored to your audience and objectives, our courses ensure maximum engagement, knowledge retention, and accessibility, empowering learners with valuable skills and insights.",
       featured: false,
-      icon: FaDesktop,
+      Icon: FaDesktop,
       pricingTiers: [
         {
           name: "Short Courses (1–3 modules)",
@@ -1691,7 +1691,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create engaging, visually appealing newsletters that keep your audience informed and connected. With compelling content and strategic design, our newsletters drive engagement, build relationships, and strengthen brand loyalty, ensuring your message stands out and delivers measurable results.",
       featured: true,
-      icon: FaDesktop,
+      Icon: FaDesktop,
       pricingTiers: [
         {
           name: "Single Newsletter",
@@ -1854,7 +1854,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Empower your business with secure, scalable, and high-performance database management solutions. We design optimized systems for seamless data storage, real-time processing, and integration, while ensuring top-tier security to protect sensitive information and support long-term growth.",
       featured: true,
-      icon: FaDesktop,
+      Icon: FaDesktop,
       pricingTiers: [
         {
           name: "Starter Package",
@@ -2008,7 +2008,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create clear, user-friendly product guides and manuals that simplify complex information. With step-by-step instructions and engaging visuals, we help users confidently navigate, assemble, and troubleshoot your products, enhancing customer satisfaction and support.",
       featured: false,
-      icon: FaDesktop,
+      Icon: FaDesktop,
       pricingTiers: [
         {
           name: "Quick Start Guides",
@@ -2074,7 +2074,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Boost your online presence with expert SEO optimization that drives organic traffic and enhances your website's visibility. Through strategic keyword research, on-page optimization, content improvements, and link-building, we help you connect with the right audience and achieve long-term success in search engine rankings.",
       featured: true,
-      icon: FaSearch,
+      Icon: FaSearch,
       pricingTiers: [
         {
           name: "SEO Audit",
@@ -2372,7 +2372,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Transform your ideas into interactive, user-centric designs with our wireframing and prototyping services. From low-fidelity wireframes to high-fidelity prototypes, we help visualize and refine the user experience before development, ensuring seamless usability and optimizing the final product.",
       featured: false,
-      icon: FaDesktop,
+      Icon: FaDesktop,
       pricingTiers: [
         {
           name: "Low-Fidelity Wireframes",
@@ -2542,7 +2542,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create captivating, SEO-optimized content that informs, engages, and converts. From blog posts and landing pages to eBooks and technical documentation, we craft compelling narratives that enhance your brand, boost visibility, and drive meaningful results.",
       featured: true,
-      icon: FaPen,
+      Icon: FaPen,
       pricingTiers: [
         {
           name: "Basic",
@@ -2707,7 +2707,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create clear, concise, and user-friendly tutorials that break down complex tasks into easy-to-follow steps. With visual aids and structured guidance, our tutorials simplify technical processes and help users master new skills, ensuring a seamless learning experience.",
       featured: false,
-      icon: FaDesktop,
+      Icon: FaDesktop,
       pricingTiers: [
         {
           name: "Quick Start Guides",
@@ -2797,7 +2797,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Design eye-catching brochures and flyers that effectively showcase your products and services. With engaging visuals, persuasive copy, and strategic layouts, our designs capture attention and inspire action, leaving a lasting impression on your audience.",
       featured: true,
-      icon: FaDesktop,
+      Icon: FaDesktop,
       pricingTiers: [
         {
           name: "Flyers (One Page)",
@@ -2872,7 +2872,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create clear, engaging training materials that streamline the onboarding process. With step-by-step guidance, interactive elements, and tailored resources, we ensure smooth transitions and successful integration, fostering confidence and long-term alignment with your goals.",
       featured: false,
-      icon: FaDesktop,
+      Icon: FaDesktop,
       pricingTiers: [
         {
           name: "Basic Onboarding Documents",
@@ -2974,7 +2974,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create detailed, easy-to-follow study guides that simplify complex concepts and enhance learning retention. Our guides provide clear explanations and structured layouts, helping students and professionals grasp key topics, boost confidence, and achieve their goals with effective learning strategies.",
       featured: false,
-      icon: FaDesktop,
+      Icon: FaDesktop,
       pricingTiers: [
         {
           name: "Basic Study Guides (5–10 pages)",
@@ -3076,7 +3076,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create high-quality, visually appealing eBooks that educate, inform, and engage your audience. Our expertly crafted eBooks combine compelling content with eye-catching design to deliver an impactful reading experience that aligns with your marketing, educational, or publishing goals.",
       featured: false,
-      icon: FaDesktop,
+      Icon: FaDesktop,
       pricingTiers: [
         {
           name: "Basic eBook",
