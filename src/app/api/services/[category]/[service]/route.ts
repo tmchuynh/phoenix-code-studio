@@ -1,11 +1,9 @@
 import { subServiceDetails } from "@/lib/sub-services";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
-export async function GET(
-  req: NextRequest,
-  { params }: { params: { category: string; service: string; }; }
-) {
-  const { category, service } = params;
+export async function GET( _req: Request, { params }: { params: { category: string; service: string; }; } ) {
+  // Await the params object
+  const { category, service } = await params;
   const subService = subServiceDetails.find(
     ( item ) => item.category === category && item.name === service
   );
