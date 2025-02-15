@@ -54,20 +54,21 @@ const ServicesPage: FC = () => {
       {/* Company Services Section */}
       {allServices.map((service, index) => (
         <section className="my-20 pb-9" key={index}>
-          <div className="pb-4">
+          <div className="pb-3 flex flex-col">
             <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
-              {service.title}
+              {service.short}
             </h2>
             {service.info.description.map((info, infoIndex) => (
               <p key={infoIndex}>{info}</p>
             ))}
-            {/* <Button
-              onClick={() => router.push("/contact-us")}
-              variant={"outline"}
-              className="my-15 w-1/2 text-wrap py-10 md:py-0 lg:text-lg"
+            <Button
+              className="self-end w-1/4"
+              variant={theme === "dark" ? "outline" : "accent"}
+              size={isSmallScreen ? "sm" : "default"}
+              onClick={() => navigateToCategory(service.name)}
             >
-              View Our Services for
-            </Button> */}
+              View More Details
+            </Button>
           </div>
 
           {service.info.subServices.map((subService, subIndex) => {

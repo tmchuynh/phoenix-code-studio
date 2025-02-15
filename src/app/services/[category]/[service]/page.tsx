@@ -69,9 +69,7 @@ export default function ServicePage() {
                     <ul>
                       {list.info.map((item, itemIndex) => (
                         <li key={itemIndex}>
-                          <strong className="text-tertiary">
-                            {item.title}:{" "}
-                          </strong>
+                          <strong>{item.title}: </strong>
                           {item.description}
                         </li>
                       ))}
