@@ -282,56 +282,54 @@ const CustomPlan = () => {
             <h3>Example 1: Mid-Scale Web Development Project</h3>
             <ul>
               <li>
-                <strong className="text-accent-3">Project Scope:</strong> Design
-                and development of a custom website for a growing business,
-                including responsive design, e-commerce functionality, and SEO
-                optimization.
+                <strong>Project Scope:</strong> Design and development of a
+                custom website for a growing business, including responsive
+                design, e-commerce functionality, and SEO optimization.
               </li>
               <li>
-                <strong className="text-accent-3">Payment Term:</strong> $10,000
-                total project cost, split into 4 installments over 12 months to
-                accommodate budget flexibility.
+                <strong>Payment Term:</strong> $10,000 total project cost, split
+                into 4 installments over 12 months to accommodate budget
+                flexibility.
               </li>
               <li>
-                <strong className="text-accent-3">Support:</strong> 6 months of
-                ongoing support after launch, covering regular updates, bug
-                fixes, and minor feature enhancements.
+                <strong>Support:</strong> 6 months of ongoing support after
+                launch, covering regular updates, bug fixes, and minor feature
+                enhancements.
               </li>
               <li>
-                <strong className="text-accent-3">Additional Details:</strong>{" "}
-                Initial deposit of $2,500 to begin the project, followed by 3
-                equal installments of $2,500 paid monthly after the website
-                launch.
+                <strong>Additional Details:</strong> Initial deposit of $2,500
+                to begin the project, followed by 3 equal installments of $2,500
+                paid monthly after the website launch.
               </li>
             </ul>
           </div>
 
           {/* Example 2 */}
           <div className="mb-6">
-            <h3>Example 2: Large-Scale Mobile App Development</h3>
+            <h3>
+              <strong>Example 2:</strong> Large-Scale Mobile App Development
+            </h3>
             <ul>
               <li>
-                <strong className="text-accent-3">Project Scope:</strong>{" "}
-                Complete development of a feature-rich mobile app, including
-                user authentication, custom dashboards, and integration with
-                third-party APIs.
+                <strong>Project Scope:</strong> Complete development of a
+                feature-rich mobile app, including user authentication, custom
+                dashboards, and integration with third-party APIs.
               </li>
               <li>
-                <strong className="text-accent-3">Payment Term:</strong> $50,000
-                total project cost, divided into 5 installments over 18 months
-                to support financial flexibility for a long-term project.
+                <strong>Payment Term:</strong> $50,000 total project cost,
+                divided into 5 installments over 18 months to support financial
+                flexibility for a long-term project.
               </li>
               <li>
-                <strong className="text-accent-3">Support:</strong>{" "}
-                Comprehensive support package after delivery, including regular
-                updates, scalability options, and new feature integration as
-                needed.
+                <strong>Support:</strong> Comprehensive support package after
+                delivery, including regular updates, scalability options, and
+                new feature integration as needed.
               </li>
               <li>
-                <strong className="text-accent-3">Additional Details:</strong>{" "}
-                Monthly payments of $7,500, with a 3-month grace period after
-                the initial deposit to ensure the client can focus on the
-                project’s progress without immediate financial pressure.
+                <strong>Additional Details:</strong> Monthly payments of $7,500,
+                with a 3-month grace period after the initial deposit to ensure
+                the client can focus on the project’s progress without immediate
+                financial pressure.
               </li>
             </ul>
           </div>
@@ -341,28 +339,26 @@ const CustomPlan = () => {
             <h3>Example 3: Enterprise Software Integration</h3>
             <ul>
               <li>
-                <strong className="text-accent-3">Project Scope:</strong>{" "}
-                Integration of advanced enterprise software into the existing IT
-                infrastructure, including data migration, workflow automation,
-                and security enhancements.
+                <strong>Project Scope:</strong> Integration of advanced
+                enterprise software into the existing IT infrastructure,
+                including data migration, workflow automation, and security
+                enhancements.
               </li>
               <li>
-                <strong className="text-accent-3">Payment Term:</strong>{" "}
-                $100,000 total project cost, divided into 6 installments over 24
-                months to provide extended payment flexibility for a high-value
-                project.
+                <strong>Payment Term:</strong> $100,000 total project cost,
+                divided into 6 installments over 24 months to provide extended
+                payment flexibility for a high-value project.
               </li>
               <li>
-                <strong className="text-accent-3">Support:</strong> Continuous
-                support and maintenance for the first year, covering system
-                updates, troubleshooting, and optimization. Clients also have
-                the option to extend support services for future needs.
+                <strong>Support:</strong> Continuous support and maintenance for
+                the first year, covering system updates, troubleshooting, and
+                optimization. Clients also have the option to extend support
+                services for future needs.
               </li>
               <li>
-                <strong className="text-accent-3">Additional Details:</strong>{" "}
-                An initial deposit of $20,000 starts the project, with
-                subsequent payments of $16,000 every 4 months, beginning 2
-                months after the initial setup.
+                <strong>Additional Details:</strong> An initial deposit of
+                $20,000 starts the project, with subsequent payments of $16,000
+                every 4 months, beginning 2 months after the initial setup.
               </li>
             </ul>
           </div>
@@ -372,25 +368,25 @@ const CustomPlan = () => {
             <h3>Example 4: E-Commerce Website Development</h3>
             <ul>
               <li>
-                <strong className="text-accent-3">Project Scope:</strong> Design
-                and development of a scalable e-commerce platform with features
-                such as a product catalog, secure payment integration, and
-                personalized user experiences.
+                <strong>Project Scope:</strong> Design and development of a
+                scalable e-commerce platform with features such as a product
+                catalog, secure payment integration, and personalized user
+                experiences.
               </li>
               <li>
-                <strong className="text-accent-3">Payment Term:</strong> $25,000
-                total project cost, split into 5 installments over 10 months for
-                greater financial flexibility.
+                <strong>Payment Term:</strong> $25,000 total project cost, split
+                into 5 installments over 10 months for greater financial
+                flexibility.
               </li>
               <li>
-                <strong className="text-accent-3">Support:</strong> 8 months of
-                post-launch support, including performance monitoring, bug
-                fixes, and SEO optimization.
+                <strong>Support:</strong> 8 months of post-launch support,
+                including performance monitoring, bug fixes, and SEO
+                optimization.
               </li>
               <li>
-                <strong className="text-accent-3">Additional Details:</strong>{" "}
-                An initial deposit of $5,000, followed by equal monthly
-                installments of $4,000 for 5 months.
+                <strong>Additional Details:</strong> An initial deposit of
+                $5,000, followed by equal monthly installments of $4,000 for 5
+                months.
               </li>
             </ul>
           </div>
@@ -400,25 +396,24 @@ const CustomPlan = () => {
             <h3>Example 5: SaaS Platform Development</h3>
             <ul>
               <li>
-                <strong className="text-accent-3">Project Scope:</strong>{" "}
-                Development of a SaaS platform with user authentication,
-                subscription management, and API integrations for third-party
-                services.
+                <strong>Project Scope:</strong> Development of a SaaS platform
+                with user authentication, subscription management, and API
+                integrations for third-party services.
               </li>
               <li>
-                <strong className="text-accent-3">Payment Term:</strong> $75,000
-                total project cost, distributed over 8 installments across 20
-                months to accommodate the phased delivery of the platform.
+                <strong>Payment Term:</strong> $75,000 total project cost,
+                distributed over 8 installments across 20 months to accommodate
+                the phased delivery of the platform.
               </li>
               <li>
-                <strong className="text-accent-3">Support:</strong> 12 months of
-                continuous support, including system updates, scalability
-                enhancements, and troubleshooting.
+                <strong>Support:</strong> 12 months of continuous support,
+                including system updates, scalability enhancements, and
+                troubleshooting.
               </li>
               <li>
-                <strong className="text-accent-3">Additional Details:</strong>{" "}
-                An initial payment of $15,000, followed by 7 equal installments
-                of $8,500 every 3 months.
+                <strong>Additional Details:</strong> An initial payment of
+                $15,000, followed by 7 equal installments of $8,500 every 3
+                months.
               </li>
             </ul>
           </div>
