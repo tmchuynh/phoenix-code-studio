@@ -1,3 +1,5 @@
+import { ServiceTypeKeys } from "@/app/contact-us/page";
+
 export interface FAQ {
   question: string;
   answer: string;
@@ -17,6 +19,7 @@ export interface PricingTier {
 
 export interface ServiceCategory {
   name: string;
+  type: ServiceTypeKeys;
   title: string;
   short: string;
   info: ServiceInfo;
