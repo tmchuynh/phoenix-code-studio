@@ -80,7 +80,9 @@ const WelcomePage: FC = () => {
       <AboutSection />
 
       {/* Call to Action Section */}
-      <CallToAction />
+      <div className="px-12 mx-auto">
+        <CallToAction />
+      </div>
 
       {/* Featured Projects Section */}
       <FeaturedProjects />
