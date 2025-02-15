@@ -24,10 +24,10 @@ body {
     --tertiary-foreground: #ffffff;
     --muted: #e0e0e0;
     --muted-foreground: #0b0b0b;
-    --accent-1: #866c46;
-    --accent-2: #763f20;
-    --accent-3: #3a5a40;
-    --accent-4: #82673c;
+    --accent-1: #fda484;
+    --accent-2: #50201c;
+    --accent-3: #355c3a;
+    --accent-4: #d88a3b;
     --accent-5: #415a77;
     --accent-foreground: #ffffff;
     --destructive: #ff3e3e;
@@ -65,17 +65,17 @@ body {
     --popover-foreground: #f5f5f5;
     --primary: #d72638db;
     --primary-foreground: #ffffff;
-    --secondary: #7ac3f7fb;
+    --secondary: #e7feff;
     --secondary-foreground: #0f0f0f;
-    --tertiary: #ec9779dc;
+    --tertiary: #caf0f8;
     --tertiary-foreground: #0f0f0f;
     --muted: #1f1f1f;
     --muted-foreground: #efefef;
-    --accent-1: #d7e9b8e3;
-    --accent-3: #9fc9d9;
-    --accent-2: #ffbea6c4;
+    --accent-1: #98c1d9;
+    --accent-2: #cecece;
+    --accent-3: #ddbea9;
     --accent-4: #aa998f;
-    --accent-5: #9ae8fed3;
+    --accent-5: #dad2bc;
     --accent-foreground: #040404;
     --destructive: #ff3e3edf;
     --destructive-foreground: #000000;
@@ -233,23 +233,30 @@ body {
   }
 
   h3 {
-    @apply text-xl lg:text-2xl 2xl:text-3xl font-semibold;
+    @apply text-xl lg:text-2xl 2xl:text-3xl font-semibold text-accent-2;
+  }
+
+  h3 strong {
+    @apply uppercase;
+  }
+
+  ul {
+    @apply list-disc pl-6 space-y-2 text-pretty my-4;
   }
   li,
   p {
     @apply text-sm md:text-lg 2xl:text-xl;
   }
 
+  li strong {
+    @apply text-tertiary;
+  }
+
+  li li strong {
+    @apply text-accent-5;
+  }
+
   p {
     @apply my-2;
-  }
-
-  h3,
-  strong {
-    @apply text-accent-2;
-  }
-
-  ul {
-    @apply list-disc pl-6 space-y-2 text-pretty my-4;
   }
 }
