@@ -7,10 +7,12 @@ import "swiper/css/pagination";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Button } from "./ui/button";
+import { useTheme } from "next-themes";
 
 const Testimonials = () => {
   const isSmallScreen = useSmallScreen();
   const router = useRouter();
+  const { theme } = useTheme();
 
   const navigateToTestimonials = () => {
     router.push("/info/testimonials");
@@ -73,7 +75,7 @@ const Testimonials = () => {
           </Swiper>
           <div className="text-center mt-8">
             <Button
-              variant="tertiary"
+              variant={theme === "dark" ? "outline" : "tertiary"}
               className="w-7/12 my-3"
               onClick={navigateToTestimonials}
             >

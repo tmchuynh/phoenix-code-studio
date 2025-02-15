@@ -9,10 +9,12 @@ import {
 import { useState } from "react";
 import { blogs } from "@/lib/blog-posts";
 import { setSlug } from "@/lib/utils";
+import { useTheme } from "next-themes";
 
 const FeaturedBlogs = () => {
   const isSmallScreen = useSmallScreen();
   const router = useRouter();
+  const { theme } = useTheme();
 
   const navigateToBlogs = () => {
     router.push("/info/blogs");
@@ -115,7 +117,7 @@ const FeaturedBlogs = () => {
       </div>
       <div className="text-center mt-8">
         <Button
-          variant={"tertiary"}
+          variant={theme === "dark" ? "outline" : "tertiary"}
           className="w-1/2 my-3"
           onClick={navigateToBlogs}
         >

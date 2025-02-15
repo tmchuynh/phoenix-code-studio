@@ -8,10 +8,12 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import { useState } from "react";
+import { useTheme } from "next-themes";
 
 const FeaturedProjects = () => {
   const isSmallScreen = useSmallScreen();
   const router = useRouter();
+  const { theme } = useTheme();
 
   const navigateToPastProjects = () => {
     router.push("/info/portfolio");
@@ -105,7 +107,7 @@ const FeaturedProjects = () => {
       </div>
       <div className="text-center mt-8">
         <Button
-          variant={"tertiary"}
+          variant={theme === "dark" ? "outline" : "tertiary"}
           className="w-1/2 my-3"
           onClick={navigateToPastProjects}
         >

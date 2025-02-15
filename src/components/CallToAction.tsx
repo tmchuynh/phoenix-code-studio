@@ -10,9 +10,7 @@ const CallToAction = () => {
 
   return (
     <section className="mx-auto space-y-6 px-4 py-9">
-      <h1 className="text-3xl md:text-4xl font-bold text-primary">
-        Ready to Get Started?
-      </h1>
+      <h1 className="text-3xl md:text-4xl">Ready to Get Started?</h1>
       <p className="mt-4">
         We’re excited to help you bring your digital vision to life! Whether you
         need a custom website design, a brand transformation, or a comprehensive
@@ -26,7 +24,7 @@ const CallToAction = () => {
       </p>
       <Button
         className="w-1/2 my-3"
-        variant={"secondary"}
+        variant={"accent"}
         onClick={navigateToContact}
       >
         Contact Us

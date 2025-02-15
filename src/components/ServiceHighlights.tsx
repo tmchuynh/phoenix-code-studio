@@ -7,6 +7,7 @@ import {
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
 import { subServiceDetails } from "@/lib/sub-services";
+import { useTheme } from "next-themes";
 
 const IconDisplay: FC<{
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
@@ -21,6 +22,7 @@ const IconDisplay: FC<{
 
 const ServiceHighlights = () => {
   const router = useRouter();
+  const { theme } = useTheme();
 
   const [currentPage, setCurrentPage] = useState(1);
   const [servicesPerPage, setServicesPerPage] = useState(6);
@@ -105,7 +107,7 @@ const ServiceHighlights = () => {
       </div>
       <div className="text-center mt-8">
         <Button
-          variant={"tertiary"}
+          variant={theme === "dark" ? "outline" : "tertiary"}
           className="w-1/2 my-3"
           onClick={navigateToServices}
         >
