@@ -3,6 +3,7 @@ import { ServiceCategory } from "./interfaces";
 export const allServices: ServiceCategory[] = [
   {
     name: "scalable-corporate-digital-solutions",
+    type: "corporateDigitalSolutions",
     title: "Scalable Corporate Solutions for Growth & Digital Success",
     short: "Scalable Solutions for Business Growth",
     info: {
@@ -26,6 +27,7 @@ export const allServices: ServiceCategory[] = [
   },
   {
     name: "seo-optimized-content-creation",
+    type: "seoOptimizedContentCreationServices",
     title: "SEO-Optimized Content Creation Services That Elevate Your Brand & Drive Results",
     short: "SEO-Optimized Content for Brand Growth & Success",
     info: {
@@ -46,6 +48,7 @@ export const allServices: ServiceCategory[] = [
   },
   {
     name: "comprehensive-website-solutions",
+    type: "comprehensiveWebsiteSolutions",
     title: "End-to-End Website Solutions for a High-Performing Digital Presence",
     short: "Comprehensive Website Solutions for Digital Success",
     info: {
