@@ -58,7 +58,7 @@ const JobListingsPage: FC = () => {
       {/* Job Listings */}
       <section className="space-y-10 mt-8">
         {jobPositions.map((job, index) => (
-          <section key={index} className="border-b pb-8">
+          <section key={index} className="border-b pb-8 flex flex-col">
             {/* Job Title */}
             <h2 className="font-semibold text-secondary">{job.title}</h2>
 
@@ -71,18 +71,16 @@ const JobListingsPage: FC = () => {
             <p className="mt-3">{job.description}</p>
 
             {/* Call to Action */}
-            <div className="mt-6">
-              <Button
-                variant={"accent"}
-                onClick={() => router.push("/applicant-submission")}
-                className="py-3 w-2/5 text-lg"
-              >
-                Apply Now For The {job.title} Position
-              </Button>
-            </div>
+            <Button
+              variant={"accent"}
+              onClick={() => router.push("/applicant-submission")}
+              className="py-3 mt-4 text-lg text-wrap h-fit"
+            >
+              Apply Now For The {job.title} Position
+            </Button>
 
             {/* Responsibilities */}
-            <div className="mt-4">
+            <div className="mt-2">
               <h3 className="font-medium">Responsibilities:</h3>
               <ul className="list-disc pl-6 mt-2 space-y-2">
                 {job.responsibilities.map((resp, i) => (
@@ -92,7 +90,7 @@ const JobListingsPage: FC = () => {
             </div>
 
             {/* Qualifications */}
-            <div className="mt-4">
+            <div className="mt-2">
               <h3 className="font-medium">Qualifications:</h3>
               <ul className="list-disc pl-6 mt-2 space-y-2">
                 {job.qualifications.map((qual, i) => (
