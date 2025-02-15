@@ -2,7 +2,7 @@
 
 import { SubServiceItem } from "@/lib/interfaces";
 import { useParams } from "next/navigation";
-import { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ServicePage() {
   // Retrieve dynamic route params via useParams() in a client component
@@ -47,21 +47,50 @@ export default function ServicePage() {
   }
 
   return (
-    <main className="p-6">
-      <h1 className="text-2xl font-bold mb-4">
-        {serviceData?.info.name || service.replace(/-/g, " ")}
-      </h1>
+    <main className="w-10/12 md:w-11/12 mx-auto py-6">
+      <h1>{serviceData?.info.name}</h1>
       <p className="mb-4">{serviceData?.info.info}</p>
+
+      {serviceData?.details.map((detail, index) => (
+        <section key={index} className="py-4">
+          <h2>{detail.title}</h2>
+          {detail.intro &&
+            detail.intro.map((sentence, sIndex) => (
+              <p key={sIndex}>{sentence}</p>
+            ))}
+
+          {detail.lists && (
+            <ul>
+              {detail.lists.map((list, listIndex) => (
+                <li key={listIndex}>
+                  <strong>{list.title ? `${list.title}:` : ""} </strong>
+                  {list.description}
+                  {list.info && (
+                    <ul>
+                      {list.info.map((item, itemIndex) => (
+                        <li key={itemIndex}>
+                          <strong className="text-tertiary">
+                            {item.title}:{" "}
+                          </strong>
+                          {item.description}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      ))}
 
       {serviceData?.info.pricingTiers && (
         <div className="mt-4">
-          <ul className="list-none flex flex-col gap-4">
+          <h2>Pricing</h2>
+          <p> {serviceData?.info.details}</p>
+          <ul>
             {serviceData.info.pricingTiers.map((prices, index) => (
-              <li key={index} className="flex items-center">
-                {/* Render the icon if provided */}
-                {serviceData.info.Icon && (
-                  <IconDisplay Icon={serviceData.info.Icon} />
-                )}
+              <li key={index}>
                 <div>
                   <strong>{prices.name}:</strong> {prices.info}
                 </div>
@@ -73,14 +102,3 @@ export default function ServicePage() {
     </main>
   );
 }
-
-const IconDisplay: FC<{
-  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-}> = ({ Icon }) => {
-  return (
-    <div>
-      {/* Render the icon */}
-      <Icon className="text-4xl text-accent-5 mx-auto my-5" />
-    </div>
-  );
-};

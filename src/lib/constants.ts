@@ -64,124 +64,112 @@ export const services: Menu[] = [
 
 export const paymentOptions: Menu[] = [
   {
-    title: "Flexible Pricing Plans",
+    title: "Overview",
     href: "/services/pricing/payment-plans",
     description:
-      "Explore our pricing options and find the .",
+      "Explore our range of payment plans and choose the one that fits your needs.",
   },
   {
     title: "Bronze Pricing Plan",
     href: "/services/pricing/payment-plans/bronze-pricing-plan",
     description:
-      "Explore our pricing options and your needs.",
+      "Discover the Bronze Pricing Plan, designed to offer affordable options for smaller budgets.",
   },
   {
-    title: "Silver Pricine Plan",
+    title: "Silver Pricing Plan",
     href: "/services/pricing/payment-plans/silver-pricing-plan",
     description:
-      "Explore our pricing options  plan for your needs.",
+      "Explore the Silver Pricing Plan, ideal for growing businesses seeking great value.",
   },
   {
     title: "Gold Pricing Plan",
     href: "/services/pricing/payment-plans/gold-pricing-plan",
     description:
-      "Discover flexible payment plans tailored to budgets.",
+      "Experience the Gold Pricing Plan, offering premium features and flexible payment options.",
   },
   {
     title: "Custom Plan",
     href: "/services/pricing/payment-plans/custom-plan",
     description:
-      "Discover flexible  to suit different budgets.",
+      "Looking for a tailored plan? Discover our Custom Plan to suit specific needs and budgets.",
   },
 ];
 
 
 export const websites: Menu[] = [
   {
+    title: "Custom Website Design",
+    href: "/services/comprehensive-website-solutions/custom-websites-designed-for-impact-and-performance",
+    description:
+      "Create a unique, user-focused website tailored to your brand’s needs and goals.",
+  },
+  {
+    title: "E-Commerce Site Development",
+    href: "/services/comprehensive-website-solutions/e-commerce-solutions-built-for-growth-and-success",
+    description:
+      "Develop seamless online shopping experiences to boost sales and customer engagement.",
+  },
+  {
+    title: "Single-Page Applications (SPAs)",
+    href: "/services/comprehensive-website-solutions/high-performance-single-page-applications-spas-for-a-seamless-user-experience",
+    description:
+      "Build fast, dynamic web applications with intuitive user interfaces and streamlined performance.",
+  },
+  {
+    title: "Website Copywriting",
+    href: "/services/comprehensive-website-solutions/engaging-seo-optimized-website-content-that-converts",
+    description:
+      "Create compelling and optimized website content that drives engagement and conversions.",
+  },
+  {
+    title: "User Experience (UX) Design",
+    href: "/services/comprehensive-website-solutions/user-centered-interface-design-for-seamless-experiences",
+    description:
+      "Craft intuitive and engaging designs that enhance user satisfaction and accessibility.",
+  },
+  {
     title: "Wireframing & Prototyping",
-    href: "/services/website-services/wireframing-&-prototyping",
+    href: "/services/comprehensive-website-solutions/from-concept-to-clickable:-wireframing-&-prototyping-services",
     description:
       "Visualize and test design concepts through effective wireframes and prototypes.",
   },
   {
     title: "SEO Optimization",
-    href: "/services/website-services/maximize-your-online-reach-with-expert-seo-optimization",
+    href: "/services/comprehensive-website-solutions/maximize-your-online-reach-with-expert-seo-optimization",
     description:
       "Boost your website's visibility with strategies to improve search engine rankings.",
-  },
-  {
-    title: "User Experience (UX) Design",
-    href: "/services/website-services/user-experience-design",
-    description:
-      "Craft intuitive and engaging designs that enhance user satisfaction and accessibility.",
   },
 ];
 
 
 export const content: Menu[] = [
   {
-    title: "Website Copywriting",
-    href: "/services/content-creation-services/engaging-seo-optimized-website-content-that-converts",
+    title: "Brochures and/or Flyers",
+    href: "/services/seo-optimized-content-creation/eye-catching-brochures-and-flyers-that-make-an-impact",
     description:
       "Create compelling and optimized website content that drives engagement and conversions.",
   },
   {
-    title: "Blog Writing",
-    href: "/services/content-creation-services/blog-writing",
-    description:
-      "Craft informative and engaging blog posts to attract and retain your audience.",
-  },
-  {
-    title: "Newsletters",
-    href: "/services/content-creation-services/newsletters",
+    title: "Product Guides/Manuals",
+    href: "/services/seo-optimized-content-creation/comprehensive-user-friendly-product-guides-manuals",
     description:
       "Develop clear and detailed guides or manuals to help users understand your products.",
   },
   {
-    title: "Technical Writing",
-    href: "/services/content-creation-services/technical-writing",
-    description:
-      "Produce precise and structured documentation for technical processes and tools.",
-  },
-  {
-    title: "Study Guides",
-    href: "/services/content-creation-services/master-any-subject-with-comprehensive-study-guides",
+    title: "Learning Resources",
+    href: "/services/seo-optimized-content-creation/master-any-subject-with-comprehensive-study-guides",
     description:
       "Design and develop comprehensive online courses to educate and inspire learners.",
   },
   {
-    title: "Tutorial Creation",
-    href: "/services/content-creation-services/tutorial-creation",
-    description:
-      "Create step-by-step tutorials to guide users through tasks and improve understanding.",
-  },
-  {
-    title: "Product Guides/Manuals",
-    href: "/services/content-creation-services/product-guides-manuals",
-    description:
-      "Develop clear and detailed guides or manuals to help users understand your products.",
-  },
-  {
-    title: "Brochures and/or Flyers",
-    href: "/services/content-creation-services/brochures-and-or-flyers",
-    description:
-      "Create compelling and optimized website content that drives engagement and conversions.",
-  },
-  {
-    title: "Training Manual & Onboarding Paperwork",
-    href: "/services/content-creation-services/training-manual-and-onboarding-paperwork-creation",
-    description:
-      "Create compelling and optimized website content that drives engagement and conversions.",
-  },
-  {
     title: "Online Courses",
-    href: "/services/content-creation-services/online-courses",
+    href: "/services/seo-optimized-content-creation/engaging-interactive-online-course-development",
     description:
       "Design and develop comprehensive online courses to educate and inspire learners.",
   },
   {
     title: "eBooks",
-    href: "/services/content-creation-services/ebook-creation",
+    href: "/services/seo-optimized-content-creation/engaging-professional-ebook-creation",
     description:
       "Create compelling and optimized website content that drives engagement and conversions.",
   },
@@ -190,40 +178,46 @@ export const content: Menu[] = [
 
 export const companies: Menu[] = [
   {
-    title: "Custom Website Design",
-    href: "/services/comapny-specific-services/custom-website-design",
-    description:
-      "Create a unique, user-focused website tailored to your brand’s needs and goals.",
-  },
-  {
-    title: "E-Commerce Site Development",
-    href: "/services/comapny-specific-services/e-commerce-solutions-built-for-growth-and-success",
-    description:
-      "Develop seamless online shopping experiences to boost sales and customer engagement.",
-  },
-  {
     title: "Company Rebranding",
-    href: "/services/comapny-specific-services/company-rebranding",
+    href: "/services/scalable-corporate-digital-solutions/transform-your-brand-with-our-rebranding-services",
     description:
       "Transform your company’s identity with a refreshed logo, messaging, and brand strategy.",
   },
   {
     title: "Brand Storytelling",
-    href: "/services/comapny-specific-services/brand-storytelling",
+    href: "/services/scalable-corporate-digital-solutions/authentic-brand-storytelling-that-captivates-connects",
     description:
       "Craft compelling narratives to communicate your brand's mission, vision, and values.",
   },
   {
-    title: "Single-Page Applications (SPAs)",
-    href: "/services/comapny-specific-services/single-page-application",
-    description:
-      "Build fast, dynamic web applications with intuitive user interfaces and streamlined performance.",
-  },
-  {
-    title: "Database Management",
-    href: "/services/comapny-specific-services/database-management",
+    title: "Database Creation & Management",
+    href: "/services/scalable-corporate-digital-solutions/optimized-secure-database-management-solutions",
     description:
       "Ensure secure and efficient management of your data with scalable database solutions.",
+  },
+  {
+    title: "Training Manual & Onboarding Paperwork",
+    href: "/services/scalable-corporate-digital-solutions/seamless-onboarding-with-clear-and-engaging-training-materials",
+    description:
+      "Create compelling and optimized website content that drives engagement and conversions.",
+  },
+  {
+    title: "Technical Writing",
+    href: "/services/scalable-corporate-digital-solutions/expert-technical-writing-clarity-precision",
+    description:
+      "Produce precise and structured documentation for technical processes and tools.",
+  },
+  {
+    title: "Newsletters",
+    href: "/services/scalable-corporate-digital-solutions/engaging-impactful-newsletters",
+    description:
+      "Develop clear and detailed guides or manuals to help users understand your products.",
+  },
+  {
+    title: "Blog Writing",
+    href: "/services/scalable-corporate-digital-solutions/seo-optimized-engaging-blog-content",
+    description:
+      "Craft informative and engaging blog posts to attract and retain your audience.",
   },
 ];
 

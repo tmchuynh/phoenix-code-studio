@@ -15,7 +15,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create an emotional connection with your audience through authentic brand storytelling. We craft compelling narratives that reflect your brand's values, mission, and vision, building trust and loyalty while ensuring your message resonates in a competitive market.",
       featured: true,
-      Icon: FaDesktop,
+      icon: FaDesktop,
       pricingTiers: [
         {
           name: "Core Narrative Development",
@@ -283,7 +283,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Revitalize your brand with impactful rebranding services that combine strategic storytelling and design to engage your audience. We help you craft a distinctive, authentic brand identity that builds trust, fosters loyalty, and makes a lasting impression, whether you’re refreshing your look or redefining your brand message.",
       featured: false,
-      Icon: FaDesktop,
+      icon: FaDesktop,
       pricingTiers: [
         {
           name: "Brand Identity Overhaul",
@@ -513,7 +513,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Unlock the potential of your online store with custom e-commerce solutions that drive growth and deliver exceptional customer experiences. From intuitive navigation and secure transactions to personalized recommendations and powerful analytics, we craft scalable platforms that optimize performance and increase conversions, helping your business thrive in the digital marketplace.",
       featured: true,
-      Icon: FaDesktop,
+      icon: FaDesktop,
       pricingTiers: [
         {
           name: "Starter Package",
@@ -650,9 +650,18 @@ export const subServiceDetails: SubServiceItem[] = [
             title: "Product Catalog Management",
             description: "An organized and scalable product catalog is essential for a seamless shopping experience. Our robust catalog management system ensures products are easy to find, properly categorized, and efficiently updated. Features include:",
             info: [
-              "Dynamic Categories - Organize products into dynamic categories, making browsing effortless for customers. Well-structured categories enhance navigation, allowing shoppers to find relevant products quickly, improving engagement and conversion rates.",
-              "Custom Attributes - Provide detailed filtering options with custom attributes like size, color, material, and brand. This feature improves user experience by enabling shoppers to refine searches based on specific preferences, leading to more informed purchase decisions.",
-              "Bulk Import/Export - Efficiently manage large product inventories with bulk import/export capabilities. This feature simplifies product updates, pricing adjustments, and inventory management, saving time and reducing manual workload."
+              {
+                title: "Dynamic Categories",
+                description: "Organize products into dynamic categories, making browsing effortless for customers. Well-structured categories enhance navigation, allowing shoppers to find relevant products quickly, improving engagement and conversion rates."
+              },
+              {
+                title: "Custom Attributes",
+                description: "Provide detailed filtering options with custom attributes like size, color, material, and brand. This feature improves user experience by enabling shoppers to refine searches based on specific preferences, leading to more informed purchase decisions."
+              },
+              {
+                title: "Bulk Import/Export",
+                description: "Efficiently manage large product inventories with bulk import/export capabilities. This feature simplifies product updates, pricing adjustments, and inventory management, saving time and reducing manual workload."
+              }
             ]
           },
           {
@@ -742,7 +751,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create fast, dynamic, and user-friendly single-page applications (SPAs) that deliver seamless navigation and real-time updates. With cutting-edge frameworks and minimal load times, our SPAs provide a smooth, app-like experience across all devices, keeping users engaged and driving performance for your business.",
       featured: false,
-      Icon: FaDesktop,
+      icon: FaDesktop,
       pricingTiers: [
         {
           name: "Starter Package",
@@ -961,7 +970,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Elevate your digital presence with custom-built websites that combine exceptional UX/UI design, smooth functionality, and SEO optimization. Whether you’re starting fresh or redesigning an existing site, our personalized solutions deliver a visually appealing, high-performing, and intuitive experience that enhances user engagement and drives business growth.",
       featured: true,
-      Icon: FaDesktop,
+      icon: FaDesktop,
       pricingTiers: [
         {
           name: "Basic",
@@ -1240,7 +1249,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Design seamless, engaging, and user-friendly interfaces that combine beauty with functionality. Through in-depth user research and rigorous testing, we create intuitive experiences that prioritize accessibility, enhance usability, and leave a lasting impression on all users.",
       featured: false,
-      Icon: FaDesktop,
+      icon: FaDesktop,
       pricingTiers: [
         {
           name: "User Research & Prototyping",
@@ -1420,7 +1429,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create SEO-optimized, engaging blog content that drives organic traffic and boosts search rankings. Tailored to your brand voice and industry, our blog posts provide valuable insights that foster audience engagement, establish authority, and support long-term growth.",
       featured: true,
-      Icon: FaDesktop,
+      icon: FaDesktop,
       pricingTiers: [
         {
           name: "Single Blog Post",
@@ -1502,7 +1511,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Transform complex information into clear, concise, and user-friendly technical documentation. From software manuals to API guides, we create precise, accessible content that enhances understanding, reduces learning curves, and ensures seamless adoption for both technical and non-technical audiences.",
       featured: true,
-      Icon: FaDesktop,
+      icon: FaDesktop,
       pricingTiers: [
         {
           name: "Short Guides or SOPs",
@@ -1615,7 +1624,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create engaging, interactive online courses that combine multimedia, quizzes, and intuitive design to deliver impactful learning experiences. Tailored to your audience and objectives, our courses ensure maximum engagement, knowledge retention, and accessibility, empowering learners with valuable skills and insights.",
       featured: false,
-      Icon: FaDesktop,
+      icon: FaDesktop,
       pricingTiers: [
         {
           name: "Short Courses (1–3 modules)",
@@ -1682,7 +1691,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create engaging, visually appealing newsletters that keep your audience informed and connected. With compelling content and strategic design, our newsletters drive engagement, build relationships, and strengthen brand loyalty, ensuring your message stands out and delivers measurable results.",
       featured: true,
-      Icon: FaDesktop,
+      icon: FaDesktop,
       pricingTiers: [
         {
           name: "Single Newsletter",
@@ -1845,7 +1854,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Empower your business with secure, scalable, and high-performance database management solutions. We design optimized systems for seamless data storage, real-time processing, and integration, while ensuring top-tier security to protect sensitive information and support long-term growth.",
       featured: true,
-      Icon: FaDesktop,
+      icon: FaDesktop,
       pricingTiers: [
         {
           name: "Starter Package",
@@ -1999,7 +2008,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create clear, user-friendly product guides and manuals that simplify complex information. With step-by-step instructions and engaging visuals, we help users confidently navigate, assemble, and troubleshoot your products, enhancing customer satisfaction and support.",
       featured: false,
-      Icon: FaDesktop,
+      icon: FaDesktop,
       pricingTiers: [
         {
           name: "Quick Start Guides",
@@ -2065,7 +2074,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Boost your online presence with expert SEO optimization that drives organic traffic and enhances your website's visibility. Through strategic keyword research, on-page optimization, content improvements, and link-building, we help you connect with the right audience and achieve long-term success in search engine rankings.",
       featured: true,
-      Icon: FaSearch,
+      icon: FaSearch,
       pricingTiers: [
         {
           name: "SEO Audit",
@@ -2145,67 +2154,144 @@ export const subServiceDetails: SubServiceItem[] = [
             description: "Effective SEO starts with strategic keyword research. We conduct in-depth analysis to identify high-performing, low-competition keywords that align with your business goals and target audience. By prioritizing search intent, competitor insights, and user behavior, we uncover opportunities to improve rankings, drive qualified traffic, and boost conversions. Our keyword research ensures clarity, accuracy, and consistency, helping your content resonate with users while enhancing search engine visibility."
           },
           {
-            title: "On-Page SEO Optimization",
-            description: "Our On-Page SEO Optimization services enhance your website’s visibility, improve search rankings, and create a seamless user experience. By implementing the latest SEO best practices, we optimize your content, metadata, and site structure to ensure your website is search engine-friendly and user-centric. We focus on refining every on-page element to maximize discoverability, engagement, and conversions. Our on-page SEO strategies include:",
+            title: "Comprehensive On-Page SEO Optimization",
+            description: "Our On-Page SEO Optimization services are designed to enhance your website’s visibility, improve its search engine rankings, and provide a seamless user experience. By implementing the latest SEO best practices, we optimize your content, metadata, and site structure to make sure your website is both search engine-friendly and user-centric. We take a meticulous approach to refining every on-page element to maximize discoverability, drive engagement, and increase conversions. Our comprehensive on-page SEO strategies include:",
             info: [
-              "Optimizing title tags, meta descriptions, and header tags with high-ranking keywords to improve search visibility.",
-              "Enhancing URL structures for better crawlability, indexability, and overall site architecture.",
-              "Strategically incorporating keywords for natural readability, improved keyword density, and SEO-friendly formatting.",
-              "Boosting website speed, ensuring mobile responsiveness, and enhancing user experience to increase engagement and reduce bounce rates."
+              {
+                title: "Optimizing Title Tags and Meta Descriptions",
+                description: "We optimize title tags, meta descriptions, and header tags with high-ranking, relevant keywords to boost search engine visibility and improve click-through rates. This ensures that your pages are properly indexed by search engines and appear prominently in search results."
+              },
+              {
+                title: "Enhancing URL Structures",
+                description: "We enhance URL structures to improve crawlability, indexability, and overall site architecture. Clean, well-structured URLs not only make your site more accessible to search engines but also improve the user experience, making it easier for visitors to navigate."
+              },
+              {
+                title: "Strategic Keyword Integration",
+                description: "Our SEO experts strategically incorporate high-performing keywords into your content in a natural, readable way. By balancing optimal keyword density and ensuring SEO-friendly formatting, we improve both search engine rankings and user engagement."
+              },
+              {
+                title: "Boosting Website Performance",
+                description: "We focus on improving website performance by optimizing load speed, ensuring mobile responsiveness, and enhancing the overall user experience. Fast loading times and seamless mobile experiences reduce bounce rates, increase user retention, and contribute to better search rankings."
+              }
             ]
           },
           {
             title: "Content Optimization & SEO Copywriting",
-            description: "Our Content Optimization & SEO Copywriting services ensure your website ranks higher, engages users, and drives conversions. By crafting clear, compelling, and keyword-rich content, we help improve search engine visibility and enhance user experience. Our SEO-friendly approach aligns with Google's best practices, ensuring content that is authoritative, relevant, and high-performing. We specialize in:",
+            description: "Our Content Optimization & SEO Copywriting services are designed to ensure your website ranks higher on search engines, engages users effectively, and drives conversions. By crafting clear, compelling, and keyword-rich content, we not only enhance search engine visibility but also provide an exceptional user experience. We follow Google’s best practices to ensure content that is authoritative, relevant, and high-performing, positioning your brand as a trusted industry leader. We specialize in the following:",
             info: [
-              "Creating SEO-optimized blog posts, landing pages, and product descriptions that boost rankings and user engagement.",
-              "Developing content that follows Google's E-E-A-T (Experience, Expertise, Authority, Trustworthiness) principles for credibility and trust.",
-              "Crafting targeted service pages designed to drive conversions, increase lead generation, and improve search engine rankings."
+              {
+                title: "SEO-Optimized Content Creation",
+                description: "We create SEO-optimized blog posts, landing pages, and product descriptions that are tailored to boost rankings and user engagement. By incorporating high-value keywords, relevant content, and optimal formatting, we ensure that each piece drives organic traffic and encourages users to take action, improving your site's visibility and engagement."
+              },
+              {
+                title: "Adherence to Google's E-E-A-T Principles",
+                description: "Our content is developed with a focus on Google's E-E-A-T (Experience, Expertise, Authority, Trustworthiness) principles. This ensures that your website is seen as a credible and authoritative source in your industry, fostering trust with both search engines and your audience, and ultimately improving your rankings."
+              },
+              {
+                title: "Conversion-Driven Service Pages",
+                description: "We specialize in crafting targeted service pages that are strategically designed to drive conversions, increase lead generation, and improve search engine rankings. Our approach includes clear calls to action (CTAs), persuasive copy, and optimized layout that guide users through the funnel and increase your chances of converting visitors into loyal customers."
+              }
             ]
           },
           {
-            title: "Technical SEO Enhancements",
-            description: "Our Technical SEO Enhancements focus on optimizing your website’s structure, performance, and search engine visibility. By improving technical elements like site speed, indexing, and mobile-friendliness, we ensure your website ranks higher and delivers a seamless user experience. Our approach enhances crawlability, eliminates technical errors, and ensures compliance with search engine best practices. Our technical SEO solutions include:",
+            title: "Advanced Technical SEO Improvements",
+            description: "Our Advanced Technical SEO Enhancements are designed to optimize the technical foundation of your website, improving both its search engine visibility and overall performance. We focus on optimizing critical technical aspects such as website speed, mobile compatibility, and indexing processes. By addressing technical issues, improving crawlability, and aligning with search engine guidelines, we ensure that your website ranks higher and provides users with a seamless, fast, and engaging experience. Our comprehensive technical SEO services include:",
             info: [
-              "Fixing broken links and optimizing internal linking structures to improve site navigation and user engagement.",
-              "Boosting page speed by optimizing images, compressing files, and enhancing server response times.",
-              "Implementing structured data and schema markup to improve search visibility and enhance rich snippets.",
-              "Optimizing mobile usability to ensure a seamless, responsive browsing experience across all devices.",
-              "Configuring XML sitemaps and robots.txt files for efficient search engine crawling, indexing, and ranking improvements."
+              {
+                title: "Fixing Broken Links & Streamlining Internal Linking",
+                description: "Addressing broken links and refining internal linking structures to improve site navigation, enhance user engagement, and distribute page authority effectively."
+              },
+              {
+                title: "Enhancing Page Load Speed",
+                description: "Optimizing website performance by improving page load speeds through image compression, file minification, and enhancing server response times for faster user experiences."
+              },
+              {
+                title: "Implementing Schema Markup & Structured Data",
+                description: "Integrating structured data and schema markup to boost search engine visibility and enable rich snippets, enhancing the presentation of your site in search results."
+              },
+              {
+                title: "Optimizing for Mobile Usability",
+                description: "Ensuring a flawless mobile browsing experience by optimizing mobile responsiveness, ensuring that your site performs well on smartphones and tablets without compromise."
+              },
+              {
+                title: "Configuring XML Sitemaps & Robots.txt for SEO",
+                description: "Setting up XML sitemaps and robots.txt files to ensure search engines can efficiently crawl, index, and rank your site, ultimately boosting visibility and SEO performance."
+              }
             ]
           },
           {
-            title: "Link Building & Off-Page SEO",
-            description: "Our Link Building & Off-Page SEO strategies enhance your website's authority, boost search rankings, and drive organic traffic. By implementing high-quality backlinks, content partnerships, and strategic link-building campaigns, we help improve your website’s credibility and search engine visibility. Our approach focuses on optimizing off-page factors that influence rankings while ensuring a seamless and engaging user experience. Our link-building strategies include:",
+            title: "Effective Link Building & Off-Page SEO Strategies",
+            description: "Our comprehensive Link Building & Off-Page SEO strategies are designed to elevate your website's authority, improve search engine rankings, and drive consistent organic traffic. By leveraging high-quality backlinks, strategic partnerships, and content-driven campaigns, we help enhance your website's credibility and search engine presence. Our approach focuses on optimizing off-page elements that influence rankings, while maintaining a seamless and engaging experience for users. Our link-building and off-page SEO services include:",
             info: [
-              "Boosting search engine rankings with authoritative, high-quality backlinks and strategic keyword placement.",
-              "Increasing website traffic through effective inbound linking and content-driven SEO strategies.",
-              "Enhancing domain authority and performance with well-structured outbound links to trusted sources.",
-              "Developing engaging, shareable content that resonates with your audience and strengthens brand identity.",
-              "Creating targeted landing pages and service pages optimized for lead generation and conversions."
+              {
+                title: "Improving Search Engine Rankings",
+                description: "Elevating your search engine rankings by acquiring authoritative, high-quality backlinks and strategically placing keywords across relevant websites."
+              },
+              {
+                title: "Increasing Organic Traffic",
+                description: "Driving organic traffic to your site by utilizing effective inbound linking techniques, content partnerships, and SEO-driven strategies."
+              },
+              {
+                title: "Enhancing Domain Authority",
+                description: "Improving domain authority and site performance by establishing well-structured outbound links to trusted sources, enhancing your website’s reputation."
+              },
+              {
+                title: "Creating Engaging, Shareable Content",
+                description: "Developing high-quality, shareable content that resonates with your target audience, strengthens your brand identity, and encourages social sharing and engagement."
+              },
+              {
+                title: "Optimizing Targeted Landing Pages",
+                description: "Creating highly-targeted landing pages and service pages that are optimized for lead generation, conversions, and improved search visibility."
+              }
             ]
           },
           {
-            title: "Local SEO Optimization",
-            description: "Our Local SEO Optimization services ensure your business ranks higher in local searches, attracts more traffic, and provides a seamless user experience. We focus on clarity, accuracy, and consistency to enhance local visibility and improve engagement. By leveraging SEO-friendly content, high-quality images, videos, and interactive elements, we help create an engaging, user-centric website. Our local SEO solutions include:",
+            title: "Comprehensive Local SEO Optimization",
+            description: "Our Local SEO Optimization services are designed to help your business rank higher in local search results, attract more targeted traffic, and deliver an exceptional user experience. By focusing on clarity, accuracy, and consistency, we enhance your local visibility and boost customer engagement. Using SEO-friendly content, high-quality multimedia, and interactive elements, we create an engaging, user-focused website that supports your local marketing goals. Our Local SEO strategies include:",
             info: [
-              "Boosting search rankings with high-quality backlinks and geo-targeted keyword optimization.",
-              "Driving local traffic through strategic inbound linking and localized keyword placement.",
-              "Enhancing website authority with optimized outbound links and relevant local search terms.",
-              "Creating location-specific content that resonates with your target audience and strengthens brand identity.",
-              "Developing targeted service pages designed to increase local conversions and generate leads."
+              {
+                title: "Improving Local Search Rankings",
+                description: "Improving local search rankings by acquiring high-quality backlinks and optimizing for geo-targeted keywords to ensure your business stands out in local searches."
+              },
+              {
+                title: "Increasing Local Traffic",
+                description: "Driving relevant local traffic to your website through strategic inbound linking, localized keyword targeting, and local search engine optimization tactics."
+              },
+              {
+                title: "Enhancing Website Authority",
+                description: "Enhancing your website's authority by implementing optimized outbound links and incorporating local search terms to improve trustworthiness and credibility in local searches."
+              },
+              {
+                title: "Creating Location-Specific Content",
+                description: "Developing engaging, location-specific content tailored to resonate with your local audience, while reinforcing your brand’s presence and relevance in the community."
+              },
+              {
+                title: "Optimizing Service Pages for Local Conversions",
+                description: "Creating targeted service pages optimized for local SEO that help drive conversions and generate leads by addressing local needs and search intent."
+              }
             ]
           },
           {
-            title: "SEO Performance Tracking & Reporting",
-            description:
-              "Our SEO performance tracking and reporting services ensure your website stays optimized for higher search rankings, improved user experience, and increased organic traffic. We focus on clarity, accuracy, and consistency to enhance site navigation and engagement. By leveraging SEO-friendly content, high-quality images, videos, and interactive elements, we help create a seamless, user-centric experience. Our comprehensive tracking and reporting solutions include:",
+            title: "Comprehensive SEO Performance Tracking & Reporting",
+            description: "Our SEO performance tracking and reporting services are designed to ensure your website remains optimized for higher search rankings, better user experience, and increased organic traffic. We focus on accuracy, consistency, and clarity to optimize navigation and enhance overall engagement. By leveraging advanced SEO tools, high-quality content, and interactive elements, we deliver a seamless, user-centered experience that drives measurable results. Our comprehensive SEO tracking and reporting services include:",
             info: [
-              "Utilizing Google Analytics and advanced SEO tools to monitor and analyze website performance.",
-              "Generating in-depth reports with key metrics to measure SEO progress and identify areas for improvement.",
-              "Implementing proven SEO strategies to enhance search visibility and increase organic traffic.",
-              "Optimizing website content, metadata, and structured data to improve rankings and rich snippet performance.",
-            ],
+              {
+                title: "Advanced Analytics & SEO Tools Utilization",
+                description: "Using Google Analytics and cutting-edge SEO tools, we continuously monitor and analyze your website's performance, uncovering key insights to inform optimization efforts and boost SEO effectiveness."
+              },
+              {
+                title: "Detailed SEO Reporting",
+                description: "Generating detailed, data-driven reports that highlight key SEO metrics, measure progress, and identify areas for improvement, helping you track your SEO performance over time."
+              },
+              {
+                title: "Strategic SEO Strategy Implementation",
+                description: "Implementing proven, results-driven SEO strategies designed to enhance search visibility, increase organic traffic, and improve your website’s overall online presence."
+              },
+              {
+                title: "Content Optimization for SEO Success",
+                description: "Optimizing website content, metadata, and structured data to enhance rankings, improve rich snippet visibility, and ensure your content meets the latest SEO best practices for maximum search engine performance."
+              }
+            ]
           },
         ],
       },
@@ -2286,7 +2372,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Transform your ideas into interactive, user-centric designs with our wireframing and prototyping services. From low-fidelity wireframes to high-fidelity prototypes, we help visualize and refine the user experience before development, ensuring seamless usability and optimizing the final product.",
       featured: false,
-      Icon: FaDesktop,
+      icon: FaDesktop,
       pricingTiers: [
         {
           name: "Low-Fidelity Wireframes",
@@ -2456,7 +2542,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create captivating, SEO-optimized content that informs, engages, and converts. From blog posts and landing pages to eBooks and technical documentation, we craft compelling narratives that enhance your brand, boost visibility, and drive meaningful results.",
       featured: true,
-      Icon: FaPen,
+      icon: FaPen,
       pricingTiers: [
         {
           name: "Basic",
@@ -2537,13 +2623,25 @@ export const subServiceDetails: SubServiceItem[] = [
             description: "We optimize your website copy for search engines while maintaining readability and engagement. Our SEO strategies include seamless keyword integration, meta descriptions, and structured formatting to improve search rankings, drive organic traffic, and enhance discoverability without compromising user experience."
           },
           {
-            title: "User Experience & Readability Enhancements",
-            description: "Web users skim content, so we structure copy for maximum readability with:",
+            title: "Optimizing User Experience & Enhancing Readability",
+            description: "In today’s fast-paced digital environment, web users often skim through content. To counter this, we structure content with readability and engagement in mind. By implementing strategies that capture the reader's attention, we ensure users can easily navigate and access key information. Here’s how we enhance user experience and readability on your website:",
             info: [
-              "Short, digestible paragraphs",
-              "Bullet points and subheadings for easy scanning",
-              "Strategic CTA placement to guide users toward action",
-              "Conversational yet professional tone to maintain engagement"
+              {
+                title: "Concise, Digestible Paragraphs",
+                description: "We break content into short, easy-to-read paragraphs, making information more digestible for your audience. This approach improves content flow and helps readers quickly grasp the essential points, minimizing the likelihood of overwhelming them with long, dense blocks of text."
+              },
+              {
+                title: "Clear Bullet Points and Subheadings",
+                description: "Using well-organized bullet points and clear subheadings, we make your content easy to scan. This structure helps users find key details quickly, enhancing both the accessibility and user engagement of your website. Visitors are empowered to locate the information they need in just a glance."
+              },
+              {
+                title: "Strategic Call-to-Action Placement",
+                description: "We strategically position call-to-action (CTA) buttons throughout the content to guide users toward desired actions. Whether it's making a purchase, signing up for a newsletter, or contacting you for further inquiries, we ensure that CTAs are prominent, persuasive, and aligned with your business goals."
+              },
+              {
+                title: "Conversational Yet Professional Tone",
+                description: "We balance a conversational tone with professionalism to resonate with your audience while maintaining brand authority. This approach keeps readers engaged, encourages interaction, and fosters a sense of trust and connection with your brand."
+              }
             ]
           },
           {
@@ -2609,7 +2707,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create clear, concise, and user-friendly tutorials that break down complex tasks into easy-to-follow steps. With visual aids and structured guidance, our tutorials simplify technical processes and help users master new skills, ensuring a seamless learning experience.",
       featured: false,
-      Icon: FaDesktop,
+      icon: FaDesktop,
       pricingTiers: [
         {
           name: "Quick Start Guides",
@@ -2699,7 +2797,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Design eye-catching brochures and flyers that effectively showcase your products and services. With engaging visuals, persuasive copy, and strategic layouts, our designs capture attention and inspire action, leaving a lasting impression on your audience.",
       featured: true,
-      Icon: FaDesktop,
+      icon: FaDesktop,
       pricingTiers: [
         {
           name: "Flyers (One Page)",
@@ -2774,7 +2872,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create clear, engaging training materials that streamline the onboarding process. With step-by-step guidance, interactive elements, and tailored resources, we ensure smooth transitions and successful integration, fostering confidence and long-term alignment with your goals.",
       featured: false,
-      Icon: FaDesktop,
+      icon: FaDesktop,
       pricingTiers: [
         {
           name: "Basic Onboarding Documents",
@@ -2876,7 +2974,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create detailed, easy-to-follow study guides that simplify complex concepts and enhance learning retention. Our guides provide clear explanations and structured layouts, helping students and professionals grasp key topics, boost confidence, and achieve their goals with effective learning strategies.",
       featured: false,
-      Icon: FaDesktop,
+      icon: FaDesktop,
       pricingTiers: [
         {
           name: "Basic Study Guides (5–10 pages)",
@@ -2978,7 +3076,7 @@ export const subServiceDetails: SubServiceItem[] = [
       short:
         "Create high-quality, visually appealing eBooks that educate, inform, and engage your audience. Our expertly crafted eBooks combine compelling content with eye-catching design to deliver an impactful reading experience that aligns with your marketing, educational, or publishing goals.",
       featured: false,
-      Icon: FaDesktop,
+      icon: FaDesktop,
       pricingTiers: [
         {
           name: "Basic eBook",

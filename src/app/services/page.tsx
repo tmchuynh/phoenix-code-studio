@@ -1,16 +1,14 @@
 "use client";
-
-import { FC, useState } from "react";
+import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
+import { allServices } from "@/lib/service-categories";
+import { subServiceDetails } from "@/lib/sub-services";
+import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
 import { cn, formatCurrency, setSlug } from "@/lib/utils";
 import { useTheme } from "next-themes";
-import useMediumScreen from "@/lib/useMediumScreen";
-import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
-import { allServices } from "@/lib/service-categories";
-import { subServiceDetails } from "@/lib/sub-services";
-import { contentCreationServices, websiteServices } from "@/lib/constants";
+import { useRouter } from "next/navigation";
+import { FC } from "react";
 
 const ServicesPage: FC = () => {
   const router = useRouter();
@@ -20,24 +18,15 @@ const ServicesPage: FC = () => {
 
   const navigateToDetails = (serviceCategory: string, serviceName: string) => {
     const formattedServiceName = setSlug(serviceName);
+    const formattedCategoryName = setSlug(serviceCategory);
 
-    router.push(`/services/${serviceCategory}/${formattedServiceName}`);
+    router.push(`/services/${formattedCategoryName}/${formattedServiceName}`);
   };
 
-  const navigateToWebService = (serviceName: string) => {
-    const formattedServiceName = setSlug(serviceName);
+  const navigateToCategory = (serviceCategory: string) => {
+    const formattedCategoryName = setSlug(serviceCategory);
 
-    router.push(
-      `/services/comprehensive-website-solutions/${formattedServiceName}`
-    );
-  };
-
-  const navigateToContentService = (serviceName: string) => {
-    const formattedServiceName = setSlug(serviceName);
-
-    router.push(
-      `/services/seo-optimized-content-creation/${formattedServiceName}`
-    );
+    router.push(`/services/${formattedCategoryName}`);
   };
 
   return (
@@ -72,59 +61,61 @@ const ServicesPage: FC = () => {
             {service.info.description.map((info, infoIndex) => (
               <p key={infoIndex}>{info}</p>
             ))}
+            {/* <Button
+              onClick={() => router.push("/contact-us")}
+              variant={"outline"}
+              className="my-15 w-1/2 text-wrap py-10 md:py-0 lg:text-lg"
+            >
+              View Our Services for
+            </Button> */}
           </div>
 
-          {service.info.subServices.map((subService) => {
+          {service.info.subServices.map((subService, subIndex) => {
             const subServiceDetail = subServiceDetails.find(
               (item) => item.name === subService
             );
 
             if (subServiceDetail) {
               return (
-                <>
-                  <div
-                    key={subService}
-                    className={cn(
-                      "flex flex-col md:flex-row justify-between md:items-end relative mt-5",
-                      index !== service.info.subServices.length - 1
-                        ? "pb-7"
-                        : ""
-                    )}
-                  >
-                    <div>
-                      <h3 className="font-semibold text-accent-5">
-                        {subServiceDetail.info.name}
-                      </h3>
-                      <p className="md:pb-10">
-                        {!isMediumScreen
-                          ? subServiceDetail.info.info
-                          : subServiceDetail.info.details}
-                      </p>
-                      <p className="pb-3 md:pb-0">
-                        <strong>Starting at: </strong>
-                        {formatCurrency(subServiceDetail.info.startingPrice)}
-                      </p>
-                    </div>
-                    <Button
-                      variant={theme === "dark" ? "outline" : "secondary"}
-                      size={isSmallScreen ? "sm" : "default"}
-                      onClick={() =>
-                        navigateToDetails(
-                          subServiceDetail.category,
-                          subServiceDetail.name
-                        )
-                      }
-                      className={
-                        isSmallScreen
-                          ? "text-xs relative"
-                          : "absolute right-0 w-64 2xl:w-80 2xl:px-44"
-                      }
-                    >
-                      Learn About {subServiceDetail.info.description}
-                    </Button>
+                <div
+                  key={subIndex}
+                  className={cn(
+                    "flex flex-col md:flex-row justify-between md:items-end relative mt-5",
+                    index !== service.info.subServices.length - 1 ? "pb-7" : ""
+                  )}
+                >
+                  <div>
+                    <h3 className="font-semibold text-accent-5">
+                      {subServiceDetail.info.name}
+                    </h3>
+                    <p className="md:pb-10">
+                      {!isMediumScreen
+                        ? subServiceDetail.info.info
+                        : subServiceDetail.info.details}
+                    </p>
+                    <p className="pb-3 md:pb-0">
+                      <strong>Starting at: </strong>
+                      {formatCurrency(subServiceDetail.info.startingPrice)}
+                    </p>
                   </div>
-                  {index !== service.info.subServices.length - 1 && <hr />}
-                </>
+                  <Button
+                    variant={theme === "dark" ? "outline" : "secondary"}
+                    size={isSmallScreen ? "sm" : "default"}
+                    onClick={() =>
+                      navigateToDetails(
+                        subServiceDetail.category,
+                        subServiceDetail.name
+                      )
+                    }
+                    className={
+                      isSmallScreen
+                        ? "text-xs relative"
+                        : "absolute right-0 w-64 2xl:w-80 2xl:px-44"
+                    }
+                  >
+                    Learn About {subServiceDetail.info.description}
+                  </Button>
+                </div>
               );
             }
             return null;
