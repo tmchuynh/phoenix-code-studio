@@ -66,14 +66,26 @@ const ServicesPage: FC = () => {
         <section className="my-20 pb-9" key={index}>
           <div className="pb-3 flex flex-col">
             <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
-              {service.short}
+              {service.title}
             </h2>
-            {service.info.description.map((info, infoIndex) => (
-              <p key={infoIndex}>{info}</p>
-            ))}
+
+            {isSmallScreen ? (
+              <p>{service.info.short}</p>
+            ) : isMediumScreen ? (
+              <p>{service.info.detail}</p>
+            ) : (
+              <>
+                <p>{service.info.intro}</p>
+
+                {service.info.description.map((info, infoIndex) => (
+                  <p key={infoIndex}>{info}</p>
+                ))}
+              </>
+            )}
+
             <Button
-              className="self-end w-1/4"
-              variant={theme === "dark" ? "outline" : "accent"}
+              className="self-start mt-6 w-1/4"
+              variant={theme === "dark" ? "accent" : "outline"}
               size={isSmallScreen ? "sm" : "default"}
               onClick={() => navigateToCategory(service.name)}
             >
@@ -105,7 +117,9 @@ const ServicesPage: FC = () => {
                         : subServiceDetail.info.details}
                     </p>
                     <p className="pb-3 md:pb-0">
-                      <strong>Starting at: </strong>
+                      <strong className="uppercase tracking-wider">
+                        Starting at:{" "}
+                      </strong>
                       {formatCurrency(subServiceDetail.info.startingPrice)}
                     </p>
                   </div>
