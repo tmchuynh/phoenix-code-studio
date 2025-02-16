@@ -35,7 +35,7 @@ export interface SubServiceItem {
   category: string;
   name: string;
   info: SubServiceInfo;
-  details: Details[];
+  details: SubServiceDetail[];
   cta: CTA;
 }
 
@@ -51,7 +51,7 @@ export interface SubServiceInfo {
   pricingTiers: PricingTier[];
 }
 
-export interface Details {
+export interface SubServiceDetail {
   title: string;
   intro?: string[];
   lists?: {
@@ -81,7 +81,7 @@ export interface PaymentDetails {
   short: string;
   features: string[];
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-  details: Details[];
+  details: ListDetail[];
 }
 
 export interface PaymentPlan {
