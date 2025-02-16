@@ -2015,6 +2015,7 @@ export const subServiceDetails: SubServiceItem[] = [
       intro:
         "Technical documentation plays a critical role in simplifying complex concepts, improving user comprehension, and reducing the need for additional support. We specialize in creating clear, concise, and actionable content that empowers your users, enhances their experience, and reinforces your brand's authority and trustworthiness.",
       text: "Our technical writing services are designed to deliver precise, user-friendly documentation that makes your product easy to use and understand. Whether it's product manuals, user guides, API documentation, or FAQs, we ensure the content is not only clear and structured but also fully aligned with your brand’s tone and voice. By breaking down complex processes into simple, digestible steps, we help your audience resolve issues quickly and efficiently, reducing frustration and enhancing their overall experience",
+      button: "Get Connected Today!",
       afterButtonText:
         "Let’s create technical documentation that empowers your users, reduces confusion, and enhances your product’s value.",
     },
