@@ -9,6 +9,22 @@ import { cn, formatName, setSlug } from "@/lib/utils";
 import useMediumScreen from "@/lib/useMediumScreen";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { paymentPlans } from "@/lib/payment-plans";
+import { MdCheck } from "react-icons/md";
+
+const IconDisplay: FC<{
+  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+}> = ({ Icon }) => {
+  return (
+    <div>
+      {/* Render the icon */}
+      {Icon ? (
+        <Icon className="text-4xl text-accent-5 mx-auto my-5" />
+      ) : (
+        <MdCheck className="my-1 size-5 md:size-6" />
+      )}
+    </div>
+  );
+};
 
 const PaymentPlansPage: FC = () => {
   const router = useRouter();
@@ -55,15 +71,33 @@ const PaymentPlansPage: FC = () => {
             >
               <div>
                 {/* Plan Title */}
-                <h3>{formatName(plan.name)}</h3>
+                <h2>{isMediumScreen ? plan.short : plan.title}</h2>
 
                 {/* Plan Description */}
-                <p>{plan.info.description}</p>
+                <div>
+                  {isSmallScreen
+                    ? plan.info.short
+                    : isMediumScreen
+                    ? plan.info.description
+                    : plan.info.intro.map((sentence, index) => {
+                        return <p key={index}>{sentence}</p>;
+                      })}
+                </div>
+              </div>
 
-                {/* Plan Details */}
-                <ul>
-                  {plan.info.features.map((detail, i) => (
-                    <li key={i}>{detail}</li>
+              {/* Plan Details */}
+              <div>
+                <h3>Key Attributes</h3>
+                <ul className="grid grid-cols-1 gap-x-4 list-none">
+                  {plan.info.shortFeatures.map((features, index) => (
+                    <li className="flex items-center" key={index}>
+                      <IconDisplay Icon={plan.Icon} />
+
+                      <span className="pl-3">
+                        <strong>{features.title}: </strong>
+                        {features.description}
+                      </span>
+                    </li>
                   ))}
                 </ul>
               </div>

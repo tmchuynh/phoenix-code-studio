@@ -1,6 +1,5 @@
 "use client";
 
-import { FaArrowAltCircleRight } from "react-icons/fa";
 import { ServiceCategory } from "@/lib/interfaces";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
@@ -9,6 +8,7 @@ import { useEffect, useState } from "react";
 import { LuArrowBigRightDash } from "react-icons/lu";
 import { Button } from "@/components/ui/button";
 import CallToAction from "@/components/CallToAction";
+import { formatName } from "@/lib/utils";
 
 export default function CategoryPage() {
   const { category } = useParams() as { category: string };
@@ -50,7 +50,7 @@ export default function CategoryPage() {
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
-      <h1>{service?.name.replace(/-/g, " ")}</h1>
+      <h1>{service?.name && formatName(service?.name)}</h1>
       <div className="mb-4">
         {" "}
         {isSmallScreen

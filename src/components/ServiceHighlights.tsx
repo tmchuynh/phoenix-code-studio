@@ -8,6 +8,7 @@ import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
 import { subServiceDetails } from "@/lib/sub-services";
 import { useTheme } from "next-themes";
+import { FaCheck } from "react-icons/fa";
 
 const IconDisplay: FC<{
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
@@ -15,7 +16,11 @@ const IconDisplay: FC<{
   return (
     <div>
       {/* Render the icon */}
-      <Icon className="text-4xl text-accent-5 mx-auto my-5" />
+      {Icon ? (
+        <Icon className="text-4xl text-accent-5 mx-auto my-5" />
+      ) : (
+        <FaCheck className="my-1 size-5 md:size-6" />
+      )}
     </div>
   );
 };

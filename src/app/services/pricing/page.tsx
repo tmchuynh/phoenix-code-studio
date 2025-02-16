@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { SidebarSeparator } from "@/components/ui/sidebar";
 import { allServices } from "@/lib/service-categories";
 import { subServiceDetails } from "@/lib/sub-services";
-import { capitalize, formatName, setSlug } from "@/lib/utils";
+import { formatName, setSlug } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import useSmallScreen from "@/lib/useSmallScreen";
