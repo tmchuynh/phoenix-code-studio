@@ -27,7 +27,9 @@ export interface ServiceCategory {
 
 export interface ServiceInfo {
   description: string[];
+  detail: string;
   short: string;
+  intro: string;
   subServices: string[];
 }
 

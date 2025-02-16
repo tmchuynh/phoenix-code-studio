@@ -1,11 +1,19 @@
 "use client";
 
+import { FaArrowAltCircleRight } from "react-icons/fa";
 import { ServiceCategory } from "@/lib/interfaces";
+import useMediumScreen from "@/lib/useMediumScreen";
+import useSmallScreen from "@/lib/useSmallScreen";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import { LuArrowBigRightDash } from "react-icons/lu";
+import { Button } from "@/components/ui/button";
+import CallToAction from "@/components/CallToAction";
 
 export default function CategoryPage() {
   const { category } = useParams() as { category: string };
+  const isMediumScreen = useMediumScreen();
+  const isSmallScreen = useSmallScreen();
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -41,29 +49,44 @@ export default function CategoryPage() {
   }
 
   return (
-    <main className="p-6">
-      <h1 className="text-2xl font-bold mb-4">
-        {/* Convert hyphens in the category name to spaces for display */}
-        {service?.name}
-      </h1>
-      <p className="mb-4">{service?.info?.description}</p>
+    <main className="w-10/12 md:w-11/12 mx-auto py-6">
+      <h1>{service?.name.replace(/-/g, " ")}</h1>
+      <div className="mb-4">
+        {" "}
+        {isSmallScreen
+          ? service?.info.short
+          : isMediumScreen
+          ? service?.info.detail
+          : service?.info.description.map((sentence, index) => {
+              return <p key={index}>{sentence}</p>;
+            })}
+      </div>
 
-      <h2 className="text-xl font-semibold">Sub-Services:</h2>
-      <ul className="list-disc list-inside">
-        {service?.info?.subServices?.length ? (
-          service.info?.subServices.map((sub: string) => (
-            <li key={sub}>
-              {" "}
+      <h2>Discover What We Can Do For You</h2>
+      <p>{service?.info.intro}</p>
+
+      {service?.info?.subServices?.length ? (
+        service.info?.subServices.map((sub, index) => (
+          <div className="py-1 flex" key={index}>
+            <p className="group flex items-center gap-5">
               {sub
                 .split("-")
                 .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
                 .join(" ")}{" "}
-            </li>
-          ))
-        ) : (
-          <li>No sub-services found.</li>
-        )}
-      </ul>
+              <span className="inline-block transition-transform duration-300 ease-in-out group-hover:translate-x-5 text-accent-2">
+                <LuArrowBigRightDash />
+              </span>
+              <Button variant={"link"} className="no-underline hover:underline">
+                Learn More
+              </Button>
+            </p>
+          </div>
+        ))
+      ) : (
+        <p>No sub-services found.</p>
+      )}
+
+      <CallToAction />
     </main>
   );
 }
