@@ -1,9 +1,7 @@
 "use client";
 
-import { FC, useState } from "react";
+import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
-import { paymentPlans } from "@/lib/constants";
-import Image from "next/image";
 import { BpCheckbox } from "@/components/ui/checkbox-custom";
 import {
   DropdownMenu,
@@ -11,11 +9,13 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { FaChevronDown } from "react-icons/fa";
-import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
-import { capitalize, cn } from "@/lib/utils";
-import { useTheme } from "next-themes";
+import { paymentPlans } from "@/lib/payment-plans";
 import { allServices } from "@/lib/service-categories";
+import { capitalize, cn, formatName } from "@/lib/utils";
+import { useTheme } from "next-themes";
+import Image from "next/image";
+import { FC, useState } from "react";
+import { FaChevronDown } from "react-icons/fa";
 
 export type ServiceTypeKeys =
   | "comprehensiveWebsiteSolutions"
@@ -250,7 +250,7 @@ const ContactUsPage: FC = () => {
                       onChange={(e) => handleMainServiceCheck(e, service.type)}
                       className="mr-2"
                     />
-                    {capitalize(service.name.replace(/-/g, " "))}
+                    {formatName(service.name)}
                   </label>
 
                   {expandedServices.includes(service.type) && (
@@ -265,7 +265,7 @@ const ContactUsPage: FC = () => {
                             }
                             className="mr-2"
                           />
-                          {capitalize(sub.replace(/-/g, " "))}
+                          {formatName(sub)}
                         </label>
                       ))}
                     </div>
@@ -290,11 +290,11 @@ const ContactUsPage: FC = () => {
                       onClick={() => {
                         setFormData((prevState) => ({
                           ...prevState,
-                          paymentPlan: plan.title,
+                          paymentPlan: plan.name,
                         }));
                       }}
                     >
-                      {plan.title}
+                      {plan.name}
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>

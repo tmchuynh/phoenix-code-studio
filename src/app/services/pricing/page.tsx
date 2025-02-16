@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { SidebarSeparator } from "@/components/ui/sidebar";
 import { allServices } from "@/lib/service-categories";
 import { subServiceDetails } from "@/lib/sub-services";
-import { capitalize, setSlug } from "@/lib/utils";
+import { capitalize, formatName, setSlug } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import useSmallScreen from "@/lib/useSmallScreen";
@@ -68,10 +68,7 @@ const PricingPage: FC = () => {
             if (subServiceDetail) {
               return (
                 <div key={subIndex}>
-                  <h3>
-                    Pricing for{" "}
-                    {capitalize(subServiceDetail.name.replace(/-/g, " "))}
-                  </h3>
+                  <h3>Pricing for {formatName(subServiceDetail.name)}</h3>
                   <ul>
                     {subServiceDetail.info.pricingTiers.map(
                       (pricing, pricingIndex) => (
