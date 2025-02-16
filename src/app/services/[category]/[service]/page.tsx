@@ -51,41 +51,47 @@ export default function ServicePage() {
       <h1>{serviceData?.info.name}</h1>
       <p className="mb-4">{serviceData?.info.info}</p>
 
-      {serviceData?.details.map((detail, index) => (
-        <section key={index} className="py-4">
-          <h2>{detail.title}</h2>
-          {detail.intro &&
-            detail.intro.map((sentence, sIndex) => (
-              <p key={sIndex}>{sentence}</p>
-            ))}
-
-          {detail.lists && (
-            <ul>
-              {detail.lists.map((list, listIndex) => (
-                <li key={listIndex}>
-                  <strong>{list.title ? `${list.title}:` : ""} </strong>
-                  {list.description}
-                  {list.info && (
-                    <ul>
-                      {list.info.map((item, itemIndex) => (
-                        <li key={itemIndex}>
-                          <strong>{item.title}: </strong>
-                          {item.description}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
+      {/* Check if serviceData.details is an array */}
+      {Array.isArray(serviceData?.details) && serviceData.details.length > 0 ? (
+        serviceData.details.map((detail, index) => (
+          <section key={index} className="py-4">
+            <h2>{detail.title}</h2>
+            {detail.intro &&
+              detail.intro.map((sentence, sIndex) => (
+                <p key={sIndex}>{sentence}</p>
               ))}
-            </ul>
-          )}
-        </section>
-      ))}
 
+            {detail.lists && (
+              <ul>
+                {detail.lists.map((list, listIndex) => (
+                  <li key={listIndex}>
+                    <strong>{list.title ? `${list.title}:` : ""} </strong>
+                    {list.description}
+                    {list.info && (
+                      <ul>
+                        {list.info.map((item, itemIndex) => (
+                          <li key={itemIndex}>
+                            <strong>{item.title}: </strong>
+                            {item.description}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+        ))
+      ) : (
+        <p>No details available for this service.</p>
+      )}
+
+      {/* Check if pricingTiers exist */}
       {serviceData?.info.pricingTiers && (
         <div className="mt-4">
           <h2>Pricing</h2>
-          <p> {serviceData?.info.details}</p>
+          <p>{serviceData?.info.details}</p>
           <ul>
             {serviceData.info.pricingTiers.map((prices, index) => (
               <li key={index}>
