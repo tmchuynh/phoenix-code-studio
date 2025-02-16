@@ -19,6 +19,7 @@ export async function GET( req: NextRequest ) {
   return NextResponse.json( {
     category: subService.category,
     service: subService.name,
-    ...subService.info,
+    info: subService.info,
+    details: subService.details,
   } );
 }

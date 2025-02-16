@@ -3,6 +3,8 @@
 import { SubServiceItem } from "@/lib/interfaces";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import useSmallScreen from "@/lib/useSmallScreen";
+import useMediumScreen from "@/lib/useMediumScreen";
 
 export default function ServicePage() {
   // Retrieve dynamic route params via useParams() in a client component
@@ -10,6 +12,9 @@ export default function ServicePage() {
     category: string;
     service: string;
   };
+
+  const isMediumScreen = useMediumScreen();
+  const isSmallScreen = useSmallScreen();
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -26,7 +31,6 @@ export default function ServicePage() {
         }
 
         const data: SubServiceItem = await response.json();
-        console.log("Fetched Service Data:", data);
         setServiceData(data);
       } catch (err) {
         setError(err instanceof Error ? err.message : String(err));
@@ -49,19 +53,25 @@ export default function ServicePage() {
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <h1>{serviceData?.info.name}</h1>
-      <p className="mb-4">{serviceData?.info.info}</p>
+      <p className="mb-4">
+        {isSmallScreen
+          ? serviceData?.info.short
+          : isMediumScreen
+          ? serviceData?.info.details
+          : serviceData?.info.info}
+      </p>
 
-      {serviceData?.details.map((detail, index) => (
-        <section key={index} className="py-4">
-          <h2>{detail.title}</h2>
-          {detail.intro &&
-            detail.intro.map((sentence, sIndex) => (
-              <p key={sIndex}>{sentence}</p>
+      {serviceData?.details?.map((section, sectionIndex) => (
+        <section key={sectionIndex}>
+          <h2>{section.title}</h2>
+          {section.intro &&
+            section.intro.map((intro, introIndex) => (
+              <p key={introIndex}>{intro}</p>
             ))}
 
-          {detail.lists && (
+          {section.lists && (
             <ul>
-              {detail.lists.map((list, listIndex) => (
+              {section.lists.map((list, listIndex) => (
                 <li key={listIndex}>
                   <strong>{list.title ? `${list.title}:` : ""} </strong>
                   {list.description}
