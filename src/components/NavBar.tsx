@@ -13,7 +13,6 @@ import {
   about,
   companies,
   content,
-  paymentOptions,
   serviceCategories,
   services,
   websites,
@@ -25,6 +24,7 @@ import { IoMdMenu } from "react-icons/io";
 import { ModeButton } from "./ModeButton";
 import { Button } from "./ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { paymentPlans } from "@/lib/payment-plans";
 
 const NavBar = () => {
   const router = useRouter();
@@ -97,16 +97,32 @@ const NavBar = () => {
                   Flexible Payment Plans
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4 grid grid-cols-3 gap-2">
-                  {paymentOptions.map((plan, index) => (
+                  <MenubarItem
+                    onClick={() =>
+                      router.push("/services/pricing/payment-plans")
+                    }
+                    className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72 rounded-lg"
+                  >
+                    <p className="text-tertiary font-semibold mb-0">Overview</p>
+                    <small>
+                      Browse through our variety of payment plans and choose the
+                      one that best aligns with your needs and budget.
+                    </small>
+                  </MenubarItem>
+                  {paymentPlans.map((plan, index) => (
                     <MenubarItem
                       key={index}
-                      onClick={() => router.push(plan.href)}
+                      onClick={() =>
+                        router.push(
+                          `/services/pricing/payment-plans/${plan.name}`
+                        )
+                      }
                       className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72 rounded-lg"
                     >
                       <p className="text-tertiary font-semibold mb-0">
                         {plan.title}
                       </p>
-                      <small>{plan.description}</small>
+                      <small>{plan.info.short}</small>
                     </MenubarItem>
                   ))}
                 </MenubarSubContent>
@@ -249,10 +265,14 @@ const NavBar = () => {
                   Flexible Payment Plans
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4">
-                  {paymentOptions.map((plan, index) => (
+                  {paymentPlans.map((plan, index) => (
                     <MenubarItem
                       key={index}
-                      onClick={() => router.push(plan.href)}
+                      onClick={() =>
+                        router.push(
+                          `/services/pricing/payment-plans/${plan.name}`
+                        )
+                      }
                       className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
                     >
                       {plan.title}
@@ -408,11 +428,13 @@ const NavBar = () => {
                   <FaChevronDown />
                 </MenubarTrigger>
                 <MenubarContent className="block md:hidden ml-9 -mt-2">
-                  {paymentOptions.map((plan, index) => (
+                  {paymentPlans.map((plan, index) => (
                     <MenubarItem
                       key={index}
                       onClick={() => {
-                        router.push(plan.href);
+                        router.push(
+                          `/services/pricing/payment-plans/${plan.name}`
+                        );
                         setIsMenuOpen(false);
                       }}
                     >

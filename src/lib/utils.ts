@@ -41,7 +41,7 @@ export const formatDate = (dateString: string): string => {
 export function setSlug(title: string): string {
   const slug = title
     .toLowerCase()
-    .replace(/[!@#$?%,/^&*]/g, "")
+    .replace(/[!@#$?%,:/^&*]/g, "")
     .replace(/[\s-]+/g, "-");
   return slug;
 }

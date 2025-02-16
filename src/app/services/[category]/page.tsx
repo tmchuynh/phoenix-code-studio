@@ -3,17 +3,18 @@
 import { ServiceCategory } from "@/lib/interfaces";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { LuArrowBigRightDash } from "react-icons/lu";
 import { Button } from "@/components/ui/button";
 import CallToAction from "@/components/CallToAction";
-import { formatName } from "@/lib/utils";
+import { formatName, setSlug } from "@/lib/utils";
 
 export default function CategoryPage() {
   const { category } = useParams() as { category: string };
   const isMediumScreen = useMediumScreen();
   const isSmallScreen = useSmallScreen();
+  const router = useRouter();
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -48,6 +49,12 @@ export default function CategoryPage() {
     return <div className="text-red-600">Error: {error}</div>;
   }
 
+  const navigateToDetails = (serviceName: string) => {
+    const formattedServiceName = setSlug(serviceName);
+
+    router.push(`/services/${category}/${formattedServiceName}`);
+  };
+
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <h1>{service?.name && formatName(service?.name)}</h1>
@@ -76,7 +83,11 @@ export default function CategoryPage() {
               <span className="inline-block transition-transform duration-300 ease-in-out group-hover:translate-x-5 text-accent-2">
                 <LuArrowBigRightDash />
               </span>
-              <Button variant={"link"} className="no-underline hover:underline">
+              <Button
+                variant={"link"}
+                className="no-underline hover:underline"
+                onClick={() => navigateToDetails(sub)}
+              >
                 Learn More
               </Button>
             </p>
