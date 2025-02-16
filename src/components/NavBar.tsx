@@ -14,6 +14,7 @@ import {
   companies,
   content,
   paymentOptions,
+  serviceCategories,
   services,
   websites,
 } from "@/lib/constants";
@@ -63,6 +64,25 @@ const NavBar = () => {
               <FaChevronDown className="ml-3" />
             </MenubarTrigger>
             <MenubarContent className="hidden md:block mt-3">
+              <MenubarSub>
+                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                  Digital Services
+                </MenubarSubTrigger>
+                <MenubarSubContent className="mx-4 grid grid-cols-3 gap-2">
+                  {serviceCategories.map((service, index) => (
+                    <MenubarItem
+                      key={index}
+                      onClick={() => router.push(service.href)}
+                      className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72 rounded-lg"
+                    >
+                      <p className="text-tertiary font-semibold mb-0">
+                        {service.title}
+                      </p>
+                      <small>{service.description}</small>
+                    </MenubarItem>
+                  ))}
+                </MenubarSubContent>
+              </MenubarSub>
               {services.map((service, index) => (
                 <MenubarItem
                   key={index}
@@ -199,6 +219,22 @@ const NavBar = () => {
               <FaChevronDown className="ml-3" />
             </MenubarTrigger>
             <MenubarContent className="hidden md:block mt-3">
+              <MenubarSub>
+                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                  Digital Services
+                </MenubarSubTrigger>
+                <MenubarSubContent className="mx-4">
+                  {serviceCategories.map((service, index) => (
+                    <MenubarItem
+                      key={index}
+                      onClick={() => router.push(service.href)}
+                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                    >
+                      {service.title}
+                    </MenubarItem>
+                  ))}
+                </MenubarSubContent>
+              </MenubarSub>
               {services.map((service, index) => (
                 <MenubarItem
                   key={index}
@@ -328,6 +364,25 @@ const NavBar = () => {
                     </a>
                   ))}
                 </div>
+              </MenubarMenu>
+              <MenubarMenu>
+                <MenubarTrigger className="flex justify-between w-full">
+                  Digtial Services
+                  <FaChevronDown />
+                </MenubarTrigger>
+                <MenubarContent className="block md:hidden ml-9 -mt-2">
+                  {serviceCategories.map((services, index) => (
+                    <MenubarItem
+                      key={index}
+                      onClick={() => {
+                        router.push(services.href);
+                        setIsMenuOpen(false);
+                      }}
+                    >
+                      {services.title}
+                    </MenubarItem>
+                  ))}
+                </MenubarContent>
               </MenubarMenu>
               <MenubarMenu>
                 <div className="min-w-[12rem] flex flex-col ml-3 gap-2 space-y-2 pt-2">

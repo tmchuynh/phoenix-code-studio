@@ -42,12 +42,6 @@ export const about: Menu[] = [
 
 export const services: Menu[] = [
   {
-    title: "Digital Services",
-    href: "/services",
-    description:
-      "Explore our pricing options and find the perfect plan for your needs.",
-  },
-  {
     title: "Contract Examples",
     href: "/services/contracts",
     description:
@@ -59,6 +53,24 @@ export const services: Menu[] = [
     description:
       "Explore our pricing options and find the perfect plan for your needs.",
   },
+];
+
+export const serviceCategories: Menu[] = [
+  {
+    title: "Scalable Digital Solutions for Corporations",
+    href: "/services/scalable-corporate-digital-solutions",
+    description: "Discover the ideal plan that aligns with your business goals and needs.",
+  },
+  {
+    title: "SEO-Optimized Content Creation",
+    href: "/services/seo-optimized-content-creation",
+    description: "Explore tailored content services to enhance your online presence and engagement.",
+  },
+  {
+    title: "Comprehensive Website Solutions",
+    href: "/services/comprehensive-website-solutions",
+    description: "Find the perfect service to build, optimize, and grow your digital presence.",
+  }
 ];
 
 
