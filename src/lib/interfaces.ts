@@ -64,8 +64,9 @@ export interface SubServiceDetail {
 }
 
 export interface ListDetail {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
+  list?: ListDetail[];
 }
 
 export interface CTA {
@@ -78,10 +79,18 @@ export interface CTA {
 
 export interface PaymentDetails {
   name: string;
-  info: SubServiceInfo;
-  description: string;
+  title: string;
   short: string;
-  features: string[];
+
+  info: {
+    intro: string[];
+    description: string;
+    short: string;
+    features: string[];
+    shortFeatures: ListDetail[];
+  };
+
+  explanation: string;
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
   details: ListDetail[];
 }

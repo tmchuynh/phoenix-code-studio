@@ -3,18 +3,24 @@
 import { Button } from "@/components/ui/button";
 import { FC } from "react";
 import { useRouter } from "next/navigation";
-import { paymentPlans } from "@/lib/constants";
 import { useTheme } from "next-themes";
 import useSmallScreen from "@/lib/useSmallScreen";
-import { cn } from "@/lib/utils";
+import { cn, formatName, setSlug } from "@/lib/utils";
 import useMediumScreen from "@/lib/useMediumScreen";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
+import { paymentPlans } from "@/lib/payment-plans";
 
 const PaymentPlansPage: FC = () => {
   const router = useRouter();
   const { theme } = useTheme();
   const isMediumScreen = useMediumScreen();
   const isSmallScreen = useSmallScreen();
+
+  const navigateToPlan = (plan: string) => {
+    const formattedPlanName = setSlug(plan);
+
+    router.push(`/services/pricing/payment-plans/${formattedPlanName}`);
+  };
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
@@ -43,20 +49,20 @@ const PaymentPlansPage: FC = () => {
           <div key={index}>
             <div
               className={cn(
-                "flex flex-col lg:flex-row  justify-between items-end relative lg:pb-16",
-                index !== paymentPlans.length - 1 ? "pb-10 lg:pb-20" : ""
+                "flex flex-col justify-between relative",
+                index !== paymentPlans.length - 1 ? "pb-10" : ""
               )}
             >
               <div>
                 {/* Plan Title */}
-                <h3>{plan.title}</h3>
+                <h3>{formatName(plan.name)}</h3>
 
                 {/* Plan Description */}
-                <p>{plan.description}</p>
+                <p>{plan.info.description}</p>
 
                 {/* Plan Details */}
                 <ul>
-                  {plan.details.map((detail, i) => (
+                  {plan.info.features.map((detail, i) => (
                     <li key={i}>{detail}</li>
                   ))}
                 </ul>
@@ -65,17 +71,13 @@ const PaymentPlansPage: FC = () => {
               {/* Learn More Button */}
               <Button
                 variant={theme === "dark" ? "outline" : "secondary"}
-                className={
-                  isMediumScreen
-                    ? "text-xs md:text-md relative w-full md:w-64"
-                    : "absolute bottom-5 right-4 w-64 2xl:w-80 2xl:px-44"
-                }
+                className="text-xs md:text-md relative w-2/5"
                 size={isSmallScreen ? "sm" : "default"}
                 onClick={() => {
-                  router.push(plan.route);
+                  navigateToPlan(plan.name);
                 }}
               >
-                More Information on Our {plan.title}
+                More Information on Our {formatName(plan.name)}
               </Button>
             </div>
             {index !== paymentPlans.length - 1 && <hr />}

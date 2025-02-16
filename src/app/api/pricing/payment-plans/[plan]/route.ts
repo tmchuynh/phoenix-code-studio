@@ -1,4 +1,4 @@
-import { paymentPlans } from "@/lib/constants";
+import { paymentPlans } from "@/lib/payment-plans";
 import { setSlug } from "@/lib/utils";
 import { NextResponse } from "next/server";
 import { NextRequest } from "next/server";
@@ -11,7 +11,7 @@ export async function GET( req: NextRequest ) {
     return NextResponse.json( { message: "Payment plan not found" }, { status: 404 } );
   }
 
-  const paymentPlan = paymentPlans.find( ( plan ) => setSlug( plan.route ) === slug );
+  const paymentPlan = paymentPlans.find( ( plan ) => setSlug( plan.name ) === slug );
 
   if ( !paymentPlan ) {
     return NextResponse.json( { message: "Payment plan not found" }, { status: 404 } );
