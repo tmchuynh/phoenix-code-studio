@@ -1,6 +1,7 @@
 "use client";
 
 import CallToAction from "@/components/CallToAction";
+import LoadingIndicator from "@/components/Loading";
 import { PaymentDetails } from "@/lib/interfaces";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
@@ -48,7 +49,9 @@ export default function PaymentPlanPage() {
       } catch (err) {
         setError(err instanceof Error ? err.message : String(err));
       } finally {
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 1500);
       }
     }
 
@@ -56,7 +59,7 @@ export default function PaymentPlanPage() {
   }, [plan]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <LoadingIndicator />;
   }
 
   if (error) {

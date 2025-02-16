@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { BlogPost } from "@/lib/interfaces";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import LoadingIndicator from "@/components/Loading";
 
 const BlogPostPage = () => {
   const { slug } = useParams();
@@ -26,7 +27,9 @@ const BlogPostPage = () => {
       } catch (err: any) {
         setError(err.message);
       } finally {
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 2000);
       }
     }
 
@@ -35,7 +38,9 @@ const BlogPostPage = () => {
     }
   }, [slug]);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) {
+    return <LoadingIndicator />;
+  }
 
   if (error) return <div>{error}</div>;
 

@@ -9,6 +9,7 @@ import { LuArrowBigRightDash } from "react-icons/lu";
 import { Button } from "@/components/ui/button";
 import CallToAction from "@/components/CallToAction";
 import { formatName, setSlug } from "@/lib/utils";
+import LoadingIndicator from "@/components/Loading";
 
 export default function CategoryPage() {
   const { category } = useParams() as { category: string };
@@ -34,7 +35,9 @@ export default function CategoryPage() {
       } catch (err) {
         setError(err instanceof Error ? err.message : String(err));
       } finally {
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 1500);
       }
     }
 
@@ -42,7 +45,7 @@ export default function CategoryPage() {
   }, [category]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <LoadingIndicator />;
   }
 
   if (error) {

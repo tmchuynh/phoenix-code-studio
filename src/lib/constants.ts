@@ -204,6 +204,24 @@ export const companies: Menu[] = [
   },
 ];
 
+export const cssUnit: { [unit: string]: boolean } = {
+  cm: true,
+  mm: true,
+  in: true,
+  px: true,
+  pt: true,
+  pc: true,
+  em: true,
+  ex: true,
+  ch: true,
+  rem: true,
+  vw: true,
+  vh: true,
+  vmin: true,
+  vmax: true,
+  "%": true,
+};
+
 export const FAQs: FAQ[] = [
   {
     question: "What sets Phoenix Code Studio apart?",

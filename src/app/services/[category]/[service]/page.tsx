@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import useSmallScreen from "@/lib/useSmallScreen";
 import useMediumScreen from "@/lib/useMediumScreen";
 import { Button } from "@/components/ui/button";
+import LoadingIndicator from "@/components/Loading";
 
 export default function ServicePage() {
   const router = useRouter();
@@ -37,7 +38,9 @@ export default function ServicePage() {
       } catch (err) {
         setError(err instanceof Error ? err.message : String(err));
       } finally {
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 1500);
       }
     }
 
@@ -45,7 +48,7 @@ export default function ServicePage() {
   }, [category, service]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <LoadingIndicator />;
   }
 
   if (error) {
