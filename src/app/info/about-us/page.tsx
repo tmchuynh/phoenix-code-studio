@@ -150,7 +150,9 @@ const AboutUs = () => {
         <p>
           At Phoenix Code Studio, our values shape everything we create. We
           believe in designing and developing digital experiences that are not
-          only innovative but also meaningful, impactful, and purpose-driven.
+          only innovative but also meaningful, impactful, and purpose-driven. We
+          don’t just build websites—we create meaningful digital experiences
+          that inspire, connect, and drive success.
         </p>
         <ul className="p-0 grid gap-4 grid-cols-1 md:grid-cols-2">
           <li className="flex mt-2 md:p-1 lg:flex-col lg:items-center lg:space-y-4">
@@ -242,11 +244,6 @@ const AboutUs = () => {
             </div>
           </li>
         </ul>
-        <p>
-          At Phoenix Code Studio, we don’t just build websites—we create
-          meaningful digital experiences that inspire, connect, and drive
-          success.
-        </p>
       </section>
 
       {/* Vision Statement */}
@@ -259,11 +256,9 @@ const AboutUs = () => {
           solutions that not only enhance online presence but also capture the
           heart and essence of each brand. Our goal is to empower businesses
           with the tools, innovation, and expertise needed to stand out, grow,
-          and leave a lasting impression in an ever-evolving digital world.
-        </p>
-        <p>
-          We strive to be more than just a web development agency; we aspire to
-          be a trusted partner in digital transformation. By seamlessly blending
+          and leave a lasting impression in an ever-evolving digital world. We
+          strive to be more than just a web development agency; we aspire to be
+          a trusted partner in digital transformation. By seamlessly blending
           creativity, cultural depth, and cutting-edge technology, we set a new
           standard in user-focused, results-driven design. Our solutions go
           beyond aesthetics—we create intuitive, engaging, and scalable
@@ -274,14 +269,12 @@ const AboutUs = () => {
           deserves the opportunity to succeed online. We are committed to
           removing barriers, providing affordable yet high-quality solutions,
           and ensuring that our clients have the resources, knowledge, and
-          support to navigate the digital world with confidence.
-        </p>
-        <p>
-          Through collaboration, innovation, and an unwavering passion for
-          excellence, we aim to build lasting relationships with businesses,
-          helping them establish a strong, meaningful, and influential digital
-          presence. With Phoenix Code Studio, your brand doesn’t just exist
-          online—it thrives, inspires, and leads.
+          support to navigate the digital world with confidence. Through
+          collaboration, innovation, and an unwavering passion for excellence,
+          we aim to build lasting relationships with businesses, helping them
+          establish a strong, meaningful, and influential digital presence. With
+          Phoenix Code Studio, your brand doesn’t just exist online—it thrives,
+          inspires, and leads.
         </p>
         <p>
           Ready to get started?{" "}

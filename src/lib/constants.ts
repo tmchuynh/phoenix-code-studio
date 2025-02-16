@@ -95,7 +95,7 @@ export const websites: Menu[] = [
       "Develop lightning-fast, dynamic web apps with seamless user interfaces that enhance functionality and user experience.",
   },
   {
-    title: "SEO-Optimized Website Content",
+    title: "Website Content Creation for Increased Visibility",
     href: "/services/comprehensive-website-solutions/engaging-seo-optimized-website-content-that-converts",
     description:
       "Craft compelling, SEO-optimized website content that captures attention, keeps visitors engaged, and drives conversions.",
@@ -144,6 +144,12 @@ export const content: Menu[] = [
     href: "/services/seo-optimized-content-creation/engaging-interactive-online-course-development",
     description:
       "Design and develop engaging, interactive online courses that inspire learners and provide them with the practical skills to apply in real-world situations.",
+  },
+  {
+    title: "Tutorials for Seamless Learning",
+    href: "/services/seo-optimized-content-creation/step-by-step-tutorials-for-seamless-learning",
+    description:
+      "Create clear, concise, and user-friendly tutorials that break down complex tasks into easy-to-follow steps.",
   },
   {
     title: "Professional eBook Creation",

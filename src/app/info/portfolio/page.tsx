@@ -207,14 +207,12 @@ const PastProjectsPage: FC = () => {
         Discover a showcase of our best work, where innovation meets
         functionality. From custom web designs to high-performance applications,
         our portfolio highlights the expertise, creativity, and problem-solving
-        approach we bring to every project.
-      </p>
-      <p>
-        Each case study reflects a unique challenge and tailored solution,
-        demonstrating our commitment to quality, user experience, and client
-        satisfaction. Whether you're looking for inspiration or evaluating our
-        capabilities, these projects showcase our ability to deliver scalable,
-        efficient, and visually stunning digital experiences across industries.
+        approach we bring to every project. Each case study reflects a unique
+        challenge and tailored solution, demonstrating our commitment to
+        quality, user experience, and client satisfaction. Whether you're
+        looking for inspiration or evaluating our capabilities, these projects
+        showcase our ability to deliver scalable, efficient, and visually
+        stunning digital experiences across industries.
       </p>
       <p>
         Take a look at our proven track record, and{" "}

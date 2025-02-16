@@ -1,13 +1,15 @@
 "use client";
 
 import { SubServiceItem } from "@/lib/interfaces";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import useSmallScreen from "@/lib/useSmallScreen";
 import useMediumScreen from "@/lib/useMediumScreen";
+import { Button } from "@/components/ui/button";
 
 export default function ServicePage() {
-  // Retrieve dynamic route params via useParams() in a client component
+  const router = useRouter();
+
   const { category, service } = useParams() as {
     category: string;
     service: string;
@@ -94,8 +96,8 @@ export default function ServicePage() {
 
       {serviceData?.info.pricingTiers && (
         <div className="mt-4">
-          <h2>Pricing</h2>
-          <p> {serviceData?.info.details}</p>
+          <h2>{serviceData?.info.pricingTierIntro.title}</h2>
+          <p> {serviceData?.info.pricingTierIntro.text}</p>
           <ul>
             {serviceData.info.pricingTiers.map((prices, index) => (
               <li key={index}>
@@ -107,6 +109,19 @@ export default function ServicePage() {
           </ul>
         </div>
       )}
+
+      <div>
+        <h2>{serviceData?.cta.title}</h2>
+        <p>{serviceData?.cta.intro && serviceData?.cta.intro}</p>
+        <p>
+          {serviceData?.cta.text && serviceData?.cta.text}{" "}
+          {serviceData?.cta.afterButtonText && serviceData?.cta.afterButtonText}
+        </p>
+
+        <Button className="my-3" onClick={() => router.push("/contact-us")}>
+          {serviceData?.cta.button}
+        </Button>
+      </div>
     </main>
   );
 }

@@ -50,6 +50,10 @@ export interface SubServiceInfo {
   short: string;
   featured: boolean;
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  pricingTierIntro: {
+    title: string;
+    text: string;
+  };
   pricingTiers: PricingTier[];
 }
 

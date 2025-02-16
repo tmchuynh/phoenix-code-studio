@@ -25,14 +25,11 @@ const ExampleContractsPage: FC = () => {
         structured deliverables, and end-to-end service agreements—ensuring
         transparency, fairness, and seamless collaboration. If your project
         requires a customized contract, we’re ready to tailor an agreement that
-        fits your needs perfectly.
-      </p>
-      <p>
-        Browse our contract examples below to find the right fit for your
-        project. Need something more specific?
+        fits your needs perfectly. Browse our contract examples below to find
+        the right fit for your project. Need something more specific?{" "}
         <Button variant={"link"} className="p-0 m-0 h-fit">
           Contact us today
-        </Button>
+        </Button>{" "}
         for a personalized consultation to create a contract that works best for
         you.
       </p>
@@ -58,37 +55,37 @@ const ExampleContractsPage: FC = () => {
           </p>
           <ul>
             <li>
-              <span>Project Scope:</span> A comprehensive description of the
+              <strong>Project Scope:</strong> A comprehensive description of the
               project, including detailed deliverables, timelines, and any
               specific requirements or constraints.
             </li>
             <li>
-              <span>Payment Terms:</span> A structured payment plan, typically
-              including an initial deposit, milestone payments tied to project
-              phases, and a final payment upon project completion.
+              <strong>Payment Terms:</strong> A structured payment plan,
+              typically including an initial deposit, milestone payments tied to
+              project phases, and a final payment upon project completion.
             </li>
             <li>
-              <span>Confidentiality and NDA:</span> An agreement ensuring all
-              proprietary information, trade secrets, and intellectual property
-              remain confidential and are protected.
+              <strong>Confidentiality and NDA:</strong> An agreement ensuring
+              all proprietary information, trade secrets, and intellectual
+              property remain confidential and are protected.
             </li>
             <li>
-              <span>Project Timeline:</span> Clearly defined project phases,
+              <strong>Project Timeline:</strong> Clearly defined project phases,
               deadlines, and milestones, with built-in checkpoints for client
               review and feedback to ensure alignment.
             </li>
             <li>
-              <span>Revisions and Feedback:</span> Details on how client
+              <strong>Revisions and Feedback:</strong> Details on how client
               feedback is collected, the number of revisions included within the
               project scope, and processes for additional changes if needed.
             </li>
             <li>
-              <span>Ownership of Deliverables:</span> Clarification of ownership
-              rights, ensuring the client receives full rights to the final
-              deliverables upon project completion and final payment.
+              <strong>Ownership of Deliverables:</strong> Clarification of
+              ownership rights, ensuring the client receives full rights to the
+              final deliverables upon project completion and final payment.
             </li>
             <li>
-              <span>Support and Maintenance:</span> Optional terms for
+              <strong>Support and Maintenance:</strong> Optional terms for
               post-project support or maintenance, outlining services, duration,
               and associated costs if applicable.
             </li>
@@ -128,40 +125,40 @@ const ExampleContractsPage: FC = () => {
           </p>
           <ul>
             <li>
-              <span>Project Scope:</span> A detailed outline of the project
+              <strong>Project Scope:</strong> A detailed outline of the project
               goals, expectations, and specific final deliverables. Flexibility
               is provided to accommodate personal preferences and adjustments.
             </li>
             <li>
-              <span>Payment Terms:</span> Various payment options, including
+              <strong>Payment Terms:</strong> Various payment options, including
               upfront payments, hourly rates, or installments. The structure is
               designed to provide flexibility based on the individual’s budget
               and project size.
             </li>
             <li>
-              <span>Revisions and Feedback:</span> Inclusion of a specified
+              <strong>Revisions and Feedback:</strong> Inclusion of a specified
               number of revisions to ensure the final product meets the
               individual’s expectations. A process for providing feedback and
               incorporating changes is clearly outlined.
             </li>
             <li>
-              <span>Intellectual Property:</span> An agreement clarifying
+              <strong>Intellectual Property:</strong> An agreement clarifying
               ownership rights of the final deliverables, ensuring the
               individual has full rights to the completed work upon final
               payment.
             </li>
             <li>
-              <span>Timeline:</span> A clear timeline for project milestones and
-              expected completion dates, with built-in flexibility to adapt to
-              the client’s needs and schedule.
+              <strong>Timeline:</strong> A clear timeline for project milestones
+              and expected completion dates, with built-in flexibility to adapt
+              to the client’s needstrongs and schedule.
             </li>
             <li>
-              <span>Termination Clause:</span> Terms detailing how the agreement
-              can be terminated by either party, including notice periods and
-              any applicable refund policies.
+              <strong>Termination Clause:</strong> Terms detailing how the
+              agreement can be terminated by either party, including notice
+              periods and any applicable refund policies.
             </li>
             <li>
-              <span>Additional Services:</span> Options for add-ons such as
+              <strong>Additional Services:</strong> Options for add-ons such as
               post-project support or training to help the individual maximize
               the value of the final deliverables.
             </li>
@@ -190,11 +187,9 @@ const ExampleContractsPage: FC = () => {
             accounted for in the contract. From complex multi-phase projects to
             one-off services with special considerations, we provide the
             expertise and adaptability needed to create a framework that
-            supports your vision.
-          </p>
-          <p>
-            Reach out to us to discuss your project in detail, and we’ll craft a
-            personalized contract that aligns with your requirements. With a{" "}
+            supports your vision. Reach out to us to discuss your project in
+            detail, and we’ll craft a personalized contract that aligns with
+            your requirements. With a{" "}
             <EmphasizeText>custom-tailored agreement</EmphasizeText>, you can
             move forward with confidence, knowing that your specific needs are
             fully addressed.
