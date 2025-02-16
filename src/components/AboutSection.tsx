@@ -13,10 +13,10 @@ const AboutSection = () => {
   return (
     <section className="w-10/12 md:w-11/12 mx-auto py-6">
       <h2>Who We Are</h2>
-      <h3 className="text-center mb-4">
+      <h3 className="mb-4">
         Elevating Brands with Cutting-Edge Digital Solutions
       </h3>
-      <p className="text-center mx-auto">
+      <p className="mx-auto">
         At Phoenix Code Studio, we are more than just web developers, UX
         designers, and content creators—we are digital strategists committed to
         helping businesses dominate the online marketplace. Our expertise lies
@@ -24,7 +24,7 @@ const AboutSection = () => {
         marketing, creating high-performance digital experiences that engage
         users and drive measurable results.
       </p>
-      <p className="text-center mx-auto mb-8">
+      <p className="mx-auto mb-8">
         We take a collaborative, data-driven approach, ensuring that every
         website, brand strategy, and digital solution is optimized for search
         engines, mobile responsiveness, and seamless user experience. Whether

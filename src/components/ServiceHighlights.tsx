@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 import {
   Pagination,
   PaginationNext,
@@ -8,7 +8,6 @@ import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
 import { subServiceDetails } from "@/lib/sub-services";
 import { useTheme } from "next-themes";
-import { FaCheck } from "react-icons/fa";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -42,7 +41,7 @@ const ServiceHighlights = () => {
 
   return (
     <section className="w-10/12 md:w-11/12 mx-auto py-6">
-      <h2>What We Do</h2>
+      <h2 className="text-center">What We Do</h2>
       <Pagination className="gap-5 flex items-center pb-5">
         <PaginationPrevious
           onClick={() => {

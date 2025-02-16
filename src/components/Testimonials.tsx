@@ -28,7 +28,7 @@ const Testimonials = () => {
     <>
       {!isSmallScreen && (
         <section className="my-16 mx-auto w-9/12">
-          <h2>Hear From Our Clients</h2>
+          <h2 className="text-center">Hear From Our Clients</h2>
           <Swiper
             spaceBetween={30}
             centeredSlides={true}

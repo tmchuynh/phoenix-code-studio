@@ -46,7 +46,7 @@ const FeaturedBlogs = () => {
 
   return (
     <section className="w-10/12 md:w-11/12 mx-auto py-6">
-      <h2>Featured Blogs</h2>
+      <h2 className="text-center">Featured Blogs</h2>
       <Pagination className="gap-5 flex items-center pb-5">
         <PaginationPrevious
           onClick={() => {
