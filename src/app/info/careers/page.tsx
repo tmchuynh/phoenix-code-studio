@@ -1,5 +1,6 @@
 "use client";
 
+import LoadingIndicator from "@/components/Loading";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { jobPositions } from "@/lib/constants";
@@ -7,11 +8,23 @@ import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 
 const JobListingsPage: FC = () => {
   const router = useRouter();
   const { theme } = useTheme();
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 500);
+  }, [loading]);
+
+  if (loading) {
+    return <LoadingIndicator />;
+  }
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">

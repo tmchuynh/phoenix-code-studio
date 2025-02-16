@@ -1,7 +1,22 @@
-import { ServiceTypeKeys } from "@/app/contact-us/page";
 import { DetailedHTMLProps, HTMLAttributes, CSSProperties } from "react";
 
 export type LengthType = number | string;
+
+export type ServiceTypeKeys =
+  | "comprehensiveWebsiteSolutions"
+  | "seoOptimizedContentCreationServices"
+  | "corporateDigitalSolutions";
+
+export interface FormDataType {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+  paymentPlan: string;
+  comprehensiveWebsiteSolutions: string[];
+  seoOptimizedContentCreationServices: string[];
+  corporateDigitalSolutions: string[];
+}
 
 export interface CommonProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {

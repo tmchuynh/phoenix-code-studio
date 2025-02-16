@@ -1,5 +1,6 @@
 "use client";
 
+import LoadingIndicator from "@/components/Loading";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { BpCheckbox } from "@/components/ui/checkbox-custom";
@@ -9,29 +10,14 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { FormDataType, ServiceTypeKeys } from "@/lib/interfaces";
 import { paymentPlans } from "@/lib/payment-plans";
 import { allServices } from "@/lib/service-categories";
-import { capitalize, cn, formatName } from "@/lib/utils";
+import { cn, formatName } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
-
-export type ServiceTypeKeys =
-  | "comprehensiveWebsiteSolutions"
-  | "seoOptimizedContentCreationServices"
-  | "corporateDigitalSolutions";
-
-export interface FormDataType {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-  paymentPlan: string;
-  comprehensiveWebsiteSolutions: string[];
-  seoOptimizedContentCreationServices: string[];
-  corporateDigitalSolutions: string[];
-}
 
 const ContactUsPage: FC = () => {
   const { theme } = useTheme();
@@ -49,6 +35,17 @@ const ContactUsPage: FC = () => {
 
   const [submitted, setSubmitted] = useState(false);
   const [expandedServices, setExpandedServices] = useState<string[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, [loading]);
+
+  if (loading) {
+    return <LoadingIndicator />;
+  }
 
   // Handle text input and textarea changes
   const handleChange = (

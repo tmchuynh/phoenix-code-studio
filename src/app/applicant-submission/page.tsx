@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { jobPositions } from "@/lib/constants";
 import { BpCheckbox } from "@/components/ui/checkbox-custom";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
+import LoadingIndicator from "@/components/Loading";
 
 const ApplicantSubmissionPage = () => {
   const [selectedPositions, setSelectedPositions] = useState<string[]>([]);
@@ -14,6 +15,17 @@ const ApplicantSubmissionPage = () => {
   const [portfolioLinks, setPortfolioLinks] = useState<string[]>(["", "", ""]);
   const [error, setError] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, [loading]);
+
+  if (loading) {
+    return <LoadingIndicator />;
+  }
 
   // Handle position selection
   const handlePositionChange = (position: string, checked: boolean) => {
@@ -81,9 +93,13 @@ const ApplicantSubmissionPage = () => {
       <DynamicBreadcrumb />
       <h1>Apply for Open Positions</h1>
       <p>
-        Submit your application for one or more of our open positions. Ensure
-        that you upload your resume and provide at least one portfolio link. A
-        cover letter is optional.
+        We invite you to apply for one or more of our available job openings. To
+        ensure your application is complete, please upload your most recent
+        resume and include at least one link to your portfolio showcasing your
+        work. While submitting a cover letter is optional, we encourage you to
+        include one to help us better understand your motivations and
+        qualifications for the role. We look forward to reviewing your
+        application and learning more about the value you can bring to our team.
       </p>
 
       {error && <p className="text-destructive font-bold">{error}</p>}
@@ -95,6 +111,15 @@ const ApplicantSubmissionPage = () => {
         {/* Job Positions Selection */}
         <section>
           <h2>Select the position(s) you're applying for:</h2>
+          <p>
+            Please take a moment to carefully review the available positions and
+            select the one (or more) that best aligns with your skills,
+            experience, and career aspirations. Each role has specific
+            requirements, so be sure to choose positions where your
+            qualifications match. If you are interested in multiple roles, feel
+            free to apply for all that interest you, and we will evaluate your
+            application for the most suitable opportunity.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {jobPositions.map((position) => (
               <div key={position.title} className="flex items-center">
@@ -114,7 +139,14 @@ const ApplicantSubmissionPage = () => {
 
         {/* Resume Upload (Required) */}
         <section>
-          <h2>Upload Your Resume (Required)</h2>
+          <h2>Upload Your Resume</h2>
+          <p>
+            Please upload your most recent resume to help us better understand
+            your background, skills, and experience. Make sure your resume is
+            up-to-date and accurately reflects your qualifications. This will
+            allow us to assess your fit for the role(s) you're applying for and
+            streamline the hiring process.
+          </p>
           <Input
             type="file"
             accept=".pdf,.doc,.docx"
@@ -131,7 +163,16 @@ const ApplicantSubmissionPage = () => {
 
         {/* Cover Letter Upload (Optional) */}
         <section>
-          <h2>Upload a Cover Letter (Optional)</h2>
+          <h2>Upload a Cover Letter</h2>
+          <p>
+            While a cover letter is not required, we highly encourage you to
+            upload <strong>one</strong> if you'd like to provide additional
+            context about your experience, skills, and why you're interested in
+            the position. A well-crafted cover letter can give us valuable
+            insight into your motivation and how you align with our company
+            values. If you choose to include one, please ensure it is tailored
+            to the role you're applying for.
+          </p>
           <Input
             type="file"
             accept=".pdf,.doc,.docx"
@@ -147,7 +188,15 @@ const ApplicantSubmissionPage = () => {
 
         {/* Portfolio Links (At Least One Required) */}
         <section>
-          <h2>Portfolio Links (At Least One Required)</h2>
+          <h2>Portfolio Links</h2>
+          <p>
+            Please include <strong>at least one link</strong> to your portfolio
+            to showcase your work. Whether it's a personal website, GitHub
+            repository, or a collection of relevant projects, your portfolio
+            gives us a clearer understanding of your skills and abilities. If
+            you have multiple portfolio links, feel free to include them so we
+            can explore a variety of your work.
+          </p>
           <div className="space-y-3">
             {portfolioLinks.map((link, index) => (
               <Input

@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import useSmallScreen from "@/lib/useSmallScreen";
@@ -10,6 +10,7 @@ import useMediumScreen from "@/lib/useMediumScreen";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { paymentPlans } from "@/lib/payment-plans";
 import { MdCheck } from "react-icons/md";
+import LoadingIndicator from "@/components/Loading";
 
 const IconDisplay: FC<{
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
@@ -31,6 +32,18 @@ const PaymentPlansPage: FC = () => {
   const { theme } = useTheme();
   const isMediumScreen = useMediumScreen();
   const isSmallScreen = useSmallScreen();
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, [loading]);
+
+  if (loading) {
+    return <LoadingIndicator />;
+  }
 
   const navigateToPlan = (plan: string) => {
     const formattedPlanName = setSlug(plan);

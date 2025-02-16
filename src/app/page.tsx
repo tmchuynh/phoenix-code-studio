@@ -4,6 +4,7 @@ import CallToAction from "@/components/CallToAction";
 import FeaturedBlogs from "@/components/FeaturedBlogs";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import JoinUs from "@/components/JoinUs";
+import LoadingIndicator from "@/components/Loading";
 import ServiceHighlights from "@/components/ServiceHighlights";
 import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
@@ -11,12 +12,23 @@ import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import "swiper/css";
 
 const WelcomePage: FC = () => {
   const router = useRouter();
   const { theme } = useTheme();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 500);
+  }, [loading]);
+
+  if (loading) {
+    return <LoadingIndicator />;
+  }
 
   const navigateToServices = () => {
     router.push("/services");

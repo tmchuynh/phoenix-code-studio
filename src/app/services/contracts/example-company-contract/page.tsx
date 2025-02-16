@@ -1,10 +1,24 @@
 "use client";
 
 import EmphasizeText from "@/components/Highlighted";
+import LoadingIndicator from "@/components/Loading";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
 
 const ServiceAgreementPage = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 500);
+  }, [loading]);
+
+  if (loading) {
+    return <LoadingIndicator />;
+  }
+
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />

@@ -1,4 +1,5 @@
 "use client";
+import LoadingIndicator from "@/components/Loading";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { allServices } from "@/lib/service-categories";
@@ -8,13 +9,24 @@ import useSmallScreen from "@/lib/useSmallScreen";
 import { cn, formatCurrency, setSlug } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 
 const ServicesPage: FC = () => {
   const router = useRouter();
   const isMediumScreen = useMediumScreen();
   const isSmallScreen = useSmallScreen();
   const { theme } = useTheme();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+  }, [loading]);
+
+  if (loading) {
+    return <LoadingIndicator />;
+  }
 
   const navigateToDetails = (serviceCategory: string, serviceName: string) => {
     const formattedServiceName = setSlug(serviceName);

@@ -15,10 +15,23 @@ import {
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 import { GrGrow } from "react-icons/gr";
+import LoadingIndicator from "@/components/Loading";
+import { useState, useEffect } from "react";
 
 const AboutUs = () => {
   const { theme } = useTheme();
   const router = useRouter();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, [loading]);
+
+  if (loading) {
+    return <LoadingIndicator />;
+  }
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">

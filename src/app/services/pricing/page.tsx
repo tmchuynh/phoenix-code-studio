@@ -11,12 +11,24 @@ import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import useSmallScreen from "@/lib/useSmallScreen";
 
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
+import LoadingIndicator from "@/components/Loading";
 
 const PricingPage: FC = () => {
   const router = useRouter();
   const { theme } = useTheme();
   const isSmallScreen = useSmallScreen();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+  }, [loading]);
+
+  if (loading) {
+    return <LoadingIndicator />;
+  }
 
   const navigateToCategory = (serviceCategory: string) => {
     const formattedCategoryName = setSlug(serviceCategory);

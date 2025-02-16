@@ -9,12 +9,25 @@ import {
 } from "@/components/ui/accordion";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { FAQs } from "@/lib/constants";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
+import LoadingIndicator from "@/components/Loading";
 
 const FAQPage: FC = () => {
   const router = useRouter();
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, [loading]);
+
+  if (loading) {
+    return <LoadingIndicator />;
+  }
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">

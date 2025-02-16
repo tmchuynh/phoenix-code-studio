@@ -1,13 +1,25 @@
 "use client";
+import LoadingIndicator from "@/components/Loading";
 import StarRating from "@/components/Ratings";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Card, CardContent } from "@/components/ui/card";
 import { testimonials } from "@/lib/constants";
 import { formatQuotes } from "@/lib/utils";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 const TestimonialsPage: FC = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, [loading]);
+
+  if (loading) {
+    return <LoadingIndicator />;
+  }
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
