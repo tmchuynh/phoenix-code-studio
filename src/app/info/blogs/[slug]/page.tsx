@@ -73,100 +73,42 @@ const BlogPostPage = () => {
         ))}
       </header>
 
+      {/* Render Recursive List if it exists */}
       {post?.list && (
-        <>
-          <h2>{post?.list?.title}</h2>
-          {post?.list?.description &&
-            post?.list?.description.map((description, index) => (
-              <p key={index}>{description}</p>
-            ))}
-          <ul>
-            {post?.list?.details.map((item, index) =>
-              item.title ? (
-                <>
-                  <li key={index}>
-                    <strong>{item.title}: </strong>
-                    <ul className={item.title ? "pl-6" : ""}>
-                      {item.info.map((text, subIndex) => (
-                        <li key={subIndex}>{text}</li>
+        <section className="py-4">
+          {post?.list.map((list, index) => (
+            <div key={index}>
+              <h2>{list.title && list.title}</h2>
+              <p>{list.description && list.description}</p>
+
+              {list.list &&
+                list.list.map((subList, subIndex) => (
+                  <div key={subIndex}>
+                    {subList.title ? <h3>{subList.title}:</h3> : null}{" "}
+                    <p>{subList.description && subList.description}</p>
+                    {subList.list &&
+                      subList.list.map((innerList, innerIndex) => (
+                        <ul key={innerIndex}>
+                          <li>
+                            {innerList.description && innerList.description}
+                          </li>
+                        </ul>
                       ))}
-                    </ul>
-                  </li>
-                </>
-              ) : (
-                item.info.map((text, subIndex) => <li key={index}>{text}</li>)
-              )
-            )}
-          </ul>
-        </>
-      )}
-
-      {post?.categories.map((section, index) => (
-        <section key={index}>
-          <h2>{section.category}</h2>
-
-          {/* Render section intro */}
-          {section.intro &&
-            section.intro?.map((text, i) => <p key={i}>{text}</p>)}
-
-          {/* Render items */}
-          {section.items &&
-            section.items?.map((item, i) => (
-              <div key={`${i}_${item.title || "default"}`}>
-                {item.description.length > 1 ? (
-                  <ul className="list-none">
-                    <li key={`${i + 10}_${item.title}_description`}>
-                      {item.title && (
-                        <h3 className="-ml-5" key={`${i}_${item.title}_header`}>
-                          {item.title}{" "}
-                        </h3>
-                      )}
-                      {item.description.map((description, j) => (
-                        <p key={`${i}_${j}_${item.title}`}>{description}</p>
-                      ))}
-                    </li>
-                  </ul>
-                ) : item.title ? (
-                  <ul>
-                    <li key={`${i}_${item.title}_single`}>
-                      {item.title && <strong>{item.title}: </strong>}
-                      {item.description.map((description, j) => (
-                        <p key={`${i}_${j}_${item.title}_list`}>
-                          {description}
-                        </p>
-                      ))}
-                    </li>
-                  </ul>
-                ) : (
-                  item.description.map((description, j) => (
-                    <p key={`${i}_${j}_no_title`}>{description}</p>
-                  ))
-                )}
-
-                {/* Render item details if available */}
-                {item.details && (
-                  <ul
-                    className="grid grid-cols-1 md:grid-cols-2 gap-x-7"
-                    key={i}
-                  >
-                    {item.details.map((detail, j) => (
-                      <li key={`${i}_${j}_detail`}>{detail}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
+                  </div>
+                ))}
+            </div>
+          ))}
         </section>
-      ))}
+      )}
 
       <section>
         <h2>Conclusion</h2>
-        {post?.conculsions.map((paragraph, index) => (
+        {post?.conclusions.map((paragraph, index) => (
           <p key={index}>{paragraph}</p>
         ))}
       </section>
 
-      <footer className="mt-8 text-center">
+      <footer className="mt-8 text-center md:w-3/4 mx-auto">
         <p>
           Read more related posts about{" "}
           {post?.topics.map((topic, index) => (
@@ -174,7 +116,7 @@ const BlogPostPage = () => {
               #{topic}{" "}
             </strong>
           ))}
-          . Check out our other posts on our
+          . Check out our other posts on our{" "}
           <Button
             onClick={() => router.push("/info/blogs")}
             className="m-0 p-0"
