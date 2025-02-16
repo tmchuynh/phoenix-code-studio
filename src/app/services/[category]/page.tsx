@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import CallToAction from "@/components/CallToAction";
 import { formatName, setSlug } from "@/lib/utils";
 import LoadingIndicator from "@/components/Loading";
+import CannotFind from "@/components/CannotFind";
 
 export default function CategoryPage() {
   const { category } = useParams() as { category: string };
@@ -48,9 +49,7 @@ export default function CategoryPage() {
     return <LoadingIndicator />;
   }
 
-  if (error) {
-    return <div className="text-red-600">Error: {error}</div>;
-  }
+  if (error) return <CannotFind />;
 
   const navigateToDetails = (serviceName: string) => {
     const formattedServiceName = setSlug(serviceName);

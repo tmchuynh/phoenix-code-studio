@@ -1,6 +1,7 @@
 "use client";
 
 import CallToAction from "@/components/CallToAction";
+import CannotFind from "@/components/CannotFind";
 import LoadingIndicator from "@/components/Loading";
 import { PaymentDetails } from "@/lib/interfaces";
 import useMediumScreen from "@/lib/useMediumScreen";
@@ -62,9 +63,7 @@ export default function PaymentPlanPage() {
     return <LoadingIndicator />;
   }
 
-  if (error) {
-    return <div className="text-red-600">Error: {error}</div>;
-  }
+  if (error) return <CannotFind />;
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">

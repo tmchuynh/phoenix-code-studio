@@ -7,6 +7,7 @@ import useSmallScreen from "@/lib/useSmallScreen";
 import useMediumScreen from "@/lib/useMediumScreen";
 import { Button } from "@/components/ui/button";
 import LoadingIndicator from "@/components/Loading";
+import CannotFind from "@/components/CannotFind";
 
 export default function ServicePage() {
   const router = useRouter();
@@ -51,9 +52,7 @@ export default function ServicePage() {
     return <LoadingIndicator />;
   }
 
-  if (error) {
-    return <div className="text-red-600">Error: {error}</div>;
-  }
+  if (error) return <CannotFind />;
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">

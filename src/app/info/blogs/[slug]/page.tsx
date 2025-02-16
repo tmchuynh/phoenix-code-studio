@@ -7,6 +7,7 @@ import { BlogPost } from "@/lib/interfaces";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import LoadingIndicator from "@/components/Loading";
+import CannotFind from "@/components/CannotFind";
 
 const BlogPostPage = () => {
   const { slug } = useParams();
@@ -42,7 +43,7 @@ const BlogPostPage = () => {
     return <LoadingIndicator />;
   }
 
-  if (error) return <div>{error}</div>;
+  if (error) return <CannotFind />;
 
   return (
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
