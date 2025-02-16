@@ -9,21 +9,8 @@ import { useRouter } from "next/navigation";
 import { subServiceDetails } from "@/lib/sub-services";
 import { useTheme } from "next-themes";
 import { FaCheck } from "react-icons/fa";
-
-const IconDisplay: FC<{
-  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-}> = ({ Icon }) => {
-  return (
-    <div>
-      {/* Render the icon */}
-      {Icon ? (
-        <Icon className="text-4xl text-accent-5 mx-auto my-5" />
-      ) : (
-        <FaCheck className="my-1 size-5 md:size-6" />
-      )}
-    </div>
-  );
-};
+import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 const ServiceHighlights = () => {
   const router = useRouter();
@@ -50,7 +37,7 @@ const ServiceHighlights = () => {
   const totalPages = Math.ceil(featuredServices.length / servicesPerPage);
 
   const navigateToServices = () => {
-    router.push("/info/blogs");
+    router.push("/services");
   };
 
   return (
@@ -99,8 +86,16 @@ const ServiceHighlights = () => {
             key={index}
             className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground"
           >
-            {/* Pass the correct Icon component */}
-            <IconDisplay Icon={service.info.Icon} />
+            <Image
+              src={`/images/service_icons/${service.info.Icon}`}
+              width={500}
+              height={500}
+              alt={`${service.info.description}-Image`}
+              className={cn(
+                "w-28 lg:w-24 mx-auto mb-1",
+                theme === "dark" && "hidden"
+              )}
+            />
 
             <h3 className="font-semibold text-center text-secondary h-32 px-5 flex justify-center items-center">
               {service.info.name}
