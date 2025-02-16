@@ -57,13 +57,12 @@ const JobListingsPage: FC = () => {
           </p>
         </div>
         <Image
-          src="/images/logo.png"
+          src={theme === "dark" ? "/images/logo_white.png" : "/images/logo.png"}
           alt="Phoenix Code Studio Logo"
           width={500}
           height={500}
           className={cn(
-            "w-44 md:w-64 lg:w-80 rounded-t-md object-cover mx-auto mb-1",
-            theme === "dark" ? "bg-muted border rounded-full p-5" : ""
+            "w-44 md:w-64 lg:w-80 rounded-t-md object-cover mx-auto mb-1"
           )}
         />
       </div>

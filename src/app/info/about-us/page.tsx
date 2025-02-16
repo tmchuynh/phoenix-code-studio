@@ -40,13 +40,14 @@ const AboutUs = () => {
       <section className="pt-3 pb-7 items-center grid grid-cols-1 lg:grid-cols-7 lg:gap-x-7 gap-y-6">
         <div className="w-full col-span-2 lg:col-span-2 md:order-2">
           <Image
-            src="/images/logo.png"
+            src={
+              theme === "dark" ? "/images/logo_white.png" : "/images/logo.png"
+            }
             alt="Phoenix Code Studio Logo"
             width={500}
             height={500}
             className={cn(
-              "w-44 md:w-64 lg:w-80 rounded-t-md object-cover mx-auto mb-1",
-              theme === "dark" ? "bg-muted border rounded-full p-5" : ""
+              "w-44 md:w-64 lg:w-80 rounded-t-md object-cover mx-auto mb-1"
             )}
           />
         </div>
