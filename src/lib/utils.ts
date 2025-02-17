@@ -118,12 +118,108 @@ export function parseLengthAndUnit(size: number | string): LengthObject {
   };
 }
 
+export function parseReadingTimeToMinutes(time: string): number {
+  let totalMinutes = 0;
+
+  const minutesMatch = time.match(/(\d+)m/);
+  if (minutesMatch) {
+    totalMinutes += parseInt(minutesMatch[1], 10);
+  }
+
+  const secondsMatch = time.match(/(\d+)s/);
+  if (secondsMatch) {
+    totalMinutes += Math.floor(parseInt(secondsMatch[1], 10) / 60);
+  }
+
+  return totalMinutes;
+}
+
+export function formatDecimalMinutes(value: number) {
+  return `${value.toFixed(2)} min`;
+}
+
+export function formatSecondsToLabel(totalSeconds: number): string {
+  const m = Math.floor(totalSeconds / 60);
+  const s = totalSeconds % 60;
+  return `${m}m ${s}s`;
+}
+
 export function cssValue(value: number | string): string {
   const lengthWithunit = parseLengthAndUnit(value);
 
   return `${lengthWithunit.value}${lengthWithunit.unit}`;
 }
 
-export function formatNumber(value: number): string {
+export function formatNumber(value: number | string): string {
   return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+export function parseReadingTimeToSeconds(timeStr: string): number {
+  let totalSeconds = 0;
+
+  const mMatch = timeStr.match(/(\d+)m/);
+  if (mMatch) {
+    totalSeconds += parseInt(mMatch[1], 10) * 60;
+  }
+
+  const sMatch = timeStr.match(/(\d+)s/);
+  if (sMatch) {
+    totalSeconds += parseInt(sMatch[1], 10);
+  }
+
+  return totalSeconds;
+}
+
+export function parseReadingTimeToDecimalMinutes(str: string): number {
+  let total = 0;
+  const m = str.match(/(\d+)m/);
+  if (m) total += parseInt(m[1], 10);
+  const s = str.match(/(\d+)s/);
+  if (s) total += parseInt(s[1], 10) / 60;
+  return total;
+}
+
+export function formatSecondsToMmSs(totalSeconds: number): string {
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+
+  return `${minutes}:${seconds.toString().padStart(2, "0")}`;
+}
+
+export function generateSecondMarkers(
+  numMarkers: number,
+  minVal: number,
+  maxVal: number
+): { value: number; label: string }[] {
+  if (numMarkers < 2) {
+    throw new Error("Need at least 2 markers (start/end).");
+  }
+
+  const step = (maxVal - minVal) / (numMarkers - 1);
+
+  const markers = [];
+  for (let i = 0; i < numMarkers; i++) {
+    const rawSeconds = minVal + step * i;
+
+    const seconds = Math.round(rawSeconds);
+
+    markers.push({
+      value: convertSecondsToMinutes(seconds),
+
+      label: formatSecondsToMmSs(seconds),
+    });
+  }
+
+  return markers;
+}
+
+export function convertSecondsToMinutes(seconds: number): number {
+  return Math.floor(seconds / 60);
+}
+
+export function decimalMinutesToMmSs(decimalMin: number): string {
+  const secs = Math.round(decimalMin * 60);
+  const mm = Math.floor(secs / 60);
+  const ss = secs;
+  return `${mm}:${ss.toString().padStart(2, "0")}`;
 }

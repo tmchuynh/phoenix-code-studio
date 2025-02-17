@@ -5,6 +5,7 @@ import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { BpCheckbox } from "@/components/ui/checkbox-custom";
+import Slider from "@mui/material/Slider";
 import Image from "next/image";
 import {
   Collapsible,
@@ -25,7 +26,14 @@ import {
 } from "@/components/ui/pagination";
 import useBetweenLargeAndXL from "@/lib/onlyLargerScreens";
 import useSmallScreen from "@/lib/useSmallScreen";
-import { formatDate, formatNumber, setSlug } from "@/lib/utils";
+import {
+  decimalMinutesToMmSs,
+  formatDate,
+  formatDecimalMinutes,
+  formatNumber,
+  parseReadingTimeToMinutes,
+  setSlug,
+} from "@/lib/utils";
 import { ChevronsUpDown } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { FC, useEffect, useState, useCallback } from "react";
@@ -62,6 +70,56 @@ const BlogDisplayPage: FC = () => {
     indexOfLastArticle
   );
 
+  const decimalReadingTimes = blogs.map((b) =>
+    parseReadingTimeToMinutes(b.time)
+  );
+  const maxReadingMinutes = Math.max(...decimalReadingTimes);
+  const minReadingMinutes = Math.min(...decimalReadingTimes);
+
+  const minWordCount = Math.min(...blogs.map((b) => b.wordCount));
+  const maxWordCount = Math.max(...blogs.map((b) => b.wordCount));
+
+  let wordCountMarkers = [];
+  for (
+    let i = minWordCount;
+    i <= Math.round(maxWordCount / 1000) * 1000;
+    i += Math.ceil(maxWordCount / 10) + 150
+  ) {
+    wordCountMarkers.push({ value: i, label: `${formatNumber(i)}` });
+  }
+
+  let readingTimeRangeMarkers = [];
+  for (
+    let i = 0;
+    i <= maxReadingMinutes;
+    i += Math.floor(maxReadingMinutes / 5)
+  ) {
+    readingTimeRangeMarkers.push({
+      value: i,
+      label: `${formatNumber(decimalMinutesToMmSs(i))}`,
+    });
+  }
+
+  const [wordCountRange, setWordCountRange] = useState<[number, number]>([
+    minWordCount,
+    maxWordCount,
+  ]);
+  const [readingTimeRange, setReadingTimeRange] = useState<[number, number]>([
+    minReadingMinutes,
+    maxReadingMinutes,
+  ]);
+
+  const handleWordCountChange = (event: Event, newValue: number | number[]) => {
+    setWordCountRange(newValue as [number, number]);
+  };
+
+  const handleReadingTimeChange = (
+    event: Event,
+    newValue: number | number[]
+  ) => {
+    setReadingTimeRange(newValue as [number, number]);
+  };
+
   // Handle page change
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
@@ -85,6 +143,21 @@ const BlogDisplayPage: FC = () => {
 
   const handleFilter = useCallback(() => {
     let filtered = blogs;
+
+    let result = blogs.slice();
+
+    result = result.filter(
+      (blog) =>
+        blog.wordCount >= wordCountRange[0] &&
+        blog.wordCount <= wordCountRange[1]
+    );
+
+    result = result.filter((b) => {
+      const minutes = parseReadingTimeToMinutes(b.time);
+      return minutes >= readingTimeRange[0] && minutes <= readingTimeRange[1];
+    });
+
+    filtered = result;
 
     // Filter by topics
     if (selectedTopics.length > 0) {
@@ -177,6 +250,8 @@ const BlogDisplayPage: FC = () => {
     selectedAuthors,
     searchQuery,
     filtersCleared,
+    wordCountRange,
+    readingTimeRange,
   ]);
 
   const clearFilters = (e?: string) => {
@@ -186,6 +261,8 @@ const BlogDisplayPage: FC = () => {
     setSearchQuery("");
     setOpenCollapsible(null);
     setNoResults(false);
+    setWordCountRange([0, maxWordCount]);
+    setReadingTimeRange([0, maxReadingMinutes]);
     setFilteredBlogs(
       blogs.sort((a, b) => {
         const dateA = new Date(formatDate(a.date));
@@ -226,11 +303,6 @@ const BlogDisplayPage: FC = () => {
     return acc;
   }, {} as Record<string, number>);
 
-  // const authorCounts = authors.reduce((acc, author) => {
-  //   acc[author] = blogs.filter((blog) => blog.author === author).length;
-  //   return acc;
-  // }, {} as Record<string, number>);
-
   const topics = Object.keys(topicCounts).sort();
 
   const handleTopicChange = (updatedTopics: string[]) => {
@@ -239,7 +311,7 @@ const BlogDisplayPage: FC = () => {
 
   useEffect(() => {
     handleFilter();
-  }, [handleFilter]);
+  }, [wordCountRange, readingTimeRange, handleFilter]);
 
   function handleOpen(dropdown: "topic" | "date" | "author") {
     setDropdownOpen({
@@ -256,17 +328,6 @@ const BlogDisplayPage: FC = () => {
     }
     handleOpen("topic");
   };
-
-  // const handleAuthorCheckboxChange = (author: string, checked: boolean) => {
-  //   if (checked) {
-  //     setSelectedAuthors((prevAuthors) => [...prevAuthors, author]);
-  //   } else {
-  //     setSelectedAuthors((prevAuthors) =>
-  //       prevAuthors.filter((t) => t !== author)
-  //     );
-  //   }
-  //   handleOpen("author");
-  // };
 
   const handleDateCheckboxChange = (date: string, checked: boolean) => {
     if (checked) {
@@ -285,6 +346,22 @@ const BlogDisplayPage: FC = () => {
       handleFilter();
     }
   };
+
+  // const handleAuthorCheckboxChange = (author: string, checked: boolean) => {
+  //   if (checked) {
+  //     setSelectedAuthors((prevAuthors) => [...prevAuthors, author]);
+  //   } else {
+  //     setSelectedAuthors((prevAuthors) =>
+  //       prevAuthors.filter((t) => t !== author)
+  //     );
+  //   }
+  //   handleOpen("author");
+  // };
+
+  // const authorCounts = authors.reduce((acc, author) => {
+  //   acc[author] = blogs.filter((blog) => blog.author === author).length;
+  //   return acc;
+  // }, {} as Record<string, number>);
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
@@ -480,6 +557,44 @@ const BlogDisplayPage: FC = () => {
                 </CollapsibleContent>
               </Collapsible>
             </div> */}
+
+            {/* Word Count Slider */}
+            <label>
+              <p>Word Count Range</p>
+            </label>
+            <Slider
+              value={wordCountRange}
+              onChange={handleWordCountChange}
+              valueLabelDisplay="auto"
+              marks={wordCountMarkers}
+              step={150}
+              min={minWordCount}
+              max={maxWordCount}
+            />
+            <div>
+              Word Count: {wordCountRange[0]} - {wordCountRange[1]}
+            </div>
+
+            <hr />
+
+            {/* Reading Time Slider */}
+            <label>
+              <p>Reading Time Range (in minutes)</p>
+            </label>
+            <Slider
+              value={readingTimeRange}
+              onChange={handleReadingTimeChange}
+              valueLabelDisplay="auto"
+              marks={readingTimeRangeMarkers}
+              step={0.1}
+              min={minReadingMinutes}
+              max={maxReadingMinutes}
+              valueLabelFormat={formatDecimalMinutes}
+            />
+            <div>
+              Reading Time: {readingTimeRange[0]} - {readingTimeRange[1]}{" "}
+              minutes
+            </div>
           </div>
         </section>
 
