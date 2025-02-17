@@ -13,7 +13,10 @@ export async function GET(req: NextRequest) {
   );
 
   if (!subService) {
-    return NextResponse.json({ error: "Service not found" }, { status: 404 });
+    return NextResponse.json(
+      { error: "Service details not found" },
+      { status: 404 }
+    );
   }
 
   return NextResponse.json(subService);
