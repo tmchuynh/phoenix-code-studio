@@ -18,16 +18,23 @@ const CallToAction = () => {
         process.
       </p>
       <p>
-        Let’s collaborate to create something extraordinary. Contact us today to
-        discuss your business goals and discover tailored digital solutions that
-        deliver measurable results!
+        Let’s collaborate to create something extraordinary.{" "}
+        <Button
+          variant={"link"}
+          onClick={() => router.push("/contact-us")}
+          className="p-0 m-0 h-fit"
+        >
+          Contact us
+        </Button>{" "}
+        today to discuss your business goals and discover tailored digital
+        solutions that deliver measurable results!
       </p>
       <Button
         className="w-1/2 my-3"
         variant={"accent"}
         onClick={navigateToContact}
       >
-        Contact Us
+        Start Today!
       </Button>
     </section>
   );
