@@ -5,7 +5,11 @@ export type LengthType = number | string;
 export type ServiceTypeKeys =
   | "comprehensiveWebsiteSolutions"
   | "seoOptimizedContentCreationServices"
-  | "corporateDigitalSolutions";
+  | "corporateDigitalSolutions"
+  | "generalClientAgreements"
+  | "digitalAndWebDevelopmentContracts"
+  | "contentAndMarketingContracts"
+  | "paymentAndSalesContracts";
 
 export interface FormDataType {
   name: string;
