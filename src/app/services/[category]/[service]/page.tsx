@@ -98,8 +98,8 @@ export default function ServicePage() {
 
       {serviceData?.info.pricingTiers && (
         <div className="mt-4">
-          <h2>{serviceData?.info.pricingTierIntro.title}</h2>
-          <p> {serviceData?.info.pricingTierIntro.text}</p>
+          <h2>{serviceData?.info.pricingTierIntro?.title}</h2>
+          <p> {serviceData?.info.pricingTierIntro?.text}</p>
           <ul>
             {serviceData.info.pricingTiers.map((prices, index) => (
               <li key={index}>
