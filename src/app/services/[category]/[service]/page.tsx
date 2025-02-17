@@ -1,6 +1,6 @@
 "use client";
 
-import { SubServiceItem } from "@/lib/interfaces";
+import { SubItem } from "@/lib/interfaces";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import useSmallScreen from "@/lib/useSmallScreen";
@@ -22,7 +22,7 @@ export default function ServicePage() {
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [serviceData, setServiceData] = useState<SubServiceItem | null>(null);
+  const [serviceData, setServiceData] = useState<SubItem | null>(null);
 
   useEffect(() => {
     if (!category || !service) return;
@@ -34,7 +34,7 @@ export default function ServicePage() {
           throw new Error("Services post not found");
         }
 
-        const data: SubServiceItem = await response.json();
+        const data: SubItem = await response.json();
         setServiceData(data);
       } catch (err) {
         setError(err instanceof Error ? err.message : String(err));

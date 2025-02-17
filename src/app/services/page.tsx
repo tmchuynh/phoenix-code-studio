@@ -116,12 +116,14 @@ const ServicesPage: FC = () => {
                         ? subServiceDetail.info.info
                         : subServiceDetail.info.details}
                     </p>
-                    <p className="pb-3 md:pb-0">
-                      <strong className="uppercase tracking-wider">
-                        Starting at:{" "}
-                      </strong>
-                      {formatCurrency(subServiceDetail.info.startingPrice)}
-                    </p>
+                    {subServiceDetail.info.startingPrice && (
+                      <p className="pb-3 md:pb-0">
+                        <strong className="uppercase tracking-wider">
+                          Starting at:{" "}
+                        </strong>
+                        {formatCurrency(subServiceDetail.info.startingPrice)}
+                      </p>
+                    )}
                   </div>
                   <Button
                     variant={theme === "dark" ? "outline" : "secondary"}

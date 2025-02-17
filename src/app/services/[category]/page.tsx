@@ -1,6 +1,6 @@
 "use client";
 
-import { ServiceCategory } from "@/lib/interfaces";
+import { Category } from "@/lib/interfaces";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
 import { useParams, useRouter } from "next/navigation";
@@ -20,7 +20,7 @@ export default function CategoryPage() {
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [service, setService] = useState<ServiceCategory | null>(null);
+  const [service, setService] = useState<Category | null>(null);
 
   useEffect(() => {
     if (!category) return;

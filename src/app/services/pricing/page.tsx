@@ -77,7 +77,7 @@ const PricingPage: FC = () => {
               (item) => item.name === subService
             );
 
-            if (subServiceDetail) {
+            if (subServiceDetail && subServiceDetail.info.pricingTiers) {
               return (
                 <div key={subIndex}>
                   <h3>Pricing for {formatName(subServiceDetail.name)}</h3>
