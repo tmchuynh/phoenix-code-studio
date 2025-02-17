@@ -83,14 +83,25 @@ const ServicesPage: FC = () => {
               </>
             )}
 
-            <Button
-              className="self-start mt-6 w-1/4"
-              variant={theme === "dark" ? "accent" : "outline"}
-              size={isSmallScreen ? "sm" : "default"}
-              onClick={() => navigateToCategory(service.name)}
-            >
-              View More Details
-            </Button>
+            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 lg:px-24">
+              <Button
+                className="self-start mt-6 w-full"
+                variant={theme === "dark" ? "accent" : "outline"}
+                size={isSmallScreen ? "sm" : "default"}
+                onClick={() => navigateToCategory(service.name)}
+              >
+                View More Details
+              </Button>
+
+              <Button
+                className="self-start mt-6 w-full"
+                variant={theme === "dark" ? "accent" : "outline"}
+                size={isSmallScreen ? "sm" : "default"}
+                onClick={() => router.push("/services/pricing/payment-plans")}
+              >
+                Explore Our Payment Plans
+              </Button>
+            </div>
           </div>
 
           {service.info.sub.map((subService, subIndex) => {
