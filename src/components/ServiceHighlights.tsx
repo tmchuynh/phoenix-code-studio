@@ -19,7 +19,17 @@ const ServiceHighlights = () => {
   const [servicesPerPage, setServicesPerPage] = useState(6);
 
   const featuredServices = subServiceDetails
-    .filter((service) => service.info.featured === true)
+    .filter((service) => {
+      if (!service.info) return false;
+
+      const isFeatured = service.info.featured === true;
+
+      const hasHighPrice =
+        service.info.startingPrice !== undefined &&
+        service.info.startingPrice >= 2000;
+
+      return isFeatured || hasHighPrice;
+    })
     .sort((a, b) => a.name.localeCompare(b.name));
 
   const indexOfLastService = currentPage * servicesPerPage;
@@ -85,16 +95,18 @@ const ServiceHighlights = () => {
             key={index}
             className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground"
           >
-            <Image
-              src={`/images/service_icons/${service.info.Icon}`}
-              width={500}
-              height={500}
-              alt={`${service.info.description}-Image`}
-              className={cn(
-                "w-28 lg:w-24 mx-auto mb-1",
-                theme === "dark" && "hidden"
-              )}
-            />
+            {service.info.Icon && (
+              <Image
+                src={`/images/service_icons/${service.info.Icon}`}
+                width={500}
+                height={500}
+                alt={`${service.info.description}-Image`}
+                className={cn(
+                  "w-28 lg:w-24 mx-auto mb-1",
+                  theme === "dark" && "hidden"
+                )}
+              />
+            )}
 
             <h3 className="font-semibold text-center text-secondary h-32 px-5 flex justify-center items-center">
               {service.info.name}
