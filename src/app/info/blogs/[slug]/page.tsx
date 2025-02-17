@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import LoadingIndicator from "@/components/Loading";
 import CannotFind from "@/components/CannotFind";
+import router from "next/router";
 
 const BlogPostPage = () => {
   const { slug } = useParams();
@@ -30,7 +31,7 @@ const BlogPostPage = () => {
       } finally {
         setTimeout(() => {
           setLoading(false);
-        }, 2000);
+        }, 500);
       }
     }
 
@@ -79,22 +80,37 @@ const BlogPostPage = () => {
         <section className="py-4">
           {post?.list.map((list, index) => (
             <div key={index}>
-              <h2>{list.title && list.title}</h2>
+              <h2 className={!list.description ? "my-0" : ""}>
+                {list.title && list.title}
+              </h2>
               <p>{list.description && list.description}</p>
 
               {list.list &&
                 list.list.map((subList, subIndex) => (
                   <div key={subIndex}>
-                    {subList.title ? <h3>{subList.title}:</h3> : null}{" "}
+                    {subList.title ? (
+                      <h3 className={!list.description ? "pt-2" : ""}>
+                        {subList.title}
+                      </h3>
+                    ) : null}{" "}
                     <p>{subList.description && subList.description}</p>
                     {subList.list &&
-                      subList.list.map((innerList, innerIndex) => (
-                        <ul key={innerIndex}>
-                          <li>
-                            {innerList.description && innerList.description}
-                          </li>
-                        </ul>
-                      ))}
+                      subList.list.map((innerList, innerIndex) =>
+                        innerList.title ? (
+                          <div key={innerIndex}>
+                            <p>
+                              <strong>{innerList.title}:</strong>{" "}
+                              {innerList.description && innerList.description}
+                            </p>
+                          </div>
+                        ) : (
+                          <ul key={innerIndex}>
+                            <li>
+                              {innerList.description && innerList.description}
+                            </li>
+                          </ul>
+                        )
+                      )}
                   </div>
                 ))}
             </div>

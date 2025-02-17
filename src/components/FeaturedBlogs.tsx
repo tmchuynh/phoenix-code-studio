@@ -106,7 +106,7 @@ const FeaturedBlogs = () => {
             <Button
               variant={"accent"}
               onClick={() => {
-                router.push(setSlug(blog.title));
+                router.push(`/info/blogs/${setSlug(blog.title)}`);
               }}
               className="mt-7 w-full"
             >
