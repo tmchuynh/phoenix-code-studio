@@ -18,7 +18,7 @@ export const allServices: ServiceCategory[] = [
         "Scalable corporate solutions designed to drive business growth and digital success by enhancing online visibility, optimizing operations, and improving user engagement. Tailored to meet specific business goals, these solutions include custom web development, e-commerce platforms, UX/UI design, and data-driven marketing strategies, ensuring SEO-optimized, high-performance results.",
       intro:
         "At Phoenix Code Studio, we offer a range of solutions designed to help businesses strengthen their digital presence and effectively engage with their audience. Our team works to craft compelling narratives that resonate with your target market and elevate your brand’s identity. We specialize in creating seamless, secure digital environments, enhancing user experiences, and ensuring that your content stands out online. Whether you're looking to optimize your website’s content for search engines, improve communication with your audience, or provide clear and informative learning materials, we have the expertise to deliver results. Our services are tailored to help you drive conversions, build lasting relationships, and achieve sustained growth in the digital space.",
-      subServices: [
+      sub: [
         "authentic-brand-storytelling-that-captivates-connects",
         "transform-your-brand-with-our-rebranding-services",
         "optimized-secure-database-management-solutions",
@@ -47,7 +47,7 @@ export const allServices: ServiceCategory[] = [
         "SEO-optimized content creation services designed to boost your brand’s online presence, attract organic traffic, and engage your target audience. From blog posts to product descriptions, we craft high-quality, strategically targeted content that enhances search engine rankings, builds brand authority, and drives conversions. Tailored to meet your marketing goals, our services deliver measurable results that foster business growth.",
       intro:
         "We offer a range of services designed to enhance your brand’s visibility and engage your audience. From creating impactful marketing materials like brochures and flyers to developing professional eBooks that blend informative content with eye-catching design, we help you make a lasting impression. For businesses focused on education, our interactive online course development provides immersive, engaging learning experiences. We also specialize in crafting clear, user-friendly product guides and manuals, making complex information accessible to customers. Additionally, our comprehensive study guides help learners master any subject with structured, effective content. These services are tailored to support your business growth by creating content that resonates with your audience and drives meaningful engagement.",
-      subServices: [
+      sub: [
         "eye-catching-brochures-and-flyers-that-make-an-impact",
         "engaging-professional-ebook-creation",
         "engaging-interactive-online-course-development",
@@ -75,7 +75,7 @@ export const allServices: ServiceCategory[] = [
         "Comprehensive website solutions that ensure a high-performing digital presence. From custom web development and responsive design to advanced SEO strategies, we create seamless, user-friendly websites that drive engagement, increase conversions, and improve search rankings. Our end-to-end services are tailored to meet your business needs, providing a scalable, secure, and optimized digital experience that supports long-term growth.",
       intro:
         "Our services are crafted to provide comprehensive digital solutions that enhance user experience and optimize performance. From creating intuitive, user-centered interfaces for seamless interactions to developing high-performance single-page applications (SPAs), we ensure that every platform we design is engaging and efficient. Our e-commerce solutions are built to foster growth and success, offering secure, scalable online shopping experiences. We specialize in SEO-optimized website content that drives traffic and boosts conversions, while our expert SEO strategies work to enhance your site's search engine rankings and online reach. Additionally, our custom-designed websites combine creativity with functionality, and our wireframing and prototyping services establish a solid foundation for visually impactful and highly effective sites. Together, these solutions ensure that your business thrives through improved user satisfaction and sustained growth.",
-      subServices: [
+      sub: [
         "user-centered-interface-design-for-seamless-experiences",
         "high-performance-single-page-applications-spas-for-a-seamless-user-experience",
         "e-commerce-solutions-built-for-growth-and-success",

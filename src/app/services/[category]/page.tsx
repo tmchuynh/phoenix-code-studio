@@ -74,8 +74,8 @@ export default function CategoryPage() {
       <h2>Discover What We Can Do For You</h2>
       <p>{service?.info.intro}</p>
 
-      {service?.info?.subServices?.length ? (
-        service.info?.subServices.map((sub, index) => (
+      {service?.info?.sub?.length ? (
+        service.info?.sub.map((sub, index) => (
           <div className="py-1 flex" key={index}>
             <p className="group flex items-center gap-5">
               {sub

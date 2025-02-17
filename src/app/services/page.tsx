@@ -93,7 +93,7 @@ const ServicesPage: FC = () => {
             </Button>
           </div>
 
-          {service.info.subServices.map((subService, subIndex) => {
+          {service.info.sub.map((subService, subIndex) => {
             const subServiceDetail = subServiceDetails.find(
               (item) => item.name === subService
             );
@@ -104,7 +104,7 @@ const ServicesPage: FC = () => {
                   key={subIndex}
                   className={cn(
                     "flex flex-col md:flex-row justify-between md:items-end relative mt-5",
-                    index !== service.info.subServices.length - 1 ? "pb-7" : ""
+                    index !== service.info.sub.length - 1 ? "pb-7" : ""
                   )}
                 >
                   <div>

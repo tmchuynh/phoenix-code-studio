@@ -137,7 +137,7 @@ const NavBar = () => {
                     </MenubarSubTrigger>
 
                     <MenubarSubContent className="mx-4 grid grid-cols-3 gap-2">
-                      {serviceCategory.info.subServices.map(
+                      {serviceCategory.info.sub.map(
                         (subServiceName, subIndex) => {
                           const subServiceData = subServiceDetails.find(
                             (detail) =>
@@ -285,7 +285,7 @@ const NavBar = () => {
                     </MenubarSubTrigger>
 
                     <MenubarSubContent className="mx-4 grid grid-cols-3 gap-2">
-                      {serviceCategory.info.subServices.map(
+                      {serviceCategory.info.sub.map(
                         (subServiceName, subIndex) => {
                           const subServiceData = subServiceDetails.find(
                             (detail) =>
@@ -452,7 +452,7 @@ const NavBar = () => {
                     </MenubarTrigger>
 
                     <MenubarContent className="block md:hidden ml-9 -mt-2">
-                      {serviceCategory.info.subServices.map(
+                      {serviceCategory.info.sub.map(
                         (subServiceName, subIndex) => {
                           const subServiceData = subServiceDetails.find(
                             (detail) =>

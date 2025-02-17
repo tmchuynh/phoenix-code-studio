@@ -72,7 +72,7 @@ const PricingPage: FC = () => {
             </Button>
           </div>
 
-          {service.info.subServices.map((subService, subIndex) => {
+          {service.info.sub.map((subService, subIndex) => {
             const subServiceDetail = subServiceDetails.find(
               (item) => item.name === subService
             );

@@ -251,7 +251,7 @@ const ContactUsPage: FC = () => {
 
                   {expandedServices.includes(service.type) && (
                     <div className="pl-6 mt-2 space-y-2">
-                      {service.info.subServices.map((sub) => (
+                      {service.info.sub.map((sub) => (
                         <label key={sub} className="flex items-center">
                           <BpCheckbox
                             value={sub}
