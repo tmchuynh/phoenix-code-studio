@@ -5,7 +5,6 @@ import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { BpCheckbox } from "@/components/ui/checkbox-custom";
-import Slider from "@mui/material/Slider";
 import Image from "next/image";
 import {
   Collapsible,
@@ -26,14 +25,7 @@ import {
 } from "@/components/ui/pagination";
 import useBetweenLargeAndXL from "@/lib/onlyLargerScreens";
 import useSmallScreen from "@/lib/useSmallScreen";
-import {
-  decimalMinutesToMmSs,
-  formatDate,
-  formatDecimalMinutes,
-  formatNumber,
-  parseReadingTimeToMinutes,
-  setSlug,
-} from "@/lib/utils";
+import { formatDate, formatNumber, setSlug } from "@/lib/utils";
 import { ChevronsUpDown } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { FC, useEffect, useState, useCallback } from "react";
@@ -45,6 +37,7 @@ const BlogDisplayPage: FC = () => {
   const isLargerScreen = useBetweenLargeAndXL();
 
   const [openCollapsible, setOpenCollapsible] = useState<string | null>(null);
+
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredBlogs, setFilteredBlogs] = useState(blogs);
   const [selectedDates, setSelectedDates] = useState<string[]>([]);
@@ -56,67 +49,42 @@ const BlogDisplayPage: FC = () => {
     date: false,
     author: false,
   });
-
   const [filtersCleared, setFiltersCleared] = useState(false);
+
   const [currentPage, setCurrentPage] = useState(1);
   const [articlesPerPage, setArticlesPerPage] = useState(10);
 
-  const decimalReadingTimes = blogs.map((b) =>
-    parseReadingTimeToMinutes(b.time)
+  // Calculate the indexes for pagination
+  const indexOfLastArticle = currentPage * articlesPerPage;
+  const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
+  const currentArticles = filteredBlogs.slice(
+    indexOfFirstArticle,
+    indexOfLastArticle
   );
-  const maxReadingMinutes = Math.max(...decimalReadingTimes);
-  const minReadingMinutes = Math.min(...decimalReadingTimes);
 
-  const minWordCount = Math.min(...blogs.map((b) => b.wordCount));
-  const maxWordCount = Math.max(...blogs.map((b) => b.wordCount));
+  // Handle page change
+  const handlePageChange = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  };
 
-  const [wordCountRange, setWordCountRange] = useState<[number, number]>([
-    minWordCount,
-    maxWordCount,
-  ]);
-  const [readingTimeRange, setReadingTimeRange] = useState<[number, number]>([
-    minReadingMinutes,
-    maxReadingMinutes,
-  ]);
+  // Handle articles per page change
+  const handleArticlesPerPageChange = (value: number) => {
+    setArticlesPerPage(value);
+    setCurrentPage(1); // Reset to the first page when articles per page changes
+  };
 
-  const wordCountMarkers = [];
-  for (
-    let i = minWordCount;
-    i <= Math.round(maxWordCount / 1000) * 1000;
-    i += Math.ceil(maxWordCount / 10) + 150
-  ) {
-    wordCountMarkers.push({ value: i, label: `${formatNumber(i)}` });
-  }
+  // Calculate total pages
+  const totalPages = Math.ceil(filteredBlogs.length / articlesPerPage);
 
-  const readingTimeRangeMarkers = [];
-  for (
-    let i = 0;
-    i <= maxReadingMinutes;
-    i += Math.floor(maxReadingMinutes / 5)
-  ) {
-    readingTimeRangeMarkers.push({
-      value: i,
-      label: `${formatNumber(decimalMinutesToMmSs(i))}`,
-    });
-  }
+  // Manage which collapsible is open
+  const handleCollapsibleChange = (
+    collapsible: "topic" | "date" | "author"
+  ) => {
+    setOpenCollapsible(openCollapsible === collapsible ? null : collapsible); // Toggle the collapsible or close it
+  };
 
   const handleFilter = useCallback(() => {
     let filtered = blogs;
-
-    let result = blogs.slice();
-
-    result = result.filter(
-      (blog) =>
-        blog.wordCount >= wordCountRange[0] &&
-        blog.wordCount <= wordCountRange[1]
-    );
-
-    result = result.filter((b) => {
-      const minutes = parseReadingTimeToMinutes(b.time);
-      return minutes >= readingTimeRange[0] && minutes <= readingTimeRange[1];
-    });
-
-    filtered = result;
 
     // Filter by topics
     if (selectedTopics.length > 0) {
@@ -209,13 +177,7 @@ const BlogDisplayPage: FC = () => {
     selectedAuthors,
     searchQuery,
     filtersCleared,
-    wordCountRange,
-    readingTimeRange,
   ]);
-
-  useEffect(() => {
-    handleFilter();
-  }, [wordCountRange, readingTimeRange, handleFilter]);
 
   const clearFilters = (e?: string) => {
     setSelectedTopics([]);
@@ -224,8 +186,6 @@ const BlogDisplayPage: FC = () => {
     setSearchQuery("");
     setOpenCollapsible(null);
     setNoResults(false);
-    setWordCountRange([0, maxWordCount]);
-    setReadingTimeRange([0, maxReadingMinutes]);
     setFilteredBlogs(
       blogs.sort((a, b) => {
         const dateA = new Date(formatDate(a.date));
@@ -251,46 +211,6 @@ const BlogDisplayPage: FC = () => {
     }
   };
 
-  // Calculate the indexes for pagination
-  const indexOfLastArticle = currentPage * articlesPerPage;
-  const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
-  const currentArticles = filteredBlogs.slice(
-    indexOfFirstArticle,
-    indexOfLastArticle
-  );
-
-  const handleWordCountChange = (event: Event, newValue: number | number[]) => {
-    setWordCountRange(newValue as [number, number]);
-  };
-
-  const handleReadingTimeChange = (
-    event: Event,
-    newValue: number | number[]
-  ) => {
-    setReadingTimeRange(newValue as [number, number]);
-  };
-
-  // Handle page change
-  const handlePageChange = (pageNumber: number) => {
-    setCurrentPage(pageNumber);
-  };
-
-  // Handle articles per page change
-  const handleArticlesPerPageChange = (value: number) => {
-    setArticlesPerPage(value);
-    setCurrentPage(1); // Reset to the first page when articles per page changes
-  };
-
-  // Calculate total pages
-  const totalPages = Math.ceil(filteredBlogs.length / articlesPerPage);
-
-  // Manage which collapsible is open
-  const handleCollapsibleChange = (
-    collapsible: "topic" | "date" | "author"
-  ) => {
-    setOpenCollapsible(openCollapsible === collapsible ? null : collapsible); // Toggle the collapsible or close it
-  };
-
   const dates = Array.from(new Set(blogs.map((blog) => blog.date)));
   // const authors = Array.from(new Set(blogs.map((blog) => blog.author)));
 
@@ -306,11 +226,20 @@ const BlogDisplayPage: FC = () => {
     return acc;
   }, {} as Record<string, number>);
 
+  // const authorCounts = authors.reduce((acc, author) => {
+  //   acc[author] = blogs.filter((blog) => blog.author === author).length;
+  //   return acc;
+  // }, {} as Record<string, number>);
+
   const topics = Object.keys(topicCounts).sort();
 
   const handleTopicChange = (updatedTopics: string[]) => {
     setSelectedTopics(updatedTopics);
   };
+
+  useEffect(() => {
+    handleFilter();
+  }, [handleFilter]);
 
   function handleOpen(dropdown: "topic" | "date" | "author") {
     setDropdownOpen({
@@ -327,6 +256,17 @@ const BlogDisplayPage: FC = () => {
     }
     handleOpen("topic");
   };
+
+  // const handleAuthorCheckboxChange = (author: string, checked: boolean) => {
+  //   if (checked) {
+  //     setSelectedAuthors((prevAuthors) => [...prevAuthors, author]);
+  //   } else {
+  //     setSelectedAuthors((prevAuthors) =>
+  //       prevAuthors.filter((t) => t !== author)
+  //     );
+  //   }
+  //   handleOpen("author");
+  // };
 
   const handleDateCheckboxChange = (date: string, checked: boolean) => {
     if (checked) {
@@ -345,22 +285,6 @@ const BlogDisplayPage: FC = () => {
       handleFilter();
     }
   };
-
-  // const handleAuthorCheckboxChange = (author: string, checked: boolean) => {
-  //   if (checked) {
-  //     setSelectedAuthors((prevAuthors) => [...prevAuthors, author]);
-  //   } else {
-  //     setSelectedAuthors((prevAuthors) =>
-  //       prevAuthors.filter((t) => t !== author)
-  //     );
-  //   }
-  //   handleOpen("author");
-  // };
-
-  // const authorCounts = authors.reduce((acc, author) => {
-  //   acc[author] = blogs.filter((blog) => blog.author === author).length;
-  //   return acc;
-  // }, {} as Record<string, number>);
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
@@ -556,44 +480,6 @@ const BlogDisplayPage: FC = () => {
                 </CollapsibleContent>
               </Collapsible>
             </div> */}
-
-            {/* Word Count Slider */}
-            <label>
-              <p>Word Count Range</p>
-            </label>
-            <Slider
-              value={wordCountRange}
-              onChange={handleWordCountChange}
-              valueLabelDisplay="auto"
-              marks={wordCountMarkers}
-              step={150}
-              min={minWordCount}
-              max={maxWordCount}
-            />
-            <div>
-              Word Count: {wordCountRange[0]} - {wordCountRange[1]}
-            </div>
-
-            <hr />
-
-            {/* Reading Time Slider */}
-            <label>
-              <p>Reading Time Range (in minutes)</p>
-            </label>
-            <Slider
-              value={readingTimeRange}
-              onChange={handleReadingTimeChange}
-              valueLabelDisplay="auto"
-              marks={readingTimeRangeMarkers}
-              step={0.1}
-              min={minReadingMinutes}
-              max={maxReadingMinutes}
-              valueLabelFormat={formatDecimalMinutes}
-            />
-            <div>
-              Reading Time: {readingTimeRange[0]} - {readingTimeRange[1]}{" "}
-              minutes
-            </div>
           </div>
         </section>
 
@@ -742,7 +628,7 @@ const BlogDisplayPage: FC = () => {
                     className="w-full h-36 rounded-t-md object-cover mx-auto mb-1"
                   />
                 )}
-                <div className="px-4 pb-2 flex flex-col justify-between h-[20em] md:h-[25em] 2xl:h-[38em] relative">
+                <div className="px-4 pb-2 flex flex-col justify-between h-[20em] md:h-[25em] 2xl:h-[35em] relative">
                   <div>
                     <div className="flex justify-between mx-1 pt-5">
                       <p className="mt-0 text-xs md:text-sm lg:text-md">
