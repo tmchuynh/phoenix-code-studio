@@ -2,55 +2,55 @@ import { FAQ, JobPosition, Menu, Project, Testimonial } from "./interfaces";
 
 export const about: Menu[] = [
   {
-    title: "About",
+    title: "About Us",
     href: "/info/about-us",
     description:
-      "Learn more about our mission, vision, and what drives us forward.",
+      "Discover our mission, values, and the story behind our brand.",
   },
   {
     title: "Careers",
     href: "/info/careers",
     description:
-      "Learn more about our mission, vision, and what drives us forward.",
+      "Join our team and explore exciting career opportunities with us.",
   },
   {
-    title: "Blogs",
+    title: "Blog",
     href: "/info/blogs",
     description:
-      "Stay updated with the latest news, tips, and insights from our blog.",
+      "Stay informed with expert insights, industry trends, and company updates.",
   },
   {
     title: "FAQs",
     href: "/info/frequently-asked-questions",
     description:
-      "Find answers to common questions about our products and services.",
+      "Get answers to commonly asked questions about our services and processes.",
   },
   {
     title: "Testimonials",
     href: "/info/testimonials",
     description:
-      "Read success stories and reviews from our satisfied customers.",
+      "See what our clients say about their experiences working with us.",
   },
   {
     title: "Portfolio",
     href: "/info/portfolio",
     description:
-      "Learn more about our mission, vision, and what drives us forward.",
+      "Explore our past projects and see how we bring ideas to life.",
   },
 ];
 
 export const services: Menu[] = [
   {
-    title: "Contract Examples",
+    title: "Contract Templates & Examples",
     href: "/services/contracts",
     description:
-      "Explore our pricing options and find the perfect plan for your needs.",
+      "Browse our comprehensive contract templates designed to meet various business needs.",
   },
   {
-    title: "Our Pricing and Service Tiers",
+    title: "Pricing Plans & Service Tiers",
     href: "/services/pricing",
     description:
-      "Explore our pricing options and find the perfect plan for your needs.",
+      "Compare our pricing options and service tiers to find the best fit for your budget and requirements.",
   },
 ];
 
@@ -59,25 +59,25 @@ export const serviceCategories: Menu[] = [
     title: "Overview",
     href: "/services",
     description:
-      "Browse through our variety of payment plans and choose the one that best aligns with your needs and budget.",
+      "Explore our range of flexible payment plans designed to fit your needs and budget seamlessly.",
   },
   {
-    title: "Scalable Digital Solutions for Corporations",
+    title: "Enterprise-Grade Digital Solutions",
     href: "/services/scalable-corporate-digital-solutions",
     description:
-      "Discover the ideal plan that aligns with your business goals and needs.",
+      "Unlock powerful digital solutions tailored for corporations looking to scale and streamline operations.",
   },
   {
-    title: "SEO-Optimized Content Creation",
+    title: "SEO-Driven Content Strategy",
     href: "/services/seo-optimized-content-creation",
     description:
-      "Explore tailored content services to enhance your online presence and engagement.",
+      "Boost your online visibility with expertly crafted, search-optimized content that drives engagement.",
   },
   {
-    title: "Comprehensive Website Solutions",
+    title: "End-to-End Website Development",
     href: "/services/comprehensive-website-solutions",
     description:
-      "Find the perfect service to build, optimize, and grow your digital presence.",
+      "From design to deployment, build and optimize a high-performing website tailored to your goals.",
   },
 ];
 
@@ -232,24 +232,6 @@ export const testimonials: Testimonial[] = [
     quote: `Tina is one of the most hardworking and determined individuals I’ve had the pleasure of working with. Despite starting with little experience, she has grown into a highly skilled and proficient developer. Her ability to learn and adapt is evident in her work, particularly showcased on her personal portfolio site—an impressive testament to her technical expertise and creativity.  
 
       What sets Tina apart is her relentless drive and self-motivation. Her projects clearly demonstrate her ability to tackle new technologies with confidence, overcoming any challenge that comes her way. She is a true problem-solver and an invaluable asset to any team.`,
-  },
-  {
-    name: "Olivia Carter",
-    featured: true,
-    rating: 4,
-    position: "UX/UI Designer",
-    quote: `Tina is a remarkable developer with an incredible work ethic and an insatiable drive for growth. Her journey from minimal experience to mastering complex development concepts is nothing short of inspiring. What truly sets her apart is her ability to learn rapidly and apply new technologies with confidence.
-
-      Her portfolio is a testament to her technical proficiency and creative problem-solving skills, showcasing not only her expertise but also her dedication to continuous improvement. Any team would be fortunate to have someone as determined, resourceful, and capable as Tina.`,
-  },
-  {
-    name: "Sophia Mitchell",
-    featured: true,
-    rating: 4.5,
-    position: "Data Analyst",
-    quote: `Tina's commitment to her craft is evident in everything she does. She is not only a skilled developer but also a quick learner who thrives on challenges. Her ability to teach herself new technologies and implement them effectively is a rare and valuable trait.
-
-      Her personal portfolio stands as proof of her technical expertise and innovative thinking, highlighting her ability to create impactful digital solutions. She is a driven professional who brings energy, creativity, and determination to every project she takes on—an asset to any team or organization.`,
   },
 ];
 
