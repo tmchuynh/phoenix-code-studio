@@ -19,7 +19,7 @@ const IconDisplay: FC<{
     <div>
       {/* Render the icon */}
       {Icon ? (
-        <Icon className="text-4xl text-accent-5 mx-auto my-5" />
+        <Icon className="text-4xl text-accent-5 mx-auto my-1" />
       ) : (
         <MdCheck className="my-1 size-5 md:size-6" />
       )}
@@ -68,7 +68,14 @@ const PaymentPlansPage: FC = () => {
           Each plan is structured to align with your specific goals, offering
           transparent pricing, high-quality service, and no hidden fees. Explore
           our options and choose the plan that best suits your needs. Need a
-          custom quote? Contact us to discuss a tailored solution!
+          custom quote?{" "}
+          <Button
+            variant={"link"}
+            onClick={() => router.push("/contact-us")}
+            className="p-0 m-0 h-fit"
+          >
+            Contact us to discuss a tailored solution!
+          </Button>
         </p>
       </header>
 
@@ -101,9 +108,9 @@ const PaymentPlansPage: FC = () => {
               {/* Plan Details */}
               <div>
                 <h3>Key Attributes</h3>
-                <ul className="grid grid-cols-1 gap-x-4 list-none">
+                <ul className="grid grid-cols-1 gap-x-4 list-none p-0">
                   {plan.info.shortFeatures.map((features, index) => (
-                    <li className="flex items-center" key={index}>
+                    <li className="flex items-center space-y-0" key={index}>
                       <IconDisplay Icon={plan.Icon} />
 
                       <span className="pl-3">
@@ -118,16 +125,15 @@ const PaymentPlansPage: FC = () => {
               {/* Learn More Button */}
               <Button
                 variant={theme === "dark" ? "outline" : "secondary"}
-                className="text-xs md:text-md relative w-2/5"
+                className="text-sm md:text-lg w-full md:w-1/2 lg:w-2/5 relative mx-auto lg:mx-2"
                 size={isSmallScreen ? "sm" : "default"}
                 onClick={() => {
                   navigateToPlan(plan.name);
                 }}
               >
-                More Information on Our {formatName(plan.name)}
+                More Information
               </Button>
             </div>
-            {index !== paymentPlans.length - 1 && <hr />}
           </div>
         ))}
       </section>
