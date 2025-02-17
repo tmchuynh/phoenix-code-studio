@@ -123,3 +123,7 @@ export function cssValue(value: number | string): string {
 
   return `${lengthWithunit.value}${lengthWithunit.unit}`;
 }
+
+export function formatNumber(value: number): string {
+  return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}

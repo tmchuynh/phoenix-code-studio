@@ -25,7 +25,7 @@ import {
 } from "@/components/ui/pagination";
 import useBetweenLargeAndXL from "@/lib/onlyLargerScreens";
 import useSmallScreen from "@/lib/useSmallScreen";
-import { formatDate, setSlug } from "@/lib/utils";
+import { formatDate, formatNumber, setSlug } from "@/lib/utils";
 import { ChevronsUpDown } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { FC, useEffect, useState, useCallback } from "react";
@@ -630,10 +630,22 @@ const BlogDisplayPage: FC = () => {
                 )}
                 <div className="px-4 pb-2 flex flex-col justify-between h-[20em] md:h-[25em] 2xl:h-[35em] relative">
                   <div>
+                    <div className="flex justify-between mx-1 pt-5">
+                      <p className="mt-0 text-xs md:text-sm lg:text-md">
+                        <strong className="text-foreground">Words:</strong>{" "}
+                        <span>{formatNumber(blog.wordCount)}</span>
+                      </p>
+                      <p className="mt-0 text-xs md:text-sm lg:text-md">
+                        <strong className="text-foreground">
+                          Reading Time:
+                        </strong>{" "}
+                        <span>{blog.time}</span>
+                      </p>
+                    </div>
                     <p>
                       <Button
                         variant="ghost"
-                        className="text-primary underline underline-offset-2 px-0 mt-5 mb-2 font-SofiaSans tracking-wider font-bold hover:bg-transparent hover:text-primary hover:no-underline text-wrap text-left text-md md:text-lg lg:text-xl 2xl:text-2xl"
+                        className="text-primary underline underline-offset-2 px-0 mb-2 font-SofiaSans tracking-wider font-bold hover:bg-transparent hover:text-primary hover:no-underline text-wrap text-left text-md md:text-lg lg:text-xl 2xl:text-2xl"
                         onClick={() => {
                           router.push(`/info/blogs/${setSlug(blog.title)}`);
                         }}
@@ -641,15 +653,18 @@ const BlogDisplayPage: FC = () => {
                         {blog.title}
                       </Button>
                     </p>
-                    <p className="mb-0 text-sm md:text-lg lg:text-lg">
-                      <strong className="text-foreground">By:</strong>{" "}
-                      {blog.author}
-                    </p>
-                    <p className="mt-0">
-                      <span className="italic text-sm lg:text-lg">
-                        {blog.date}
-                      </span>
-                    </p>
+
+                    <div>
+                      <p className="mb-0 text-sm md:text-lg lg:text-lg">
+                        <strong className="text-foreground">By:</strong>{" "}
+                        {blog.author}
+                      </p>
+                      <p className="mt-0">
+                        <span className="italic text-sm lg:text-lg">
+                          {blog.date}
+                        </span>
+                      </p>
+                    </div>
                     <p className="py-4">{blog.excerpt}</p>
                   </div>
 
