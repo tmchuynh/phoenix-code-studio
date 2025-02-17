@@ -45,7 +45,6 @@ const BlogDisplayPage: FC = () => {
   const isLargerScreen = useBetweenLargeAndXL();
 
   const [openCollapsible, setOpenCollapsible] = useState<string | null>(null);
-
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredBlogs, setFilteredBlogs] = useState(blogs);
   const [selectedDates, setSelectedDates] = useState<string[]>([]);
@@ -57,14 +56,14 @@ const BlogDisplayPage: FC = () => {
     date: false,
     author: false,
   });
-  const [filtersCleared, setFiltersCleared] = useState(false);
 
+  const [filtersCleared, setFiltersCleared] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [articlesPerPage, setArticlesPerPage] = useState(10);
+
   const decimalReadingTimes = blogs.map((b) =>
     parseReadingTimeToMinutes(b.time)
   );
-
   const maxReadingMinutes = Math.max(...decimalReadingTimes);
   const minReadingMinutes = Math.min(...decimalReadingTimes);
 
@@ -79,14 +78,6 @@ const BlogDisplayPage: FC = () => {
     minReadingMinutes,
     maxReadingMinutes,
   ]);
-
-  // Calculate the indexes for pagination
-  const indexOfLastArticle = currentPage * articlesPerPage;
-  const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
-  const currentArticles = filteredBlogs.slice(
-    indexOfFirstArticle,
-    indexOfLastArticle
-  );
 
   const wordCountMarkers = [];
   for (
@@ -108,38 +99,6 @@ const BlogDisplayPage: FC = () => {
       label: `${formatNumber(decimalMinutesToMmSs(i))}`,
     });
   }
-
-  const handleWordCountChange = (event: Event, newValue: number | number[]) => {
-    setWordCountRange(newValue as [number, number]);
-  };
-
-  const handleReadingTimeChange = (
-    event: Event,
-    newValue: number | number[]
-  ) => {
-    setReadingTimeRange(newValue as [number, number]);
-  };
-
-  // Handle page change
-  const handlePageChange = (pageNumber: number) => {
-    setCurrentPage(pageNumber);
-  };
-
-  // Handle articles per page change
-  const handleArticlesPerPageChange = (value: number) => {
-    setArticlesPerPage(value);
-    setCurrentPage(1); // Reset to the first page when articles per page changes
-  };
-
-  // Calculate total pages
-  const totalPages = Math.ceil(filteredBlogs.length / articlesPerPage);
-
-  // Manage which collapsible is open
-  const handleCollapsibleChange = (
-    collapsible: "topic" | "date" | "author"
-  ) => {
-    setOpenCollapsible(openCollapsible === collapsible ? null : collapsible); // Toggle the collapsible or close it
-  };
 
   const handleFilter = useCallback(() => {
     let filtered = blogs;
@@ -254,6 +213,10 @@ const BlogDisplayPage: FC = () => {
     readingTimeRange,
   ]);
 
+  useEffect(() => {
+    handleFilter();
+  }, [wordCountRange, readingTimeRange, handleFilter]);
+
   const clearFilters = (e?: string) => {
     setSelectedTopics([]);
     setSelectedDates([]);
@@ -288,6 +251,46 @@ const BlogDisplayPage: FC = () => {
     }
   };
 
+  // Calculate the indexes for pagination
+  const indexOfLastArticle = currentPage * articlesPerPage;
+  const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
+  const currentArticles = filteredBlogs.slice(
+    indexOfFirstArticle,
+    indexOfLastArticle
+  );
+
+  const handleWordCountChange = (event: Event, newValue: number | number[]) => {
+    setWordCountRange(newValue as [number, number]);
+  };
+
+  const handleReadingTimeChange = (
+    event: Event,
+    newValue: number | number[]
+  ) => {
+    setReadingTimeRange(newValue as [number, number]);
+  };
+
+  // Handle page change
+  const handlePageChange = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  };
+
+  // Handle articles per page change
+  const handleArticlesPerPageChange = (value: number) => {
+    setArticlesPerPage(value);
+    setCurrentPage(1); // Reset to the first page when articles per page changes
+  };
+
+  // Calculate total pages
+  const totalPages = Math.ceil(filteredBlogs.length / articlesPerPage);
+
+  // Manage which collapsible is open
+  const handleCollapsibleChange = (
+    collapsible: "topic" | "date" | "author"
+  ) => {
+    setOpenCollapsible(openCollapsible === collapsible ? null : collapsible); // Toggle the collapsible or close it
+  };
+
   const dates = Array.from(new Set(blogs.map((blog) => blog.date)));
   // const authors = Array.from(new Set(blogs.map((blog) => blog.author)));
 
@@ -308,10 +311,6 @@ const BlogDisplayPage: FC = () => {
   const handleTopicChange = (updatedTopics: string[]) => {
     setSelectedTopics(updatedTopics);
   };
-
-  useEffect(() => {
-    handleFilter();
-  }, [wordCountRange, readingTimeRange, handleFilter]);
 
   function handleOpen(dropdown: "topic" | "date" | "author") {
     setDropdownOpen({
