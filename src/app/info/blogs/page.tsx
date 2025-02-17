@@ -61,6 +61,24 @@ const BlogDisplayPage: FC = () => {
 
   const [currentPage, setCurrentPage] = useState(1);
   const [articlesPerPage, setArticlesPerPage] = useState(10);
+  const decimalReadingTimes = blogs.map((b) =>
+    parseReadingTimeToMinutes(b.time)
+  );
+
+  const maxReadingMinutes = Math.max(...decimalReadingTimes);
+  const minReadingMinutes = Math.min(...decimalReadingTimes);
+
+  const minWordCount = Math.min(...blogs.map((b) => b.wordCount));
+  const maxWordCount = Math.max(...blogs.map((b) => b.wordCount));
+
+  const [wordCountRange, setWordCountRange] = useState<[number, number]>([
+    minWordCount,
+    maxWordCount,
+  ]);
+  const [readingTimeRange, setReadingTimeRange] = useState<[number, number]>([
+    minReadingMinutes,
+    maxReadingMinutes,
+  ]);
 
   // Calculate the indexes for pagination
   const indexOfLastArticle = currentPage * articlesPerPage;
@@ -70,16 +88,7 @@ const BlogDisplayPage: FC = () => {
     indexOfLastArticle
   );
 
-  const decimalReadingTimes = blogs.map((b) =>
-    parseReadingTimeToMinutes(b.time)
-  );
-  const maxReadingMinutes = Math.max(...decimalReadingTimes);
-  const minReadingMinutes = Math.min(...decimalReadingTimes);
-
-  const minWordCount = Math.min(...blogs.map((b) => b.wordCount));
-  const maxWordCount = Math.max(...blogs.map((b) => b.wordCount));
-
-  let wordCountMarkers = [];
+  const wordCountMarkers = [];
   for (
     let i = minWordCount;
     i <= Math.round(maxWordCount / 1000) * 1000;
@@ -88,7 +97,7 @@ const BlogDisplayPage: FC = () => {
     wordCountMarkers.push({ value: i, label: `${formatNumber(i)}` });
   }
 
-  let readingTimeRangeMarkers = [];
+  const readingTimeRangeMarkers = [];
   for (
     let i = 0;
     i <= maxReadingMinutes;
@@ -99,15 +108,6 @@ const BlogDisplayPage: FC = () => {
       label: `${formatNumber(decimalMinutesToMmSs(i))}`,
     });
   }
-
-  const [wordCountRange, setWordCountRange] = useState<[number, number]>([
-    minWordCount,
-    maxWordCount,
-  ]);
-  const [readingTimeRange, setReadingTimeRange] = useState<[number, number]>([
-    minReadingMinutes,
-    maxReadingMinutes,
-  ]);
 
   const handleWordCountChange = (event: Event, newValue: number | number[]) => {
     setWordCountRange(newValue as [number, number]);
@@ -743,7 +743,7 @@ const BlogDisplayPage: FC = () => {
                     className="w-full h-36 rounded-t-md object-cover mx-auto mb-1"
                   />
                 )}
-                <div className="px-4 pb-2 flex flex-col justify-between h-[20em] md:h-[25em] 2xl:h-[35em] relative">
+                <div className="px-4 pb-2 flex flex-col justify-between h-[20em] md:h-[25em] 2xl:h-[38em] relative">
                   <div>
                     <div className="flex justify-between mx-1 pt-5">
                       <p className="mt-0 text-xs md:text-sm lg:text-md">
