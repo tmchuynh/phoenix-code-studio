@@ -57,50 +57,51 @@ export interface PricingTier {
   info: string;
 }
 
-export interface ServiceCategory {
+export interface Category {
   name: string;
   type: ServiceTypeKeys;
   title: string;
   short: string;
-  info: ServiceInfo;
+  info: Information;
 }
 
-export interface ServiceInfo {
+export interface Information {
   description: string[];
   detail: string;
   short: string;
   intro: string;
-  subServices: string[];
+  sub: string[];
 }
 
-export interface SubServiceItem {
+export interface SubItem {
   category: string;
   name: string;
-  info: SubServiceInfo;
-  details: SubServiceDetail[];
+  info: SubInformation;
+  details: SubDetail[];
   cta: CTA;
 }
 
-export interface SubServiceInfo {
+export interface SubInformation {
   name: string;
   title: string;
-  menuCaption: string;
+  menuCaption?: string;
   description: string;
-  startingPrice: number;
+  startingPrice?: number;
   info: string;
   details: string;
   short: string;
-  featured: boolean;
-  Icon: string;
-  pricingTierIntro: {
+  featured?: boolean;
+  Icon?: string;
+  pricingTierIntro?: {
     title: string;
     text: string;
   };
-  pricingTiers: PricingTier[];
+  pricingTiers?: PricingTier[];
 }
 
-export interface SubServiceDetail {
+export interface SubDetail {
   title: string;
+  description?: string;
   intro?: string[];
   lists?: {
     title?: string;
@@ -160,8 +161,8 @@ export interface BlogPost {
   title: string;
   author: string;
   date: string;
-  wordCount: number;
-  time: string;
+  wordCount?: number;
+  time?: string;
   excerpt: string;
   featured?: boolean;
   img: string;

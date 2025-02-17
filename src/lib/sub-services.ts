@@ -1,6 +1,6 @@
-import { SubServiceItem } from "./interfaces";
+import { SubItem } from "./interfaces";
 
-export const subServiceDetails: SubServiceItem[] = [
+export const subServiceDetails: SubItem[] = [
   {
     category: "scalable-corporate-digital-solutions",
     name: "authentic-brand-storytelling-that-captivates-connects",

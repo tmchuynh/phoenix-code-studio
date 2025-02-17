@@ -1,6 +1,6 @@
-import { ServiceCategory } from "./interfaces";
+import { Category } from "./interfaces";
 
-export const allServices: ServiceCategory[] = [
+export const allServices: Category[] = [
   {
     name: "scalable-corporate-digital-solutions",
     type: "corporateDigitalSolutions",
