@@ -8,7 +8,6 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import LoadingIndicator from "@/components/Loading";
 import CannotFind from "@/components/CannotFind";
-import router from "next/router";
 
 const BlogPostPage = () => {
   const { slug } = useParams();

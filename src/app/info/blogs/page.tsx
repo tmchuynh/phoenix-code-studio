@@ -630,19 +630,26 @@ const BlogDisplayPage: FC = () => {
                 )}
                 <div className="px-4 pb-2 flex flex-col justify-between h-[20em] md:h-[25em] 2xl:h-[35em] relative">
                   <div>
-                    <div className="flex justify-between mx-1 pt-5">
-                      <p className="mt-0 text-xs md:text-sm lg:text-md">
-                        <strong className="text-foreground">Words:</strong>{" "}
-                        <span>{formatNumber(blog.wordCount)}</span>
-                      </p>
-                      <p className="mt-0 text-xs md:text-sm lg:text-md">
-                        <strong className="text-foreground">
-                          Reading Time:
-                        </strong>{" "}
-                        <span>{blog.time}</span>
-                      </p>
-                    </div>
-                    <p>
+                    {blog.wordCount && blog.time && (
+                      <div className="flex justify-between mx-1 pt-5">
+                        {blog.wordCount && (
+                          <p className="mt-0 text-xs md:text-sm lg:text-md">
+                            <strong className="text-foreground">Words:</strong>{" "}
+                            <span>{formatNumber(blog.wordCount)}</span>
+                          </p>
+                        )}
+                        {blog.time && (
+                          <p className="mt-0 text-xs md:text-sm lg:text-md">
+                            <strong className="text-foreground">
+                              Reading Time:
+                            </strong>{" "}
+                            <span>{blog.time}</span>
+                          </p>
+                        )}
+                      </div>
+                    )}
+
+                    <p className={!blog.wordCount && !blog.time ? "mt-4" : ""}>
                       <Button
                         variant="ghost"
                         className="text-primary underline underline-offset-2 px-0 mb-2 font-SofiaSans tracking-wider font-bold hover:bg-transparent hover:text-primary hover:no-underline text-wrap text-left text-md md:text-lg lg:text-xl 2xl:text-2xl"
