@@ -9,14 +9,7 @@ import {
   MenubarSubTrigger,
   MenubarTrigger,
 } from "@/components/ui/menubar";
-import {
-  about,
-  companies,
-  content,
-  serviceCategories,
-  services,
-  websites,
-} from "@/lib/constants";
+import { about, serviceCategories, services } from "@/lib/constants";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
@@ -25,6 +18,9 @@ import { ModeButton } from "./ModeButton";
 import { Button } from "./ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { paymentPlans } from "@/lib/payment-plans";
+import { allServices } from "@/lib/service-categories";
+import { capitalize } from "@/lib/utils";
+import { subServiceDetails } from "@/lib/sub-services";
 
 const NavBar = () => {
   const router = useRouter();
@@ -128,63 +124,58 @@ const NavBar = () => {
                 </MenubarSubContent>
               </MenubarSub>
               <MenubarSeparator />
-              <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
-                  Website Services
-                </MenubarSubTrigger>
-                <MenubarSubContent className="mx-4 grid grid-cols-3 gap-2">
-                  {websites.map((website, index) => (
-                    <MenubarItem
-                      key={index}
-                      onClick={() => router.push(website.href)}
-                      className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72"
-                    >
-                      <p className="text-tertiary font-semibold mb-0">
-                        {website.title}
-                      </p>
-                      <small>{website.description}</small>
-                    </MenubarItem>
-                  ))}
-                </MenubarSubContent>
-              </MenubarSub>
-              <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
-                  Content Creation
-                </MenubarSubTrigger>
-                <MenubarSubContent className="mx-4 grid grid-cols-3 gap-2">
-                  {content.map((content, index) => (
-                    <MenubarItem
-                      key={index}
-                      onClick={() => router.push(content.href)}
-                      className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72"
-                    >
-                      <p className="text-tertiary font-semibold mb-0">
-                        {content.title}
-                      </p>
-                      <small>{content.description}</small>
-                    </MenubarItem>
-                  ))}
-                </MenubarSubContent>
-              </MenubarSub>
-              <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
-                  Company Specific Services
-                </MenubarSubTrigger>
-                <MenubarSubContent className="mx-4 grid grid-cols-3 gap-2">
-                  {companies.map((company, index) => (
-                    <MenubarItem
-                      key={index}
-                      onClick={() => router.push(company.href)}
-                      className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72"
-                    >
-                      <p className="text-tertiary font-semibold mb-0">
-                        {company.title}
-                      </p>
-                      <small>{company.description}</small>
-                    </MenubarItem>
-                  ))}
-                </MenubarSubContent>
-              </MenubarSub>
+              {allServices.map((serviceCategory, serviceIndex) => {
+                const triggerLabel =
+                  serviceCategory.name === "seo-optimized-content-creation"
+                    ? "SEO Optimized Content Creation"
+                    : capitalize(serviceCategory.name);
+
+                return (
+                  <MenubarSub key={serviceIndex}>
+                    <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                      {triggerLabel}
+                    </MenubarSubTrigger>
+
+                    <MenubarSubContent className="mx-4 grid grid-cols-3 gap-2">
+                      {serviceCategory.info.subServices.map(
+                        (subServiceName, subIndex) => {
+                          const subServiceData = subServiceDetails.find(
+                            (detail) =>
+                              detail.name === subServiceName &&
+                              detail.category === serviceCategory.name
+                          );
+
+                          // 2) Return null if no match
+                          if (!subServiceData) {
+                            return null;
+                          }
+
+                          return (
+                            <MenubarItem
+                              key={subIndex}
+                              onClick={() => {
+                                router.push(
+                                  `/services/${subServiceData.category}/${subServiceData.name}`
+                                );
+                              }}
+                              className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72"
+                            >
+                              <p className="text-tertiary font-semibold mb-0">
+                                {subServiceData.info?.title ||
+                                  subServiceData.info?.name}
+                              </p>
+                              <small>
+                                {subServiceData.info?.menuCaption ||
+                                  subServiceData.info?.short}
+                              </small>
+                            </MenubarItem>
+                          );
+                        }
+                      )}
+                    </MenubarSubContent>
+                  </MenubarSub>
+                );
+              })}
             </MenubarContent>
           </MenubarMenu>
           <MenubarMenu>
@@ -281,54 +272,58 @@ const NavBar = () => {
                 </MenubarSubContent>
               </MenubarSub>
               <MenubarSeparator />
-              <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
-                  Website Services
-                </MenubarSubTrigger>
-                <MenubarSubContent className="mx-4 w-72">
-                  {websites.map((website, index) => (
-                    <MenubarItem
-                      key={index}
-                      onClick={() => router.push(website.href)}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
-                    >
-                      {website.title}
-                    </MenubarItem>
-                  ))}
-                </MenubarSubContent>
-              </MenubarSub>
-              <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
-                  Content Creation
-                </MenubarSubTrigger>
-                <MenubarSubContent className="mx-4 w-72">
-                  {content.map((content, index) => (
-                    <MenubarItem
-                      key={index}
-                      onClick={() => router.push(content.href)}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
-                    >
-                      {content.title}
-                    </MenubarItem>
-                  ))}
-                </MenubarSubContent>
-              </MenubarSub>
-              <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
-                  Company Specific Services
-                </MenubarSubTrigger>
-                <MenubarSubContent className="mx-4 w-72">
-                  {companies.map((company, index) => (
-                    <MenubarItem
-                      key={index}
-                      onClick={() => router.push(company.href)}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
-                    >
-                      {company.title}
-                    </MenubarItem>
-                  ))}
-                </MenubarSubContent>
-              </MenubarSub>
+              {allServices.map((serviceCategory, serviceIndex) => {
+                const triggerLabel =
+                  serviceCategory.name === "seo-optimized-content-creation"
+                    ? "SEO Optimized Content Creation"
+                    : capitalize(serviceCategory.name);
+
+                return (
+                  <MenubarSub key={serviceIndex}>
+                    <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                      {triggerLabel}
+                    </MenubarSubTrigger>
+
+                    <MenubarSubContent className="mx-4 grid grid-cols-3 gap-2">
+                      {serviceCategory.info.subServices.map(
+                        (subServiceName, subIndex) => {
+                          const subServiceData = subServiceDetails.find(
+                            (detail) =>
+                              detail.name === subServiceName &&
+                              detail.category === serviceCategory.name
+                          );
+
+                          // 2) Return null if no match
+                          if (!subServiceData) {
+                            return null;
+                          }
+
+                          return (
+                            <MenubarItem
+                              key={subIndex}
+                              onClick={() => {
+                                router.push(
+                                  `/services/${subServiceData.category}/${subServiceData.name}`
+                                );
+                              }}
+                              className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72"
+                            >
+                              <p className="text-tertiary font-semibold mb-0">
+                                {subServiceData.info?.title ||
+                                  subServiceData.info?.name}
+                              </p>
+                              <small>
+                                {subServiceData.info?.menuCaption ||
+                                  subServiceData.info?.short}
+                              </small>
+                            </MenubarItem>
+                          );
+                        }
+                      )}
+                    </MenubarSubContent>
+                  </MenubarSub>
+                );
+              })}
             </MenubarContent>
           </MenubarMenu>
           <MenubarMenu>
@@ -443,63 +438,54 @@ const NavBar = () => {
                   ))}
                 </MenubarContent>
               </MenubarMenu>
-              <MenubarMenu>
-                <MenubarTrigger className="flex justify-between w-full">
-                  Website Services
-                  <FaChevronDown />
-                </MenubarTrigger>
-                <MenubarContent className="block md:hidden ml-9 -mt-2">
-                  {websites.map((website, index) => (
-                    <MenubarItem
-                      key={index}
-                      onClick={() => {
-                        router.push(website.href);
-                        setIsMenuOpen(false);
-                      }}
-                    >
-                      {website.title}
-                    </MenubarItem>
-                  ))}
-                </MenubarContent>
-              </MenubarMenu>
-              <MenubarMenu>
-                <MenubarTrigger className="flex justify-between w-full">
-                  Content Creation Services
-                  <FaChevronDown />
-                </MenubarTrigger>
-                <MenubarContent className="block md:hidden ml-9 -mt-2">
-                  {content.map((content, index) => (
-                    <MenubarItem
-                      key={index}
-                      onClick={() => {
-                        router.push(content.href);
-                        setIsMenuOpen(false);
-                      }}
-                    >
-                      {content.title}
-                    </MenubarItem>
-                  ))}
-                </MenubarContent>
-              </MenubarMenu>
-              <MenubarMenu>
-                <MenubarTrigger className="flex justify-between w-full">
-                  Company Specific Services
-                  <FaChevronDown />
-                </MenubarTrigger>
-                <MenubarContent className="block md:hidden ml-9 -mt-2">
-                  {companies.map((company, index) => (
-                    <MenubarItem
-                      key={index}
-                      onClick={() => {
-                        router.push(company.href);
-                        setIsMenuOpen(false);
-                      }}
-                    >
-                      {company.title}
-                    </MenubarItem>
-                  ))}
-                </MenubarContent>
-              </MenubarMenu>
+              {allServices.map((serviceCategory, serviceIndex) => {
+                const triggerLabel =
+                  serviceCategory.name === "seo-optimized-content-creation"
+                    ? "SEO Optimized Content Creation"
+                    : capitalize(serviceCategory.name);
+
+                return (
+                  <MenubarMenu key={serviceIndex}>
+                    <MenubarTrigger className="flex justify-between w-full">
+                      {triggerLabel}
+                      <FaChevronDown />
+                    </MenubarTrigger>
+
+                    <MenubarContent className="block md:hidden ml-9 -mt-2">
+                      {serviceCategory.info.subServices.map(
+                        (subServiceName, subIndex) => {
+                          const subServiceData = subServiceDetails.find(
+                            (detail) =>
+                              detail.name === subServiceName &&
+                              detail.category === serviceCategory.name
+                          );
+
+                          // 2) Return null if no match
+                          if (!subServiceData) {
+                            return null;
+                          }
+
+                          return (
+                            <MenubarItem
+                              key={subIndex}
+                              onClick={() => {
+                                router.push(
+                                  `/services/${subServiceData.category}/${subServiceData.name}`
+                                );
+                              }}
+                            >
+                              <p className="text-tertiary font-semibold mb-0">
+                                {subServiceData.info?.title ||
+                                  subServiceData.info?.name}
+                              </p>
+                            </MenubarItem>
+                          );
+                        }
+                      )}
+                    </MenubarContent>
+                  </MenubarMenu>
+                );
+              })}
             </div>
           </Menubar>
         </PopoverContent>

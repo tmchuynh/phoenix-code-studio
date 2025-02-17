@@ -83,6 +83,8 @@ export interface SubServiceItem {
 
 export interface SubServiceInfo {
   name: string;
+  title: string;
+  menuCaption: string;
   description: string;
   startingPrice: number;
   info: string;

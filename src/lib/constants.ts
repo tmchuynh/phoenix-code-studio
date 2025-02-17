@@ -56,6 +56,12 @@ export const services: Menu[] = [
 
 export const serviceCategories: Menu[] = [
   {
+    title: "Overview",
+    href: "/services",
+    description:
+      "Browse through our variety of payment plans and choose the one that best aligns with your needs and budget.",
+  },
+  {
     title: "Scalable Digital Solutions for Corporations",
     href: "/services/scalable-corporate-digital-solutions",
     description:
@@ -72,135 +78,6 @@ export const serviceCategories: Menu[] = [
     href: "/services/comprehensive-website-solutions",
     description:
       "Find the perfect service to build, optimize, and grow your digital presence.",
-  },
-];
-
-export const websites: Menu[] = [
-  {
-    title: "Impactful Tailored Website Design",
-    href: "/services/comprehensive-website-solutions/custom-websites-designed-for-impact-and-performance",
-    description:
-      "Transform your digital presence with a custom website that not only captivates visitors but also aligns seamlessly with your brand’s vision and goals.",
-  },
-  {
-    title: "E-Commerce Solutions for Growth",
-    href: "/services/comprehensive-website-solutions/e-commerce-solutions-built-for-growth-and-success",
-    description:
-      "Create an online shopping experience that delights customers, boosts conversions, and drives sales with smooth and intuitive e-commerce solutions.",
-  },
-  {
-    title: "High-Performance Single-Page Applications (SPAs)",
-    href: "/services/comprehensive-website-solutions/high-performance-single-page-applications-spas-for-a-seamless-user-experience",
-    description:
-      "Develop lightning-fast, dynamic web apps with seamless user interfaces that enhance functionality and user experience.",
-  },
-  {
-    title: "Website Content Creation for Increased Visibility",
-    href: "/services/comprehensive-website-solutions/engaging-seo-optimized-website-content-that-converts",
-    description:
-      "Craft compelling, SEO-optimized website content that captures attention, keeps visitors engaged, and drives conversions.",
-  },
-  {
-    title: "User-Centered Interface Design",
-    href: "/services/comprehensive-website-solutions/user-centered-interface-design-for-seamless-experiences",
-    description:
-      "Design intuitive, engaging user interfaces that deliver exceptional user experiences and foster satisfaction and accessibility.",
-  },
-  {
-    title: "Wireframing & Prototyping",
-    href: "/services/comprehensive-website-solutions/from-concept-to-clickable-wireframing-prototyping-services",
-    description:
-      "Bring your ideas to life with effective wireframes and prototypes, visualizing your design concepts before moving into development.",
-  },
-  {
-    title: "SEO Optimization",
-    href: "/services/comprehensive-website-solutions/maximize-your-online-reach-with-expert-seo-optimization",
-    description:
-      "Increase your site’s visibility and drive organic traffic with expert SEO strategies tailored to boost your search engine rankings.",
-  },
-];
-
-export const content: Menu[] = [
-  {
-    title: "Eye-Catching Brochures and/or Flyers",
-    href: "/services/seo-optimized-content-creation/eye-catching-brochures-and-flyers-that-make-an-impact",
-    description:
-      "Design visually striking brochures and flyers that capture attention and effectively communicate your brand’s message.",
-  },
-  {
-    title: "User-Friendly Product Guides/Manuals",
-    href: "/services/seo-optimized-content-creation/comprehensive-user-friendly-product-guides-manuals",
-    description:
-      "Develop clear, comprehensive product guides and manuals that enhance user understanding and improve customer satisfaction.",
-  },
-  {
-    title: "Learning Study Guides",
-    href: "/services/seo-optimized-content-creation/master-any-subject-with-comprehensive-study-guides",
-    description:
-      "Create in-depth, easy-to-follow study guides that empower learners with the knowledge and tools they need to succeed.",
-  },
-  {
-    title: "Engaging Online Courses Development",
-    href: "/services/seo-optimized-content-creation/engaging-interactive-online-course-development",
-    description:
-      "Design and develop engaging, interactive online courses that inspire learners and provide them with the practical skills to apply in real-world situations.",
-  },
-  {
-    title: "Tutorials for Seamless Learning",
-    href: "/services/seo-optimized-content-creation/step-by-step-tutorials-for-seamless-learning",
-    description:
-      "Create clear, concise, and user-friendly tutorials that break down complex tasks into easy-to-follow steps.",
-  },
-  {
-    title: "Professional eBook Creation",
-    href: "/services/seo-optimized-content-creation/engaging-professional-ebook-creation",
-    description:
-      "Craft compelling, SEO-optimized eBooks that not only inform but also engage readers and establish your authority in your field.",
-  },
-];
-
-export const companies: Menu[] = [
-  {
-    title: "Transform Your Brand",
-    href: "/services/scalable-corporate-digital-solutions/transform-your-brand-with-our-rebranding-services",
-    description:
-      "Revitalize your company’s identity with a strategic rebrand that includes a refreshed logo, messaging, and a cohesive brand strategy.",
-  },
-  {
-    title: "Authentic Brand Storytelling",
-    href: "/services/scalable-corporate-digital-solutions/authentic-brand-storytelling-that-captivates-connects",
-    description:
-      "Craft compelling and impactful brand stories that connect with your audience by showcasing your mission, vision, and core values.",
-  },
-  {
-    title: "Secure Database Management Solutions",
-    href: "/services/scalable-corporate-digital-solutions/optimized-secure-database-management-solutions",
-    description:
-      "Implement secure and efficient database solutions that scale with your business, ensuring reliable and organized data management.",
-  },
-  {
-    title: "Seamless Onboarding Paperwork",
-    href: "/services/scalable-corporate-digital-solutions/seamless-onboarding-with-clear-and-engaging-training-materials",
-    description:
-      "Create engaging, clear, and effective training materials to streamline your onboarding process and ensure a smooth employee integration.",
-  },
-  {
-    title: "Expert Technical Writing",
-    href: "/services/scalable-corporate-digital-solutions/expert-technical-writing-clarity-precision",
-    description:
-      "Produce clear, precise, and structured technical documentation to support complex processes and tools for your team or customers.",
-  },
-  {
-    title: "Impactful Newsletters",
-    href: "/services/scalable-corporate-digital-solutions/engaging-impactful-newsletters",
-    description:
-      "Design and write impactful newsletters that keep your audience informed, engaged, and ready to take action.",
-  },
-  {
-    title: "Engaging Blogs",
-    href: "/services/scalable-corporate-digital-solutions/seo-optimized-engaging-blog-content",
-    description:
-      "Create insightful, SEO-optimized blog posts that capture attention, drive website traffic, and build lasting engagement with your audience.",
   },
 ];
 

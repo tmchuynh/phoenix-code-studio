@@ -6,6 +6,9 @@ export const subServiceDetails: SubServiceItem[] = [
     name: "authentic-brand-storytelling-that-captivates-connects",
     info: {
       name: "Authentic Brand Storytelling That Captivates & Connects",
+      title: "Authentic Brand Storytelling",
+      menuCaption:
+        "Craft compelling and impactful brand stories that connect with your audience by showcasing your mission, vision, and core values.",
       description: "Brand Awareness",
       startingPrice: 900,
       info: "We craft compelling brand narratives that authentically define your identity and create a deep emotional connection with your audience. Through strategic storytelling, we go beyond transactions—bridging the gap between your brand’s values, mission, and vision to build trust and long-term loyalty. Our approach ensures that every message, visual, and campaign aligns seamlessly, reinforcing a strong, memorable presence in a competitive marketplace. Whether launching a new brand or revitalizing an existing one, we help you tell your story in a way that inspires, engages, and resonates.",
@@ -372,6 +375,9 @@ export const subServiceDetails: SubServiceItem[] = [
     name: "transform-your-brand-with-our-rebranding-services",
     info: {
       name: "Transform Your Brand with Our Rebranding Services",
+      title: "Transform Your Brand",
+      menuCaption:
+        "Revitalize your company’s identity with a strategic rebrand that includes a refreshed logo, messaging, and a cohesive brand strategy.",
       description: "Marketing Strategy",
       startingPrice: 1500,
       info: "Our comprehensive rebranding services give your company a fresh, modern identity that truly connects with your audience and aligns with your business goals. We specialize in logo design, brand messaging, visual identity, and strategic positioning, ensuring every element reflects your brand’s unique vision. By crafting a cohesive, future-ready brand strategy, we help you stand out from the competition, build trust, and create a lasting impact. Elevate your business with a powerful transformation that fuels growth and long-term success.",
@@ -675,6 +681,9 @@ export const subServiceDetails: SubServiceItem[] = [
     name: "e-commerce-solutions-built-for-growth-and-success",
     info: {
       name: "E-Commerce Solutions Built for Growth and Success",
+      title: "E-Commerce Solutions for Growth",
+      menuCaption:
+        "Create an online shopping experience that delights customers, boosts conversions, and drives sales with smooth and intuitive e-commerce solutions.",
       description: "Selling Online",
       startingPrice: 2000,
       info: "We design scalable, secure, and user-friendly e-commerce platforms that enhance the customer experience and drive sales growth. With intuitive navigation, seamless checkout, and robust security, our platforms ensure a smooth and secure shopping experience for your customers. Designed for long-term success, our solutions include personalized recommendations, inventory management, and in-depth analytics to optimize performance. Whether you're launching a new online store or upgrading an existing platform, we deliver tailored e-commerce solutions that showcase your brand, increase conversions, and maximize your success.",
@@ -957,6 +966,9 @@ export const subServiceDetails: SubServiceItem[] = [
     name: "high-performance-single-page-applications-spas-for-a-seamless-user-experience",
     info: {
       name: "High-Performance Single-Page Applications (SPAs) for a Seamless User Experience",
+      title: "High-Performance Single-Page Applications (SPAs)",
+      menuCaption:
+        "Develop lightning-fast, dynamic web apps with seamless user interfaces that enhance functionality and user experience.",
       description: "Enhanced UX",
       startingPrice: 2000,
       info: "We specialize in building fast, dynamic, and highly responsive single-page applications (SPAs) that deliver real-time updates, seamless navigation, and top-tier performance. Using cutting-edge frameworks and modern development techniques, our SPAs provide an engaging, app-like experience that works flawlessly across all devices and screen sizes. Designed for speed and user retention, our applications feature smooth transitions, minimal load times, and interactive elements that keep users engaged. Whether you're looking to enhance functionality, streamline performance, or create an immersive user journey, our SPAs are tailored to meet your business objectives and audience needs.",
@@ -1210,6 +1222,9 @@ export const subServiceDetails: SubServiceItem[] = [
     name: "custom-websites-designed-for-impact-and-performance",
     info: {
       name: "Custom Websites Designed for Impact and Performance",
+      title: "Impactful Tailored Website Design",
+      menuCaption:
+        "Transform your digital presence with a custom website that not only captivates visitors but also aligns seamlessly with your brand’s vision and goals.",
       description: "Brand Differentiation",
       startingPrice: 1500,
       info: "We create custom websites that do more than just look great—they work strategically to drive your business forward. Every website we design is a seamless blend of creativity and functionality, tailored to reflect your brand identity and business goals. Our fully responsive, high-performance designs ensure flawless experiences across desktops, tablets, and smartphones. With intuitive navigation, fast load speeds, and engaging visuals, we craft websites that captivate audiences, boost conversions, and fuel growth. Let’s build a digital presence that makes a lasting impact and sets your brand apart.",
@@ -1533,6 +1548,9 @@ export const subServiceDetails: SubServiceItem[] = [
     name: "user-centered-interface-design-for-seamless-experiences",
     info: {
       name: "User-Centered Interface Design for Seamless Experiences",
+      title: "User-Centered Interface Design",
+      menuCaption:
+        "Design intuitive, engaging user interfaces that deliver exceptional user experiences and foster satisfaction and accessibility.",
       description: "Tailored UX",
       startingPrice: 1200,
       info: "We design intuitive, functional interfaces that strike the perfect balance between usability, accessibility, and aesthetic appeal. Through in-depth user research, we uncover insights into your audience’s behaviors, needs, and pain points—ensuring every design decision is data-driven. Our process, from wireframing and prototyping to rigorous testing and refinement, prioritizes both beauty and functionality. By integrating accessibility best practices, we create inclusive experiences that cater to all users, regardless of ability. The result? Engaging, seamless, and user-friendly interfaces that leave a lasting impression and drive meaningful interactions.",
@@ -1714,6 +1732,9 @@ export const subServiceDetails: SubServiceItem[] = [
     name: "seo-optimized-engaging-blog-content",
     info: {
       name: "SEO-Optimized, Engaging Blog Content",
+      title: "Engaging Blogs",
+      menuCaption:
+        "Create insightful, SEO-optimized blog posts that capture attention, drive website traffic, and build lasting engagement with your audience.",
       description: "Web Traffic",
       startingPrice: 150,
       info: "We create compelling, informative blog posts that not only captivate your audience but also enhance your website’s SEO performance. Every post is carefully crafted to align with your brand voice and industry expertise, ensuring authenticity and consistency. By delivering valuable, relevant content, we help establish your brand as an authority in your field, boost organic traffic, and foster deeper connections with your audience. Our blogs are designed to educate, inspire, and engage, driving higher visibility, increased engagement, and long-term growth for your online presence.",
@@ -1891,6 +1912,9 @@ export const subServiceDetails: SubServiceItem[] = [
     name: "expert-technical-writing-clarity-precision",
     info: {
       name: "Expert Technical Writing for Clarity & Precision",
+      title: "Expert Technical Writing",
+      menuCaption:
+        "Produce clear, precise, and structured technical documentation to support complex processes and tools for your team or customers.",
       description: "Documentation",
       startingPrice: 500,
       info: "Our technical writing services transform complex concepts into clear, concise, and user-friendly documentation. Whether you need software manuals, API documentation, white papers, or technical guides, we deliver accurate, well-structured content that enhances understanding and usability. By prioritizing clarity, precision, and accessibility, we ensure your audience can easily navigate and apply the information, improving their experience and confidence in your product or service. Our expertly crafted documents support seamless adoption, reduced learning curves, and enhanced user engagement across technical and non-technical audiences alike.",
@@ -2024,6 +2048,9 @@ export const subServiceDetails: SubServiceItem[] = [
     name: "engaging-interactive-online-course-development",
     info: {
       name: "Engaging & Interactive Online Course Development",
+      title: "Engaging Online Courses Development",
+      menuCaption:
+        "Design and develop engaging, interactive online courses that inspire learners and provide them with the practical skills to apply in real-world situations.",
       description: "Diverse Learning Styles",
       startingPrice: 1500,
       info: "We design and develop interactive online courses that combine multimedia, intuitive design, and engaging content to provide impactful learning experiences. Whether you're offering industry training, employee development, or educational programs, our courses are tailored to align with your objectives and audience needs. By integrating videos, quizzes, and interactive elements, we ensure maximum engagement, knowledge retention, and accessibility. With a focus on structured content, user-friendly navigation, and effective knowledge transfer, our solutions empower learners to gain valuable skills and insights that drive lasting success.",
@@ -2239,6 +2266,9 @@ export const subServiceDetails: SubServiceItem[] = [
     name: "engaging-impactful-newsletters",
     info: {
       name: "Engaging & Impactful Newsletters",
+      title: "Impactful Newsletters",
+      menuCaption:
+        "Design and write impactful newsletters that keep your audience informed, engaged, and ready to take action.",
       description: "Measurable Results",
       startingPrice: 300,
       info: "We create captivating, visually stunning newsletters that keep your audience engaged, informed, and connected with your brand. Whether it's a one-time announcement or an ongoing series, our newsletters combine compelling content, targeted messaging, and vibrant design to maximize their effectiveness. Perfect for nurturing relationships, enhancing engagement, and building brand loyalty, our newsletters ensure that you stay front and center in your audience's minds.",
@@ -2427,6 +2457,9 @@ export const subServiceDetails: SubServiceItem[] = [
     name: "optimized-secure-database-management-solutions",
     info: {
       name: "Optimized & Secure Database Management Solutions",
+      title: "Secure Database Management Solutions",
+      menuCaption:
+        "Implement secure and efficient database solutions that scale with your business, ensuring reliable and organized data management.",
       description: "Data Security",
       startingPrice: 600,
       info: "Our database management services provide secure, scalable, and high-performance solutions that streamline data storage, organization, and accessibility. Designed to meet your unique business needs, we ensure fast and reliable operations with optimized performance, even as your data scales. Advanced security protocols safeguard sensitive information, ensuring compliance with industry standards and protecting against potential threats. Whether you need real-time data processing, seamless integrations, or scalable storage solutions, our expert database management empowers your business to handle complex data demands while supporting long-term growth and efficiency.",
@@ -2604,6 +2637,9 @@ export const subServiceDetails: SubServiceItem[] = [
     name: "comprehensive-user-friendly-product-guides-manuals",
     info: {
       name: "Comprehensive, User-Friendly Product Guides & Manuals",
+      title: "User-Friendly Product Guides/Manuals",
+      menuCaption:
+        "Develop clear, comprehensive product guides and manuals that enhance user understanding and improve customer satisfaction.",
       description: "User Education",
       startingPrice: 400,
       info: "We specialize in creating detailed, easy-to-follow product guides and manuals that transform complex information into clear, accessible content. Designed with usability and clarity in mind, our guides help users quickly understand your products, improving their overall experience and satisfaction. With step-by-step instructions, engaging visuals, and concise explanations, we ensure that customers can confidently navigate, assemble, troubleshoot, and maximize the use of your offerings. Whether it's a technical manual, instructional booklet, or digital user guide, our expertly crafted content enhances customer support, reduces confusion, and builds trust in your brand.",
@@ -2800,6 +2836,9 @@ export const subServiceDetails: SubServiceItem[] = [
     name: "maximize-your-online-reach-with-expert-seo-optimization",
     info: {
       name: "Maximize Your Online Reach with Expert SEO Optimization",
+      title: "SEO Optimization",
+      menuCaption:
+        "Increase your site’s visibility and drive organic traffic with expert SEO strategies tailored to boost your search engine rankings.",
       description: "Organic Traffic",
       startingPrice: 500,
       info: "Our SEO optimization services are designed to increase your website’s visibility, attract high-quality organic traffic, and drive conversions—whether that means boosting e-commerce sales, growing newsletter subscriptions, or enhancing brand awareness. We implement data-driven strategies that include in-depth keyword research, on-page optimization, high-value content improvements, and strategic link-building to improve your search engine rankings. By staying ahead of algorithm updates and industry best practices, we ensure your site remains competitive, relevant, and optimized for long-term success in an evolving digital landscape. Let us help you connect with the right audience and maximize your online potential.",
@@ -3199,6 +3238,9 @@ export const subServiceDetails: SubServiceItem[] = [
     name: "from-concept-to-clickable-wireframing-prototyping-services",
     info: {
       name: "From Concept to Clickable: Wireframing & Prototyping Services",
+      title: "Wireframing & Prototyping",
+      menuCaption:
+        "Bring your ideas to life with effective wireframes and prototypes, visualizing your design concepts before moving into development.",
       description: "User-Centric Designs",
       startingPrice: 800,
       info: "Our wireframing and prototyping services turn your concepts into actionable, user-focused designs that lay the groundwork for an intuitive user experience. Starting with low-fidelity wireframes, we outline the structure, navigation, and layout, creating a clear blueprint for the design. We then move on to high-fidelity prototypes that simulate real interactions, giving you the chance to experience and refine the user journey before development starts. These interactive models simplify decision-making, boost design efficiency, and ensure usability, helping you save time and resources while perfecting the final product.",
@@ -3401,6 +3443,9 @@ export const subServiceDetails: SubServiceItem[] = [
     name: "engaging-seo-optimized-website-content-that-converts",
     info: {
       name: "Engaging, SEO-Optimized Website Content That Converts",
+      title: "Website Content Creation for Increased Visibility",
+      menuCaption:
+        "Craft compelling, SEO-optimized website content that captures attention, keeps visitors engaged, and drives conversions.",
       description: "Engaging Readers",
       startingPrice: 600,
       info: "We craft clear, compelling, and SEO-driven website content designed to captivate your audience, enhance brand messaging, and improve search engine rankings. Our expertly written copy aligns with your brand voice, effectively communicates your value proposition, and guides visitors toward conversions. By integrating strategic keywords and user-focused storytelling, we help establish your online authority, boost organic traffic, and create a seamless user experience that fosters trust and engagement. Whether you need landing pages, service descriptions, or blog content, our tailored approach ensures your message resonates and drives results.",
@@ -3604,6 +3649,9 @@ export const subServiceDetails: SubServiceItem[] = [
     name: "step-by-step-tutorials-for-seamless-learning",
     info: {
       name: "Step-by-Step Tutorials for Seamless Learning",
+      title: "Tutorials for Seamless Learning",
+      menuCaption:
+        "Create clear, concise, and user-friendly tutorials that break down complex tasks into easy-to-follow steps.",
       description: "Knowledge Sharing",
       startingPrice: 200,
       info: "We create clear, concise, and user-friendly tutorials that simplify complex tasks and guide users through each step with ease. Designed for maximum clarity and accessibility, our tutorials break down technical processes, software usage, and product functionalities into easy-to-follow instructions. By incorporating visual aids, structured guidance, and practical examples, we empower users to confidently navigate challenges, master new skills, and achieve their goals efficiently.",
@@ -3809,6 +3857,9 @@ export const subServiceDetails: SubServiceItem[] = [
     name: "eye-catching-brochures-and-flyers-that-make-an-impact",
     info: {
       name: "Eye-Catching Brochures and Flyers That Make an Impact",
+      title: "Eye-Catching Brochures and/or Flyers",
+      menuCaption:
+        "Design visually striking brochures and flyers that capture attention and effectively communicate your brand’s message.",
       description: "Promoting Services",
       startingPrice: 30,
       info: "We design visually compelling brochures and flyers that effectively showcase your products, services, and brand message. By blending engaging visuals, persuasive copy, and strategic layouts, we create marketing materials that capture attention, communicate value, and inspire action. Whether for promotions, events, or corporate branding, our designs ensure your message stands out and leaves a lasting impression on your audience.",
@@ -3955,6 +4006,9 @@ export const subServiceDetails: SubServiceItem[] = [
     name: "seamless-onboarding-with-clear-and-engaging-training-materials",
     info: {
       name: "Seamless Onboarding with Clear and Engaging Training Materials",
+      title: "Seamless Onboarding Paperwork",
+      menuCaption:
+        "Create engaging, clear, and effective training materials to streamline your onboarding process and ensure a smooth employee integration.",
       description: "Reducing Training Time",
       startingPrice: 150,
       info: "We develop comprehensive and professional training materials that streamline the onboarding process for employees, clients, and users. Our content is designed for clarity, engagement, and ease of understanding, ensuring smooth transitions and successful integration into your organization. With step-by-step guidance, interactive elements, and tailored resources, we help you deliver an effective onboarding experience that fosters confidence, productivity, and long-term alignment with your goals.",
@@ -4130,6 +4184,9 @@ export const subServiceDetails: SubServiceItem[] = [
     name: "master-any-subject-with-comprehensive-study-guides",
     info: {
       name: "Master Any Subject with Comprehensive Study Guides",
+      title: "Learning Study Guides",
+      menuCaption:
+        "Create in-depth, easy-to-follow study guides that empower learners with the knowledge and tools they need to succeed.",
       description: "Focused Learning",
       startingPrice: 350,
       info: "We craft detailed and easy-to-follow study guides designed to simplify complex concepts and enhance learning retention. Whether for students preparing for exams or professionals seeking to expand their knowledge, our guides provide clear explanations, structured layouts, and effective learning strategies. With a focus on clarity, comprehension, and application, our study materials help you grasp key topics, boost confidence, and achieve your academic or professional goals.",
@@ -4277,6 +4334,9 @@ export const subServiceDetails: SubServiceItem[] = [
     name: "engaging-professional-ebook-creation",
     info: {
       name: "Engaging & Professional eBook Creation",
+      title: "Professional eBook Creation",
+      menuCaption:
+        "Craft compelling, SEO-optimized eBooks that not only inform but also engage readers and establish your authority in your field.",
       description: "Lead Generation",
       startingPrice: 1500,
       info: "We specialize in crafting high-quality, visually appealing eBooks tailored to your educational, marketing, or publishing needs. From compelling content development to eye-catching design, we ensure your eBook effectively conveys your message and captivates your audience. Whether you're looking to educate, inform, or promote, our expertly designed eBooks provide an engaging, polished, and impactful reading experience that aligns with your goals.",
