@@ -625,7 +625,7 @@ const BlogDisplayPage: FC = () => {
             >
               <div>
                 <Image
-                  src={`/images/blog_images/${setSlug(blog.title)}.jpg`}
+                  src={`/images/blog_card_images/${setSlug(blog.title)}.jpg`}
                   width={500}
                   height={300}
                   alt={blog.title}
