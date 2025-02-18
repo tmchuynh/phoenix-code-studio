@@ -26,6 +26,7 @@ import {
 import useBetweenLargeAndXL from "@/lib/onlyLargerScreens";
 import useSmallScreen from "@/lib/useSmallScreen";
 import {
+  cn,
   compareDates,
   formatDate,
   formatNumber,
@@ -38,10 +39,12 @@ import { useRouter } from "next/navigation";
 import { FC, useEffect, useState, useCallback } from "react";
 import { blogs } from "@/lib/blog-posts";
 import { useTheme } from "next-themes";
+import useMediumScreen from "@/lib/useMediumScreen";
 
 const BlogDisplayPage: FC = () => {
   const router = useRouter();
   const isSmallDevice = useSmallScreen();
+  const isMediumDevice = useMediumScreen();
   const isLargerScreen = useBetweenLargeAndXL();
   const { theme } = useTheme();
 
@@ -188,6 +191,7 @@ const BlogDisplayPage: FC = () => {
 
   const dates = Array.from(new Set(blogs.map((blog) => blog.date)));
   const readingLength = Array.from(new Set(blogs.map((blog) => blog.timeSpan)));
+
   // const authors = Array.from(new Set(blogs.map((blog) => blog.author)));
 
   const topicCounts: Record<string, number> = blogs.reduce((acc, blog) => {
@@ -475,19 +479,31 @@ const BlogDisplayPage: FC = () => {
         </section>
 
         {/* Reading Length Times */}
-        <section className="grid grid-cols-1 space-y-3 md:space-y-0 md:grid-cols-3 md:gap-2 lg:gap-4">
-          {readingLength.map((length, index) => (
-            <Button
-              variant={theme === "dark" ? "accent" : "outline"}
-              size={isSmallDevice ? "sm" : "default"}
-              className="capitalize"
-              key={index}
-              onClick={() => handleReadingLengthClick(length)}
-            >
-              {length} Articles{" "}
-              <small className="font-normal">({lengthCount[length]})</small>
-            </Button>
-          ))}
+        <section
+          className={cn(
+            "grid grid-cols-1 space-y-3 md:space-y-0 md:grid-cols-4 md:gap-2 lg:gap-4",
+            isSmallDevice && "w-11/12 mx-auto"
+          )}
+        >
+          {readingLength
+            .sort((a, b) => {
+              if (a.length === b.length) {
+                return b.localeCompare(a);
+              }
+              return a.length - b.length;
+            })
+            .map((length, index) => (
+              <Button
+                variant={theme === "dark" ? "accent" : "outline"}
+                size={isMediumDevice ? "sm" : "default"}
+                className="capitalize"
+                key={index}
+                onClick={() => handleReadingLengthClick(length)}
+              >
+                {length} Articles{" "}
+                <small className="font-normal">({lengthCount[length]})</small>
+              </Button>
+            ))}
         </section>
 
         <section className="w-11/12 md:w-full mx-auto flex flex-col md:flex-row gap-2 justify-center md:justify-between">
