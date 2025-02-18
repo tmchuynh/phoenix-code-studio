@@ -624,15 +624,13 @@ const BlogDisplayPage: FC = () => {
               className="border-2 border-transparent dark:hover:border-border rounded-lg shadow-lg hover:shadow-xl transition-shadow flex flex-col justify-between"
             >
               <div>
-                {blog.img !== "" && (
-                  <Image
-                    src={blog.img}
-                    width={500}
-                    height={300}
-                    alt={blog.title}
-                    className="w-full h-36 rounded-t-md object-cover mx-auto mb-1"
-                  />
-                )}
+                <Image
+                  src={`/images/blog_images/${setSlug(blog.title)}.jpg`}
+                  width={500}
+                  height={300}
+                  alt={blog.title}
+                  className="w-full h-40 md:h-52 xl:h-64 rounded-t-md object-cover mx-auto mb-1 object-center"
+                />
                 <div className="px-4 pb-2 flex flex-col justify-between h-fit md:h-[24rem] lg:h-[32em] 2xl:h-[35em] relative">
                   <div>
                     {blog.wordCount && blog.time && (

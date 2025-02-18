@@ -166,7 +166,6 @@ export interface BlogPost {
   time: string;
   excerpt: string;
   featured?: boolean;
-  img: string;
   topics: string[];
   intro: string[];
   list?: ListDetail[];
