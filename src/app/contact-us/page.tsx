@@ -78,7 +78,7 @@ const ContactUsPage: FC = () => {
 
   const handleMainServiceCheck = (
     e: React.ChangeEvent<HTMLInputElement>,
-    serviceType: string
+    serviceType: string | ""
   ) => {
     const { checked } = e.target;
 
@@ -236,39 +236,44 @@ const ContactUsPage: FC = () => {
 
             {/* Dynamically Render All Services */}
             <h2 className="text-xl font-semibold mt-6 mb-2">Select Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pl-2">
-              {allServices.map((service, index) => (
-                <div key={index} className="my-2">
-                  <label className="inline-flex items-center text-lg font-semibold">
-                    <BpCheckbox
-                      // "expanded" or "checked" state based on expandedServices
-                      checked={expandedServices.includes(service.type)}
-                      onChange={(e) => handleMainServiceCheck(e, service.type)}
-                      className="mr-2"
-                    />
-                    {formatName(service.name)}
-                  </label>
+            {allServices.map(
+              (service, index) =>
+                service.type && (
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pl-2">
+                    <div key={index} className="my-2">
+                      <label className="inline-flex items-center text-lg font-semibold">
+                        <BpCheckbox
+                          // "expanded" or "checked" state based on expandedServices
+                          checked={expandedServices.includes(service.type)}
+                          onChange={(e) =>
+                            handleMainServiceCheck(e, service.type!)
+                          }
+                          className="mr-2"
+                        />
+                        {formatName(service.name)}
+                      </label>
 
-                  {expandedServices.includes(service.type) && (
-                    <div className="pl-6 mt-2 space-y-2">
-                      {service.info.sub.map((sub) => (
-                        <label key={sub} className="flex items-center">
-                          <BpCheckbox
-                            value={sub}
-                            checked={formData[service.type].includes(sub)}
-                            onChange={(e) =>
-                              handleSubServiceSelect(e, service.type)
-                            }
-                            className="mr-2"
-                          />
-                          {formatName(sub)}
-                        </label>
-                      ))}
+                      {expandedServices.includes(service.type) && (
+                        <div className="pl-6 mt-2 space-y-2">
+                          {service.info.sub.map((sub) => (
+                            <label key={sub} className="flex items-center">
+                              <BpCheckbox
+                                value={sub}
+                                checked={formData[service.type!].includes(sub)}
+                                onChange={(e) =>
+                                  handleSubServiceSelect(e, service.type!)
+                                }
+                                className="mr-2"
+                              />
+                              {formatName(sub)}
+                            </label>
+                          ))}
+                        </div>
+                      )}
                     </div>
-                  )}
-                </div>
-              ))}
-            </div>
+                  </div>
+                )
+            )}
 
             {/* Payment Plan (Dropdown) */}
             <div className="mt-6 mb-4">
