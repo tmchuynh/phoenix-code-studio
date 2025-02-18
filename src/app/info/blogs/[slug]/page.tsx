@@ -7,7 +7,9 @@ import { BlogPost } from "@/lib/interfaces";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import LoadingIndicator from "@/components/Loading";
+import Image from "next/image";
 import CannotFind from "@/components/CannotFind";
+import { setSlug } from "@/lib/utils";
 
 const BlogPostPage = () => {
   const { slug } = useParams();
@@ -69,53 +71,63 @@ const BlogPostPage = () => {
             })}
           </div>
         </div>
-        {post?.intro.map((intro, index) => (
-          <p key={index}>{intro}</p>
-        ))}
+
+        <div className="pb-5 xl:pb-6 xl:flex xl:gap-x-6">
+          <div>
+            {post?.intro.map((intro, index) => (
+              <p key={index}>{intro}</p>
+            ))}
+          </div>
+
+          <Image
+            src={`/images/blog_images/${setSlug(post!.title)}.jpg`}
+            width={500}
+            height={300}
+            alt={post!.title}
+            className="w-full lg:h-[30em] object-contain mx-auto object-center mt-4 xl:mt-0"
+          />
+        </div>
       </header>
 
       {/* Render Recursive List if it exists */}
-      {post?.list && (
-        <section className="py-4">
-          {post?.list.map((list, index) => (
-            <div key={index}>
-              <h2 className={!list.description ? "my-0" : ""}>
-                {list.title && list.title}
-              </h2>
-              <p>{list.description && list.description}</p>
+      {post?.list &&
+        post?.list.map((list, index) => (
+          <section className="pb-5" key={index}>
+            <h2 className={!list.description ? "my-0" : ""}>
+              {list.title && list.title}
+            </h2>
+            <p>{list.description && list.description}</p>
 
-              {list.list &&
-                list.list.map((subList, subIndex) => (
-                  <div key={subIndex}>
-                    {subList.title ? (
-                      <h3 className={!list.description ? "pt-2" : ""}>
-                        {subList.title}
-                      </h3>
-                    ) : null}{" "}
-                    <p>{subList.description && subList.description}</p>
-                    {subList.list &&
-                      subList.list.map((innerList, innerIndex) =>
-                        innerList.title ? (
-                          <div key={innerIndex}>
-                            <p>
-                              <strong>{innerList.title}:</strong>{" "}
-                              {innerList.description && innerList.description}
-                            </p>
-                          </div>
-                        ) : (
-                          <ul key={innerIndex}>
-                            <li>
-                              {innerList.description && innerList.description}
-                            </li>
-                          </ul>
-                        )
-                      )}
-                  </div>
-                ))}
-            </div>
-          ))}
-        </section>
-      )}
+            {list.list &&
+              list.list.map((subList, subIndex) => (
+                <div key={subIndex}>
+                  {subList.title ? (
+                    <h3 className={!list.description ? "pt-2" : ""}>
+                      {subList.title}
+                    </h3>
+                  ) : null}{" "}
+                  <p>{subList.description && subList.description}</p>
+                  {subList.list &&
+                    subList.list.map((innerList, innerIndex) =>
+                      innerList.title ? (
+                        <div key={innerIndex}>
+                          <p>
+                            <strong>{innerList.title}:</strong>{" "}
+                            {innerList.description && innerList.description}
+                          </p>
+                        </div>
+                      ) : (
+                        <ul key={innerIndex}>
+                          <li>
+                            {innerList.description && innerList.description}
+                          </li>
+                        </ul>
+                      )
+                    )}
+                </div>
+              ))}
+          </section>
+        ))}
 
       <section>
         <h2>Conclusion</h2>
