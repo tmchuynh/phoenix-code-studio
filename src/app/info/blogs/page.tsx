@@ -617,7 +617,7 @@ const BlogDisplayPage: FC = () => {
 
       {/* Displaying filtered blog cards dynamically */}
       <section className="my-8">
-        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
+        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-2 xl:grid-cols-3">
           {currentArticles.map((blog, index) => (
             <Card
               key={index}
