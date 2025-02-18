@@ -239,8 +239,11 @@ const ContactUsPage: FC = () => {
             {allServices.map(
               (service, index) =>
                 service.type && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pl-2">
-                    <div key={index} className="my-2">
+                  <div
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pl-2"
+                    key={index}
+                  >
+                    <div className="my-2">
                       <label className="inline-flex items-center text-lg font-semibold">
                         <BpCheckbox
                           // "expanded" or "checked" state based on expandedServices
