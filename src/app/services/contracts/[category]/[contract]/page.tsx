@@ -58,7 +58,8 @@ export default function CategoryPage() {
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <h1>
-        {contractDetail?.info.name && formatName(contractDetail?.info.name)}
+        {contractDetail?.info.name && formatName(contractDetail?.info.name)}{" "}
+        EXAMPLE
       </h1>
 
       <p className="mb-4">

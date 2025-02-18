@@ -57,11 +57,12 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Get Started with a Master Service Agreement",
+      intro:
+        "Ensure clear expectations and smooth operations for your long-term business relationships with a comprehensive Master Service Agreement.",
+      text: "Our MSA covers everything from scope of work and payment terms to intellectual property and confidentiality clauses. It sets the foundation for successful and secure collaboration between you and your service provider.",
+      button: "Download Master Service Agreement",
+      afterButtonText: "You’re one step closer to a solid partnership!",
     },
   },
   {
@@ -121,11 +122,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Create Your Privacy Policy Agreement",
+      intro:
+        "Protect your users' data and ensure compliance with privacy laws by implementing a solid Privacy Policy Agreement.",
+      text: "Our Privacy Policy Agreement outlines how your company collects, uses, and secures personal information, keeping both your business and users safe. It's a critical document to build trust and transparency with your audience.",
+      button: "Generate Privacy Policy Agreement",
+      afterButtonText:
+        "Your privacy policy is ready to help protect your business and users.",
     },
   },
   {
@@ -180,11 +183,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Create Your Service Agreement",
+      intro:
+        "Ensure a smooth working relationship with clear terms and conditions by setting up a Service Agreement.",
+      text: "Our Service Agreement defines the scope of work, timelines, payment terms, and expectations for both parties. It's an essential document to protect your interests and establish transparency with clients.",
+      button: "Generate Service Agreement",
+      afterButtonText:
+        "Your Service Agreement is ready to safeguard your business.",
     },
   },
   {
@@ -219,11 +224,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Protect Your Confidential Information",
+      intro:
+        "Keep your business secrets safe with a well-defined Non-Disclosure Agreement.",
+      text: "Our Non-Disclosure Agreement (NDA) helps you ensure that sensitive information remains confidential. Establish clear terms to protect your business, trade secrets, and intellectual property.",
+      button: "Create NDA",
+      afterButtonText:
+        "Your Non-Disclosure Agreement is now in place to protect your confidential information.",
     },
   },
   {
@@ -258,11 +265,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Safeguard Your Business Interests",
+      intro:
+        "Ensure your employees or contractors don't compete with your business after they leave.",
+      text: "Our Non-Compete Agreement helps protect your business from unfair competition by setting clear boundaries regarding post-employment activities. Secure your market position today.",
+      button: "Create Non-Compete Agreement",
+      afterButtonText:
+        "Your Non-Compete Agreement is ready to protect your business interests.",
     },
   },
   {
@@ -302,11 +311,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Define Your Contractor Relationship",
+      intro:
+        "Ensure clear expectations and responsibilities with your independent contractors.",
+      text: "Our Independent Contractor Agreement provides the legal framework for your working relationship with contractors, outlining roles, payment terms, and confidentiality provisions. Protect both parties and avoid misunderstandings.",
+      button: "Create Independent Contractor Agreement",
+      afterButtonText:
+        "Your Independent Contractor Agreement is ready to establish clear guidelines.",
     },
   },
   {
@@ -340,11 +351,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Secure Your Copyright and Licensing Rights",
+      intro:
+        "Protect your intellectual property with a clear copyright and licensing agreement.",
+      text: "Our Copyright and Licensing Agreement outlines how your copyrighted materials can be used, ensuring you retain ownership while granting the necessary rights to others. Set the terms, payment structure, and usage rights with clarity.",
+      button: "Create Copyright and Licensing Agreement",
+      afterButtonText:
+        "Your Copyright and Licensing Agreement is ready to protect your intellectual property.",
     },
   },
   {
@@ -384,11 +397,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Protect Your Trademark with a Clear Usage Agreement",
+      intro:
+        "Ensure proper use of your trademark with a solid Trademark Usage Agreement.",
+      text: "Our Trademark Usage Agreement helps you define the terms and conditions under which others can use your trademark, ensuring brand consistency and protecting your intellectual property rights. Set quality control standards, payment terms, and more.",
+      button: "Create Trademark Usage Agreement",
+      afterButtonText:
+        "Your Trademark Usage Agreement is now in place to safeguard your brand.",
     },
   },
   {
@@ -433,11 +448,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Start Earning with Our Affiliate and Referral Agreement",
+      intro:
+        "Establish clear terms for your affiliate and referral partnerships.",
+      text: "Our Affiliate and Referral Agreement helps you set transparent terms for commissions, tracking, and payment schedules, ensuring both you and your affiliates are aligned on expectations and responsibilities. Start building a successful partnership today.",
+      button: "Create Affiliate Agreement",
+      afterButtonText:
+        "Your Affiliate and Referral Agreement is now ready to support your growth.",
     },
   },
   {
@@ -502,11 +519,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Kickstart Your Web Development Project",
+      intro:
+        "Set clear expectations and ensure a smooth development process with our Web Development Agreement.",
+      text: "Our Web Development Agreement outlines the scope, timelines, responsibilities, and payment terms for the development of your website or web application. Ensure alignment and successful project completion from start to finish.",
+      button: "Start Your Web Development Agreement",
+      afterButtonText:
+        "Your Web Development Agreement is ready to guide your project to success.",
     },
   },
   {
@@ -576,11 +595,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Launch Your E-Commerce Platform",
+      intro:
+        "Get your custom e-commerce website or platform built with clarity and efficiency using our E-Commerce Development Agreement.",
+      text: "Our E-Commerce Development Agreement covers everything from project scope to timelines and payment terms, ensuring both parties are aligned for a successful e-commerce platform launch.",
+      button: "Begin Your E-Commerce Development Agreement",
+      afterButtonText:
+        "Your E-Commerce Development Agreement is ready to bring your online store to life.",
     },
   },
   {
@@ -635,11 +656,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Build Your Custom SPA",
+      intro:
+        "Our Single Page Application (SPA) Development Agreement ensures the design, development, and deployment of a seamless and high-performance web app tailored to your needs.",
+      text: "This agreement sets clear terms for the development process, including project scope, milestones, and payment terms, ensuring that both parties are aligned throughout the development of your SPA.",
+      button: "Start Your SPA Development Agreement",
+      afterButtonText:
+        "Your Single Page Application is just a few steps away from becoming reality!",
     },
   },
   {
@@ -689,11 +712,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Design Your Perfect Prototype",
+      intro:
+        "Our Wireframing and Prototyping Agreement outlines the essential steps for designing and developing interactive wireframes and prototypes for your digital product.",
+      text: "This agreement ensures that both parties clearly understand the project scope, timelines, and deliverables, from initial sketches to interactive prototypes that will bring your ideas to life.",
+      button: "Create Your Wireframe & Prototype",
+      afterButtonText:
+        "Let’s bring your vision to life with a clear, functional design prototype!",
     },
   },
   {
@@ -743,11 +768,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Optimize Your Database Performance",
+      intro:
+        "Our Database Management and Optimization Contract ensures your database infrastructure is organized, secure, and optimized for maximum performance.",
+      text: "This agreement defines the scope of work, including database management, performance enhancements, security measures, and ongoing support to meet your business needs.",
+      button: "Start Optimizing Your Database",
+      afterButtonText:
+        "We’ll help you maintain a high-performing and secure database system tailored to your business.",
     },
   },
   {
@@ -797,11 +824,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Ensure Smooth IT Operations",
+      intro:
+        "Our IT Support and Maintenance Agreement guarantees ongoing technical support, system updates, and troubleshooting for your business.",
+      text: "This agreement ensures your systems run smoothly with timely support and updates, including the resolution of technical issues and maintenance for long-term efficiency.",
+      button: "Get Started with IT Support",
+      afterButtonText:
+        "Our experts will ensure your systems are secure, up-to-date, and functioning at their best.",
     },
   },
   {
@@ -851,11 +880,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Boost Your Online Visibility",
+      intro:
+        "Our SEO Service Agreement outlines the steps we take to enhance your website’s search engine ranking and drive more traffic.",
+      text: "This agreement ensures that we implement tailored SEO strategies to improve your online presence, focusing on keyword optimization, content strategies, and performance tracking.",
+      button: "Start Optimizing Today",
+      afterButtonText:
+        "Let's work together to enhance your search rankings and attract more customers.",
     },
   },
   {
@@ -900,11 +931,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Create Compelling Content for Your Brand",
+      intro:
+        "Our Content Creation Agreement sets the framework for high-quality content tailored to your business goals.",
+      text: "From blog posts to social media content, we ensure that the content we create aligns with your brand’s voice and engages your audience.",
+      button: "Get Started with Content Creation",
+      afterButtonText:
+        "Let’s collaborate to create content that captivates and converts.",
     },
   },
   {
@@ -954,11 +987,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Tell Your Brand's Story with Impact",
+      intro:
+        "Our Brand Storytelling and Copywriting Agreement ensures your brand’s message resonates with your target audience.",
+      text: "From brand narratives to taglines, we craft compelling stories that build an emotional connection and drive engagement.",
+      button: "Start Crafting Your Brand Story",
+      afterButtonText:
+        "Let’s work together to develop copy that speaks to your audience and elevates your brand.",
     },
   },
   {
@@ -1003,11 +1038,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Boost Your Brand with Expert Marketing Strategy",
+      intro:
+        "Our Marketing Strategy and Consultation Agreement is designed to give your business a competitive edge with tailored marketing solutions.",
+      text: "From market analysis to campaign planning, we work with you to create a strategy that aligns with your business goals and drives measurable growth.",
+      button: "Start Your Marketing Journey",
+      afterButtonText:
+        "Together, we’ll develop strategies that enhance your brand's visibility and bring long-term success.",
     },
   },
   {
@@ -1052,11 +1089,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Elevate Your Technical Documentation",
+      intro:
+        "Our Technical Writing Agreement ensures that your complex concepts are communicated clearly, concisely, and effectively.",
+      text: "Whether you need manuals, guides, or API documentation, we specialize in creating user-friendly technical content that enhances user experience and understanding.",
+      button: "Get Started with Expert Technical Writing",
+      afterButtonText:
+        "Let’s work together to transform your technical information into accessible, professional documentation.",
     },
   },
   {
@@ -1101,11 +1140,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Transform Your Training Content",
+      intro:
+        "Our Training Materials and Course Development Agreement ensures that your training programs are designed to engage, educate, and empower.",
+      text: "We craft customized training materials and courses that align with your objectives, helping you deliver impactful learning experiences.",
+      button: "Start Creating Your Training Program",
+      afterButtonText:
+        "Let’s collaborate to build a tailored training solution that meets your organization's needs.",
     },
   },
   {
@@ -1150,11 +1191,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Create Clear, Effective Product Guides",
+      intro:
+        "Our Product Guide and Manual Agreement ensures that your product documentation is clear, detailed, and helpful for your users.",
+      text: "We develop comprehensive user guides, manuals, and FAQs that empower your customers to fully understand and use your products.",
+      button: "Get Started on Your Product Manual",
+      afterButtonText:
+        "Let's collaborate to create the perfect documentation for your products.",
     },
   },
   {
@@ -1199,11 +1242,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Ensure Transparent Payment Terms",
+      intro:
+        "Our Invoice Payment Terms Agreement helps you and your clients stay aligned on payment expectations and timelines.",
+      text: "Define clear payment schedules, penalties for late payments, and accepted payment methods to streamline your financial transactions.",
+      button: "Set Up Your Payment Terms",
+      afterButtonText:
+        "We'll help you create an agreement that ensures smooth and efficient payments for your business.",
     },
   },
   {
@@ -1243,11 +1288,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Secure Ongoing Services with a Retainer Agreement",
+      intro:
+        "Our Retainer Agreement helps establish a long-term, stable working relationship with clients, ensuring consistent work and payment.",
+      text: "Set clear expectations for ongoing services, including payment terms, service availability, and the scope of work, while maintaining a steady income stream for your business.",
+      button: "Create Your Retainer Agreement",
+      afterButtonText:
+        "Let's set up a framework for continuous collaboration and growth in your business.",
     },
   },
   {
@@ -1292,11 +1339,13 @@ export const contractExamples: SubItem[] = [
       },
     ],
     cta: {
-      title: "",
-      intro: "",
-      text: "",
-      button: "",
-      afterButtonText: "",
+      title: "Streamline Your Services with a Subscription Agreement",
+      intro:
+        "Our Subscription and Recurring Payment Agreement helps ensure consistent access to your services or products with recurring payments.",
+      text: "Clearly define your subscription plan, payment terms, cancellation policies, and obligations, making it easier for both you and your clients to manage ongoing services.",
+      button: "Set Up Your Subscription Agreement",
+      afterButtonText:
+        "Start offering your services with clear terms and secure recurring payments.",
     },
   },
 ];
