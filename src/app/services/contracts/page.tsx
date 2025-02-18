@@ -76,14 +76,21 @@ const ExampleContractsPage: FC = () => {
               if (details) {
                 return (
                   <div key={detailIndex}>
-                    <h3>{details.info.name}</h3>
+                    <h3>
+                      <a
+                        href={`/services/contracts/${details.category}/${details.name}`}
+                        className="underline underline-offset-4 hover:no-underline"
+                      >
+                        {details.info.name}
+                      </a>
+                    </h3>
                     <p>{details.info.details}</p>
                   </div>
                 );
               }
             })}
           </div>
-          <hr />
+          {contractIndex !== allContracts.length - 1 && <hr />}
         </section>
       ))}
     </main>
