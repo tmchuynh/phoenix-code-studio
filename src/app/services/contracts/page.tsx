@@ -16,7 +16,7 @@ const ExampleContractsPage: FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 350);
   }, [loading]);
 
   if (loading) {

@@ -20,7 +20,7 @@ const ApplicantSubmissionPage = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 400);
   }, [loading]);
 
   if (loading) {
@@ -85,7 +85,7 @@ const ApplicantSubmissionPage = () => {
       setResume(null);
       setCoverLetter(null);
       setPortfolioLinks(["", "", ""]);
-    }, 1500);
+    }, 350);
   };
 
   return (

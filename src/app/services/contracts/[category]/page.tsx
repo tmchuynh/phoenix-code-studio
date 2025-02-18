@@ -37,7 +37,7 @@ export default function CategoryPage() {
       } finally {
         setTimeout(() => {
           setLoading(false);
-        }, 1500);
+        }, 350);
       }
     }
 

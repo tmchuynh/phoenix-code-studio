@@ -14,7 +14,7 @@ const TestimonialsPage: FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 250);
   }, [loading]);
 
   if (loading) {

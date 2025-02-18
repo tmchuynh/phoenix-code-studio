@@ -148,7 +148,7 @@ const BlogDisplayPage: FC = () => {
           setSelectedTopics([]);
           setSelectedDates([]);
           setSelectedLength([]);
-        }, 1000);
+        }, 250);
       }
 
       // Sort original blogs

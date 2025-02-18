@@ -21,7 +21,7 @@ const ServicesPage: FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 400);
   }, [loading]);
 
   if (loading) {

@@ -21,7 +21,7 @@ const NotFound = () => {
         }
         return prev - 1;
       });
-    }, 1000);
+    }, 250);
 
     const redirectTimer = setTimeout(() => {
       router.push(`/`);

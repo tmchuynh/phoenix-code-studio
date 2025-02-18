@@ -41,7 +41,7 @@ export default function ServicePage() {
       } finally {
         setTimeout(() => {
           setLoading(false);
-        }, 1500);
+        }, 350);
       }
     }
 

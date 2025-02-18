@@ -38,7 +38,7 @@ const PaymentPlansPage: FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 400);
   }, [loading]);
 
   if (loading) {

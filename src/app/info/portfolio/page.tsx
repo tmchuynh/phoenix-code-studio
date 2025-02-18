@@ -118,7 +118,7 @@ const PastProjectsPage: FC = () => {
           setSelectedTechnologies([]);
           setSelectedLibraries([]);
           setSelectedTags([]);
-        }, 1000);
+        }, 250);
       }
       setFilteredProjects(pastProjects);
       setTimeout(() => setNoResults(false), 4000);
