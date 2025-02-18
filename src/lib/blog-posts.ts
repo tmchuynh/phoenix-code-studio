@@ -6821,7 +6821,7 @@ export const blogs: BlogPost[] = [
     title: "Understanding NPM: The Essential Tool for Node.js Development",
     author: "Tina Huynh",
     wordCount: 4176,
-    timeSpan: "lengthened",
+    timeSpan: "standard",
     time: "15m 11s",
     date: "February 15, 2025",
     excerpt:
