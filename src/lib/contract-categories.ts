@@ -1,4 +1,6 @@
-export const allContracts = [
+import { Category } from "./interfaces";
+
+export const allContracts: Category[] = [
   {
     name: "general-client-agreements",
     type: "generalClientAgreements",
@@ -17,7 +19,7 @@ export const allContracts = [
         "General Client Agreements (GCA) define the key terms and conditions that govern the relationship between a service provider and client, ensuring transparency and cooperation. They outline the scope of work, deliverables, timelines, and costs, while clarifying the client’s responsibility to provide necessary materials. By setting expectations upfront, the GCA minimizes misunderstandings, fosters trust, and creates a strong foundation for a successful partnership and smooth project completion.",
       intro:
         "General Client Agreements (GCA) outline the key terms and conditions that govern the relationship between a service provider and client, ensuring transparency and cooperation throughout the project. They define the scope of work, deliverables, timelines, and costs, while also clarifying the client’s responsibility to provide necessary materials and information for successful project completion. By establishing expectations upfront, the GCA minimizes misunderstandings and delays, helping both parties stay aligned. Ultimately, the GCA fosters trust and sets a strong foundation for a successful, collaborative partnership, ensuring a smooth path toward achieving the desired outcomes.",
-      subContracts: [
+      sub: [
         "master-service-agreement-msa",
         "privacy-policy-agreement",
         "service-agreement",
@@ -47,7 +49,7 @@ export const allContracts = [
         "Digital and Web Development Contracts (DWDC) outline the key terms, roles, expectations, and timelines between businesses and web development providers. By accepting, the business agrees to provide necessary resources and aligns on costs, payment schedules, and additional charges. This ensures smooth collaboration and timely project completion within scope and agreed standards.",
       intro:
         "Digital and Web Development Contracts (DWDC) establish a clear framework between businesses and web development providers, outlining key terms, responsibilities, service expectations, timelines, and communication to prevent misunderstandings. By accepting the DWDC, the business agrees to provide necessary resources, such as access to systems, content, and branding materials. The contract also addresses costs, payment schedules, and potential charges, ensuring both parties are aligned on financial commitments. This collaboration promotes a smooth workflow, mitigating risks and ensuring the project is completed on time and within scope, meeting agreed standards.",
-      subContracts: [
+      sub: [
         "web-development-agreement",
         "e-commerce-development-agreement",
         "single-page-application-spa-development-agreement",
@@ -75,7 +77,7 @@ export const allContracts = [
         "Content and Marketing Contracts (CMDC) define the terms for content creation and marketing services, clarifying roles, responsibilities, and expectations. They outline necessary resources, financial commitments, deliverables, and timelines, ensuring alignment on goals such as brand awareness, traffic, and engagement. The CMDC helps avoid scope creep, ensuring the provider delivers content that meets the client’s needs.",
       intro:
         "Content and Marketing Contracts (CMDC) are essential agreements that outline the terms for businesses hiring content creation and marketing services, ensuring a clear understanding of roles, responsibilities, and expectations. These contracts define the necessary resources the client must provide, such as branding guidelines and customer insights, to help create content that aligns with the business’s voice and values. The CMDC sets clear financial expectations, including service fees, payment schedules, and additional costs, while also defining specific deliverables such as blog posts, social media content, or email newsletters with set timelines. By specifying the type of content, distribution channels, and marketing goals, the CMDC minimizes the risk of scope creep and ensures that the service provider delivers precisely what the client needs to meet objectives like increasing brand awareness, driving traffic, or boosting engagement.",
-      subContracts: [
+      sub: [
         "seo-service-agreement",
         "content-creation-agreement",
         "brand-storytelling-and-copywriting",
@@ -103,7 +105,7 @@ export const allContracts = [
         "Payment and Sales Contracts (PS) outline key terms, responsibilities, and costs between businesses and service providers, ensuring transparency and mutual understanding. Businesses agree to provide necessary materials, financial commitments, and adhere to timelines and payment schedules. The PS fosters a smooth, efficient partnership, reducing risks and ensuring successful project completion.",
       intro:
         "The Payment and Sales Contracts (PS) establish clear expectations and mutual understanding between businesses and service providers in payment and sales services. These contracts outline key terms, responsibilities, and costs, ensuring transparency throughout the process. By accepting the PS, businesses commit to providing necessary materials, such as payment details and account access, to help the service provider efficiently execute the project. The PS also defines financial obligations, including service fees and potential additional costs, ensuring businesses are aware of their financial commitments upfront. With clear timelines, payment schedules, and service scope, the PS minimizes misunderstandings and keeps both parties aligned, promoting successful project completion. Ultimately, the PS fosters a transparent and efficient partnership, reducing risks and achieving desired outcomes.",
-      subContracts: [
+      sub: [
         "invoice-payment-terms-agreement",
         "retainer-agreement",
         "subscription-and-recurring-payment-agreement",

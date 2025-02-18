@@ -7,8 +7,7 @@ import { Category } from "@/lib/interfaces";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
 import { formatName, setSlug } from "@/lib/utils";
-import { useParams } from "next/navigation";
-import { useRouter } from "next/router";
+import { useParams, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { LuArrowBigRightDash } from "react-icons/lu";
 
@@ -51,10 +50,10 @@ export default function CategoryPage() {
 
   if (error) return <CannotFind />;
 
-  const navigateToDetails = (serviceName: string) => {
-    const formattedServiceName = setSlug(serviceName);
+  const navigateToDetails = (contractName: string) => {
+    const formattedContractName = setSlug(contractName);
 
-    router.push(`/services/${category}/${formattedServiceName}`);
+    router.push(`/services/contracts/${category}/${formattedContractName}`);
   };
 
   return (

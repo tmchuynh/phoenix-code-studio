@@ -3,10 +3,10 @@
 import CannotFind from "@/components/CannotFind";
 import LoadingIndicator from "@/components/Loading";
 import { Button } from "@/components/ui/button";
-import { Category, SubItem } from "@/lib/interfaces";
+import { SubItem } from "@/lib/interfaces";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
-import { formatName, setSlug } from "@/lib/utils";
+import { formatName } from "@/lib/utils";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
