@@ -3,9 +3,10 @@ export const blogs: BlogPost[] = [
   {
     title: "All About Google Analytics",
     author: "Tina Huynh",
-    date: "January 4, 2025",
     wordCount: 1339,
+    timeSpan: "short",
     time: "4m 52s",
+    date: "January 4, 2025",
     excerpt:
       "Google Analytics is an essential tool for tracking website performance and gaining valuable insights into user behavior. This post dives into what Google Analytics is, how to set it up, and how businesses can leverage its data to optimize their website and marketing efforts.",
     featured: true,
@@ -92,9 +93,10 @@ export const blogs: BlogPost[] = [
   {
     title: "Best Contactless Business Card Options",
     author: "Tina Huynh",
-    date: "April 22, 2022",
     wordCount: 2243,
+    timeSpan: "short",
     time: "8m 10s",
+    date: "April 22, 2022",
     excerpt:
       "Contactless business cards are modern, eco-friendly alternatives to traditional paper cards, offering a seamless way to share information digitally. Using technologies like NFC (Near Field Communication) and QR codes, they allow professionals to instantly exchange contact details with a simple tap or scan. Not only do they reduce paper waste, but they also provide a more convenient, customizable, and interactive networking experience.",
     featured: true,
@@ -348,6 +350,7 @@ export const blogs: BlogPost[] = [
     title: "Things to Consider When Looking For a Designer and/or Developer",
     author: "Tina Huynh",
     wordCount: 1410,
+    timeSpan: "short",
     time: "5m 8s",
     date: "February 1, 2025",
     excerpt:
@@ -456,6 +459,7 @@ export const blogs: BlogPost[] = [
       "Should The Customer Do Research? And Research What Before the Consultation?",
     author: "Tina Huynh",
     wordCount: 1141,
+    timeSpan: "short",
     time: "4m 9s",
     date: "January 2, 2025",
     excerpt:
@@ -548,6 +552,7 @@ export const blogs: BlogPost[] = [
     title: "Things To Tell Your Designer Before Starting A Project",
     author: "Tina Huynh",
     wordCount: 1216,
+    timeSpan: "short",
     time: "4m 25s",
     date: "January 2, 2025",
     excerpt:
@@ -640,6 +645,7 @@ export const blogs: BlogPost[] = [
     title: "What To Ask During A Consultation?",
     author: "Tina Huynh",
     wordCount: 1629,
+    timeSpan: "short",
     time: "5m 55s",
     date: "January 2, 2025",
     excerpt:
@@ -734,6 +740,7 @@ export const blogs: BlogPost[] = [
     title: "What is Web Design? A Comprehensive Guide",
     author: "Tina Huynh",
     wordCount: 1586,
+    timeSpan: "short",
     time: "5m 46s",
     date: "January 2, 2025",
     excerpt:
@@ -863,6 +870,7 @@ export const blogs: BlogPost[] = [
     title: "The Importance of User Experience in Web Design",
     author: "Tina Huynh",
     wordCount: 2650,
+    timeSpan: "medium",
     time: "9m 38s",
     date: "January 4, 2025",
     excerpt:
@@ -1063,6 +1071,7 @@ export const blogs: BlogPost[] = [
       "Making the Web Inclusive: How to Incorporate Accessibility into Web Design",
     author: "Tina Huynh",
     wordCount: 2843,
+    timeSpan: "medium",
     time: "10m 20s",
     date: "August 15, 2024",
     excerpt:
@@ -1219,6 +1228,7 @@ export const blogs: BlogPost[] = [
     title: "Understanding Blockchain Architecture",
     author: "Tina Huynh",
     wordCount: 3882,
+    timeSpan: "medium",
     time: "14m 7s",
     date: "August 15, 2024",
     excerpt:
@@ -1454,6 +1464,7 @@ export const blogs: BlogPost[] = [
     title: "Understanding GUI Architectures",
     author: "Tina Huynh",
     wordCount: 3588,
+    timeSpan: "medium",
     time: "13m 3s",
     date: "August 15, 2024",
     excerpt:
@@ -1661,6 +1672,7 @@ export const blogs: BlogPost[] = [
     title: "Books to Read as a Developer",
     author: "Tina Huynh",
     wordCount: 2600,
+    timeSpan: "medium",
     time: "9m 27s",
     date: "March 23, 2022",
     excerpt:
@@ -1881,6 +1893,7 @@ export const blogs: BlogPost[] = [
     title: "Who's the Better Hire? - Jack of All Trades OR Master of One",
     author: "Tina Huynh",
     wordCount: 1990,
+    timeSpan: "medium",
     time: "7m 14s",
     date: "April 22, 2022",
     excerpt:
@@ -1992,6 +2005,7 @@ export const blogs: BlogPost[] = [
     title: "Why Every Developer Should Write",
     author: "Tina Huynh",
     wordCount: 1113,
+    timeSpan: "short",
     time: "4m 3s",
     date: "May 22, 2023",
     excerpt:
@@ -2060,7 +2074,6 @@ export const blogs: BlogPost[] = [
                   "This allows us to stay updated with the current trends and new versions of existing technologies. By posting and writing about all these topics, your articles also become your own personal notes for every topic you want to go back to while giving back to the community and helping newer developers following in your footsteps. It's a win-win scenario!",
               },
             ],
-            description: "",
           },
         ],
       },
@@ -2093,6 +2106,7 @@ export const blogs: BlogPost[] = [
     title: "How Tailwind CSS Can Speed Up Your Development Process",
     author: "Tina Huynh",
     wordCount: 3733,
+    timeSpan: "medium",
     time: "13m 34s",
     date: "November 20, 2024",
     excerpt:
@@ -2395,6 +2409,7 @@ export const blogs: BlogPost[] = [
     title: "The Future of JavaScript Frameworks",
     author: "Tina Huynh",
     wordCount: 1479,
+    timeSpan: "short",
     time: "5m 23s",
     date: "March 23, 2022",
     excerpt:
@@ -2513,6 +2528,7 @@ export const blogs: BlogPost[] = [
     title: "Why Accessibility Matters in Web Development",
     author: "Tina Huynh",
     wordCount: 2809,
+    timeSpan: "medium",
     time: "10m 13s",
     date: "May 22, 2023",
     excerpt:
@@ -2725,6 +2741,7 @@ export const blogs: BlogPost[] = [
     title: "Decoding Blockchain: Exploring the World of Decentralized Systems",
     author: "Tina Huynh",
     wordCount: 2500,
+    timeSpan: "medium",
     time: "9m 5s",
     date: "May 22, 2023",
     excerpt:
@@ -2913,6 +2930,7 @@ export const blogs: BlogPost[] = [
       "Demystifying Data Science: Transforming Data into Actionable Insights",
     author: "Tina Huynh",
     wordCount: 6951,
+    timeSpan: "long",
     time: "25m 17s",
     date: "January 15, 2023",
     excerpt:
@@ -3403,6 +3421,7 @@ export const blogs: BlogPost[] = [
     title: "Revolutionizing Connectivity: Innovations in IoT Development",
     author: "Tina Huynh",
     wordCount: 5424,
+    timeSpan: "long",
     time: "19m 43s",
     date: "January 15, 2023",
     excerpt:
@@ -3817,6 +3836,7 @@ export const blogs: BlogPost[] = [
     title: "Creative Data Harvesting: The Wonders of Web Scraping",
     author: "Tina Huynh",
     wordCount: 3813,
+    timeSpan: "medium",
     time: "13m 52s",
     date: "March 21, 2022",
     excerpt:
@@ -4234,6 +4254,7 @@ export const blogs: BlogPost[] = [
     title: "Behind the Code: Insights into the World of Tech Startups",
     author: "Tina Huynh",
     wordCount: 7016,
+    timeSpan: "long",
     time: "25m 31s",
     date: "March 21, 2022",
     excerpt:
@@ -4944,6 +4965,7 @@ export const blogs: BlogPost[] = [
     title: "Navigating the Digital Revolution: Emerging Tech Trends",
     author: "Tina Huynh",
     wordCount: 1765,
+    timeSpan: "short",
     time: "6m 25s",
     date: "November 20, 2024",
     excerpt:
@@ -4996,7 +5018,6 @@ export const blogs: BlogPost[] = [
                   "Advancements in AI ethics and regulation are shaping responsible AI deployment.",
               },
             ],
-            description: "",
           },
           {
             title: "Blockchain Beyond Cryptocurrency",
@@ -5334,6 +5355,7 @@ export const blogs: BlogPost[] = [
     title: "Mastering User-Friendly Design: Gems of GUI Development",
     author: "Tina Huynh",
     wordCount: 2006,
+    timeSpan: "medium",
     time: "7m 17s",
     date: "March 23, 2022",
     excerpt:
@@ -5482,6 +5504,7 @@ export const blogs: BlogPost[] = [
     title: "From Startup Garage to Tech Giant: Stories of Tech Entrepreneurs",
     author: "Tina Huynh",
     wordCount: 2222,
+    timeSpan: "short",
     time: "8m 5s",
     date: "January 15, 2023",
     excerpt:
@@ -5728,6 +5751,7 @@ export const blogs: BlogPost[] = [
     title: "LLC vs S Corp vs C Corp: A Comprehensive Guide",
     author: "Tina Huynh",
     wordCount: 2024,
+    timeSpan: "medium",
     time: "7m 22s",
     date: "February 15, 2025",
     excerpt:

@@ -1,7 +1,7 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { cssUnit } from "./constants";
-import { LengthObject } from "./interfaces";
+import { BlogPost, LengthObject } from "./interfaces";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -222,4 +222,30 @@ export function decimalMinutesToMmSs(decimalMin: number): string {
   const mm = Math.floor(secs / 60);
   const ss = secs;
   return `${mm}:${ss.toString().padStart(2, "0")}`;
+}
+
+export function sortBlogsByDate(array: BlogPost[]): BlogPost[] {
+  const newArray = array.sort((a, b) => {
+    const dateA = new Date(formatDate(a.date));
+    const dateB = new Date(formatDate(b.date));
+
+    return compareDates([dateA, dateB]);
+  });
+
+  return newArray;
+}
+
+export function compareDates([dateA, dateB]: Date[]): number {
+  // Compare by year
+  if (dateA.getFullYear() !== dateB.getFullYear()) {
+    return dateB.getFullYear() - dateA.getFullYear();
+  }
+
+  // Compare by month (if years are the same)
+  if (dateA.getMonth() !== dateB.getMonth()) {
+    return dateA.getMonth() - dateB.getMonth();
+  }
+
+  // Compare by day (if both year and month are the same)
+  return dateA.getDate() - dateB.getDate();
 }

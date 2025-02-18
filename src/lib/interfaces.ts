@@ -161,8 +161,9 @@ export interface BlogPost {
   title: string;
   author: string;
   date: string;
-  wordCount?: number;
-  time?: string;
+  wordCount: number;
+  timeSpan: string;
+  time: string;
   excerpt: string;
   featured?: boolean;
   img: string;

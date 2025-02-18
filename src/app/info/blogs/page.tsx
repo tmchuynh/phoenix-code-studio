@@ -25,16 +25,25 @@ import {
 } from "@/components/ui/pagination";
 import useBetweenLargeAndXL from "@/lib/onlyLargerScreens";
 import useSmallScreen from "@/lib/useSmallScreen";
-import { formatDate, formatNumber, setSlug } from "@/lib/utils";
+import {
+  compareDates,
+  formatDate,
+  formatNumber,
+  parseReadingTimeToSeconds,
+  setSlug,
+  sortBlogsByDate,
+} from "@/lib/utils";
 import { ChevronsUpDown } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { FC, useEffect, useState, useCallback } from "react";
 import { blogs } from "@/lib/blog-posts";
+import { useTheme } from "next-themes";
 
 const BlogDisplayPage: FC = () => {
   const router = useRouter();
   const isSmallDevice = useSmallScreen();
   const isLargerScreen = useBetweenLargeAndXL();
+  const { theme } = useTheme();
 
   const [openCollapsible, setOpenCollapsible] = useState<string | null>(null);
 
@@ -42,6 +51,7 @@ const BlogDisplayPage: FC = () => {
   const [filteredBlogs, setFilteredBlogs] = useState(blogs);
   const [selectedDates, setSelectedDates] = useState<string[]>([]);
   const [selectedAuthors, setSelectedAuthors] = useState<string[]>([]);
+  const [selectedLength, setSelectedLength] = useState<string[]>([]);
   const [noResults, setNoResults] = useState(false);
   const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
   const [dropdownOpen, setDropdownOpen] = useState({
@@ -98,6 +108,18 @@ const BlogDisplayPage: FC = () => {
       filtered = filtered.filter((blog) => selectedDates.includes(blog.date));
     }
 
+    // Filter by reading time
+    if (selectedLength.length > 0) {
+      filtered = filtered
+        .filter((blog) => selectedLength.includes(blog.timeSpan))
+        .sort((a, b) => {
+          const aTime = parseReadingTimeToSeconds(a.time);
+          const bTime = parseReadingTimeToSeconds(b.time);
+
+          return aTime - bTime;
+        });
+    }
+
     // Filter by authors
     if (selectedAuthors.length > 0) {
       filtered = filtered.filter((blog) =>
@@ -122,58 +144,28 @@ const BlogDisplayPage: FC = () => {
         setTimeout(() => {
           setSelectedTopics([]);
           setSelectedDates([]);
+          setSelectedLength([]);
         }, 1000);
       }
 
       // Sort original blogs
-      setFilteredBlogs(
-        blogs.sort((a, b) => {
-          const dateA = new Date(formatDate(a.date));
-          const dateB = new Date(formatDate(b.date));
-
-          // Compare by year
-          if (dateA.getFullYear() !== dateB.getFullYear()) {
-            return dateB.getFullYear() - dateA.getFullYear();
-          }
-
-          // Compare by month (if years are the same)
-          if (dateA.getMonth() !== dateB.getMonth()) {
-            return dateA.getMonth() - dateB.getMonth();
-          }
-
-          // Compare by day (if both year and month are the same)
-          return dateA.getDate() - dateB.getDate();
-        })
-      );
+      setFilteredBlogs(sortBlogsByDate(blogs));
 
       setTimeout(() => setNoResults(false), 4000);
     } else {
       setNoResults(false);
-      // Sort filtered
-      setFilteredBlogs(
-        filtered.sort((a, b) => {
-          const dateA = new Date(formatDate(a.date));
-          const dateB = new Date(formatDate(b.date));
-
-          // Compare by year
-          if (dateA.getFullYear() !== dateB.getFullYear()) {
-            return dateB.getFullYear() - dateA.getFullYear();
-          }
-
-          // Compare by month (if years are the same)
-          if (dateA.getMonth() !== dateB.getMonth()) {
-            return dateA.getMonth() - dateB.getMonth();
-          }
-
-          // Compare by day (if both year and month are the same)
-          return dateA.getDate() - dateB.getDate();
-        })
-      );
+      if (selectedLength.length > 0) {
+        setFilteredBlogs(filtered);
+      } else {
+        // Sort filtered
+        setFilteredBlogs(sortBlogsByDate(filtered));
+      }
     }
   }, [
     blogs,
     selectedTopics,
     selectedDates,
+    selectedLength,
     selectedAuthors,
     searchQuery,
     filtersCleared,
@@ -182,29 +174,12 @@ const BlogDisplayPage: FC = () => {
   const clearFilters = (e?: string) => {
     setSelectedTopics([]);
     setSelectedDates([]);
+    setSelectedLength([]);
     setSelectedAuthors([]);
     setSearchQuery("");
     setOpenCollapsible(null);
     setNoResults(false);
-    setFilteredBlogs(
-      blogs.sort((a, b) => {
-        const dateA = new Date(formatDate(a.date));
-        const dateB = new Date(formatDate(b.date));
-
-        // Compare by year
-        if (dateA.getFullYear() !== dateB.getFullYear()) {
-          return dateB.getFullYear() - dateA.getFullYear();
-        }
-
-        // Compare by month (if years are the same)
-        if (dateA.getMonth() !== dateB.getMonth()) {
-          return dateA.getMonth() - dateB.getMonth();
-        }
-
-        // Compare by day (if both year and month are the same)
-        return dateA.getDate() - dateB.getDate();
-      })
-    );
+    setFilteredBlogs(sortBlogsByDate(blogs));
     if (!e) {
       setFiltersCleared(true);
       setTimeout(() => setFiltersCleared(false), 4000);
@@ -212,6 +187,7 @@ const BlogDisplayPage: FC = () => {
   };
 
   const dates = Array.from(new Set(blogs.map((blog) => blog.date)));
+  const readingLength = Array.from(new Set(blogs.map((blog) => blog.timeSpan)));
   // const authors = Array.from(new Set(blogs.map((blog) => blog.author)));
 
   const topicCounts: Record<string, number> = blogs.reduce((acc, blog) => {
@@ -223,6 +199,11 @@ const BlogDisplayPage: FC = () => {
 
   const dateCounts = dates.reduce((acc, date) => {
     acc[date] = blogs.filter((blog) => blog.date === date).length;
+    return acc;
+  }, {} as Record<string, number>);
+
+  const lengthCount = readingLength.reduce((acc, length) => {
+    acc[length] = blogs.filter((blog) => blog.timeSpan === length).length;
     return acc;
   }, {} as Record<string, number>);
 
@@ -282,6 +263,15 @@ const BlogDisplayPage: FC = () => {
     if (!selectedTopics.includes(topic)) {
       const updatedTopics = [...selectedTopics, topic];
       setSelectedTopics(updatedTopics);
+      handleFilter();
+    }
+  };
+
+  const handleReadingLengthClick = (length: string) => {
+    clearFilters("readingLength");
+    if (!selectedLength.includes(length)) {
+      const updatedLength = [length];
+      setSelectedLength(updatedLength);
       handleFilter();
     }
   };
@@ -384,17 +374,7 @@ const BlogDisplayPage: FC = () => {
                         const dateA = new Date(formatDate(a));
                         const dateB = new Date(formatDate(b));
 
-                        // Compare by year
-                        if (dateA.getFullYear() !== dateB.getFullYear()) {
-                          return dateA.getFullYear() - dateB.getFullYear();
-                        }
-
-                        // Compare by month (if years are the same)
-                        if (dateA.getMonth() !== dateB.getMonth()) {
-                          return dateA.getMonth() - dateB.getMonth();
-                        }
-
-                        return dateA.getDate() - dateB.getDate();
+                        return compareDates([dateA, dateB]);
                       })
                       .map((date) => (
                         <div key={date} className="flex items-center mr-1">
@@ -494,27 +474,33 @@ const BlogDisplayPage: FC = () => {
           />
         </section>
 
-        <section className="w-11/12 md:w-full mx-auto flex flex-row gap-10 justify-center md:justify-between ">
-          {/* Clear Filters Button */}
-          <Button
-            variant={"destructive"}
-            className="mt-9 md:my-5"
-            onClick={() => clearFilters()}
-            size={isSmallDevice ? "sm" : "default"}
-          >
-            Clear Filters
-          </Button>
+        {/* Reading Length Times */}
+        <section className="grid grid-cols-1 space-y-3 md:space-y-0 md:grid-cols-3 md:gap-2 lg:gap-4">
+          {readingLength.map((length, index) => (
+            <Button
+              variant={theme === "dark" ? "accent" : "outline"}
+              size={isSmallDevice ? "sm" : "default"}
+              className="capitalize"
+              key={index}
+              onClick={() => handleReadingLengthClick(length)}
+            >
+              {length} Articles{" "}
+              <small className="font-normal">({lengthCount[length]})</small>
+            </Button>
+          ))}
+        </section>
 
+        <section className="w-11/12 md:w-full mx-auto flex flex-col md:flex-row gap-2 justify-center md:justify-between">
           {/* Articles per page DropdownMenu */}
-          <section className="flex flex-col md:flex-row md:justify-end items-center">
+          <section className="flex flex-col md:justify-end items-center mt-4">
             <label htmlFor="articlesPerPage" className="mr-2">
               <p>Articles per page:</p>
             </label>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <button className="p-2 bg-muted text-sm md:text-md lg:text-lg rounded px-5">
+            <DropdownMenu className="w-full">
+              <DropdownMenuTrigger className="w-full">
+                <div className="p-2 bg-muted text-sm md:text-md lg:text-lg rounded px-5">
                   {articlesPerPage} articles per page
-                </button>
+                </div>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
                 <DropdownMenuItem
@@ -544,27 +530,44 @@ const BlogDisplayPage: FC = () => {
               </DropdownMenuContent>
             </DropdownMenu>
           </section>
+
+          {/* Clear Filters Button */}
+          <Button
+            variant={"destructive"}
+            className="md:mt-16"
+            onClick={() => clearFilters()}
+            size={isSmallDevice ? "sm" : "default"}
+          >
+            Clear Filters
+          </Button>
         </section>
 
-        <section className="h-12 p-1">
-          {/* Confirmation Text for Filters Cleared */}
-          <div className="my-4 text-center">
+        {filtersCleared && noResults && (
+          <section className="h-12 p-1">
+            {/* Confirmation Text for Filters Cleared */}
             {filtersCleared && (
-              <p className="text-destructive font-extrabold m-0 p-0">
-                Filters have been cleared successfully!
-              </p>
+              <div className="my-4 text-center">
+                {filtersCleared && (
+                  <p className="text-destructive font-extrabold m-0 p-0">
+                    Filters have been cleared successfully!
+                  </p>
+                )}
+              </div>
             )}
-          </div>
 
-          {/* No results warning */}
-          <div className="my-4 text-center">
+            {/* No results warning */}
             {noResults && (
-              <p className="text-destructive font-extrabold m-0 p-0">
-                No blogs match your selected filters. Filters have been cleared.
-              </p>
+              <div className="my-4 text-center">
+                {noResults && (
+                  <p className="text-destructive font-extrabold m-0 p-0">
+                    No blogs match your selected filters. Filters have been
+                    cleared.
+                  </p>
+                )}
+              </div>
             )}
-          </div>
-        </section>
+          </section>
+        )}
       </section>
 
       {/* Pagination controls */}
@@ -580,23 +583,25 @@ const BlogDisplayPage: FC = () => {
             currentPage === 1 ? "cursor-not-allowed" : "cursor-default"
           }
         />
-        <section className="text-center">
-          {indexOfLastArticle >= filteredBlogs.length && totalPages === 1 ? (
-            filteredBlogs.length === blogs.length ? (
-              <p>Showing all {filteredBlogs.length} blogs</p>
+        {!isSmallDevice && (
+          <section className="text-center">
+            {indexOfLastArticle >= filteredBlogs.length && totalPages === 1 ? (
+              filteredBlogs.length === blogs.length ? (
+                <p>Showing all {filteredBlogs.length} blogs</p>
+              ) : (
+                <p>Showing all {filteredBlogs.length} filtered blogs</p>
+              )
             ) : (
-              <p>Showing all {filteredBlogs.length} filtered blogs</p>
-            )
-          ) : (
-            <p>
-              Showing {indexOfFirstArticle + 1} to{" "}
-              {indexOfLastArticle > filteredBlogs.length
-                ? filteredBlogs.length
-                : indexOfLastArticle}{" "}
-              of {filteredBlogs.length} blogs
-            </p>
-          )}
-        </section>
+              <p>
+                Showing {indexOfFirstArticle + 1} to{" "}
+                {indexOfLastArticle > filteredBlogs.length
+                  ? filteredBlogs.length
+                  : indexOfLastArticle}{" "}
+                of {filteredBlogs.length} blogs
+              </p>
+            )}
+          </section>
+        )}
         <PaginationNext
           onClick={() => {
             if (currentPage < totalPages) {
@@ -612,7 +617,7 @@ const BlogDisplayPage: FC = () => {
 
       {/* Displaying filtered blog cards dynamically */}
       <section className="my-8">
-        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-2 xl:grid-cols-3 2xl:flex-row">
+        <div className="flex flex-col gap-8 lg:grid lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
           {currentArticles.map((blog, index) => (
             <Card
               key={index}
@@ -628,18 +633,18 @@ const BlogDisplayPage: FC = () => {
                     className="w-full h-36 rounded-t-md object-cover mx-auto mb-1"
                   />
                 )}
-                <div className="px-4 pb-2 flex flex-col justify-between h-[20em] md:h-[25em] 2xl:h-[35em] relative">
+                <div className="px-4 pb-2 flex flex-col justify-between h-fit md:h-[24rem] lg:h-[32em] 2xl:h-[35em] relative">
                   <div>
                     {blog.wordCount && blog.time && (
                       <div className="flex justify-between mx-1 pt-5">
                         {blog.wordCount && (
-                          <p className="mt-0 text-xs md:text-sm lg:text-md">
+                          <p className="mt-0 text-xs md:text-sm lg:text-md 2xl:text-lg">
                             <strong className="text-foreground">Words:</strong>{" "}
                             <span>{formatNumber(blog.wordCount)}</span>
                           </p>
                         )}
                         {blog.time && (
-                          <p className="mt-0 text-xs md:text-sm lg:text-md">
+                          <p className="mt-0 text-xs md:text-sm lg:text-md 2xl:text-lg">
                             <strong className="text-foreground">
                               Reading Time:
                             </strong>{" "}
@@ -649,17 +654,15 @@ const BlogDisplayPage: FC = () => {
                       </div>
                     )}
 
-                    <p className={!blog.wordCount && !blog.time ? "mt-4" : ""}>
-                      <Button
-                        variant="ghost"
-                        className="text-primary underline underline-offset-2 px-0 mb-2 font-SofiaSans tracking-wider font-bold hover:bg-transparent hover:text-primary hover:no-underline text-wrap text-left text-md md:text-lg lg:text-xl 2xl:text-2xl"
-                        onClick={() => {
-                          router.push(`/info/blogs/${setSlug(blog.title)}`);
-                        }}
-                      >
-                        {blog.title}
-                      </Button>
-                    </p>
+                    <Button
+                      variant="ghost"
+                      className="text-primary underline underline-offset-2 px-0 mb-2 font-SofiaSans tracking-wider font-bold hover:bg-transparent hover:text-primary hover:no-underline text-wrap text-left text-md md:text-2xl 2xl:text-3xl md:my-2 2xl:my-3"
+                      onClick={() => {
+                        router.push(`/info/blogs/${setSlug(blog.title)}`);
+                      }}
+                    >
+                      {blog.title}
+                    </Button>
 
                     <div>
                       <p className="mb-0 text-sm md:text-lg lg:text-lg">
@@ -672,18 +675,20 @@ const BlogDisplayPage: FC = () => {
                         </span>
                       </p>
                     </div>
-                    <p className="py-4">{blog.excerpt}</p>
+                    <p className="pb-4 md:text-[15px] lg:text-[18px] 2xl:text-[20px] leading-6">
+                      {blog.excerpt}
+                    </p>
                   </div>
 
                   {isSmallDevice ? null : isLargerScreen ? (
-                    <div className="mt-4 flex flex-col bottom-2 absolute md:text-md lg:text-lg">
+                    <div className="mt-4 flex flex-col bottom-2 absolute">
                       {blog.topics.length > 0 && (
                         <div className="mt-6">
                           {blog.topics.sort().map((topic, index) => (
                             <Badge
                               key={index}
                               variant={"secondary"}
-                              className="mr-2 cursor-pointer"
+                              className="mr-2 cursor-pointer xl:text-[15px] xl:leading-5"
                               onClick={() => handleTopicClick(topic)}
                             >
                               {topic}
@@ -693,14 +698,14 @@ const BlogDisplayPage: FC = () => {
                       )}
                     </div>
                   ) : (
-                    <div className="mt-4 absolute bottom-4 md:text-md lg:text-lg">
+                    <div className="mt-4 absolute bottom-4">
                       {blog.topics.length > 0 && (
                         <div className="mt-6 gap-2 flex flex-wrap">
                           {blog.topics.sort().map((topic, index) => (
                             <Badge
                               key={index}
                               variant={"secondary"}
-                              className="mr-2 cursor-pointer"
+                              className="mr-2 cursor-pointer md:text-sm md:leading-4 lg:text-[17px] lg:leading-5 2xl:text-[18px]"
                               onClick={() => handleTopicClick(topic)}
                             >
                               {topic}
@@ -730,23 +735,25 @@ const BlogDisplayPage: FC = () => {
             currentPage === 1 ? "cursor-not-allowed" : "cursor-default"
           }
         />
-        <section className="text-center">
-          {indexOfLastArticle >= filteredBlogs.length && totalPages === 1 ? (
-            filteredBlogs.length === blogs.length ? (
-              <p>Showing all {filteredBlogs.length} blogs</p>
+        {!isSmallDevice && (
+          <section className="text-center">
+            {indexOfLastArticle >= filteredBlogs.length && totalPages === 1 ? (
+              filteredBlogs.length === blogs.length ? (
+                <p>Showing all {filteredBlogs.length} blogs</p>
+              ) : (
+                <p>Showing all {filteredBlogs.length} filtered blogs</p>
+              )
             ) : (
-              <p>Showing all {filteredBlogs.length} filtered blogs</p>
-            )
-          ) : (
-            <p>
-              Showing {indexOfFirstArticle + 1} to{" "}
-              {indexOfLastArticle > filteredBlogs.length
-                ? filteredBlogs.length
-                : indexOfLastArticle}{" "}
-              of {filteredBlogs.length} blogs
-            </p>
-          )}
-        </section>
+              <p>
+                Showing {indexOfFirstArticle + 1} to{" "}
+                {indexOfLastArticle > filteredBlogs.length
+                  ? filteredBlogs.length
+                  : indexOfLastArticle}{" "}
+                of {filteredBlogs.length} blogs
+              </p>
+            )}
+          </section>
+        )}
         <PaginationNext
           onClick={() => {
             if (currentPage < totalPages) {
