@@ -1,6 +1,7 @@
 "use client";
 
 import { Category } from "@/lib/interfaces";
+import { subServiceDetails } from "@/lib/sub-services";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
 import { useParams, useRouter } from "next/navigation";
@@ -11,9 +12,11 @@ import CallToAction from "@/components/CallToAction";
 import { formatName, setSlug } from "@/lib/utils";
 import LoadingIndicator from "@/components/Loading";
 import CannotFind from "@/components/CannotFind";
+import { useTheme } from "next-themes";
 
 export default function CategoryPage() {
   const { category } = useParams() as { category: string };
+  const { theme } = useTheme();
   const isMediumScreen = useMediumScreen();
   const isSmallScreen = useSmallScreen();
   const router = useRouter();
@@ -74,30 +77,39 @@ export default function CategoryPage() {
       <h2>Discover What We Can Do For You</h2>
       <p>{service?.info.intro}</p>
 
-      {service?.info?.sub?.length ? (
-        service.info?.sub.map((sub, index) => (
-          <div className="py-1 flex" key={index}>
-            <p className="group flex items-center gap-5">
-              {sub
-                .split("-")
-                .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-                .join(" ")}{" "}
-              <span className="inline-block transition-transform duration-300 ease-in-out group-hover:translate-x-5 text-accent-2">
-                <LuArrowBigRightDash />
-              </span>
-              <Button
-                variant={"link"}
-                className="no-underline hover:underline"
-                onClick={() => navigateToDetails(sub)}
-              >
-                Learn More
-              </Button>
-            </p>
-          </div>
-        ))
-      ) : (
-        <p>No sub-services found.</p>
-      )}
+      <section>
+        {service?.info?.sub.map((sub, index) => {
+          const subServiceDetail = subServiceDetails.find(
+            (item) => item.name === sub
+          );
+
+          if (subServiceDetail && subServiceDetail.info.pricingTiers) {
+            return (
+              <div className="my-4 lg:flex lg:flex-col" key={index}>
+                <h3>Pricing for {formatName(subServiceDetail.name)}</h3>
+                <ul>
+                  {subServiceDetail.info.pricingTiers.map(
+                    (pricing, pricingIndex) => (
+                      <li key={pricingIndex}>
+                        <strong>{pricing.name}: </strong>
+                        {pricing.info}
+                      </li>
+                    )
+                  )}
+                </ul>
+                <Button
+                  className="no-underline hover:underline w-full md:w-1/2 lg:w-1/4 lg:self-end h-fit mt-3"
+                  variant={theme === "dark" ? "outline" : "accent"}
+                  onClick={() => navigateToDetails(sub)}
+                >
+                  Learn More
+                </Button>
+              </div>
+            );
+          }
+          return null;
+        })}
+      </section>
 
       <CallToAction />
     </main>

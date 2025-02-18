@@ -29,9 +29,7 @@ export default function ServicePage() {
 
     async function fetchServices() {
       try {
-        const response = await fetch(
-          `/api/services/contracts/${category}/${service}`
-        );
+        const response = await fetch(`/api/services/${category}/${service}`);
         if (!response.ok) {
           throw new Error("Services post not found");
         }
