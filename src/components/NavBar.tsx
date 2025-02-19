@@ -108,7 +108,7 @@ const NavBar = () => {
                     </small>
                   </MenubarItem>
                   {allContracts.map((contractCategory, categoryIndex) => (
-                    <MenubarSub key={categoryIndex}>
+                    <MenubarSub key={contractCategory.name}>
                       <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                         {contractCategory.title}
                       </MenubarSubTrigger>
@@ -472,7 +472,7 @@ const NavBar = () => {
                 Overview
               </MenubarItem>
               {allContracts.map((contractCategory, contractIndex) => (
-                <MenubarSub key={contractIndex}>
+                <MenubarSub key={contractCategory.name}>
                   <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                     {contractCategory.title}
                   </MenubarSubTrigger>
@@ -608,7 +608,7 @@ const NavBar = () => {
                   </MenubarItem>
                   {allContracts.map((contractCategory, contractIndex) => (
                     <MenubarItem
-                      key={contractIndex}
+                      key={contractCategory.name}
                       onClick={() => {
                         setIsMenuOpen(false);
                         router.push(
