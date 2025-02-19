@@ -28,10 +28,10 @@ import useSmallScreen from "@/lib/useSmallScreen";
 import {
   cn,
   formatNumber,
+  getDaySuffix,
   parseReadingTimeToSeconds,
   setSlug,
   sortBlogsByDate,
-  // sortBlogsByDate,
 } from "@/lib/utils";
 import { ChevronsUpDown } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -40,6 +40,17 @@ import { blogs } from "@/lib/blog-posts";
 import { useTheme } from "next-themes";
 import useMediumScreen from "@/lib/useMediumScreen";
 import { BlogPost } from "@/lib/interfaces";
+
+interface FilterState {
+  selectedYears: number[];
+  selectedMonths: number[];
+  selectedDays: number[];
+}
+
+interface MonthData {
+  month: number;
+  blogsForMonth: BlogPost[][]; // Group blog posts by day
+}
 
 const BlogDisplayPage: FC = () => {
   const router = useRouter();
@@ -59,6 +70,15 @@ const BlogDisplayPage: FC = () => {
 
   const [openYear, setOpenYear] = useState<number | null>(null);
   const [openMonth, setOpenMonth] = useState<number | null>(null);
+  const [selectedDays, setSelectedDays] = useState<string[]>([]);
+  const [selectedMonths, setSelectedMonths] = useState<string[]>([]);
+  const [selectedYears, setSelectedYears] = useState<string[]>([]);
+
+  const [filterState, setFilterState] = useState<FilterState>({
+    selectedYears: [],
+    selectedMonths: [],
+    selectedDays: [],
+  });
 
   const [dropdownOpen, setDropdownOpen] = useState({
     topic: false,
@@ -156,6 +176,29 @@ const BlogDisplayPage: FC = () => {
       );
     }
 
+    // Filter by selected years, months, and days
+    if (selectedYears.length > 0) {
+      filtered = filtered.filter((blog) =>
+        selectedYears.includes(String(blog.date.year))
+      );
+    }
+
+    if (selectedMonths.length > 0) {
+      filtered = filtered.filter((blog) =>
+        selectedMonths.includes(`${blog.date.year}-${blog.date.month}`)
+      );
+    }
+
+    // Filter by selected days
+    if (selectedDays.length > 0) {
+      filtered = filtered.filter((blog) =>
+        selectedDays.includes(
+          `${blog.date.year}-${blog.date.month}-${blog.date.day}`
+        )
+      );
+    }
+
+    // Handle no results
     if (filtered.length === 0) {
       if (filtersCleared) {
         setTimeout(() => setNoResults(true), 2500);
@@ -176,7 +219,7 @@ const BlogDisplayPage: FC = () => {
       if (selectedLength.length > 0) {
         setFilteredBlogs(filtered);
       } else {
-        // Sort filtered
+        // Sort filtered blogs
         setFilteredBlogs(sortBlogsByDate(filtered));
       }
     }
@@ -187,12 +230,18 @@ const BlogDisplayPage: FC = () => {
     selectedAuthors,
     searchQuery,
     filtersCleared,
+    selectedYears,
+    selectedMonths,
+    selectedDays,
   ]);
 
   const clearFilters = (e?: string) => {
     setSelectedTopics([]);
     setSelectedLength([]);
     setSelectedAuthors([]);
+    setSelectedDays([]);
+    setSelectedMonths([]);
+    setSelectedYears([]);
     setSearchQuery("");
     setOpenCollapsible(null);
     setNoResults(false);
@@ -205,8 +254,6 @@ const BlogDisplayPage: FC = () => {
 
   const readingLength = Array.from(new Set(blogs.map((blog) => blog.timeSpan)));
   const dateYears = Array.from(new Set(blogs.map((blog) => blog.date.year)));
-  const dateMonths = Array.from(new Set(blogs.map((blog) => blog.date.month)));
-  const dateDays = Array.from(new Set(blogs.map((blog) => blog.date.day)));
 
   // const authors = Array.from(new Set(blogs.map((blog) => blog.author)));
 
@@ -255,6 +302,21 @@ const BlogDisplayPage: FC = () => {
     handleOpen("topic");
   };
 
+  const handleDayCheckboxChange = (
+    day: number,
+    month: number,
+    year: number,
+    checked: boolean
+  ) => {
+    const dayString = `${year}-${month}-${day}`; // Use a "year-month-day" format for unique identification
+
+    if (checked) {
+      setSelectedDays((prev) => [...prev, dayString]); // Add the day to the selectedDays array
+    } else {
+      setSelectedDays((prev) => prev.filter((day) => day !== dayString)); // Remove the day if unchecked
+    }
+  };
+
   // const handleAuthorCheckboxChange = (author: string, checked: boolean) => {
   //   if (checked) {
   //     setSelectedAuthors((prevAuthors) => [...prevAuthors, author]);
@@ -265,6 +327,40 @@ const BlogDisplayPage: FC = () => {
   //   }
   //   handleOpen("author");
   // };
+
+  // Adjust the `handleCheckboxChange` function
+  const handleCheckboxChange = (
+    type: "day" | "month" | "year",
+    value: { year: number; month?: number; day?: number },
+    checked: boolean
+  ) => {
+    const day = value.day || 1; // Default to the 1st if no day provided
+    const month = value.month || 1; // Default to January if no month provided
+    const year = value.year;
+
+    if (type === "day") {
+      const dayKey = `${year}-${month}-${day}`;
+      // Handle the checkbox change for a specific day
+      if (checked) {
+        setSelectedDays([...selectedDays, dayKey]);
+      } else {
+        setSelectedDays(selectedDays.filter((d) => d !== dayKey));
+      }
+    } else if (type === "month") {
+      const monthKey = `${year}-${month}`;
+      if (checked) {
+        setSelectedMonths([...selectedMonths, monthKey]);
+      } else {
+        setSelectedMonths(selectedMonths.filter((d) => d !== monthKey));
+      }
+    } else if (type === "year") {
+      if (checked) {
+        setSelectedYears([...selectedYears, `${year}`]);
+      } else {
+        setSelectedYears(selectedYears.filter((d) => d !== `${year}`));
+      }
+    }
+  };
 
   const handleTopicClick = (topic: string) => {
     clearFilters("topic");
@@ -287,8 +383,8 @@ const BlogDisplayPage: FC = () => {
   function getBlogPostsByYearMonthDay(
     data: BlogPost[],
     year: number
-  ): BlogPost[][][] {
-    // Filter blog posts by the selected year
+  ): MonthData[] {
+    // Filter blog posts by year
     const filteredData = data.filter((item) => item.date.year === year);
 
     // Extract unique months (using a Set to avoid duplicates)
@@ -296,24 +392,30 @@ const BlogDisplayPage: FC = () => {
       ...new Set(filteredData.map((item) => item.date.month)),
     ];
 
-    // Group the filtered data by months and then by days
-    const groupedByMonthAndDay = uniqueMonths.map((month) => {
-      const filteredMonthData = filteredData.filter(
+    // Group the filtered data by unique months and then by days
+    const groupedByMonthAndDay: MonthData[] = uniqueMonths.map((month) => {
+      // Filter blogs for the given month
+      const blogsForMonth = filteredData.filter(
         (item) => item.date.month === month
       );
 
-      // Extract unique days for the current month
+      // Group by day within the selected month
+      const groupedByDay: BlogPost[][] = [];
+
       const uniqueDays = [
-        ...new Set(filteredMonthData.map((item) => item.date.day)),
+        ...new Set(blogsForMonth.map((item) => item.date.day)),
       ];
 
-      // Group by days within the month
-      return uniqueDays.map((day) =>
-        filteredMonthData.filter((item) => item.date.day === day)
-      );
+      uniqueDays.forEach((day) => {
+        const blogsForDay = blogsForMonth.filter(
+          (item) => item.date.day === day
+        );
+        groupedByDay.push(blogsForDay); // Add the grouped day blogs
+      });
+
+      return { month, blogsForMonth: groupedByDay }; // Return grouped data
     });
 
-    console.log(groupedByMonthAndDay);
     return groupedByMonthAndDay;
   }
 
@@ -407,6 +509,7 @@ const BlogDisplayPage: FC = () => {
                     </div>
                   </CollapsibleTrigger>
                 </div>
+
                 <CollapsibleContent className="space-y-2 ml-5">
                   {dateYears.map((year, yearIndex) => {
                     // Use the getBlogPostsByYearMonthDay function to group blog posts by year, month, and day
@@ -442,9 +545,27 @@ const BlogDisplayPage: FC = () => {
                           </div>
 
                           <CollapsibleContent className="space-y-2 ml-5">
+                            {/* "Select All Days in Year" Checkbox */}
+                            <div className="flex items-center">
+                              <BpCheckbox
+                                checked={selectedYears.includes(`${year}`)}
+                                onChange={(e) =>
+                                  handleCheckboxChange(
+                                    "year",
+                                    { year },
+                                    e.target.checked
+                                  )
+                                }
+                              />
+                              <label htmlFor="select-all-year" className="ml-2">
+                                <p>Select All Days in {year}</p>
+                              </label>
+                            </div>
+
                             {/* Iterate over each month and day */}
-                            {groupedByMonthAndDay.map(
-                              (monthData, monthIndex) => {
+                            {groupedByMonthAndDay
+                              .sort((a, b) => a.month - b.month)
+                              .map((monthData, monthIndex) => {
                                 const monthNames = [
                                   "January",
                                   "February",
@@ -460,14 +581,18 @@ const BlogDisplayPage: FC = () => {
                                   "December",
                                 ];
 
+                                const sortedDays = monthData.blogsForMonth.sort(
+                                  (a, b) => a[0]?.date.day - b[0]?.date.day
+                                );
+
                                 return (
                                   <Collapsible
-                                    key={monthIndex} // Unique key for each month
-                                    open={openMonth === monthIndex}
+                                    key={monthIndex}
+                                    open={openMonth === monthData.month}
                                     onOpenChange={() =>
                                       handleCollapsibleChange(
                                         "month",
-                                        monthIndex
+                                        monthData.month
                                       )
                                     }
                                     className="w-full space-y-2"
@@ -480,7 +605,9 @@ const BlogDisplayPage: FC = () => {
                                             htmlFor="topic"
                                             className="ml-2 text-lg w-full"
                                           >
-                                            <p>{monthNames[monthIndex]}</p>
+                                            <p>
+                                              {monthNames[monthData.month - 1]}
+                                            </p>
                                           </label>
                                           <span className="sr-only">
                                             Toggle
@@ -490,33 +617,70 @@ const BlogDisplayPage: FC = () => {
                                     </div>
 
                                     <CollapsibleContent className="space-y-2 ml-5">
-                                      {/* Sort the dayData by day in chronological order */}
-                                      {monthData
-                                        .sort(
-                                          (a, b) =>
-                                            a[0]?.date.day - b[0]?.date.day
-                                        ) // Sort by day
-                                        .map((dayData, dayIndex) => {
-                                          return (
-                                            <div
-                                              key={dayIndex}
-                                              className="flex items-center mr-1"
+                                      {/* "Select All Days in Month" Checkbox */}
+                                      <div className="flex items-center">
+                                        <BpCheckbox
+                                          checked={selectedMonths.includes(
+                                            `${year}-${monthIndex + 1}`
+                                          )}
+                                          onChange={(e) =>
+                                            handleCheckboxChange(
+                                              "month",
+                                              { year, month: monthIndex + 1 },
+                                              e.target.checked
+                                            )
+                                          }
+                                        />
+                                        <label
+                                          htmlFor="select-all-month"
+                                          className="ml-2"
+                                        >
+                                          <p>
+                                            Select All Days in{" "}
+                                            {monthNames[monthIndex]}
+                                          </p>
+                                        </label>
+                                      </div>
+
+                                      {/* Iterate over days within each month */}
+                                      {sortedDays.map((dayData, dayIndex) => {
+                                        const day = dayData[0]?.date.day;
+                                        const suffix = getDaySuffix(day);
+
+                                        return (
+                                          <div
+                                            key={dayIndex}
+                                            className="flex items-center mr-1"
+                                          >
+                                            <BpCheckbox
+                                              checked={selectedDays.includes(
+                                                `${year}-${monthData.month}-${day}`
+                                              )}
+                                              onChange={(e) =>
+                                                handleDayCheckboxChange(
+                                                  day,
+                                                  monthData.month,
+                                                  year,
+                                                  e.target.checked
+                                                )
+                                              }
+                                            />
+                                            <label
+                                              htmlFor={dayData[0]?.title}
+                                              className="ml-2"
                                             >
-                                              <BpCheckbox />
-                                              <label
-                                                htmlFor={dayData[0]?.title}
-                                                className="ml-2"
-                                              >
-                                                <p>{dayData[0]?.date.day}</p>
-                                              </label>
-                                            </div>
-                                          );
-                                        })}
+                                              <p>
+                                                {day}
+                                                <span>{suffix}</span>
+                                              </p>
+                                            </label>
+                                          </div>
+                                        );
+                                      })}
                                     </CollapsibleContent>
                                   </Collapsible>
                                 );
-                              }
-                            )}
+                              })}
                           </CollapsibleContent>
                         </Collapsible>
                       );
