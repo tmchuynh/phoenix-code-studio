@@ -253,3 +253,25 @@ export function compareDates([dateA, dateB]: Date[]): number {
   // Compare by day (if both year and month are the same)
   return dateB.getDate() - dateA.getDate(); // Sort by most recent day first
 }
+
+export function getDaySuffix(day: number): string {
+  // Get the last digit of the day to determine the suffix
+  const lastDigit = day % 10;
+
+  // Handle special cases for 11, 12, 13
+  if (day >= 11 && day <= 13) {
+    return "th";
+  }
+
+  // Return the correct suffix based on the last digit
+  switch (lastDigit) {
+    case 1:
+      return "st";
+    case 2:
+      return "nd";
+    case 3:
+      return "rd";
+    default:
+      return "th";
+  }
+}
