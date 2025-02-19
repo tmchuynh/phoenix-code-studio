@@ -39,21 +39,6 @@ export const about: Menu[] = [
   },
 ];
 
-export const services: Menu[] = [
-  {
-    title: "Contract Templates & Examples",
-    href: "/services/contracts",
-    description:
-      "Browse our comprehensive contract templates designed to meet various business needs.",
-  },
-  {
-    title: "Pricing Plans & Service Tiers",
-    href: "/services/pricing",
-    description:
-      "Compare our pricing options and service tiers to find the best fit for your budget and requirements.",
-  },
-];
-
 export const serviceCategories: Menu[] = [
   {
     title: "Overview",
