@@ -338,8 +338,10 @@ const BlogDisplayPage: FC = () => {
     const month = value.month || 1; // Default to January if no month provided
     const year = value.year;
 
+    const dayKey = `${year}-${month}-${day}`;
+    const monthKey = `${year}-${month}`;
+
     if (type === "day") {
-      const dayKey = `${year}-${month}-${day}`;
       // Handle the checkbox change for a specific day
       if (checked) {
         setSelectedDays([...selectedDays, dayKey]);
@@ -347,15 +349,21 @@ const BlogDisplayPage: FC = () => {
         setSelectedDays(selectedDays.filter((d) => d !== dayKey));
       }
     } else if (type === "month") {
-      const monthKey = `${year}-${month}`;
       if (checked) {
         setSelectedMonths([...selectedMonths, monthKey]);
+        setSelectedDays(
+          selectedDays.filter((d) => !d.startsWith(`${monthKey}-`))
+        );
       } else {
         setSelectedMonths(selectedMonths.filter((d) => d !== monthKey));
       }
     } else if (type === "year") {
       if (checked) {
         setSelectedYears([...selectedYears, `${year}`]);
+        setSelectedMonths(
+          selectedMonths.filter((d) => !d.startsWith(`${year}-`))
+        );
+        setSelectedDays(selectedDays.filter((d) => !d.startsWith(`${year}-`)));
       } else {
         setSelectedYears(selectedYears.filter((d) => d !== `${year}`));
       }
@@ -555,6 +563,7 @@ const BlogDisplayPage: FC = () => {
                           {/* "Select All Days in Year" Checkbox */}
                           <div className="flex items-center">
                             <BpCheckbox
+                              id={`ALL-${year}`}
                               checked={selectedYears.includes(`${year}`)}
                               onChange={(e) =>
                                 handleCheckboxChange(
@@ -626,6 +635,7 @@ const BlogDisplayPage: FC = () => {
                                   {/* "Select All Days in Month" Checkbox */}
                                   <div className="flex items-center">
                                     <BpCheckbox
+                                      id={`ALL-${year}-${monthData.month}`}
                                       checked={selectedMonths.includes(
                                         `${year}-${monthData.month}`
                                       )}
@@ -657,6 +667,7 @@ const BlogDisplayPage: FC = () => {
                                           className="flex items-center mr-1"
                                         >
                                           <BpCheckbox
+                                            id={`${year}-${monthData.month}`}
                                             checked={selectedDays.includes(
                                               `${year}-${monthData.month}-${day}`
                                             )}
