@@ -39,6 +39,7 @@ import { FC, useEffect, useState, useCallback } from "react";
 import { blogs } from "@/lib/blog-posts";
 import { useTheme } from "next-themes";
 import useMediumScreen from "@/lib/useMediumScreen";
+import { BlogPost } from "@/lib/interfaces";
 
 const BlogDisplayPage: FC = () => {
   const router = useRouter();
@@ -55,9 +56,15 @@ const BlogDisplayPage: FC = () => {
   const [selectedLength, setSelectedLength] = useState<string[]>([]);
   const [noResults, setNoResults] = useState(false);
   const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
+
+  const [openYear, setOpenYear] = useState<number | null>(null);
+  const [openMonth, setOpenMonth] = useState<number | null>(null);
+
   const [dropdownOpen, setDropdownOpen] = useState({
     topic: false,
     date: false,
+    year: false,
+    month: false,
     author: false,
   });
   const [filtersCleared, setFiltersCleared] = useState(false);
@@ -89,9 +96,26 @@ const BlogDisplayPage: FC = () => {
 
   // Manage which collapsible is open
   const handleCollapsibleChange = (
-    collapsible: "topic" | "date" | "author"
+    collapsible: "topic" | "date" | "author" | "month" | "year",
+    value: number | null = null
   ) => {
-    setOpenCollapsible(openCollapsible === collapsible ? null : collapsible); // Toggle the collapsible or close it
+    switch (collapsible) {
+      case "year":
+        setOpenYear(openYear === value ? null : value); // Toggle the year collapsible
+        break;
+      case "month":
+        setOpenMonth(openMonth === value ? null : value); // Toggle the month collapsible
+        break;
+      case "date":
+      case "author":
+      case "topic":
+        setOpenCollapsible(
+          openCollapsible === collapsible ? null : collapsible
+        ); // Toggle for other collapsibles
+        break;
+      default:
+        break;
+    }
   };
 
   const handleFilter = useCallback(() => {
@@ -180,6 +204,9 @@ const BlogDisplayPage: FC = () => {
   };
 
   const readingLength = Array.from(new Set(blogs.map((blog) => blog.timeSpan)));
+  const dateYears = Array.from(new Set(blogs.map((blog) => blog.date.year)));
+  const dateMonths = Array.from(new Set(blogs.map((blog) => blog.date.month)));
+  const dateDays = Array.from(new Set(blogs.map((blog) => blog.date.day)));
 
   // const authors = Array.from(new Set(blogs.map((blog) => blog.author)));
 
@@ -210,7 +237,9 @@ const BlogDisplayPage: FC = () => {
     handleFilter();
   }, [handleFilter]);
 
-  function handleOpen(dropdown: "topic" | "date" | "author") {
+  function handleOpen(
+    dropdown: "topic" | "date" | "author" | "year" | "month"
+  ) {
     setDropdownOpen({
       ...dropdownOpen,
       [dropdown]: !dropdownOpen[dropdown],
@@ -254,6 +283,39 @@ const BlogDisplayPage: FC = () => {
       handleFilter();
     }
   };
+
+  function getBlogPostsByYearMonthDay(
+    data: BlogPost[],
+    year: number
+  ): BlogPost[][][] {
+    // Filter blog posts by the selected year
+    const filteredData = data.filter((item) => item.date.year === year);
+
+    // Extract unique months (using a Set to avoid duplicates)
+    const uniqueMonths = [
+      ...new Set(filteredData.map((item) => item.date.month)),
+    ];
+
+    // Group the filtered data by months and then by days
+    const groupedByMonthAndDay = uniqueMonths.map((month) => {
+      const filteredMonthData = filteredData.filter(
+        (item) => item.date.month === month
+      );
+
+      // Extract unique days for the current month
+      const uniqueDays = [
+        ...new Set(filteredMonthData.map((item) => item.date.day)),
+      ];
+
+      // Group by days within the month
+      return uniqueDays.map((day) =>
+        filteredMonthData.filter((item) => item.date.day === day)
+      );
+    });
+
+    console.log(groupedByMonthAndDay);
+    return groupedByMonthAndDay;
+  }
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
@@ -345,7 +407,124 @@ const BlogDisplayPage: FC = () => {
                     </div>
                   </CollapsibleTrigger>
                 </div>
-                <CollapsibleContent className="space-y-2 ml-5"></CollapsibleContent>
+                <CollapsibleContent className="space-y-2 ml-5">
+                  {dateYears.map((year, yearIndex) => {
+                    // Use the getBlogPostsByYearMonthDay function to group blog posts by year, month, and day
+                    const groupedByMonthAndDay = getBlogPostsByYearMonthDay(
+                      blogs,
+                      year
+                    );
+
+                    // Check if there are any blog posts for that year
+                    if (groupedByMonthAndDay.length > 0) {
+                      return (
+                        <Collapsible
+                          key={yearIndex} // Unique key for each year
+                          open={openYear === year}
+                          onOpenChange={() =>
+                            handleCollapsibleChange("year", year)
+                          }
+                          className="w-full space-y-2"
+                        >
+                          <div className="flex items-center justify-between space-x-4">
+                            <CollapsibleTrigger asChild>
+                              <div className="flex items-center w-full">
+                                <ChevronsUpDown className="h-4 w-4" />
+                                <label
+                                  htmlFor="topic"
+                                  className="ml-2 text-lg w-full"
+                                >
+                                  <p>{year}</p>
+                                </label>
+                                <span className="sr-only">Toggle</span>
+                              </div>
+                            </CollapsibleTrigger>
+                          </div>
+
+                          <CollapsibleContent className="space-y-2 ml-5">
+                            {/* Iterate over each month and day */}
+                            {groupedByMonthAndDay.map(
+                              (monthData, monthIndex) => {
+                                const monthNames = [
+                                  "January",
+                                  "February",
+                                  "March",
+                                  "April",
+                                  "May",
+                                  "June",
+                                  "July",
+                                  "August",
+                                  "September",
+                                  "October",
+                                  "November",
+                                  "December",
+                                ];
+
+                                return (
+                                  <Collapsible
+                                    key={monthIndex} // Unique key for each month
+                                    open={openMonth === monthIndex}
+                                    onOpenChange={() =>
+                                      handleCollapsibleChange(
+                                        "month",
+                                        monthIndex
+                                      )
+                                    }
+                                    className="w-full space-y-2"
+                                  >
+                                    <div className="flex items-center justify-between space-x-4">
+                                      <CollapsibleTrigger asChild>
+                                        <div className="flex items-center w-full">
+                                          <ChevronsUpDown className="h-4 w-4" />
+                                          <label
+                                            htmlFor="topic"
+                                            className="ml-2 text-lg w-full"
+                                          >
+                                            <p>{monthNames[monthIndex]}</p>
+                                          </label>
+                                          <span className="sr-only">
+                                            Toggle
+                                          </span>
+                                        </div>
+                                      </CollapsibleTrigger>
+                                    </div>
+
+                                    <CollapsibleContent className="space-y-2 ml-5">
+                                      {/* Sort the dayData by day in chronological order */}
+                                      {monthData
+                                        .sort(
+                                          (a, b) =>
+                                            a[0]?.date.day - b[0]?.date.day
+                                        ) // Sort by day
+                                        .map((dayData, dayIndex) => {
+                                          return (
+                                            <div
+                                              key={dayIndex}
+                                              className="flex items-center mr-1"
+                                            >
+                                              <BpCheckbox />
+                                              <label
+                                                htmlFor={dayData[0]?.title}
+                                                className="ml-2"
+                                              >
+                                                <p>{dayData[0]?.date.day}</p>
+                                              </label>
+                                            </div>
+                                          );
+                                        })}
+                                    </CollapsibleContent>
+                                  </Collapsible>
+                                );
+                              }
+                            )}
+                          </CollapsibleContent>
+                        </Collapsible>
+                      );
+                    }
+
+                    return null; // Return null if no blog posts exist for that year
+                  })}
+                </CollapsibleContent>
               </Collapsible>
             </div>
 
