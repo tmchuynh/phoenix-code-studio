@@ -58,24 +58,6 @@ const ContactUsPage: FC = () => {
     }));
   };
 
-  // Handle checking/unchecking a specific service
-  function handleServiceSelect(
-    e: React.ChangeEvent<HTMLInputElement>,
-    serviceType: ServiceTypeKeys
-  ) {
-    const { value, checked } = e.target;
-    setFormData((prevState) => {
-      const updatedServices = checked
-        ? [...prevState[serviceType], value]
-        : prevState[serviceType].filter((service) => service !== value);
-
-      return {
-        ...prevState,
-        [serviceType]: updatedServices,
-      };
-    });
-  }
-
   const handleMainServiceCheck = (
     e: React.ChangeEvent<HTMLInputElement>,
     serviceType: string | ""
