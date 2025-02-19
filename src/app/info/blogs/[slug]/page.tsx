@@ -72,11 +72,26 @@ const BlogPostPage = () => {
           </div>
         </div>
 
-        <div className="pb-5 xl:pb-6 xl:flex xl:gap-x-6">
-          <div>
-            {post?.intro.map((intro, index) => (
-              <p key={index}>{intro}</p>
-            ))}
+        <div className="flex flex-col-reverse md:flex-col xl:flex-row xl:pb-6 xl:gap-x-6 md:pb-5">
+          <div className="xl:flex xl:flex-col xl:justify-between">
+            <div>
+              {post?.intro.map((intro, index) => (
+                <p key={index}>{intro}</p>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap gap-7 mb-3 md:mb-0 md:mt-5 lg:mb-3">
+              {post?.icons.map((icon, index) => (
+                <Image
+                  src={`/images/blog_icons/${icon}`}
+                  width={500}
+                  height={500}
+                  key={index}
+                  alt={`${icon[index]}-${index}`}
+                  className="w-10 md:w-20 lg:w-16 2xl:w-16 2xl:ml-[3em] mx-auto"
+                />
+              ))}
+            </div>
           </div>
 
           <Image
@@ -84,7 +99,7 @@ const BlogPostPage = () => {
             width={500}
             height={300}
             alt={post!.title}
-            className="w-full lg:h-[30em] object-contain mx-auto object-center mt-4 xl:mt-0"
+            className="w-full lg:h-[30em] object-contain mx-auto object-center mb-2 md:mt-4 xl:mt-0"
           />
         </div>
       </header>
