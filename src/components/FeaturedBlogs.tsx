@@ -95,7 +95,9 @@ const FeaturedBlogs = () => {
                 {blog.title}
               </h3>
               <div>
-                <h5 className="text-center text-md">{blog.date}</h5>
+                <h5 className="text-center text-md">
+                  {blog.date.month}/{blog.date.day}/{blog.date.year}
+                </h5>
                 <p className="text-pretty mt-4">
                   {isSmallScreen
                     ? `${blog.excerpt.substring(0, 60)}...`
