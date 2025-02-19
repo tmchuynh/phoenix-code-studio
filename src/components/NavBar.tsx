@@ -23,11 +23,9 @@ import { capitalize } from "@/lib/utils";
 import { subServiceDetails } from "@/lib/sub-services";
 import { allContracts } from "@/lib/contract-categories";
 import { contractExamples } from "@/lib/sub-contracts";
-
 const NavBar = () => {
   const router = useRouter();
   const [_, setIsMenuOpen] = useState(false);
-
   return (
     <>
       <Menubar className="lg:hidden xl:flex h-full justify-between hidden mb-10 w-11/12 mx-auto">
@@ -37,7 +35,10 @@ const NavBar = () => {
         <div className="flex items-center cursor-pointer xl:space-x-5 2xl:space-x-10">
           <MenubarMenu>
             <a
-              onClick={() => router.push("/")}
+              onClick={() => {
+                setIsMenuOpen(false);
+                router.push("/");
+              }}
               className="text-sm md:text-md lg:text-xl mx-4 hover:text-primary"
             >
               Home
@@ -48,7 +49,10 @@ const NavBar = () => {
               {about.map((about, index) => (
                 <a
                   key={index}
-                  onClick={() => router.push(about.href)}
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    router.push(about.href);
+                  }}
                   className="text-sm md:text-md lg:text-xl hover:text-primary"
                 >
                   {about.title}
@@ -70,7 +74,10 @@ const NavBar = () => {
                   {serviceCategories.map((service, index) => (
                     <MenubarItem
                       key={index}
-                      onClick={() => router.push(service.href)}
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        router.push(service.href);
+                      }}
                       className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72 rounded-lg"
                     >
                       <p className="text-tertiary font-semibold mb-0">
@@ -81,100 +88,124 @@ const NavBar = () => {
                   ))}
                 </MenubarSubContent>
               </MenubarSub>
-                <MenubarSub>
-                  <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
-                    Contract Templates & Examples
-                  </MenubarSubTrigger>
-                  <MenubarSubContent className="mx-4">
-                    <MenubarItem
-                      onClick={() => router.push("/services/contracts")}
-                      className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-96 rounded-lg"
-                    >
-                      <p className="text-tertiary font-semibold mb-0">
-                        Overview
-                      </p>
-                      <small>
-                        Explore our selection of contract templates and
-                        examples, designed to suit a variety of business needs
-                        and requirements.
-                      </small>
-                    </MenubarItem>
-                    {allContracts.map((contractCategory, categoryIndex) => (
-                      <MenubarSub key={categoryIndex}>
-                        <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
-                          {contractCategory.title}
-                        </MenubarSubTrigger>
-                        <MenubarSubContent className="mx-4 grid grid-cols-2">
-                          {contractCategory.info.sub.map(
-                            (contract, contractIndex) => {
-                              const contractDetail = contractExamples.find(
-                                (item) => item.name === contract
+              <MenubarSub>
+                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                  Contract Templates & Examples
+                </MenubarSubTrigger>
+                <MenubarSubContent className="mx-4">
+                  <MenubarItem
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      router.push("/services/contracts");
+                    }}
+                    className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-96 rounded-lg"
+                  >
+                    <p className="text-tertiary font-semibold mb-0">Overview</p>
+                    <small>
+                      Explore our selection of contract templates and examples,
+                      designed to suit a variety of business needs and
+                      requirements.
+                    </small>
+                  </MenubarItem>
+                  {allContracts.map((contractCategory, categoryIndex) => (
+                    <MenubarSub key={categoryIndex}>
+                      <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                        {contractCategory.title}
+                      </MenubarSubTrigger>
+                      <MenubarSubContent className="mx-4 grid grid-cols-2">
+                        <MenubarItem
+                          key={categoryIndex}
+                          onClick={() => {
+                            {
+                              setIsMenuOpen(false);
+                              router.push(
+                                `/services/contracts/${contractCategory.name}`
                               );
-
-                              if (contractDetail) {
-                                return (
-                <MenubarItem
+                            }
+                          }}
+                          className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col justify-center w-72"
+                        >
+                          <p className="text-tertiary font-semibold mb-0">
+                            Overview
+                          </p>
+                        </MenubarItem>
+                        {contractCategory.info.sub.map(
+                          (contract, contractIndex) => {
+                            const contractDetail = contractExamples.find(
+                              (item) => item.name === contract
+                            );
+                            if (contractDetail) {
+                              return (
+                                <>
+                                  <MenubarItem
                                     key={contractIndex}
                                     onClick={() => {
-                                      router.push(
-                                        `/services/${contractDetail.category}/${contractDetail.name}`
-                                      );
+                                      {
+                                        setIsMenuOpen(false);
+                                        router.push(
+                                          `/services/contracts/${contractDetail.category}/${contractDetail.name}`
+                                        );
+                                      }
                                     }}
                                     className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col justify-center w-72"
-                >
+                                  >
                                     <p className="text-tertiary font-semibold mb-0">
                                       {contractDetail.info?.title ||
                                         contractDetail.info?.name}
                                     </p>
-                </MenubarItem>
-                                );
-                              }
+                                  </MenubarItem>
+                                </>
+                              );
                             }
-                          )}
-                        </MenubarSubContent>
-                      </MenubarSub>
-                    ))}
-                  </MenubarSubContent>
-                </MenubarSub>
+                          }
+                        )}
+                      </MenubarSubContent>
+                    </MenubarSub>
+                  ))}
+                </MenubarSubContent>
+              </MenubarSub>
               <MenubarSub>
                 <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                   Flexible Payment Plans
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4 grid grid-cols-3 gap-2">
                   <MenubarItem
-                    onClick={() =>
-                      router.push("/services/pricing/payment-plans")
-                    }
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      router.push("/services/pricing/payment-plans");
+                    }}
                     className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72 rounded-lg"
                   >
-                      <p className="text-tertiary font-semibold mb-0">
-                        Overview
-                      </p>
-                      <small>
-                        Browse through our variety of payment plans and choose
-                        the one that best aligns with your needs and budget.
-                      </small>
-                    </MenubarItem>
-                    <MenubarItem
-                      onClick={() => router.push("/services/pricing")}
-                      className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72 rounded-lg"
-                    >
-                      <p className="text-tertiary font-semibold mb-0">
-                        Service Tiers & Pricing
-                      </p>
+                    <p className="text-tertiary font-semibold mb-0">Overview</p>
                     <small>
-                        Compare our pricing options and service tiers to find
-                        the best fit for your budget and requirements.
+                      Browse through our variety of payment plans and choose the
+                      one that best aligns with your needs and budget.
+                    </small>
+                  </MenubarItem>
+                  <MenubarItem
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      router.push("/services/pricing");
+                    }}
+                    className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72 rounded-lg"
+                  >
+                    <p className="text-tertiary font-semibold mb-0">
+                      Service Tiers & Pricing
+                    </p>
+                    <small>
+                      Compare our pricing options and service tiers to find the
+                      best fit for your budget and requirements.
                     </small>
                   </MenubarItem>
                   {paymentPlans.map((plan, index) => (
                     <MenubarItem
                       key={index}
-                      onClick={() =>
+                      onClick={() => {
+                        setIsMenuOpen(false);
                         router.push(
                           `/services/pricing/payment-plans/${plan.name}`
-                        )
-                      }
+                        );
+                      }}
                       className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72 rounded-lg"
                     >
                       <p className="text-tertiary font-semibold mb-0">
@@ -191,14 +222,24 @@ const NavBar = () => {
                   serviceCategory.name === "seo-optimized-content-creation"
                     ? "SEO Optimized Content Creation"
                     : capitalize(serviceCategory.name);
-
                 return (
                   <MenubarSub key={serviceIndex}>
                     <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                       {triggerLabel}
                     </MenubarSubTrigger>
-
                     <MenubarSubContent className="mx-4 grid grid-cols-3 gap-2">
+                      <MenubarItem
+                        key={serviceIndex}
+                        onClick={() => {
+                          setIsMenuOpen(false);
+                          router.push(`/services/${serviceCategory.name}`);
+                        }}
+                        className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72"
+                      >
+                        <p className="text-tertiary font-semibold mb-0">
+                          {serviceCategory.short || serviceCategory.title}
+                        </p>
+                      </MenubarItem>
                       {serviceCategory.info.sub.map(
                         (subServiceName, subIndex) => {
                           const subServiceData = subServiceDetails.find(
@@ -206,19 +247,20 @@ const NavBar = () => {
                               detail.name === subServiceName &&
                               detail.category === serviceCategory.name
                           );
-
                           // 2) Return null if no match
                           if (!subServiceData) {
                             return null;
                           }
-
                           return (
                             <MenubarItem
                               key={subIndex}
                               onClick={() => {
-                                router.push(
-                                  `/services/${subServiceData.category}/${subServiceData.name}`
-                                );
+                                {
+                                  setIsMenuOpen(false);
+                                  router.push(
+                                    `/services/${subServiceData.category}/${subServiceData.name}`
+                                  );
+                                }
                               }}
                               className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72"
                             >
@@ -242,7 +284,10 @@ const NavBar = () => {
           </MenubarMenu>
           <MenubarMenu>
             <a
-              onClick={() => router.push("/contact-us")}
+              onClick={() => {
+                setIsMenuOpen(false);
+                router.push("/contact-us");
+              }}
               className="text-sm md:text-md lg:text-xl mx-4 hover:text-primary"
             >
               Contact Us
@@ -251,15 +296,17 @@ const NavBar = () => {
           <ModeButton />
         </div>
       </Menubar>
-
-      <Menubar className="md:flex xl:hidden h-full justify-between hidden mb-10 w-11/12 mx-auto">
+      <Menubar className="lg:flex xl:hidden h-full justify-between hidden mb-10 w-11/12 mx-auto">
         <MenubarMenu>
           <span className="px-3">Phoenix Code Studio</span>
         </MenubarMenu>
         <div className="flex items-center cursor-pointer">
           <MenubarMenu>
             <a
-              onClick={() => router.push("/")}
+              onClick={() => {
+                setIsMenuOpen(false);
+                router.push("/");
+              }}
               className="text-sm md:text-md lg:text-xl mx-4 hover:text-primary"
             >
               Home
@@ -274,7 +321,10 @@ const NavBar = () => {
               {about.map((service, index) => (
                 <MenubarItem
                   key={index}
-                  onClick={() => router.push(service.href)}
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    router.push(service.href);
+                  }}
                   className="text-sm md:text-md lg:text-xl cursor-pointer"
                 >
                   {service.title}
@@ -287,7 +337,7 @@ const NavBar = () => {
               Services
               <FaChevronDown className="ml-3" />
             </MenubarTrigger>
-              <MenubarContent className="hidden md:block mt-3 w-11/12 -ml-8">
+            <MenubarContent className="hidden md:block mt-3 w-11/12 -ml-8">
               <MenubarSub>
                 <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                   Digital Services
@@ -296,7 +346,10 @@ const NavBar = () => {
                   {serviceCategories.map((service, index) => (
                     <MenubarItem
                       key={index}
-                      onClick={() => router.push(service.href)}
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        router.push(service.href);
+                      }}
                       className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
                     >
                       {service.title}
@@ -309,28 +362,33 @@ const NavBar = () => {
                   Flexible Payment Plans
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4">
+                  <MenubarItem
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      router.push("/services/pricing/payment-plans");
+                    }}
+                    className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                  >
+                    Overview
+                  </MenubarItem>
+                  <MenubarItem
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      router.push("/services/pricing");
+                    }}
+                    className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                  >
+                    Service Tiers & Pricing
+                  </MenubarItem>
+                  {paymentPlans.map((plan, index) => (
                     <MenubarItem
-                      onClick={() =>
-                        router.push("/services/pricing/payment-plans")
-                      }
-                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
-                    >
-                      Overview
-                    </MenubarItem>
-                    <MenubarItem
-                      onClick={() => router.push("/services/pricing")}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
-                    >
-                      Service Tiers & Pricing
-                    </MenubarItem>
-                    {paymentPlans.map((plan, index) => (
-                      <MenubarItem
                       key={index}
-                      onClick={() =>
+                      onClick={() => {
+                        setIsMenuOpen(false);
                         router.push(
                           `/services/pricing/payment-plans/${plan.name}`
-                        )
-                      }
+                        );
+                      }}
                       className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
                     >
                       {plan.title}
@@ -344,14 +402,22 @@ const NavBar = () => {
                   serviceCategory.name === "seo-optimized-content-creation"
                     ? "SEO Optimized Content Creation"
                     : capitalize(serviceCategory.name);
-
                 return (
                   <MenubarSub key={serviceIndex}>
                     <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                       {triggerLabel}
                     </MenubarSubTrigger>
-
-                      <MenubarSubContent className="mx-4">
+                    <MenubarSubContent className="mx-4">
+                      <MenubarItem
+                        key={serviceIndex}
+                        onClick={() => {
+                          setIsMenuOpen(false);
+                          router.push(`/services/${serviceCategory.name}`);
+                        }}
+                        className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                      >
+                        Overview
+                      </MenubarItem>
                       {serviceCategory.info.sub.map(
                         (subServiceName, subIndex) => {
                           const subServiceData = subServiceDetails.find(
@@ -359,25 +425,28 @@ const NavBar = () => {
                               detail.name === subServiceName &&
                               detail.category === serviceCategory.name
                           );
-
                           // 2) Return null if no match
                           if (!subServiceData) {
                             return null;
                           }
-
                           return (
-                            <MenubarItem
-                              key={subIndex}
-                              onClick={() => {
-                                router.push(
-                                  `/services/${subServiceData.category}/${subServiceData.name}`
-                                );
-                              }}
+                            <>
+                              <MenubarItem
+                                key={subIndex}
+                                onClick={() => {
+                                  {
+                                    setIsMenuOpen(false);
+                                    router.push(
+                                      `/services/${subServiceData.category}/${subServiceData.name}`
+                                    );
+                                  }
+                                }}
                                 className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
-                            >
+                              >
                                 {subServiceData.info?.title ||
                                   subServiceData.info?.name}
-                            </MenubarItem>
+                              </MenubarItem>
+                            </>
                           );
                         }
                       )}
@@ -387,55 +456,73 @@ const NavBar = () => {
               })}
             </MenubarContent>
           </MenubarMenu>
-            <MenubarMenu>
-              <MenubarTrigger className="text-sm md:text-md lg:text-xl cursor-pointer">
-                Contract Templates
-                <FaChevronDown className="ml-3" />
-              </MenubarTrigger>
-              <MenubarContent className="hidden md:block mt-3 w-11/12 -ml-8">
-                <MenubarItem
-                  onClick={() => router.push("/services/contracts")}
-                  className="text-sm md:text-md lg:text-xl cursor-pointer"
-                >
-                  Overview
-                </MenubarItem>
-                {allContracts.map((contractCategory, contractIndex) => (
-                  <MenubarSub key={contractIndex}>
-                    <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
-                      {contractCategory.title}
-                    </MenubarSubTrigger>
-                    <MenubarSubContent className="mx-4">
-                      {contractCategory.info.sub.map(
-                        (contractDetail, detailIndex) => {
-                          const details = contractExamples.find(
-                            (item) => item.name === contractDetail
+          <MenubarMenu>
+            <MenubarTrigger className="text-sm md:text-md lg:text-xl cursor-pointer">
+              Contract Templates
+              <FaChevronDown className="ml-3" />
+            </MenubarTrigger>
+            <MenubarContent className="hidden md:block mt-3 w-11/12 -ml-8">
+              <MenubarItem
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  router.push("/services/contracts");
+                }}
+                className="text-sm md:text-md lg:text-xl cursor-pointer"
+              >
+                Overview
+              </MenubarItem>
+              {allContracts.map((contractCategory, contractIndex) => (
+                <MenubarSub key={contractIndex}>
+                  <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                    {contractCategory.title}
+                  </MenubarSubTrigger>
+                  <MenubarSubContent className="mx-4">
+                    <MenubarItem
+                      key={contractIndex}
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        router.push(
+                          `/services/contracts/${contractCategory.name}`
+                        );
+                      }}
+                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                    >
+                      {contractCategory.short}s Overview
+                    </MenubarItem>
+                    {contractCategory.info.sub.map(
+                      (contractDetail, detailIndex) => {
+                        const details = contractExamples.find(
+                          (item) => item.name === contractDetail
+                        );
+                        if (details) {
+                          return (
+                            <MenubarItem
+                              key={detailIndex}
+                              onClick={() => {
+                                setIsMenuOpen(false);
+                                router.push(
+                                  `/services/contracts/${contractCategory.name}/${details.name}`
+                                );
+                              }}
+                              className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                            >
+                              {details.info.title}
+                            </MenubarItem>
                           );
-
-                          if (details) {
-                            return (
-                              <MenubarItem
-                                key={detailIndex}
-                                onClick={() =>
-                                  router.push(
-                                    `/contract-templates/${details.name}`
-                                  )
-                                }
-                                className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
-                              >
-                                {details.info.title}
-                              </MenubarItem>
-                            );
-                          }
                         }
-                      )}
-                    </MenubarSubContent>
-                  </MenubarSub>
-                ))}
-              </MenubarContent>
-            </MenubarMenu>
+                      }
+                    )}
+                  </MenubarSubContent>
+                </MenubarSub>
+              ))}
+            </MenubarContent>
+          </MenubarMenu>
           <MenubarMenu>
             <a
-              onClick={() => router.push("/contact-us")}
+              onClick={() => {
+                setIsMenuOpen(false);
+                router.push("/contact-us");
+              }}
               className="text-sm md:text-md lg:text-xl mx-4 hover:text-primary"
             >
               Contact Us
@@ -444,7 +531,208 @@ const NavBar = () => {
           <ModeButton />
         </div>
       </Menubar>
-
+      <Menubar className="md:flex lg:hidden h-full justify-between hidden mb-10 w-11/12 mx-auto">
+        <MenubarMenu>
+          <span className="px-3">Phoenix Code Studio</span>
+        </MenubarMenu>
+        <div className="flex items-center cursor-pointer">
+          <MenubarMenu>
+            <a
+              onClick={() => {
+                setIsMenuOpen(false);
+                router.push("/");
+              }}
+              className="text-sm md:text-md lg:text-xl mx-4 hover:text-primary"
+            >
+              Home
+            </a>
+          </MenubarMenu>
+          <MenubarMenu>
+            <MenubarTrigger className="text-sm md:text-md lg:text-xl cursor-pointer">
+              About Us
+              <FaChevronDown className="ml-3" />
+            </MenubarTrigger>
+            <MenubarContent className="hidden md:block mt-3">
+              {about.map((service, index) => (
+                <MenubarItem
+                  key={index}
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    router.push(service.href);
+                  }}
+                  className="text-sm md:text-md lg:text-xl cursor-pointer"
+                >
+                  {service.title}
+                </MenubarItem>
+              ))}
+            </MenubarContent>
+          </MenubarMenu>
+          <MenubarMenu>
+            <MenubarTrigger className="text-sm md:text-md lg:text-xl cursor-pointer">
+              Services
+              <FaChevronDown className="ml-3" />
+            </MenubarTrigger>
+            <MenubarContent className="hidden md:block mt-3 w-11/12 -ml-8">
+              <MenubarSub>
+                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                  Digital Services
+                </MenubarSubTrigger>
+                <MenubarSubContent className="mx-4">
+                  {serviceCategories.map((service, index) => (
+                    <MenubarItem
+                      key={index}
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        router.push(service.href);
+                      }}
+                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                    >
+                      {service.title}
+                    </MenubarItem>
+                  ))}
+                </MenubarSubContent>
+              </MenubarSub>
+              <MenubarSub>
+                <MenubarSubTrigger>
+                  Contract Templates & Examples
+                </MenubarSubTrigger>
+                <MenubarSubContent className="mx-4">
+                  <MenubarItem
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      router.push("/services/contracts");
+                    }}
+                    className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                  >
+                    Overview
+                  </MenubarItem>
+                  {allContracts.map((contractCategory, contractIndex) => (
+                    <MenubarItem
+                      key={contractIndex}
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        router.push(
+                          `/services/contracts/${contractCategory.name}`
+                        );
+                      }}
+                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                    >
+                      {contractCategory.title}
+                    </MenubarItem>
+                  ))}
+                </MenubarSubContent>
+              </MenubarSub>
+              <MenubarSub>
+                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                  Flexible Payment Plans
+                </MenubarSubTrigger>
+                <MenubarSubContent className="mx-4">
+                  <MenubarItem
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      router.push("/services/pricing/payment-plans");
+                    }}
+                    className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                  >
+                    Overview
+                  </MenubarItem>
+                  <MenubarItem
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      router.push("/services/pricing");
+                    }}
+                    className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                  >
+                    Service Tiers & Pricing
+                  </MenubarItem>
+                  {paymentPlans.map((plan, index) => (
+                    <MenubarItem
+                      key={index}
+                      onClick={() => {
+                        setIsMenuOpen(false);
+                        router.push(
+                          `/services/pricing/payment-plans/${plan.name}`
+                        );
+                      }}
+                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                    >
+                      {plan.title}
+                    </MenubarItem>
+                  ))}
+                </MenubarSubContent>
+              </MenubarSub>
+              <MenubarSeparator />
+              {allServices.map((serviceCategory, serviceIndex) => {
+                const triggerLabel =
+                  serviceCategory.name === "seo-optimized-content-creation"
+                    ? "SEO Optimized Content Creation"
+                    : capitalize(serviceCategory.name);
+                return (
+                  <MenubarSub key={serviceIndex}>
+                    <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                      {triggerLabel}
+                    </MenubarSubTrigger>
+                    <MenubarSubContent className="mx-4">
+                      <MenubarItem
+                        key={serviceIndex}
+                        onClick={() => {
+                          setIsMenuOpen(false);
+                          router.push(`/services/${serviceCategory.name}`);
+                        }}
+                        className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                      >
+                        Overview
+                      </MenubarItem>
+                      {serviceCategory.info.sub.map(
+                        (subServiceName, subIndex) => {
+                          const subServiceData = subServiceDetails.find(
+                            (detail) =>
+                              detail.name === subServiceName &&
+                              detail.category === serviceCategory.name
+                          );
+                          // 2) Return null if no match
+                          if (!subServiceData) {
+                            return null;
+                          }
+                          return (
+                            <>
+                              <MenubarItem
+                                key={subIndex}
+                                onClick={() => {
+                                  setIsMenuOpen(false);
+                                  router.push(
+                                    `/services/${subServiceData.category}/${subServiceData.name}`
+                                  );
+                                }}
+                                className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                              >
+                                {subServiceData.info?.title ||
+                                  subServiceData.info?.name}
+                              </MenubarItem>
+                            </>
+                          );
+                        }
+                      )}
+                    </MenubarSubContent>
+                  </MenubarSub>
+                );
+              })}
+            </MenubarContent>
+          </MenubarMenu>
+          <MenubarMenu>
+            <a
+              onClick={() => {
+                setIsMenuOpen(false);
+                router.push("/contact-us");
+              }}
+              className="text-sm md:text-md lg:text-xl mx-4 hover:text-primary"
+            >
+              Contact Us
+            </a>
+          </MenubarMenu>
+          <ModeButton />
+        </div>
+      </Menubar>
       <Popover>
         <PopoverTrigger
           asChild
@@ -465,8 +753,11 @@ const NavBar = () => {
             <div className="flex flex-col space-y-2">
               <MenubarMenu>
                 <a
-                  onClick={() => router.push("/")}
-                  className="text-sm md:text-md lg:text-xl pl-3 mb-2.5"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    router.push("/");
+                  }}
+                  className="text-sm md:text-md lg:text-xl pl-3 mb-2.5 h-fit"
                 >
                   Home
                 </a>
@@ -477,10 +768,10 @@ const NavBar = () => {
                     <a
                       key={index}
                       onClick={() => {
-                        router.push(about.href);
                         setIsMenuOpen(false);
+                        router.push(about.href);
                       }}
-                      className="text-sm md:text-md lg:text-xl"
+                      className="text-sm md:text-md lg:text-xl h-fit"
                     >
                       {about.title}
                     </a>
@@ -496,9 +787,10 @@ const NavBar = () => {
                   {serviceCategories.map((services, index) => (
                     <MenubarItem
                       key={index}
+                      className="h-fit"
                       onClick={() => {
-                        router.push(services.href);
                         setIsMenuOpen(false);
+                        router.push(services.href);
                       }}
                     >
                       {services.title}
@@ -507,35 +799,37 @@ const NavBar = () => {
                 </MenubarContent>
               </MenubarMenu>
               <MenubarMenu>
-                  <MenubarTrigger className="flex justify-between w-full">
-                    Flexible Payment Plans
-                    <FaChevronDown />
-                  </MenubarTrigger>
-                  <MenubarContent className="block md:hidden ml-9 -mt-2">
+                <MenubarTrigger className="flex justify-between w-full">
+                  Flexible Payment Plans
+                  <FaChevronDown />
+                </MenubarTrigger>
+                <MenubarContent className="block md:hidden ml-9 -mt-2">
+                  <MenubarItem
+                    className="h-fit"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      router.push("/services/pricing/payment-plans");
+                    }}
+                  >
+                    Overview
+                  </MenubarItem>
+                  <MenubarItem
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      router.push("/services/pricing");
+                    }}
+                  >
+                    Service Tiers & Pricing
+                  </MenubarItem>
+                  {paymentPlans.map((plan, index) => (
                     <MenubarItem
-                      onClick={() => {
-                        router.push("/services/pricing/payment-plans");
-                        setIsMenuOpen(false);
-                      }}
-                    >
-                      Overview
-                    </MenubarItem>
-                    <MenubarItem
-                      onClick={() => {
-                        router.push("/services/pricing");
-                        setIsMenuOpen(false);
-                      }}
-                    >
-                      Service Tiers & Pricing
-                    </MenubarItem>
-                    {paymentPlans.map((plan, index) => (
-                      <MenubarItem
                       key={index}
+                      className="h-fit"
                       onClick={() => {
+                        setIsMenuOpen(false);
                         router.push(
                           `/services/pricing/payment-plans/${plan.name}`
                         );
-                        setIsMenuOpen(false);
                       }}
                     >
                       {plan.title}
@@ -548,15 +842,23 @@ const NavBar = () => {
                   serviceCategory.name === "seo-optimized-content-creation"
                     ? "SEO Optimized Content Creation"
                     : capitalize(serviceCategory.name);
-
                 return (
                   <MenubarMenu key={serviceIndex}>
                     <MenubarTrigger className="flex justify-between w-full">
                       {triggerLabel}
                       <FaChevronDown />
                     </MenubarTrigger>
-
                     <MenubarContent className="block md:hidden ml-9 -mt-2">
+                      <MenubarItem
+                        key={serviceIndex}
+                        className="h-fit"
+                        onClick={() => {
+                          setIsMenuOpen(false);
+                          router.push(`/services/${serviceCategory.name}`);
+                        }}
+                      >
+                        Overview
+                      </MenubarItem>
                       {serviceCategory.info.sub.map(
                         (subServiceName, subIndex) => {
                           const subServiceData = subServiceDetails.find(
@@ -564,25 +866,23 @@ const NavBar = () => {
                               detail.name === subServiceName &&
                               detail.category === serviceCategory.name
                           );
-
                           // 2) Return null if no match
                           if (!subServiceData) {
                             return null;
                           }
-
                           return (
                             <MenubarItem
                               key={subIndex}
+                              className="h-fit"
                               onClick={() => {
+                                setIsMenuOpen(false);
                                 router.push(
                                   `/services/${subServiceData.category}/${subServiceData.name}`
                                 );
-                                  setIsMenuOpen(false);
                               }}
                             >
-                                {subServiceData.info?.title ||
-                                  subServiceData.info?.name}
-                              </p>
+                              {subServiceData.info?.title ||
+                                subServiceData.info?.name}
                             </MenubarItem>
                           );
                         }
@@ -598,5 +898,4 @@ const NavBar = () => {
     </>
   );
 };
-
 export default NavBar;

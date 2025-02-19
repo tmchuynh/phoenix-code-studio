@@ -4,6 +4,7 @@ import CannotFind from "@/components/CannotFind";
 import LoadingIndicator from "@/components/Loading";
 import { Button } from "@/components/ui/button";
 import { Category } from "@/lib/interfaces";
+import { contractExamples } from "@/lib/sub-contracts";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
 import { formatName, setSlug } from "@/lib/utils";
@@ -50,12 +51,6 @@ export default function CategoryPage() {
 
   if (error) return <CannotFind />;
 
-  const navigateToDetails = (contractName: string) => {
-    const formattedContractName = setSlug(contractName);
-
-    router.push(`/services/contracts/${category}/${formattedContractName}`);
-  };
-
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <h1>{contract?.name && formatName(contract?.name)}</h1>
@@ -73,30 +68,29 @@ export default function CategoryPage() {
       <h2>Discover What We Can Do For You</h2>
       <p>{contract?.info.intro}</p>
 
-      {contract?.info?.sub?.length ? (
-        contract.info?.sub.map((sub, index) => (
-          <div className="py-1 flex" key={index}>
-            <p className="group flex items-center gap-5">
-              {sub
-                .split("-")
-                .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-                .join(" ")}{" "}
-              <span className="inline-block transition-transform duration-300 ease-in-out group-hover:translate-x-5 text-accent-2">
-                <LuArrowBigRightDash />
-              </span>
-              <Button
-                variant={"link"}
-                className="no-underline hover:underline"
-                onClick={() => navigateToDetails(sub)}
-              >
-                Learn More
-              </Button>
-            </p>
-          </div>
-        ))
-      ) : (
-        <p>No sub-services found.</p>
-      )}
+      <section>
+        {contract?.info.sub.map((sub, index) => {
+          const contractDetails = contractExamples.find(
+            (item) => item.name == sub
+          );
+
+          if (contractDetails) {
+            return (
+              <div key={index}>
+                <h3>
+                  <a
+                    href={`/services/contracts/${contractDetails.category}/${contractDetails.name}`}
+                    className="underline underline-offset-4 hover:no-underline"
+                  >
+                    {contractDetails.info.title}
+                  </a>
+                </h3>
+                <p>{contractDetails.info.details}</p>
+              </div>
+            );
+          }
+        })}
+      </section>
     </main>
   );
 }
