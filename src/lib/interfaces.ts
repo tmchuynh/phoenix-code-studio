@@ -160,7 +160,7 @@ export interface Testimonial {
 export interface BlogPost {
   title: string;
   author: string;
-  date: string;
+  date: DateObject;
   wordCount: number;
   timeSpan: string;
   time: string;
@@ -171,6 +171,12 @@ export interface BlogPost {
   intro: string[];
   list?: ListDetail[];
   conclusions: string[];
+}
+
+export interface DateObject {
+  month: number;
+  day: number;
+  year: number;
 }
 
 export interface Project {

@@ -1,7 +1,7 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { cssUnit } from "./constants";
-import { BlogPost, LengthObject } from "./interfaces";
+import { BlogPost, DateObject, LengthObject } from "./interfaces";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -226,8 +226,8 @@ export function decimalMinutesToMmSs(decimalMin: number): string {
 
 export function sortBlogsByDate(array: BlogPost[]): BlogPost[] {
   const newArray = array.sort((a, b) => {
-    const dateA = new Date(formatDate(a.date));
-    const dateB = new Date(formatDate(b.date));
+    const dateA = convertToDate(a.date);
+    const dateB = convertToDate(b.date);
 
     return compareDates([dateA, dateB]);
   });
@@ -235,17 +235,21 @@ export function sortBlogsByDate(array: BlogPost[]): BlogPost[] {
   return newArray;
 }
 
+function convertToDate(dateObj: DateObject) {
+  return new Date(dateObj.year, dateObj.month - 1, dateObj.day);
+}
+
 export function compareDates([dateA, dateB]: Date[]): number {
   // Compare by year
   if (dateA.getFullYear() !== dateB.getFullYear()) {
-    return dateB.getFullYear() - dateA.getFullYear();
+    return dateB.getFullYear() - dateA.getFullYear(); // Sort by most recent year first
   }
 
   // Compare by month (if years are the same)
   if (dateA.getMonth() !== dateB.getMonth()) {
-    return dateA.getMonth() - dateB.getMonth();
+    return dateB.getMonth() - dateA.getMonth(); // Sort by most recent month first
   }
 
   // Compare by day (if both year and month are the same)
-  return dateA.getDate() - dateB.getDate();
+  return dateB.getDate() - dateA.getDate(); // Sort by most recent day first
 }

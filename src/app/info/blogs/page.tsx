@@ -27,12 +27,11 @@ import useBetweenLargeAndXL from "@/lib/onlyLargerScreens";
 import useSmallScreen from "@/lib/useSmallScreen";
 import {
   cn,
-  compareDates,
-  formatDate,
   formatNumber,
   parseReadingTimeToSeconds,
   setSlug,
   sortBlogsByDate,
+  // sortBlogsByDate,
 } from "@/lib/utils";
 import { ChevronsUpDown } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -52,7 +51,6 @@ const BlogDisplayPage: FC = () => {
 
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredBlogs, setFilteredBlogs] = useState(blogs);
-  const [selectedDates, setSelectedDates] = useState<string[]>([]);
   const [selectedAuthors, setSelectedAuthors] = useState<string[]>([]);
   const [selectedLength, setSelectedLength] = useState<string[]>([]);
   const [noResults, setNoResults] = useState(false);
@@ -106,11 +104,6 @@ const BlogDisplayPage: FC = () => {
       );
     }
 
-    // Filter by dates
-    if (selectedDates.length > 0) {
-      filtered = filtered.filter((blog) => selectedDates.includes(blog.date));
-    }
-
     // Filter by reading time
     if (selectedLength.length > 0) {
       filtered = filtered
@@ -146,7 +139,6 @@ const BlogDisplayPage: FC = () => {
         setNoResults(true);
         setTimeout(() => {
           setSelectedTopics([]);
-          setSelectedDates([]);
           setSelectedLength([]);
         }, 250);
       }
@@ -167,7 +159,6 @@ const BlogDisplayPage: FC = () => {
   }, [
     blogs,
     selectedTopics,
-    selectedDates,
     selectedLength,
     selectedAuthors,
     searchQuery,
@@ -176,7 +167,6 @@ const BlogDisplayPage: FC = () => {
 
   const clearFilters = (e?: string) => {
     setSelectedTopics([]);
-    setSelectedDates([]);
     setSelectedLength([]);
     setSelectedAuthors([]);
     setSearchQuery("");
@@ -189,7 +179,6 @@ const BlogDisplayPage: FC = () => {
     }
   };
 
-  const dates = Array.from(new Set(blogs.map((blog) => blog.date)));
   const readingLength = Array.from(new Set(blogs.map((blog) => blog.timeSpan)));
 
   // const authors = Array.from(new Set(blogs.map((blog) => blog.author)));
@@ -198,11 +187,6 @@ const BlogDisplayPage: FC = () => {
     blog.topics.forEach((topic) => {
       acc[topic] = (acc[topic] || 0) + 1;
     });
-    return acc;
-  }, {} as Record<string, number>);
-
-  const dateCounts = dates.reduce((acc, date) => {
-    acc[date] = blogs.filter((blog) => blog.date === date).length;
     return acc;
   }, {} as Record<string, number>);
 
@@ -252,15 +236,6 @@ const BlogDisplayPage: FC = () => {
   //   }
   //   handleOpen("author");
   // };
-
-  const handleDateCheckboxChange = (date: string, checked: boolean) => {
-    if (checked) {
-      setSelectedDates([...selectedDates, date]);
-    } else {
-      setSelectedDates(selectedDates.filter((d) => d !== date));
-    }
-    handleOpen("date");
-  };
 
   const handleTopicClick = (topic: string) => {
     clearFilters("topic");
@@ -370,45 +345,7 @@ const BlogDisplayPage: FC = () => {
                     </div>
                   </CollapsibleTrigger>
                 </div>
-                <CollapsibleContent className="space-y-2 ml-5">
-                  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 justify-start items-start w-full">
-                    {dates
-                      .sort((a, b) => {
-                        // Convert the date strings to Date objects
-                        const dateA = new Date(formatDate(a));
-                        const dateB = new Date(formatDate(b));
-
-                        return compareDates([dateA, dateB]);
-                      })
-                      .map((date) => (
-                        <div key={date} className="flex items-center mr-1">
-                          <BpCheckbox
-                            checked={selectedDates.includes(date)}
-                            onChange={(e) =>
-                              handleDateCheckboxChange(date, e.target.checked)
-                            }
-                          />
-                          <label
-                            htmlFor={date}
-                            className={`ml-2 flex items-center ${
-                              selectedDates.includes(date)
-                                ? "font-bold text-accent-2"
-                                : ""
-                            }`}
-                            onClick={() => handleOpen("date")}
-                          >
-                            <p>
-                              {" "}
-                              {date}{" "}
-                              <span className="ml-1 text-accent-4">
-                                ({dateCounts[date]})
-                              </span>
-                            </p>
-                          </label>
-                        </div>
-                      ))}
-                  </div>
-                </CollapsibleContent>
+                <CollapsibleContent className="space-y-2 ml-5"></CollapsibleContent>
               </Collapsible>
             </div>
 
@@ -685,7 +622,7 @@ const BlogDisplayPage: FC = () => {
                       </p>
                       <p className="mt-0">
                         <span className="italic text-sm lg:text-lg">
-                          {blog.date}
+                          {blog.date.month} / {blog.date.day} / {blog.date.year}
                         </span>
                       </p>
                     </div>

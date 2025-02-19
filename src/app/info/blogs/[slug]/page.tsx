@@ -56,7 +56,9 @@ const BlogPostPage = () => {
             <span className="font-bold">Written By: </span>
             {post?.author}
           </p>
-          <p>{post?.date}</p>
+          <p>
+            {post?.date.month} / {post?.date.day} / {post?.date.year}
+          </p>
           <div className="flex space-x-2 mb-8">
             {post?.topics.map((topic, index) => {
               return (

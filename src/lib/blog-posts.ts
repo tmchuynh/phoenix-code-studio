@@ -7,7 +7,7 @@ export const blogs: BlogPost[] = [
     wordCount: 1339,
     timeSpan: "mini",
     time: "4m 52s",
-    date: "January 4, 2025",
+    date: { month: 1, day: 4, year: 2025 },
     excerpt:
       "Google Analytics is an essential tool for tracking website performance and gaining valuable insights into user behavior. This post dives into what Google Analytics is, how to set it up, and how businesses can leverage its data to optimize their website and marketing efforts.",
     featured: false,
@@ -103,7 +103,7 @@ export const blogs: BlogPost[] = [
     wordCount: 3924,
     timeSpan: "standard",
     time: "14m 16s",
-    date: "April 22, 2022",
+    date: { month: 4, day: 3, year: 2022 },
     excerpt:
       "Contactless business cards offer a sleek, eco-friendly solution to traditional paper cards by enabling digital information sharing. Leveraging technologies like NFC and QR codes, they allow professionals to exchange contact details with a simple tap or scan. These cards reduce paper waste while enhancing convenience, customization, and interactivity for a modern networking experience.",
     featured: false,
@@ -450,7 +450,7 @@ export const blogs: BlogPost[] = [
     wordCount: 1411,
     timeSpan: "compact",
     time: "5m 8s",
-    date: "February 1, 2025",
+    date: { month: 2, day: 1, year: 2025 },
     excerpt:
       "Choosing the right designer or developer is crucial for the success of your project. A designer or developer should not only be technically skilled but also have a strong understanding of your business needs and goals. Ensuring a good match between your project requirements and their expertise will result in a seamless collaboration and a final product that reflects your vision.",
     featured: true,
@@ -565,7 +565,7 @@ export const blogs: BlogPost[] = [
     wordCount: 1141,
     timeSpan: "mini",
     time: "4m 9s",
-    date: "January 2, 2025",
+    date: { month: 2, day: 17, year: 2025 },
     excerpt:
       "Having a basic understanding of your industry and web design principles before your consultation helps you communicate your goals more clearly. Knowing what you want and understanding some of the design basics will allow you to ask more targeted questions and give your designer the context needed to create a solution that aligns with your objectives. It also helps in refining your vision and getting the most out of the consultation.",
     featured: true,
@@ -664,7 +664,7 @@ export const blogs: BlogPost[] = [
     wordCount: 1216,
     timeSpan: "mini",
     time: "4m 25s",
-    date: "January 2, 2025",
+    date: { month: 1, day: 12, year: 2025 },
     excerpt:
       "Clear communication with your designer is key to achieving the desired results in your project. Sharing your business goals, target audience, branding guidelines, and any specific design preferences upfront will help your designer create a design that fits your needs. Additionally, providing any necessary resources or inspirations can save time and ensure the project stays on track from the beginning.",
     featured: true,
@@ -764,7 +764,7 @@ export const blogs: BlogPost[] = [
     wordCount: 1629,
     timeSpan: "compact",
     time: "5m 55s",
-    date: "January 2, 2025",
+    date: { month: 5, day: 2, year: 2024 },
     excerpt:
       "A consultation with a designer or developer is an opportunity to assess their skills, approach, and understanding of your project. Asking questions about their past experience, design process, and how they handle revisions ensures that you find a good fit for your needs. This is also the time to clarify your goals, timelines, and budget to ensure that everyone is aligned on expectations before the project begins.",
     featured: true,
@@ -866,7 +866,7 @@ export const blogs: BlogPost[] = [
     wordCount: 1586,
     timeSpan: "compact",
     time: "5m 46s",
-    date: "January 2, 2025",
+    date: { month: 11, day: 2, year: 2024 },
     excerpt:
       "Web design encompasses more than just aesthetics; it involves creating a seamless user experience and ensuring that your website is functional, responsive, and easy to navigate. It blends design principles with technical knowledge to craft interfaces that meet both the needs of users and the goals of a business. A well-designed website considers visual appeal, usability, performance, and accessibility, ensuring that visitors have a positive interaction.",
     featured: true,
@@ -1000,7 +1000,7 @@ export const blogs: BlogPost[] = [
     wordCount: 2650,
     timeSpan: "compact",
     time: "9m 38s",
-    date: "January 4, 2025",
+    date: { month: 1, day: 4, year: 2025 },
     excerpt:
       "User experience (UX) is a critical factor in the success of any website, as it directly impacts how users interact with and perceive a site. A well-designed UX focuses on creating intuitive, easy-to-navigate, and engaging experiences that meet user needs while achieving business goals. By prioritizing elements like speed, accessibility, and responsiveness, web designers can ensure that users stay engaged, return to the site, and ultimately convert, making UX a key driver of customer satisfaction and business success.",
     featured: true,
@@ -1207,7 +1207,7 @@ export const blogs: BlogPost[] = [
     wordCount: 2843,
     timeSpan: "standard",
     time: "10m 20s",
-    date: "August 15, 2024",
+    date: { month: 8, day: 15, year: 2024 },
     excerpt:
       "Accessibility in web design ensures that your website is usable by people of all abilities. This includes making sure your content can be accessed by users with disabilities, such as visual, auditory, or motor impairments. Implementing accessible design practices—such as using screen reader-friendly layouts, providing alternative text for images, and ensuring keyboard navigation—makes your website more inclusive and provides a better experience for all users.",
     featured: true,
@@ -1370,7 +1370,7 @@ export const blogs: BlogPost[] = [
     wordCount: 3882,
     timeSpan: "standard",
     time: "14m 7s",
-    date: "August 15, 2024",
+    date: { month: 8, day: 15, year: 2024 },
     excerpt:
       "Blockchain architecture forms the backbone of decentralized systems and cryptocurrencies, organizing transaction data into secure, transparent, and immutable blocks. By eliminating the need for central authorities, it facilitates peer-to-peer transactions, disrupting industries such as finance and healthcare. A solid understanding of this architecture is crucial for businesses and developers venturing into decentralized application development.",
     featured: false,
@@ -1612,7 +1612,7 @@ export const blogs: BlogPost[] = [
     wordCount: 3588,
     timeSpan: "standard",
     time: "13m 3s",
-    date: "August 15, 2024",
+    date: { month: 8, day: 15, year: 2024 },
     excerpt:
       "Graphical User Interface (GUI) architecture is essential for building intuitive, user-friendly systems. A well-structured GUI enables users to interact with software effortlessly, combining visual design, layout, and interactions to create an efficient and aesthetically pleasing experience. Mastering GUI design principles and architecture is crucial for developing applications that provide seamless and engaging user experiences.",
     featured: false,
@@ -1820,7 +1820,7 @@ export const blogs: BlogPost[] = [
     wordCount: 2600,
     timeSpan: "compact",
     time: "9m 27s",
-    date: "March 23, 2022",
+    date: { month: 3, day: 23, year: 2022 },
     excerpt:
       "In the rapidly evolving tech industry, continuous learning is essential for success. This blog highlights a selection of must-read books for developers, designed to help you sharpen your skills, boost your career, and keep pace with industry advancements.",
     featured: true,
@@ -2048,7 +2048,7 @@ export const blogs: BlogPost[] = [
     wordCount: 2143,
     timeSpan: "compact",
     time: "7m 47s",
-    date: "April 22, 2022",
+    date: { month: 4, day: 16, year: 2022 },
     excerpt:
       "While specialists excel in deep expertise within a single domain, generalists bring versatility, adaptability, and a broad skill set that allows them to navigate diverse challenges. Ultimately, the ideal path depends on individual goals, industry demands, and the need for either deep specialization or flexible, cross-disciplinary knowledge.",
     featured: false,
@@ -2167,7 +2167,7 @@ export const blogs: BlogPost[] = [
     wordCount: 1113,
     timeSpan: "mini",
     time: "4m 3s",
-    date: "May 22, 2023",
+    date: { month: 5, day: 19, year: 2023 },
     excerpt:
       "Writing is a crucial skill for developers, playing a key role in documentation, communication, and business success. Clear and concise documentation ensures that code is understandable and maintainable, while effective communication helps developers collaborate efficiently with teams, stakeholders, and users.",
     featured: true,
@@ -2273,7 +2273,7 @@ export const blogs: BlogPost[] = [
     wordCount: 3733,
     timeSpan: "standard",
     time: "13m 34s",
-    date: "November 20, 2024",
+    date: { month: 11, day: 20, year: 2024 },
     excerpt:
       "Tailwind CSS is a highly flexible framework that empowers developers to craft custom, responsive designs with ease. By offering a comprehensive set of utility classes, it eliminates the need for writing extensive CSS, allowing developers to style HTML elements directly. This approach accelerates the development process, enabling the creation of visually rich, functional interfaces in less time.",
     featured: true,
@@ -2577,7 +2577,7 @@ export const blogs: BlogPost[] = [
     wordCount: 1479,
     timeSpan: "compact",
     time: "5m 23s",
-    date: "March 23, 2022",
+    date: { month: 3, day: 23, year: 2022 },
     excerpt:
       "With the rapid evolution of JavaScript frameworks like React, Vue, and Angular, staying updated on the latest trends is crucial for developers aiming to build modern, efficient web applications. New features, best practices, and performance optimizations are constantly emerging, making continuous learning essential to leverage these frameworks effectively.",
     featured: true,
@@ -2702,7 +2702,7 @@ export const blogs: BlogPost[] = [
     wordCount: 2809,
     timeSpan: "standard",
     time: "10m 13s",
-    date: "May 22, 2023",
+    date: { month: 5, day: 1, year: 2023 },
     excerpt:
       "Accessibility is essential in web development to ensure that websites are inclusive and usable for all users, including those with disabilities. By incorporating best practices like keyboard navigation, screen reader support, and adequate color contrast, developers can create digital experiences that are more user-friendly, meet accessibility standards, and reach a broader audience.",
     featured: true,
@@ -2920,7 +2920,7 @@ export const blogs: BlogPost[] = [
     wordCount: 2500,
     timeSpan: "compact",
     time: "9m 5s",
-    date: "May 22, 2023",
+    date: { month: 5, day: 22, year: 2023 },
     excerpt:
       "Blockchain is revolutionizing industries by offering secure, transparent, and decentralized systems that enhance trust and efficiency. By eliminating the need for intermediaries, it streamlines transactions, reduces costs, and increases security across sectors such as finance, supply chain, and healthcare.",
     featured: false,
@@ -3114,7 +3114,7 @@ export const blogs: BlogPost[] = [
     wordCount: 6951,
     timeSpan: "lengthened",
     time: "25m 17s",
-    date: "January 15, 2023",
+    date: { month: 1, day: 15, year: 2023 },
     excerpt:
       "Data science is transforming the way we approach problem-solving and decision-making across various industries. By leveraging large volumes of data and advanced analytical techniques, it enables organizations to uncover hidden patterns, predict future trends, and make data-driven decisions that were once difficult or impossible.",
     featured: true,
@@ -3611,7 +3611,7 @@ export const blogs: BlogPost[] = [
     wordCount: 5424,
     timeSpan: "lengthened",
     time: "19m 43s",
-    date: "January 15, 2023",
+    date: { month: 1, day: 15, year: 2023 },
     excerpt:
       "The Internet of Things (IoT) is reshaping the way devices communicate, from everyday household items to complex industrial machinery. By enabling seamless data exchange and automation, IoT enhances efficiency and convenience across various sectors. It has sparked innovation in areas such as smart homes, healthcare, manufacturing, and transportation, fundamentally altering both our personal lives and business operations.",
     featured: false,
@@ -4032,7 +4032,7 @@ export const blogs: BlogPost[] = [
     wordCount: 3813,
     timeSpan: "standard",
     time: "13m 52s",
-    date: "March 21, 2022",
+    date: { month: 3, day: 21, year: 2022 },
     excerpt:
       "Web scraping is a powerful technique for extracting, collecting, and analyzing data from websites, enabling businesses and researchers to gain valuable insights. By automating data retrieval, web scraping allows users to track market trends, monitor competitors, gather research data, and optimize decision-making processes more efficiently than manual methods.",
     featured: true,
@@ -4456,7 +4456,7 @@ export const blogs: BlogPost[] = [
     wordCount: 7016,
     timeSpan: "lengthened",
     time: "25m 31s",
-    date: "March 21, 2022",
+    date: { month: 3, day: 21, year: 2022 },
     excerpt:
       "Tech startups are reshaping industries by introducing innovative solutions, disrupting traditional business models, and driving digital transformation. By leveraging emerging technologies such as artificial intelligence, blockchain, and cloud computing, these startups are creating more efficient, scalable, and user-centric products and services that redefine how businesses and consumers interact.",
     featured: false,
@@ -5174,7 +5174,7 @@ export const blogs: BlogPost[] = [
     wordCount: 1765,
     timeSpan: "compact",
     time: "6m 25s",
-    date: "November 20, 2024",
+    date: { month: 11, day: 20, year: 2024 },
     excerpt:
       "Keep your edge sharp by embracing the groundbreaking tech trends that are redefining industries across the globe. With advancements in AI, machine learning, blockchain, and IoT, the way businesses function, interact, and provide value is undergoing a dramatic transformation. Staying informed about these innovations is key to maintaining relevance and thriving in today’s ever-changing digital world.",
     featured: false,
@@ -5570,7 +5570,7 @@ export const blogs: BlogPost[] = [
     wordCount: 2006,
     timeSpan: "compact",
     time: "7m 17s",
-    date: "March 23, 2022",
+    date: { month: 3, day: 23, year: 2022 },
     excerpt:
       "A great graphical user interface (GUI) is key to providing a seamless, intuitive user experience, enabling users to interact with software efficiently. A well-designed GUI focuses on usability, accessibility, and responsiveness, making applications more engaging and user-friendly. By featuring clear navigation, appealing layouts, and interactive elements, a strong GUI boosts productivity and user satisfaction across digital platforms.",
     featured: true,
@@ -5725,7 +5725,7 @@ export const blogs: BlogPost[] = [
     wordCount: 2222,
     timeSpan: "compact",
     time: "8m 5s",
-    date: "January 15, 2023",
+    date: { month: 1, day: 15, year: 2023 },
     excerpt:
       "Tech entrepreneurs are changing the landscape with groundbreaking innovations that address critical challenges and propel progress. Harnessing technologies such as AI, blockchain, and IoT, they are reshaping industries and influencing the future of business and society. Whether emerging from humble startups or evolving into global tech giants, their creativity and vision are transforming the way we work, connect, and experience the digital age.",
     featured: false,
@@ -5978,7 +5978,7 @@ export const blogs: BlogPost[] = [
     wordCount: 2024,
     timeSpan: "compact",
     time: "7m 22s",
-    date: "February 15, 2025",
+    date: { month: 2, day: 15, year: 2023 },
     excerpt:
       "Choosing the right business structure is essential for long-term success. LLCs, S Corps, and C Corps each offer unique benefits, from flexibility and tax advantages to growth potential and legal protection. Understanding these structures helps you make an informed decision based on your business goals, whether you're starting small or planning for future expansion.",
     featured: true,
@@ -6203,7 +6203,7 @@ export const blogs: BlogPost[] = [
     wordCount: 10065,
     timeSpan: "lengthened",
     time: "36m 36s",
-    date: "February 15, 2025",
+    date: { month: 2, day: 15, year: 2023 },
     excerpt:
       "As a full-stack web developer and business owner, I rely on a variety of tools to streamline development, manage client requests, and handle business operations. These tools help me stay organized, meet deadlines, and maintain high productivity across both technical and operational tasks. Stay tuned for more articles on these essential tools.",
     featured: true,
@@ -7011,7 +7011,7 @@ export const blogs: BlogPost[] = [
     wordCount: 7260,
     timeSpan: "lengthened",
     time: "26m 24s",
-    date: "February 15, 2025",
+    date: { month: 2, day: 15, year: 2023 },
     excerpt:
       "NPM is an indispensable tool for Node.js developers, simplifying dependency management, automating tasks, and enhancing workflows. With access to a vast library of packages, NPM helps developers improve performance, security, and testing, enabling the rapid creation of scalable and efficient applications. Gaining proficiency in NPM is essential for modern web development, reducing development time and ensuring consistency across projects.",
     featured: true,
@@ -7568,7 +7568,7 @@ export const blogs: BlogPost[] = [
     wordCount: 2258,
     timeSpan: "compact",
     time: "8m 13s",
-    date: "February 17, 2025",
+    date: { month: 2, day: 14, year: 2025 },
     excerpt:
       "VS Code is a fast, flexible code editor that supports multiple languages and streamlines coding with features like IntelliSense, Git integration, and debugging tools. Its extensive extensions and customization options make it perfect for modern web development, boosting productivity and collaboration for developers of all levels.",
     featured: true,
@@ -7795,7 +7795,7 @@ export const blogs: BlogPost[] = [
     wordCount: 1101,
     timeSpan: "mini",
     time: "4m",
-    date: "February 17, 2025",
+    date: { month: 2, day: 17, year: 2025 },
     excerpt:
       "Website builders like Wix, Squarespace, GoDaddy, and Shopify offer an easy and affordable way to create a website without coding or design skills. This guide explores the pros and cons of each platform, helping you choose the right one based on your needs. Whether you're looking for a quick setup or scalability, understanding the limitations and benefits of these tools is key to making an informed decision.",
     featured: false,
@@ -8108,7 +8108,7 @@ export const blogs: BlogPost[] = [
     wordCount: 1415,
     timeSpan: "compact",
     time: "5m 9s",
-    date: "February 17, 2025",
+    date: { month: 2, day: 10, year: 2025 },
     excerpt:
       "When choosing between website builders like Wix, Squarespace, GoDaddy, or Shopify and a custom-built website, it’s important to weigh your business needs, budget, and long-term goals. Website builders offer ease, affordability, and speed but come with limitations such as restricted customization and SEO challenges. Custom-built websites, though more expensive and time-consuming, provide full control over design, functionality, and scalability, making them ideal for businesses aiming for growth.",
     featured: false,
@@ -8347,7 +8347,7 @@ export const blogs: BlogPost[] = [
     wordCount: 2459,
     timeSpan: "compact",
     time: "8m 56s",
-    date: "February 18, 2025",
+    date: { month: 2, day: 18, year: 2025 },
     excerpt:
       "Effective feedback is key to a successful design collaboration. By being specific, using visual references, prioritizing feedback, and respecting the designer's expertise, you can ensure your vision is clearly communicated. Fostering a positive and collaborative environment will result in a smoother design process and a final product that aligns with your goals.",
     featured: true,
@@ -8764,7 +8764,7 @@ export const blogs: BlogPost[] = [
     wordCount: 2024,
     timeSpan: "mini",
     time: "7m 22s",
-    date: "February 18, 2025",
+    date: { month: 2, day: 18, year: 2025 },
     excerpt:
       "In this article, we explore key strategies for managing and optimizing your business database. From ensuring data security and compliance with encryption and access control to improving scalability through sharding and replication, we cover essential best practices. By focusing on data integrity, performance, and security, businesses can build robust, scalable databases that support growth and maintain high efficiency.",
     featured: true,
