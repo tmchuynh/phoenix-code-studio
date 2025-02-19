@@ -127,9 +127,26 @@ const BlogPostPage = () => {
                       innerList.title ? (
                         <div key={innerIndex}>
                           <p>
-                            <strong>{innerList.title}:</strong>{" "}
+                            {innerList.title && (
+                              <>
+                                <strong>{innerList.title}:</strong>{" "}
+                              </>
+                            )}
                             {innerList.description && innerList.description}
                           </p>
+
+                          {innerList.list && (
+                            <ul>
+                              {innerList.list.map((b_list, b_index) => (
+                                <li key={b_index}>
+                                  {b_list.title && (
+                                    <strong>{b_list.title}: </strong>
+                                  )}
+                                  {b_list.description}
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                         </div>
                       ) : (
                         <ul key={innerIndex}>
