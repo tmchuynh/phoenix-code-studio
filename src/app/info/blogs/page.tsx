@@ -52,7 +52,7 @@ const BlogDisplayPage: FC = () => {
   const [openCollapsible, setOpenCollapsible] = useState<string | null>(null);
 
   const [searchQuery, setSearchQuery] = useState("");
-  const [filteredBlogs, setFilteredBlogs] = useState(blogs);
+  const [filteredBlogs, setFilteredBlogs] = useState(sortBlogsByDate(blogs));
   const [selectedAuthors, setSelectedAuthors] = useState<string[]>([]);
   const [selectedLength, setSelectedLength] = useState<string[]>([]);
   const [noResults, setNoResults] = useState(false);
@@ -140,8 +140,23 @@ const BlogDisplayPage: FC = () => {
     }
   };
 
+  const sortedData = Object.entries(
+    getBlogPostsByYearMonthDayAndCount(blogs)
+  ).map(([year, yearData]) => {
+    return {
+      year: parseInt(year), // Convert the year to number
+      months: Object.entries(yearData)
+        .map(([month, monthData]) => ({
+          month: parseInt(month), // Convert the month to number
+          count: monthData.count,
+          blogsForMonth: monthData.groupedByDay, // You can use this to get the blog data for the month
+        }))
+        .sort((a, b) => a.month - b.month), // Sort months by month number
+    };
+  });
+
   const handleFilter = useCallback(() => {
-    let filtered = blogs;
+    let filtered = sortBlogsByDate(blogs);
 
     // Filter by topics
     if (selectedTopics.length > 0) {
@@ -203,27 +218,26 @@ const BlogDisplayPage: FC = () => {
     // Handle no results
     if (filtered.length === 0) {
       if (filtersCleared) {
-        setTimeout(() => setNoResults(true), 2500);
+        setTimeout(() => setNoResults(true), 500);
       } else {
         setNoResults(true);
         setTimeout(() => {
           setSelectedTopics([]);
           setSelectedLength([]);
-        }, 250);
+          setSelectedAuthors([]);
+          setSelectedDays([]);
+          setSelectedMonths([]);
+          setSelectedYears([]);
+        }, 2050);
       }
 
       // Sort original blogs
       setFilteredBlogs(sortBlogsByDate(blogs));
 
-      setTimeout(() => setNoResults(false), 4000);
+      setTimeout(() => setNoResults(false), 3500);
     } else {
       setNoResults(false);
-      if (selectedLength.length > 0) {
-        setFilteredBlogs(filtered);
-      } else {
-        // Sort filtered blogs
-        setFilteredBlogs(sortBlogsByDate(filtered));
-      }
+      setFilteredBlogs(sortBlogsByDate(filtered));
     }
   }, [
     blogs,
@@ -250,7 +264,7 @@ const BlogDisplayPage: FC = () => {
     setFilteredBlogs(sortBlogsByDate(blogs));
     if (!e) {
       setFiltersCleared(true);
-      setTimeout(() => setFiltersCleared(false), 4000);
+      setTimeout(() => setFiltersCleared(false), 3500);
     }
   };
 
@@ -425,21 +439,6 @@ const BlogDisplayPage: FC = () => {
 
     return groupedData;
   }
-
-  const sortedData = Object.entries(
-    getBlogPostsByYearMonthDayAndCount(blogs)
-  ).map(([year, yearData]) => {
-    return {
-      year: parseInt(year), // Convert the year to number
-      months: Object.entries(yearData)
-        .map(([month, monthData]) => ({
-          month: parseInt(month), // Convert the month to number
-          count: monthData.count,
-          blogsForMonth: monthData.groupedByDay, // You can use this to get the blog data for the month
-        }))
-        .sort((a, b) => a.month - b.month), // Sort months by month number
-    };
-  });
 
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
@@ -853,7 +852,7 @@ const BlogDisplayPage: FC = () => {
           </Button>
         </section>
 
-        {filtersCleared && noResults && (
+        {(filtersCleared || noResults) && (
           <section className="h-12 p-1">
             {/* Confirmation Text for Filters Cleared */}
             {filtersCleared && (
