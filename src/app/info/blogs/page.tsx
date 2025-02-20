@@ -29,6 +29,7 @@ import {
   cn,
   formatNumber,
   getDaySuffix,
+  parseReadingTimeToMinutes,
   parseReadingTimeToSeconds,
   setSlug,
   sortBlogsByDate,
@@ -956,7 +957,9 @@ const BlogDisplayPage: FC = () => {
                             <strong className="text-foreground">
                               Reading Time:
                             </strong>{" "}
-                            <span>{blog.time}</span>
+                            <span>
+                              ~{parseReadingTimeToMinutes(blog.time)}m
+                            </span>
                           </p>
                         )}
                       </div>
