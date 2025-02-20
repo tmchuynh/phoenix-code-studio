@@ -5,18 +5,24 @@ import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { BpCheckbox } from "@/components/ui/checkbox-custom";
 import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { allContracts } from "@/lib/contract-categories";
-import { FormDataType, ServiceTypeKeys } from "@/lib/interfaces";
+import { FormDataType } from "@/lib/interfaces";
 import { paymentPlans } from "@/lib/payment-plans";
 import { allServices } from "@/lib/service-categories";
 import { contractExamples } from "@/lib/sub-contracts";
 import { subServiceDetails } from "@/lib/sub-services";
-import { capitalize, cn, formatName } from "@/lib/utils";
+import { capitalize, cn } from "@/lib/utils";
+import { ChevronDown } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { FC, useEffect, useState } from "react";
@@ -41,9 +47,13 @@ const ContactUsPage: FC = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
-  const [expandedServices, setExpandedServices] = useState<string[]>([]);
-  const [expandedContracts, setExpandedContracts] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
+
+  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  const [selectedContracts, setSelectedContracts] = useState<string[]>([]);
+  const [openCollapsibles, setOpenCollapsibles] = useState<{
+    [key: string]: boolean;
+  }>({});
 
   useEffect(() => {
     setTimeout(() => {
@@ -66,86 +76,38 @@ const ContactUsPage: FC = () => {
     }));
   };
 
-  const handleMainServiceCheck = (
-    e: React.ChangeEvent<HTMLInputElement>,
-    serviceType: string | ""
-  ) => {
-    const { checked } = e.target;
-
-    setExpandedServices((prev) => {
-      if (checked) {
-        // Add this serviceType if not already in array
-        return prev.includes(serviceType) ? prev : [...prev, serviceType];
-      } else {
-        // Remove serviceType if it was there
-        return prev.filter((type) => type !== serviceType);
-      }
-    });
+  const handleOpen = (type: "contract" | "service", id: string) => {
+    setOpenCollapsibles((prevState) => ({
+      ...prevState,
+      [`${type}-${id}`]: !prevState[`${type}-${id}`], // Toggle the clicked one
+      // Close all others
+      ...Object.keys(prevState).reduce((acc, key) => {
+        if (key !== `${type}-${id}`) {
+          acc[key] = false; // Set all other collapsibles to false
+        }
+        return acc;
+      }, {} as { [key: string]: boolean }), // Cast the accumulator to have the correct type
+    }));
   };
 
-  const handleMainContractCheck = (
-    e: React.ChangeEvent<HTMLInputElement>,
-    contractType: string | ""
+  const handleContractCheckboxChange = (
+    contractId: string,
+    checked: boolean
   ) => {
-    const { checked } = e.target;
-    console.log(`Toggling contract type: ${contractType}, Checked: ${checked}`);
-    setExpandedContracts((prev) => {
-      if (checked) {
-        // Add this serviceType if not already in array
-        return prev.includes(contractType) ? prev : [...prev, contractType];
-      } else {
-        // Remove serviceType if it was there
-        return prev.filter((type) => type !== contractType);
-      }
-    });
+    if (checked) {
+      setSelectedContracts((prev) => [...prev, contractId]);
+    } else {
+      setSelectedContracts((prev) => prev.filter((id) => id !== contractId));
+    }
+    handleOpen("contract", contractId);
   };
 
-  const handleSubServiceSelect = (
-    e: React.ChangeEvent<HTMLInputElement>,
-    serviceType: ServiceTypeKeys
-  ) => {
-    const { value, checked } = e.target;
-    setFormData((prev) => {
-      const currentArr = prev[serviceType];
-      let updatedArr: string[];
-
-      if (checked) {
-        updatedArr = currentArr.includes(value)
-          ? currentArr
-          : [...currentArr, value];
-      } else {
-        updatedArr = currentArr.filter((sub) => sub !== value);
-      }
-
-      return {
-        ...prev,
-        [serviceType]: updatedArr,
-      };
-    });
-  };
-
-  const handleSubContractSelect = (
-    e: React.ChangeEvent<HTMLInputElement>,
-    contractType: ServiceTypeKeys
-  ) => {
-    const { value, checked } = e.target;
-    setFormData((prev) => {
-      const currentArr = prev[contractType];
-      let updatedArr: string[];
-
-      if (checked) {
-        updatedArr = currentArr.includes(value)
-          ? currentArr
-          : [...currentArr, value];
-      } else {
-        updatedArr = currentArr.filter((sub) => sub !== value);
-      }
-
-      return {
-        ...prev,
-        [contractType]: updatedArr,
-      };
-    });
+  const handleServiceCheckboxChange = (serviceId: string, checked: boolean) => {
+    if (checked) {
+      setSelectedServices((prev) => [...prev, serviceId]);
+    } else {
+      setSelectedServices((prev) => prev.filter((id) => id !== serviceId));
+    }
   };
 
   // Handle form submission
@@ -155,8 +117,8 @@ const ContactUsPage: FC = () => {
 
     setSubmitted(true);
 
-    setExpandedServices([]);
-    setExpandedContracts([]);
+    setSelectedServices([]);
+    setSelectedContracts([]);
 
     // Reset form if desired
     setFormData({
@@ -275,120 +237,121 @@ const ContactUsPage: FC = () => {
 
             {/* Dynamically Render All Services */}
             <h2 className="text-xl font-semibold mt-6 mb-2">Select Services</h2>
-            {allServices.map(
-              (service, index) =>
-                service.type && (
-                  <div className="gap-4 pl-2" key={`${service.name}-${index}`}>
-                    <div className="my-2">
-                      <label className="inline-flex items-center text-lg font-semibold">
-                        <BpCheckbox
-                          checked={expandedServices.includes(service.type)}
-                          onChange={(e) =>
-                            handleMainServiceCheck(e, service.type!)
-                          }
-                          className="mr-2"
-                        />
-                        {formatName(service.name)}
-                      </label>
-
-                      {expandedServices.includes(service.type) && (
-                        <div className="pl-6 mt-2 space-y-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                          {service.info.sub.map((sub) => {
-                            const serviceInfo = subServiceDetails.find(
-                              (info) => info.name === sub
-                            );
-
-                            if (serviceInfo) {
-                              return (
-                                <label key={sub} className="flex items-center">
-                                  <BpCheckbox
-                                    value={sub}
-                                    checked={formData[service.type!].includes(
-                                      sub
-                                    )}
-                                    onChange={(e) =>
-                                      handleSubServiceSelect(e, service.type!)
-                                    }
-                                    className="mr-2"
-                                  />
-                                  {serviceInfo.info.title}
-                                </label>
-                              );
-                            }
-                          })}
-                        </div>
-                      )}
-                    </div>
+            {allServices.map((service, index) => (
+              <div className="flex flex-wrap items-center" key={index}>
+                <Collapsible
+                  open={openCollapsibles[`service-${index}`] || false}
+                  onOpenChange={() => handleOpen("service", `${index}`)}
+                  className="w-full space-y-2"
+                >
+                  <div className="flex items-center justify-between space-x-4">
+                    <CollapsibleTrigger asChild>
+                      <div className="flex items-center">
+                        <ChevronDown className="h-4 w-4" />
+                        <label
+                          htmlFor="service"
+                          className="ml-2 text-lg w-full"
+                        >
+                          <p>{service.title}</p>
+                          <span className="sr-only">Toggle Services</span>
+                        </label>
+                      </div>
+                    </CollapsibleTrigger>
                   </div>
-                )
-            )}
+                  <CollapsibleContent className="space-y-2 ml-5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                      {service.info.sub.map((subService, subIndex) => {
+                        const serviceDetails = subServiceDetails.find(
+                          (details) => details.name === subService
+                        );
+
+                        if (serviceDetails) {
+                          return (
+                            <label key={subIndex} className="flex items-center">
+                              <BpCheckbox
+                                value={subIndex}
+                                checked={selectedServices.includes(subService)}
+                                onChange={(e) =>
+                                  handleServiceCheckboxChange(
+                                    subService,
+                                    e.target.checked
+                                  )
+                                }
+                                className="mr-2"
+                              />
+                              {capitalize(serviceDetails.info.title)}
+                            </label>
+                          );
+                        }
+                      })}
+                    </div>
+                  </CollapsibleContent>
+                </Collapsible>
+              </div>
+            ))}
 
             <h2 className="text-xl font-semibold mt-6 mb-2">
               Select Contract Examples Interested In (if applicable)
             </h2>
-            {allContracts.map((contractCategory, categoryIndex) => {
-              const contractDetails = contractExamples.find((item) =>
-                contractCategory.info.sub.find((sub) => sub === item.name)
-              );
-
-              if (contractDetails) {
-                return (
-                  <div
-                    className="gap-4 pl-2"
-                    key={`${contractCategory.type}-${categoryIndex}`}
-                  >
-                    <div className="my-2">
-                      <label className="inline-flex items-center text-lg font-semibold">
-                        <BpCheckbox
-                          checked={expandedContracts.includes(
-                            contractCategory.type
-                          )}
-                          onChange={(e) =>
-                            handleMainContractCheck(e, contractCategory.type!)
-                          }
-                          className="mr-2"
-                        />
-                        {formatName(contractCategory.title)}
-                      </label>
-
-                      {expandedContracts.includes(contractCategory.type) && (
-                        <div className="pl-6 mt-2 space-y-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                          {contractCategory.info.sub.map((sub, subIndex) => {
-                            const serviceInfo = contractExamples.find(
-                              (info) => info.name === sub
-                            );
-
-                            if (serviceInfo) {
-                              return (
-                                <label
-                                  key={subIndex}
-                                  className="flex items-center"
-                                >
-                                  <BpCheckbox
-                                    value={sub}
-                                    checked={formData[
-                                      contractCategory.type!
-                                    ].includes(sub)}
-                                    onChange={(e) =>
-                                      handleSubContractSelect(
-                                        e,
-                                        contractCategory.type!
-                                      )
-                                    }
-                                    className="mr-2"
-                                  />
-                                  {serviceInfo.info.title}
-                                </label>
-                              );
-                            }
-                          })}
-                        </div>
-                      )}
-                    </div>
+            {allContracts.map((contract, index) => (
+              <div className="flex flex-wrap items-center" key={index}>
+                <Collapsible
+                  open={openCollapsibles[`contract-${index}`] || false}
+                  onOpenChange={() => handleOpen("contract", `${index}`)}
+                  className="w-full space-y-2"
+                >
+                  <div className="flex items-center justify-between space-x-4">
+                    <CollapsibleTrigger asChild>
+                      <div className="flex items-center">
+                        <ChevronDown className="h-4 w-4" />
+                        <label
+                          htmlFor="contract"
+                          className="ml-2 text-lg w-full"
+                        >
+                          <p>{contract.title}</p>
+                          <span className="sr-only">Toggle Contracts</span>
+                        </label>
+                      </div>
+                    </CollapsibleTrigger>
                   </div>
-                );
-              }
-            })}
+
+                  <CollapsibleContent className="space-y-2 ml-5">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                      {contract.info.sub.map((subContract) => {
+                        const contractDetails = contractExamples.find(
+                          (details) => details.name === subContract
+                        );
+
+                        if (contractDetails) {
+                          return (
+                            <label
+                              key={subContract}
+                              className="flex items-center"
+                            >
+                              <BpCheckbox
+                                value={subContract}
+                                checked={selectedContracts.includes(
+                                  subContract
+                                )}
+                                onChange={(e) =>
+                                  handleContractCheckboxChange(
+                                    subContract,
+                                    e.target.checked
+                                  )
+                                }
+                                className="mr-2"
+                              />
+                              {capitalize(contractDetails.info.title)}
+                            </label>
+                          );
+                        }
+                        return null; // Ensure we return null if no contractDetails are found
+                      })}
+                    </div>
+                  </CollapsibleContent>
+                </Collapsible>
+              </div>
+            ))}
 
             {/* Payment Plan (Dropdown) */}
             <div className="mt-6 mb-4">
