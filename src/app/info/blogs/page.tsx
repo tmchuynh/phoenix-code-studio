@@ -975,15 +975,13 @@ const BlogDisplayPage: FC = () => {
                       {blog.title}
                     </Button>
 
-                    <div>
-                      <p className="mb-0 text-sm md:text-lg lg:text-lg">
-                        <strong className="text-foreground">By:</strong>{" "}
-                        {blog.author}
+                    <div className="flex flex-col md:flex-row justify-between">
+                      <p className="mb-0.5 md:my-1 lg:mt-4 text-sm md:text-lg lg:text-lg">
+                        <strong>By:</strong> {blog.author}
                       </p>
-                      <p className="mt-0">
-                        <span className="italic text-sm lg:text-lg">
-                          {blog.date.month} / {blog.date.day} / {blog.date.year}
-                        </span>
+                      <p className="mt-0.5 md:my-1 lg:mt-4 text-sm md:text-lg lg:text-lg">
+                        <strong>Date:</strong> {blog.date.month} /{" "}
+                        {blog.date.day} / {blog.date.year}
                       </p>
                     </div>
                     <p className="pb-4 md:text-[15px] lg:text-[18px] 2xl:text-[20px] leading-6">

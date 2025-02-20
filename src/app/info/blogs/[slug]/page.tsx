@@ -57,6 +57,7 @@ const BlogPostPage = () => {
             {post?.author}
           </p>
           <p>
+            <span className="font-bold">Date: </span>
             {post?.date.month} / {post?.date.day} / {post?.date.year}
           </p>
           <div className="flex space-x-2 mb-8">
