@@ -10,6 +10,12 @@ import {
   MenubarTrigger,
 } from "@/components/ui/menubar";
 import { about, serviceCategories } from "@/lib/constants";
+import { allContracts } from "@/lib/contract-categories";
+import { paymentPlans } from "@/lib/payment-plans";
+import { allServices } from "@/lib/service-categories";
+import { contractExamples } from "@/lib/sub-contracts";
+import { subServiceDetails } from "@/lib/sub-services";
+import { capitalize } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
@@ -17,12 +23,6 @@ import { IoMdMenu } from "react-icons/io";
 import { ModeButton } from "./ModeButton";
 import { Button } from "./ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
-import { paymentPlans } from "@/lib/payment-plans";
-import { allServices } from "@/lib/service-categories";
-import { capitalize } from "@/lib/utils";
-import { subServiceDetails } from "@/lib/sub-services";
-import { allContracts } from "@/lib/contract-categories";
-import { contractExamples } from "@/lib/sub-contracts";
 const NavBar = () => {
   const router = useRouter();
   const [_, setIsMenuOpen] = useState(false);
@@ -107,61 +107,67 @@ const NavBar = () => {
                       requirements.
                     </small>
                   </MenubarItem>
-                  {allContracts.map((contractCategory, categoryIndex) => (
-                    <MenubarSub key={contractCategory.name}>
-                      <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
-                        {contractCategory.title}
-                      </MenubarSubTrigger>
-                      <MenubarSubContent className="mx-4 grid grid-cols-2">
-                        <MenubarItem
-                          key={categoryIndex}
-                          onClick={() => {
-                            {
-                              setIsMenuOpen(false);
-                              router.push(
-                                `/services/contracts/${contractCategory.name}`
-                              );
-                            }
-                          }}
-                          className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col justify-center w-72"
+                  {allContracts.map((contractCategory, categoryIndex) => {
+                    const contractDetails = contractExamples.find(
+                      (item) =>
+                        item.name === contractCategory.info.sub[categoryIndex]
+                    );
+
+                    if (contractDetails) {
+                      return (
+                        <MenubarSub
+                          key={`${contractCategory.short}-${contractCategory.name}-${categoryIndex}`}
                         >
-                          <p className="text-tertiary font-semibold mb-0">
-                            Overview
-                          </p>
-                        </MenubarItem>
-                        {contractCategory.info.sub.map(
-                          (contract, contractIndex) => {
-                            const contractDetail = contractExamples.find(
-                              (item) => item.name === contract
-                            );
-                            if (contractDetail) {
-                              return (
-                                <>
-                                  <MenubarItem
-                                    key={contractIndex}
-                                    onClick={() => {
-                                      {
+                          <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                            {contractCategory.title}
+                          </MenubarSubTrigger>
+                          <MenubarSubContent className="mx-4 grid grid-cols-2">
+                            <MenubarItem
+                              key={`${contractCategory.short}-${contractCategory.name}-${categoryIndex}`}
+                              onClick={() => {
+                                setIsMenuOpen(false);
+                                router.push(
+                                  `/services/contracts/${contractCategory.name}`
+                                );
+                              }}
+                              className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col justify-center w-72"
+                            >
+                              <p className="text-tertiary font-semibold mb-0">
+                                Overview
+                              </p>
+                            </MenubarItem>
+                            {contractCategory.info.sub.map(
+                              (contract, contractIndex) => {
+                                const contractDetail = contractExamples.find(
+                                  (item) => item.name === contract
+                                );
+                                if (contractDetail) {
+                                  return (
+                                    <MenubarItem
+                                      key={`${contractDetail.category}-${contractDetail.name}-${contractIndex}`}
+                                      onClick={() => {
                                         setIsMenuOpen(false);
                                         router.push(
                                           `/services/contracts/${contractDetail.category}/${contractDetail.name}`
                                         );
-                                      }
-                                    }}
-                                    className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col justify-center w-72"
-                                  >
-                                    <p className="text-tertiary font-semibold mb-0">
-                                      {contractDetail.info?.title ||
-                                        contractDetail.info?.name}
-                                    </p>
-                                  </MenubarItem>
-                                </>
-                              );
-                            }
-                          }
-                        )}
-                      </MenubarSubContent>
-                    </MenubarSub>
-                  ))}
+                                      }}
+                                      className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col justify-center w-72"
+                                    >
+                                      <p className="text-tertiary font-semibold mb-0">
+                                        {contractDetail.info?.title ||
+                                          contractDetail.info?.name}
+                                      </p>
+                                    </MenubarItem>
+                                  );
+                                }
+                                return null;
+                              }
+                            )}
+                          </MenubarSubContent>
+                        </MenubarSub>
+                      );
+                    }
+                  })}
                 </MenubarSubContent>
               </MenubarSub>
               <MenubarSub>
@@ -199,7 +205,7 @@ const NavBar = () => {
                   </MenubarItem>
                   {paymentPlans.map((plan, index) => (
                     <MenubarItem
-                      key={index}
+                      key={`${plan.name}-${index}`}
                       onClick={() => {
                         setIsMenuOpen(false);
                         router.push(
@@ -223,13 +229,15 @@ const NavBar = () => {
                     ? "SEO Optimized Content Creation"
                     : capitalize(serviceCategory.name);
                 return (
-                  <MenubarSub key={serviceIndex}>
+                  <MenubarSub
+                    key={`${serviceCategory.name}-${serviceCategory.short}-${serviceIndex}`}
+                  >
                     <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                       {triggerLabel}
                     </MenubarSubTrigger>
                     <MenubarSubContent className="mx-4 grid grid-cols-3 gap-2">
                       <MenubarItem
-                        key={serviceIndex}
+                        key={`${serviceCategory.short}-${serviceCategory.name}`}
                         onClick={() => {
                           setIsMenuOpen(false);
                           router.push(`/services/${serviceCategory.name}`);
@@ -253,7 +261,7 @@ const NavBar = () => {
                           }
                           return (
                             <MenubarItem
-                              key={subIndex}
+                              key={`${subServiceName}-${subServiceData.category}-${subServiceData.name}-${subIndex}`}
                               onClick={() => {
                                 {
                                   setIsMenuOpen(false);
@@ -320,7 +328,7 @@ const NavBar = () => {
             <MenubarContent className="hidden md:block mt-3">
               {about.map((service, index) => (
                 <MenubarItem
-                  key={index}
+                  key={`${service.title}-${index}`}
                   onClick={() => {
                     setIsMenuOpen(false);
                     router.push(service.href);
@@ -345,7 +353,7 @@ const NavBar = () => {
                 <MenubarSubContent className="mx-4">
                   {serviceCategories.map((service, index) => (
                     <MenubarItem
-                      key={index}
+                      key={`${service.title}-${index}`}
                       onClick={() => {
                         setIsMenuOpen(false);
                         router.push(service.href);
@@ -382,7 +390,7 @@ const NavBar = () => {
                   </MenubarItem>
                   {paymentPlans.map((plan, index) => (
                     <MenubarItem
-                      key={index}
+                      key={`${plan.name}-${index}`}
                       onClick={() => {
                         setIsMenuOpen(false);
                         router.push(
@@ -403,13 +411,15 @@ const NavBar = () => {
                     ? "SEO Optimized Content Creation"
                     : capitalize(serviceCategory.name);
                 return (
-                  <MenubarSub key={serviceIndex}>
+                  <MenubarSub
+                    key={`${serviceCategory.name}-${serviceCategory.short}-${serviceIndex}`}
+                  >
                     <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                       {triggerLabel}
                     </MenubarSubTrigger>
                     <MenubarSubContent className="mx-4">
                       <MenubarItem
-                        key={serviceIndex}
+                        key={`overview-${serviceCategory.name}-${serviceCategory.short}-${serviceIndex}`}
                         onClick={() => {
                           setIsMenuOpen(false);
                           router.push(`/services/${serviceCategory.name}`);
@@ -425,28 +435,24 @@ const NavBar = () => {
                               detail.name === subServiceName &&
                               detail.category === serviceCategory.name
                           );
-                          // 2) Return null if no match
+                          // Return null if no match
                           if (!subServiceData) {
                             return null;
                           }
                           return (
-                            <>
-                              <MenubarItem
-                                key={subIndex}
-                                onClick={() => {
-                                  {
-                                    setIsMenuOpen(false);
-                                    router.push(
-                                      `/services/${subServiceData.category}/${subServiceData.name}`
-                                    );
-                                  }
-                                }}
-                                className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
-                              >
-                                {subServiceData.info?.title ||
-                                  subServiceData.info?.name}
-                              </MenubarItem>
-                            </>
+                            <MenubarItem
+                              key={`subService-${subServiceData.category}-${subServiceData.name}-${subIndex}`}
+                              onClick={() => {
+                                setIsMenuOpen(false);
+                                router.push(
+                                  `/services/${subServiceData.category}/${subServiceData.name}`
+                                );
+                              }}
+                              className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                            >
+                              {subServiceData.info?.title ||
+                                subServiceData.info?.name}
+                            </MenubarItem>
                           );
                         }
                       )}
@@ -471,14 +477,16 @@ const NavBar = () => {
               >
                 Overview
               </MenubarItem>
-              {allContracts.map((contractCategory, contractIndex) => (
-                <MenubarSub key={contractCategory.name}>
+              {allContracts.map((contractCategory, categoryIndex) => (
+                <MenubarSub
+                  key={`${contractCategory.short}-${contractCategory.name}-${categoryIndex}`}
+                >
                   <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                     {contractCategory.title}
                   </MenubarSubTrigger>
                   <MenubarSubContent className="mx-4">
                     <MenubarItem
-                      key={contractIndex}
+                      key={`${contractCategory.name}-${contractCategory.short}`}
                       onClick={() => {
                         setIsMenuOpen(false);
                         router.push(
@@ -497,7 +505,7 @@ const NavBar = () => {
                         if (details) {
                           return (
                             <MenubarItem
-                              key={detailIndex}
+                              key={`${details.category}-${details.name}-${detailIndex}`}
                               onClick={() => {
                                 setIsMenuOpen(false);
                                 router.push(
@@ -555,7 +563,7 @@ const NavBar = () => {
             <MenubarContent className="hidden md:block mt-3">
               {about.map((service, index) => (
                 <MenubarItem
-                  key={index}
+                  key={`${service.title}-${index}`}
                   onClick={() => {
                     setIsMenuOpen(false);
                     router.push(service.href);
@@ -580,7 +588,7 @@ const NavBar = () => {
                 <MenubarSubContent className="mx-4">
                   {serviceCategories.map((service, index) => (
                     <MenubarItem
-                      key={index}
+                      key={`${service.title}-${index}`}
                       onClick={() => {
                         setIsMenuOpen(false);
                         router.push(service.href);
@@ -608,7 +616,7 @@ const NavBar = () => {
                   </MenubarItem>
                   {allContracts.map((contractCategory, contractIndex) => (
                     <MenubarItem
-                      key={contractCategory.name}
+                      key={`${contractCategory.short}-${contractCategory.name}-${contractIndex}`}
                       onClick={() => {
                         setIsMenuOpen(false);
                         router.push(
@@ -647,7 +655,7 @@ const NavBar = () => {
                   </MenubarItem>
                   {paymentPlans.map((plan, index) => (
                     <MenubarItem
-                      key={index}
+                      key={`${plan.name}-${index}`}
                       onClick={() => {
                         setIsMenuOpen(false);
                         router.push(
@@ -667,14 +675,19 @@ const NavBar = () => {
                   serviceCategory.name === "seo-optimized-content-creation"
                     ? "SEO Optimized Content Creation"
                     : capitalize(serviceCategory.name);
+
                 return (
-                  <MenubarSub key={serviceIndex}>
+                  <MenubarSub key={`${serviceCategory.name}-${serviceIndex}`}>
+                    {" "}
                     <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
                       {triggerLabel}
                     </MenubarSubTrigger>
-                    <MenubarSubContent className="mx-4">
+                    <MenubarSubContent
+                      key={`${serviceCategory.name}-${serviceIndex}-subcontent`}
+                      className="mx-4"
+                    >
                       <MenubarItem
-                        key={serviceIndex}
+                        key={`${serviceCategory.name}-overview`}
                         onClick={() => {
                           setIsMenuOpen(false);
                           router.push(`/services/${serviceCategory.name}`);
@@ -683,6 +696,7 @@ const NavBar = () => {
                       >
                         Overview
                       </MenubarItem>
+
                       {serviceCategory.info.sub.map(
                         (subServiceName, subIndex) => {
                           const subServiceData = subServiceDetails.find(
@@ -690,26 +704,25 @@ const NavBar = () => {
                               detail.name === subServiceName &&
                               detail.category === serviceCategory.name
                           );
-                          // 2) Return null if no match
+
                           if (!subServiceData) {
                             return null;
                           }
+
                           return (
-                            <>
-                              <MenubarItem
-                                key={subIndex}
-                                onClick={() => {
-                                  setIsMenuOpen(false);
-                                  router.push(
-                                    `/services/${subServiceData.category}/${subServiceData.name}`
-                                  );
-                                }}
-                                className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
-                              >
-                                {subServiceData.info?.title ||
-                                  subServiceData.info?.name}
-                              </MenubarItem>
-                            </>
+                            <MenubarItem
+                              key={`subservice-${subServiceData.category}-${subServiceData.name}-${subIndex}`}
+                              onClick={() => {
+                                setIsMenuOpen(false);
+                                router.push(
+                                  `/services/${subServiceData.category}/${subServiceData.name}`
+                                );
+                              }}
+                              className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                            >
+                              {subServiceData.info?.title ||
+                                subServiceData.info?.name}
+                            </MenubarItem>
                           );
                         }
                       )}
@@ -786,7 +799,7 @@ const NavBar = () => {
                 <MenubarContent className="block md:hidden ml-9 -mt-2">
                   {serviceCategories.map((services, index) => (
                     <MenubarItem
-                      key={index}
+                      key={`${services.title}-${index}`}
                       className="h-fit"
                       onClick={() => {
                         setIsMenuOpen(false);
@@ -823,7 +836,7 @@ const NavBar = () => {
                   </MenubarItem>
                   {paymentPlans.map((plan, index) => (
                     <MenubarItem
-                      key={index}
+                      key={`${plan.name}-${index}`}
                       className="h-fit"
                       onClick={() => {
                         setIsMenuOpen(false);
@@ -850,7 +863,7 @@ const NavBar = () => {
                     </MenubarTrigger>
                     <MenubarContent className="block md:hidden ml-9 -mt-2">
                       <MenubarItem
-                        key={serviceIndex}
+                        key={`${serviceCategory.short}-${serviceCategory.name}`}
                         className="h-fit"
                         onClick={() => {
                           setIsMenuOpen(false);
@@ -872,7 +885,7 @@ const NavBar = () => {
                           }
                           return (
                             <MenubarItem
-                              key={subIndex}
+                              key={`${subServiceName}-${subServiceData.category}-${subServiceData.name}-${subIndex}`}
                               className="h-fit"
                               onClick={() => {
                                 setIsMenuOpen(false);
