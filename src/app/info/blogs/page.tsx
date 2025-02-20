@@ -494,11 +494,7 @@ const BlogDisplayPage: FC = () => {
                             handleTopicCheckboxChange(topic, e.target.checked)
                           }
                         />
-                        <label
-                          htmlFor={topic}
-                          className="ml-2"
-                          onClick={() => handleOpen("topic")}
-                        >
+                        <label htmlFor={topic} className="ml-2">
                           <p>
                             {topic}
                             <span className="ml-1 text-accent-4">

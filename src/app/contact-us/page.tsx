@@ -10,10 +10,13 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { allContracts } from "@/lib/contract-categories";
 import { FormDataType, ServiceTypeKeys } from "@/lib/interfaces";
 import { paymentPlans } from "@/lib/payment-plans";
 import { allServices } from "@/lib/service-categories";
-import { cn, formatName } from "@/lib/utils";
+import { contractExamples } from "@/lib/sub-contracts";
+import { subServiceDetails } from "@/lib/sub-services";
+import { capitalize, cn, formatName } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { FC, useEffect, useState } from "react";
@@ -31,10 +34,15 @@ const ContactUsPage: FC = () => {
     comprehensiveWebsiteSolutions: [],
     seoOptimizedContentCreationServices: [],
     corporateDigitalSolutions: [],
+    digitalAndWebDevelopmentContracts: [],
+    contentAndMarketingContracts: [],
+    paymentAndSalesContracts: [],
+    generalClientAgreements: [],
   });
 
   const [submitted, setSubmitted] = useState(false);
   const [expandedServices, setExpandedServices] = useState<string[]>([]);
+  const [expandedContracts, setExpandedContracts] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -75,6 +83,23 @@ const ContactUsPage: FC = () => {
     });
   };
 
+  const handleMainContractCheck = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    contractType: string | ""
+  ) => {
+    const { checked } = e.target;
+    console.log(`Toggling contract type: ${contractType}, Checked: ${checked}`);
+    setExpandedContracts((prev) => {
+      if (checked) {
+        // Add this serviceType if not already in array
+        return prev.includes(contractType) ? prev : [...prev, contractType];
+      } else {
+        // Remove serviceType if it was there
+        return prev.filter((type) => type !== contractType);
+      }
+    });
+  };
+
   const handleSubServiceSelect = (
     e: React.ChangeEvent<HTMLInputElement>,
     serviceType: ServiceTypeKeys
@@ -99,12 +124,40 @@ const ContactUsPage: FC = () => {
     });
   };
 
+  const handleSubContractSelect = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    contractType: ServiceTypeKeys
+  ) => {
+    const { value, checked } = e.target;
+    setFormData((prev) => {
+      const currentArr = prev[contractType];
+      let updatedArr: string[];
+
+      if (checked) {
+        updatedArr = currentArr.includes(value)
+          ? currentArr
+          : [...currentArr, value];
+      } else {
+        updatedArr = currentArr.filter((sub) => sub !== value);
+      }
+
+      return {
+        ...prev,
+        [contractType]: updatedArr,
+      };
+    });
+  };
+
   // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Submitted formData:", formData);
 
     setSubmitted(true);
+
+    setExpandedServices([]);
+    setExpandedContracts([]);
+
     // Reset form if desired
     setFormData({
       name: "",
@@ -114,6 +167,10 @@ const ContactUsPage: FC = () => {
       comprehensiveWebsiteSolutions: [],
       seoOptimizedContentCreationServices: [],
       corporateDigitalSolutions: [],
+      digitalAndWebDevelopmentContracts: [],
+      contentAndMarketingContracts: [],
+      paymentAndSalesContracts: [],
+      generalClientAgreements: [],
       paymentPlan: "",
     });
   };
@@ -221,14 +278,10 @@ const ContactUsPage: FC = () => {
             {allServices.map(
               (service, index) =>
                 service.type && (
-                  <div
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pl-2"
-                    key={index}
-                  >
+                  <div className="gap-4 pl-2" key={`${service.name}-${index}`}>
                     <div className="my-2">
                       <label className="inline-flex items-center text-lg font-semibold">
                         <BpCheckbox
-                          // "expanded" or "checked" state based on expandedServices
                           checked={expandedServices.includes(service.type)}
                           onChange={(e) =>
                             handleMainServiceCheck(e, service.type!)
@@ -239,26 +292,103 @@ const ContactUsPage: FC = () => {
                       </label>
 
                       {expandedServices.includes(service.type) && (
-                        <div className="pl-6 mt-2 space-y-2">
-                          {service.info.sub.map((sub) => (
-                            <label key={sub} className="flex items-center">
-                              <BpCheckbox
-                                value={sub}
-                                checked={formData[service.type!].includes(sub)}
-                                onChange={(e) =>
-                                  handleSubServiceSelect(e, service.type!)
-                                }
-                                className="mr-2"
-                              />
-                              {formatName(sub)}
-                            </label>
-                          ))}
+                        <div className="pl-6 mt-2 space-y-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                          {service.info.sub.map((sub) => {
+                            const serviceInfo = subServiceDetails.find(
+                              (info) => info.name === sub
+                            );
+
+                            if (serviceInfo) {
+                              return (
+                                <label key={sub} className="flex items-center">
+                                  <BpCheckbox
+                                    value={sub}
+                                    checked={formData[service.type!].includes(
+                                      sub
+                                    )}
+                                    onChange={(e) =>
+                                      handleSubServiceSelect(e, service.type!)
+                                    }
+                                    className="mr-2"
+                                  />
+                                  {serviceInfo.info.title}
+                                </label>
+                              );
+                            }
+                          })}
                         </div>
                       )}
                     </div>
                   </div>
                 )
             )}
+
+            <h2 className="text-xl font-semibold mt-6 mb-2">
+              Select Contract Examples Interested In (if applicable)
+            </h2>
+            {allContracts.map((contractCategory, categoryIndex) => {
+              const contractDetails = contractExamples.find((item) =>
+                contractCategory.info.sub.find((sub) => sub === item.name)
+              );
+
+              if (contractDetails) {
+                return (
+                  <div
+                    className="gap-4 pl-2"
+                    key={`${contractCategory.type}-${categoryIndex}`}
+                  >
+                    <div className="my-2">
+                      <label className="inline-flex items-center text-lg font-semibold">
+                        <BpCheckbox
+                          checked={expandedContracts.includes(
+                            contractCategory.type
+                          )}
+                          onChange={(e) =>
+                            handleMainContractCheck(e, contractCategory.type!)
+                          }
+                          className="mr-2"
+                        />
+                        {formatName(contractCategory.title)}
+                      </label>
+
+                      {expandedContracts.includes(contractCategory.type) && (
+                        <div className="pl-6 mt-2 space-y-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                          {contractCategory.info.sub.map((sub, subIndex) => {
+                            const serviceInfo = contractExamples.find(
+                              (info) => info.name === sub
+                            );
+
+                            if (serviceInfo) {
+                              return (
+                                <label
+                                  key={subIndex}
+                                  className="flex items-center"
+                                >
+                                  <BpCheckbox
+                                    value={sub}
+                                    checked={formData[
+                                      contractCategory.type!
+                                    ].includes(sub)}
+                                    onChange={(e) =>
+                                      handleSubContractSelect(
+                                        e,
+                                        contractCategory.type!
+                                      )
+                                    }
+                                    className="mr-2"
+                                  />
+                                  {serviceInfo.info.title}
+                                </label>
+                              );
+                            }
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                );
+              }
+            })}
 
             {/* Payment Plan (Dropdown) */}
             <div className="mt-6 mb-4">
@@ -280,7 +410,7 @@ const ContactUsPage: FC = () => {
                         }));
                       }}
                     >
-                      {plan.name}
+                      {capitalize(plan.name)}
                     </DropdownMenuItem>
                   ))}
                 </DropdownMenuContent>

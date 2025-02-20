@@ -5,7 +5,11 @@ export type LengthType = number | string;
 export type ServiceTypeKeys =
   | "comprehensiveWebsiteSolutions"
   | "seoOptimizedContentCreationServices"
-  | "corporateDigitalSolutions";
+  | "corporateDigitalSolutions"
+  | "digitalAndWebDevelopmentContracts"
+  | "contentAndMarketingContracts"
+  | "paymentAndSalesContracts"
+  | "generalClientAgreements";
 
 export interface FormDataType {
   name: string;
@@ -16,6 +20,10 @@ export interface FormDataType {
   comprehensiveWebsiteSolutions: string[];
   seoOptimizedContentCreationServices: string[];
   corporateDigitalSolutions: string[];
+  digitalAndWebDevelopmentContracts: string[];
+  contentAndMarketingContracts: string[];
+  paymentAndSalesContracts: string[];
+  generalClientAgreements: string[];
 }
 
 export interface CommonProps
@@ -59,7 +67,7 @@ export interface PricingTier {
 
 export interface Category {
   name: string;
-  type?: ServiceTypeKeys;
+  type: ServiceTypeKeys;
   title: string;
   short: string;
   info: Information;
