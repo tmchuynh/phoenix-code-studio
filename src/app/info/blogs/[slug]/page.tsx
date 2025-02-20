@@ -102,7 +102,7 @@ const BlogPostPage = () => {
             width={500}
             height={300}
             alt={post!.title}
-            className="w-full lg:h-[30em] object-contain mx-auto object-center mb-2 md:mt-4 xl:mt-0"
+            className="w-full lg:h-[25em] object-contain mx-auto object-center mb-2 md:mt-4 xl:mt-0 self-center"
           />
         </div>
       </header>
