@@ -5,7 +5,7 @@ import { FC, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
 import useSmallScreen from "@/lib/useSmallScreen";
-import { cn, formatName, setSlug } from "@/lib/utils";
+import { cn, setSlug } from "@/lib/utils";
 import useMediumScreen from "@/lib/useMediumScreen";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { paymentPlans } from "@/lib/payment-plans";
