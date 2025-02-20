@@ -488,6 +488,7 @@ const BlogDisplayPage: FC = () => {
                     {topics.sort().map((topic) => (
                       <div key={topic} className="flex items-center mr-1">
                         <BpCheckbox
+                          id={topic}
                           checked={selectedTopics.includes(topic)}
                           onChange={(e) =>
                             handleTopicCheckboxChange(topic, e.target.checked)
@@ -573,7 +574,7 @@ const BlogDisplayPage: FC = () => {
                                 )
                               }
                             />
-                            <label htmlFor="select-all-year" className="ml-2">
+                            <label htmlFor={`ALL-${year}`} className="ml-2">
                               <p>Select Entire Year</p>
                             </label>
                           </div>
@@ -648,7 +649,7 @@ const BlogDisplayPage: FC = () => {
                                       }
                                     />
                                     <label
-                                      htmlFor="select-all-month"
+                                      htmlFor={`ALL-${year}-${monthData.month}`}
                                       className="ml-2"
                                     >
                                       <p>Select Entire Month</p>
@@ -681,7 +682,7 @@ const BlogDisplayPage: FC = () => {
                                             }
                                           />
                                           <label
-                                            htmlFor={dayData[0]?.title}
+                                            htmlFor={`${year}-${monthData.month}`}
                                             className="ml-2"
                                           >
                                             <p>
@@ -731,6 +732,7 @@ const BlogDisplayPage: FC = () => {
                     {authors.sort().map((author) => (
                       <div key={author} className="flex items-center mr-1">
                         <BpCheckbox
+                          id={author}
                           className={theme === "dark" ? "text-foreground" : ""}
                           checked={selectedAuthors.includes(author)}
                           onChange={(e) =>
