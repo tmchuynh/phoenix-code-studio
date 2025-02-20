@@ -17,27 +17,56 @@ const BlogPostPage = () => {
   const [post, setPost] = useState<BlogPost>();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [fileExists, setFileExists] = useState<boolean | null>(null);
+  const [fileName, setFileName] = useState("");
 
   useEffect(() => {
-    async function fetchBlog() {
-      try {
-        const response = await fetch(`/api/blogs/${slug}`);
-        if (!response.ok) {
-          throw new Error("Blog post not found");
+    if (slug && typeof slug === "string") {
+      async function fetchBlog() {
+        try {
+          const response = await fetch(`/api/blogs/${slug}`);
+          if (!response.ok) {
+            throw new Error("Blog post not found");
+          }
+          const data = await response.json();
+          setPost(data);
+        } catch (err: any) {
+          setError(err.message);
+        } finally {
+          setTimeout(() => {
+            setLoading(false);
+          }, 500);
         }
-        const data = await response.json();
-        setPost(data);
-      } catch (err: any) {
-        setError(err.message);
-      } finally {
-        setTimeout(() => {
-          setLoading(false);
-        }, 500);
       }
-    }
 
-    if (slug) {
+      const checkFileExist = async () => {
+        // Check if the file exists
+        try {
+          const fileName = `/images/blog_images/${slug}-1.jpg`;
+          setFileName(fileName);
+          const encodedFileName = encodeURIComponent(fileName); // Ensure the filename is properly encoded
+
+          const fileResponse = await fetch(
+            `/api/blogs/check-image-file?fileName=${encodedFileName}`
+          );
+
+          const data = await fileResponse.json();
+          console.log(data);
+
+          if (!fileResponse.ok) {
+            throw new Error("Image not found");
+          }
+
+          setFileExists(true);
+        } catch (err: any) {
+          setFileExists(false);
+        } finally {
+          setLoading(false);
+        }
+      };
+
       fetchBlog();
+      checkFileExist();
     }
   }, [slug]);
 
@@ -97,13 +126,16 @@ const BlogPostPage = () => {
             </div>
           </div>
 
-          <Image
-            src={`/images/blog_images/${setSlug(post!.title)}.jpg`}
-            width={500}
-            height={300}
-            alt={post!.title}
-            className="w-full lg:h-[25em] object-contain mx-auto object-center mb-2 md:mt-4 xl:mt-0 self-center"
-          />
+          {post?.title && (
+            <Image
+              src={`/images/blog_images/${setSlug(post?.title)}.jpg`}
+              width={500}
+              height={300}
+              priority={true}
+              alt={`${post!.title}-image`}
+              className="w-full lg:h-[25em] object-contain mx-auto object-center mb-2 md:mt-4 xl:mt-0 self-center"
+            />
+          )}
         </div>
       </header>
 
@@ -164,15 +196,27 @@ const BlogPostPage = () => {
           </section>
         ))}
 
-      <section>
-        <h2>Conclusion</h2>
-        {post?.conclusions.map((paragraph, index) => (
-          <p key={index}>{paragraph}</p>
-        ))}
+      <section className="flex flex-col lg:flex-row xl:flex-row-reverse md:gap-5 lg:gap-10">
+        <div>
+          <h2>Conclusion</h2>
+          {post?.conclusions.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
+        {fileExists && (
+          <Image
+            src={`${fileName}`}
+            width={500}
+            height={300}
+            priority={false}
+            alt={`optional-image-1`}
+            className="w-full md:w-3/4 lg:w-1/2 xl:w-full h-full object-contain mx-auto object-center mb-2 lg:mt-4 xl:mt-0 self-center"
+          />
+        )}
       </section>
 
-      <footer className="mt-8 text-center md:w-3/4 mx-auto">
-        <p>
+      <footer className="md:mt-8 xl:mt-0 text-center lg:w-3/4 mx-auto">
+        <p className="leading-3">
           Read more related posts about{" "}
           {post?.topics.map((topic, index) => (
             <strong key={index} className="hover:text-tertiary">

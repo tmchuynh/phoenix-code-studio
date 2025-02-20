@@ -11365,7 +11365,7 @@ export const blogs: BlogPost[] = [
     excerpt:
       "UX and UI design are two essential pillars of creating successful digital products. While UX focuses on optimizing the user experience to ensure functionality and ease of use, UI is concerned with the visual elements that make the product aesthetically appealing and engaging.",
     featured: true,
-    icons: ["usability.png"],
+    icons: [],
     topics: ["Design", "UX/UI", "Career", "Comparison"],
     intro: [
       "In today’s digital landscape, the terms 'UX Design' and 'UI Design' are often used interchangeably, but they represent distinct aspects of the design process. Understanding the difference between the two—and how they work together—is crucial for creating successful, user-centered digital products. UX (User Experience) design focuses on the overall experience a user has while interacting with a product, ensuring it is intuitive, efficient, and meets their needs. UI (User Interface) design, on the other hand, is concerned with the look and feel of the product, crafting visually appealing interfaces that facilitate smooth interaction. Both disciplines are interconnected, with UX laying the groundwork for a functional and user-friendly experience, and UI bringing that vision to life with stunning visual design.",
