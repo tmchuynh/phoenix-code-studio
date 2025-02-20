@@ -123,7 +123,7 @@ const FeaturedBlogs = () => {
                   width={30}
                   height={30}
                   alt={`${icon}-Icon`}
-                  className="mr-2"
+                  className="mr-2 w-8 h-8"
                 />
               ))}
             </div>

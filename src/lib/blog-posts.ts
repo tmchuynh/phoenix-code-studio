@@ -6210,13 +6210,8 @@ export const blogs: BlogPost[] = [
     icons: [
       "seo.png",
       "web-design.png",
-      "relational.png",
-      "contact-map.pngc",
       "dynamic.png",
       "project-management.png",
-      "meeting-bubbles.png",
-      "project-management-paperwork.png",
-      "performance.png",
     ],
     topics: ["Business", "Resources", "Entrepreneurship"],
     intro: [
@@ -8768,7 +8763,12 @@ export const blogs: BlogPost[] = [
     excerpt:
       "In this article, we explore key strategies for managing and optimizing your business database. From ensuring data security and compliance with encryption and access control to improving scalability through sharding and replication, we cover essential best practices. By focusing on data integrity, performance, and security, businesses can build robust, scalable databases that support growth and maintain high efficiency.",
     featured: true,
-    icons: [""],
+    icons: [
+      "back-up.png",
+      "computing.png",
+      "data-modelling.png",
+      "database-storage.png",
+    ],
     topics: ["Business", "Software Engineer", "Architecture"],
     intro: [
       "As businesses grow and handle increasing volumes of data, it becomes essential to implement strategies that ensure their database remains efficient, scalable, and secure. Key practices for scaling and evolving a database include sharding, which splits data across multiple servers to reduce bottlenecks; replication, which creates copies of data for high availability and failover; and partitioning, which divides large datasets into smaller, manageable sections. Additional strategies like load balancing, caching, and the decision between horizontal and vertical scaling further optimize database performance.",
