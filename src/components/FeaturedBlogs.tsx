@@ -10,6 +10,7 @@ import { useState } from "react";
 import { blogs } from "@/lib/blog-posts";
 import { setSlug } from "@/lib/utils";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 const FeaturedBlogs = () => {
   const isSmallScreen = useSmallScreen();
@@ -114,6 +115,18 @@ const FeaturedBlogs = () => {
             >
               Read More
             </Button>
+            <div className="justify-between pt-6 hidden md:flex">
+              {blog.icons.map((icon, iconIndex) => (
+                <Image
+                  key={iconIndex}
+                  src={`/images/blog_icons/${icon}`}
+                  width={30}
+                  height={30}
+                  alt={`${icon}-Icon`}
+                  className="mr-2"
+                />
+              ))}
+            </div>
           </div>
         ))}
       </div>

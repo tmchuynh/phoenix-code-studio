@@ -85,24 +85,24 @@ const WelcomePage: FC = () => {
       {/* Services Highlight Section */}
       <ServiceHighlights />
 
-      <JoinUs />
-
       {/* About Section */}
       <AboutSection />
+
+      <JoinUs />
+
+      {/* Featured Blogs Section */}
+      <FeaturedBlogs />
 
       {/* Call to Action Section */}
       <div className="px-12 mx-auto">
         <CallToAction />
       </div>
 
-      {/* Featured Projects Section */}
-      <FeaturedProjects />
-
       {/* Testimonials Section */}
       <Testimonials />
 
-      {/* Featured Blogs Section */}
-      <FeaturedBlogs />
+      {/* Featured Projects Section */}
+      <FeaturedProjects />
     </main>
   );
 };
