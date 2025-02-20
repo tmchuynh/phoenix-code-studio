@@ -1,11 +1,11 @@
 "use client";
 
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { BpCheckbox } from "@/components/ui/checkbox-custom";
-import Image from "next/image";
 import {
   Collapsible,
   CollapsibleContent,
@@ -23,7 +23,10 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import { blogs } from "@/lib/blog-posts";
+import { BlogPost } from "@/lib/interfaces";
 import useBetweenLargeAndXL from "@/lib/onlyLargerScreens";
+import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
 import {
   cn,
@@ -34,13 +37,28 @@ import {
   setSlug,
   sortBlogsByDate,
 } from "@/lib/utils";
-import { ChevronsUpDown } from "lucide-react";
-import { useRouter } from "next/navigation";
-import { FC, useEffect, useState, useCallback } from "react";
-import { blogs } from "@/lib/blog-posts";
+import { ChevronsUpDown, Terminal } from "lucide-react";
 import { useTheme } from "next-themes";
-import useMediumScreen from "@/lib/useMediumScreen";
-import { BlogPost } from "@/lib/interfaces";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { FC, useCallback, useEffect, useState } from "react";
+import { FaFilterCircleXmark } from "react-icons/fa6";
+import { GoAlertFill } from "react-icons/go";
+
+const IconDisplay: FC<{
+  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+}> = ({ Icon }) => {
+  return (
+    <div>
+      {/* Render the icon */}
+      {Icon ? (
+        <Icon className="text-4xl mx-auto my-1" />
+      ) : (
+        <Terminal className="my-1 size-5 md:size-6" />
+      )}
+    </div>
+  );
+};
 
 const BlogDisplayPage: FC = () => {
   const router = useRouter();
@@ -72,6 +90,22 @@ const BlogDisplayPage: FC = () => {
     author: false,
   });
   const [filtersCleared, setFiltersCleared] = useState(false);
+  const alertContent = filtersCleared
+    ? {
+        title: "Filters Cleared",
+        description: "You can now start a new search or modify your filters.",
+        icon: FaFilterCircleXmark,
+        type: "filter",
+      }
+    : noResults
+    ? {
+        title: "No Results",
+        description:
+          "No blogs match your selected filters. Filters have been cleared.",
+        icon: GoAlertFill,
+        type: "results",
+      }
+    : null;
 
   const [currentPage, setCurrentPage] = useState(1);
   const [articlesPerPage, setArticlesPerPage] = useState(10);
@@ -309,6 +343,7 @@ const BlogDisplayPage: FC = () => {
   }
 
   const handleTopicCheckboxChange = (topic: string, checked: boolean) => {
+    setFiltersCleared(false);
     if (checked) {
       handleTopicChange([...selectedTopics, topic]);
     } else {
@@ -325,6 +360,7 @@ const BlogDisplayPage: FC = () => {
   ) => {
     const dayString = `${year}-${month}-${day}`; // Use a "year-month-day" format for unique identification
 
+    setFiltersCleared(false);
     if (checked) {
       setSelectedDays((prev) => [...prev, dayString]); // Add the day to the selectedDays array
     } else {
@@ -356,6 +392,7 @@ const BlogDisplayPage: FC = () => {
     const dayKey = `${year}-${month}-${day}`;
     const monthKey = `${year}-${month}`;
 
+    setFiltersCleared(false);
     if (type === "day") {
       // Handle the checkbox change for a specific day
       if (checked) {
@@ -387,6 +424,7 @@ const BlogDisplayPage: FC = () => {
 
   const handleTopicClick = (topic: string) => {
     clearFilters("topic");
+    setFiltersCleared(false);
     if (!selectedTopics.includes(topic)) {
       const updatedTopics = [...selectedTopics, topic];
       setSelectedTopics(updatedTopics);
@@ -396,6 +434,7 @@ const BlogDisplayPage: FC = () => {
 
   const handleReadingLengthClick = (length: string) => {
     clearFilters("readingLength");
+    setFiltersCleared(false);
     if (!selectedLength.includes(length)) {
       const updatedLength = [length];
       setSelectedLength(updatedLength);
@@ -462,7 +501,7 @@ const BlogDisplayPage: FC = () => {
       </p>
 
       {/* Filter Options */}
-      <section className="mb-8">
+      <section className="mb-8 relative">
         <section className="flex flex-col lg:flex-row justify-center sm:items-end sm:space-y-4 md:gap-4">
           <div className="w-full gap-3 grid grid-cols-1 pb-5 items-start">
             {/* Topic Filter */}
@@ -852,30 +891,24 @@ const BlogDisplayPage: FC = () => {
           </Button>
         </section>
 
-        {(filtersCleared || noResults) && (
-          <section className="h-12 p-1">
-            {/* Confirmation Text for Filters Cleared */}
-            {filtersCleared && (
-              <div className="my-4 text-center">
-                {filtersCleared && (
-                  <p className="text-destructive font-extrabold m-0 p-0">
-                    Filters have been cleared successfully!
-                  </p>
-                )}
-              </div>
-            )}
-
-            {/* No results warning */}
-            {noResults && (
-              <div className="my-4 text-center">
-                {noResults && (
-                  <p className="text-destructive font-extrabold m-0 p-0">
-                    No blogs match your selected filters. Filters have been
-                    cleared.
-                  </p>
-                )}
-              </div>
-            )}
+        {alertContent && (
+          <section className="h-24 md:w-1/2 md:left-1/4 xl:w-3/4 2xl:w-1/2 xl:left-[12em] 2xl:left-1/4 p-1 absolute z-10">
+            <div className="my-4 md:my-0">
+              <Alert
+                className="flex items-center space-x-3 xl:space-x-9 xl:px-11"
+                variant={
+                  alertContent.type === "results" ? "warning" : "tertiary"
+                }
+              >
+                <IconDisplay Icon={alertContent.icon} />
+                <div>
+                  <AlertTitle>{alertContent.title}</AlertTitle>
+                  <AlertDescription>
+                    {alertContent.description}
+                  </AlertDescription>
+                </div>
+              </Alert>
+            </div>
           </section>
         )}
       </section>
