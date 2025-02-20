@@ -18,7 +18,7 @@ export const blogs: BlogPost[] = [
       "pie-chart.png",
       "metrics.png",
     ],
-    topics: ["Analytics", "Business"],
+    topics: ["Data", "Business"],
     intro: [
       "Google Analytics is one of the most powerful tools available for tracking and analyzing website performance. It provides website owners and digital marketers with an in-depth understanding of how users interact with their site, where they come from, and what actions they take during their visit. With its robust suite of reporting tools, Google Analytics enables you to monitor everything from traffic sources to user demographics and behavior, all of which can help you make informed decisions to enhance your website’s performance. By continuously analyzing the data, businesses can refine their digital strategies, optimize user experiences, and ultimately drive more conversions and achieve their business goals.",
     ],
@@ -101,7 +101,7 @@ export const blogs: BlogPost[] = [
     title: "Top Contactless Business Cards: Modern Networking Solutions",
     author: "Tina Huynh",
     wordCount: 3924,
-    timeSpan: "standard",
+    timeSpan: "lengthened",
     time: "14m 16s",
     date: { month: 4, day: 3, year: 2022 },
     excerpt:
@@ -448,7 +448,7 @@ export const blogs: BlogPost[] = [
     title: "Key Factors to Consider When Hiring a Designer or Developer",
     author: "Tina Huynh",
     wordCount: 1411,
-    timeSpan: "compact",
+    timeSpan: "mini",
     time: "5m 8s",
     date: { month: 2, day: 1, year: 2025 },
     excerpt:
@@ -461,7 +461,7 @@ export const blogs: BlogPost[] = [
       "data.png",
       "data-modelling.png",
     ],
-    topics: ["Research", "Software Engineer"],
+    topics: ["Software Engineer", "Getting Started"],
     intro: [
       "Finding the right designer for your project is crucial to ensuring that the final product not only meets but exceeds your expectations. A designer plays a pivotal role in bringing your vision to life, and their work should align with your business goals and target audience. Whether you're looking for a web designer to create an engaging online presence, a graphic designer to enhance your brand identity, or a UI/UX expert to improve user interaction and experience, there are several key factors to consider before making your choice.",
       "It's important to evaluate their expertise, portfolio, and design process to ensure that they have the skills and experience to deliver the results you need. Moreover, consider their communication style and approach to collaboration—working with a designer who understands your needs and can effectively bring your ideas to life will ultimately lead to a smoother design process and a more successful final product.",
@@ -575,7 +575,7 @@ export const blogs: BlogPost[] = [
       "search-engine-optimization.png",
       "marketing-strategy.png",
     ],
-    topics: ["Research"],
+    topics: ["Getting Started"],
     intro: [
       "Before embarking on a web design project, it's crucial for you, as the customer, to have a basic understanding of both your industry and some key web design fundamentals. Having this knowledge allows you to approach the consultation with a clearer vision of what you want, enabling a more productive and efficient discussion. When you understand the trends, challenges, and opportunities within your industry, you'll be able to convey your specific business needs and how they align with your website’s goals.",
       "Additionally, familiarizing yourself with core design principles—such as user experience (UX), mobile responsiveness, and visual hierarchy—will empower you to make more informed decisions about the design process. This proactive approach ensures that your designer has the context they need to create a website that truly reflects your brand and objectives, ultimately leading to a better collaboration and a final product that meets or exceeds your expectations.",
@@ -676,7 +676,7 @@ export const blogs: BlogPost[] = [
       "project-management-paperwork.png",
       "timeline.png",
     ],
-    topics: ["Research", "Design", "UX/UI", "Resources"],
+    topics: ["Getting Started", "Design", "UX/UI", "Resources"],
     intro: [
       "Starting a design project is exciting, but clear communication is key to making sure everything goes smoothly. Whether you’re working on a new website, a logo, or a rebranding project, there are several essential things to tell your designer before getting started. Properly setting expectations and providing the right context will help the designer understand your vision and create a design that meets your needs.",
     ],
@@ -762,7 +762,7 @@ export const blogs: BlogPost[] = [
     title: "Key Questions to Ask During a Consultation",
     author: "Tina Huynh",
     wordCount: 1629,
-    timeSpan: "compact",
+    timeSpan: "mini",
     time: "5m 55s",
     date: { month: 5, day: 2, year: 2024 },
     excerpt:
@@ -776,7 +776,7 @@ export const blogs: BlogPost[] = [
       "illustration.png",
       "collaborate.png",
     ],
-    topics: ["Business", "Research"],
+    topics: ["Business", "Getting Started"],
     intro: [
       "A consultation is an essential first step in any design project, serving as the foundation for defining your goals, expectations, and the overall scope of the project. This is your opportunity to ensure that both you and the designer are aligned on the vision and objectives before any work begins. Whether you're meeting with a designer for a website, branding, or any other digital service, asking the right questions during the consultation is crucial.",
       "By discussing the project’s goals, timeline, budget, and key deliverables upfront, you can establish a clear direction and avoid potential misunderstandings later on. Additionally, a well-conducted consultation allows you to gauge the designer’s expertise, style, and approach, ensuring that they are the right fit for your project. Ultimately, asking insightful questions helps build a strong foundation for a successful partnership and ensures that the final product aligns with your vision and business needs.",
@@ -864,7 +864,7 @@ export const blogs: BlogPost[] = [
     title: "Web Design Explained: A Comprehensive Guide",
     author: "Tina Huynh",
     wordCount: 1586,
-    timeSpan: "compact",
+    timeSpan: "mini",
     time: "5m 46s",
     date: { month: 11, day: 2, year: 2024 },
     excerpt:
@@ -879,7 +879,7 @@ export const blogs: BlogPost[] = [
       "research-and-development.png",
       "project-management-paperwork.png",
     ],
-    topics: ["UX/UI", "Web Development", "Accessibility"],
+    topics: ["UX/UI", "Design", "Getting Started"],
     intro: [
       "Web design is the process of planning, creating, and updating websites. It involves a combination of graphic design, user experience (UX) design, and coding to build a functional and visually appealing site. Whether it’s a personal blog or an e-commerce platform, web design is crucial to establishing a strong online presence. A well-designed website not only enhances user experience but also drives business success by engaging visitors and encouraging them to take action.",
     ],
@@ -1011,7 +1011,7 @@ export const blogs: BlogPost[] = [
       "communication.png",
       "confidentiality.png",
     ],
-    topics: ["UX/UI", "Design", "Web Development"],
+    topics: ["UX/UI", "Design"],
     intro: [
       "A website is more than just a digital presence—it’s an interactive experience that shapes how users perceive your brand. User Experience (UX) design plays a crucial role in ensuring that visitors not only find what they need but also enjoy the process, leading to higher engagement, retention, and conversions. A well-designed UX focuses on usability, accessibility, and intuitive navigation, ensuring that every element—from page layout to interactive features—works seamlessly and efficiently. A poor user experience, on the other hand, leads to frustration, high bounce rates, and lost business opportunities. Beyond aesthetics, UX design enhances functionality by prioritizing speed, responsiveness, and accessibility for all users, including those with disabilities. By implementing user research, wireframing, and usability testing, businesses can create websites that not only look great but also provide a smooth, frustration-free experience.",
     ],
@@ -1205,7 +1205,7 @@ export const blogs: BlogPost[] = [
       "Building an Inclusive Web: Incorporating Accessibility into Your Design",
     author: "Tina Huynh",
     wordCount: 2843,
-    timeSpan: "standard",
+    timeSpan: "compact",
     time: "10m 20s",
     date: { month: 8, day: 15, year: 2024 },
     excerpt:
@@ -1217,7 +1217,7 @@ export const blogs: BlogPost[] = [
       "video-call.png",
       "online-community.png",
     ],
-    topics: ["Accessibility", "Research"],
+    topics: ["UX/UI"],
     intro: [
       "Websites serve as the gateway to information, services, and opportunities, connecting people across the globe. However, many websites still fail to accommodate users with disabilities, creating barriers to accessibility and limiting equal participation in the digital world.",
       "With over 1 billion people worldwide living with a disability, ensuring inclusive web design is not just a legal or ethical obligation—it’s a way to create a more equitable, user-friendly internet for all. By implementing accessible design principles, businesses and content creators can expand their audience reach, improve usability, and enhance overall user experience for everyone, not just those with disabilities. Prioritizing web accessibility means removing barriers, improving engagement, and ensuring that digital spaces are truly open and usable for all individuals—regardless of their abilities.",
@@ -1368,8 +1368,8 @@ export const blogs: BlogPost[] = [
       "Demystifying Blockchain Architecture: The Foundation of Decentralized Systems",
     author: "Tina Huynh",
     wordCount: 3882,
-    timeSpan: "standard",
-    time: "14m 7s",
+    timeSpan: "lengthened",
+    time: "14m 8s",
     date: { month: 8, day: 15, year: 2024 },
     excerpt:
       "Blockchain architecture forms the backbone of decentralized systems and cryptocurrencies, organizing transaction data into secure, transparent, and immutable blocks. By eliminating the need for central authorities, it facilitates peer-to-peer transactions, disrupting industries such as finance and healthcare. A solid understanding of this architecture is crucial for businesses and developers venturing into decentralized application development.",
@@ -1381,7 +1381,7 @@ export const blogs: BlogPost[] = [
       "blockchain.png",
       "blockchain-chain.png",
     ],
-    topics: ["Blockchain", "Architecture", "AI/ML"],
+    topics: ["Data"],
     intro: [
       "Blockchain technology is transforming industries by offering a secure, decentralized, and transparent method for storing and transferring data. Unlike traditional centralized databases, blockchain relies on distributed ledger technology (DLT) to ensure immutability, security, and trust in transactions.",
       "Originally developed to support cryptocurrencies like Bitcoin and Ethereum, blockchain has evolved into a versatile solution impacting a wide range of industries. From supply chain management and finance to healthcare, identity verification, and digital contracts, businesses are leveraging blockchain to enhance efficiency, security, and automation. As blockchain adoption accelerates, innovations such as smart contracts, decentralized finance (DeFi), non-fungible tokens (NFTs), and enterprise blockchain solutions are shaping the future of digital transactions. Governments, corporations, and startups are exploring its potential to increase transparency, reduce fraud, and streamline operations.",
@@ -1610,14 +1610,14 @@ export const blogs: BlogPost[] = [
     title: "Decoding GUI Architecture: Building Seamless User Interfaces",
     author: "Tina Huynh",
     wordCount: 3588,
-    timeSpan: "standard",
+    timeSpan: "lengthened",
     time: "13m 3s",
     date: { month: 8, day: 15, year: 2024 },
     excerpt:
       "Graphical User Interface (GUI) architecture is essential for building intuitive, user-friendly systems. A well-structured GUI enables users to interact with software effortlessly, combining visual design, layout, and interactions to create an efficient and aesthetically pleasing experience. Mastering GUI design principles and architecture is crucial for developing applications that provide seamless and engaging user experiences.",
     featured: false,
     icons: ["blog.png", "illustration.png", "gui.png"],
-    topics: ["Architecture", "AI/ML", "Web Development"],
+    topics: ["UX/UI", "Design"],
     intro: [
       "A Graphical User Interface (GUI) architecture determines how software applications structure their interface and manage interactions between users and digital systems. A well-designed architecture not only enhances usability and responsiveness but also improves scalability, maintainability, and performance—key factors in modern UI development.",
       "As user expectations evolve and applications become more complex, selecting the right GUI architecture is more important than ever. From traditional MVC and MVVM patterns to modern component-based architectures, state management solutions like Flux and Redux, and Micro Frontends, different approaches offer unique benefits tailored to specific use cases. Whether you're building desktop applications, mobile experiences, or immersive UIs in AR/VR, understanding GUI architectures is essential to crafting seamless, user-friendly digital experiences.",
@@ -1831,7 +1831,7 @@ export const blogs: BlogPost[] = [
       "book-magic.png",
       "book-stack.png",
     ],
-    topics: ["Self-Development", "Resources"],
+    topics: ["Self-Development", "Resources", "Getting Started"],
     intro: [
       "Choosing a career in tech means embracing a lifelong journey of learning and adaptation. The industry is constantly evolving, with new programming languages, frameworks, tools, and best practices emerging all the time. Staying ahead requires curiosity, dedication, and a willingness to continuously expand your skill set. But then again, isn’t that true for any career? Growth and improvement are essential in every field, and technology is no exception.",
       "The best developers, engineers, and tech professionals are those who actively seek out knowledge, refine their craft, and adapt to change. Whether you’re learning a new coding language, mastering a complex algorithm, or understanding better ways to collaborate with a team, improvement is the key to success. The ever-changing nature of tech might seem overwhelming, but it’s also what makes it so exciting. Every project, challenge, and breakthrough presents an opportunity to learn something new. In this dynamic field, the willingness to stay curious and continuously grow is what sets apart great professionals from the rest.",
@@ -2167,7 +2167,7 @@ export const blogs: BlogPost[] = [
     wordCount: 1113,
     timeSpan: "mini",
     time: "4m 3s",
-    date: { month: 5, day: 19, year: 2023 },
+    date: { month: 5, day: 22, year: 2023 },
     excerpt:
       "Writing is a crucial skill for developers, playing a key role in documentation, communication, and business success. Clear and concise documentation ensures that code is understandable and maintainable, while effective communication helps developers collaborate efficiently with teams, stakeholders, and users.",
     featured: true,
@@ -2270,15 +2270,15 @@ export const blogs: BlogPost[] = [
   {
     title: "How Tailwind CSS Can Speed Up Your Development Process",
     author: "Tina Huynh",
-    wordCount: 3733,
-    timeSpan: "standard",
-    time: "13m 34s",
+    wordCount: 3740,
+    timeSpan: "lengthened",
+    time: "13m 36s",
     date: { month: 11, day: 20, year: 2024 },
     excerpt:
       "Tailwind CSS is a highly flexible framework that empowers developers to craft custom, responsive designs with ease. By offering a comprehensive set of utility classes, it eliminates the need for writing extensive CSS, allowing developers to style HTML elements directly. This approach accelerates the development process, enabling the creation of visually rich, functional interfaces in less time.",
     featured: true,
     icons: ["illustration.png", "web-design.png", "dynamic.png"],
-    topics: ["UX/UI", "Design", "Web Development"],
+    topics: ["UX/UI", "Design", "Resources"],
     intro: [
       "In the fast-paced world of web development, efficiency is key—and Tailwind CSS has become a game-changer for developers looking to build sleek, responsive designs without writing custom CSS from scratch. Unlike traditional CSS frameworks like Bootstrap, which come with predefined styles and components, Tailwind CSS takes a utility-first approach, allowing developers to style elements directly in their HTML with small, reusable utility classes. One of Tailwind's biggest advantages is its flexibility and speed.",
       "By eliminating the need for writing extensive custom CSS, developers can rapidly prototype, adjust layouts on the fly, and maintain consistency across projects. Its responsive design utilities, built-in dark mode support, and intelligent optimization features make it a highly efficient tool for both beginners and experienced developers. Additionally, Tailwind’s JIT (Just-In-Time) compiler ensures lightweight, performance-optimized CSS, generating only the styles your project needs. This results in faster load times, smaller file sizes, and improved user experience.",
@@ -2575,7 +2575,7 @@ export const blogs: BlogPost[] = [
       "JavaScript Frameworks: What's Next for the Future of Web Development?",
     author: "Tina Huynh",
     wordCount: 1479,
-    timeSpan: "compact",
+    timeSpan: "mini",
     time: "5m 23s",
     date: { month: 3, day: 23, year: 2022 },
     excerpt:
@@ -2588,7 +2588,7 @@ export const blogs: BlogPost[] = [
       "computing.png",
       "javascript.png",
     ],
-    topics: ["Resources", "Software Engineer", "Web Development"],
+    topics: ["Resources"],
     intro: [
       "JavaScript frameworks have been at the heart of modern web development, enabling developers to build faster, more efficient, and highly interactive applications. As technology evolves, so do the frameworks that power the web, with emerging trends shaping the future of frontend and backend development. With frameworks like React, Vue, Angular, and Svelte continuously innovating, the focus is shifting towards performance optimization, server-side rendering (SSR), and developer-friendly tooling.",
       "Meta-frameworks like Next.js and Nuxt.js are also gaining popularity, offering better SEO, scalability, and improved user experiences. Looking ahead, we can expect lighter, faster, and more modular frameworks that emphasize static site generation (SSG), edge computing, and AI-powered development tools. As JavaScript frameworks continue to evolve, developers must stay adaptable and embrace new advancements to build the next generation of dynamic, scalable web applications.",
@@ -2700,7 +2700,7 @@ export const blogs: BlogPost[] = [
     title: "Why Accessibility Should Be a Priority in Web Development",
     author: "Tina Huynh",
     wordCount: 2809,
-    timeSpan: "standard",
+    timeSpan: "compact",
     time: "10m 13s",
     date: { month: 5, day: 1, year: 2023 },
     excerpt:
@@ -2712,7 +2712,7 @@ export const blogs: BlogPost[] = [
       "online-community.png",
       "messaging.png",
     ],
-    topics: ["Accessibility", "Design", "Web Development"],
+    topics: ["Design"],
     intro: [
       "Web accessibility ensures that everyone, regardless of ability, can navigate, understand, and interact with online content. By designing websites that accommodate users with visual, auditory, motor, or cognitive impairments, businesses create a more inclusive digital experience that benefits all visitors. Accessible web design is not just about compliance with standards like WCAG (Web Content Accessibility Guidelines)—it’s about equal opportunity.",
       "Features like alt text for images, keyboard-friendly navigation, color contrast adjustments, and screen reader compatibility make websites more usable for a wider audience, including those with disabilities. Beyond inclusivity, accessibility also enhances SEO, improves user experience, and expands your reach.",
@@ -2931,7 +2931,7 @@ export const blogs: BlogPost[] = [
       "blockchain.png",
       "blockchain-chain.png",
     ],
-    topics: ["Blockchain", "Resources"],
+    topics: ["Data", "Resources"],
     intro: [
       "Blockchain technology is revolutionizing industries by introducing secure, transparent, and decentralized systems that eliminate the need for intermediaries. Originally developed as the foundation for cryptocurrencies like Bitcoin, blockchain has evolved into a game-changing innovation with applications in finance, supply chain, healthcare, and beyond.",
       "At its core, blockchain operates as a distributed ledger, recording transactions across a network of computers in a way that is immutable and tamper-proof. This decentralized structure ensures greater security, trust, and efficiency, making it an ideal solution for smart contracts, digital identity verification, and transparent financial transactions. As businesses and governments explore real-world blockchain applications, understanding its potential and challenges becomes crucial.",
@@ -3112,9 +3112,9 @@ export const blogs: BlogPost[] = [
     title: "Unlocking the Power of Data Science: Turning Data into Insights",
     author: "Tina Huynh",
     wordCount: 6951,
-    timeSpan: "lengthened",
+    timeSpan: "comprehensive",
     time: "25m 17s",
-    date: { month: 1, day: 15, year: 2023 },
+    date: { month: 1, day: 2, year: 2023 },
     excerpt:
       "Data science is transforming the way we approach problem-solving and decision-making across various industries. By leveraging large volumes of data and advanced analytical techniques, it enables organizations to uncover hidden patterns, predict future trends, and make data-driven decisions that were once difficult or impossible.",
     featured: true,
@@ -3125,7 +3125,7 @@ export const blogs: BlogPost[] = [
       "growth-chart.png",
       "metrics-chart.png",
     ],
-    topics: ["Data Science", "Analytics", "AI/ML", "IoT"],
+    topics: ["Data", "Getting Started"],
     intro: [
       "In today's digital age, data is more than just numbers—it’s a powerful asset that drives decision-making and fuels innovation. Data science is the art of extracting meaningful insights from raw data, using statistics, machine learning, and analytical techniques to solve complex problems across industries. From predicting customer behavior to detecting fraud and optimizing business operations, data science plays a crucial role in helping organizations make informed, data-driven decisions.",
       "By leveraging AI, big data, and predictive analytics, businesses can identify patterns, automate processes, and unlock new opportunities for growth. Understanding data science means bridging the gap between raw information and strategic action. As technology advances, the ability to harness data effectively becomes a key competitive advantage—making data science one of the most sought-after skills in today’s workforce.",
@@ -3609,9 +3609,9 @@ export const blogs: BlogPost[] = [
     title: "Transforming Connectivity: The Future of IoT Development",
     author: "Tina Huynh",
     wordCount: 5424,
-    timeSpan: "lengthened",
+    timeSpan: "comprehensive",
     time: "19m 43s",
-    date: { month: 1, day: 15, year: 2023 },
+    date: { month: 1, day: 2, year: 2023 },
     excerpt:
       "The Internet of Things (IoT) is reshaping the way devices communicate, from everyday household items to complex industrial machinery. By enabling seamless data exchange and automation, IoT enhances efficiency and convenience across various sectors. It has sparked innovation in areas such as smart homes, healthcare, manufacturing, and transportation, fundamentally altering both our personal lives and business operations.",
     featured: false,
@@ -3622,7 +3622,7 @@ export const blogs: BlogPost[] = [
       "iot-internet-of-things.png",
       "iot.png",
     ],
-    topics: ["Blockchain", "IoT", "AI/ML"],
+    topics: ["Data"],
     intro: [
       "The Internet of Things (IoT) is reshaping the way devices, systems, and people interact, creating a seamlessly connected world where automation and real-time data exchange drive efficiency. From smart homes and wearable tech to industrial automation and healthcare solutions, IoT is revolutionizing connectivity across industries. One of the most groundbreaking innovations in IoT is the rise of edge computing, which processes data closer to the source, reducing latency and improving real-time decision-making. This is especially crucial in applications like autonomous vehicles, smart cities, and industrial IoT, where split-second responses are vital.",
       "Additionally, advancements in 5G technology are enabling faster, more reliable IoT networks, allowing millions of connected devices to communicate with minimal delay. Enhanced security measures, such as blockchain-based authentication and AI-driven threat detection, are also making IoT ecosystems more secure and resilient against cyber threats. As IoT continues to evolve, its integration with AI, machine learning, and cloud computing will further enhance automation, predictive analytics, and operational efficiency. These innovations are transforming industries, paving the way for a more intelligent, connected, and data-driven future.",
@@ -4030,7 +4030,7 @@ export const blogs: BlogPost[] = [
     title: "Web Scraping Unleashed: Exploring the Potential of Data Harvesting",
     author: "Tina Huynh",
     wordCount: 3813,
-    timeSpan: "standard",
+    timeSpan: "lengthened",
     time: "13m 52s",
     date: { month: 3, day: 21, year: 2022 },
     excerpt:
@@ -4043,7 +4043,7 @@ export const blogs: BlogPost[] = [
       "analysis.png",
       "research-setting.png",
     ],
-    topics: ["Data Science", "Software Engineer", "Analytics"],
+    topics: ["Data", "Getting Started"],
     intro: [
       "In the era of big data, information is one of the most valuable assets, and web scraping has become a powerful tool for gathering, analyzing, and leveraging online data. Whether for market research, competitor analysis, lead generation, or trend tracking, web scraping enables businesses and individuals to extract valuable insights from the vast digital landscape. By automating the process of collecting data from websites, web scraping eliminates manual effort and allows for real-time updates, ensuring access to the most accurate and relevant information.",
       "From tracking e-commerce pricing trends to aggregating job postings, the possibilities are endless. However, responsible data harvesting is essential—ethical web scraping practices ensure compliance with legal guidelines and respect for website policies. With the right tools and techniques, web scraping opens doors to limitless opportunities, transforming raw data into actionable intelligence that fuels business growth and innovation.",
@@ -4454,7 +4454,7 @@ export const blogs: BlogPost[] = [
     title: "Inside Tech Startups: A Glimpse into the Engine Room of Innovation",
     author: "Tina Huynh",
     wordCount: 7016,
-    timeSpan: "lengthened",
+    timeSpan: "comprehensive",
     time: "25m 31s",
     date: { month: 3, day: 21, year: 2022 },
     excerpt:
@@ -4468,7 +4468,7 @@ export const blogs: BlogPost[] = [
       "csr.png",
       "career.png",
     ],
-    topics: ["Entrepreneurship", "Innovation"],
+    topics: ["Business"],
     intro: [
       "Tech startups are at the forefront of innovation, reshaping industries and introducing groundbreaking solutions to everyday challenges. These agile companies operate in fast-paced environments, driven by the ambition to disrupt the status quo. In this blog, we’ll explore the inner workings of tech startups, the challenges they face, and the strategies behind their success.",
       "A tech startup is a young company that leverages technology to solve problems or create new opportunities. Unlike traditional businesses, startups aim for rapid growth and scalability, often operating in sectors like software development, AI, FinTech, and IoT. Their ability to innovate quickly and adapt to market demands sets them apart.",
@@ -5184,7 +5184,7 @@ export const blogs: BlogPost[] = [
       "iot.png",
       "research-and-development.png",
     ],
-    topics: ["Innovation", "AI/ML", "Blockchain"],
+    topics: ["Data"],
     intro: [
       "The digital revolution is transforming the way we live, work, and connect with technology. Rapid advancements in AI, blockchain, IoT, and cloud computing are driving innovation across industries, shaping a future that is smarter, faster, and more interconnected than ever. One of the most significant trends is Artificial Intelligence (AI) and automation, which are enhancing productivity, decision-making, and personalized user experiences. From chatbots and virtual assistants to predictive analytics, AI is revolutionizing how businesses operate. Blockchain technology is another game-changer, offering secure, decentralized solutions for finance, supply chains, and digital identity management.",
       "Similarly, the Internet of Things (IoT) is expanding connectivity, integrating smart devices into everyday life, improving efficiency in healthcare, logistics, and urban infrastructure. As businesses embrace cloud computing, edge computing, and cybersecurity advancements, the need for digital transformation is more critical than ever. Keeping pace with these emerging tech trends is essential for organizations looking to remain competitive and future-proof in an evolving digital landscape.",
@@ -5580,7 +5580,7 @@ export const blogs: BlogPost[] = [
       "illustration.png",
       "javascript.png",
     ],
-    topics: ["Design", "Web Development", "UX/UI"],
+    topics: ["Design", "UX/UI"],
     intro: [
       "A Graphical User Interface (GUI) serves as the bridge between users and software, making user-friendly design crucial for seamless interaction. A well-crafted GUI enhances usability, boosts efficiency, and ensures users can navigate applications with ease. Key principles of effective GUI development include consistency, simplicity, and responsiveness.",
       "Well-placed buttons, intuitive menus, and clear visual hierarchies guide users in understanding how to interact with a system. Minimalistic design, proper color contrast, and accessibility features create an inclusive and engaging experience for all users. In today’s development environment, responsive and adaptive design is vital for ensuring the interface works smoothly across various devices and screen sizes. Using wireframing, prototyping, and user testing, designers can refine the UI to achieve optimal usability and efficiency. A well-designed GUI isn’t just about looks—it’s about creating a frictionless user experience that enhances engagement and satisfaction. Balancing functionality with visual appeal ensures users enjoy a seamless, intuitive interaction every time they use the software.",
@@ -5736,7 +5736,7 @@ export const blogs: BlogPost[] = [
       "franchise.png",
       "design-thinking.png",
     ],
-    topics: ["Entrepreneurship", "Innovation"],
+    topics: ["Business"],
     intro: [
       "Tech entrepreneurs are not just building businesses—they are reshaping entire industries and revolutionizing the way we live, work, and connect with the world. With bold ideas, unwavering passion, and the ability to navigate rapid technological shifts, these innovators have created some of the most influential companies in history. From Apple and Microsoft to Google and Tesla, many of today’s biggest tech giants began as nothing more than ambitious projects in garages, dorm rooms, or tiny offices. What set them apart wasn’t just their groundbreaking ideas, but their persistence, adaptability, and willingness to take risks in the face of uncertainty. Their stories serve as powerful testaments to the limitless potential of entrepreneurship—proving that innovation starts with vision, grows through resilience, and succeeds through relentless execution. What will your impact be?",
     ],
@@ -5990,7 +5990,7 @@ export const blogs: BlogPost[] = [
       "career.png",
       "goal.png",
     ],
-    topics: ["Business", "Entrepreneurship", "Comparison", "Career"],
+    topics: ["Business", "Comparison", "Career", "Getting Started"],
     intro: [
       "When it comes to structuring your business, choosing the right entity type can significantly impact your legal responsibilities, tax obligations, and growth potential. In this article, we explore the key differences between LLCs (Limited Liability Companies), S Corporations, and C Corporations. We break down each structure's advantages, disadvantages, and the situations in which one might be more beneficial than the others, helping you decide which business entity is best suited for your needs. Understanding the distinctions between these structures is essential for making informed decisions that align with your goals for business operations and long-term success. Whether you're a small business owner, an entrepreneur, or someone looking to expand your operations, the right choice can set you up for financial efficiency, legal protection, and scalability.",
       "An LLC may offer simplicity and flexibility for small businesses, whereas S Corps provide tax advantages for certain types of businesses, and C Corps open the door for larger growth opportunities and public investments. We will help clarify these options, so you can navigate the complexities of business formation with confidence.",
@@ -6201,7 +6201,7 @@ export const blogs: BlogPost[] = [
     title: "Essential Tools That Fuel and Power My Success",
     author: "Tina Huynh",
     wordCount: 10065,
-    timeSpan: "lengthened",
+    timeSpan: "comprehensive",
     time: "36m 36s",
     date: { month: 2, day: 15, year: 2023 },
     excerpt:
@@ -6213,7 +6213,7 @@ export const blogs: BlogPost[] = [
       "dynamic.png",
       "project-management.png",
     ],
-    topics: ["Business", "Resources", "Entrepreneurship"],
+    topics: ["Business", "Resources", "Getting Started"],
     intro: [
       "As a full-stack web developer and business owner, my day-to-day workflow involves a dynamic mix of tasks that require both technical expertise and effective business management. I rely on a wide variety of tools to keep everything running smoothly, from coding and development to content creation and business operations. Each of these tools helps me streamline my processes, manage multiple projects, and maintain a high level of productivity across all areas of my work. Whether it's handling client requests, collaborating with my team, or working on the technical aspects of a new project, these tools play a crucial role in ensuring that my work is organized and efficiently executed.",
       "From version control to project management, automation tools, and business management systems, the combination of software I use ensures that I can stay ahead of deadlines, maintain consistency across projects, and meet my clients’ needs. Whether I’m working on front-end design, building custom web applications, or running business operations like invoicing, marketing, and client communications, each tool serves a specific purpose in keeping everything streamlined.",
@@ -7004,7 +7004,7 @@ export const blogs: BlogPost[] = [
     title: "Mastering NPM: A Cornerstone of Node.js Development",
     author: "Tina Huynh",
     wordCount: 7260,
-    timeSpan: "lengthened",
+    timeSpan: "comprehensive",
     time: "26m 24s",
     date: { month: 2, day: 15, year: 2023 },
     excerpt:
@@ -7017,7 +7017,7 @@ export const blogs: BlogPost[] = [
       "distributed.png",
       "online-community.png",
     ],
-    topics: ["Resources", "Software Engineer"],
+    topics: ["Resources", "Getting Started"],
     intro: [
       "NPM (Node Package Manager) is a critical tool for Node.js developers, streamlining the management of dependencies, automating tasks, and sharing code. With a vast ecosystem of reusable packages, NPM simplifies development workflows, allowing developers to focus on writing code instead of managing libraries manually. NPM’s capabilities extend to version control, dependency management, scripts automation, and publishing packages, making it an indispensable tool for modern web development, particularly in JavaScript-based applications.",
       "NPM enables developers to access and integrate thousands of packages for various tasks, from performance optimization to authentication and security. These packages simplify complex operations such as API management, data manipulation, and testing, while also providing solutions for continuous integration and deployment. NPM’s functionality boosts productivity by reducing manual work, ensuring consistency across environments, and enabling quick implementation of new features.",
@@ -7575,7 +7575,7 @@ export const blogs: BlogPost[] = [
       "illustration.png",
       "content-management-web.png",
     ],
-    topics: ["Software Engineer", "Resources"],
+    topics: ["Resources", "Getting Started"],
     intro: [
       "As a web developer, the tools you choose can make all the difference in your workflow, creativity, and overall productivity. Among the many options, Visual Studio Code (VS Code) shines as an indispensable ally for developers at every level. This fast, dynamic code editor is designed to adapt to your needs, supporting a broad array of programming languages and technologies to empower you to bring your ideas to life. With features like IntelliSense for smart code suggestions, built-in Git integration for seamless version control, and powerful debugging tools, VS Code transforms complex tasks into effortless processes.",
       "Its extensive library of extensions opens up endless possibilities for customization, ensuring your workspace fits your unique style and requirements. Whether you’re diving into front-end, back-end, or full-stack projects, VS Code not only helps you code smarter but also fosters collaboration and accelerates development. With its lightning-fast performance, limitless flexibility, and vibrant community, VS Code is the ultimate editor for developers looking to elevate their coding experience and create exceptional applications with ease.",
@@ -7795,7 +7795,7 @@ export const blogs: BlogPost[] = [
       "Website builders like Wix, Squarespace, GoDaddy, and Shopify offer an easy and affordable way to create a website without coding or design skills. This guide explores the pros and cons of each platform, helping you choose the right one based on your needs. Whether you're looking for a quick setup or scalability, understanding the limitations and benefits of these tools is key to making an informed decision.",
     featured: false,
     icons: ["wordpress.png", "wix.png", "shopify.png", "squarespace.png"],
-    topics: ["Resources", "Comparison", "Research"],
+    topics: ["Comparison", "Getting Started", "Business"],
     intro: [
       "Creating a website has never been more accessible, thanks to modern website builders like Wix, Squarespace, GoDaddy, and Shopify. These platforms are designed to meet the needs of a wide range of users—from beginners who have little or no technical knowledge to entrepreneurs and small business owners eager to establish an online presence. Website builders have democratized the process of building websites, making it possible for anyone to create a polished, professional-looking site without needing to learn how to code or hire an expensive developer. Each of these website builders—Wix, Squarespace, GoDaddy, and Shopify—offers a distinct set of features and advantages, catering to different needs and preferences.",
       "Whether you’re a small business owner, artist, or entrepreneur, choosing the right website builder can make a significant difference in the speed, functionality, and overall success of your online presence. In the following sections, we’ll explore the pros and cons of each platform to help you make an informed decision.",
@@ -8101,7 +8101,7 @@ export const blogs: BlogPost[] = [
     title: "Website Builders vs Custom Solutions: Which One Is Right for You?",
     author: "Tina Huynh",
     wordCount: 1415,
-    timeSpan: "compact",
+    timeSpan: "mini",
     time: "5m 9s",
     date: { month: 2, day: 10, year: 2025 },
     excerpt:
@@ -8113,7 +8113,7 @@ export const blogs: BlogPost[] = [
       "single-page-app.png",
       "web-design.png",
     ],
-    topics: ["Web Development", "Comparison"],
+    topics: ["Comparison", "Business", "Getting Started"],
     intro: [
       "Website builders like Wix, Squarespace, GoDaddy, and Shopify provide a fast, easy, and budget-friendly way to build websites without requiring any coding skills. These platforms come with a wide range of pre-designed templates, drag-and-drop tools, and customization options that allow users to create websites quickly. However, while these website builders offer a great solution for personal projects or small businesses, they come with their own set of limitations when it comes to customization, scalability, and long-term growth.",
       "Choosing between a website builder (like Wix, Squarespace, GoDaddy, or Shopify) and a custom-built website depends on your business needs, budget, and long-term goals. Website builders are user-friendly, quick, and affordable but come with limitations such as restricted customization, SEO issues, and performance concerns. They’re ideal for small businesses or personal projects that need a simple website without much investment.",
@@ -8347,7 +8347,7 @@ export const blogs: BlogPost[] = [
       "Effective feedback is key to a successful design collaboration. By being specific, using visual references, prioritizing feedback, and respecting the designer's expertise, you can ensure your vision is clearly communicated. Fostering a positive and collaborative environment will result in a smoother design process and a final product that aligns with your goals.",
     featured: true,
     icons: ["approved.png", "expert.png", "messaging.png"],
-    topics: ["Design", "Resources", "UX/UI"],
+    topics: ["Design", "UX/UI", "Getting Started"],
     intro: [
       "Providing effective feedback is crucial to a successful collaboration with your designer. To ensure a smooth and productive process, it's important to be specific, clear, and actionable in your feedback. Visual references and context-driven suggestions help communicate your vision more effectively. Prioritize feedback and offer it in stages to focus on the most important elements first. Respect the designer's expertise and trust their professional judgment, while keeping the feedback focused on the work, not the individual. A positive, collaborative environment will foster better creativity and results. By following these guidelines, you'll be able to enhance the design and achieve your goals, ensuring a more successful project outcome.",
     ],
@@ -8769,7 +8769,7 @@ export const blogs: BlogPost[] = [
       "data-modelling.png",
       "database-storage.png",
     ],
-    topics: ["Business", "Software Engineer", "Architecture"],
+    topics: ["Business", "Data"],
     intro: [
       "As businesses grow and handle increasing volumes of data, it becomes essential to implement strategies that ensure their database remains efficient, scalable, and secure. Key practices for scaling and evolving a database include sharding, which splits data across multiple servers to reduce bottlenecks; replication, which creates copies of data for high availability and failover; and partitioning, which divides large datasets into smaller, manageable sections. Additional strategies like load balancing, caching, and the decision between horizontal and vertical scaling further optimize database performance.",
       "Monitoring and optimizing database health is crucial to identifying issues early and maintaining smooth operation. Proper data security measures, such as encryption and access control, are essential for protecting sensitive information and ensuring compliance with regulations. Furthermore, ensuring data quality through validation, automation, and data entry practices helps maintain consistency and accuracy.",
@@ -9566,7 +9566,7 @@ export const blogs: BlogPost[] = [
       "Git is a version control system that manages code locally, while GitHub is a cloud platform that enhances Git with collaboration tools like pull requests and project management. Together, they streamline development workflows and improve team collaboration.",
     featured: true,
     icons: ["social.png", "github.png", "branches.png", "gitlab.png"],
-    topics: ["Comparison", "Software Engineering", "Web Development"],
+    topics: ["Comparison", "Getting Started"],
     intro: [
       "In the world of software development, Git and GitHub are two of the most widely used tools for version control and collaboration. While often mentioned together, they serve distinct purposes. Git is a distributed version control system that allows developers to track changes, manage branches, and collaborate on projects efficiently. GitHub, on the other hand, is a cloud-based hosting service that enhances Git's functionality by providing a centralized platform for code sharing, review, and team collaboration.",
       "Understanding the differences between Git and GitHub is crucial for developers, teams, and open-source contributors. Git allows you to maintain complete control over code history, revert changes, and experiment with different branches. GitHub extends these capabilities by enabling seamless collaboration, offering features like pull requests, issue tracking, and CI/CD integration.",
@@ -9763,7 +9763,7 @@ export const blogs: BlogPost[] = [
       "open-source-box.png",
       "linux.png",
     ],
-    topics: ["Software Engineering", "Resources"],
+    topics: ["Resources"],
     intro: [
       "Open-source software is a key pillar in modern technology, allowing anyone to view, modify, and distribute software freely. It fosters innovation, collaboration, and transparency by encouraging worldwide contributions and providing free alternatives to proprietary software. Key principles of open-source software include the ability to modify and redistribute code, community-driven development, and flexibility without vendor lock-in.",
       "While it offers significant benefits, such as cost reduction, enhanced security, and skill development, it also comes with challenges, including inconsistent support and the need for strong documentation. Successful examples of open-source projects include Linux, Apache, Git, WordPress, Python, and JavaScript. These tools have transformed industries and become essential in both business and development environments.",
@@ -10219,7 +10219,7 @@ export const blogs: BlogPost[] = [
       "Open-source tools have transformed web development by providing free, flexible, and community-driven solutions for coding, debugging, design, and deployment. From frameworks and version control systems to performance testing and database management, open-source software enables developers to build faster, collaborate efficiently, and create high-quality web applications.",
     featured: true,
     icons: ["vs-code.png", "sublime-text.png", "github.png", "gitlab.png"],
-    topics: ["Web Development", "Resources", "Software Engineering"],
+    topics: ["Resources", "Getting Started"],
     intro: [
       "pen-source tools have become an indispensable part of modern web development, offering developers a wealth of resources that enhance collaboration, productivity, and the overall development process. From version control and performance testing to deployment and hosting, open-source solutions provide cost-effective and flexible alternatives to proprietary software. Whether you're a beginner or an experienced developer, leveraging these tools allows you to build scalable, efficient, and high-quality applications. By embracing the power of open-source, businesses and developers can create innovative solutions, optimize workflows, and deliver exceptional digital experiences, all while staying agile and secure in an ever-evolving technology landscape.",
       "Whether you're a newcomer eager to dive into web development or an experienced professional searching for robust alternatives to proprietary software, open-source tools offer an expansive range of options to suit all needs and skill levels. These platforms are integral to the software development landscape, enabling developers to build, test, deploy, and scale applications with ease. By leveraging the right mix of open-source technologies, businesses can drive innovation, boost productivity, and deliver top-tier user experiences while maintaining a secure and agile development environment.",
@@ -10696,7 +10696,7 @@ export const blogs: BlogPost[] = [
       "Vercel and Netlify are leading platforms for web development, each with unique strengths. Vercel is ideal for Next.js projects with performance optimizations, while Netlify offers broader framework support and serverless functions, making it perfect for full-stack applications. Choose based on your project's needs for speed, flexibility, or functionality.",
     featured: true,
     icons: ["netlify.png", "vercel.png"],
-    topics: ["Web Development", "Software Engineer", "Resources", "Comparison"],
+    topics: ["Getting Started", "Resources", "Comparison"],
     intro: [
       "When choosing a deployment platform for web development, Vercel and Netlify are two of the top contenders, each offering unique advantages. Vercel is best suited for Next.js applications, with features like server-side rendering (SSR) and incremental static regeneration (ISR) that optimize performance. It excels in frontend performance, leveraging edge networks and seamless Git integration for preview deployments.",
       "Netlify, on the other hand, is more versatile, supporting a wide range of frameworks and static site generators. It offers powerful serverless functions, making it ideal for full-stack applications, along with tools like Netlify CMS, built-in authentication, and instant rollbacks.",
@@ -10892,14 +10892,14 @@ export const blogs: BlogPost[] = [
     title: "The Battle of Containers: Docker vs Kubernetes Explained",
     author: "Tina Huynh",
     wordCount: 1604,
-    timeSpan: "compact",
+    timeSpan: "mini",
     time: "5m 50s",
     date: { month: 10, day: 17, year: 2024 },
     excerpt:
       "Docker and Kubernetes are essential tools for modern application development, streamlining the deployment and management of containerized applications. Understanding how these tools differ and complement each other is crucial for developers aiming to build efficient, scalable cloud-native applications.",
     featured: true,
     icons: ["docker-logo.png", "kubernets.png"],
-    topics: ["Web Development", "Resources", "Comparison"],
+    topics: ["Resources", "Comparison", "Getting Started"],
     intro: [
       "In the world of modern application development, containerization has become an essential practice for deploying and managing software in a more efficient and scalable way. Two of the most powerful tools in this domain are Docker and Kubernetes. While both play vital roles in streamlining the development and deployment processes, they serve different purposes. Docker focuses on packaging applications into lightweight, portable containers, ensuring that they run consistently across various environments. Kubernetes, on the other hand, is a container orchestration platform designed to automate the deployment, scaling, and management of containers at scale. Understanding the differences between Docker and Kubernetes is crucial for developers and teams looking to build, deploy, and manage containerized applications in the most efficient way possible.",
     ],
@@ -11082,7 +11082,7 @@ export const blogs: BlogPost[] = [
       "Choosing the right API testing tool is crucial for ensuring your APIs are reliable and efficient. This guide highlights top tools like Postman, Insomnia, Hoppscotch, and Paw, each offering unique features to match various development needs.",
     featured: true,
     icons: ["postman.png", "performance.png"],
-    topics: ["Web Development", "Resources"],
+    topics: ["Resources", "Getting Started"],
     intro: [
       "Selecting the right API testing tool is a critical decision in modern web development, as APIs play a crucial role in connecting various services and applications. Whether you're developing a RESTful API, working with GraphQL, or leveraging WebSockets, choosing the most effective tool for testing ensures that your API is reliable, secure, and performs well under real-world conditions.",
       "In today’s fast-paced development environment, the right API testing tool can significantly enhance your workflow, improve collaboration, and help you identify bugs or inefficiencies before they make it into production. With tools ranging from comprehensive, feature-packed platforms like Postman to minimalist, lightweight options like Insomnia and Hoppscotch, developers have a broad array of choices depending on their specific needs.",
@@ -11366,7 +11366,7 @@ export const blogs: BlogPost[] = [
       "UX and UI design are two essential pillars of creating successful digital products. While UX focuses on optimizing the user experience to ensure functionality and ease of use, UI is concerned with the visual elements that make the product aesthetically appealing and engaging.",
     featured: true,
     icons: ["usability.png"],
-    topics: ["Design", "UX/UI", "Product Development", "User Experience"],
+    topics: ["Design", "UX/UI", "Career", "Comparison"],
     intro: [
       "In today’s digital landscape, the terms 'UX Design' and 'UI Design' are often used interchangeably, but they represent distinct aspects of the design process. Understanding the difference between the two—and how they work together—is crucial for creating successful, user-centered digital products. UX (User Experience) design focuses on the overall experience a user has while interacting with a product, ensuring it is intuitive, efficient, and meets their needs. UI (User Interface) design, on the other hand, is concerned with the look and feel of the product, crafting visually appealing interfaces that facilitate smooth interaction. Both disciplines are interconnected, with UX laying the groundwork for a functional and user-friendly experience, and UI bringing that vision to life with stunning visual design.",
     ],
@@ -11629,7 +11629,7 @@ export const blogs: BlogPost[] = [
       "Becoming a front-end, back-end, or full-stack developer requires mastering various technologies, tools, and frameworks. Whether you're focusing on user interfaces, APIs, databases, or complete applications, this roadmap outlines everything you need to learn for each specialization.",
     featured: true,
     icons: ["tools.png"],
-    topics: ["Web Development", "Programming", "Career Roadmap", "Technology"],
+    topics: ["Software Engineer", "Getting Started"],
     intro: [
       "In the fast-paced world of web development and DevOps, the landscape is constantly evolving, with new tools, technologies, and practices emerging regularly. Whether you're a beginner just starting out or an experienced professional aiming to expand your skillset, mastering the essential technologies and methodologies is key to staying competitive and creating impactful, scalable applications. From front-end design to back-end architecture, full-stack development to deployment automation, every aspect of the development process plays a crucial role in delivering seamless, high-performing experiences.",
       "By exploring each area in depth—from foundational programming languages to the cutting-edge practices of DevOps—you'll be equipped with the knowledge to navigate the dynamic world of development, tackle complex challenges, and stay ahead of industry trends. Ready to level up your development career?",
@@ -12167,19 +12167,14 @@ export const blogs: BlogPost[] = [
     title: "Achieving Work-Life Harmony: Tips for Software Engineers",
     author: "Tina Huynh",
     wordCount: 2200,
-    timeSpan: "comprehensive",
+    timeSpan: "compact",
     time: "8m 45s",
     date: { month: 11, day: 17, year: 2024 },
     excerpt:
       "Software engineering can be a demanding career, often leading to long hours, stress, and burnout. Maintaining a healthy work-life balance is essential for long-term success and personal well-being. This guide explores practical strategies to manage workloads, set boundaries, and achieve a fulfilling balance between work and personal life.",
     featured: true,
     icons: ["career.png"],
-    topics: [
-      "Software Engineering",
-      "Career Growth",
-      "Productivity",
-      "Mental Health",
-    ],
+    topics: ["Career", "Self-Development"],
     intro: [
       "Software engineering is a rewarding but demanding career that requires constant learning, problem-solving, and innovation. However, the pressure of tight deadlines, long coding sessions, and the fast-paced tech industry can make it challenging to maintain a work-life balance.",
       "Many developers struggle with burnout, fatigue, and reduced productivity due to overworking. Balancing work with personal time, hobbies, and relationships is crucial to maintaining overall well-being and long-term career success.",
@@ -12318,7 +12313,7 @@ export const blogs: BlogPost[] = [
     title: "Web Development vs Web Design: Key Differences and Career Insights",
     author: "Tina Huynh",
     wordCount: 2300,
-    timeSpan: "comprehensive",
+    timeSpan: "compact",
     time: "9m 10s",
     date: { month: 5, day: 4, year: 2024 },
     excerpt:
@@ -12332,7 +12327,7 @@ export const blogs: BlogPost[] = [
       "career.png",
       "technology.png",
     ],
-    topics: ["Web Development", "Web Design", "Career Growth", "Technology"],
+    topics: ["Career", "Design", "Comparison"],
     intro: [
       "Web development and web design are two key aspects of creating websites and web applications. While they often overlap, they involve different skill sets, tools, and goals.",
       "Web developers are responsible for building websites using programming languages and frameworks, ensuring they function smoothly and efficiently. Web designers, on the other hand, focus on the visual layout, user experience (UX), and branding elements.",
@@ -12541,7 +12536,7 @@ export const blogs: BlogPost[] = [
     title: "Essential Free Resources Every Web Developer Should Know",
     author: "Ethan Brooks",
     wordCount: 2800,
-    timeSpan: "comprehensive",
+    timeSpan: "lengthened",
     time: "11m 30s",
     date: { month: 10, day: 9, year: 2024 },
     excerpt:
@@ -12555,7 +12550,7 @@ export const blogs: BlogPost[] = [
       "code.png",
       "design.png",
     ],
-    topics: ["Web Development", "Free Tools", "Design", "Programming"],
+    topics: ["Resources", "Design", "Software Engineer"],
     intro: [
       "Building high-quality web applications requires the right set of tools, frameworks, and assets. Fortunately, many free resources are available to help developers streamline their workflow, improve design, and enhance functionality.",
       "From icon packs and UI libraries to CSS frameworks and development tools, these resources reduce development time and ensure a polished, professional appearance for web projects.",

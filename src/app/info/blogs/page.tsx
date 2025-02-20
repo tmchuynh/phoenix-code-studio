@@ -108,7 +108,7 @@ const BlogDisplayPage: FC = () => {
     : null;
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [articlesPerPage, setArticlesPerPage] = useState(10);
+  const [articlesPerPage, setArticlesPerPage] = useState(25);
 
   // Calculate the indexes for pagination
   const indexOfLastArticle = currentPage * articlesPerPage;
@@ -853,12 +853,6 @@ const BlogDisplayPage: FC = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
                 <DropdownMenuItem
-                  onClick={() => handleArticlesPerPageChange(10)}
-                  className="md:text-md lg:text-lg px-3"
-                >
-                  10 articles per page
-                </DropdownMenuItem>
-                <DropdownMenuItem
                   onClick={() => handleArticlesPerPageChange(15)}
                   className="md:text-md lg:text-lg px-3"
                 >
@@ -875,6 +869,18 @@ const BlogDisplayPage: FC = () => {
                   className="md:text-md lg:text-lg px-3"
                 >
                   50 articles per page
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => handleArticlesPerPageChange(75)}
+                  className="md:text-md lg:text-lg px-3"
+                >
+                  75 articles per page
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => handleArticlesPerPageChange(100)}
+                  className="md:text-md lg:text-lg px-3"
+                >
+                  100 articles per page
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
