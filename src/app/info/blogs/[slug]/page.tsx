@@ -171,13 +171,25 @@ const BlogPostPage = () => {
                           </p>
 
                           {innerList.list && (
-                            <ul>
+                            <ul className="list-decimal list-inside">
                               {innerList.list.map((b_list, b_index) => (
                                 <li key={b_index}>
                                   {b_list.title && (
                                     <strong>{b_list.title}: </strong>
                                   )}
                                   {b_list.description}
+                                  {b_list.list && (
+                                    <ul className="ml-4">
+                                      {b_list.list.map((c_list, c_index) => (
+                                        <li key={c_index}>
+                                          {c_list.title && (
+                                            <strong>{c_list.title}: </strong>
+                                          )}
+                                          {c_list.description}
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  )}
                                 </li>
                               ))}
                             </ul>
