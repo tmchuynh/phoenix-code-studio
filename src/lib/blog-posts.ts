@@ -15585,12 +15585,7 @@ export const blogs: BlogPost[] = [
       "Choosing the right JavaScript framework is crucial for web development projects. Angular, React, and Vue are three popular options, each with distinct strengths and weaknesses. Understanding these differences is key to selecting the framework that best fits your project's needs.",
     featured: false,
     icons: ["angular.png", "icons8-vue-js-480.png", "science.png"],
-    topics: [
-      "Frontend Development",
-      "Web Frameworks",
-      "JavaScript",
-      "React, Angular, Vue",
-    ],
+    topics: ["Development Tools", "Getting Started", "Comparison"],
     intro: [
       "Choosing the right framework is crucial when developing modern web applications, as it can greatly influence both the development process and the final product. Among the leading options, React, Angular, and Vue stand out, each offering unique features, performance advantages, and different approaches to building applications. React, known for its component-based architecture, focuses on providing a high level of flexibility and scalability. Angular, with its comprehensive, opinionated structure, provides a complete framework with tools for routing, forms, and more. Vue, often praised for its simplicity, offers a lightweight yet powerful solution that strikes a balance between flexibility and convention. Regardless of your experience level, understanding these differences can significantly enhance your development workflow and decision-making.",
     ],
@@ -15906,13 +15901,7 @@ export const blogs: BlogPost[] = [
       "React Native, Ionic, and Flutter are some of the most popular frameworks for building cross-platform apps. Each framework has its unique advantages and challenges. With the right framework, you can ensure your app is built efficiently, performs well, and meets user expectations.",
     featured: false,
     icons: ["icons8-ionic-480.png", "science.png", "icons8-flutter-480.png"],
-    topics: [
-      "Mobile App Development",
-      "Cross-Platform",
-      "React Native",
-      "Flutter",
-      "Ionic",
-    ],
+    topics: ["Getting Started", "Comparison", "Development Tools"],
     intro: [
       "Choosing the right framework for mobile app development is crucial in today’s fast-paced tech landscape. With the increasing demand for cross-platform applications, selecting a framework that aligns with your development goals is essential.",
       "React Native, Ionic, and Flutter are among the most popular frameworks for building cross-platform apps, each offering distinct advantages and challenges. React Native allows developers to use JavaScript and React to build native-like apps, while Ionic leverages web technologies for hybrid applications, and Flutter provides a high-performance solution with its own rendering engine. Understanding the strengths and limitations of each framework will help ensure you select the right one for your project.",
@@ -16199,13 +16188,7 @@ export const blogs: BlogPost[] = [
       "Web development has seen rapid advancements in recent years, with an array of powerful frameworks and libraries designed to build high-performance, user-centric applications. React, Next.js, and Remix have become some of the top choices among developers, each offering distinct advantages for creating modern web applications.",
     featured: true,
     icons: ["icons8-nextjs-480.png", "science.png", "remix-logo-icon.png"],
-    topics: [
-      "Frontend Development",
-      "React",
-      "Next.js",
-      "Remix",
-      "Web Frameworks",
-    ],
+    topics: ["Comparison", "Development Tools"],
     intro: [
       "Web development has evolved significantly over the past few years, with powerful frameworks and libraries emerging to meet the demands of building high-performance, user-friendly applications. Among these, React, Next.js, and Remix have become some of the most popular choices among developers for building modern web applications.",
       "Each of these tools brings unique strengths to the table, whether it's React's component-based architecture, Next.js's full-stack capabilities with server-side rendering, or Remix's focus on optimized data fetching and seamless full-stack development. By understanding how these tools fit together and where they excel, you'll be able to select the best approach for your development goals.",
@@ -16573,14 +16556,7 @@ export const blogs: BlogPost[] = [
       "github.png",
       "4373267_bitbucket_logo_logos_icon.png",
     ],
-    topics: [
-      "Version Control",
-      "Git",
-      "GitHub",
-      "GitLab",
-      "Bitbucket",
-      "Software Development",
-    ],
+    topics: ["Development Tools", "Getting Started", "Comparison"],
     intro: [
       "Version control is a critical part of modern software development, and platforms like GitHub, GitLab, and Bitbucket are at the forefront of this practice.",
       "These tools offer robust solutions for managing code, collaborating with teams, and automating workflows. But choosing the right one can be challenging, as each platform has unique features, integrations, and benefits that suit different project needs and team workflows.",
@@ -16993,13 +16969,7 @@ export const blogs: BlogPost[] = [
       "Git is a crucial tool for software development, but using it through the command line can be overwhelming for some developers. Git GUI clients like GitKraken and GitHub Desktop simplify the version control process by offering graphical interfaces. These tools provide a more intuitive experience, with visual representations of repositories, commit histories, and branch management, making Git easier to use and more accessible for developers.",
     featured: false,
     icons: ["icons8-gitkraken-256.png", "github.png"],
-    topics: [
-      "Git Clients",
-      "Version Control",
-      "GitKraken",
-      "GitHub Desktop",
-      "Software Development",
-    ],
+    topics: ["Getting Started", "Comparison", "Development Tools"],
     intro: [
       "Git is an essential tool for modern software development, but managing it via the command line can be daunting for some developers.",
       "This is where Git GUI clients come into play. GitKraken and GitHub Desktop are two of the most popular graphical interfaces for Git, designed to make version control easier and more intuitive. These tools provide a more user-friendly experience, offering visual representations of repositories, commit histories, and branch management.",
