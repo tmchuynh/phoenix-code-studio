@@ -3,7 +3,7 @@ import { Category } from "./interfaces";
 export const allContracts: Category[] = [
   {
     name: "general-client-agreements",
-    type: "generalClientAgreements",
+    type: "contract",
     title: "General Client Agreements",
     short: "GCA",
     info: {
@@ -34,7 +34,7 @@ export const allContracts: Category[] = [
   },
   {
     name: "digital-and-web-development-contracts",
-    type: "digitalAndWebDevelopmentContracts",
+    type: "contract",
     title: "Digital and Web Development Contracts",
     short: "DWDC",
     info: {
@@ -61,7 +61,7 @@ export const allContracts: Category[] = [
   },
   {
     name: "content-and-marketing-contracts",
-    type: "contentAndMarketingContracts",
+    type: "contract",
     title: "Content and Marketing Contracts",
     short: "CMDC",
     info: {
@@ -90,7 +90,7 @@ export const allContracts: Category[] = [
   },
   {
     name: "payment-and-sales-contracts",
-    type: "paymentAndSalesContracts",
+    type: "contract",
     title: "Payment and Sales Contracts",
     short: "PS",
     info: {

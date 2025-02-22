@@ -2,14 +2,7 @@ import { DetailedHTMLProps, HTMLAttributes, CSSProperties } from "react";
 
 export type LengthType = number | string;
 
-export type ServiceTypeKeys =
-  | "comprehensiveWebsiteSolutions"
-  | "seoOptimizedContentCreationServices"
-  | "corporateDigitalSolutions"
-  | "digitalAndWebDevelopmentContracts"
-  | "contentAndMarketingContracts"
-  | "paymentAndSalesContracts"
-  | "generalClientAgreements";
+export type ServiceTypeKeys = "service" | "contract";
 
 export interface FormDataType {
   name: string;
@@ -17,13 +10,9 @@ export interface FormDataType {
   subject: string;
   message: string;
   paymentPlan: string;
-  comprehensiveWebsiteSolutions: string[];
-  seoOptimizedContentCreationServices: string[];
-  corporateDigitalSolutions: string[];
-  digitalAndWebDevelopmentContracts: string[];
-  contentAndMarketingContracts: string[];
-  paymentAndSalesContracts: string[];
-  generalClientAgreements: string[];
+  selectedServices: string[];
+  selectedContracts: string[];
+  [key: string]: string[] | string;
 }
 
 export interface CommonProps

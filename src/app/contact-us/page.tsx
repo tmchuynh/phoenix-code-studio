@@ -37,13 +37,8 @@ const ContactUsPage: FC = () => {
     subject: "",
     message: "",
     paymentPlan: "",
-    comprehensiveWebsiteSolutions: [],
-    seoOptimizedContentCreationServices: [],
-    corporateDigitalSolutions: [],
-    digitalAndWebDevelopmentContracts: [],
-    contentAndMarketingContracts: [],
-    paymentAndSalesContracts: [],
-    generalClientAgreements: [],
+    selectedServices: [],
+    selectedContracts: [],
   });
 
   const [submitted, setSubmitted] = useState(false);
@@ -99,7 +94,10 @@ const ContactUsPage: FC = () => {
     } else {
       setSelectedContracts((prev) => prev.filter((id) => id !== contractId));
     }
-    handleOpen("contract", contractId);
+    setFormData((prevState) => ({
+      ...prevState,
+      selectedContracts: selectedContracts,
+    }));
   };
 
   const handleServiceCheckboxChange = (
@@ -111,12 +109,17 @@ const ContactUsPage: FC = () => {
     } else {
       setSelectedServices((prev) => prev.filter((id) => id !== serviceId));
     }
+    setFormData((prevState) => ({
+      ...prevState,
+      selectedServices: selectedServices,
+    }));
   };
 
   // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Submitted formData:", formData);
+    console.log("selectedServices:", selectedServices);
 
     setSubmitted(true);
 
@@ -129,13 +132,8 @@ const ContactUsPage: FC = () => {
       email: "",
       subject: "",
       message: "",
-      comprehensiveWebsiteSolutions: [],
-      seoOptimizedContentCreationServices: [],
-      corporateDigitalSolutions: [],
-      digitalAndWebDevelopmentContracts: [],
-      contentAndMarketingContracts: [],
-      paymentAndSalesContracts: [],
-      generalClientAgreements: [],
+      selectedServices: [],
+      selectedContracts: [],
       paymentPlan: "",
     });
   };
@@ -181,11 +179,15 @@ const ContactUsPage: FC = () => {
                 Name
               </label>
               <input
-                type="text"
+                autoCapitalize="on"
+                inputMode="text"
+                autoComplete="name"
                 id="name"
                 name="name"
                 value={formData.name}
-                onChange={handleChange}
+                onChange={(e) => {
+                  handleChange(e);
+                }}
                 required
                 className="w-full p-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
               />
@@ -197,6 +199,9 @@ const ContactUsPage: FC = () => {
                 Email
               </label>
               <input
+                autoCapitalize="off"
+                inputMode="email"
+                autoComplete="email"
                 type="email"
                 id="email"
                 name="email"
@@ -213,7 +218,9 @@ const ContactUsPage: FC = () => {
                 Subject
               </label>
               <input
+                autoCapitalize="sentences"
                 type="text"
+                inputMode="text"
                 id="subject"
                 name="subject"
                 value={formData.subject}
@@ -229,6 +236,9 @@ const ContactUsPage: FC = () => {
                 Message
               </label>
               <textarea
+                autoCapitalize="sentences"
+                spellCheck
+                inputMode="text"
                 id="message"
                 name="message"
                 value={formData.message}

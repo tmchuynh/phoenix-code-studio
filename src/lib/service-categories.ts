@@ -3,7 +3,7 @@ import { Category } from "./interfaces";
 export const allServices: Category[] = [
   {
     name: "scalable-corporate-digital-solutions",
-    type: "corporateDigitalSolutions",
+    type: "service",
     title: "Scalable Corporate Solutions for Growth & Digital Success",
     short: "Scalable Solutions for Business Growth",
     info: {
@@ -31,7 +31,7 @@ export const allServices: Category[] = [
   },
   {
     name: "seo-optimized-content-creation",
-    type: "seoOptimizedContentCreationServices",
+    type: "service",
     title:
       "SEO-Optimized Content Creation Services That Elevate Your Brand & Drive Results",
     short: "SEO-Optimized Content for Brand Growth & Success",
@@ -59,7 +59,7 @@ export const allServices: Category[] = [
   },
   {
     name: "comprehensive-website-solutions",
-    type: "comprehensiveWebsiteSolutions",
+    type: "service",
     title:
       "End-to-End Website Solutions for a High-Performing Digital Presence",
     short: "Comprehensive Website Solutions for Digital Success",
