@@ -123,10 +123,11 @@ const ApplicantSubmissionPage = () => {
             free to apply for all that interest you, and we will evaluate your
             application for the most suitable opportunity.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 ml-5">
             {jobPositions.map((position) => (
               <div key={position.title} className="flex items-center">
                 <Checkbox
+                  id={position.title}
                   checked={selectedPositions.includes(position.title)}
                   onCheckedChange={(checked) =>
                     handlePositionChange(position.title, checked)
