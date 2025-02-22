@@ -90,9 +90,11 @@ const ContactUsPage: FC = () => {
     checked: boolean | string
   ) => {
     if (checked) {
-      setSelectedContracts((prev) => [...prev, contractId]);
+      setSelectedContracts((prev) => [...prev, `${capitalize(contractId)}`]);
     } else {
-      setSelectedContracts((prev) => prev.filter((id) => id !== contractId));
+      setSelectedContracts((prev) =>
+        prev.filter((id) => id !== `${capitalize(contractId)}`)
+      );
     }
     setFormData((prevState) => ({
       ...prevState,
@@ -105,9 +107,11 @@ const ContactUsPage: FC = () => {
     checked: boolean | string
   ) => {
     if (checked) {
-      setSelectedServices((prev) => [...prev, serviceId]);
+      setSelectedServices((prev) => [...prev, `${capitalize(serviceId)}`]);
     } else {
-      setSelectedServices((prev) => prev.filter((id) => id !== serviceId));
+      setSelectedServices((prev) =>
+        prev.filter((id) => id !== `${capitalize(serviceId)}`)
+      );
     }
     setFormData((prevState) => ({
       ...prevState,
@@ -283,7 +287,9 @@ const ContactUsPage: FC = () => {
                             <label key={subIndex} className="flex  my-2">
                               <Checkbox
                                 value={subService}
-                                checked={selectedServices.includes(subService)}
+                                checked={selectedServices.includes(
+                                  capitalize(subService)
+                                )}
                                 onCheckedChange={(checked) =>
                                   handleServiceCheckboxChange(
                                     subService,
@@ -344,7 +350,7 @@ const ContactUsPage: FC = () => {
                               <Checkbox
                                 value={subContract}
                                 checked={selectedContracts.includes(
-                                  subContract
+                                  capitalize(subContract)
                                 )}
                                 onCheckedChange={(checked) =>
                                   handleContractCheckboxChange(
