@@ -1,26 +1,32 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import LoadingIndicator from "@/components/Loading";
+import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { jobPositions } from "@/lib/constants";
-import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
-import LoadingIndicator from "@/components/Loading";
-import { Checkbox } from "@/components/ui/checkbox";
+import emailjs from "@emailjs/browser";
+import { useEffect, useState } from "react";
 
 const ApplicantSubmissionPage = () => {
   const [selectedPositions, setSelectedPositions] = useState<string[]>([]);
-  const [resume, setResume] = useState<File | null>(null);
-  const [coverLetter, setCoverLetter] = useState<File | null>(null);
-  const [portfolioLinks, setPortfolioLinks] = useState<string[]>(["", "", ""]);
+  const [portfolioLinks, setPortfolioLinks] = useState<string[]>([""]);
   const [error, setError] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+  });
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 400);
+    }, 150);
+    emailjs.init({
+      publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "",
+    });
   }, [loading]);
 
   if (loading) {
@@ -37,41 +43,39 @@ const ApplicantSubmissionPage = () => {
     );
   };
 
-  // Handle resume upload
-  const handleResumeUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.files?.[0]) {
-      setResume(event.target.files[0]);
-    }
-  };
-
-  // Handle cover letter upload
-  const handleCoverLetterUpload = (
-    event: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    if (event.target.files?.[0]) {
-      setCoverLetter(event.target.files[0]);
-    }
-  };
-
   // Handle portfolio link updates
-  const handlePortfolioChange = (index: number, value: string) => {
-    const updatedLinks = [...portfolioLinks];
-    updatedLinks[index] = value;
-    setPortfolioLinks(updatedLinks);
+  const handlePortfolioChange = (value: string, index: number) => {
+    setPortfolioLinks((prevState) =>
+      prevState.map((link, i) => (i === index ? value : link))
+    );
+  };
+
+  // Allow pasting and handle it
+  const handlePaste: (
+    e: React.ClipboardEvent<HTMLInputElement>,
+    index: number
+  ) => void = (e: React.ClipboardEvent<HTMLInputElement>, index: number) => {
+    const pastedValue = e.clipboardData.getData("Text");
+    handlePortfolioChange(pastedValue, index); // Update the link state for the corresponding input
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
 
   // Handle form submission
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const formElement = e.target as HTMLFormElement;
 
     // Validation
     if (selectedPositions.length === 0) {
       setError("Please select at least one position.");
-      return;
-    }
-
-    if (!resume) {
-      setError("Please upload your resume.");
       return;
     }
 
@@ -80,14 +84,34 @@ const ApplicantSubmissionPage = () => {
       return;
     }
 
+    if (formElement) {
+      emailjs
+        .send("service_8nwkxet", "application-forms-sub", {
+          from_name: formData.name,
+          reply_to: formData.email,
+          from_email: formData.email,
+          user_email: "tinamchuynh@gmail.com",
+          positions: selectedPositions.join(", "),
+        })
+        .then(
+          (response) => {
+            console.log("Success:", response);
+          },
+          (error) => {
+            console.error("Error submitting the form:", error);
+            setError(
+              "There was an issue submitting the form. Please try again."
+            );
+          }
+        );
+    }
+
     // Simulated form submission
     setTimeout(() => {
       setSuccessMessage("Your application has been submitted successfully!");
-      setError(null);
       setSelectedPositions([]);
-      setResume(null);
-      setCoverLetter(null);
-      setPortfolioLinks(["", "", ""]);
+      setSuccessMessage(null);
+      setPortfolioLinks([""]);
     }, 350);
   };
 
@@ -110,7 +134,56 @@ const ApplicantSubmissionPage = () => {
         <p className="text-success font-bold">{successMessage}</p>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} id="application-form" className="space-y-6">
+        {/* Name */}
+        <div className="mb-4">
+          <label htmlFor="name" className="block text-lg font-semibold">
+            Name
+          </label>
+          <input
+            autoCapitalize="on"
+            inputMode="text"
+            autoComplete="name"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={(e) => {
+              handleChange(e);
+            }}
+            required
+            className="w-full p-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+          />
+        </div>
+
+        {/* Email */}
+        <div className="mb-4">
+          <label htmlFor="email" className="block text-lg font-semibold">
+            Email
+          </label>
+          <input
+            autoCapitalize="off"
+            inputMode="email"
+            autoComplete="email"
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={(e) => {
+              handleChange(e);
+            }}
+            required
+            className="w-full p-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+          />
+        </div>
+
+        <section>
+          <h2>Important Note</h2>
+          <p>
+            Please email your resume and cover letter(s) to the following email:
+            <Button variant={"link"}>tinamchuynh@gmail.com</Button>
+          </p>
+        </section>
+
         {/* Job Positions Selection */}
         <section>
           <h2>Select the position(s) you're applying for:</h2>
@@ -141,55 +214,6 @@ const ApplicantSubmissionPage = () => {
           </div>
         </section>
 
-        {/* Resume Upload (Required) */}
-        <section>
-          <h2>Upload Your Resume</h2>
-          <p>
-            Please upload your most recent resume to help us better understand
-            your background, skills, and experience. Make sure your resume is
-            up-to-date and accurately reflects your qualifications. This will
-            allow us to assess your fit for the role(s) you're applying for and
-            streamline the hiring process.
-          </p>
-          <Input
-            type="file"
-            accept=".pdf,.doc,.docx"
-            onChange={handleResumeUpload}
-            className="border border-border rounded w-11/12 md:w-full mx-auto h-fit md:text-md lg:text-xl file:text-accent-2 file:font-extrabold file:md:text-md file:lg:text-lg"
-            required
-          />
-          {resume && (
-            <p className="text-sm xl:text-lg ml-5 mt-2">
-              <strong>Uploaded File:</strong> {resume.name}
-            </p>
-          )}
-        </section>
-
-        {/* Cover Letter Upload (Optional) */}
-        <section>
-          <h2>Upload a Cover Letter</h2>
-          <p>
-            While a cover letter is not required, we highly encourage you to
-            upload <strong>one</strong> if you'd like to provide additional
-            context about your experience, skills, and why you're interested in
-            the position. A well-crafted cover letter can give us valuable
-            insight into your motivation and how you align with our company
-            values. If you choose to include one, please ensure it is tailored
-            to the role you're applying for.
-          </p>
-          <Input
-            type="file"
-            accept=".pdf,.doc,.docx"
-            onChange={handleCoverLetterUpload}
-            className="border border-border rounded w-11/12 md:w-full mx-auto h-fit md:text-md lg:text-xl file:text-accent-2 file:font-extrabold file:md:text-md file:lg:text-lg"
-          />
-          {coverLetter && (
-            <p className="text-sm xl:text-lg ml-5 mt-2">
-              <strong>Selected File:</strong> {coverLetter.name}
-            </p>
-          )}
-        </section>
-
         {/* Portfolio Links (At Least One Required) */}
         <section>
           <h2>Portfolio Links</h2>
@@ -201,15 +225,23 @@ const ApplicantSubmissionPage = () => {
             you have multiple portfolio links, feel free to include them so we
             can explore a variety of your work.
           </p>
-          <div className="space-y-3">
+          <div className="space-y-3 flex flex-col">
+            <Button
+              variant={"accent"}
+              onClick={() => setPortfolioLinks((prev) => [...prev, ""])}
+              className="w-full md:w-1/2 lg:w-1/3"
+            >
+              Add another portfolio link
+            </Button>
             {portfolioLinks.map((link, index) => (
               <Input
                 key={index}
                 type="url"
+                onPaste={(e) => handlePaste(e, index)}
+                onChange={(e) => handlePortfolioChange(e.target.value, index)}
                 placeholder={`Portfolio Link ${index + 1}`}
                 value={link}
                 className="border border-border rounded w-11/12 md:w-full mx-auto md:h-12 md:text-md lg:text-xl placeholder:text-accent-2"
-                onChange={(e) => handlePortfolioChange(index, e.target.value)}
               />
             ))}
           </div>

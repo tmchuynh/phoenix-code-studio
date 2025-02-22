@@ -51,8 +51,6 @@ const ContactUsPage: FC = () => {
     [key: string]: boolean;
   }>({});
 
-  const [messageText, setMessageText] = useState<string>("");
-
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -130,22 +128,8 @@ const ContactUsPage: FC = () => {
     e.preventDefault();
     console.log("Submitted formData:", formData);
 
-    // Set the messageText string to show in the UI or for logging purposes
-    const messageText = `Email: ${formData.email}\nName: ${capitalize(
-      formData.name
-    )}\nSubject: ${capitalize(formData.subject)}\nMessage: ${capitalize(
-      formData.message
-    )}\nSelected services: \n${formData.selectedServices.join(
-      `\n`
-    )}\nSelected contracts: \n${formData.selectedContracts.join(
-      `\n`
-    )}\nPayment plan: ${capitalize(formData.paymentPlan)}`;
-
     // Set submitted to true
     setSubmitted(true);
-
-    // Set message text for the UI (if needed)
-    setMessageText(messageText);
 
     // Get the form element reference
     const formElement = document.getElementById(
@@ -160,7 +144,6 @@ const ContactUsPage: FC = () => {
       selectedServices: formData.selectedServices.join(", "), // Convert array to string
       selectedContracts: formData.selectedContracts.join(", "), // Convert array to string
       paymentPlan: capitalize(formData.paymentPlan),
-      messageText, // Include messageText as a custom parameter
     };
 
     // Ensure the form exists before sending the data using emailjs
@@ -453,8 +436,6 @@ const ContactUsPage: FC = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
-
-            <input type="hidden" name="messageText" value={messageText} />
 
             {/* Submit Button */}
             <Button type="submit" className="w-1/2 mx-auto">
