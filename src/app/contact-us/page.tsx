@@ -271,7 +271,7 @@ const ContactUsPage: FC = () => {
                       </div>
                     </CollapsibleTrigger>
                   </div>
-                  <CollapsibleContent className="space-y-2 ml-5">
+                  <CollapsibleContent className="space-y-2 ml-5 pb-3">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                       {service.info.sub.map((subService, subIndex) => {
                         const serviceDetails = subServiceDetails.find(
@@ -280,7 +280,7 @@ const ContactUsPage: FC = () => {
 
                         if (serviceDetails) {
                           return (
-                            <label key={subIndex} className="flex items-center">
+                            <label key={subIndex} className="flex  my-2">
                               <Checkbox
                                 value={subIndex}
                                 checked={selectedServices.includes(subService)}
@@ -328,7 +328,7 @@ const ContactUsPage: FC = () => {
                     </CollapsibleTrigger>
                   </div>
 
-                  <CollapsibleContent className="space-y-2 ml-5">
+                  <CollapsibleContent className="space-y-2 ml-5 pb-3">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                       {contract.info.sub.map((subContract) => {
                         const contractDetails = contractExamples.find(
@@ -339,7 +339,7 @@ const ContactUsPage: FC = () => {
                           return (
                             <label
                               key={subContract}
-                              className="flex items-center"
+                              className="flex items-center my-2"
                             >
                               <Checkbox
                                 value={subContract}
