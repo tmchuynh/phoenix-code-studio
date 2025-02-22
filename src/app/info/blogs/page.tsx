@@ -1,5 +1,6 @@
 "use client";
 
+import LoadingIndicator from "@/components/Loading";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
@@ -65,7 +66,8 @@ const BlogDisplayPage: FC = () => {
   const isSmallDevice = useSmallScreen();
   const isMediumDevice = useMediumScreen();
   const isLargerScreen = useBetweenLargeAndXL();
-  const { theme } = useTheme();
+  const { theme, setTheme } = useTheme();
+  const [isMounted, setIsMounted] = useState(false);
 
   const [openCollapsible, setOpenCollapsible] = useState<string | null>(null);
 
@@ -330,8 +332,16 @@ const BlogDisplayPage: FC = () => {
   };
 
   useEffect(() => {
+    if (theme) {
+      setTheme(theme);
+      setIsMounted(true);
+    }
     handleFilter();
-  }, [handleFilter]);
+  }, [handleFilter, theme]);
+
+  if (!isMounted) {
+    return <LoadingIndicator />;
+  }
 
   function handleOpen(
     dropdown: "topic" | "date" | "author" | "year" | "month"
@@ -436,7 +446,7 @@ const BlogDisplayPage: FC = () => {
     clearFilters("readingLength");
     setFiltersCleared(false);
     if (!selectedLength.includes(length)) {
-      const updatedLength = [length];
+      const updatedLength = [...selectedLength, length];
       setSelectedLength(updatedLength);
       handleFilter();
     }
