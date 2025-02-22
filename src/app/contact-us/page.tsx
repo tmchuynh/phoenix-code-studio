@@ -282,7 +282,7 @@ const ContactUsPage: FC = () => {
                           return (
                             <label key={subIndex} className="flex  my-2">
                               <Checkbox
-                                value={subIndex}
+                                value={subService}
                                 checked={selectedServices.includes(subService)}
                                 onCheckedChange={(checked) =>
                                   handleServiceCheckboxChange(
@@ -371,7 +371,8 @@ const ContactUsPage: FC = () => {
               <DropdownMenu className="w-full">
                 <DropdownMenuTrigger asChild>
                   <button className="w-full text-start p-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary flex items-center justify-between">
-                    {formData.paymentPlan || "Select a Payment Plan"}
+                    {capitalize(formData.paymentPlan) ||
+                      "Select a Payment Plan"}
                     <FaChevronDown />
                   </button>
                 </DropdownMenuTrigger>
