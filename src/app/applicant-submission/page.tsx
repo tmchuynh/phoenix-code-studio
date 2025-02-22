@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { jobPositions } from "@/lib/constants";
-import { BpCheckbox } from "@/components/ui/checkbox-custom";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import LoadingIndicator from "@/components/Loading";
+import { Checkbox } from "@/components/ui/checkbox";
 
 const ApplicantSubmissionPage = () => {
   const [selectedPositions, setSelectedPositions] = useState<string[]>([]);
@@ -28,7 +28,10 @@ const ApplicantSubmissionPage = () => {
   }
 
   // Handle position selection
-  const handlePositionChange = (position: string, checked: boolean) => {
+  const handlePositionChange = (
+    position: string,
+    checked: boolean | string
+  ) => {
     setSelectedPositions((prev) =>
       checked ? [...prev, position] : prev.filter((p) => p !== position)
     );
@@ -123,10 +126,10 @@ const ApplicantSubmissionPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {jobPositions.map((position) => (
               <div key={position.title} className="flex items-center">
-                <BpCheckbox
+                <Checkbox
                   checked={selectedPositions.includes(position.title)}
-                  onChange={(e) =>
-                    handlePositionChange(position.title, e.target.checked)
+                  onCheckedChange={(checked) =>
+                    handlePositionChange(position.title, checked)
                   }
                 />
                 <label htmlFor={position.title} className="ml-2">

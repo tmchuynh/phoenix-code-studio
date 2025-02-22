@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { BpCheckbox } from "@/components/ui/checkbox-custom";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Collapsible,
   CollapsibleContent,
@@ -352,7 +352,10 @@ const BlogDisplayPage: FC = () => {
     });
   }
 
-  const handleTopicCheckboxChange = (topic: string, checked: boolean) => {
+  const handleTopicCheckboxChange = (
+    topic: string,
+    checked?: boolean | string
+  ) => {
     setFiltersCleared(false);
     if (checked) {
       handleTopicChange([...selectedTopics, topic]);
@@ -366,7 +369,7 @@ const BlogDisplayPage: FC = () => {
     day: number,
     month: number,
     year: number,
-    checked: boolean
+    checked: boolean | string
   ) => {
     const dayString = `${year}-${month}-${day}`; // Use a "year-month-day" format for unique identification
 
@@ -393,7 +396,7 @@ const BlogDisplayPage: FC = () => {
   const handleCheckboxChange = (
     type: "day" | "month" | "year",
     value: { year: number; month?: number; day?: number },
-    checked: boolean
+    checked: boolean | string
   ) => {
     const day = value.day || 1; // Default to the 1st if no day provided
     const month = value.month || 1; // Default to January if no month provided
@@ -536,11 +539,11 @@ const BlogDisplayPage: FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 justify-start items-start w-full">
                     {topics.sort().map((topic) => (
                       <div key={topic} className="flex items-center mr-1">
-                        <BpCheckbox
+                        <Checkbox
                           id={topic}
                           checked={selectedTopics.includes(topic)}
-                          onChange={(e) =>
-                            handleTopicCheckboxChange(topic, e.target.checked)
+                          onCheckedChange={(checked) =>
+                            handleTopicCheckboxChange(topic, checked)
                           }
                         />
                         <label htmlFor={topic} className="ml-2">
@@ -608,15 +611,11 @@ const BlogDisplayPage: FC = () => {
                         <CollapsibleContent className="space-y-2 ml-5">
                           {/* "Select All Days in Year" Checkbox */}
                           <div className="flex items-center">
-                            <BpCheckbox
+                            <Checkbox
                               id={`ALL-${year}`}
                               checked={selectedYears.includes(`${year}`)}
-                              onChange={(e) =>
-                                handleCheckboxChange(
-                                  "year",
-                                  { year },
-                                  e.target.checked
-                                )
+                              onCheckedChange={(checked) =>
+                                handleCheckboxChange("year", { year }, checked)
                               }
                             />
                             <label htmlFor={`ALL-${year}`} className="ml-2">
@@ -680,16 +679,16 @@ const BlogDisplayPage: FC = () => {
                                 <CollapsibleContent className="space-y-2 ml-5">
                                   {/* "Select All Days in Month" Checkbox */}
                                   <div className="flex items-center">
-                                    <BpCheckbox
+                                    <Checkbox
                                       id={`ALL-${year}-${monthData.month}`}
                                       checked={selectedMonths.includes(
                                         `${year}-${monthData.month}`
                                       )}
-                                      onChange={(e) =>
+                                      onCheckedChange={(checked) =>
                                         handleCheckboxChange(
                                           "month",
                                           { year, month: monthData.month },
-                                          e.target.checked
+                                          checked
                                         )
                                       }
                                     />
@@ -712,17 +711,17 @@ const BlogDisplayPage: FC = () => {
                                           key={dayIndex}
                                           className="flex items-center mr-1"
                                         >
-                                          <BpCheckbox
+                                          <Checkbox
                                             id={`${year}-${monthData.month}`}
                                             checked={selectedDays.includes(
                                               `${year}-${monthData.month}-${day}`
                                             )}
-                                            onChange={(e) =>
+                                            onCheckedChange={(checked) =>
                                               handleDayCheckboxChange(
                                                 day,
                                                 monthData.month,
                                                 year,
-                                                e.target.checked
+                                                checked
                                               )
                                             }
                                           />
@@ -776,7 +775,7 @@ const BlogDisplayPage: FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 justify-start items-start w-full">
                     {authors.sort().map((author) => (
                       <div key={author} className="flex items-center mr-1">
-                        <BpCheckbox
+                        <Checkbox
                           id={author}
                           className={theme === "dark" ? "text-foreground" : ""}
                           checked={selectedAuthors.includes(author)}

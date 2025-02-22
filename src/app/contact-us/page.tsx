@@ -3,7 +3,7 @@
 import LoadingIndicator from "@/components/Loading";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
-import { BpCheckbox } from "@/components/ui/checkbox-custom";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Collapsible,
   CollapsibleContent,
@@ -92,7 +92,7 @@ const ContactUsPage: FC = () => {
 
   const handleContractCheckboxChange = (
     contractId: string,
-    checked: boolean
+    checked: boolean | string
   ) => {
     if (checked) {
       setSelectedContracts((prev) => [...prev, contractId]);
@@ -102,7 +102,10 @@ const ContactUsPage: FC = () => {
     handleOpen("contract", contractId);
   };
 
-  const handleServiceCheckboxChange = (serviceId: string, checked: boolean) => {
+  const handleServiceCheckboxChange = (
+    serviceId: string,
+    checked: boolean | string
+  ) => {
     if (checked) {
       setSelectedServices((prev) => [...prev, serviceId]);
     } else {
@@ -268,13 +271,13 @@ const ContactUsPage: FC = () => {
                         if (serviceDetails) {
                           return (
                             <label key={subIndex} className="flex items-center">
-                              <BpCheckbox
+                              <Checkbox
                                 value={subIndex}
                                 checked={selectedServices.includes(subService)}
-                                onChange={(e) =>
+                                onCheckedChange={(checked) =>
                                   handleServiceCheckboxChange(
                                     subService,
-                                    e.target.checked
+                                    checked
                                   )
                                 }
                                 className="mr-2"
@@ -328,15 +331,15 @@ const ContactUsPage: FC = () => {
                               key={subContract}
                               className="flex items-center"
                             >
-                              <BpCheckbox
+                              <Checkbox
                                 value={subContract}
                                 checked={selectedContracts.includes(
                                   subContract
                                 )}
-                                onChange={(e) =>
+                                onCheckedChange={(checked) =>
                                   handleContractCheckboxChange(
                                     subContract,
-                                    e.target.checked
+                                    checked
                                   )
                                 }
                                 className="mr-2"
