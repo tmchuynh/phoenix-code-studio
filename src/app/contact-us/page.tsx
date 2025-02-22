@@ -27,6 +27,7 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import { FC, useEffect, useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import emailjs from "@emailjs/browser";
 
 const ContactUsPage: FC = () => {
   const { theme } = useTheme();
@@ -50,10 +51,15 @@ const ContactUsPage: FC = () => {
     [key: string]: boolean;
   }>({});
 
+  const [messageText, setMessageText] = useState<string>("");
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 250);
+    emailjs.init({
+      publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "",
+    });
   }, [loading]);
 
   if (loading) {
@@ -123,14 +129,60 @@ const ContactUsPage: FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Submitted formData:", formData);
-    console.log("selectedServices:", selectedServices);
 
+    // Set the messageText string to show in the UI or for logging purposes
+    const messageText = `Email: ${formData.email}\nName: ${capitalize(
+      formData.name
+    )}\nSubject: ${capitalize(formData.subject)}\nMessage: ${capitalize(
+      formData.message
+    )}\nSelected services: \n${formData.selectedServices.join(
+      `\n`
+    )}\nSelected contracts: \n${formData.selectedContracts.join(
+      `\n`
+    )}\nPayment plan: ${capitalize(formData.paymentPlan)}`;
+
+    // Set submitted to true
     setSubmitted(true);
 
+    // Set message text for the UI (if needed)
+    setMessageText(messageText);
+
+    // Get the form element reference
+    const formElement = document.getElementById(
+      "contact-form"
+    ) as HTMLFormElement;
+
+    const formDataToSend = {
+      email: formData.email,
+      name: capitalize(formData.name),
+      subject: capitalize(formData.subject),
+      message: capitalize(formData.message),
+      selectedServices: formData.selectedServices.join(", "), // Convert array to string
+      selectedContracts: formData.selectedContracts.join(", "), // Convert array to string
+      paymentPlan: capitalize(formData.paymentPlan),
+      messageText, // Include messageText as a custom parameter
+    };
+
+    // Ensure the form exists before sending the data using emailjs
+    if (formElement) {
+      emailjs.send("service_8nwkxet", "contact-form-template", {
+        from_name: `${formDataToSend.name}`,
+        name: `${formDataToSend.name}`,
+        email: `${formDataToSend.email}`,
+        subject: `${formDataToSend.subject}`,
+        message: `${formDataToSend.message}`,
+        selectedServices: `${formDataToSend.selectedServices}`,
+        selectedContracts: `${formDataToSend.selectedContracts}`,
+        paymentPlan: `${formDataToSend.paymentPlan}`,
+        reply_to: `${formDataToSend.email}`,
+      });
+    } else {
+      console.error("Form element not found.");
+    }
+
+    // Reset form state and selections
     setSelectedServices([]);
     setSelectedContracts([]);
-
-    // Reset form if desired
     setFormData({
       name: "",
       email: "",
@@ -176,7 +228,11 @@ const ContactUsPage: FC = () => {
               </p>
             </div>
           )}
-          <form onSubmit={handleSubmit} className="w-full flex flex-col">
+          <form
+            onSubmit={handleSubmit}
+            id="contact-form"
+            className="w-full flex flex-col"
+          >
             {/* Name */}
             <div className="mb-4">
               <label htmlFor="name" className="block text-lg font-semibold">
@@ -224,7 +280,6 @@ const ContactUsPage: FC = () => {
               <input
                 autoCapitalize="sentences"
                 type="text"
-                inputMode="text"
                 id="subject"
                 name="subject"
                 value={formData.subject}
@@ -242,7 +297,6 @@ const ContactUsPage: FC = () => {
               <textarea
                 autoCapitalize="sentences"
                 spellCheck
-                inputMode="text"
                 id="message"
                 name="message"
                 value={formData.message}
@@ -399,6 +453,8 @@ const ContactUsPage: FC = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
+
+            <input type="hidden" name="messageText" value={messageText} />
 
             {/* Submit Button */}
             <Button type="submit" className="w-1/2 mx-auto">
