@@ -410,6 +410,10 @@ const BlogDisplayPage: FC = () => {
       // Handle the checkbox change for a specific day
       if (checked) {
         setSelectedDays([...selectedDays, dayKey]);
+        setSelectedYears([]);
+        setSelectedMonths(
+          selectedMonths.filter((d) => !d.startsWith(`${year}-`))
+        );
       } else {
         setSelectedDays(selectedDays.filter((d) => d !== dayKey));
       }
@@ -696,7 +700,9 @@ const BlogDisplayPage: FC = () => {
                                       htmlFor={`ALL-${year}-${monthData.month}`}
                                       className="ml-2"
                                     >
-                                      <p>Select Entire Month</p>
+                                      <p className="m-0 p-0">
+                                        Select Entire Month
+                                      </p>
                                     </label>
                                   </div>
 
@@ -704,6 +710,7 @@ const BlogDisplayPage: FC = () => {
                                   <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-1">
                                     {sortedDays.map((dayData, dayIndex) => {
                                       const day = dayData[0]?.date.day;
+                                      const month = monthData.month;
                                       const suffix = getDaySuffix(day);
 
                                       return (
@@ -712,21 +719,20 @@ const BlogDisplayPage: FC = () => {
                                           className="flex items-center mr-1"
                                         >
                                           <Checkbox
-                                            id={`${year}-${monthData.month}`}
+                                            id={`${year}-${monthData.month}-${day}`}
                                             checked={selectedDays.includes(
                                               `${year}-${monthData.month}-${day}`
                                             )}
                                             onCheckedChange={(checked) =>
-                                              handleDayCheckboxChange(
-                                                day,
-                                                monthData.month,
-                                                year,
+                                              handleCheckboxChange(
+                                                "day",
+                                                { day, month, year },
                                                 checked
                                               )
                                             }
                                           />
                                           <label
-                                            htmlFor={`${year}-${monthData.month}`}
+                                            htmlFor={`${year}-${monthData.month}-${day}`}
                                             className="ml-2"
                                           >
                                             <p>
