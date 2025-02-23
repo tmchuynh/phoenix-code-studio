@@ -182,6 +182,7 @@ const BlogPostPage = () => {
                                     </strong>
                                   )}
                                   {b_list.description}
+
                                   {b_list.list && (
                                     <ul className="ml-4 mt-2">
                                       {b_list.list.map((c_list, c_index) => (
@@ -192,6 +193,7 @@ const BlogPostPage = () => {
                                             </strong>
                                           )}
                                           {c_list.description}
+
                                           {c_list.list && (
                                             <ul className="list-decimal list-inside mt-2">
                                               {c_list.list.map(
@@ -203,6 +205,26 @@ const BlogPostPage = () => {
                                                       </strong>
                                                     )}
                                                     {d_list.description}
+
+                                                    {d_list.list && (
+                                                      <ul className="ml-5">
+                                                        {d_list.list.map(
+                                                          (e_list, e_index) => (
+                                                            <li key={e_index}>
+                                                              {e_list.title && (
+                                                                <strong className="text-foreground">
+                                                                  {e_list.title}
+                                                                  :{" "}
+                                                                </strong>
+                                                              )}
+                                                              {
+                                                                e_list.description
+                                                              }
+                                                            </li>
+                                                          )
+                                                        )}
+                                                      </ul>
+                                                    )}
                                                   </li>
                                                 )
                                               )}
