@@ -1002,7 +1002,7 @@ const BlogDisplayPage: FC = () => {
                         {blog.wordCount && (
                           <p className="mt-0 text-xs md:text-sm lg:text-md 2xl:text-lg">
                             <strong className="text-foreground">Words:</strong>{" "}
-                            <span>{formatNumber(blog.wordCount)}</span>
+                            <span>~{formatNumber(blog.wordCount)}</span>
                           </p>
                         )}
                         {blog.time && (
@@ -1029,9 +1029,6 @@ const BlogDisplayPage: FC = () => {
                     </Button>
 
                     <div className="flex flex-col md:flex-row justify-between">
-                      <p className="mb-0.5 md:my-1 lg:mt-4 text-sm md:text-lg lg:text-lg">
-                        <strong>By:</strong> {blog.author}
-                      </p>
                       <p className="mt-0.5 md:my-1 lg:mt-4 text-sm md:text-lg lg:text-lg">
                         <strong>Date:</strong> {blog.date.month} /{" "}
                         {blog.date.day} / {blog.date.year}
@@ -1045,7 +1042,7 @@ const BlogDisplayPage: FC = () => {
                   {isSmallDevice ? null : isLargerScreen ? (
                     <div className="mt-4 flex flex-col bottom-2 absolute">
                       {blog.topics.length > 0 && (
-                        <div className="mt-6">
+                        <div className="mt-6 flex flex-wrap gap-3">
                           {blog.topics.sort().map((topic, index) => (
                             <Badge
                               key={index}
