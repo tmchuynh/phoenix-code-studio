@@ -150,8 +150,10 @@ export function cssValue(value: number | string): string {
   return `${lengthWithunit.value}${lengthWithunit.unit}`;
 }
 
-export function formatNumber(value: number | string): string {
-  return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+export function formatNumber(value: number): string {
+  return (Math.round(value / 100) * 100)
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 export function parseReadingTimeToSeconds(timeStr: string): number {
