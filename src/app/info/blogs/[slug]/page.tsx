@@ -193,7 +193,7 @@ const BlogPostPage = () => {
                                           )}
                                           {c_list.description}
                                           {c_list.list && (
-                                            <ul className="list-decimal list-inside">
+                                            <ul className="list-decimal list-inside mt-2">
                                               {c_list.list.map(
                                                 (d_list, d_index) => (
                                                   <li key={d_index}>
