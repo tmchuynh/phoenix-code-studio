@@ -164,28 +164,50 @@ const BlogPostPage = () => {
                           <p>
                             {innerList.title && (
                               <>
-                                <strong>{innerList.title}:</strong>{" "}
+                                <strong className="text-secondary">
+                                  {innerList.title}:
+                                </strong>{" "}
                               </>
                             )}
                             {innerList.description && innerList.description}
                           </p>
 
                           {innerList.list && (
-                            <ul className="list-decimal list-inside">
+                            <ul className="list-decimal list-inside mt-0">
                               {innerList.list.map((b_list, b_index) => (
                                 <li key={b_index}>
                                   {b_list.title && (
-                                    <strong>{b_list.title}: </strong>
+                                    <strong className="text-foreground">
+                                      {b_list.title}:{" "}
+                                    </strong>
                                   )}
                                   {b_list.description}
                                   {b_list.list && (
-                                    <ul className="ml-4">
+                                    <ul className="ml-4 mt-2">
                                       {b_list.list.map((c_list, c_index) => (
                                         <li key={c_index}>
                                           {c_list.title && (
-                                            <strong>{c_list.title}: </strong>
+                                            <strong className="text-tertiary">
+                                              {c_list.title}:{" "}
+                                            </strong>
                                           )}
                                           {c_list.description}
+                                          {c_list.list && (
+                                            <ul className="list-decimal list-inside">
+                                              {c_list.list.map(
+                                                (d_list, d_index) => (
+                                                  <li key={d_index}>
+                                                    {d_list.title && (
+                                                      <strong>
+                                                        {d_list.title}:{" "}
+                                                      </strong>
+                                                    )}
+                                                    {d_list.description}
+                                                  </li>
+                                                )
+                                              )}
+                                            </ul>
+                                          )}
                                         </li>
                                       ))}
                                     </ul>
