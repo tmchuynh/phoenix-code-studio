@@ -16292,6 +16292,7 @@ export const blogs: BlogPost[] = [
           },
         ],
       },
+    title: "Deep Dive into React: Next.js, and Remix Compared",
       {
         title: "Next.js: The React Framework for Production",
         description:
