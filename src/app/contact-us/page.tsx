@@ -64,31 +64,58 @@ const ContactUsPage: FC = () => {
     return <LoadingIndicator />;
   }
 
-  // Handle text input and textarea changes
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  /**
+   * Handles the change event for input and textarea elements.
+   *
+   * @param {React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>} e - The change event object.
+   * @returns {void}
+   */
+  interface HandleChangeEvent
+    extends React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> {
+    target: HTMLInputElement | HTMLTextAreaElement;
+  }
+
+  const handleChange = (e: HandleChangeEvent): void => {
     const { name, value } = e.target;
-    setFormData((prevState) => ({
+    setFormData((prevState: FormDataType) => ({
       ...prevState,
       [name]: value,
     }));
   };
 
+  /**
+   * Handles the opening and closing of collapsible sections.
+   *
+   * @param type - The type of collapsible section, either "contract" or "service".
+   * @param id - The unique identifier of the collapsible section.
+   *
+   * This function updates the state to toggle the visibility of the specified collapsible section.
+   * It ensures that only one collapsible section is open at a time by closing all others.
+   */
   const handleOpen = (type: "contract" | "service", id: string) => {
-    setOpenCollapsibles((prevState) => ({
-      ...prevState,
-      [`${type}-${id}`]: !prevState[`${type}-${id}`], // Toggle the clicked one
-      // Close all others
-      ...Object.keys(prevState).reduce((acc, key) => {
+    setOpenCollapsibles((prevState) => {
+      const newState = { ...prevState };
+      Object.keys(newState).forEach((key) => {
         if (key !== `${type}-${id}`) {
-          acc[key] = false; // Set all other collapsibles to false
+          newState[key] = false; // Close all others
         }
-        return acc;
-      }, {} as { [key: string]: boolean }), // Cast the accumulator to have the correct type
-    }));
+      });
+      newState[`${type}-${id}`] = !prevState[`${type}-${id}`]; // Toggle the clicked one
+      return newState;
+    });
   };
 
+  /**
+   * Handles the change event for the contract checkbox.
+   *
+   * @param {string} contractId - The ID of the contract.
+   * @param {boolean | string} checked - The checked state of the checkbox.
+   *
+   * This function updates the selected contracts state based on whether the checkbox is checked or not.
+   * If checked, it adds the contract ID to the selected contracts list.
+   * If unchecked, it removes the contract ID from the selected contracts list.
+   * It also updates the form data state with the new list of selected contracts.
+   */
   const handleContractCheckboxChange = (
     contractId: string,
     checked: boolean | string
@@ -100,12 +127,25 @@ const ContactUsPage: FC = () => {
         prev.filter((id) => id !== `${capitalize(contractId)}`)
       );
     }
-    setFormData((prevState) => ({
+    setFormData((prevState: FormDataType) => ({
       ...prevState,
-      selectedContracts: selectedContracts,
+      selectedContracts: checked
+        ? [...selectedContracts, `${capitalize(contractId)}`]
+        : selectedContracts.filter((id) => id !== `${capitalize(contractId)}`),
     }));
   };
 
+  /**
+   * Handles the change event for service checkboxes.
+   *
+   * @param {string} serviceId - The ID of the service.
+   * @param {boolean | string} checked - The checked state of the checkbox.
+   *
+   * This function updates the selected services state based on the checkbox state.
+   * If the checkbox is checked, the service ID is added to the selected services.
+   * If the checkbox is unchecked, the service ID is removed from the selected services.
+   * It also updates the form data state with the new selected services.
+   */
   const handleServiceCheckboxChange = (
     serviceId: string,
     checked: boolean | string
@@ -117,13 +157,34 @@ const ContactUsPage: FC = () => {
         prev.filter((id) => id !== `${capitalize(serviceId)}`)
       );
     }
-    setFormData((prevState) => ({
+    setFormData((prevState: FormDataType) => ({
       ...prevState,
-      selectedServices: selectedServices,
+      selectedServices: checked
+        ? [...selectedServices, `${capitalize(serviceId)}`]
+        : selectedServices.filter((id) => id !== `${capitalize(serviceId)}`),
     }));
   };
 
-  // Handle form submission
+  /**
+   * Handles the form submission event.
+   *
+   * @param {React.FormEvent} e - The form submission event.
+   *
+   * This function prevents the default form submission behavior, logs the form data,
+   * sets the submitted state to true, and sends the form data using emailjs.
+   * It also resets the form state and selections after submission.
+   *
+   * The form data includes:
+   * - email: The email address of the user.
+   * - name: The name of the user, capitalized.
+   * - subject: The subject of the message, capitalized.
+   * - message: The message content, capitalized.
+   * - selectedServices: A comma-separated string of selected services.
+   * - selectedContracts: A comma-separated string of selected contracts.
+   * - paymentPlan: The selected payment plan, capitalized.
+   *
+   * If the form element is not found, an error is logged to the console.
+   */
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Submitted formData:", formData);
