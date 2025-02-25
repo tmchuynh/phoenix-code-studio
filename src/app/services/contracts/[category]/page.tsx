@@ -1,22 +1,18 @@
 "use client";
-
 import CannotFind from "@/components/CannotFind";
 import LoadingIndicator from "@/components/Loading";
-import { Button } from "@/components/ui/button";
 import { Category } from "@/lib/interfaces";
 import { contractExamples } from "@/lib/sub-contracts";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
-import { formatName, setSlug } from "@/lib/utils";
-import { useParams, useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
-import { LuArrowBigRightDash } from "react-icons/lu";
+import { formatName } from "@/lib/utils";
+import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function CategoryPage() {
   const { category } = useParams() as { category: string };
   const isMediumScreen = useMediumScreen();
   const isSmallScreen = useSmallScreen();
-  const router = useRouter();
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
