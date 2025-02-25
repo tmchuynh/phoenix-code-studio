@@ -1,16 +1,12 @@
 "use client";
-
-import EmphasizeText from "@/components/Highlighted";
 import LoadingIndicator from "@/components/Loading";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { allContracts } from "@/lib/contract-categories";
 import { contractExamples } from "@/lib/sub-contracts";
-import { useRouter } from "next/navigation";
 import { FC, useEffect, useState } from "react";
 
 const ExampleContractsPage: FC = () => {
-  const router = useRouter();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
