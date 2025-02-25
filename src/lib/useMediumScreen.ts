@@ -1,26 +1,28 @@
 import { useState, useEffect } from "react";
+import { debounce } from "./debounce";
 
-/**
- * Custom hook to determine if the medium size is small (<= 768px).
- */
 const useMediumScreen = () => {
-  const [IsMediumScreen, setIsMediumScreen] = useState( false );
+  const [isMediumScreen, setIsMediumScreen] = useState(
+    window.innerWidth <= 768
+  );
 
-  useEffect( () => {
+  useEffect(() => {
     const handleResize = () => {
-      setIsMediumScreen( window.innerWidth <= 768 );
+      setIsMediumScreen(window.innerWidth <= 768);
     };
 
-    window.addEventListener( "resize", handleResize );
+    const debouncedHandleResize = debounce(handleResize, 200);
+
+    window.addEventListener("resize", debouncedHandleResize);
 
     handleResize();
 
     return () => {
-      window.removeEventListener( "resize", handleResize );
+      window.removeEventListener("resize", debouncedHandleResize);
     };
-  }, [] );
+  }, []);
 
-  return IsMediumScreen;
+  return isMediumScreen;
 };
 
 export default useMediumScreen;
