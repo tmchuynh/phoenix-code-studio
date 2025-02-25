@@ -4,7 +4,7 @@ import StarRating from "@/components/Ratings";
 import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Card, CardContent } from "@/components/ui/card";
 import { testimonials } from "@/lib/constants";
-import { formatQuotes } from "@/lib/utils";
+import { splitAndTrimQuotes } from "@/lib/utils";
 import { FC, useEffect, useState } from "react";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
@@ -56,11 +56,13 @@ const TestimonialsPage: FC = () => {
                 </div>
                 <blockquote className="italic relative h-full py-10">
                   <FaQuoteLeft className="absolute size-7 top-0 text-tertiary" />
-                  {formatQuotes(testimonial.quote).map((paragraph, index) => (
-                    <span key={index} className="mb-4 indent-6 flex">
-                      {paragraph}
-                    </span>
-                  ))}
+                  {splitAndTrimQuotes(testimonial.quote).map(
+                    (paragraph, index) => (
+                      <span key={index} className="mb-4 indent-6 flex">
+                        {paragraph}
+                      </span>
+                    )
+                  )}
                   <FaQuoteRight className="absolute right-8 bottom-6 size-7 text-tertiary" />
                 </blockquote>
               </CardContent>
