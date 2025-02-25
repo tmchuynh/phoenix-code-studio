@@ -182,7 +182,7 @@ const PastProjectsPage: FC = () => {
     new Set(pastProjects.flatMap((p) => p.technologies || []))
   );
   const allLibraries = Array.from(
-    new Set(pastProjects.flatMap((p) => p.libraries || [])) // Fix: corrected key name
+    new Set(pastProjects.flatMap((p) => p.libraries || []))
   );
   const allTags = Array.from(
     new Set(pastProjects.flatMap((p) => p.tags || []))
@@ -196,7 +196,6 @@ const PastProjectsPage: FC = () => {
     selectedTags,
     selectedTechnologies,
     selectedLibraries,
-    handleFilter,
   ]);
 
   return (
