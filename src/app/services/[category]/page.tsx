@@ -1,12 +1,10 @@
 "use client";
-
 import { Category } from "@/lib/interfaces";
 import { subServiceDetails } from "@/lib/sub-services";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { LuArrowBigRightDash } from "react-icons/lu";
 import { Button } from "@/components/ui/button";
 import CallToAction from "@/components/CallToAction";
 import { formatName, setSlug } from "@/lib/utils";
