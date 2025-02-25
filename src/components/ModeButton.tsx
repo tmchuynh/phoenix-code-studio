@@ -9,12 +9,12 @@ import { cn } from "@/lib/utils";
 
 const ModeButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className }, ref) => {
-    const { theme, setTheme } = useTheme();
+    const { theme = "light", setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
       setMounted(true);
-    }, []);
+    }, [theme]);
 
     useEffect(() => {
       const handleKeydown = (e: KeyboardEvent) => {
@@ -28,16 +28,17 @@ const ModeButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
       return () => {
         window.removeEventListener("keydown", handleKeydown);
       };
-    });
+    }, []);
 
-    if (!mounted) {
+    if (!mounted || !theme) {
       return null;
     }
 
     const handleThemeToggle = () => {
       setTheme(theme === "dark" ? "light" : "dark");
       if (window.location.pathname === "/info/programs") {
-        window.location.reload();
+        setMounted(false);
+        requestAnimationFrame(() => setMounted(true));
       }
     };
 
@@ -47,8 +48,11 @@ const ModeButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
         variant="ghost"
         type="button"
         onClick={handleThemeToggle}
-        aria-label="Toggle theme"
-        className={cn(className, "hover:bg-transparent hover:text-secondary ")}
+        className={cn(
+          `${className} ${
+            className ? "hover:bg-transparent hover:text-secondary" : ""
+          }`
+        )}
         ref={ref}
       >
         {theme === "dark" ? (
@@ -59,7 +63,7 @@ const ModeButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
           />
         ) : (
           <Moon
-            className="transition-all rotate-12 scale-100 m-auto h-full"
+            className="transition-all rotate-0 scale-100 m-auto h-full"
             role="img"
             aria-label="toggle dark mode"
           />
