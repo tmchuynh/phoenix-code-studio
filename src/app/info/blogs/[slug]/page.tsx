@@ -14,9 +14,9 @@ import { setSlug } from "@/lib/utils";
 const BlogPostPage = () => {
   const { slug } = useParams();
   const router = useRouter();
-  const [post, setPost] = useState<BlogPost>();
+  const [post, setPost] = useState<BlogPost | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
   const [fileExists, setFileExists] = useState<boolean | null>(null);
   const [fileName, setFileName] = useState("");
 
@@ -39,42 +39,43 @@ const BlogPostPage = () => {
         }
       }
 
-      const checkFileExist = async () => {
-        // Check if the file exists
-        try {
-          const fileName = `/images/blog_images/${slug}-1.jpg`;
-          setFileName(fileName);
-          const encodedFileName = encodeURIComponent(fileName); // Ensure the filename is properly encoded
-
-          const fileResponse = await fetch(
-            `/api/blogs/check-image-file?fileName=${encodedFileName}`
-          );
-
-          const data = await fileResponse.json();
-          console.log(data);
-
-          if (!fileResponse.ok) {
-            throw new Error("Image not found");
-          }
-
-          setFileExists(true);
-        } catch (err: any) {
-          setFileExists(false);
-        } finally {
-          setLoading(false);
-        }
-      };
-
       fetchBlog();
-      checkFileExist();
+      checkFileExist(slug);
     }
-  }, [slug]);
+  }, [slug, router]);
+
+  const checkFileExist = async (slug: string) => {
+    // Check if the file exists
+    try {
+      const fileName = `/images/blog_images/${slug}-1.jpg`;
+      setFileName(fileName);
+      const encodedFileName = encodeURIComponent(fileName); // Ensure the filename is properly encoded
+      const fileResponse = await fetch(encodedFileName);
+      if (!fileResponse.ok) {
+        throw new Error("Image not found");
+      }
+
+      const data = await fileResponse.json();
+      console.log(data);
+      console.log(data);
+
+      if (!fileResponse.ok) {
+        throw new Error("Image not found");
+      }
+
+      setFileExists(true);
+    } catch (err: any) {
+      setFileExists(false);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (error) return <CannotFind />;
 
   if (loading) {
     return <LoadingIndicator />;
   }
-
-  if (error) return <CannotFind />;
 
   return (
     <div className="w-10/12 md:w-11/12 mx-auto py-6">
@@ -119,7 +120,7 @@ const BlogPostPage = () => {
                   width={500}
                   height={500}
                   key={index}
-                  alt={`${icon[index]}-${index}`}
+                  alt={`${icon}-${index}`}
                   className="w-10 md:w-20 lg:w-16 2xl:w-16 2xl:ml-[3em] mx-auto"
                 />
               ))}
@@ -132,7 +133,7 @@ const BlogPostPage = () => {
               width={500}
               height={300}
               priority={true}
-              alt={`${post!.title}-image`}
+              alt={`${post?.title}-image`}
               className="w-full lg:h-[25em] object-contain mx-auto object-center mb-2 md:mt-4 xl:mt-0 self-center"
             />
           )}
@@ -265,7 +266,7 @@ const BlogPostPage = () => {
             width={500}
             height={300}
             priority={false}
-            alt={`optional-image-1`}
+            alt={`Image related to ${post?.title}`}
             className="w-full md:w-3/4 lg:w-1/2 xl:w-full h-full object-contain mx-auto object-center mb-2 lg:mt-4 xl:mt-0 self-center"
           />
         )}
