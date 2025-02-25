@@ -1,31 +1,15 @@
 "use client";
-
+import LoadingIndicator from "@/components/Loading";
+import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
-import { FC, useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
-import { useTheme } from "next-themes";
+import { IconDisplay } from "@/lib/IconDisplay";
+import { paymentPlans } from "@/lib/payment-plans";
+import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
 import { cn, setSlug } from "@/lib/utils";
-import useMediumScreen from "@/lib/useMediumScreen";
-import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
-import { paymentPlans } from "@/lib/payment-plans";
-import { MdCheck } from "react-icons/md";
-import LoadingIndicator from "@/components/Loading";
-
-const IconDisplay: FC<{
-  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-}> = ({ Icon }) => {
-  return (
-    <div>
-      {/* Render the icon */}
-      {Icon ? (
-        <Icon className="text-4xl text-accent-5 mx-auto my-1" />
-      ) : (
-        <MdCheck className="my-1 size-5 md:size-6" />
-      )}
-    </div>
-  );
-};
+import { useTheme } from "next-themes";
+import { useRouter } from "next/navigation";
+import { FC, useEffect, useState } from "react";
 
 const PaymentPlansPage: FC = () => {
   const router = useRouter();

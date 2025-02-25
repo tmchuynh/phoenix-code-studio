@@ -25,6 +25,7 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import { blogs } from "@/lib/blog-posts";
+import { IconDisplay } from "@/lib/IconDisplay";
 import { BlogPost } from "@/lib/interfaces";
 import useBetweenLargeAndXL from "@/lib/onlyLargerScreens";
 import useMediumScreen from "@/lib/useMediumScreen";
@@ -38,28 +39,13 @@ import {
   setSlug,
   sortBlogsByDate,
 } from "@/lib/utils";
-import { ChevronsUpDown, Terminal } from "lucide-react";
+import { ChevronsUpDown } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { FC, useCallback, useEffect, useState } from "react";
 import { FaFilterCircleXmark } from "react-icons/fa6";
 import { GoAlertFill } from "react-icons/go";
-
-const IconDisplay: FC<{
-  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-}> = ({ Icon }) => {
-  return (
-    <div>
-      {/* Render the icon */}
-      {Icon ? (
-        <Icon className="text-4xl mx-auto my-1" />
-      ) : (
-        <Terminal className="my-1 size-5 md:size-6" />
-      )}
-    </div>
-  );
-};
 
 const BlogDisplayPage: FC = () => {
   const router = useRouter();

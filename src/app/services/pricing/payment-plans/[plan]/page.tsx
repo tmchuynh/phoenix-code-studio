@@ -1,29 +1,13 @@
 "use client";
-
 import CallToAction from "@/components/CallToAction";
 import CannotFind from "@/components/CannotFind";
 import LoadingIndicator from "@/components/Loading";
+import { IconDisplay } from "@/lib/IconDisplay";
 import { PaymentDetails } from "@/lib/interfaces";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
 import { useParams } from "next/navigation";
-import { FC, useEffect, useState } from "react";
-import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-
-const IconDisplay: FC<{
-  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-}> = ({ Icon }) => {
-  return (
-    <div>
-      {/* Render the icon */}
-      {Icon ? (
-        <Icon className="text-4xl text-accent-5 mx-auto" />
-      ) : (
-        <IoMdCheckmarkCircleOutline className="my-1 size-5 md:size-6" />
-      )}
-    </div>
-  );
-};
+import { useEffect, useState } from "react";
 
 export default function PaymentPlanPage() {
   const { plan } = useParams() as { plan: string };
