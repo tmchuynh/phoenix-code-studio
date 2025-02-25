@@ -218,6 +218,13 @@ export const testimonials: Testimonial[] = [
 
       What sets Tina apart is her relentless drive and self-motivation. Her projects clearly demonstrate her ability to tackle new technologies with confidence, overcoming any challenge that comes her way. She is a true problem-solver and an invaluable asset to any team.`,
   },
+  {
+    name: "Efren Aguilar",
+    featured: true,
+    rating: 5,
+    position: "Software Engineer II",
+    quote: `Tina is a great co-worker to have by your side. She is always willing to tackle any project you give to her and dive deep into understanding everything necessary for the project, and her contribution, to excel. Her drive and mindset for success and growth are at a level that I rarely see anymore; a wonderful asset for any team.`
+  }
 ];
 
 export const pastProjects: Project[] = [
