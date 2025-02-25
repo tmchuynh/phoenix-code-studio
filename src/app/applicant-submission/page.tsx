@@ -33,7 +33,13 @@ const ApplicantSubmissionPage = () => {
     return <LoadingIndicator />;
   }
 
-  // Handle position selection
+  /**
+   * Updates the selected positions based on the provided position and its checked status.
+   *
+   * @param {string} position - The position to be added or removed from the selected positions.
+   * @param {boolean | string} checked - The status indicating whether the position is selected (true) or not (false).
+   * If a string is provided, it will be treated as a truthy value.
+   */
   const handlePositionChange = (
     position: string,
     checked: boolean | string
@@ -43,22 +49,37 @@ const ApplicantSubmissionPage = () => {
     );
   };
 
-  // Handle portfolio link updates
+  /**
+   * Updates the portfolio link at the specified index with the given value.
+   *
+   * @param {string} value - The new portfolio link to be set.
+   * @param {number} index - The index of the portfolio link to be updated.
+   */
   const handlePortfolioChange = (value: string, index: number) => {
     setPortfolioLinks((prevState) =>
       prevState.map((link, i) => (i === index ? value : link))
     );
   };
 
-  // Allow pasting and handle it
+  /**
+   * Handles the paste event for an input element.
+   *
+   * @param e - The clipboard event triggered by pasting.
+   * @param index - The index of the input element being pasted into.
+   */
   const handlePaste: (
     e: React.ClipboardEvent<HTMLInputElement>,
     index: number
   ) => void = (e: React.ClipboardEvent<HTMLInputElement>, index: number) => {
     const pastedValue = e.clipboardData.getData("Text");
-    handlePortfolioChange(pastedValue, index); // Update the link state for the corresponding input
+    handlePortfolioChange(pastedValue, index);
   };
 
+  /**
+   * Handles the change event for input elements and updates the form data state.
+   *
+   * @param {React.ChangeEvent<HTMLInputElement>} e - The change event triggered by the input element.
+   */
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -67,13 +88,11 @@ const ApplicantSubmissionPage = () => {
     }));
   };
 
-  // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
     const formElement = e.target as HTMLFormElement;
 
-    // Validation
     if (selectedPositions.length === 0) {
       setError("Please select at least one position.");
       return;
@@ -86,13 +105,17 @@ const ApplicantSubmissionPage = () => {
 
     if (formElement) {
       emailjs
-        .send("service_8nwkxet", "application-forms-sub", {
-          from_name: formData.name,
-          reply_to: formData.email,
-          from_email: formData.email,
-          user_email: "tinamchuynh@gmail.com",
-          positions: selectedPositions.join(", "),
-        })
+        .send(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
+          {
+            from_name: formData.name,
+            reply_to: formData.email,
+            from_email: formData.email,
+            user_email: formData.email,
+            positions: selectedPositions.join(", "),
+          }
+        )
         .then(
           (response) => {
             console.log("Success:", response);
@@ -106,13 +129,12 @@ const ApplicantSubmissionPage = () => {
         );
     }
 
-    // Simulated form submission
+    setSuccessMessage("Your application has been submitted successfully!");
+    setSelectedPositions([]);
+    setPortfolioLinks([""]);
     setTimeout(() => {
-      setSuccessMessage("Your application has been submitted successfully!");
-      setSelectedPositions([]);
       setSuccessMessage(null);
-      setPortfolioLinks([""]);
-    }, 350);
+    }, 5000); // Increase delay to 5000ms (5 seconds)
   };
 
   return (

@@ -209,17 +209,21 @@ const ContactUsPage: FC = () => {
 
     // Ensure the form exists before sending the data using emailjs
     if (formElement) {
-      emailjs.send("service_8nwkxet", "contact-form-template", {
-        from_name: `${formDataToSend.name}`,
-        name: `${formDataToSend.name}`,
-        email: `${formDataToSend.email}`,
-        subject: `${formDataToSend.subject}`,
-        message: `${formDataToSend.message}`,
-        selectedServices: `${formDataToSend.selectedServices}`,
-        selectedContracts: `${formDataToSend.selectedContracts}`,
-        paymentPlan: `${formDataToSend.paymentPlan}`,
-        reply_to: `${formDataToSend.email}`,
-      });
+      emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
+        process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID || "",
+        {
+          from_name: `${formDataToSend.name}`,
+          name: `${formDataToSend.name}`,
+          email: `${formDataToSend.email}`,
+          subject: `${formDataToSend.subject}`,
+          message: `${formDataToSend.message}`,
+          selectedServices: `${formDataToSend.selectedServices}`,
+          selectedContracts: `${formDataToSend.selectedContracts}`,
+          paymentPlan: `${formDataToSend.paymentPlan}`,
+          reply_to: `${formDataToSend.email}`,
+        }
+      );
     } else {
       console.error("Form element not found.");
     }
