@@ -1,7 +1,19 @@
 import { contractExamples } from "@/lib/sub-contracts";
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req: NextRequest) {
+/**
+ * Handles GET requests for retrieving a specific contract service based on the URL path.
+ *
+ * @param {NextRequest} req - The incoming request object.
+ * @returns {Promise<NextResponse>} - A promise that resolves to a JSON response containing the contract service details or an error message.
+ *
+ * The URL path should follow the pattern: /api/services/contracts/[category]/[contract]
+ * - `[category]` represents the category of the contract service.
+ * - `[contract]` represents the specific contract service name.
+ *
+ * If the specified contract service is not found, a 404 response with an error message is returned.
+ */
+export async function GET(req: NextRequest): Promise<NextResponse> {
   const url = new URL(req.url);
   const segments = url.pathname.split("/").filter(Boolean);
 
