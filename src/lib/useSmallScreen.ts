@@ -17,13 +17,11 @@ const useSmallScreen = (): boolean => {
     const debouncedHandleResize = debounce(handleResize, 100);
 
     window.addEventListener("resize", debouncedHandleResize);
-    // window.addEventListener("resize", handleResize);
 
     handleResize();
 
     return () => {
       window.removeEventListener("resize", debouncedHandleResize);
-      // window.removeEventListener("resize", handleResize);
     };
   }, []);
 

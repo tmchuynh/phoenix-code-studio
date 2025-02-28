@@ -16,7 +16,7 @@ import { debounce } from "./debounce";
  *   // Do something for medium screens
  * }
  */
-const useMediumScreen = () => {
+const useMediumScreen = (): boolean => {
   const [isMediumScreen, setIsMediumScreen] = useState<boolean>(false);
 
   useEffect(() => {
