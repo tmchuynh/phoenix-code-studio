@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/pagination";
 import { useState } from "react";
 import { useTheme } from "next-themes";
+import { Project } from "@/lib/interfaces";
 
 const FeaturedProjects = () => {
   const isSmallScreen = useSmallScreen();
@@ -22,8 +23,14 @@ const FeaturedProjects = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [projectsPerPage, setProjectsPerPage] = useState(6);
 
-  // Filtered blogs
-  const sortedProjects = pastProjects
+  /**
+   * Filters and sorts the list of past projects to include only those that are featured.
+   * The featured projects are then sorted in descending order based on their titles.
+   *
+   * @constant
+   * @type {Array<Project>}
+   */
+  const sortedProjects: Array<Project> = pastProjects
     .filter((pastProjects) => pastProjects.featured === true)
     .sort((a, b) => {
       return b.title.localeCompare(a.title);

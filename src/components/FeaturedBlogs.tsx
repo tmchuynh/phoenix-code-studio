@@ -24,7 +24,15 @@ const FeaturedBlogs = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [articlesPerPage, setArticlesPerPage] = useState(6);
 
-  // Filtered blogs
+  /**
+   * Filters and sorts the list of blogs to get the featured blogs.
+   *
+   * The blogs are filtered to include only those that are marked as featured.
+   * The filtered blogs are then sorted alphabetically by their title.
+   *
+   * @param {Array} blogs - The list of blogs to filter and sort.
+   * @returns {Array} - The filtered and sorted list of featured blogs.
+   */
   const featuredBlogs = blogs
     .filter((blog) => blog.featured === true)
     .sort((a, b) => {

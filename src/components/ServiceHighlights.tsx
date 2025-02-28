@@ -18,6 +18,18 @@ const ServiceHighlights = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [servicesPerPage, setServicesPerPage] = useState(6);
 
+  /**
+   * Filters and sorts the subServiceDetails array to create a list of featured services.
+   *
+   * A service is considered featured if:
+   * - The `info.featured` property is `true`, or
+   * - The `info.startingPrice` property is defined and greater than or equal to 2000.
+   *
+   * The resulting array is sorted alphabetically by the service name.
+   *
+   * @param {Array} subServiceDetails - The array of service details to filter and sort.
+   * @returns {Array} The filtered and sorted array of featured services.
+   */
   const featuredServices = subServiceDetails
     .filter((service) => {
       if (!service.info) return false;

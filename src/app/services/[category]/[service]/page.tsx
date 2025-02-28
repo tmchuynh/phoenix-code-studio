@@ -35,7 +35,7 @@ export default function ServicePage() {
      * @throws {Error} Throws an error if the service post is not found.
      * @returns {Promise<void>} A promise that resolves when the service data is fetched and state is updated.
      */
-    async function fetchServices() {
+    async function fetchServices(): Promise<void> {
       try {
         const response = await fetch(`/api/services/${category}/${service}`);
         if (!response.ok) {

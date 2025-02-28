@@ -1,11 +1,39 @@
 "use client";
 import DynamicButton from "@/components/ui/button-dynamic";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { JSX, useEffect, useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 
-const NotFound = () => {
+/**
+ * NotFound component renders a 404 error page with a countdown timer that redirects to the home page.
+ *
+ * @component
+ * @example
+ * return (
+ *   <NotFound />
+ * )
+ *
+ * @returns {JSX.Element} The rendered 404 error page component.
+ *
+ * @remarks
+ * The component uses a countdown timer to redirect the user to the home page after 10 seconds.
+ * The user can cancel the redirection by clicking the "Cancel Redirection" button.
+ *
+ * @hook
+ * - `useRouter` from `next/router` to handle navigation.
+ * - `useState` to manage the countdown timer and redirection state.
+ * - `useEffect` to set up the countdown timer and redirection logic.
+ *
+ * @dependencies
+ * - `DynamicButton` component for rendering buttons.
+ * - `IoMdClose` icon from `react-icons/io` for the cancel button.
+ * - `FaPhoneAlt` icon from `react-icons/fa` for the contact support button.
+ *
+ * @css
+ * - Uses Tailwind CSS classes for styling.
+ */
+const NotFound = (): JSX.Element => {
   const router = useRouter();
   const [countdown, setCountdown] = useState(10);
   const [redirect, setRedirect] = useState(true);

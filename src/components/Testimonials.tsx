@@ -8,6 +8,7 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Button } from "./ui/button";
 import { useTheme } from "next-themes";
+import { Testimonial } from "@/lib/interfaces";
 
 const Testimonials = () => {
   const isSmallScreen = useSmallScreen();
@@ -18,7 +19,18 @@ const Testimonials = () => {
     router.push("/info/testimonials");
   };
 
-  const featuredTestimonials = testimonials
+  /**
+   * Filters and sorts the testimonials to get the featured ones.
+   *
+   * This function performs the following steps:
+   * 1. Filters the testimonials to include only those marked as featured.
+   * 2. Sorts the filtered testimonials alphabetically by the name property.
+   *
+   * @constant
+   * @type {Array<Testimonial>}
+   * @returns {Array<Testimonial>} An array of featured testimonials sorted by name.
+   */
+  const featuredTestimonials: Array<Testimonial> = testimonials
     .filter((testimonial) => testimonial.featured === true)
     .sort((a, b) => {
       return a.name.localeCompare(b.name);

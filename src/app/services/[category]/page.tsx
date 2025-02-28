@@ -34,7 +34,7 @@ export default function CategoryPage() {
      * @throws {Error} If the response is not ok or the services post is not found.
      * @returns {Promise<void>} A promise that resolves when the data is fetched and state is updated.
      */
-    async function fetchServices() {
+    async function fetchServices(): Promise<void> {
       try {
         const response = await fetch(`/api/services/${category}`);
         if (!response.ok) {

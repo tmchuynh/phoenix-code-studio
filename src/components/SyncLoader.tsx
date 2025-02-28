@@ -4,6 +4,11 @@ import * as React from "react";
 
 import { JSX } from "react";
 
+/**
+ * SyncLoader component displays a loading spinner with three dots.
+ * @param {boolean} loading - Determines if the loader should be visible. Defaults to true.
+ * @returns {JSX.Element | null} The SyncLoader component or null if loading is false.
+ */
 function SyncLoader({
   loading = true,
   color = "var(--accent-5)",

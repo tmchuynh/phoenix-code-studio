@@ -32,20 +32,6 @@ import emailjs from "@emailjs/browser";
 const ContactUsPage: FC = () => {
   const { theme } = useTheme();
 
-  /**
-   * State hook to manage the form data for the contact us page.
-   *
-   * @typedef {Object} FormDataType
-   * @property {string} name - The name of the user.
-   * @property {string} email - The email address of the user.
-   * @property {string} subject - The subject of the message.
-   * @property {string} message - The message content.
-   * @property {string} paymentPlan - The selected payment plan.
-   * @property {Array<string>} selectedServices - The list of selected services.
-   * @property {Array<string>} selectedContracts - The list of selected contracts.
-   *
-   * @returns {[FormDataType, React.Dispatch<React.SetStateAction<FormDataType>>]} The form data state and its setter function.
-   */
   const [formData, setFormData] = useState<FormDataType>({
     name: "",
     email: "",

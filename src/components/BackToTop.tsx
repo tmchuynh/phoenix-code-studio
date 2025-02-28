@@ -38,6 +38,9 @@ const BackToTop = (): JSX.Element => {
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
+  /**
+   * Scrolls the window to the top of the page with a smooth scrolling behavior.
+   */
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
