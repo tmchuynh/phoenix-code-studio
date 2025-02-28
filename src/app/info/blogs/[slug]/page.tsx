@@ -21,27 +21,25 @@ const BlogPostPage = () => {
   const [fileName, setFileName] = useState("");
 
   useEffect(() => {
-    if (slug && typeof slug === "string") {
-      async function fetchBlog() {
-        try {
-          const response = await fetch(`/api/blogs/${slug}`);
-          if (!response.ok) {
-            throw new Error("Blog post not found");
-          }
-          const data = await response.json();
-          setPost(data);
-        } catch (err: any) {
-          setError(err.message);
-        } finally {
-          setTimeout(() => {
-            setLoading(false);
-          }, 500);
+    async function fetchBlog() {
+      try {
+        const response = await fetch(`/api/blogs/${slug}`);
+        if (!response.ok) {
+          throw new Error("Blog post not found");
         }
+        const data = await response.json();
+        setPost(data);
+      } catch (err: any) {
+        setError(err.message);
+      } finally {
+        setTimeout(() => {
+          setLoading(false);
+        }, 500);
       }
-
-      fetchBlog();
-      checkFileExist(slug);
     }
+
+    fetchBlog();
+    checkFileExist(slug as string);
   }, [slug, router]);
 
   const checkFileExist = async (slug: string) => {
@@ -49,6 +47,7 @@ const BlogPostPage = () => {
     try {
       const fileName = `/images/blog_images/${slug}-1.jpg`;
       setFileName(fileName);
+      console.log(fileName);
       const encodedFileName = encodeURIComponent(fileName); // Ensure the filename is properly encoded
       const fileResponse = await fetch(encodedFileName);
       if (!fileResponse.ok) {
@@ -56,8 +55,7 @@ const BlogPostPage = () => {
       }
 
       const data = await fileResponse.json();
-      console.log(data);
-      console.log(data);
+      console.log("data", data);
 
       if (!fileResponse.ok) {
         throw new Error("Image not found");
