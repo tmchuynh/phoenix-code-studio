@@ -351,21 +351,21 @@ const BlogDisplayPage: FC = () => {
     handleOpen("topic");
   };
 
-  const handleDayCheckboxChange = (
-    day: number,
-    month: number,
-    year: number,
-    checked: boolean | string
-  ) => {
-    const dayString = `${year}-${month}-${day}`; // Use a "year-month-day" format for unique identification
+  // const handleDayCheckboxChange = (
+  //   day: number,
+  //   month: number,
+  //   year: number,
+  //   checked: boolean | string
+  // ) => {
+  //   const dayString = `${year}-${month}-${day}`; // Use a "year-month-day" format for unique identification
 
-    setFiltersCleared(false);
-    if (checked) {
-      setSelectedDays((prev) => [...prev, dayString]); // Add the day to the selectedDays array
-    } else {
-      setSelectedDays((prev) => prev.filter((day) => day !== dayString)); // Remove the day if unchecked
-    }
-  };
+  //   setFiltersCleared(false);
+  //   if (checked) {
+  //     setSelectedDays((prev) => [...prev, dayString]); // Add the day to the selectedDays array
+  //   } else {
+  //     setSelectedDays((prev) => prev.filter((day) => day !== dayString)); // Remove the day if unchecked
+  //   }
+  // };
 
   // const handleAuthorCheckboxChange = (author: string, checked: boolean) => {
   //   if (checked) {
