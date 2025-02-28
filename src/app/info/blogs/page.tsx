@@ -78,6 +78,22 @@ const BlogDisplayPage: FC = () => {
     author: false,
   });
   const [filtersCleared, setFiltersCleared] = useState(false);
+
+  /**
+   * Determines the content of an alert based on the state of filters and search results.
+   *
+   * @constant
+   * @type {Object|null}
+   * @property {Object} title - The title of the alert.
+   * @property {string} description - The description of the alert.
+   * @property {React.ComponentType} icon - The icon to be displayed in the alert.
+   * @property {string} type - The type of the alert, either "filter" or "results".
+   *
+   * The alert content is determined as follows:
+   * - If `filtersCleared` is true, the alert indicates that filters have been cleared.
+   * - If `noResults` is true and `filtersCleared` is false, the alert indicates that no results were found and filters have been cleared.
+   * - If neither condition is met, the alert content is null.
+   */
   const alertContent = filtersCleared
     ? {
         title: "Filters Cleared",
@@ -120,7 +136,18 @@ const BlogDisplayPage: FC = () => {
   // Calculate total pages
   const totalPages = Math.ceil(filteredBlogs.length / articlesPerPage);
 
-  // Manage which collapsible is open
+  /**
+   * Handles the state changes for collapsible sections in the blog page.
+   *
+   * @param collapsible - The type of collapsible section being toggled. Can be "topic", "date", "author", "month", or "year".
+   * @param value - The value associated with the collapsible section. For "year" and "month", this is a number representing the year or month. Defaults to null.
+   *
+   * The function performs the following actions based on the type of collapsible:
+   * - "year": Toggles the year section. If the year is already open, it closes the year and all its months. Otherwise, it opens the year.
+   * - "month": Toggles the month section. If the month is already open, it closes the month. Otherwise, it opens the month.
+   * - "date": Toggles the date section. If the date section is already open, it closes all year and month sections. Otherwise, it opens the date section.
+   * - "author" and "topic": Toggles the respective section. If the section is already open, it closes the section. Otherwise, it opens the section.
+   */
   const handleCollapsibleChange = (
     collapsible: "topic" | "date" | "author" | "month" | "year",
     value: number | null = null
@@ -162,6 +189,18 @@ const BlogDisplayPage: FC = () => {
     }
   };
 
+  /**
+   * Transforms and sorts blog post data by year and month.
+   *
+   * @param {Object} blogs - The blog posts data.
+   * @returns {Array} An array of objects, each representing a year with its corresponding months and blog data.
+   * Each year object contains:
+   * - `year` (number): The year.
+   * - `months` (Array): An array of month objects, each containing:
+   *   - `month` (number): The month number.
+   *   - `count` (number): The count of blog posts for the month.
+   *   - `blogsForMonth` (Object): The blog data grouped by day for the month.
+   */
   const sortedData = Object.entries(
     getBlogPostsByYearMonthDayAndCount(blogs)
   ).map(([year, yearData]) => {
@@ -177,6 +216,33 @@ const BlogDisplayPage: FC = () => {
     };
   });
 
+  /**
+   * Filters and sorts the list of blogs based on various criteria such as topics, reading time, authors, search query, and date.
+   *
+   * The function performs the following steps:
+   * 1. Sorts the blogs by date.
+   * 2. Filters the blogs by selected topics.
+   * 3. Filters the blogs by selected reading time and sorts them by reading time.
+   * 4. Filters the blogs by selected authors.
+   * 5. Filters the blogs by search query in the title or author.
+   * 6. Filters the blogs by selected years.
+   * 7. Filters the blogs by selected months.
+   * 8. Filters the blogs by selected days.
+   *
+   * If no results are found after filtering, it handles the no results case by either showing a no results message or clearing the filters.
+   *
+   * @param {Array} blogs - The list of blogs to filter and sort.
+   * @param {Array} selectedTopics - The list of selected topics to filter by.
+   * @param {Array} selectedLength - The list of selected reading times to filter by.
+   * @param {Array} selectedAuthors - The list of selected authors to filter by.
+   * @param {string} searchQuery - The search query to filter by in the title or author.
+   * @param {boolean} filtersCleared - Indicates if the filters have been cleared.
+   * @param {Array} selectedYears - The list of selected years to filter by.
+   * @param {Array} selectedMonths - The list of selected months to filter by.
+   * @param {Array} selectedDays - The list of selected days to filter by.
+   *
+   * @returns {void}
+   */
   const handleFilter = useCallback(() => {
     let filtered = sortBlogsByDate(blogs);
 
@@ -294,6 +360,12 @@ const BlogDisplayPage: FC = () => {
 
   // const authors = Array.from(new Set(blogs.map((blog) => blog.author)));
 
+  /**
+   * Calculates the count of each topic from a list of blogs.
+   *
+   * @param blogs - An array of blog objects, each containing a list of topics.
+   * @returns A record where the keys are topic names and the values are the counts of each topic.
+   */
   const topicCounts: Record<string, number> = blogs.reduce((acc, blog) => {
     blog.topics.forEach((topic) => {
       acc[topic] = (acc[topic] || 0) + 1;
@@ -301,6 +373,13 @@ const BlogDisplayPage: FC = () => {
     return acc;
   }, {} as Record<string, number>);
 
+  /**
+   * Calculates the count of blogs for each reading length.
+   *
+   * @param readingLength - An array of possible reading lengths.
+   * @param blogs - An array of blog objects, each containing a `timeSpan` property.
+   * @returns An object where the keys are reading lengths and the values are the count of blogs for each length.
+   */
   const lengthCount = readingLength.reduce((acc, length) => {
     acc[length] = blogs.filter((blog) => blog.timeSpan === length).length;
     return acc;
@@ -329,6 +408,11 @@ const BlogDisplayPage: FC = () => {
     return <LoadingIndicator />;
   }
 
+  /**
+   * Toggles the open state of a specified dropdown.
+   *
+   * @param dropdown - The dropdown to toggle. Can be one of "topic", "date", "author", "year", or "month".
+   */
   function handleOpen(
     dropdown: "topic" | "date" | "author" | "year" | "month"
   ) {
@@ -338,6 +422,13 @@ const BlogDisplayPage: FC = () => {
     });
   }
 
+  /**
+   * Handles the change event for a topic checkbox.
+   *
+   * @param {string} topic - The topic associated with the checkbox.
+   * @param {boolean | string} [checked] - The state of the checkbox, either checked or unchecked.
+   *                                       If a string is provided, it will be treated as checked.
+   */
   const handleTopicCheckboxChange = (
     topic: string,
     checked?: boolean | string
@@ -378,7 +469,17 @@ const BlogDisplayPage: FC = () => {
   //   handleOpen("author");
   // };
 
-  // Adjust the `handleCheckboxChange` function
+  /**
+   * Handles the change event for a checkbox, updating the selected days, months, or years
+   * based on the type of checkbox (day, month, or year) and whether it is checked or unchecked.
+   *
+   * @param type - The type of checkbox, which can be "day", "month", or "year".
+   * @param value - An object containing the year, and optionally the month and day.
+   * @param value.year - The year value.
+   * @param value.month - The month value (optional).
+   * @param value.day - The day value (optional).
+   * @param checked - A boolean or string indicating whether the checkbox is checked or unchecked.
+   */
   const handleCheckboxChange = (
     type: "day" | "month" | "year",
     value: { year: number; month?: number; day?: number },
