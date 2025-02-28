@@ -21,6 +21,18 @@ export default function CategoryPage() {
   useEffect(() => {
     if (!category) return;
 
+    /**
+     * Fetches contract services data from the API.
+     *
+     * This function sends a GET request to the `/api/services/contracts/${category}` endpoint
+     * to retrieve contract services data. If the request is successful, it updates the contract
+     * state with the fetched data. If the request fails, it sets an error message.
+     * Regardless of the outcome, it sets the loading state to false after a delay of 350ms.
+     *
+     * @async
+     * @function fetchServices
+     * @throws {Error} If the response is not ok, throws an error with the message "Services post not found".
+     */
     async function fetchServices() {
       try {
         const response = await fetch(`/api/services/contracts/${category}`);

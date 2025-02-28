@@ -27,6 +27,14 @@ export default function ServicePage() {
   useEffect(() => {
     if (!category || !service) return;
 
+    /**
+     * Fetches service data from the API based on the provided category and service.
+     *
+     * @async
+     * @function fetchServices
+     * @throws {Error} Throws an error if the service post is not found.
+     * @returns {Promise<void>} A promise that resolves when the service data is fetched and state is updated.
+     */
     async function fetchServices() {
       try {
         const response = await fetch(`/api/services/${category}/${service}`);

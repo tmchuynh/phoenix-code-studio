@@ -32,6 +32,20 @@ import emailjs from "@emailjs/browser";
 const ContactUsPage: FC = () => {
   const { theme } = useTheme();
 
+  /**
+   * State hook to manage the form data for the contact us page.
+   *
+   * @typedef {Object} FormDataType
+   * @property {string} name - The name of the user.
+   * @property {string} email - The email address of the user.
+   * @property {string} subject - The subject of the message.
+   * @property {string} message - The message content.
+   * @property {string} paymentPlan - The selected payment plan.
+   * @property {Array<string>} selectedServices - The list of selected services.
+   * @property {Array<string>} selectedContracts - The list of selected contracts.
+   *
+   * @returns {[FormDataType, React.Dispatch<React.SetStateAction<FormDataType>>]} The form data state and its setter function.
+   */
   const [formData, setFormData] = useState<FormDataType>({
     name: "",
     email: "",
@@ -75,6 +89,12 @@ const ContactUsPage: FC = () => {
     target: HTMLInputElement | HTMLTextAreaElement;
   }
 
+  /**
+   * Handles the change event for form inputs.
+   *
+   * @param {HandleChangeEvent} e - The change event triggered by the form input.
+   * @returns {void}
+   */
   const handleChange = (e: HandleChangeEvent): void => {
     const { name, value } = e.target;
     setFormData((prevState: FormDataType) => ({
@@ -171,7 +191,7 @@ const ContactUsPage: FC = () => {
    * @param {React.FormEvent} e - The form submission event.
    *
    * This function prevents the default form submission behavior, logs the form data,
-   * sets the submitted state to true, and sends the form data using emailjs.
+   * sets the submitted state to true, and sends the form data using the emailjs service.
    * It also resets the form state and selections after submission.
    *
    * The form data includes:
@@ -179,8 +199,8 @@ const ContactUsPage: FC = () => {
    * - name: The name of the user, capitalized.
    * - subject: The subject of the message, capitalized.
    * - message: The message content, capitalized.
-   * - selectedServices: A comma-separated string of selected services.
-   * - selectedContracts: A comma-separated string of selected contracts.
+   * - selectedServices: The selected services, converted from an array to a comma-separated string.
+   * - selectedContracts: The selected contracts, converted from an array to a comma-separated string.
    * - paymentPlan: The selected payment plan, capitalized.
    *
    * If the form element is not found, an error is logged to the console.

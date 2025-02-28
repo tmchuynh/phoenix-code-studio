@@ -65,7 +65,22 @@ const PastProjectsPage: FC = () => {
     setCurrentPage(1); // Reset to the first page when articles per page changes
   };
 
-  // Update filtered projects when filters change
+  /**
+   * Filters the list of past projects based on selected criteria such as languages, frameworks, technologies, libraries, and tags.
+   *
+   * The function applies the following filters in sequence:
+   * - Languages: Filters projects that include all selected languages.
+   * - Frameworks: Filters projects that include all selected frameworks.
+   * - Technologies: Filters projects that include all selected technologies.
+   * - Libraries: Filters projects that include all selected libraries.
+   * - Tags: Filters projects that include all selected tags.
+   *
+   * If no projects match the selected criteria, it handles the no-results scenario by:
+   * - Displaying a no-results message.
+   * - Clearing all selected filters if filters were not previously cleared.
+   *
+   * The function updates the state with the filtered projects or resets to the original list if no results are found.
+   */
   const handleFilter = () => {
     let filtered = pastProjects;
 
@@ -128,7 +143,6 @@ const PastProjectsPage: FC = () => {
     }
   };
 
-  // Handle filter changes
   const handleLanguageChange = (language: string, checked: boolean) => {
     setSelectedLanguages((prev) =>
       checked ? [...prev, language] : prev.filter((lang) => lang !== language)
@@ -171,7 +185,6 @@ const PastProjectsPage: FC = () => {
     setTimeout(() => setFiltersCleared(false), 4000);
   };
 
-  // Extract unique languages, frameworks, and tags
   const allLanguages = Array.from(
     new Set(pastProjects.flatMap((p) => p.languages))
   );

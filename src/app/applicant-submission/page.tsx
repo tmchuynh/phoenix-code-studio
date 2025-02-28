@@ -88,6 +88,23 @@ const ApplicantSubmissionPage = () => {
     }));
   };
 
+  /**
+   * Handles the form submission event.
+   *
+   * @param {React.FormEvent} e - The form submission event.
+   *
+   * This function performs the following actions:
+   * 1. Prevents the default form submission behavior.
+   * 2. Validates that at least one position is selected.
+   * 3. Validates that at least one portfolio link is provided.
+   * 4. Sends the form data using the EmailJS service.
+   * 5. Displays a success message upon successful submission.
+   * 6. Resets the selected positions and portfolio links.
+   * 7. Clears the success message after a delay of 5 seconds.
+   *
+   * If validation fails, an error message is set and the form submission is halted.
+   * If the EmailJS service encounters an error, an error message is displayed.
+   */
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
