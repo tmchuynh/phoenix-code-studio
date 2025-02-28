@@ -12,7 +12,7 @@ import { debounce } from "./debounce";
  * console.log(isLargeScreen); // true or false based on the screen width
  */
 const useLargeScreensOnly = (): boolean => {
-  const [IsLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 1024);
+  const [IsLargeScreen, setIsLargeScreen] = useState<boolean>(false);
 
   useEffect(() => {
     const handleResize = () => {
