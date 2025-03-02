@@ -49,7 +49,7 @@ const NotFound = (): JSX.Element => {
         }
         return prev - 1;
       });
-    }, 250);
+    }, 1000);
 
     const redirectTimer = setTimeout(() => {
       router.push(`/`);
