@@ -143,6 +143,14 @@ const PastProjectsPage: FC = () => {
     }
   };
 
+  /**
+   * Handles the change event for checkboxes, updating the corresponding state
+   * based on the type of checkbox and whether it is checked or unchecked.
+   *
+   * @param {string} type - The type of checkbox (e.g., "languages", "frameworks", "technologies", "libraries", "tags").
+   * @param {string} value - The value of the checkbox.
+   * @param {boolean} checked - The checked state of the checkbox.
+   */
   const handleCheckboxChange = (
     type: string,
     value: string,
