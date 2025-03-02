@@ -28,6 +28,7 @@ import { blogs } from "@/lib/blog-posts";
 import { IconDisplay } from "@/lib/IconDisplay";
 import { BlogPost } from "@/lib/interfaces";
 import useBetweenLargeAndXL from "@/lib/onlyLargerScreens";
+import { AlertContentType } from "@/lib/types";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
 import {
@@ -63,6 +64,10 @@ const BlogDisplayPage: FC = () => {
   const [selectedLength, setSelectedLength] = useState<string[]>([]);
   const [noResults, setNoResults] = useState(false);
   const [selectedTopics, setSelectedTopics] = useState<string[]>([]);
+  const [selectedSubTopics, setSelectedSubTopics] = useState<string[]>([]);
+
+  const [showGettingStartedCheckboxes, setShowGettingStartedCheckboxes] =
+    useState(false);
 
   const [openYear, setOpenYear] = useState<number | null>(null);
   const [openMonth, setOpenMonth] = useState<number | null>(null);
@@ -83,18 +88,17 @@ const BlogDisplayPage: FC = () => {
    * Determines the content of an alert based on the state of filters and search results.
    *
    * @constant
-   * @type {Object|null}
-   * @property {Object} title - The title of the alert.
+   * @type {AlertContentType}
+   * @param {boolean} filtersCleared - Indicates whether the filters have been cleared.
+   * @param {boolean} noResults - Indicates whether there are no results matching the selected filters.
+   * @returns {AlertContentType | null} The content of the alert to be displayed.
+   *
+   * @property {string} title - The title of the alert.
    * @property {string} description - The description of the alert.
    * @property {React.ComponentType} icon - The icon to be displayed in the alert.
    * @property {string} type - The type of the alert, either "filter" or "results".
-   *
-   * The alert content is determined as follows:
-   * - If `filtersCleared` is true, the alert indicates that filters have been cleared.
-   * - If `noResults` is true and `filtersCleared` is false, the alert indicates that no results were found and filters have been cleared.
-   * - If neither condition is met, the alert content is null.
    */
-  const alertContent = filtersCleared
+  const alertContent: AlertContentType = filtersCleared
     ? {
         title: "Filters Cleared",
         description: "You can now start a new search or modify your filters.",
@@ -190,6 +194,71 @@ const BlogDisplayPage: FC = () => {
   };
 
   /**
+   * Groups blog posts by year, month, and day, and counts the number of blog posts.
+   *
+   * @param {BlogPost[]} data - An array of blog posts to be grouped.
+   * @returns {Object} An object where the keys are years, and the values are objects
+   *                   with months as keys. Each month object contains a count of blog
+   *                   posts and an array of arrays of blog posts grouped by day.
+   *
+   * @example
+   * const blogPosts = [
+   *   { date: { year: 2023, month: 10, day: 1 }, title: "Post 1" },
+   *   { date: { year: 2023, month: 10, day: 2 }, title: "Post 2" },
+   *   { date: { year: 2023, month: 10, day: 1 }, title: "Post 3" },
+   * ];
+   * const grouped = getBlogPostsByYearMonthDayAndCount(blogPosts);
+   * // grouped = {
+   * //   2023: {
+   * //     10: {
+   * //       count: 3,
+   * //       groupedByDay: [
+   * //         [{ date: { year: 2023, month: 10, day: 1 }, title: "Post 1" },
+   * //          { date: { year: 2023, month: 10, day: 1 }, title: "Post 3" }],
+   * //         [{ date: { year: 2023, month: 10, day: 2 }, title: "Post 2" }]
+   * //       ]
+   * //     }
+   * //   }
+   * // }
+   */
+  function getBlogPostsByYearMonthDayAndCount(data: BlogPost[]): {
+    [year: number]: {
+      [month: number]: {
+        count: number;
+        groupedByDay: BlogPost[][];
+      };
+    };
+  } {
+    // Group blogs by year and month, and count the number of blogs
+    const groupedData = data.reduce((acc, blog) => {
+      const { year, month, day } = blog.date;
+
+      if (!acc[year]) {
+        acc[year] = {};
+      }
+      if (!acc[year][month]) {
+        acc[year][month] = { count: 0, groupedByDay: [] };
+      }
+
+      acc[year][month].count += 1;
+
+      // Group by day
+      let dayGroup = acc[year][month].groupedByDay.find(
+        (group) => group[0].date.day === day
+      );
+      if (!dayGroup) {
+        dayGroup = [];
+        acc[year][month].groupedByDay.push(dayGroup);
+      }
+      dayGroup.push(blog);
+
+      return acc;
+    }, {} as { [year: number]: { [month: number]: { count: number; groupedByDay: BlogPost[][] } } });
+
+    return groupedData;
+  }
+
+  /**
    * Transforms and sorts blog post data by year and month.
    *
    * @param {Object} blogs - The blog posts data.
@@ -217,39 +286,43 @@ const BlogDisplayPage: FC = () => {
   });
 
   /**
-   * Filters and sorts the list of blogs based on various criteria such as topics, reading time, authors, search query, and date.
+   * Filters and sorts the list of blogs based on various criteria such as topics, subtopics, reading time, authors, search query, and date.
    *
-   * The function performs the following steps:
-   * 1. Sorts the blogs by date.
-   * 2. Filters the blogs by selected topics.
-   * 3. Filters the blogs by selected reading time and sorts them by reading time.
-   * 4. Filters the blogs by selected authors.
-   * 5. Filters the blogs by search query in the title or author.
-   * 6. Filters the blogs by selected years.
-   * 7. Filters the blogs by selected months.
-   * 8. Filters the blogs by selected days.
+   * The filtering process includes:
+   * - Sorting blogs by date.
+   * - Filtering by selected topics and subtopics.
+   * - Filtering by selected reading time.
+   * - Filtering by selected authors.
+   * - Filtering by search query in blog title or author.
+   * - Filtering by selected years, months, and days.
    *
-   * If no results are found after filtering, it handles the no results case by either showing a no results message or clearing the filters.
+   * If no results are found after applying the filters, it handles the no results scenario by either showing a no results message or clearing the filters.
    *
-   * @param {Array} blogs - The list of blogs to filter and sort.
-   * @param {Array} selectedTopics - The list of selected topics to filter by.
-   * @param {Array} selectedLength - The list of selected reading times to filter by.
-   * @param {Array} selectedAuthors - The list of selected authors to filter by.
-   * @param {string} searchQuery - The search query to filter by in the title or author.
-   * @param {boolean} filtersCleared - Indicates if the filters have been cleared.
-   * @param {Array} selectedYears - The list of selected years to filter by.
-   * @param {Array} selectedMonths - The list of selected months to filter by.
-   * @param {Array} selectedDays - The list of selected days to filter by.
+   * Dependencies:
+   * - `blogs`: The list of blogs to filter.
+   * - `selectedTopics`: The list of selected topics to filter by.
+   * - `selectedSubTopics`: The list of selected subtopics to filter by.
+   * - `selectedLength`: The list of selected reading times to filter by.
+   * - `selectedAuthors`: The list of selected authors to filter by.
+   * - `searchQuery`: The search query to filter by.
+   * - `filtersCleared`: A flag indicating if filters have been cleared.
+   * - `selectedYears`: The list of selected years to filter by.
+   * - `selectedMonths`: The list of selected months to filter by.
+   * - `selectedDays`: The list of selected days to filter by.
    *
    * @returns {void}
    */
   const handleFilter = useCallback(() => {
     let filtered = sortBlogsByDate(blogs);
 
-    // Filter by topics
-    if (selectedTopics.length > 0) {
-      filtered = filtered.filter((blog) =>
-        blog.topics.some((topic) => selectedTopics.includes(topic))
+    // Filter by topics and subtopics
+    if (selectedTopics.length > 0 || selectedSubTopics.length > 0) {
+      filtered = filtered.filter(
+        (blog) =>
+          blog.topics.some((topic) => selectedTopics.includes(topic)) ||
+          blog.subtopics?.some((subtopic) =>
+            selectedSubTopics.includes(subtopic)
+          )
       );
     }
 
@@ -330,6 +403,7 @@ const BlogDisplayPage: FC = () => {
   }, [
     blogs,
     selectedTopics,
+    selectedSubTopics, // Add selectedSubTopics to dependencies
     selectedLength,
     selectedAuthors,
     searchQuery,
@@ -339,6 +413,19 @@ const BlogDisplayPage: FC = () => {
     selectedDays,
   ]);
 
+  /**
+   * Clears all the filters applied to the blog list and resets the state to its initial values.
+   *
+   * @param {string} [e] - An optional parameter that, if provided, prevents the filtersCleared state from being set.
+   *
+   * This function performs the following actions:
+   * - Resets selected topics, lengths, authors, days, months, and years to empty arrays.
+   * - Clears the search query.
+   * - Closes any open collapsible sections.
+   * - Resets the no results flag.
+   * - Sorts and sets the filtered blogs by date.
+   * - If the optional parameter `e` is not provided, sets the filtersCleared state to true for 3.5 seconds.
+   */
   const clearFilters = (e?: string) => {
     setSelectedTopics([]);
     setSelectedLength([]);
@@ -374,6 +461,21 @@ const BlogDisplayPage: FC = () => {
   }, {} as Record<string, number>);
 
   /**
+   * Calculates the count of each subtopic from a list of blogs.
+   *
+   * @param blogs - An array of blog objects, each containing an optional array of subtopics.
+   * @returns A record where the keys are subtopic names and the values are the counts of those subtopics.
+   */
+  const subTopicCounts: Record<string, number> = blogs.reduce((acc, blog) => {
+    blog.subtopics?.forEach((topic) => {
+      acc[topic] = (acc[topic] || 0) + 1;
+    });
+    return acc;
+  }, {} as Record<string, number>);
+
+  const subTopics = Object.keys(subTopicCounts).sort();
+
+  /**
    * Calculates the count of blogs for each reading length.
    *
    * @param readingLength - An array of possible reading lengths.
@@ -391,10 +493,6 @@ const BlogDisplayPage: FC = () => {
   // }, {} as Record<string, number>);
 
   const topics = Object.keys(topicCounts).sort();
-
-  const handleTopicChange = (updatedTopics: string[]) => {
-    setSelectedTopics(updatedTopics);
-  };
 
   useEffect(() => {
     if (theme) {
@@ -423,11 +521,14 @@ const BlogDisplayPage: FC = () => {
   }
 
   /**
-   * Handles the change event for a topic checkbox.
+   * Handles the change event for topic checkboxes.
    *
    * @param {string} topic - The topic associated with the checkbox.
    * @param {boolean | string} [checked] - The state of the checkbox, either checked or unchecked.
-   *                                       If a string is provided, it will be treated as checked.
+   *
+   * This function updates the selected topics and subtopics based on the checkbox state.
+   * It also manages the visibility of the "Getting Started" checkboxes and clears filters if necessary.
+   * Additionally, it triggers the `handleOpen` and `handleFilter` functions.
    */
   const handleTopicCheckboxChange = (
     topic: string,
@@ -435,39 +536,32 @@ const BlogDisplayPage: FC = () => {
   ) => {
     setFiltersCleared(false);
     if (checked) {
-      handleTopicChange([...selectedTopics, topic]);
+      setSelectedTopics([...selectedTopics, topic]);
+      if (topic === "Getting Started") {
+        setShowGettingStartedCheckboxes(true);
+      } else if (subTopics.includes(topic)) {
+        setSelectedSubTopics((prev) => [...prev, topic]);
+        setSelectedTopics((prev) => [...prev, "Getting Started"]);
+        setShowGettingStartedCheckboxes(false);
+      } else {
+        setShowGettingStartedCheckboxes(false);
+        setSelectedSubTopics([]);
+      }
     } else {
-      handleTopicChange(selectedTopics.filter((t) => t !== topic));
+      setShowGettingStartedCheckboxes(false);
+      setSelectedTopics(selectedTopics.filter((t) => t !== topic));
+      if (subTopics.includes(topic)) {
+        setSelectedSubTopics((prev) => prev.filter((sub) => sub !== topic));
+        if (selectedSubTopics.length === 1) {
+          setSelectedTopics((prev) =>
+            prev.filter((t) => t !== "Getting Started")
+          );
+        }
+      }
     }
     handleOpen("topic");
+    handleFilter();
   };
-
-  // const handleDayCheckboxChange = (
-  //   day: number,
-  //   month: number,
-  //   year: number,
-  //   checked: boolean | string
-  // ) => {
-  //   const dayString = `${year}-${month}-${day}`; // Use a "year-month-day" format for unique identification
-
-  //   setFiltersCleared(false);
-  //   if (checked) {
-  //     setSelectedDays((prev) => [...prev, dayString]); // Add the day to the selectedDays array
-  //   } else {
-  //     setSelectedDays((prev) => prev.filter((day) => day !== dayString)); // Remove the day if unchecked
-  //   }
-  // };
-
-  // const handleAuthorCheckboxChange = (author: string, checked: boolean) => {
-  //   if (checked) {
-  //     setSelectedAuthors((prevAuthors) => [...prevAuthors, author]);
-  //   } else {
-  //     setSelectedAuthors((prevAuthors) =>
-  //       prevAuthors.filter((t) => t !== author)
-  //     );
-  //   }
-  //   handleOpen("author");
-  // };
 
   /**
    * Handles the change event for a checkbox, updating the selected days, months, or years
@@ -546,43 +640,6 @@ const BlogDisplayPage: FC = () => {
     }
   };
 
-  function getBlogPostsByYearMonthDayAndCount(data: BlogPost[]): {
-    [year: number]: {
-      [month: number]: {
-        count: number;
-        groupedByDay: BlogPost[][];
-      };
-    };
-  } {
-    // Group blogs by year and month, and count the number of blogs
-    const groupedData = data.reduce((acc, blog) => {
-      const { year, month, day } = blog.date;
-
-      if (!acc[year]) {
-        acc[year] = {};
-      }
-      if (!acc[year][month]) {
-        acc[year][month] = { count: 0, groupedByDay: [] };
-      }
-
-      acc[year][month].count += 1;
-
-      // Group by day
-      let dayGroup = acc[year][month].groupedByDay.find(
-        (group) => group[0].date.day === day
-      );
-      if (!dayGroup) {
-        dayGroup = [];
-        acc[year][month].groupedByDay.push(dayGroup);
-      }
-      dayGroup.push(blog);
-
-      return acc;
-    }, {} as { [year: number]: { [month: number]: { count: number; groupedByDay: BlogPost[][] } } });
-
-    return groupedData;
-  }
-
   return (
     <main className="w-10/12 md:w-11/12 mx-auto py-6">
       <DynamicBreadcrumb />
@@ -628,25 +685,86 @@ const BlogDisplayPage: FC = () => {
                 </div>
                 <CollapsibleContent className="space-y-2 ml-5">
                   <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 justify-start items-start w-full">
-                    {topics.sort().map((topic) => (
-                      <div key={topic} className="flex items-center mr-1">
-                        <Checkbox
-                          id={topic}
-                          checked={selectedTopics.includes(topic)}
-                          onCheckedChange={(checked) =>
-                            handleTopicCheckboxChange(topic, checked)
-                          }
-                        />
-                        <label htmlFor={topic} className="ml-2">
-                          <p>
-                            {topic}
-                            <span className="ml-1 text-accent-4">
-                              ({topicCounts[topic]})
-                            </span>
-                          </p>
-                        </label>
-                      </div>
-                    ))}
+                    {topics.map((topic) => {
+                      if (topic === "Getting Started") {
+                        return (
+                          <div key={topic} className="flex flex-col">
+                            <div className="flex items-center mr-1">
+                              <Checkbox
+                                id={topic}
+                                checked={selectedTopics.includes(topic)}
+                                onCheckedChange={(checked) =>
+                                  setShowGettingStartedCheckboxes(
+                                    !showGettingStartedCheckboxes
+                                  )
+                                }
+                              />
+                              <label htmlFor={topic} className="ml-2">
+                                <p>
+                                  {topic}
+                                  <span className="ml-1 text-accent-4">
+                                    ({topicCounts[topic]})
+                                  </span>
+                                </p>
+                              </label>
+                            </div>
+
+                            {/* Sub-topics appear directly under "Getting Started" */}
+                            {showGettingStartedCheckboxes && (
+                              <div className="ml-5 w-full mt-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
+                                {subTopics.map((subTopic) => (
+                                  <div
+                                    key={subTopic}
+                                    className="flex items-center mr-1"
+                                  >
+                                    <Checkbox
+                                      id={subTopic}
+                                      checked={selectedSubTopics.includes(
+                                        subTopic
+                                      )}
+                                      onCheckedChange={(checked) =>
+                                        handleTopicCheckboxChange(
+                                          subTopic,
+                                          checked
+                                        )
+                                      }
+                                    />
+                                    <label htmlFor={subTopic} className="ml-2">
+                                      <p>
+                                        {subTopic}{" "}
+                                        <span className="ml-1 text-accent-4">
+                                          ({subTopicCounts[subTopic]})
+                                        </span>
+                                      </p>
+                                    </label>
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        );
+                      } else {
+                        return (
+                          <div key={topic} className="flex items-center mr-1">
+                            <Checkbox
+                              id={topic}
+                              checked={selectedTopics.includes(topic)}
+                              onCheckedChange={(checked) =>
+                                handleTopicCheckboxChange(topic, checked)
+                              }
+                            />
+                            <label htmlFor={topic} className="ml-2">
+                              <p>
+                                {topic}
+                                <span className="ml-1 text-accent-4">
+                                  ({topicCounts[topic]})
+                                </span>
+                              </p>
+                            </label>
+                          </div>
+                        );
+                      }
+                    })}
                   </div>
                 </CollapsibleContent>
               </Collapsible>
