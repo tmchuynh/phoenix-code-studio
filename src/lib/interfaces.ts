@@ -151,6 +151,22 @@ export interface BlogPost {
   conclusions: string[];
 }
 
+export interface Blog {
+  title: string;
+  date: {
+    month: number;
+    day: number;
+    year: number;
+  };
+  excerpt: string;
+  icons: string[];
+}
+
+export interface BlogCardProps {
+  blog: Blog;
+  isSmallScreen: boolean;
+}
+
 export interface Project {
   title: string;
   name: string;

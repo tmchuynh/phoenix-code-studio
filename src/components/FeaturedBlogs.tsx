@@ -1,16 +1,17 @@
-import useSmallScreen from "@/lib/useSmallScreen";
-import { useRouter } from "next/navigation";
-import { Button } from "./ui/button";
+import BlogCard from "@/components/BlogCard";
 import {
   Pagination,
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { useState } from "react";
 import { blogs } from "@/lib/blog-posts";
-import { setSlug } from "@/lib/utils";
+import { BlogPost } from "@/lib/interfaces";
+import usePagination from "@/lib/usePagination";
+import useSmallScreen from "@/lib/useSmallScreen";
 import { useTheme } from "next-themes";
-import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { Button } from "./ui/button";
 
 const FeaturedBlogs = () => {
   const isSmallScreen = useSmallScreen();
@@ -24,34 +25,19 @@ const FeaturedBlogs = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [articlesPerPage, setArticlesPerPage] = useState(6);
 
-  /**
-   * Filters and sorts the list of blogs to get the featured blogs.
-   *
-   * The blogs are filtered to include only those that are marked as featured.
-   * The filtered blogs are then sorted alphabetically by their title.
-   *
-   * @param {Array} blogs - The list of blogs to filter and sort.
-   * @returns {Array} - The filtered and sorted list of featured blogs.
-   */
   const featuredBlogs = blogs
     .filter((blog) => blog.featured === true)
-    .sort((a, b) => {
-      return a.title.localeCompare(b.title);
-    });
+    .sort((a, b) => a.title.localeCompare(b.title));
 
-  // Pagination logic
-  const indexOfLastArticle = currentPage * articlesPerPage;
-  const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
-  const currentBlogs = featuredBlogs.slice(
-    indexOfFirstArticle,
-    indexOfLastArticle
+  const { currentItems: currentBlogs, totalPages } = usePagination(
+    featuredBlogs,
+    currentPage,
+    articlesPerPage
   );
 
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
-
-  const totalPages = Math.ceil(featuredBlogs.length / articlesPerPage);
 
   return (
     <section className="w-10/12 md:w-11/12 mx-auto py-6">
@@ -71,10 +57,10 @@ const FeaturedBlogs = () => {
         <section className="text-center">
           {currentBlogs.length > 0 ? (
             <p>
-              Showing {indexOfFirstArticle + 1} to{" "}
-              {indexOfLastArticle > featuredBlogs.length
+              Showing {currentPage * articlesPerPage - articlesPerPage + 1} to{" "}
+              {currentPage * articlesPerPage > featuredBlogs.length
                 ? featuredBlogs.length
-                : indexOfLastArticle}{" "}
+                : currentPage * articlesPerPage}{" "}
               of {featuredBlogs.length} featured blogs
             </p>
           ) : (
@@ -94,48 +80,8 @@ const FeaturedBlogs = () => {
         />
       </Pagination>
       <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6 w-full">
-        {currentBlogs.map((blog, index) => (
-          <div
-            key={index}
-            className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground flex flex-col justify-between"
-          >
-            <div className="flex flex-col justify-around">
-              <h3 className="font-semibold text-center h-32 flex justify-center items-center">
-                {blog.title}
-              </h3>
-              <div>
-                <h5 className="text-center text-md">
-                  {blog.date.month}/{blog.date.day}/{blog.date.year}
-                </h5>
-                <p className="text-pretty mt-4">
-                  {isSmallScreen
-                    ? `${blog.excerpt.substring(0, 60)}...`
-                    : `${blog.excerpt.substring(0, 360)}...`}
-                </p>
-              </div>
-            </div>
-            <Button
-              variant={"accent"}
-              onClick={() => {
-                router.push(`/info/blogs/${setSlug(blog.title)}`);
-              }}
-              className="mt-7 w-full"
-            >
-              Read More
-            </Button>
-            <div className="justify-between pt-6 hidden md:flex">
-              {blog.icons.map((icon, iconIndex) => (
-                <Image
-                  key={iconIndex}
-                  src={`/images/blog_icons/${icon}`}
-                  width={30}
-                  height={30}
-                  alt={`${icon}-Icon`}
-                  className="mr-2 w-8 h-8"
-                />
-              ))}
-            </div>
-          </div>
+        {currentBlogs.map((blog: BlogPost, index: number) => (
+          <BlogCard key={index} blog={blog} isSmallScreen={isSmallScreen} />
         ))}
       </div>
       <div className="text-center mt-8">
