@@ -376,7 +376,6 @@ const BlogDisplayPage: FC = () => {
       );
     }
 
-    // Handle no results
     if (filtered.length === 0) {
       if (filtersCleared) {
         setTimeout(() => setNoResults(true), 500);
@@ -523,12 +522,17 @@ const BlogDisplayPage: FC = () => {
   /**
    * Handles the change event for topic checkboxes.
    *
-   * @param {string} topic - The topic associated with the checkbox.
-   * @param {boolean | string} [checked] - The state of the checkbox, either checked or unchecked.
+   * @param topic - The topic associated with the checkbox.
+   * @param checked - The state of the checkbox, either true, false, or a string.
    *
    * This function updates the selected topics and subtopics based on the checkbox state.
-   * It also manages the visibility of the "Getting Started" checkboxes and clears filters if necessary.
-   * Additionally, it triggers the `handleOpen` and `handleFilter` functions.
+   * If the checkbox is checked, the topic is added to the selected topics. If the topic
+   * is "Getting Started", it shows additional checkboxes. If the topic is a subtopic, it
+   * adds the subtopic to the selected subtopics and checks if all subtopics are selected.
+   * If the checkbox is unchecked, the topic is removed from the selected topics and subtopics.
+   * It also hides the additional checkboxes if necessary.
+   *
+   * The function also triggers the `handleOpen` and `handleFilter` functions.
    */
   const handleTopicCheckboxChange = (
     topic: string,
@@ -541,8 +545,9 @@ const BlogDisplayPage: FC = () => {
         setShowGettingStartedCheckboxes(true);
       } else if (subTopics.includes(topic)) {
         setSelectedSubTopics((prev) => [...prev, topic]);
-        setSelectedTopics((prev) => [...prev, "Getting Started"]);
-        setShowGettingStartedCheckboxes(false);
+        if (selectedSubTopics.length + 1 === subTopics.length) {
+          setSelectedTopics((prev) => [...prev, "Getting Started"]);
+        }
       } else {
         setShowGettingStartedCheckboxes(false);
         setSelectedSubTopics([]);
@@ -620,6 +625,35 @@ const BlogDisplayPage: FC = () => {
     }
   };
 
+  /**
+   * Handles the selection or deselection of all subtopics.
+   *
+   * @param {boolean | string} checked - Indicates whether all subtopics should be selected or deselected.
+   * If true or a non-empty string, all subtopics will be selected. If false or an empty string, all subtopics will be deselected.
+   *
+   * The function updates the state of selected subtopics and topics accordingly:
+   * - If `checked` is true or a non-empty string, all subtopics are selected and "Getting Started" is added to the selected topics.
+   * - If `checked` is false or an empty string, all subtopics are deselected and "Getting Started" is removed from the selected topics.
+   *
+   * After updating the state, the `handleFilter` function is called to apply the changes.
+   */
+  const handleSelectAllSubtopics = (checked: boolean | string) => {
+    if (checked) {
+      setSelectedSubTopics(subTopics);
+      setSelectedTopics((prev) => [...prev, "Getting Started"]);
+    } else {
+      setSelectedSubTopics([]);
+      setSelectedTopics((prev) => prev.filter((t) => t !== "Getting Started"));
+    }
+    handleFilter();
+  };
+
+  /**
+   * Handles the click event for a topic. Clears the current topic filters,
+   * updates the selected topics, and triggers the filter handler.
+   *
+   * @param {string} topic - The topic that was clicked.
+   */
   const handleTopicClick = (topic: string) => {
     clearFilters("topic");
     setFiltersCleared(false);
@@ -630,6 +664,13 @@ const BlogDisplayPage: FC = () => {
     }
   };
 
+  /**
+   * Handles the click event for selecting a reading length filter.
+   * Clears the existing reading length filter, updates the selected lengths,
+   * and triggers the filter handling function.
+   *
+   * @param {string} length - The reading length to be added to the selected lengths.
+   */
   const handleReadingLengthClick = (length: string) => {
     clearFilters("readingLength");
     setFiltersCleared(false);
@@ -712,6 +753,24 @@ const BlogDisplayPage: FC = () => {
                             {/* Sub-topics appear directly under "Getting Started" */}
                             {showGettingStartedCheckboxes && (
                               <div className="ml-5 w-full mt-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
+                                <div className="flex items-center mr-1">
+                                  <Checkbox
+                                    id="select-all-subtopics"
+                                    checked={
+                                      selectedSubTopics.length ===
+                                      subTopics.length
+                                    }
+                                    onCheckedChange={(checked) =>
+                                      handleSelectAllSubtopics(checked)
+                                    }
+                                  />
+                                  <label
+                                    htmlFor="select-all-subtopics"
+                                    className="ml-2"
+                                  >
+                                    <p>Select All</p>
+                                  </label>
+                                </div>
                                 {subTopics.map((subTopic) => (
                                   <div
                                     key={subTopic}
