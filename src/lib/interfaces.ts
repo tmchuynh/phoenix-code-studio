@@ -165,6 +165,7 @@ export interface BlogPost {
   featured?: boolean;
   icons: string[];
   topics: string[];
+  subtopics?: string[];
   intro: string[];
   list?: ListDetail[];
   conclusions: string[];
