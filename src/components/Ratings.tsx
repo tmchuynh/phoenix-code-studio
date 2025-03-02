@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Star, StarHalf } from "lucide-react";
-import { StarRatingProps } from "@/lib/interfaces";
+import { StarRatingProps } from "@/lib/types";
 
 const StarRating: React.FC<StarRatingProps> = ({ rating, maxStars = 5 }) => {
   return (

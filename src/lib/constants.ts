@@ -1,4 +1,5 @@
-import { FAQ, JobPosition, Menu, Project, Testimonial } from "./interfaces";
+import { Testimonial, Project, JobPosition } from "./interfaces";
+import { Menu, FAQ } from "./types";
 
 export const about: Menu[] = [
   {
@@ -223,8 +224,8 @@ export const testimonials: Testimonial[] = [
     featured: true,
     rating: 5,
     position: "Software Engineer II",
-    quote: `Tina is a great co-worker to have by your side. She is always willing to tackle any project you give to her and dive deep into understanding everything necessary for the project, and her contribution, to excel. Her drive and mindset for success and growth are at a level that I rarely see anymore; a wonderful asset for any team.`
-  }
+    quote: `Tina is a great co-worker to have by your side. She is always willing to tackle any project you give to her and dive deep into understanding everything necessary for the project, and her contribution, to excel. Her drive and mindset for success and growth are at a level that I rarely see anymore; a wonderful asset for any team.`,
+  },
 ];
 
 export const pastProjects: Project[] = [

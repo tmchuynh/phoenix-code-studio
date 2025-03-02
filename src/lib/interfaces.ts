@@ -1,8 +1,5 @@
 import { DetailedHTMLProps, HTMLAttributes, CSSProperties } from "react";
-
-export type LengthType = number | string;
-
-export type ServiceTypeKeys = "service" | "contract";
+import { DateObject, LengthType, PricingTier, ServiceTypeKeys } from "./types";
 
 export interface FormDataType {
   name: string;
@@ -35,23 +32,6 @@ export interface LoaderSizeProps extends CommonProps {
 export interface LoaderSizeMarginProps extends CommonProps {
   size?: LengthType;
   margin?: LengthType;
-}
-
-export interface FAQ {
-  question: string;
-  answer: string;
-}
-
-export interface Menu {
-  title: string;
-  href: string;
-  description: string;
-}
-
-export interface PricingTier {
-  name: string;
-  startingPrice: number;
-  info: string;
 }
 
 export interface Category {
@@ -171,12 +151,6 @@ export interface BlogPost {
   conclusions: string[];
 }
 
-export interface DateObject {
-  month: number;
-  day: number;
-  year: number;
-}
-
 export interface Project {
   title: string;
   name: string;
@@ -198,9 +172,4 @@ export interface JobPosition {
   responsibilities: string[];
   qualifications: string[];
   information: string;
-}
-
-export interface StarRatingProps {
-  rating: number;
-  maxStars?: number;
 }

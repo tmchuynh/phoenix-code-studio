@@ -1,9 +1,5 @@
+import { NotFoundContextType } from "@/lib/types";
 import { createContext, JSX, ReactNode, useContext, useState } from "react";
-
-type NotFoundContextType = {
-  isNotFound: boolean;
-  setNotFound: (value: boolean) => void;
-};
 
 const NotFoundContext = createContext<NotFoundContextType | undefined>(
   undefined
