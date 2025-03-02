@@ -143,35 +143,43 @@ const PastProjectsPage: FC = () => {
     }
   };
 
-  const handleLanguageChange = (language: string, checked: boolean) => {
-    setSelectedLanguages((prev) =>
-      checked ? [...prev, language] : prev.filter((lang) => lang !== language)
-    );
-  };
-
-  const handleFrameworkChange = (framework: string, checked: boolean) => {
-    setSelectedFrameworks((prev) =>
-      checked ? [...prev, framework] : prev.filter((fw) => fw !== framework)
-    );
-  };
-
-  const handleTechnologyChange = (technology: string, checked: boolean) => {
-    setSelectedTechnologies((prev) =>
-      checked ? [...prev, technology] : prev.filter((t) => t !== technology)
-    );
-  };
-
-  const handleLibrariesChange = (library: string, checked: boolean) => {
-    setSelectedLibraries((prev) =>
-      checked ? [...prev, library] : prev.filter((fw) => fw !== library)
-    );
-  };
-
-  const handleTagChange = (tag: string) => {
-    setSelectedTags((prev) =>
-      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
-    );
-    handleFilter(); // Trigger filtering when a tag is clicked
+  const handleCheckboxChange = (
+    type: string,
+    value: string,
+    checked: boolean
+  ) => {
+    switch (type) {
+      case "languages":
+        setSelectedLanguages((prev) =>
+          checked ? [...prev, value] : prev.filter((item) => item !== value)
+        );
+        break;
+      case "frameworks":
+        setSelectedFrameworks((prev) =>
+          checked ? [...prev, value] : prev.filter((item) => item !== value)
+        );
+        break;
+      case "technologies":
+        setSelectedTechnologies((prev) =>
+          checked ? [...prev, value] : prev.filter((item) => item !== value)
+        );
+        break;
+      case "libraries":
+        setSelectedLibraries((prev) =>
+          checked ? [...prev, value] : prev.filter((item) => item !== value)
+        );
+        break;
+      case "tags":
+        setSelectedTags((prev) =>
+          prev.includes(value)
+            ? prev.filter((item) => item !== value)
+            : [...prev, value]
+        );
+        handleFilter();
+        break;
+      default:
+        break;
+    }
   };
 
   // Clear all filters
@@ -255,7 +263,11 @@ const PastProjectsPage: FC = () => {
                       id={language}
                       checked={selectedLanguages.includes(language)}
                       onChange={(e) =>
-                        handleLanguageChange(language, e.target.checked)
+                        handleCheckboxChange(
+                          "languages",
+                          language,
+                          e.target.checked
+                        )
                       }
                       className="mr-2"
                     />
@@ -278,7 +290,11 @@ const PastProjectsPage: FC = () => {
                       id={framework}
                       checked={selectedFrameworks.includes(framework)}
                       onChange={(e) =>
-                        handleFrameworkChange(framework, e.target.checked)
+                        handleCheckboxChange(
+                          "frameworks",
+                          framework,
+                          e.target.checked
+                        )
                       }
                       className="mr-2"
                     />
@@ -301,7 +317,11 @@ const PastProjectsPage: FC = () => {
                       id={library}
                       checked={selectedLibraries.includes(library)}
                       onChange={(e) =>
-                        handleLibrariesChange(library, e.target.checked)
+                        handleCheckboxChange(
+                          "libraries",
+                          library,
+                          e.target.checked
+                        )
                       }
                       className="mr-2"
                     />
@@ -317,19 +337,23 @@ const PastProjectsPage: FC = () => {
             <div>
               <h3>Filter by Technologies</h3>
               <div className="grid grid-cols-2 justify-start items-start w-full gap-x-2">
-                {allTechnologies.map((library) => (
-                  <div key={library} className="flex items-center">
+                {allTechnologies.map((technology) => (
+                  <div key={technology} className="flex items-center">
                     <input
                       type="checkbox"
-                      id={library}
-                      checked={selectedTechnologies.includes(library)}
+                      id={technology}
+                      checked={selectedTechnologies.includes(technology)}
                       onChange={(e) =>
-                        handleTechnologyChange(library, e.target.checked)
+                        handleCheckboxChange(
+                          "technologies",
+                          technology,
+                          e.target.checked
+                        )
                       }
                       className="mr-2"
                     />
-                    <label htmlFor={library}>
-                      <p>{library}</p>
+                    <label htmlFor={technology}>
+                      <p>{technology}</p>
                     </label>
                   </div>
                 ))}
@@ -346,7 +370,13 @@ const PastProjectsPage: FC = () => {
                       type="checkbox"
                       id={tag}
                       checked={selectedTags.includes(tag)}
-                      onChange={() => handleTagChange(tag)}
+                      onChange={() =>
+                        handleCheckboxChange(
+                          "tags",
+                          tag,
+                          !selectedTags.includes(tag)
+                        )
+                      }
                       className="mr-2"
                     />
                     <label htmlFor={tag}>
@@ -372,7 +402,11 @@ const PastProjectsPage: FC = () => {
                       id={framework}
                       checked={selectedFrameworks.includes(framework)}
                       onChange={(e) =>
-                        handleFrameworkChange(framework, e.target.checked)
+                        handleCheckboxChange(
+                          "frameworks",
+                          framework,
+                          e.target.checked
+                        )
                       }
                       className="mr-2"
                     />
@@ -395,7 +429,11 @@ const PastProjectsPage: FC = () => {
                       id={language}
                       checked={selectedLanguages.includes(language)}
                       onChange={(e) =>
-                        handleLanguageChange(language, e.target.checked)
+                        handleCheckboxChange(
+                          "languages",
+                          language,
+                          e.target.checked
+                        )
                       }
                       className="mr-2"
                     />
@@ -418,7 +456,11 @@ const PastProjectsPage: FC = () => {
                       id={library}
                       checked={selectedLibraries.includes(library)}
                       onChange={(e) =>
-                        handleLibrariesChange(library, e.target.checked)
+                        handleCheckboxChange(
+                          "libraries",
+                          library,
+                          e.target.checked
+                        )
                       }
                       className="mr-2"
                     />
@@ -440,7 +482,13 @@ const PastProjectsPage: FC = () => {
                       type="checkbox"
                       id={tag}
                       checked={selectedTags.includes(tag)}
-                      onChange={() => handleTagChange(tag)}
+                      onChange={() =>
+                        handleCheckboxChange(
+                          "tags",
+                          tag,
+                          !selectedTags.includes(tag)
+                        )
+                      }
                       className="mr-2"
                     />
                     <label htmlFor={tag}>
@@ -455,19 +503,23 @@ const PastProjectsPage: FC = () => {
             <div>
               <h3>Filter by Technologies</h3>
               <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
-                {allTechnologies.sort().map((library) => (
-                  <div key={library} className="flex items-center">
+                {allTechnologies.sort().map((technology) => (
+                  <div key={technology} className="flex items-center">
                     <input
                       type="checkbox"
-                      id={library}
-                      checked={selectedTechnologies.includes(library)}
+                      id={technology}
+                      checked={selectedTechnologies.includes(technology)}
                       onChange={(e) =>
-                        handleTechnologyChange(library, e.target.checked)
+                        handleCheckboxChange(
+                          "technologies",
+                          technology,
+                          e.target.checked
+                        )
                       }
                       className="mr-2"
                     />
-                    <label htmlFor={library}>
-                      <p>{library}</p>
+                    <label htmlFor={technology}>
+                      <p>{technology}</p>
                     </label>
                   </div>
                 ))}
@@ -614,7 +666,11 @@ const PastProjectsPage: FC = () => {
                                 variant={"secondary"}
                                 className="mr-2 cursor-pointer"
                                 onClick={() => {
-                                  handleTagChange(tag);
+                                  handleCheckboxChange(
+                                    "tags",
+                                    tag,
+                                    !selectedTags.includes(tag)
+                                  );
                                 }}
                               >
                                 {tag}
