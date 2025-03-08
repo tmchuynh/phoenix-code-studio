@@ -113,10 +113,7 @@ const ServiceHighlights = () => {
                 width={500}
                 height={500}
                 alt={`${service.info.description}-Image`}
-                className={cn(
-                  "w-28 lg:w-24 mx-auto mb-1",
-                  theme === "dark" && "hidden"
-                )}
+                className={cn("w-28 lg:w-24 mx-auto mb-1")}
               />
             )}
 
