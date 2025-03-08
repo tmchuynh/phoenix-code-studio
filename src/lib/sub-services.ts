@@ -4017,7 +4017,7 @@ export const subServiceDetails: SubItem[] = [
       short:
         "Create clear, engaging training materials that streamline the onboarding process. With step-by-step guidance, interactive elements, and tailored resources, we ensure smooth transitions and successful integration, fostering confidence and long-term alignment with your goals.",
       featured: false,
-      Icon: "file.png",
+      Icon: "training-materials.png",
       pricingTierIntro: {
         title:
           "Comprehensive Onboarding & Training Materials for Seamless Integration",
@@ -4195,7 +4195,7 @@ export const subServiceDetails: SubItem[] = [
       short:
         "Create detailed, easy-to-follow study guides that simplify complex concepts and enhance learning retention. Our guides provide clear explanations and structured layouts, helping students and professionals grasp key topics, boost confidence, and achieve their goals with effective learning strategies.",
       featured: false,
-      Icon: "info.png",
+      Icon: "books-stacked-top.png",
       pricingTierIntro: {
         title: "Tailored Study Guides to Enhance Learning and Retention",
         text: "Whether you need quick overviews, comprehensive educational resources, or interactive learning tools, our custom study guides are designed to meet diverse learning needs. From concise summaries to detailed manuals and engaging digital formats, we offer a range of solutions that help learners grasp key concepts efficiently and retain information effectively.",
