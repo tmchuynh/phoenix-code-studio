@@ -81,7 +81,11 @@ const FeaturedBlogs = () => {
       </Pagination>
       <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6 w-full">
         {currentBlogs.map((blog: BlogPost, index: number) => (
-          <BlogCard key={index} blog={blog} isSmallScreen={isSmallScreen} />
+          <BlogCard
+            key={index}
+            blog={{ ...blog, icons: blog.icons || [] }}
+            isSmallScreen={isSmallScreen}
+          />
         ))}
       </div>
       <div className="text-center mt-8">
