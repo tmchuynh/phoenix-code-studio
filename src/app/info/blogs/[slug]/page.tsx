@@ -122,18 +122,20 @@ const BlogPostPage = () => {
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-7 mb-3 md:mb-0 md:mt-5 lg:mb-3">
-              {post?.icons.map((icon, index) => (
-                <Image
-                  src={`/images/blog_icons/${icon}`}
-                  width={500}
-                  height={500}
-                  key={index}
-                  alt={`${icon}-${index}`}
-                  className="w-10 md:w-20 lg:w-16 2xl:w-16 2xl:ml-[3em] mx-auto"
-                />
-              ))}
-            </div>
+            {post?.icons && (
+              <div className="flex flex-wrap gap-7 mb-3 md:mb-0 md:mt-5 lg:mb-3">
+                {post?.icons.map((icon, index) => (
+                  <Image
+                    src={`/images/blog_icons/${icon}`}
+                    width={500}
+                    height={500}
+                    key={index}
+                    alt={`${icon}-${index}`}
+                    className="w-10 md:w-20 lg:w-16 2xl:w-16 2xl:ml-[3em] mx-auto"
+                  />
+                ))}
+              </div>
+            )}
           </div>
 
           {post?.title && (
