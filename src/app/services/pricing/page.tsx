@@ -30,6 +30,11 @@ const PricingPage: FC = () => {
     return <LoadingIndicator />;
   }
 
+  /**
+   * Navigates to the specified service category page.
+   *
+   * @param {string} serviceCategory - The name of the service category to navigate to.
+   */
   const navigateToCategory = (serviceCategory: string) => {
     const formattedCategoryName = setSlug(serviceCategory);
 

@@ -60,6 +60,13 @@ const PastProjectsPage: FC = () => {
     setCurrentPage(pageNumber);
   };
 
+  /**
+   * Handles the change in the number of projects displayed per page.
+   * Updates the state to reflect the new number of projects per page and
+   * resets the current page to the first page.
+   *
+   * @param {number} value - The new number of projects to display per page.
+   */
   const handleProjectsPerPageChange = (value: number) => {
     setProjectsPerPage(value);
     setCurrentPage(1); // Reset to the first page when articles per page changes

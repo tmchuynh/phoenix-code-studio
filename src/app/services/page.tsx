@@ -28,6 +28,15 @@ const ServicesPage: FC = () => {
     return <LoadingIndicator />;
   }
 
+  /**
+   * Navigates to the details page of a specific service.
+   *
+   * This function formats the provided service category and service name into slugs
+   * and then constructs a URL to navigate to the service details page.
+   *
+   * @param {string} serviceCategory - The category of the service.
+   * @param {string} serviceName - The name of the service.
+   */
   const navigateToDetails = (serviceCategory: string, serviceName: string) => {
     const formattedServiceName = setSlug(serviceName);
     const formattedCategoryName = setSlug(serviceCategory);
@@ -35,6 +44,11 @@ const ServicesPage: FC = () => {
     router.push(`/services/${formattedCategoryName}/${formattedServiceName}`);
   };
 
+  /**
+   * Navigates to the specified service category page.
+   *
+   * @param {string} serviceCategory - The name of the service category to navigate to.
+   */
   const navigateToCategory = (serviceCategory: string) => {
     const formattedCategoryName = setSlug(serviceCategory);
 

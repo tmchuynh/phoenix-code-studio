@@ -60,6 +60,11 @@ export default function CategoryPage() {
 
   if (error) return <CannotFind />;
 
+  /**
+   * Navigates to the details page of a specific service.
+   *
+   * @param {string} serviceName - The name of the service to navigate to.
+   */
   const navigateToDetails = (serviceName: string) => {
     const formattedServiceName = setSlug(serviceName);
 

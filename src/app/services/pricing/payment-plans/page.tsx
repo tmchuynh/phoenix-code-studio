@@ -29,6 +29,11 @@ const PaymentPlansPage: FC = () => {
     return <LoadingIndicator />;
   }
 
+  /**
+   * Navigates to the specified payment plan page.
+   *
+   * @param {string} plan - The name of the payment plan to navigate to.
+   */
   const navigateToPlan = (plan: string) => {
     const formattedPlanName = setSlug(plan);
 
