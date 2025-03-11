@@ -143,7 +143,7 @@ export interface BlogPost {
   time: string;
   excerpt: string;
   featured?: boolean;
-  icons: string[];
+  icons?: string[];
   topics: string[];
   subtopics?: string[];
   intro: string[];
