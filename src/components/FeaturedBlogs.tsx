@@ -5,7 +5,6 @@ import {
   PaginationPrevious,
 } from "@/components/ui/pagination";
 import { blogs } from "@/lib/blog-posts";
-import { BlogPost } from "@/lib/interfaces";
 import usePagination from "@/lib/usePagination";
 import useSmallScreen from "@/lib/useSmallScreen";
 import { useTheme } from "next-themes";
@@ -23,10 +22,10 @@ const FeaturedBlogs = () => {
   };
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [articlesPerPage, setArticlesPerPage] = useState(6);
+  const articlesPerPage = 6;
 
   const featuredBlogs = blogs
-    .filter((blog) => blog.featured === true)
+    .filter((blog) => blog.featured)
     .sort((a, b) => a.title.localeCompare(b.title));
 
   const { currentItems: currentBlogs, totalPages } = usePagination(
@@ -44,11 +43,7 @@ const FeaturedBlogs = () => {
       <h2 className="text-center">Featured Blogs</h2>
       <Pagination className="gap-5 flex items-center pb-5">
         <PaginationPrevious
-          onClick={() => {
-            if (currentPage > 1) {
-              handlePageChange(currentPage - 1);
-            }
-          }}
+          onClick={() => currentPage > 1 && handlePageChange(currentPage - 1)}
           variant={currentPage === 1 ? "disabled" : "outline"}
           className={
             currentPage === 1 ? "cursor-not-allowed" : "cursor-default"
@@ -58,21 +53,17 @@ const FeaturedBlogs = () => {
           {currentBlogs.length > 0 ? (
             <p>
               Showing {currentPage * articlesPerPage - articlesPerPage + 1} to{" "}
-              {currentPage * articlesPerPage > featuredBlogs.length
-                ? featuredBlogs.length
-                : currentPage * articlesPerPage}{" "}
-              of {featuredBlogs.length} featured blogs
+              {Math.min(currentPage * articlesPerPage, featuredBlogs.length)} of{" "}
+              {featuredBlogs.length} featured blogs
             </p>
           ) : (
             <p>No featured blogs available</p>
           )}
         </section>
         <PaginationNext
-          onClick={() => {
-            if (currentPage < totalPages) {
-              handlePageChange(currentPage + 1);
-            }
-          }}
+          onClick={() =>
+            currentPage < totalPages && handlePageChange(currentPage + 1)
+          }
           variant={currentPage === totalPages ? "disabled" : "outline"}
           className={
             currentPage === totalPages ? "cursor-not-allowed" : "cursor-default"
@@ -80,12 +71,8 @@ const FeaturedBlogs = () => {
         />
       </Pagination>
       <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6 w-full">
-        {currentBlogs.map((blog: BlogPost, index: number) => (
-          <BlogCard
-            key={index}
-            blog={{ ...blog, icons: blog.icons || [] }}
-            isSmallScreen={isSmallScreen}
-          />
+        {currentBlogs.map((blog, index) => (
+          <BlogCard key={index} blog={blog} isSmallScreen={isSmallScreen} />
         ))}
       </div>
       <div className="text-center mt-8">

@@ -35,14 +35,14 @@ export default function WelcomePage() {
   };
 
   return (
-    <main className="mx-auto py-6">
-      <div className="relative isolate overflow-hidden py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="flex gap-7">
+    <main className="mx-auto w-11/12">
+      <div className="relative isolate overflow-hidden sm:pt-5 md:pt-10 lg:pt-16 xl:pt-20">
+        <div className="mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
             <div className="mx-auto max-w-2xl lg:mx-0">
               <div>
-                <p className="text-base/7 font-semibold">Phoenix Code Studio</p>
-                <h1 className="mt-2 text-4xl font-semibold tracking-tight text-pretty  sm:text-5xl">
+                <p className="text-md font-semibold">Phoenix Code Studio</p>
+                <h1 className="mt-2 text-4xl font-semibold tracking-wider text-pretty  sm:text-5xl">
                   Turn Your Vision into Digital Excellence
                 </h1>
                 <p className="mt-6">
@@ -69,16 +69,8 @@ export default function WelcomePage() {
                 </p>
               </div>
 
-              <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:mt-10 lg:max-w-none">
+              <div className="mx-auto mt-8 grid max-w-5xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:mt-0 lg:max-w-none">
                 <div className="max-w-xl text-base/7 lg:col-span-7">
-                  <p>
-                    Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                    risus enim. Mattis mauris semper sed amet vitae sed turpis
-                    id. Id dolor praesent donec est. Odio penatibus risus
-                    viverra tellus varius sit neque erat velit. Faucibus commodo
-                    massa rhoncus, volutpat. Dignissim sed eget risus enim.
-                    Mattis mauris semper sed amet vitae sed turpis id.
-                  </p>
                   <ul role="list" className="mt-8 max-w-xl space-y-8">
                     <li className="flex gap-x-3">
                       <FaCloud
@@ -87,11 +79,17 @@ export default function WelcomePage() {
                       />
                       <span>
                         <strong className="font-semibold">
-                          Push to deploy.
+                          Scalable Corporate Solutions for Growth & Digital
+                          Success
                         </strong>{" "}
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Maiores impedit perferendis suscipit eaque, iste
-                        dolor cupiditate blanditiis ratione.
+                        Our corporate digital solutions are tailored to help
+                        businesses of all sizes improve online visibility,
+                        streamline digital operations, and boost user
+                        engagement. From custom web development and
+                        high-converting e-commerce platforms to intuitive UX/UI
+                        design and data-driven digital marketing strategies, we
+                        deliver SEO-optimized, performance-oriented solutions
+                        aligned with your unique business goals.
                       </span>
                     </li>
                     <li className="flex gap-x-3">
@@ -101,10 +99,16 @@ export default function WelcomePage() {
                       />
                       <span>
                         <strong className="font-semibold ">
-                          SSL certificates.
+                          SEO-Optimized Content Creation Services That Elevate
+                          Your Brand & Drive Results
                         </strong>{" "}
-                        Anim aute id magna aliqua ad ad non deserunt sunt. Qui
-                        irure qui lorem cupidatat commodo.
+                        Our Content Creation Services are expertly designed to
+                        enhance your online presence, drive organic traffic, and
+                        captivate your audience with high-quality, SEO-optimized
+                        content. We produce content that is strategically
+                        crafted, audience-centric, and search engine-friendly,
+                        ensuring your brand stands out in search results and
+                        resonates with readers.
                       </span>
                     </li>
                     <li className="flex gap-x-3">
@@ -114,25 +118,24 @@ export default function WelcomePage() {
                       />
                       <span>
                         <strong className="font-semibold ">
-                          Database backups.
+                          End-to-End Website Solutions for a High-Performing
+                          Digital Presence
                         </strong>{" "}
-                        Ac tincidunt sapien vehicula erat auctor pellentesque
-                        rhoncus. Et magna sit morbi lobortis.
+                        With expertise in responsive design, e-commerce
+                        solutions, SEO strategies, and UX/UI enhancements, we
+                        ensure your site is visually striking, mobile-optimized,
+                        and search-engine friendly. Our focus on fast-loading
+                        pages and intuitive navigation guarantees a smooth user
+                        experience that enhances your site’s performance and
+                        search rankings.
                       </span>
                     </li>
                   </ul>
-                  <p className="mt-8">
-                    Et vitae blandit facilisi magna lacus commodo. Vitae sapien
-                    duis odio id et. Id blandit molestie auctor fermentum
-                    dignissim. Lacus diam tincidunt ac cursus in vel. Mauris
-                    varius vulputate et ultrices hac adipiscing egestas. Iaculis
-                    convallis ac tempor et ut. Ac lorem vel integer orci.
-                  </p>
                 </div>
               </div>
             </div>
 
-            <div className="relative lg:order-last lg:col-span-5 flex flex-col justify-start items-start h-full">
+            <div className="relative lg:order-last flex flex-col justify-start items-start h-full">
               <div>
                 <p>
                   We proudly serve a diverse range of industries, including
@@ -185,6 +188,19 @@ export default function WelcomePage() {
               >
                 Start Your Journey With Us
               </Button>
+              <p className="mt-4">
+                Unlock your business’s full potential with our all-embracing
+                digital solutions. From cutting-edge web development that
+                delivers high-performance websites to intuitive design that
+                enhances user experience, we craft strategies that make an
+                impact. Our expertise in content creation and digital marketing
+                ensures your brand stands out, driving engagement, increasing
+                visibility, and boosting conversions. Whether you're launching a
+                new venture, reimagining your online presence, or expanding into
+                new markets, we provide tailored solutions that align with your
+                vision and set you apart in today’s competitive digital
+                landscape.
+              </p>
             </div>
           </div>
         </div>
