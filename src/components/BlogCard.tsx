@@ -79,7 +79,7 @@ const BlogCard = ({ blog, isSmallScreen }: BlogCardProps) => {
   };
 
   return (
-    <article className="relative w-full h-full flex flex-col justify-end overflow-hidden rounded-2xl pt-80 sm:pt-48 lg:pt-80 bg-gradient-to-t from-white from-5% via-white via-15% to-transparent to-100% group hover:underline">
+    <article className="relative w-full h-full flex flex-col justify-end overflow-hidden rounded-2xl pt-80 sm:pt-48 lg:pt-80 bg-gradient-to-t from-foreground from-5% via-foreground via-15% to-transparent to-100% group hover:underline">
       <div className="absolute inset-0 -z-10 w-full h-full">
         <Image
           src={`/images/blog_card_images/${setSlug(blog.title)}.jpg`}
