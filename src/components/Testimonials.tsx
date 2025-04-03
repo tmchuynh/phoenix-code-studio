@@ -9,6 +9,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Button } from "./ui/button";
 import { useTheme } from "next-themes";
 import { Testimonial } from "@/lib/interfaces";
+import { Skeleton } from "./ui/skeleton";
+import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
+import { Separator } from "./ui/separator";
 
 const Testimonials = () => {
   const isSmallScreen = useSmallScreen();
@@ -39,52 +42,47 @@ const Testimonials = () => {
   return (
     <>
       {!isSmallScreen && (
-        <section className="my-16 mx-auto w-9/12">
+        <section className="my-16 mx-auto w-10/12 md:w-11/12">
           <h2 className="text-center">Hear From Our Clients</h2>
-          <Swiper
-            spaceBetween={30}
-            centeredSlides={true}
-            autoplay={{
-              delay: 10000,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
-              dynamicBullets: true,
-            }}
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper"
-            slidesPerView={1}
-          >
-            {featuredTestimonials.map((testimonial) => (
-              <SwiperSlide key={testimonial.name} className="p-6 mx-auto">
-                {testimonial.featured && (
-                  <div className="p-6 rounded-lg border-2 bg-card text-card-foreground mx-10 mb-8">
-                    <div className="flex-1 flex 2xl:items-end">
-                      <p className="italic">
-                        <span>"</span>
-                        <span className="text-center mt-4">
-                          {isSmallScreen
-                            ? `${testimonial.quote.substring(0, 15)}...`
-                            : testimonial.quote}
-                        </span>
-                        <span>"</span>
-                      </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 py-9">
+            {featuredTestimonials.map(
+              (testimonial, index) =>
+                testimonial.featured && (
+                  <>
+                    <div key={index} className="flex flex-col w-full">
+                      <figcaption className="flex items-center gap-x-6">
+                        <Avatar>
+                          <AvatarImage
+                            src="https://github.com/shadcn.png"
+                            alt="@shadcn"
+                          />
+                          <AvatarFallback>CN</AvatarFallback>
+                        </Avatar>
+                        <div>
+                          <p className="mt-4 font-bold text-secondary mb-1">
+                            {testimonial.name}
+                          </p>
+                          <p className="text-xs mb-0">{testimonial.position}</p>
+                        </div>
+                      </figcaption>
+                      <figure className="mt-10 flex flex-auto flex-col text-pretty">
+                        <blockquote className="text-lg/8 text-gray-900">
+                          <p className="italic">
+                            <span>"</span>
+                            <span className="text-center mt-4">
+                              {isSmallScreen
+                                ? `${testimonial.quote.substring(0, 15)}...`
+                                : testimonial.quote}
+                            </span>
+                            <span>"</span>
+                          </p>
+                        </blockquote>
+                      </figure>
                     </div>
-                    <div className="py-1 mb-2 flex md:flex-col-reverse 2xl:pr-3 gap-3 justify-between items-end md:items-start mt-2 flex-1 w-full">
-                      <div>
-                        <p className="mt-4 font-bold text-secondary mb-1">
-                          {testimonial.name}
-                        </p>
-                        <p className="text-xs mb-0">{testimonial.position}</p>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                  </>
+                )
+            )}
+          </div>
           <div className="text-center mt-8">
             <Button
               variant={theme === "dark" ? "outline" : "tertiary"}
