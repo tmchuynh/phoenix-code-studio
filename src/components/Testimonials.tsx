@@ -45,28 +45,29 @@ const Testimonials = () => {
         <section className="my-16 mx-auto w-10/12 md:w-11/12">
           <h2 className="text-center">Hear From Our Clients</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9 py-9">
-            {featuredTestimonials.map(
-              (testimonial, index) =>
+            {featuredTestimonials.map((testimonial, index) => {
+              const nameSegments = testimonial.name.split(" ");
+              const initials = nameSegments
+                .map((segment) => segment.charAt(0).toUpperCase())
+                .join("");
+              return (
                 testimonial.featured && (
                   <>
                     <div key={index} className="flex flex-col w-full">
                       <figcaption className="flex items-center gap-x-6">
                         <Avatar>
-                          <AvatarImage
-                            src="https://github.com/shadcn.png"
-                            alt="@shadcn"
-                          />
-                          <AvatarFallback>CN</AvatarFallback>
+                          <AvatarImage src="" alt="Profile Photo" />
+                          <AvatarFallback>{initials}</AvatarFallback>
                         </Avatar>
                         <div>
                           <p className="mt-4 font-bold text-secondary mb-1">
                             {testimonial.name}
                           </p>
-                          <p className="text-xs mb-0">{testimonial.position}</p>
+                          <p className="text-sm mb-0">{testimonial.position}</p>
                         </div>
                       </figcaption>
                       <figure className="mt-10 flex flex-auto flex-col text-pretty">
-                        <blockquote className="text-lg/8 text-gray-900">
+                        <blockquote className="">
                           <p className="italic">
                             <span>"</span>
                             <span className="text-center mt-4">
@@ -81,7 +82,8 @@ const Testimonials = () => {
                     </div>
                   </>
                 )
-            )}
+              );
+            })}
           </div>
           <div className="text-center mt-8">
             <Button
