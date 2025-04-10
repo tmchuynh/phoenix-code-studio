@@ -1,6 +1,6 @@
 "use client";
-import CallToAction from "@/components/CallToAction";
-import LoadingIndicator from "@/components/Loading";
+import CallToAction from "@/components/CTAs/CallToAction";
+import LoadingIndicator from "@/components/states/Loading";
 import {
   Accordion,
   AccordionContent,

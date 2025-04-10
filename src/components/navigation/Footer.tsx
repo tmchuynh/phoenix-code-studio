@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { JSX } from "react";
 
 interface NavigationItem {
@@ -104,45 +105,47 @@ const navigation: {
 export default function Footer() {
   return (
     <footer className="bg-gray-900">
-      <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
+      <div className="mx-auto px-6 lg:px-8 py-16 sm:py-24 lg:py-32 max-w-7xl">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-base/7 font-semibold text-indigo-400">
+          <h2 className="font-semibold text-base/7 text-indigo-400">
             Get started
           </h2>
-          <p className="mt-2 text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
+          <p className="mt-2 font-semibold text-4xl text-balance text-white sm:text-5xl tracking-tight">
             Boost your productivity. Start using our app today.
           </p>
-          <p className="mx-auto mt-6 max-w-xl text-lg/8 text-pretty text-gray-400">
+          <p className="mx-auto mt-6 max-w-xl text-gray-400 text-lg/8 text-pretty">
             Incididunt sint fugiat pariatur cupidatat consectetur sit cillum
             anim id veniam aliqua proident excepteur commodo do ea.
           </p>
-          <div className="mt-8 flex justify-center">
+          <div className="flex justify-center mt-8">
             <a
               href="#"
-              className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+              className="bg-indigo-500 hover:bg-indigo-400 shadow-xs px-3.5 py-2.5 rounded-md font-semibold text-sm text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
             >
               Get started
             </a>
           </div>
         </div>
-        <div className="mt-24 border-t border-white/10 pt-12 xl:grid xl:grid-cols-3 xl:gap-8">
-          <img
+        <div className="xl:gap-8 xl:grid xl:grid-cols-3 mt-24 pt-12 border-white/10 border-t">
+          <Image
             alt="Company name"
             src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
             className="h-9"
+            width={36}
+            height={36}
           />
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
+          <div className="gap-8 grid grid-cols-2 xl:col-span-2 mt-16 xl:mt-0">
+            <div className="md:gap-8 md:grid md:grid-cols-2">
               <div>
-                <h3 className="text-sm/6 font-semibold text-white">
+                <h3 className="font-semibold text-sm/6 text-white">
                   Solutions
                 </h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <ul role="list" className="space-y-4 mt-6">
                   {navigation.solutions.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-sm/6 text-gray-400 hover:text-white"
+                        className="text-gray-400 text-sm/6 hover:text-white"
                       >
                         {item.name}
                       </a>
@@ -151,13 +154,13 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm/6 font-semibold text-white">Support</h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <h3 className="font-semibold text-sm/6 text-white">Support</h3>
+                <ul role="list" className="space-y-4 mt-6">
                   {navigation.support.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-sm/6 text-gray-400 hover:text-white"
+                        className="text-gray-400 text-sm/6 hover:text-white"
                       >
                         {item.name}
                       </a>
@@ -166,15 +169,15 @@ export default function Footer() {
                 </ul>
               </div>
             </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
+            <div className="md:gap-8 md:grid md:grid-cols-2">
               <div>
-                <h3 className="text-sm/6 font-semibold text-white">Company</h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <h3 className="font-semibold text-sm/6 text-white">Company</h3>
+                <ul role="list" className="space-y-4 mt-6">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-sm/6 text-gray-400 hover:text-white"
+                        className="text-gray-400 text-sm/6 hover:text-white"
                       >
                         {item.name}
                       </a>
@@ -183,13 +186,13 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="mt-10 md:mt-0">
-                <h3 className="text-sm/6 font-semibold text-white">Legal</h3>
-                <ul role="list" className="mt-6 space-y-4">
+                <h3 className="font-semibold text-sm/6 text-white">Legal</h3>
+                <ul role="list" className="space-y-4 mt-6">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-sm/6 text-gray-400 hover:text-white"
+                        className="text-gray-400 text-sm/6 hover:text-white"
                       >
                         {item.name}
                       </a>
@@ -200,7 +203,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-12 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
+        <div className="md:flex md:justify-between md:items-center mt-12 pt-8 border-white/10 border-t">
           <div className="flex gap-x-6 md:order-2">
             {navigation.social.map((item) => (
               <a
@@ -209,11 +212,13 @@ export default function Footer() {
                 className="text-gray-400 hover:text-gray-300"
               >
                 <span className="sr-only">{item.name}</span>
-                <item.icon aria-hidden="true" className="size-6" />
+                {item.icon && (
+                  <item.icon aria-hidden="true" className="size-6" />
+                )}
               </a>
             ))}
           </div>
-          <p className="mt-8 text-sm/6 text-gray-400 md:order-1 md:mt-0">
+          <p className="md:order-1 mt-8 md:mt-0 text-gray-400 text-sm/6">
             &copy; 2024 Your Company, Inc. All rights reserved.
           </p>
         </div>

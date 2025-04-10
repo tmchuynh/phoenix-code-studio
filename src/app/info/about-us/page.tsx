@@ -1,5 +1,5 @@
 "use client";
-import LoadingIndicator from "@/components/Loading";
+import LoadingIndicator from "@/components/states/Loading";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";

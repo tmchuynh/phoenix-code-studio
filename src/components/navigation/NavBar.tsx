@@ -20,32 +20,32 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import { IoMdMenu } from "react-icons/io";
-import { ModeButton } from "./ModeButton";
-import { Button } from "./ui/button";
-import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
-const NavBar = () => {
+import { ModeButton } from "../buttons/ModeButton";
+import { Button } from "../ui/button";
+import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
+export default function Navbar() {
   const router = useRouter();
   const [_, setIsMenuOpen] = useState(false);
   return (
     <>
-      <Menubar className="lg:hidden xl:flex h-full justify-between hidden mb-10 w-11/12 mx-auto">
+      <Menubar className="xl:flex justify-between hidden lg:hidden mx-auto mb-10 w-11/12 h-full">
         <MenubarMenu>
           <span className="px-3">Phoenix Code Studio</span>
         </MenubarMenu>
-        <div className="flex items-center cursor-pointer xl:space-x-5 2xl:space-x-10">
+        <div className="flex items-center 2xl:space-x-10 xl:space-x-5 cursor-pointer">
           <MenubarMenu>
             <a
               onClick={() => {
                 setIsMenuOpen(false);
                 router.push("/");
               }}
-              className="text-sm md:text-md lg:text-xl mx-4 hover:text-primary"
+              className="mx-4 text-sm md:text-md lg:text-xl hover:text-primary"
             >
               Home
             </a>
           </MenubarMenu>
           <MenubarMenu>
-            <div className="min-w-[12rem] flex gap-4 xl:space-x-5 2xl:space-x-10">
+            <div className="flex gap-4 2xl:space-x-10 xl:space-x-5 min-w-[12rem]">
               {about.map((about, index) => (
                 <a
                   key={index}
@@ -65,12 +65,12 @@ const NavBar = () => {
               Services
               <FaChevronDown className="ml-3" />
             </MenubarTrigger>
-            <MenubarContent className="hidden md:block mt-3">
+            <MenubarContent className="md:block hidden mt-3">
               <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                <MenubarSubTrigger className="md:mr-9 w-full text-sm md:text-md lg:text-xl cursor-pointer">
                   Digital Services
                 </MenubarSubTrigger>
-                <MenubarSubContent className="mx-4 grid grid-cols-3 gap-2">
+                <MenubarSubContent className="gap-2 grid grid-cols-3 mx-4">
                   {serviceCategories.map((service, index) => (
                     <MenubarItem
                       key={index}
@@ -78,9 +78,9 @@ const NavBar = () => {
                         setIsMenuOpen(false);
                         router.push(service.href);
                       }}
-                      className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72 rounded-lg"
+                      className="flex flex-col items-start rounded-lg w-72 text-sm text-start md:text-md lg:text-xl cursor-pointer"
                     >
-                      <p className="text-tertiary font-semibold mb-0">
+                      <p className="mb-0 font-semibold text-tertiary">
                         {service.title}
                       </p>
                       <small>{service.description}</small>
@@ -89,7 +89,7 @@ const NavBar = () => {
                 </MenubarSubContent>
               </MenubarSub>
               <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                <MenubarSubTrigger className="md:mr-9 w-full text-sm md:text-md lg:text-xl cursor-pointer">
                   Contract Templates & Examples
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4">
@@ -98,9 +98,9 @@ const NavBar = () => {
                       setIsMenuOpen(false);
                       router.push("/services/contracts");
                     }}
-                    className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-96 rounded-lg"
+                    className="flex flex-col items-start rounded-lg w-96 text-sm text-start md:text-md lg:text-xl cursor-pointer"
                   >
-                    <p className="text-tertiary font-semibold mb-0">Overview</p>
+                    <p className="mb-0 font-semibold text-tertiary">Overview</p>
                     <small>
                       Explore our selection of contract templates and examples,
                       designed to suit a variety of business needs and
@@ -118,10 +118,10 @@ const NavBar = () => {
                         <MenubarSub
                           key={`${contractCategory.short}-${contractCategory.name}-${categoryIndex}`}
                         >
-                          <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                          <MenubarSubTrigger className="md:mr-9 w-full text-sm md:text-md lg:text-xl cursor-pointer">
                             {contractCategory.title}
                           </MenubarSubTrigger>
-                          <MenubarSubContent className="mx-4 grid grid-cols-2">
+                          <MenubarSubContent className="grid grid-cols-2 mx-4">
                             <MenubarItem
                               key={`${contractCategory.short}-${contractCategory.name}-${categoryIndex}`}
                               onClick={() => {
@@ -130,9 +130,9 @@ const NavBar = () => {
                                   `/services/contracts/${contractCategory.name}`
                                 );
                               }}
-                              className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col justify-center w-72"
+                              className="flex flex-col justify-center items-start w-72 text-sm text-start md:text-md lg:text-xl cursor-pointer"
                             >
-                              <p className="text-tertiary font-semibold mb-0">
+                              <p className="mb-0 font-semibold text-tertiary">
                                 Overview
                               </p>
                             </MenubarItem>
@@ -151,9 +151,9 @@ const NavBar = () => {
                                           `/services/contracts/${contractDetail.category}/${contractDetail.name}`
                                         );
                                       }}
-                                      className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col justify-center w-72"
+                                      className="flex flex-col justify-center items-start w-72 text-sm text-start md:text-md lg:text-xl cursor-pointer"
                                     >
-                                      <p className="text-tertiary font-semibold mb-0">
+                                      <p className="mb-0 font-semibold text-tertiary">
                                         {contractDetail.info?.title ||
                                           contractDetail.info?.name}
                                       </p>
@@ -171,18 +171,18 @@ const NavBar = () => {
                 </MenubarSubContent>
               </MenubarSub>
               <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                <MenubarSubTrigger className="md:mr-9 w-full text-sm md:text-md lg:text-xl cursor-pointer">
                   Flexible Payment Plans
                 </MenubarSubTrigger>
-                <MenubarSubContent className="mx-4 grid grid-cols-3 gap-2">
+                <MenubarSubContent className="gap-2 grid grid-cols-3 mx-4">
                   <MenubarItem
                     onClick={() => {
                       setIsMenuOpen(false);
                       router.push("/services/pricing/payment-plans");
                     }}
-                    className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72 rounded-lg"
+                    className="flex flex-col items-start rounded-lg w-72 text-sm text-start md:text-md lg:text-xl cursor-pointer"
                   >
-                    <p className="text-tertiary font-semibold mb-0">Overview</p>
+                    <p className="mb-0 font-semibold text-tertiary">Overview</p>
                     <small>
                       Browse through our variety of payment plans and choose the
                       one that best aligns with your needs and budget.
@@ -193,9 +193,9 @@ const NavBar = () => {
                       setIsMenuOpen(false);
                       router.push("/services/pricing");
                     }}
-                    className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72 rounded-lg"
+                    className="flex flex-col items-start rounded-lg w-72 text-sm text-start md:text-md lg:text-xl cursor-pointer"
                   >
-                    <p className="text-tertiary font-semibold mb-0">
+                    <p className="mb-0 font-semibold text-tertiary">
                       Service Tiers & Pricing
                     </p>
                     <small>
@@ -212,9 +212,9 @@ const NavBar = () => {
                           `/services/pricing/payment-plans/${plan.name}`
                         );
                       }}
-                      className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72 rounded-lg"
+                      className="flex flex-col items-start rounded-lg w-72 text-sm text-start md:text-md lg:text-xl cursor-pointer"
                     >
-                      <p className="text-tertiary font-semibold mb-0">
+                      <p className="mb-0 font-semibold text-tertiary">
                         {plan.title}
                       </p>
                       <small>{plan.info.short}</small>
@@ -232,19 +232,19 @@ const NavBar = () => {
                   <MenubarSub
                     key={`${serviceCategory.name}-${serviceCategory.short}-${serviceIndex}`}
                   >
-                    <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                    <MenubarSubTrigger className="md:mr-9 w-full text-sm md:text-md lg:text-xl cursor-pointer">
                       {triggerLabel}
                     </MenubarSubTrigger>
-                    <MenubarSubContent className="mx-4 grid grid-cols-3 gap-2">
+                    <MenubarSubContent className="gap-2 grid grid-cols-3 mx-4">
                       <MenubarItem
                         key={`${serviceCategory.short}-${serviceCategory.name}`}
                         onClick={() => {
                           setIsMenuOpen(false);
                           router.push(`/services/${serviceCategory.name}`);
                         }}
-                        className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72"
+                        className="flex flex-col items-start w-72 text-sm text-start md:text-md lg:text-xl cursor-pointer"
                       >
-                        <p className="text-tertiary font-semibold mb-0">
+                        <p className="mb-0 font-semibold text-tertiary">
                           {serviceCategory.short || serviceCategory.title}
                         </p>
                       </MenubarItem>
@@ -270,9 +270,9 @@ const NavBar = () => {
                                   );
                                 }
                               }}
-                              className="text-sm md:text-md lg:text-xl items-start text-start cursor-pointer flex flex-col w-72"
+                              className="flex flex-col items-start w-72 text-sm text-start md:text-md lg:text-xl cursor-pointer"
                             >
-                              <p className="text-tertiary font-semibold mb-0">
+                              <p className="mb-0 font-semibold text-tertiary">
                                 {subServiceData.info?.title ||
                                   subServiceData.info?.name}
                               </p>
@@ -296,7 +296,7 @@ const NavBar = () => {
                 setIsMenuOpen(false);
                 router.push("/contact-us");
               }}
-              className="text-sm md:text-md lg:text-xl mx-4 hover:text-primary"
+              className="mx-4 text-sm md:text-md lg:text-xl hover:text-primary"
             >
               Contact Us
             </a>
@@ -304,7 +304,7 @@ const NavBar = () => {
           <ModeButton />
         </div>
       </Menubar>
-      <Menubar className="lg:flex xl:hidden h-full justify-between hidden mb-10 w-11/12 mx-auto">
+      <Menubar className="lg:flex justify-between hidden xl:hidden mx-auto mb-10 w-11/12 h-full">
         <MenubarMenu>
           <span className="px-3">Phoenix Code Studio</span>
         </MenubarMenu>
@@ -315,7 +315,7 @@ const NavBar = () => {
                 setIsMenuOpen(false);
                 router.push("/");
               }}
-              className="text-sm md:text-md lg:text-xl mx-4 hover:text-primary"
+              className="mx-4 text-sm md:text-md lg:text-xl hover:text-primary"
             >
               Home
             </a>
@@ -325,7 +325,7 @@ const NavBar = () => {
               About Us
               <FaChevronDown className="ml-3" />
             </MenubarTrigger>
-            <MenubarContent className="hidden md:block mt-3">
+            <MenubarContent className="md:block hidden mt-3">
               {about.map((service, index) => (
                 <MenubarItem
                   key={`${service.title}-${index}`}
@@ -345,9 +345,9 @@ const NavBar = () => {
               Services
               <FaChevronDown className="ml-3" />
             </MenubarTrigger>
-            <MenubarContent className="hidden md:block mt-3 w-11/12 -ml-8">
+            <MenubarContent className="md:block hidden mt-3 -ml-8 w-11/12">
               <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                <MenubarSubTrigger className="md:mr-9 w-full text-sm md:text-md lg:text-xl cursor-pointer">
                   Digital Services
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4">
@@ -358,7 +358,7 @@ const NavBar = () => {
                         setIsMenuOpen(false);
                         router.push(service.href);
                       }}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                      className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
                     >
                       {service.title}
                     </MenubarItem>
@@ -366,7 +366,7 @@ const NavBar = () => {
                 </MenubarSubContent>
               </MenubarSub>
               <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                <MenubarSubTrigger className="md:mr-9 w-full text-sm md:text-md lg:text-xl cursor-pointer">
                   Flexible Payment Plans
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4">
@@ -375,7 +375,7 @@ const NavBar = () => {
                       setIsMenuOpen(false);
                       router.push("/services/pricing/payment-plans");
                     }}
-                    className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                    className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
                   >
                     Overview
                   </MenubarItem>
@@ -384,7 +384,7 @@ const NavBar = () => {
                       setIsMenuOpen(false);
                       router.push("/services/pricing");
                     }}
-                    className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                    className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
                   >
                     Service Tiers & Pricing
                   </MenubarItem>
@@ -397,7 +397,7 @@ const NavBar = () => {
                           `/services/pricing/payment-plans/${plan.name}`
                         );
                       }}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                      className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
                     >
                       {plan.title}
                     </MenubarItem>
@@ -414,7 +414,7 @@ const NavBar = () => {
                   <MenubarSub
                     key={`${serviceCategory.name}-${serviceCategory.short}-${serviceIndex}`}
                   >
-                    <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                    <MenubarSubTrigger className="md:mr-9 w-full text-sm md:text-md lg:text-xl cursor-pointer">
                       {triggerLabel}
                     </MenubarSubTrigger>
                     <MenubarSubContent className="mx-4">
@@ -424,7 +424,7 @@ const NavBar = () => {
                           setIsMenuOpen(false);
                           router.push(`/services/${serviceCategory.name}`);
                         }}
-                        className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                        className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
                       >
                         Overview
                       </MenubarItem>
@@ -448,7 +448,7 @@ const NavBar = () => {
                                   `/services/${subServiceData.category}/${subServiceData.name}`
                                 );
                               }}
-                              className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                              className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
                             >
                               {subServiceData.info?.title ||
                                 subServiceData.info?.name}
@@ -467,7 +467,7 @@ const NavBar = () => {
               Contract Templates
               <FaChevronDown className="ml-3" />
             </MenubarTrigger>
-            <MenubarContent className="hidden md:block mt-3 w-11/12 -ml-8">
+            <MenubarContent className="md:block hidden mt-3 -ml-8 w-11/12">
               <MenubarItem
                 onClick={() => {
                   setIsMenuOpen(false);
@@ -481,7 +481,7 @@ const NavBar = () => {
                 <MenubarSub
                   key={`${contractCategory.short}-${contractCategory.name}-${categoryIndex}`}
                 >
-                  <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                  <MenubarSubTrigger className="md:mr-9 w-full text-sm md:text-md lg:text-xl cursor-pointer">
                     {contractCategory.title}
                   </MenubarSubTrigger>
                   <MenubarSubContent className="mx-4">
@@ -493,7 +493,7 @@ const NavBar = () => {
                           `/services/contracts/${contractCategory.name}`
                         );
                       }}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                      className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
                     >
                       {contractCategory.short}s Overview
                     </MenubarItem>
@@ -512,7 +512,7 @@ const NavBar = () => {
                                   `/services/contracts/${contractCategory.name}/${details.name}`
                                 );
                               }}
-                              className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                              className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
                             >
                               {details.info.title}
                             </MenubarItem>
@@ -531,7 +531,7 @@ const NavBar = () => {
                 setIsMenuOpen(false);
                 router.push("/contact-us");
               }}
-              className="text-sm md:text-md lg:text-xl mx-4 hover:text-primary"
+              className="mx-4 text-sm md:text-md lg:text-xl hover:text-primary"
             >
               Contact Us
             </a>
@@ -539,7 +539,7 @@ const NavBar = () => {
           <ModeButton />
         </div>
       </Menubar>
-      <Menubar className="md:flex lg:hidden h-full justify-between hidden mb-10 w-11/12 mx-auto">
+      <Menubar className="md:flex justify-between hidden lg:hidden mx-auto mb-10 w-11/12 h-full">
         <MenubarMenu>
           <span className="px-3">Phoenix Code Studio</span>
         </MenubarMenu>
@@ -550,7 +550,7 @@ const NavBar = () => {
                 setIsMenuOpen(false);
                 router.push("/");
               }}
-              className="text-sm md:text-md lg:text-xl mx-4 hover:text-primary"
+              className="mx-4 text-sm md:text-md lg:text-xl hover:text-primary"
             >
               Home
             </a>
@@ -560,7 +560,7 @@ const NavBar = () => {
               About Us
               <FaChevronDown className="ml-3" />
             </MenubarTrigger>
-            <MenubarContent className="hidden md:block mt-3">
+            <MenubarContent className="md:block hidden mt-3">
               {about.map((service, index) => (
                 <MenubarItem
                   key={`${service.title}-${index}`}
@@ -580,9 +580,9 @@ const NavBar = () => {
               Services
               <FaChevronDown className="ml-3" />
             </MenubarTrigger>
-            <MenubarContent className="hidden md:block mt-3 w-11/12 -ml-8">
+            <MenubarContent className="md:block hidden mt-3 -ml-8 w-11/12">
               <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                <MenubarSubTrigger className="md:mr-9 w-full text-sm md:text-md lg:text-xl cursor-pointer">
                   Digital Services
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4">
@@ -593,7 +593,7 @@ const NavBar = () => {
                         setIsMenuOpen(false);
                         router.push(service.href);
                       }}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                      className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
                     >
                       {service.title}
                     </MenubarItem>
@@ -610,7 +610,7 @@ const NavBar = () => {
                       setIsMenuOpen(false);
                       router.push("/services/contracts");
                     }}
-                    className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                    className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
                   >
                     Overview
                   </MenubarItem>
@@ -623,7 +623,7 @@ const NavBar = () => {
                           `/services/contracts/${contractCategory.name}`
                         );
                       }}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                      className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
                     >
                       {contractCategory.title}
                     </MenubarItem>
@@ -631,7 +631,7 @@ const NavBar = () => {
                 </MenubarSubContent>
               </MenubarSub>
               <MenubarSub>
-                <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                <MenubarSubTrigger className="md:mr-9 w-full text-sm md:text-md lg:text-xl cursor-pointer">
                   Flexible Payment Plans
                 </MenubarSubTrigger>
                 <MenubarSubContent className="mx-4">
@@ -640,7 +640,7 @@ const NavBar = () => {
                       setIsMenuOpen(false);
                       router.push("/services/pricing/payment-plans");
                     }}
-                    className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                    className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
                   >
                     Overview
                   </MenubarItem>
@@ -649,7 +649,7 @@ const NavBar = () => {
                       setIsMenuOpen(false);
                       router.push("/services/pricing");
                     }}
-                    className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                    className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
                   >
                     Service Tiers & Pricing
                   </MenubarItem>
@@ -662,7 +662,7 @@ const NavBar = () => {
                           `/services/pricing/payment-plans/${plan.name}`
                         );
                       }}
-                      className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                      className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
                     >
                       {plan.title}
                     </MenubarItem>
@@ -679,7 +679,7 @@ const NavBar = () => {
                 return (
                   <MenubarSub key={`${serviceCategory.name}-${serviceIndex}`}>
                     {" "}
-                    <MenubarSubTrigger className="text-sm md:text-md lg:text-xl w-full md:mr-9 cursor-pointer">
+                    <MenubarSubTrigger className="md:mr-9 w-full text-sm md:text-md lg:text-xl cursor-pointer">
                       {triggerLabel}
                     </MenubarSubTrigger>
                     <MenubarSubContent
@@ -692,7 +692,7 @@ const NavBar = () => {
                           setIsMenuOpen(false);
                           router.push(`/services/${serviceCategory.name}`);
                         }}
-                        className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                        className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
                       >
                         Overview
                       </MenubarItem>
@@ -718,7 +718,7 @@ const NavBar = () => {
                                   `/services/${subServiceData.category}/${subServiceData.name}`
                                 );
                               }}
-                              className="text-sm md:text-md lg:text-xl justify-end text-end cursor-pointer"
+                              className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
                             >
                               {subServiceData.info?.title ||
                                 subServiceData.info?.name}
@@ -738,7 +738,7 @@ const NavBar = () => {
                 setIsMenuOpen(false);
                 router.push("/contact-us");
               }}
-              className="text-sm md:text-md lg:text-xl mx-4 hover:text-primary"
+              className="mx-4 text-sm md:text-md lg:text-xl hover:text-primary"
             >
               Contact Us
             </a>
@@ -758,8 +758,8 @@ const NavBar = () => {
             <IoMdMenu />
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-full ml-4 mt-3 h-fit p-0 md:hidden">
-          <Menubar className="flex flex-col h-fit space-y-4 p-3 items-start">
+        <PopoverContent className="md:hidden mt-3 ml-4 p-0 w-full h-fit">
+          <Menubar className="flex flex-col items-start space-y-4 p-3 h-fit">
             <MenubarMenu>
               <span className="p-0">Phoenix Code Studio</span>
             </MenubarMenu>
@@ -770,13 +770,13 @@ const NavBar = () => {
                     setIsMenuOpen(false);
                     router.push("/");
                   }}
-                  className="text-sm md:text-md lg:text-xl pl-3 mb-2.5 h-fit"
+                  className="mb-2.5 pl-3 h-fit text-sm md:text-md lg:text-xl"
                 >
                   Home
                 </a>
               </MenubarMenu>
               <MenubarMenu>
-                <div className="min-w-[12rem] flex flex-col ml-3 gap-2 mb-2.5 space-y-2">
+                <div className="flex flex-col gap-2 space-y-2 mb-2.5 ml-3 min-w-[12rem]">
                   {about.map((about, index) => (
                     <a
                       key={index}
@@ -784,7 +784,7 @@ const NavBar = () => {
                         setIsMenuOpen(false);
                         router.push(about.href);
                       }}
-                      className="text-sm md:text-md lg:text-xl h-fit"
+                      className="h-fit text-sm md:text-md lg:text-xl"
                     >
                       {about.title}
                     </a>
@@ -796,7 +796,7 @@ const NavBar = () => {
                   Digtial Services
                   <FaChevronDown />
                 </MenubarTrigger>
-                <MenubarContent className="block md:hidden ml-9 -mt-2">
+                <MenubarContent className="block md:hidden -mt-2 ml-9">
                   {serviceCategories.map((services, index) => (
                     <MenubarItem
                       key={`${services.title}-${index}`}
@@ -816,7 +816,7 @@ const NavBar = () => {
                   Flexible Payment Plans
                   <FaChevronDown />
                 </MenubarTrigger>
-                <MenubarContent className="block md:hidden ml-9 -mt-2">
+                <MenubarContent className="block md:hidden -mt-2 ml-9">
                   <MenubarItem
                     className="h-fit"
                     onClick={() => {
@@ -861,7 +861,7 @@ const NavBar = () => {
                       {triggerLabel}
                       <FaChevronDown />
                     </MenubarTrigger>
-                    <MenubarContent className="block md:hidden ml-9 -mt-2">
+                    <MenubarContent className="block md:hidden -mt-2 ml-9">
                       <MenubarItem
                         key={`${serviceCategory.short}-${serviceCategory.name}`}
                         className="h-fit"
@@ -910,5 +910,4 @@ const NavBar = () => {
       </Popover>
     </>
   );
-};
-export default NavBar;
+}

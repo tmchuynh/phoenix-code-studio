@@ -1,5 +1,5 @@
 "use client";
-import LoadingIndicator from "@/components/Loading";
+import LoadingIndicator from "@/components/states/Loading";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import {

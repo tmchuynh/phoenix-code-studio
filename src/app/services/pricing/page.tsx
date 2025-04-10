@@ -1,5 +1,6 @@
 "use client";
-import CallToAction from "@/components/CallToAction";
+import CallToAction from "@/components/CTAs/CallToAction";
+import LoadingIndicator from "@/components/states/Loading";
 import { Button } from "@/components/ui/button";
 import { SidebarSeparator } from "@/components/ui/sidebar";
 import { allServices } from "@/lib/service-categories";
@@ -8,8 +9,6 @@ import useSmallScreen from "@/lib/useSmallScreen";
 import { formatName, setSlug } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
-
-import LoadingIndicator from "@/components/Loading";
 import { FC, useEffect, useState } from "react";
 
 const PricingPage: FC = () => {

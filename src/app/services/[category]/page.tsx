@@ -1,16 +1,16 @@
 "use client";
+import CallToAction from "@/components/CTAs/CallToAction";
+import CannotFind from "@/components/states/CannotFind";
+import LoadingIndicator from "@/components/states/Loading";
+import { Button } from "@/components/ui/button";
 import { Category } from "@/lib/interfaces";
 import { subServiceDetails } from "@/lib/sub-services";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
+import { formatName, setSlug } from "@/lib/utils";
+import { useTheme } from "next-themes";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-import CallToAction from "@/components/CallToAction";
-import { formatName, setSlug } from "@/lib/utils";
-import LoadingIndicator from "@/components/Loading";
-import CannotFind from "@/components/CannotFind";
-import { useTheme } from "next-themes";
 
 export default function CategoryPage() {
   const { category } = useParams() as { category: string };
@@ -72,7 +72,7 @@ export default function CategoryPage() {
   };
 
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto py-6">
+    <main className="mx-auto py-6 w-10/12 md:w-11/12">
       <h1>{service?.name && formatName(service?.name)}</h1>
       <div className="mb-4">
         {" "}
@@ -96,7 +96,7 @@ export default function CategoryPage() {
 
           if (subServiceDetail && subServiceDetail.info.pricingTiers) {
             return (
-              <div className="my-4 lg:flex lg:flex-col" key={index}>
+              <div className="lg:flex lg:flex-col my-4" key={index}>
                 <h3>Pricing for {formatName(subServiceDetail.name)}</h3>
                 <ul>
                   {subServiceDetail.info.pricingTiers.map(
@@ -109,7 +109,7 @@ export default function CategoryPage() {
                   )}
                 </ul>
                 <Button
-                  className="no-underline hover:underline w-full md:w-1/2 lg:w-1/4 lg:self-end h-fit mt-3"
+                  className="mt-3 w-full md:w-1/2 lg:w-1/4 h-fit hover:underline no-underline lg:self-end"
                   variant={theme === "dark" ? "outline" : "accent"}
                   onClick={() => navigateToDetails(sub)}
                 >

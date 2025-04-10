@@ -1,7 +1,7 @@
 "use client";
 
-import CannotFind from "@/components/CannotFind";
 import LoadingIndicator from "@/components/Loading";
+import CannotFind from "@/components/states/CannotFind";
 import { Button } from "@/components/ui/button";
 import { SubItem } from "@/lib/interfaces";
 import useMediumScreen from "@/lib/useMediumScreen";
@@ -67,7 +67,7 @@ export default function CategoryPage() {
   if (error) return <CannotFind />;
 
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto py-6">
+    <main className="mx-auto py-6 w-10/12 md:w-11/12">
       <h1>
         {contractDetail?.info.name && formatName(contractDetail?.info.name)}{" "}
         EXAMPLE
@@ -83,7 +83,7 @@ export default function CategoryPage() {
 
       {contractDetail?.details && (
         <div className="ml-5 md:ml-9 lg:ml-10">
-          <ol className="list-roman space-y-3">
+          <ol className="space-y-3 list-roman">
             {contractDetail?.details?.map((detail, detailIndex) => (
               <li key={detailIndex}>
                 <h3>{detail.title}</h3>

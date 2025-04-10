@@ -1,7 +1,7 @@
 "use client";
 import CallToAction from "@/components/CallToAction";
-import CannotFind from "@/components/CannotFind";
 import LoadingIndicator from "@/components/Loading";
+import CannotFind from "@/components/states/CannotFind";
 import { IconDisplay } from "@/lib/IconDisplay";
 import { PaymentDetails } from "@/lib/interfaces";
 import useMediumScreen from "@/lib/useMediumScreen";
@@ -60,7 +60,7 @@ export default function PaymentPlanPage() {
   if (error) return <CannotFind />;
 
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto py-6">
+    <main className="mx-auto py-6 w-10/12 md:w-11/12">
       <h1>
         {paymentPlan?.short && paymentPlan?.title && isMediumScreen
           ? paymentPlan?.short
@@ -79,7 +79,7 @@ export default function PaymentPlanPage() {
       <div>
         <h2>Key Attributes</h2>
         {isMediumScreen ? (
-          <ul className="grid grid-cols-1 gap-x-4 list-none">
+          <ul className="gap-x-4 grid grid-cols-1 list-none">
             {paymentPlan?.info.shortFeatures.map((features, index) => (
               <li className="flex text-wrap" key={index}>
                 <IconDisplay Icon={paymentPlan?.Icon} />

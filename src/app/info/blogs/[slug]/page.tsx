@@ -1,15 +1,14 @@
 "use client";
 
-import { useParams } from "next/navigation";
-import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
-import { BlogPost } from "@/lib/interfaces";
+import CannotFind from "@/components/states/CannotFind";
+import LoadingIndicator from "@/components/states/Loading";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import LoadingIndicator from "@/components/Loading";
-import Image from "next/image";
-import CannotFind from "@/components/CannotFind";
+import { BlogPost } from "@/lib/interfaces";
 import { setSlug } from "@/lib/utils";
+import Image from "next/image";
+import { useParams, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const BlogPostPage = () => {
   const { slug } = useParams();
@@ -87,7 +86,7 @@ const BlogPostPage = () => {
   }
 
   return (
-    <div className="w-10/12 md:w-11/12 mx-auto py-6">
+    <div className="mx-auto py-6 w-10/12 md:w-11/12">
       <header>
         <h1>{post?.title}</h1>
         <div>
@@ -114,7 +113,7 @@ const BlogPostPage = () => {
           </div>
         </div>
 
-        <div className="flex flex-col-reverse md:flex-col xl:flex-row xl:pb-6 xl:gap-x-6 md:pb-5">
+        <div className="flex xl:flex-row md:flex-col flex-col-reverse xl:gap-x-6 md:pb-5 xl:pb-6">
           <div className="xl:flex xl:flex-col xl:justify-between">
             <div>
               {post?.intro.map((intro, index) => (
@@ -123,7 +122,7 @@ const BlogPostPage = () => {
             </div>
 
             {post?.icons && (
-              <div className="flex flex-wrap gap-7 mb-3 md:mb-0 md:mt-5 lg:mb-3">
+              <div className="flex flex-wrap gap-7 md:mt-5 mb-3 md:mb-0 lg:mb-3">
                 {post?.icons.map((icon, index) => (
                   <Image
                     src={`/images/blog_icons/${icon}`}
@@ -131,7 +130,7 @@ const BlogPostPage = () => {
                     height={500}
                     key={index}
                     alt={`${icon}-${index}`}
-                    className="w-10 md:w-20 lg:w-16 2xl:w-16 2xl:ml-[3em] mx-auto"
+                    className="mx-auto 2xl:ml-[3em] w-10 md:w-20 lg:w-16 2xl:w-16"
                   />
                 ))}
               </div>
@@ -145,7 +144,7 @@ const BlogPostPage = () => {
               height={300}
               priority={true}
               alt={`${post?.title}-image`}
-              className="w-full lg:h-[25em] object-contain mx-auto object-center mb-2 md:mt-4 xl:mt-0 self-center"
+              className="mx-auto md:mt-4 xl:mt-0 mb-2 w-full lg:h-[25em] object-contain object-center self-center"
             />
           )}
         </div>
@@ -185,7 +184,7 @@ const BlogPostPage = () => {
                           </p>
 
                           {innerList.list && (
-                            <ul className="list-decimal list-inside mt-0">
+                            <ul className="mt-0 list-decimal list-inside">
                               {innerList.list.map((b_list, b_index) => (
                                 <li key={b_index}>
                                   {b_list.title && (
@@ -196,7 +195,7 @@ const BlogPostPage = () => {
                                   {b_list.description}
 
                                   {b_list.list && (
-                                    <ul className="ml-4 mt-2">
+                                    <ul className="mt-2 ml-4">
                                       {b_list.list.map((c_list, c_index) => (
                                         <li key={c_index}>
                                           {c_list.title && (
@@ -207,7 +206,7 @@ const BlogPostPage = () => {
                                           {c_list.description}
 
                                           {c_list.list && (
-                                            <ul className="list-decimal list-inside mt-2">
+                                            <ul className="mt-2 list-decimal list-inside">
                                               {c_list.list.map(
                                                 (d_list, d_index) => (
                                                   <li key={d_index}>
@@ -264,7 +263,7 @@ const BlogPostPage = () => {
           </section>
         ))}
 
-      <section className="flex flex-col lg:flex-row xl:flex-row-reverse md:gap-5 lg:gap-10">
+      <section className="flex lg:flex-row xl:flex-row-reverse flex-col md:gap-5 lg:gap-10">
         <div>
           <h2>Conclusion</h2>
           {post?.conclusions.map((paragraph, index) => (
@@ -278,12 +277,12 @@ const BlogPostPage = () => {
             height={300}
             priority={false}
             alt={`Image related to ${post?.title}`}
-            className="w-full md:w-3/4 lg:w-1/2 xl:w-full h-full object-contain mx-auto object-center mb-2 lg:mt-4 xl:mt-0 self-center"
+            className="mx-auto lg:mt-4 xl:mt-0 mb-2 w-full md:w-3/4 lg:w-1/2 xl:w-full h-full object-contain object-center self-center"
           />
         )}
       </section>
 
-      <footer className="md:mt-8 xl:mt-0 text-center lg:w-3/4 mx-auto">
+      <footer className="mx-auto md:mt-8 xl:mt-0 lg:w-3/4 text-center">
         <p className="leading-3">
           Read more related posts about{" "}
           {post?.topics.map((topic, index) => (

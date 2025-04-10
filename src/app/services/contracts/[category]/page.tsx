@@ -1,6 +1,6 @@
 "use client";
-import CannotFind from "@/components/CannotFind";
 import LoadingIndicator from "@/components/Loading";
+import CannotFind from "@/components/states/CannotFind";
 import { Category } from "@/lib/interfaces";
 import { contractExamples } from "@/lib/sub-contracts";
 import useMediumScreen from "@/lib/useMediumScreen";
@@ -60,7 +60,7 @@ export default function CategoryPage() {
   if (error) return <CannotFind />;
 
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto py-6">
+    <main className="mx-auto py-6 w-10/12 md:w-11/12">
       <h1>{contract?.name && formatName(contract?.name)}</h1>
       <div className="mb-4">
         {" "}

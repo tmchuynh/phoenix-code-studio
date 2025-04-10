@@ -1,6 +1,6 @@
 "use client";
-import LoadingIndicator from "@/components/Loading";
 import StarRating from "@/components/Ratings";
+import LoadingIndicator from "@/components/states/Loading";
 import { Card, CardContent } from "@/components/ui/card";
 import { testimonials } from "@/lib/constants";
 import { splitAndTrimQuotes } from "@/lib/utils";

@@ -1,5 +1,5 @@
 "use client";
-import LoadingIndicator from "@/components/Loading";
+import LoadingIndicator from "@/components/states/Loading";
 import { Button } from "@/components/ui/button";
 import { jobPositions } from "@/lib/constants";
 import { cn } from "@/lib/utils";

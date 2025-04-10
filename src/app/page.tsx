@@ -1,10 +1,10 @@
 "use client";
 import AboutSection from "@/components/AboutSection";
-import CallToAction from "@/components/CallToAction";
+import CallToAction from "@/components/CTAs/CallToAction";
 import FeaturedBlogs from "@/components/FeaturedBlogs";
 import FeaturedProjects from "@/components/FeaturedProjects";
-import LoadingIndicator from "@/components/Loading";
 import ServiceHighlights from "@/components/ServiceHighlights";
+import LoadingIndicator from "@/components/states/Loading";
 import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -36,13 +36,13 @@ export default function WelcomePage() {
 
   return (
     <main className="mx-auto w-11/12">
-      <div className="relative isolate overflow-hidden sm:pt-5 md:pt-10 lg:pt-16 xl:pt-20">
+      <div className="relative sm:pt-5 md:pt-10 lg:pt-16 xl:pt-20 overflow-hidden isolate">
         <div className="mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
-            <div className="mx-auto max-w-2xl lg:mx-0">
+          <div className="gap-7 grid grid-cols-1 md:grid-cols-2">
+            <div className="mx-auto lg:mx-0 max-w-2xl">
               <div>
-                <p className="text-md font-semibold">Phoenix Code Studio</p>
-                <h1 className="mt-2 text-4xl font-semibold tracking-wider text-pretty  sm:text-5xl">
+                <p className="font-semibold text-md">Phoenix Code Studio</p>
+                <h1 className="mt-2 font-semibold text-4xl text-pretty sm:text-5xl tracking-wider">
                   Turn Your Vision into Digital Excellence
                 </h1>
                 <p className="mt-6">
@@ -69,13 +69,13 @@ export default function WelcomePage() {
                 </p>
               </div>
 
-              <div className="mx-auto mt-8 grid max-w-5xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:mt-0 lg:max-w-none">
-                <div className="max-w-xl text-base/7 lg:col-span-7">
-                  <ul role="list" className="mt-8 max-w-xl space-y-8">
+              <div className="gap-x-8 gap-y-16 grid grid-cols-1 mx-auto lg:mx-0 mt-8 lg:mt-0 max-w-5xl lg:max-w-none">
+                <div className="lg:col-span-7 max-w-xl text-base/7">
+                  <ul role="list" className="space-y-8 mt-8 max-w-xl">
                     <li className="flex gap-x-3">
                       <FaCloud
                         aria-hidden="true"
-                        className="mt-1 size-5 flex-none"
+                        className="flex-none mt-1 size-5"
                       />
                       <span>
                         <strong className="font-semibold">
@@ -95,10 +95,10 @@ export default function WelcomePage() {
                     <li className="flex gap-x-3">
                       <FaLock
                         aria-hidden="true"
-                        className="mt-1 size-5 flex-none"
+                        className="flex-none mt-1 size-5"
                       />
                       <span>
-                        <strong className="font-semibold ">
+                        <strong className="font-semibold">
                           SEO-Optimized Content Creation Services That Elevate
                           Your Brand & Drive Results
                         </strong>{" "}
@@ -114,10 +114,10 @@ export default function WelcomePage() {
                     <li className="flex gap-x-3">
                       <ServerIcon
                         aria-hidden="true"
-                        className="mt-1 size-5 flex-none"
+                        className="flex-none mt-1 size-5"
                       />
                       <span>
-                        <strong className="font-semibold ">
+                        <strong className="font-semibold">
                           End-to-End Website Solutions for a High-Performing
                           Digital Presence
                         </strong>{" "}
@@ -135,7 +135,7 @@ export default function WelcomePage() {
               </div>
             </div>
 
-            <div className="relative lg:order-last flex flex-col justify-start items-start h-full">
+            <div className="relative flex flex-col justify-start items-start lg:order-last h-full">
               <div>
                 <p>
                   We proudly serve a diverse range of industries, including
@@ -163,7 +163,7 @@ export default function WelcomePage() {
                 />
               </div>
               <div>
-                <h2 className="mt-16 text-2xl font-bold tracking-tight ">
+                <h2 className="mt-16 font-bold text-2xl tracking-tight">
                   No website? No problem.
                 </h2>
                 <p className="mt-">
@@ -183,7 +183,7 @@ export default function WelcomePage() {
                 </p>
               </div>
               <Button
-                className="w-2/3 md:w-1/2 my-2 py-3 text-lg font-semibold"
+                className="my-2 py-3 w-2/3 md:w-1/2 font-semibold text-lg"
                 onClick={navigateToServices}
               >
                 Start Your Journey With Us
@@ -210,7 +210,7 @@ export default function WelcomePage() {
       <ServiceHighlights />
 
       {/* Call to Action Section */}
-      <div className="px-12 mx-auto">
+      <div className="mx-auto px-12">
         <CallToAction />
       </div>
 

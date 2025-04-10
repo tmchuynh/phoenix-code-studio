@@ -1,5 +1,5 @@
 import React from "react";
-import { SpinningText } from "./magicui/spinning-text";
+import { SpinningText } from "../magicui/spinning-text";
 
 /**
  * The `CannotFind` component is a functional React component that displays a message
@@ -13,7 +13,7 @@ import { SpinningText } from "./magicui/spinning-text";
  */
 const CannotFind: React.FC = () => {
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto -mt-28 h-svh flex justify-center items-center">
+    <main className="flex justify-center items-center mx-auto -mt-28 w-10/12 md:w-11/12 h-svh">
       <SpinningText reverse className="text-4xl" duration={4} radius={6}>
         the data on this page • cannot be loaded • at this time •
       </SpinningText>

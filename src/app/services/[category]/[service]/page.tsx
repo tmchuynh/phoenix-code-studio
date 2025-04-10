@@ -1,13 +1,13 @@
 "use client";
 
+import LoadingIndicator from "@/components/Loading";
+import CannotFind from "@/components/states/CannotFind";
+import { Button } from "@/components/ui/button";
 import { SubItem } from "@/lib/interfaces";
+import useMediumScreen from "@/lib/useMediumScreen";
+import useSmallScreen from "@/lib/useSmallScreen";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import useSmallScreen from "@/lib/useSmallScreen";
-import useMediumScreen from "@/lib/useMediumScreen";
-import { Button } from "@/components/ui/button";
-import LoadingIndicator from "@/components/Loading";
-import CannotFind from "@/components/CannotFind";
 
 export default function ServicePage() {
   const router = useRouter();
@@ -63,7 +63,7 @@ export default function ServicePage() {
   if (error) return <CannotFind />;
 
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto py-6">
+    <main className="mx-auto py-6 w-10/12 md:w-11/12">
       <h1>{serviceData?.info.name}</h1>
       <p className="mb-4">
         {isSmallScreen

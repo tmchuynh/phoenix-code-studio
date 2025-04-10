@@ -1,4 +1,4 @@
-import BlogCard from "@/components/BlogCard";
+import BlogCard from "@/components/cards/BlogCard";
 import {
   Pagination,
   PaginationNext,
@@ -39,9 +39,9 @@ const FeaturedBlogs = () => {
   };
 
   return (
-    <section className="w-10/12 md:w-11/12 mx-auto py-6">
+    <section className="mx-auto py-6 w-10/12 md:w-11/12">
       <h2 className="text-center">Featured Blogs</h2>
-      <Pagination className="gap-5 flex items-center pb-5">
+      <Pagination className="flex items-center gap-5 pb-5">
         <PaginationPrevious
           onClick={() => currentPage > 1 && handlePageChange(currentPage - 1)}
           variant={currentPage === 1 ? "disabled" : "outline"}
@@ -70,15 +70,15 @@ const FeaturedBlogs = () => {
           }
         />
       </Pagination>
-      <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-6 w-full">
+      <div className="gap-6 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 w-full">
         {currentBlogs.map((blog, index) => (
           <BlogCard key={index} blog={blog} isSmallScreen={isSmallScreen} />
         ))}
       </div>
-      <div className="text-center mt-8">
+      <div className="mt-8 text-center">
         <Button
           variant={theme === "dark" ? "outline" : "tertiary"}
-          className="w-1/2 my-3"
+          className="my-3 w-1/2"
           onClick={navigateToBlogs}
         >
           Read Our Blogs
