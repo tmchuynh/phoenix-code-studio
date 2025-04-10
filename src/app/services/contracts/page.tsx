@@ -1,6 +1,5 @@
 "use client";
 import LoadingIndicator from "@/components/Loading";
-import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { allContracts } from "@/lib/contract-categories";
 import { contractExamples } from "@/lib/sub-contracts";
@@ -20,8 +19,7 @@ const ExampleContractsPage: FC = () => {
   }
 
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto py-6">
-      <DynamicBreadcrumb />
+    <main className="mx-auto py-6 w-10/12 md:w-11/12">
       <h1>Explore Our Contract Examples</h1>
       <p>
         Explore a variety of contract structures designed to meet different
@@ -38,7 +36,7 @@ const ExampleContractsPage: FC = () => {
       <p>
         Browse our contract examples below to find the right fit for your
         project. Need something more specific?{" "}
-        <Button variant={"link"} className="p-0 m-0 h-fit">
+        <Button variant={"link"} className="m-0 p-0 h-fit">
           Contact us today
         </Button>{" "}
         for a personalized consultation. Our team will take the time to
@@ -57,7 +55,7 @@ const ExampleContractsPage: FC = () => {
       {/* Company Contract */}
       {allContracts.map((contract, contractIndex) => (
         <section
-          className="my-8 flex flex-col justify-between"
+          className="flex flex-col justify-between my-8"
           key={contractIndex}
         >
           <div className="pb-4">

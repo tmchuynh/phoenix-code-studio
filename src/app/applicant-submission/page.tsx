@@ -1,7 +1,6 @@
 "use client";
 
 import LoadingIndicator from "@/components/Loading";
-import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
@@ -155,8 +154,7 @@ const ApplicantSubmissionPage = () => {
   };
 
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto py-6">
-      <DynamicBreadcrumb />
+    <main className="mx-auto py-6 w-10/12 md:w-11/12">
       <h1>Apply for Open Positions</h1>
       <p>
         We invite you to apply for one or more of our available job openings. To
@@ -168,15 +166,15 @@ const ApplicantSubmissionPage = () => {
         application and learning more about the value you can bring to our team.
       </p>
 
-      {error && <p className="text-destructive font-bold">{error}</p>}
+      {error && <p className="font-bold text-destructive">{error}</p>}
       {successMessage && (
-        <p className="text-success font-bold">{successMessage}</p>
+        <p className="font-bold text-success">{successMessage}</p>
       )}
 
       <form onSubmit={handleSubmit} id="application-form" className="space-y-6">
         {/* Name */}
         <div className="mb-4">
-          <label htmlFor="name" className="block text-lg font-semibold">
+          <label htmlFor="name" className="block font-semibold text-lg">
             Name
           </label>
           <input
@@ -190,13 +188,13 @@ const ApplicantSubmissionPage = () => {
               handleChange(e);
             }}
             required
-            className="w-full p-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+            className="mt-2 p-3 border rounded-md focus:ring-2 focus:ring-primary w-full focus:outline-none"
           />
         </div>
 
         {/* Email */}
         <div className="mb-4">
-          <label htmlFor="email" className="block text-lg font-semibold">
+          <label htmlFor="email" className="block font-semibold text-lg">
             Email
           </label>
           <input
@@ -211,7 +209,7 @@ const ApplicantSubmissionPage = () => {
               handleChange(e);
             }}
             required
-            className="w-full p-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+            className="mt-2 p-3 border rounded-md focus:ring-2 focus:ring-primary w-full focus:outline-none"
           />
         </div>
 
@@ -235,7 +233,7 @@ const ApplicantSubmissionPage = () => {
             free to apply for all that interest you, and we will evaluate your
             application for the most suitable opportunity.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 ml-5">
+          <div className="gap-3 grid grid-cols-1 md:grid-cols-2 ml-5">
             {jobPositions.map((position) => (
               <div key={position.title} className="flex items-center">
                 <Checkbox
@@ -264,7 +262,7 @@ const ApplicantSubmissionPage = () => {
             you have multiple portfolio links, feel free to include them so we
             can explore a variety of your work.
           </p>
-          <div className="space-y-3 flex flex-col">
+          <div className="flex flex-col space-y-3">
             <Button
               variant={"accent"}
               onClick={() => setPortfolioLinks((prev) => [...prev, ""])}
@@ -280,7 +278,7 @@ const ApplicantSubmissionPage = () => {
                 onChange={(e) => handlePortfolioChange(e.target.value, index)}
                 placeholder={`Portfolio Link ${index + 1}`}
                 value={link}
-                className="border border-border rounded w-11/12 md:w-full mx-auto md:h-12 md:text-md lg:text-xl placeholder:text-accent-2"
+                className="mx-auto border border-border rounded w-11/12 md:w-full md:h-12 md:text-md lg:text-xl placeholder:text-accent-2"
               />
             ))}
           </div>

@@ -3,7 +3,6 @@
 import LoadingIndicator from "@/components/Loading";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
-import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -682,8 +681,7 @@ const BlogDisplayPage: FC = () => {
   };
 
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto py-6">
-      <DynamicBreadcrumb />
+    <main className="mx-auto py-6 w-10/12 md:w-11/12">
       <h1>Phoenix Code Studio Blogs</h1>
       <p className="mt-4">
         Stay ahead in the ever-evolving world of web development, UX design, and
@@ -703,21 +701,21 @@ const BlogDisplayPage: FC = () => {
       </p>
 
       {/* Filter Options */}
-      <section className="mb-8 relative">
-        <section className="flex flex-col lg:flex-row justify-center sm:items-end sm:space-y-4 md:gap-4">
-          <div className="w-full gap-3 grid grid-cols-1 pb-5 items-start">
+      <section className="relative mb-8">
+        <section className="flex lg:flex-row flex-col justify-center sm:items-end md:gap-4 sm:space-y-4">
+          <div className="items-start gap-3 grid grid-cols-1 pb-5 w-full">
             {/* Topic Filter */}
             <div className="flex flex-wrap items-center">
               <Collapsible
                 open={openCollapsible === "topic"}
                 onOpenChange={() => handleCollapsibleChange("topic")}
-                className="w-full space-y-2"
+                className="space-y-2 w-full"
               >
-                <div className="flex items-center justify-between space-x-4">
+                <div className="flex justify-between items-center space-x-4">
                   <CollapsibleTrigger asChild>
                     <div className="flex items-center w-full">
-                      <ChevronsUpDown className="h-4 w-4" />{" "}
-                      <label htmlFor="topic" className="ml-2 text-lg w-full">
+                      <ChevronsUpDown className="w-4 h-4" />{" "}
+                      <label htmlFor="topic" className="ml-2 w-full text-lg">
                         <p>Filter by Topic:</p>
                       </label>
                       <span className="sr-only">Toggle</span>
@@ -725,7 +723,7 @@ const BlogDisplayPage: FC = () => {
                   </CollapsibleTrigger>
                 </div>
                 <CollapsibleContent className="space-y-2 ml-5">
-                  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 justify-start items-start w-full">
+                  <div className="justify-start items-start grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 w-full">
                     {topics.map((topic) => {
                       if (topic === "Getting Started") {
                         return (
@@ -752,7 +750,7 @@ const BlogDisplayPage: FC = () => {
 
                             {/* Sub-topics appear directly under "Getting Started" */}
                             {showGettingStartedCheckboxes && (
-                              <div className="ml-5 w-full mt-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
+                              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 mt-2 ml-5 w-full">
                                 <div className="flex items-center mr-1">
                                   <Checkbox
                                     id="select-all-subtopics"
@@ -834,13 +832,13 @@ const BlogDisplayPage: FC = () => {
               <Collapsible
                 open={openCollapsible === "date"}
                 onOpenChange={() => handleCollapsibleChange("date")}
-                className="w-full space-y-2"
+                className="space-y-2 w-full"
               >
-                <div className="flex items-center justify-between space-x-4">
+                <div className="flex justify-between items-center space-x-4">
                   <CollapsibleTrigger asChild>
                     <div className="flex items-center w-full">
-                      <ChevronsUpDown className="h-4 w-4" />
-                      <label htmlFor="topic" className="ml-2 text-lg w-full">
+                      <ChevronsUpDown className="w-4 h-4" />
+                      <label htmlFor="topic" className="ml-2 w-full text-lg">
                         <p>Filter by Date:</p>
                       </label>
                       <span className="sr-only">Toggle</span>
@@ -848,7 +846,7 @@ const BlogDisplayPage: FC = () => {
                   </CollapsibleTrigger>
                 </div>
 
-                <CollapsibleContent className="space-y-2 ml-5 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+                <CollapsibleContent className="space-y-2 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 ml-5">
                   {sortedData.map((yearData, yearIndex) => {
                     const { year, months } = yearData;
 
@@ -859,15 +857,15 @@ const BlogDisplayPage: FC = () => {
                         onOpenChange={() =>
                           handleCollapsibleChange("year", year)
                         }
-                        className="w-full space-y-2"
+                        className="space-y-2 w-full"
                       >
-                        <div className="flex items-center justify-between space-x-4">
+                        <div className="flex justify-between items-center space-x-4">
                           <CollapsibleTrigger asChild>
                             <div className="flex items-center w-full">
-                              <ChevronsUpDown className="h-4 w-4" />
+                              <ChevronsUpDown className="w-4 h-4" />
                               <label
                                 htmlFor="topic"
-                                className="ml-2 text-lg w-full"
+                                className="ml-2 w-full text-lg"
                               >
                                 <p>{year}</p>
                               </label>
@@ -922,15 +920,15 @@ const BlogDisplayPage: FC = () => {
                                     monthData.month
                                   )
                                 }
-                                className="w-full space-y-2"
+                                className="space-y-2 w-full"
                               >
-                                <div className="flex items-center justify-between space-x-4">
+                                <div className="flex justify-between items-center space-x-4">
                                   <CollapsibleTrigger asChild>
                                     <div className="flex items-center w-full">
-                                      <ChevronsUpDown className="h-4 w-4" />
+                                      <ChevronsUpDown className="w-4 h-4" />
                                       <label
                                         htmlFor="topic"
-                                        className="ml-2 text-lg w-full"
+                                        className="ml-2 w-full text-lg"
                                       >
                                         <p>
                                           {monthNames[monthData.month - 1]}
@@ -1028,13 +1026,13 @@ const BlogDisplayPage: FC = () => {
               <Collapsible
                 open={openCollapsible === "author"}
                 onOpenChange={() => handleCollapsibleChange("author")}
-                className="w-full space-y-2"
+                className="space-y-2 w-full"
               >
-                <div className="flex items-center justify-between space-x-4">
+                <div className="flex justify-between items-center space-x-4">
                   <CollapsibleTrigger asChild>
                     <div className="flex items-center w-full">
-                      <ChevronsUpDown className="h-4 w-4" />
-                      <label htmlFor="author" className="ml-2 text-lg w-full">
+                      <ChevronsUpDown className="w-4 h-4" />
+                      <label htmlFor="author" className="ml-2 w-full text-lg">
                         <p>Filter by Author:</p>
                       </label>
                       <span className="sr-only">Toggle</span>
@@ -1042,7 +1040,7 @@ const BlogDisplayPage: FC = () => {
                   </CollapsibleTrigger>
                 </div>
                 <CollapsibleContent className="space-y-2 ml-5">
-                  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 justify-start items-start w-full">
+                  <div className="justify-start items-start grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 w-full">
                     {authors.sort().map((author) => (
                       <div key={author} className="flex items-center mr-1">
                         <Checkbox
@@ -1086,7 +1084,7 @@ const BlogDisplayPage: FC = () => {
             placeholder="Search by title or author"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="p-2 border border-border rounded w-11/12 md:w-full mx-auto md:h-12 lg:h-14 md:text-md lg:text-xl placeholder:text-accent-2"
+            className="mx-auto p-2 border border-border rounded w-11/12 md:w-full md:h-12 lg:h-14 md:text-md lg:text-xl placeholder:text-accent-2"
           />
         </section>
 
@@ -1118,7 +1116,7 @@ const BlogDisplayPage: FC = () => {
             ))}
         </section>
 
-        <section className="w-11/12 md:w-full mx-auto flex flex-col md:flex-row gap-2 justify-center md:justify-between">
+        <section className="flex md:flex-row flex-col justify-center md:justify-between gap-2 mx-auto w-11/12 md:w-full">
           {/* Articles per page DropdownMenu */}
           <section className="flex flex-col md:justify-end items-center mt-4">
             <label htmlFor="articlesPerPage" className="mr-2">
@@ -1126,38 +1124,38 @@ const BlogDisplayPage: FC = () => {
             </label>
             <DropdownMenu className="w-full">
               <DropdownMenuTrigger className="w-full">
-                <div className="p-2 bg-muted text-sm md:text-md lg:text-lg rounded px-5">
+                <div className="bg-muted px-5 p-2 rounded text-sm md:text-md lg:text-lg">
                   {articlesPerPage} articles per page
                 </div>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
                 <DropdownMenuItem
                   onClick={() => handleArticlesPerPageChange(15)}
-                  className="md:text-md lg:text-lg px-3"
+                  className="px-3 md:text-md lg:text-lg"
                 >
                   15 articles per page
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => handleArticlesPerPageChange(25)}
-                  className="md:text-md lg:text-lg px-3"
+                  className="px-3 md:text-md lg:text-lg"
                 >
                   25 articles per page
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => handleArticlesPerPageChange(50)}
-                  className="md:text-md lg:text-lg px-3"
+                  className="px-3 md:text-md lg:text-lg"
                 >
                   50 articles per page
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => handleArticlesPerPageChange(75)}
-                  className="md:text-md lg:text-lg px-3"
+                  className="px-3 md:text-md lg:text-lg"
                 >
                   75 articles per page
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => handleArticlesPerPageChange(100)}
-                  className="md:text-md lg:text-lg px-3"
+                  className="px-3 md:text-md lg:text-lg"
                 >
                   100 articles per page
                 </DropdownMenuItem>
@@ -1177,7 +1175,7 @@ const BlogDisplayPage: FC = () => {
         </section>
 
         {alertContent && (
-          <section className="h-24 md:w-1/2 md:left-1/4 xl:w-3/4 2xl:w-1/2 xl:left-[12em] 2xl:left-1/4 p-1 absolute z-10">
+          <section className="md:left-1/4 2xl:left-1/4 xl:left-[12em] z-10 absolute p-1 md:w-1/2 2xl:w-1/2 xl:w-3/4 h-24">
             <div className="my-4 md:my-0">
               <Alert
                 className="flex items-center space-x-3 xl:space-x-9 xl:px-11"
@@ -1199,7 +1197,7 @@ const BlogDisplayPage: FC = () => {
       </section>
 
       {/* Pagination controls */}
-      <Pagination className="gap-5 flex items-center">
+      <Pagination className="flex items-center gap-5">
         <PaginationPrevious
           onClick={() => {
             if (currentPage > 1) {
@@ -1249,7 +1247,7 @@ const BlogDisplayPage: FC = () => {
           {currentArticles.map((blog, index) => (
             <Card
               key={index}
-              className="border-2 border-transparent dark:hover:border-border rounded-lg shadow-lg hover:shadow-xl transition-shadow flex flex-col justify-between"
+              className="flex flex-col justify-between shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border rounded-lg transition-shadow"
             >
               <div>
                 <Image
@@ -1257,9 +1255,9 @@ const BlogDisplayPage: FC = () => {
                   width={500}
                   height={300}
                   alt={blog.title}
-                  className="w-full h-40 md:h-52 xl:h-64 rounded-t-md object-cover mx-auto mb-1 object-center"
+                  className="mx-auto mb-1 rounded-t-md w-full h-40 md:h-52 xl:h-64 object-cover object-center"
                 />
-                <div className="px-4 pb-2 flex flex-col justify-between h-fit md:h-[24rem] lg:h-[32em] 2xl:h-[35em] relative">
+                <div className="relative flex flex-col justify-between px-4 pb-2 h-fit md:h-[24rem] lg:h-[32em] 2xl:h-[35em]">
                   <div>
                     {blog.wordCount && blog.time && (
                       <div className="flex justify-between mx-1 pt-5">
@@ -1284,7 +1282,7 @@ const BlogDisplayPage: FC = () => {
 
                     <Button
                       variant="ghost"
-                      className="text-primary underline underline-offset-2 px-0 mb-2 font-SofiaSans tracking-wider font-bold hover:bg-transparent hover:text-primary hover:no-underline text-wrap text-left text-md md:text-2xl 2xl:text-3xl md:my-2 2xl:my-3"
+                      className="hover:bg-transparent md:my-2 2xl:my-3 mb-2 px-0 font-bold font-SofiaSans text-left text-md text-primary text-wrap md:text-2xl 2xl:text-3xl hover:text-primary underline underline-offset-2 hover:no-underline tracking-wider"
                       onClick={() => {
                         router.push(`/info/blogs/${setSlug(blog.title)}`);
                       }}
@@ -1292,8 +1290,8 @@ const BlogDisplayPage: FC = () => {
                       {blog.title}
                     </Button>
 
-                    <div className="flex flex-col md:flex-row justify-between">
-                      <p className="mt-0.5 md:my-1 lg:mt-4 text-sm md:text-lg lg:text-lg">
+                    <div className="flex md:flex-row flex-col justify-between">
+                      <p className="md:my-1 mt-0.5 lg:mt-4 text-sm md:text-lg lg:text-lg">
                         <strong>Date:</strong> {blog.date.month} /{" "}
                         {blog.date.day} / {blog.date.year}
                       </p>
@@ -1304,14 +1302,14 @@ const BlogDisplayPage: FC = () => {
                   </div>
 
                   {isSmallDevice ? null : isLargerScreen ? (
-                    <div className="mt-4 flex flex-col bottom-2 absolute">
+                    <div className="bottom-2 absolute flex flex-col mt-4">
                       {blog.topics.length > 0 && (
-                        <div className="mt-6 flex flex-wrap gap-3">
+                        <div className="flex flex-wrap gap-3 mt-6">
                           {blog.topics.sort().map((topic, index) => (
                             <Badge
                               key={index}
                               variant={"secondary"}
-                              className="mr-2 cursor-pointer xl:text-[15px] xl:leading-5"
+                              className="mr-2 xl:text-[15px] xl:leading-5 cursor-pointer"
                               onClick={() => handleTopicClick(topic)}
                             >
                               {topic}
@@ -1321,14 +1319,14 @@ const BlogDisplayPage: FC = () => {
                       )}
                     </div>
                   ) : (
-                    <div className="mt-4 absolute bottom-4">
+                    <div className="bottom-4 absolute mt-4">
                       {blog.topics.length > 0 && (
-                        <div className="mt-6 gap-2 flex flex-wrap">
+                        <div className="flex flex-wrap gap-2 mt-6">
                           {blog.topics.sort().map((topic, index) => (
                             <Badge
                               key={index}
                               variant={"secondary"}
-                              className="mr-2 cursor-pointer md:text-sm md:leading-4 lg:text-[17px] lg:leading-5 2xl:text-[18px]"
+                              className="mr-2 md:text-sm lg:text-[17px] 2xl:text-[18px] md:leading-4 lg:leading-5 cursor-pointer"
                               onClick={() => handleTopicClick(topic)}
                             >
                               {topic}
@@ -1346,7 +1344,7 @@ const BlogDisplayPage: FC = () => {
       </section>
 
       {/* Pagination controls */}
-      <Pagination className="gap-5 flex items-center">
+      <Pagination className="flex items-center gap-5">
         <PaginationPrevious
           onClick={() => {
             if (currentPage > 1) {

@@ -1,4 +1,3 @@
-import { list } from "postcss";
 import { BlogPost } from "./interfaces";
 export const blogs: BlogPost[] = [
   {
@@ -25949,6 +25948,176 @@ export const blogs: BlogPost[] = [
     conclusions: [
       "Micro frontends are an exciting and powerful way to scale and manage modern web applications. By breaking down a monolithic front-end into smaller, independent modules, teams can work more efficiently, deploy faster, and maintain high-quality applications. While they come with their own set of challenges, such as integration complexity and performance issues, micro frontends are increasingly becoming a go-to solution for large-scale applications with distributed teams.",
       "If your organization is managing a large, complex front-end application with multiple features and teams, micro frontends can help streamline development, improve collaboration, and provide flexibility. However, micro frontends may not be the right choice for all projects. Small to medium-sized applications might not benefit from the overhead required to manage and maintain multiple independent front-end modules. Ultimately, the decision to adopt micro frontends should be based on your project’s size, complexity, and long-term scalability needs. When implemented correctly, they can provide significant advantages and improve both the developer and user experience.",
+    ],
+  },
+  {
+    title: "Resend: The Email API Made for Next.js Developers",
+    author: "Tina Huynh",
+    wordCount: 1124,
+    timeSpan: "mini",
+    time: "4m 5s",
+    date: { month: 4, day: 9, year: 2025 },
+    excerpt:
+      "Resend is redefining how developers handle transactional and marketing email delivery within the Next.js ecosystem. With first-class TypeScript support, seamless integration with App Router, and built-in DX enhancements, Resend offers a reliable and developer-friendly solution to managing emails in modern web applications.",
+    featured: true,
+    topics: [
+      "Next.js",
+      "Email API",
+      "TypeScript",
+      "Transactional Email",
+      "Developer Tools",
+    ],
+    intro: [
+      "Resend is quickly becoming the go-to email API for developers working with Next.js. Built with a developer-first approach, Resend simplifies transactional and programmatic email delivery with modern tooling, excellent DX, and a dead-simple setup. It supports App Router out of the box and offers seamless TypeScript integration, automatic email previews in development, and rich logging for debugging.",
+      "This article explores what makes Resend unique, how it enhances the email-sending experience in Next.js apps, and why it's rapidly gaining traction among full-stack developers. Let’s take a closer look at how Resend is changing the email game.",
+    ],
+    list: [
+      {
+        title: "What Is Resend?",
+        description:
+          "Resend is an email service and API purpose-built for developers. It provides a lightweight, reliable, and secure way to send emails from web applications, especially those built with modern frameworks like Next.js.",
+        list: [
+          {
+            title: "Built for Developers",
+            description:
+              "Unlike legacy email providers that require complicated setup or external dashboards, Resend is developer-first. It can be installed via npm, configured in minutes, and offers CLI tools, APIs, and SDKs that developers can use without context-switching from their codebase.",
+          },
+          {
+            title: "Zero-Config Email Previews",
+            description:
+              "During development, Resend automatically previews your emails in the browser using Vite or Next.js dev servers. You don’t need to install or configure anything extra—this is all built-in to its dev experience.",
+          },
+          {
+            title: "Optimized for TypeScript",
+            description:
+              "The Resend SDK is fully typed and supports autocomplete for props, making it especially well-suited for TypeScript-heavy stacks. This increases confidence and improves productivity when working on dynamic emails or integrating templates.",
+          },
+        ],
+      },
+      {
+        title: "Why Resend Over Other Providers?",
+        description:
+          "While traditional email providers like SendGrid, Mailgun, and Postmark have dominated the space, Resend rethinks how developers work with emails, with an emphasis on simplicity, modern tooling, and framework-native integration.",
+        list: [
+          {
+            title: "Next.js-Native Integration",
+            description:
+              "Resend is built with React and Next.js in mind. It works seamlessly with App Router, file-based routing, and server actions. There’s no need to learn a separate system or manually manage transport logic—just import and use.",
+          },
+          {
+            title: "Local Development Support",
+            description:
+              "Unlike older platforms that make testing painful, Resend previews emails in your dev environment. This saves time during development and enables pixel-perfect rendering before production.",
+          },
+          {
+            title: "No Third-Party Dashboard Required",
+            description:
+              "You don’t need to rely on bloated dashboards or third-party UIs to manage your templates or see email logs. Resend provides an elegant, minimal UI—along with powerful CLI tools for teams that prefer working in code.",
+          },
+        ],
+      },
+      {
+        title: "Key Features of Resend",
+        description:
+          "Resend offers a wide range of features that enhance both development and production email workflows. Whether you’re sending password reset links, marketing campaigns, or onboarding emails, Resend has you covered.",
+        list: [
+          {
+            title: "React Email Integration",
+            description:
+              "Resend integrates seamlessly with [React Email](https://react.email), allowing developers to build responsive, reusable, and accessible email templates using components—just like building a UI. JSX support and Tailwind compatibility make templating intuitive.",
+          },
+          {
+            title: "Automatic Retry & Failover",
+            description:
+              "Built-in retry mechanisms handle transient issues automatically. You don’t need to worry about emails silently failing—Resend ensures delivery with transparent logging and built-in error tracking.",
+          },
+          {
+            title: "Real-Time Logs & Webhooks",
+            description:
+              "Track every email in real-time with built-in logging and webhook support. Whether you're debugging delivery issues or monitoring bounces and opens, Resend gives you full visibility into your email lifecycle.",
+          },
+          {
+            title: "High Deliverability",
+            description:
+              "Resend’s infrastructure ensures emails land in inboxes, not spam folders. DKIM, SPF, and DMARC setup is streamlined through Resend’s domain verification flow, minimizing the usual DNS pain.",
+          },
+        ],
+      },
+      {
+        title: "How It Works in Next.js",
+        description:
+          "Integrating Resend with Next.js takes just a few steps. Here’s a basic example using App Router and React Email.",
+        list: [
+          {
+            title: "1. Install the SDK",
+            description: "```bash\nnpm install resend react-email\n```",
+          },
+          {
+            title: "2. Create a React Email Component",
+            description:
+              "```tsx\n// components/emails/WelcomeEmail.tsx\nimport { Html, Text } from '@react-email/components';\n\nexport const WelcomeEmail = ({ userName }: { userName: string }) => (\n  <Html>\n    <Text>Hello {userName}, welcome to our app!</Text>\n  </Html>\n);\n```",
+          },
+          {
+            title: "3. Send Email in a Server Action or API Route",
+            description:
+              "```ts\n// app/api/send-welcome/route.ts\nimport { Resend } from 'resend';\nimport { WelcomeEmail } from '@/components/emails/WelcomeEmail';\n\nconst resend = new Resend(process.env.RESEND_API_KEY);\n\nexport async function POST(req: Request) {\n  const { userName, userEmail } = await req.json();\n\n  await resend.emails.send({\n    from: 'onboarding@yourdomain.com',\n    to: userEmail,\n    subject: 'Welcome!',\n    react: <WelcomeEmail userName={userName} />,\n  });\n\n  return new Response('Email sent', { status: 200 });\n}\n```",
+          },
+        ],
+      },
+      {
+        title: "Benefits of Using Resend",
+        description:
+          "Resend is more than an email API—it’s a modern email platform designed for today’s frontend and full-stack developers.",
+        list: [
+          {
+            title: "Speed and Simplicity",
+            description:
+              "You can get started in minutes, and the developer experience is unmatched. No complicated SMTP setups or confusing templating engines—just import, write JSX, and send.",
+          },
+          {
+            title: "Tight Integration with Frameworks",
+            description:
+              "Next.js, Remix, Astro, and other modern frameworks are supported out of the box. The SDK is lightweight and purpose-built to match the conventions of these tools.",
+          },
+          {
+            title: "Free for Developers",
+            description:
+              "Resend’s generous free tier makes it accessible for small projects, startups, and independent developers. This lowers the barrier to adopting professional email delivery tools in production.",
+          },
+          {
+            title: "Scalable for Teams",
+            description:
+              "Whether you're solo or part of a team, Resend supports team management, permission handling, and project environments (dev, staging, prod) with ease.",
+          },
+        ],
+      },
+      {
+        title: "The Future of Email in Web Apps",
+        description:
+          "As web frameworks evolve, email infrastructure must keep up. Resend reflects this shift—simplifying how developers build, test, and deliver email in modern apps.",
+        list: [
+          {
+            title: "Built for Component-Driven Development",
+            description:
+              "React Email and Resend form the perfect pair for building component-driven emails. This reflects how modern frontend devs already build UI—consistent, reusable, and declarative.",
+          },
+          {
+            title: "Preview Emails Like UI",
+            description:
+              "See your email in the browser before it’s ever sent. This not only speeds up development but improves quality, accessibility, and visual fidelity.",
+          },
+          {
+            title: "Developer-Centric Philosophy",
+            description:
+              "From CLI tools to typed SDKs and webhook integrations, Resend empowers developers by eliminating friction. It respects how you already build—and just works.",
+          },
+        ],
+      },
+    ],
+    conclusions: [
+      "Resend isn’t just another email provider—it’s the future of email for modern app developers. Its seamless integration with Next.js and React Email, combined with developer-first features like zero-config previews and TypeScript support, make it a clear standout.",
+      "If you're building with App Router and want full control over your email system without fighting legacy tech or bloated UIs, Resend is the right choice. It's fast, reliable, intuitive, and built with your workflow in mind.",
+      "Whether you're sending password resets, transactional emails, or onboarding flows, Resend brings clarity and simplicity to a historically frustrating part of web development. Try it in your next Next.js project and experience what modern email infrastructure should feel like.",
     ],
   },
 ];

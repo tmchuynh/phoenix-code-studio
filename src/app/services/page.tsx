@@ -1,6 +1,5 @@
 "use client";
 import LoadingIndicator from "@/components/Loading";
-import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { allServices } from "@/lib/service-categories";
 import { subServiceDetails } from "@/lib/sub-services";
@@ -56,8 +55,7 @@ const ServicesPage: FC = () => {
   };
 
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto py-6">
-      <DynamicBreadcrumb />
+    <main className="mx-auto py-6 w-10/12 md:w-11/12">
       {/* Introduction Section */}
       <section className="mb-8">
         <h1>Digital Services by Phoenix Code Studio</h1>
@@ -78,8 +76,8 @@ const ServicesPage: FC = () => {
       {/* Company Services Section */}
       {allServices.map((service, index) => (
         <section className="my-20 pb-9" key={index}>
-          <div className="pb-3 flex flex-col">
-            <h2 className="text-3xl font-semibold text-center mb-6 text-secondary">
+          <div className="flex flex-col pb-3">
+            <h2 className="mb-6 font-semibold text-3xl text-center text-secondary">
               {service.title}
             </h2>
 
@@ -97,9 +95,9 @@ const ServicesPage: FC = () => {
               </>
             )}
 
-            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-10 lg:px-24">
+            <div className="md:gap-10 grid grid-cols-1 md:grid-cols-2 lg:px-24">
               <Button
-                className="self-start mt-6 w-full"
+                className="mt-6 w-full self-start"
                 variant={theme === "dark" ? "accent" : "outline"}
                 size={isSmallScreen ? "sm" : "default"}
                 onClick={() => navigateToCategory(service.name)}
@@ -108,7 +106,7 @@ const ServicesPage: FC = () => {
               </Button>
 
               <Button
-                className="self-start mt-6 w-full"
+                className="mt-6 w-full self-start"
                 variant={theme === "dark" ? "accent" : "outline"}
                 size={isSmallScreen ? "sm" : "default"}
                 onClick={() => router.push("/services/pricing/payment-plans")}
@@ -174,7 +172,7 @@ const ServicesPage: FC = () => {
           })}
           <Button
             onClick={() => router.push("/contact-us")}
-            className="my-15 w-full text-wrap py-10 md:py-0 lg:text-lg"
+            className="my-15 py-10 md:py-0 w-full text-wrap lg:text-lg"
           >
             Book a Consultation Today to Discuss {service.short}
           </Button>

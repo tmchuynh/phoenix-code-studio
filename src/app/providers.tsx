@@ -1,7 +1,7 @@
 "use client";
 
 import { ThemeProvider } from "next-themes";
-import { ReactNode } from "react";
+import { JSX, ReactNode } from "react";
 
 /**
  * Providers component that wraps its children with a ThemeProvider.
@@ -11,7 +11,7 @@ import { ReactNode } from "react";
  *
  * @returns {JSX.Element} The ThemeProvider component wrapping the children.
  */
-export function Providers({ children }: { children: ReactNode }) {
+export function Providers({ children }: { children: ReactNode }): JSX.Element {
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
       {children}

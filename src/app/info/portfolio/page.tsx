@@ -1,6 +1,5 @@
 "use client";
 import { Badge } from "@/components/ui/badge";
-import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import {
@@ -17,9 +16,9 @@ import {
 import { pastProjects } from "@/lib/constants";
 import useLargeScreensOnly from "@/lib/useLargeScreensOnly";
 import useSmallScreen from "@/lib/useSmallScreen";
-import { FC, useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
+import { FC, useEffect, useState } from "react";
 
 const PastProjectsPage: FC = () => {
   const isSmallScreen = useSmallScreen();
@@ -235,8 +234,7 @@ const PastProjectsPage: FC = () => {
   ]);
 
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto py-6">
-      <DynamicBreadcrumb />
+    <main className="mx-auto py-6 w-10/12 md:w-11/12">
       <h1>Explore Our Portfolio of Successful Projects</h1>
       <p>
         Discover a showcase of our best work, where innovation meets
@@ -254,7 +252,7 @@ const PastProjectsPage: FC = () => {
         <Button
           variant={"link"}
           onClick={() => router.push("/contact-us")}
-          className="p-0 m-0 h-fit"
+          className="m-0 p-0 h-fit"
         >
           let’s discuss how we can bring your next project to life!
         </Button>
@@ -266,11 +264,11 @@ const PastProjectsPage: FC = () => {
       {/* Filter Controls */}
       {isSmallScreen ? (
         <section className="my-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="gap-6 grid grid-cols-1 sm:grid-cols-2">
             {/* Languages Filter */}
             <div>
               <h3>Filter by Languages</h3>
-              <div className="grid grid-cols-2 justify-start items-start w-full gap-x-2">
+              <div className="justify-start items-start gap-x-2 grid grid-cols-2 w-full">
                 {allLanguages.map((language) => (
                   <div key={language} className="flex items-center">
                     <input
@@ -297,7 +295,7 @@ const PastProjectsPage: FC = () => {
             {/* Frameworks Filter */}
             <div>
               <h3>Filter by Frameworks</h3>
-              <div className="grid grid-cols-2 justify-start items-start w-full gap-x-2">
+              <div className="justify-start items-start gap-x-2 grid grid-cols-2 w-full">
                 {allFrameworks.map((framework) => (
                   <div key={framework} className="flex items-center">
                     <input
@@ -324,7 +322,7 @@ const PastProjectsPage: FC = () => {
             {/* Libraries Filter */}
             <div>
               <h3>Filter by Libraries</h3>
-              <div className="grid grid-cols-2 justify-start items-start w-full gap-x-2">
+              <div className="justify-start items-start gap-x-2 grid grid-cols-2 w-full">
                 {allLibraries.map((library) => (
                   <div key={library} className="flex items-center">
                     <input
@@ -351,7 +349,7 @@ const PastProjectsPage: FC = () => {
             {/* Technologies Filter */}
             <div>
               <h3>Filter by Technologies</h3>
-              <div className="grid grid-cols-2 justify-start items-start w-full gap-x-2">
+              <div className="justify-start items-start gap-x-2 grid grid-cols-2 w-full">
                 {allTechnologies.map((technology) => (
                   <div key={technology} className="flex items-center">
                     <input
@@ -378,7 +376,7 @@ const PastProjectsPage: FC = () => {
             {/* Tags Filter */}
             <div>
               <h3>Filter by Tags</h3>
-              <div className="grid grid-cols-2 justify-start items-start w-full gap-x-2">
+              <div className="justify-start items-start gap-x-2 grid grid-cols-2 w-full">
                 {allTags.map((tag) => (
                   <div key={tag} className="flex items-center">
                     <input
@@ -405,11 +403,11 @@ const PastProjectsPage: FC = () => {
         </section>
       ) : (
         <section className="my-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="gap-6 grid grid-cols-1 sm:grid-cols-2">
             {/* Frameworks Filter */}
             <div>
               <h3>Filter by Frameworks</h3>
-              <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
+              <div className="justify-start items-start gap-x-2 grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full">
                 {allFrameworks.sort().map((framework) => (
                   <div key={framework} className="flex items-center">
                     <input
@@ -436,7 +434,7 @@ const PastProjectsPage: FC = () => {
             {/* Languages Filter */}
             <div>
               <h3>Filter by Languages</h3>
-              <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
+              <div className="justify-start items-start gap-x-2 grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full">
                 {allLanguages.sort().map((language) => (
                   <div key={language} className="flex items-center">
                     <input
@@ -463,7 +461,7 @@ const PastProjectsPage: FC = () => {
             {/* Libraries Filter */}
             <div>
               <h3>Filter by Libraries</h3>
-              <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
+              <div className="justify-start items-start gap-x-2 grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full">
                 {allLibraries.sort().map((library) => (
                   <div key={library} className="flex items-center">
                     <input
@@ -490,7 +488,7 @@ const PastProjectsPage: FC = () => {
             {/* Tags Filter */}
             <div>
               <h3>Filter by Tags</h3>
-              <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
+              <div className="justify-start items-start gap-x-2 grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full">
                 {allTags.sort().map((tag) => (
                   <div key={tag} className="flex items-center">
                     <input
@@ -517,7 +515,7 @@ const PastProjectsPage: FC = () => {
             {/* Technologies Filter */}
             <div>
               <h3>Filter by Technologies</h3>
-              <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-start items-start w-full gap-x-2">
+              <div className="justify-start items-start gap-x-2 grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full">
                 {allTechnologies.sort().map((technology) => (
                   <div key={technology} className="flex items-center">
                     <input
@@ -545,38 +543,38 @@ const PastProjectsPage: FC = () => {
       )}
 
       {/* Clear Filters Button */}
-      <section className="w-11/12 md:w-full mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center gap-7">
+      <section className="flex md:flex-row flex-col justify-center md:justify-between items-center gap-7 mx-auto w-11/12 md:w-full">
         <Button variant="destructive" onClick={() => clearFilters()}>
           Clear Filters
         </Button>
 
         {/* Articles per page DropdownMenu */}
-        <section className="flex flex-col md:flex-row md:justify-end items-center">
+        <section className="flex md:flex-row flex-col md:justify-end items-center">
           <label htmlFor="articlesPerPage" className="mr-2">
             <p>Projects per page:</p>
           </label>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <button className="p-2 bg-muted text-sm md:text-md lg:text-lg rounded px-5">
+              <button className="bg-muted px-5 p-2 rounded text-sm md:text-md lg:text-lg">
                 {projectsPerPage} projects per page
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuItem
                 onClick={() => handleProjectsPerPageChange(5)}
-                className="md:text-md lg:text-lg px-3"
+                className="px-3 md:text-md lg:text-lg"
               >
                 5 projects per page
               </DropdownMenuItem>
               <DropdownMenuItem
                 onClick={() => handleProjectsPerPageChange(10)}
-                className="md:text-md lg:text-lg px-3"
+                className="px-3 md:text-md lg:text-lg"
               >
                 10 projects per page
               </DropdownMenuItem>
               <DropdownMenuItem
                 onClick={() => handleProjectsPerPageChange(15)}
-                className="md:text-md lg:text-lg px-3"
+                className="px-3 md:text-md lg:text-lg"
               >
                 15 projects per page
               </DropdownMenuItem>
@@ -585,11 +583,11 @@ const PastProjectsPage: FC = () => {
         </section>
       </section>
 
-      <section className="h-20 p-1">
+      <section className="p-1 h-20">
         {/* Confirmation Text for Filters Cleared */}
         <div className="my-4 text-center">
           {filtersCleared && (
-            <p className="text-secondary m-0 p-0">
+            <p className="m-0 p-0 text-secondary">
               Filters have been cleared successfully!
             </p>
           )}
@@ -598,7 +596,7 @@ const PastProjectsPage: FC = () => {
         {/* No results warning */}
         <div className="my-4 text-center">
           {noResults && (
-            <p className="text-destructive m-0">
+            <p className="m-0 text-destructive">
               No projects match your selected filters. Filters have been
               cleared.
             </p>
@@ -607,7 +605,7 @@ const PastProjectsPage: FC = () => {
       </section>
 
       {/* Pagination controls */}
-      <Pagination className="gap-5 flex items-center">
+      <Pagination className="flex items-center gap-5">
         <PaginationPrevious
           onClick={() => {
             if (currentPage > 1) {
@@ -654,11 +652,11 @@ const PastProjectsPage: FC = () => {
 
       {/* Projects List */}
       <section className="my-8">
-        <div className="grid md:grid-cols-1 xl:grid-cols-2 gap-8">
+        <div className="gap-8 grid md:grid-cols-1 xl:grid-cols-2">
           {currentProjects.map((project, index) => (
             <Card
               key={index}
-              className="border-2 border-transparent dark:hover:border-border p-2 rounded-lg shadow-lg hover:shadow-xl transition-shadow h-full flex flex-col justify-between"
+              className="flex flex-col justify-between shadow-lg hover:shadow-xl p-2 border-2 border-transparent dark:hover:border-border rounded-lg h-full transition-shadow"
             >
               <CardContent
                 className={
@@ -667,14 +665,14 @@ const PastProjectsPage: FC = () => {
                     : "grid grid-cols-2 md:grid-cols-1 h-full p-3"
                 }
               >
-                <div className="h-full flex flex-col justify-between">
+                <div className="flex flex-col justify-between h-full">
                   <div>
-                    <h2 className="font-semibold mt-5">{project.name}</h2>
+                    <h2 className="mt-5 font-semibold">{project.name}</h2>
 
                     {isSmallScreen ? null : isLargeScreen ? (
                       <div>
                         {project.tags.length > 0 && (
-                          <div className="mb-5 gap-2 flex flex-wrap">
+                          <div className="flex flex-wrap gap-2 mb-5">
                             {project.tags.sort().map((tag, index) => (
                               <Badge
                                 key={index}
@@ -698,7 +696,7 @@ const PastProjectsPage: FC = () => {
                       <>
                         <div>
                           {project.tags.length > 0 && (
-                            <div className="mt-6 gap-2 flex flex-wrap">
+                            <div className="flex flex-wrap gap-2 mt-6">
                               {project.tags.map((tag, index) => (
                                 <Badge
                                   key={index}
@@ -716,7 +714,7 @@ const PastProjectsPage: FC = () => {
 
                     <p className="mb-4">{project.description}</p>
 
-                    <div className="text-sm lg:text-lg grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-2 2xl:grid-cols-4">
+                    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-4 xl:grid-cols-2 text-sm lg:text-lg">
                       <div>
                         <p className="font-semibold">Languages:</p>
                         <ul>
@@ -762,9 +760,9 @@ const PastProjectsPage: FC = () => {
                   </div>
                 </div>
               </CardContent>
-              <CardFooter className="h-fit py-3 flex flex-col items-start">
+              <CardFooter className="flex flex-col items-start py-3 h-fit">
                 {/* Optional links */}
-                <div className="flex flex-col md:flex-row gap-4 mx-auto md:w-full md:justify-around">
+                <div className="flex md:flex-row flex-col md:justify-around gap-4 mx-auto md:w-full">
                   {project.liveLink && (
                     <Button
                       variant={theme === "dark" ? "tertiary" : "secondary"}
@@ -789,7 +787,7 @@ const PastProjectsPage: FC = () => {
       </section>
 
       {/* Pagination controls */}
-      <Pagination className="gap-5 flex items-center">
+      <Pagination className="flex items-center gap-5">
         <PaginationPrevious
           onClick={() => {
             if (currentPage > 1) {

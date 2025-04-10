@@ -1,18 +1,16 @@
 "use client";
-
 import CallToAction from "@/components/CallToAction";
-import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { SidebarSeparator } from "@/components/ui/sidebar";
 import { allServices } from "@/lib/service-categories";
 import { subServiceDetails } from "@/lib/sub-services";
-import { formatName, setSlug } from "@/lib/utils";
-import { useRouter } from "next/navigation";
-import { useTheme } from "next-themes";
 import useSmallScreen from "@/lib/useSmallScreen";
+import { formatName, setSlug } from "@/lib/utils";
+import { useTheme } from "next-themes";
+import { useRouter } from "next/navigation";
 
-import { FC, useEffect, useState } from "react";
 import LoadingIndicator from "@/components/Loading";
+import { FC, useEffect, useState } from "react";
 
 const PricingPage: FC = () => {
   const router = useRouter();
@@ -42,8 +40,7 @@ const PricingPage: FC = () => {
   };
 
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto py-6">
-      <DynamicBreadcrumb />
+    <main className="mx-auto py-6 w-10/12 md:w-11/12">
       <h1>Our Pricing and Service Tiers</h1>
       <p>
         Explore our flexible pricing options designed to suit a variety of needs
@@ -62,13 +59,13 @@ const PricingPage: FC = () => {
       {/* Service 1: Website Services */}
       {allServices.map((service, index) => (
         <section className="my-8" key={index}>
-          <div className="pb-3 flex flex-col">
+          <div className="flex flex-col pb-3">
             <h2>{service.short}</h2>
             {service.info.description.map((info, SIndex) => (
               <p key={SIndex}>{info}</p>
             ))}
             <Button
-              className="self-end w-1/4"
+              className="w-1/4 self-end"
               variant={theme === "dark" ? "outline" : "accent"}
               size={isSmallScreen ? "sm" : "default"}
               onClick={() => navigateToCategory(service.name)}

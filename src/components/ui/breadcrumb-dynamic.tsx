@@ -1,17 +1,17 @@
 "use client";
 
-import React from "react";
-import { usePathname } from "next/navigation";
 import {
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbList,
   BreadcrumbLink,
+  BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import useSmallScreen from "@/lib/useSmallScreen";
 import { capitalize } from "@/lib/utils";
+import { usePathname } from "next/navigation";
+import React from "react";
 
 const DynamicBreadcrumb = () => {
   const pathname = usePathname();
@@ -19,7 +19,7 @@ const DynamicBreadcrumb = () => {
   const isSmallScreen = useSmallScreen();
 
   return (
-    <Breadcrumb className={isSmallScreen ? "hidden" : "my-4"}>
+    <Breadcrumb className={isSmallScreen ? "hidden" : "my-4 w-11/12 mx-auto"}>
       <BreadcrumbList>
         <BreadcrumbItem>
           <BreadcrumbLink className="bg-muted px-3 py-2 rounded-lg cursor-default">

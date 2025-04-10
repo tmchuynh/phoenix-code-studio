@@ -1,7 +1,5 @@
 "use client";
-
 import LoadingIndicator from "@/components/Loading";
-import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { jobPositions } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -27,12 +25,11 @@ const JobListingsPage: FC = () => {
   }
 
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto py-6">
-      <DynamicBreadcrumb />
+    <main className="mx-auto py-6 w-10/12 md:w-11/12">
       <div className="flex gap-4">
         <div>
           {/* Page Title */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-10">
+          <h1 className="mb-10 font-bold text-3xl text-primary md:text-4xl lg:text-5xl">
             Elevate Your Career with Us
           </h1>
           <p>
@@ -49,7 +46,7 @@ const JobListingsPage: FC = () => {
           </p>
           <p>
             Don't settle—
-            <span className="text-primary font-extrabold">ELEVATE</span> your
+            <span className="font-extrabold text-primary">ELEVATE</span> your
             career. Join a team that values your ideas, celebrates your
             achievements, and supports your ambitions. Explore our open
             positions and take the next step in building something
@@ -70,7 +67,7 @@ const JobListingsPage: FC = () => {
       {/* Job Listings */}
       <section className="space-y-10 mt-8">
         {jobPositions.map((job, index) => (
-          <section key={index} className="border-b pb-8 flex flex-col">
+          <section key={index} className="flex flex-col pb-8 border-b">
             {/* Job Title */}
             <h2 className="font-semibold text-secondary">{job.title}</h2>
 
@@ -86,7 +83,7 @@ const JobListingsPage: FC = () => {
             <Button
               variant={"accent"}
               onClick={() => router.push("/applicant-submission")}
-              className="py-3 mt-4 text-lg text-wrap h-fit"
+              className="mt-4 py-3 h-fit text-lg text-wrap"
             >
               Apply Now For The {job.title} Position
             </Button>

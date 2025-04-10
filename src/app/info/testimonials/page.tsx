@@ -1,7 +1,6 @@
 "use client";
 import LoadingIndicator from "@/components/Loading";
 import StarRating from "@/components/Ratings";
-import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Card, CardContent } from "@/components/ui/card";
 import { testimonials } from "@/lib/constants";
 import { splitAndTrimQuotes } from "@/lib/utils";
@@ -21,8 +20,7 @@ const TestimonialsPage: FC = () => {
     return <LoadingIndicator />;
   }
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto py-6">
-      <DynamicBreadcrumb />
+    <main className="mx-auto py-6 w-10/12 md:w-11/12">
       <h1>Testimonials from Our Clients</h1>
       <p>
         Discover the stories of our satisfied clients who have experienced
@@ -36,34 +34,34 @@ const TestimonialsPage: FC = () => {
 
       {/* Displaying testimonials dynamically */}
       <section className="my-8">
-        <div className="gap-8 grid grid-cols-1 md:grid-cols-2 w-full mx-auto">
+        <div className="gap-8 grid grid-cols-1 md:grid-cols-2 mx-auto w-full">
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className="p-6 rounded-lg shadow-lg hover:shadow-xl text-pretty border-2 border-transparent dark:hover:border-border flex justify-around"
+              className="flex justify-around shadow-lg hover:shadow-xl p-6 border-2 border-transparent dark:hover:border-border rounded-lg text-pretty"
             >
               <CardContent className="flex flex-col justify-around items-center">
                 <div className="text-center">
-                  <p className="font-bold uppercase text-accent-3 mb-2">
+                  <p className="mb-2 font-bold text-accent-3 uppercase">
                     {testimonial.name}
                   </p>
-                  <p className="text-accent-1 mb-4">{testimonial.position}</p>
+                  <p className="mb-4 text-accent-1">{testimonial.position}</p>
                 </div>
                 <div>
                   {testimonial.rating && (
                     <StarRating rating={testimonial.rating} />
                   )}
                 </div>
-                <blockquote className="italic relative h-full py-10">
-                  <FaQuoteLeft className="absolute size-7 top-0 text-tertiary" />
+                <blockquote className="relative py-10 h-full italic">
+                  <FaQuoteLeft className="top-0 absolute text-tertiary size-7" />
                   {splitAndTrimQuotes(testimonial.quote).map(
                     (paragraph, index) => (
-                      <span key={index} className="mb-4 indent-6 flex">
+                      <span key={index} className="flex mb-4 indent-6">
                         {paragraph}
                       </span>
                     )
                   )}
-                  <FaQuoteRight className="absolute right-8 bottom-6 size-7 text-tertiary" />
+                  <FaQuoteRight className="right-8 bottom-6 absolute text-tertiary size-7" />
                 </blockquote>
               </CardContent>
             </Card>

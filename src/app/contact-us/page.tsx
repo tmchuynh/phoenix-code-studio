@@ -1,7 +1,5 @@
 "use client";
-
 import LoadingIndicator from "@/components/Loading";
-import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
@@ -22,12 +20,12 @@ import { allServices } from "@/lib/service-categories";
 import { contractExamples } from "@/lib/sub-contracts";
 import { subServiceDetails } from "@/lib/sub-services";
 import { capitalize, cn } from "@/lib/utils";
+import emailjs from "@emailjs/browser";
 import { ChevronDown } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { FC, useEffect, useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
-import emailjs from "@emailjs/browser";
 
 const ContactUsPage: FC = () => {
   const { theme } = useTheme();
@@ -249,8 +247,7 @@ const ContactUsPage: FC = () => {
   };
 
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto py-6">
-      <DynamicBreadcrumb />
+    <main className="mx-auto py-6 w-10/12 md:w-11/12">
       <div className="flex items-end">
         <div>
           <h1>Contact Us</h1>
@@ -276,7 +273,7 @@ const ContactUsPage: FC = () => {
       <section className="my-8">
         <div className="py-6 p-6">
           {submitted && (
-            <div className="p-4 mb-4">
+            <div className="mb-4 p-4">
               <p>
                 Thank you for contacting us! We will get back to you shortly.
               </p>
@@ -285,11 +282,11 @@ const ContactUsPage: FC = () => {
           <form
             onSubmit={handleSubmit}
             id="contact-form"
-            className="w-full flex flex-col"
+            className="flex flex-col w-full"
           >
             {/* Name */}
             <div className="mb-4">
-              <label htmlFor="name" className="block text-lg font-semibold">
+              <label htmlFor="name" className="block font-semibold text-lg">
                 Name
               </label>
               <input
@@ -303,13 +300,13 @@ const ContactUsPage: FC = () => {
                   handleChange(e);
                 }}
                 required
-                className="w-full p-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="mt-2 p-3 border rounded-md focus:ring-2 focus:ring-primary w-full focus:outline-none"
               />
             </div>
 
             {/* Email */}
             <div className="mb-4">
-              <label htmlFor="email" className="block text-lg font-semibold">
+              <label htmlFor="email" className="block font-semibold text-lg">
                 Email
               </label>
               <input
@@ -322,13 +319,13 @@ const ContactUsPage: FC = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full p-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="mt-2 p-3 border rounded-md focus:ring-2 focus:ring-primary w-full focus:outline-none"
               />
             </div>
 
             {/* Subject */}
             <div className="mb-4">
-              <label htmlFor="subject" className="block text-lg font-semibold">
+              <label htmlFor="subject" className="block font-semibold text-lg">
                 Subject
               </label>
               <input
@@ -339,13 +336,13 @@ const ContactUsPage: FC = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                className="w-full p-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="mt-2 p-3 border rounded-md focus:ring-2 focus:ring-primary w-full focus:outline-none"
               />
             </div>
 
             {/* Message */}
             <div className="mb-4">
-              <label htmlFor="message" className="block text-lg font-semibold">
+              <label htmlFor="message" className="block font-semibold text-lg">
                 Message
               </label>
               <textarea
@@ -356,26 +353,26 @@ const ContactUsPage: FC = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows={4}
-                className="w-full p-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                className="mt-2 p-3 border rounded-md focus:ring-2 focus:ring-primary w-full focus:outline-none"
               />
             </div>
 
             {/* Dynamically Render All Services */}
-            <h2 className="text-xl font-semibold mt-6 mb-2">Select Services</h2>
+            <h2 className="mt-6 mb-2 font-semibold text-xl">Select Services</h2>
             {allServices.map((service, index) => (
               <div className="flex flex-wrap items-center" key={index}>
                 <Collapsible
                   open={openCollapsibles[`service-${index}`] || false}
                   onOpenChange={() => handleOpen("service", `${index}`)}
-                  className="w-full space-y-2"
+                  className="space-y-2 w-full"
                 >
-                  <div className="flex items-center justify-between space-x-4">
+                  <div className="flex justify-between items-center space-x-4">
                     <CollapsibleTrigger asChild>
                       <div className="flex items-center">
-                        <ChevronDown className="h-4 w-4" />
+                        <ChevronDown className="w-4 h-4" />
                         <label
                           htmlFor="service"
-                          className="ml-2 text-lg w-full"
+                          className="ml-2 w-full text-lg"
                         >
                           <p>{service.title}</p>
                           <span className="sr-only">Toggle Services</span>
@@ -392,7 +389,7 @@ const ContactUsPage: FC = () => {
 
                         if (serviceDetails) {
                           return (
-                            <label key={subIndex} className="flex  my-2">
+                            <label key={subIndex} className="flex my-2">
                               <Checkbox
                                 value={subService}
                                 checked={selectedServices.includes(
@@ -417,7 +414,7 @@ const ContactUsPage: FC = () => {
               </div>
             ))}
 
-            <h2 className="text-xl font-semibold mt-6 mb-2">
+            <h2 className="mt-6 mb-2 font-semibold text-xl">
               Select Contract Examples Interested In (if applicable)
             </h2>
             {allContracts.map((contract, index) => (
@@ -425,15 +422,15 @@ const ContactUsPage: FC = () => {
                 <Collapsible
                   open={openCollapsibles[`contract-${index}`] || false}
                   onOpenChange={() => handleOpen("contract", `${index}`)}
-                  className="w-full space-y-2"
+                  className="space-y-2 w-full"
                 >
-                  <div className="flex items-center justify-between space-x-4">
+                  <div className="flex justify-between items-center space-x-4">
                     <CollapsibleTrigger asChild>
                       <div className="flex items-center">
-                        <ChevronDown className="h-4 w-4" />
+                        <ChevronDown className="w-4 h-4" />
                         <label
                           htmlFor="contract"
-                          className="ml-2 text-lg w-full"
+                          className="ml-2 w-full text-lg"
                         >
                           <p>{contract.title}</p>
                           <span className="sr-only">Toggle Contracts</span>
@@ -484,7 +481,7 @@ const ContactUsPage: FC = () => {
             <div className="mt-6 mb-4">
               <DropdownMenu className="w-full">
                 <DropdownMenuTrigger asChild>
-                  <button className="w-full text-start p-3 mt-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary flex items-center justify-between">
+                  <button className="flex justify-between items-center mt-2 p-3 border rounded-md focus:ring-2 focus:ring-primary w-full text-start focus:outline-none">
                     {capitalize(formData.paymentPlan) ||
                       "Select a Payment Plan"}
                     <FaChevronDown />
@@ -509,7 +506,7 @@ const ContactUsPage: FC = () => {
             </div>
 
             {/* Submit Button */}
-            <Button type="submit" className="w-1/2 mx-auto">
+            <Button type="submit" className="mx-auto w-1/2">
               Submit
             </Button>
           </form>

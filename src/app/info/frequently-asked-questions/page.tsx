@@ -1,18 +1,16 @@
 "use client";
-
+import CallToAction from "@/components/CallToAction";
+import LoadingIndicator from "@/components/Loading";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
-import { FAQs } from "@/lib/constants";
-import { FC, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { FAQs } from "@/lib/constants";
 import { useRouter } from "next/navigation";
-import LoadingIndicator from "@/components/Loading";
-import CallToAction from "@/components/CallToAction";
+import { FC, useEffect, useState } from "react";
 
 const FaqPage: FC = () => {
   const router = useRouter();
@@ -30,9 +28,8 @@ const FaqPage: FC = () => {
   }
 
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto py-6">
-      <DynamicBreadcrumb />
-      <h1 className="text-2xl font-bold">Welcome to Our FAQs Page!</h1>
+    <main className="mx-auto py-6 w-10/12 md:w-11/12">
+      <h1 className="font-bold text-2xl">Welcome to Our FAQs Page!</h1>
       <p className="mt-4">
         Got questions? We’ve got answers! This page is your go-to resource for
         quick, clear information about our services, products, and processes.
@@ -44,7 +41,7 @@ const FaqPage: FC = () => {
         <Button
           variant="link"
           onClick={() => router.push("/contact-us")}
-          className="p-0 m-0 h-fit"
+          className="m-0 p-0 h-fit"
         >
           Reach out to us anytime
         </Button>

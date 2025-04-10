@@ -1,8 +1,11 @@
 "use client";
-import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
+import LoadingIndicator from "@/components/Loading";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 import {
   FaHandshake,
   FaHandsHelping,
@@ -12,11 +15,7 @@ import {
   FaStar,
   FaUsers,
 } from "react-icons/fa";
-import { useTheme } from "next-themes";
-import { cn } from "@/lib/utils";
 import { GrGrow } from "react-icons/gr";
-import LoadingIndicator from "@/components/Loading";
-import { useState, useEffect } from "react";
 
 const AboutUs = () => {
   const { theme } = useTheme();
@@ -34,11 +33,10 @@ const AboutUs = () => {
   }
 
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto py-6">
-      <DynamicBreadcrumb />
+    <main className="mx-auto py-6 w-10/12 md:w-11/12">
       {/* About Us */}
-      <section className="pt-3 pb-7 items-center grid grid-cols-1 lg:grid-cols-7 lg:gap-x-7 gap-y-6">
-        <div className="w-full col-span-2 lg:col-span-2 md:order-2">
+      <section className="items-center gap-y-6 lg:gap-x-7 grid grid-cols-1 lg:grid-cols-7 pt-3 pb-7">
+        <div className="md:order-2 col-span-2 lg:col-span-2 w-full">
           <Image
             src={
               theme === "dark" ? "/images/logo_white.png" : "/images/logo.png"
@@ -107,7 +105,7 @@ const AboutUs = () => {
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}
-            className="p-0 m-0 h-fit"
+            className="m-0 p-0 h-fit"
           >
             Contact us to discuss a tailored solution!
           </Button>
@@ -168,9 +166,9 @@ const AboutUs = () => {
           don’t just build websites—we create meaningful digital experiences
           that inspire, connect, and drive success.
         </p>
-        <ul className="p-0 grid gap-4 grid-cols-1 md:grid-cols-2">
-          <li className="flex mt-2 md:p-1 lg:flex-col lg:items-center lg:space-y-4">
-            <FaRegLightbulb className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-accent-4 lg:bg-muted lg:p-5 lg:rounded-full" />
+        <ul className="gap-4 grid grid-cols-1 md:grid-cols-2 p-0">
+          <li className="flex lg:flex-col lg:items-center lg:space-y-4 mt-2 md:p-1">
+            <FaRegLightbulb className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent-1 lg:text-accent-4 size-7 md:size-8 lg:size-24" />
             <div>
               <strong className="font-BonaNovaSC_Bold">
                 Creativity and Innovation:{" "}
@@ -181,8 +179,8 @@ const AboutUs = () => {
               vision to life in ways that captivate and engage.
             </div>
           </li>
-          <li className="flex mt-2 md:p-1 lg:flex-col lg:items-center lg:space-y-4">
-            <GrGrow className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-accent-4 lg:bg-muted lg:p-5 lg:rounded-full" />
+          <li className="flex lg:flex-col lg:items-center lg:space-y-4 mt-2 md:p-1">
+            <GrGrow className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent-1 lg:text-accent-4 size-7 md:size-8 lg:size-24" />
             <div>
               <strong className="font-BonaNovaSC_Bold">
                 Adaptability & Growth:{" "}
@@ -193,8 +191,8 @@ const AboutUs = () => {
               forward-thinking, and effective in a dynamic online world.
             </div>
           </li>
-          <li className="flex mt-2 md:p-1 lg:flex-col lg:items-center lg:space-y-4">
-            <FaSeedling className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-accent-4 lg:bg-muted lg:p-5 lg:rounded-full" />
+          <li className="flex lg:flex-col lg:items-center lg:space-y-4 mt-2 md:p-1">
+            <FaSeedling className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent-1 lg:text-accent-4 size-7 md:size-8 lg:size-24" />
             <div>
               <strong className="font-BonaNovaSC_Bold">Authenticity: </strong>
               Your brand deserves to stand out with originality. We craft
@@ -203,8 +201,8 @@ const AboutUs = () => {
               deeper connections with your audience.
             </div>
           </li>
-          <li className="flex mt-2 md:p-1 lg:flex-col lg:items-center lg:space-y-4">
-            <FaStar className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-accent-4 lg:bg-muted lg:p-5 lg:rounded-full" />
+          <li className="flex lg:flex-col lg:items-center lg:space-y-4 mt-2 md:p-1">
+            <FaStar className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent-1 lg:text-accent-4 size-7 md:size-8 lg:size-24" />
             <div>
               <strong className="font-BonaNovaSC_Bold">Excellence: </strong>
               We hold ourselves to the highest standards in web design,
@@ -213,8 +211,8 @@ const AboutUs = () => {
               we deliver exceeds expectations.
             </div>
           </li>
-          <li className="flex mt-2 md:p-1 lg:flex-col lg:items-center lg:space-y-4">
-            <FaHandsHelping className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-accent-4 lg:bg-muted lg:p-5 lg:rounded-full" />
+          <li className="flex lg:flex-col lg:items-center lg:space-y-4 mt-2 md:p-1">
+            <FaHandsHelping className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent-1 lg:text-accent-4 size-7 md:size-8 lg:size-24" />
             <div>
               <strong className="font-BonaNovaSC_Bold">Empowerment: </strong>
               We believe in helping small businesses succeed. Through expert
@@ -223,8 +221,8 @@ const AboutUs = () => {
               today’s competitive digital space.
             </div>
           </li>
-          <li className="flex mt-2 md:p-1 lg:flex-col lg:items-center lg:space-y-4">
-            <FaHandshake className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-accent-4 lg:bg-muted lg:p-5 lg:rounded-full" />
+          <li className="flex lg:flex-col lg:items-center lg:space-y-4 mt-2 md:p-1">
+            <FaHandshake className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent-1 lg:text-accent-4 size-7 md:size-8 lg:size-24" />
             <div>
               <strong className="font-BonaNovaSC_Bold">
                 Collaboration & Communication:{" "}
@@ -235,8 +233,8 @@ const AboutUs = () => {
               project, leading to results that truly align with your vision.
             </div>
           </li>
-          <li className="flex mt-2 md:p-1 lg:flex-col lg:items-center lg:space-y-4">
-            <FaUsers className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-accent-4 lg:bg-muted lg:p-5 lg:rounded-full" />
+          <li className="flex lg:flex-col lg:items-center lg:space-y-4 mt-2 md:p-1">
+            <FaUsers className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent-1 lg:text-accent-4 size-7 md:size-8 lg:size-24" />
             <div>
               <strong className="font-BonaNovaSC_Bold">
                 Community Impact:{" "}
@@ -247,8 +245,8 @@ const AboutUs = () => {
               involved.
             </div>
           </li>
-          <li className="flex mt-2 md:p-1 lg:flex-col lg:items-center lg:space-y-4">
-            <FaRecycle className="flex-shrink-0 text-accent-1 mr-3 size-7 mt-1 md:mt-2 md:size-8 lg:size-24 lg:text-accent-4 lg:bg-muted lg:p-5 lg:rounded-full" />
+          <li className="flex lg:flex-col lg:items-center lg:space-y-4 mt-2 md:p-1">
+            <FaRecycle className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent-1 lg:text-accent-4 size-7 md:size-8 lg:size-24" />
             <div>
               <strong className="font-BonaNovaSC_Bold">Sustainability: </strong>
               We build future-proof, scalable digital solutions designed to
@@ -295,7 +293,7 @@ const AboutUs = () => {
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}
-            className="p-0 m-0 h-fit"
+            className="m-0 p-0 h-fit"
           >
             Contact us for a personalized consultation!
           </Button>

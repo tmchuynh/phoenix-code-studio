@@ -1,6 +1,5 @@
 "use client";
 import LoadingIndicator from "@/components/Loading";
-import DynamicBreadcrumb from "@/components/ui/breadcrumb-dynamic";
 import { Button } from "@/components/ui/button";
 import { IconDisplay } from "@/lib/IconDisplay";
 import { paymentPlans } from "@/lib/payment-plans";
@@ -41,8 +40,7 @@ const PaymentPlansPage: FC = () => {
   };
 
   return (
-    <main className="w-10/12 md:w-11/12 mx-auto py-6">
-      <DynamicBreadcrumb />
+    <main className="mx-auto py-6 w-10/12 md:w-11/12">
       {/* Page Header */}
       <header className="mb-8">
         <h1>Flexible Pricing Plans to Fit Your Needs</h1>
@@ -61,7 +59,7 @@ const PaymentPlansPage: FC = () => {
           <Button
             variant={"link"}
             onClick={() => router.push("/contact-us")}
-            className="p-0 m-0 h-fit"
+            className="m-0 p-0 h-fit"
           >
             Contact us to discuss a tailored solution!
           </Button>
@@ -97,7 +95,7 @@ const PaymentPlansPage: FC = () => {
               {/* Plan Details */}
               <div>
                 <h3>Key Attributes</h3>
-                <ul className="grid grid-cols-1 gap-x-4 list-none p-0">
+                <ul className="gap-x-4 grid grid-cols-1 p-0 list-none">
                   {plan.info.shortFeatures.map((features, index) => (
                     <li className="flex items-center space-y-0" key={index}>
                       <IconDisplay Icon={plan.Icon} />
@@ -114,7 +112,7 @@ const PaymentPlansPage: FC = () => {
               {/* Learn More Button */}
               <Button
                 variant={theme === "dark" ? "outline" : "secondary"}
-                className="text-sm md:text-lg w-full md:w-1/2 lg:w-2/5 relative mx-auto lg:mx-2"
+                className="relative mx-auto lg:mx-2 w-full md:w-1/2 lg:w-2/5 text-sm md:text-lg"
                 size={isSmallScreen ? "sm" : "default"}
                 onClick={() => {
                   navigateToPlan(plan.name);
