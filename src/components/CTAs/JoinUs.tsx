@@ -1,9 +1,9 @@
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 const JoinUs = () => {
   return (
-    <section className="py-16 px-20 mx-auto text-balance text-end space-y-7">
-      <h1 className="text-3xl md:text-4xl font-bold text-primary">
+    <section className="space-y-7 mx-auto px-20 py-16 text-balance text-end">
+      <h1 className="font-bold text-3xl text-primary md:text-4xl">
         Join Our Team – Build the Future with Us
       </h1>
       <p>

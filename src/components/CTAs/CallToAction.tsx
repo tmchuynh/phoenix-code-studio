@@ -1,5 +1,5 @@
-import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
+import { Button } from "../ui/button";
 
 const CallToAction = () => {
   const router = useRouter();
@@ -9,7 +9,7 @@ const CallToAction = () => {
   };
 
   return (
-    <section className="mx-auto space-y-6 px-4 py-9">
+    <section className="space-y-6 mx-auto px-4 py-9">
       <h1 className="text-3xl md:text-4xl">Ready to Get Started?</h1>
       <p className="mt-4">
         We’re excited to help you bring your digital vision to life! Whether you
@@ -22,7 +22,7 @@ const CallToAction = () => {
         <Button
           variant={"link"}
           onClick={() => router.push("/contact-us")}
-          className="p-0 m-0 h-fit"
+          className="m-0 p-0 h-fit"
         >
           Contact us
         </Button>{" "}
@@ -30,7 +30,7 @@ const CallToAction = () => {
         solutions that deliver measurable results!
       </p>
       <Button
-        className="w-1/2 my-3"
+        className="my-3 w-1/2"
         variant={"accent"}
         onClick={navigateToContact}
       >
