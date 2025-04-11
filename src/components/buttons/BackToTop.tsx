@@ -1,6 +1,6 @@
-import React, { useState, useEffect, JSX } from "react";
+import { JSX, useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
 /**
  * A React component that renders a "Back to Top" button which becomes visible
@@ -55,12 +55,7 @@ const BackToTop = (): JSX.Element => {
         <Button
           onClick={scrollToTop}
           size={"icon"}
-          className="
-            fixed bottom-4 right-4 
-            bg-accent-1 text-accent-foreground 
-            border-accent-1 rounded-full 
-            shadow-lg
-          "
+          className="right-4 bottom-4 fixed bg-accent-1 shadow-lg border-accent-1 rounded-full text-accent-foreground"
           aria-label="Back to top"
         >
           <FaArrowUp />

@@ -1,11 +1,11 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import * as React from "react";
 import { useEffect, useState } from "react";
-import { Button, ButtonProps } from "./ui/button";
-import { cn } from "@/lib/utils";
+import { Button, ButtonProps } from "../ui/button";
 
 /**
  * `ModeButton` is a React component that renders a button to toggle between light and dark themes.
@@ -82,13 +82,13 @@ const ModeButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
       >
         {theme === "dark" ? (
           <Sun
-            className="transition-all rotate-0 scale-100 m-auto h-full"
+            className="m-auto h-full transition-all rotate-0 scale-100"
             role="img"
             aria-label="toggle light mode"
           />
         ) : (
           <Moon
-            className="transition-all rotate-0 scale-100 m-auto h-full"
+            className="m-auto h-full transition-all rotate-0 scale-100"
             role="img"
             aria-label="toggle dark mode"
           />
