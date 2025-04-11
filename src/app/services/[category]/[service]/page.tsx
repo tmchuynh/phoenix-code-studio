@@ -1,7 +1,7 @@
 "use client";
 
-import LoadingIndicator from "@/components/Loading";
 import CannotFind from "@/components/states/CannotFind";
+import LoadingIndicator from "@/components/states/Loading";
 import { Button } from "@/components/ui/button";
 import { SubItem } from "@/lib/interfaces";
 import useMediumScreen from "@/lib/useMediumScreen";

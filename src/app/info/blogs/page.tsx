@@ -4,7 +4,10 @@ import LoadingIndicator from "@/components/states/Loading";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import BlogCard from "@/components/BlogCard";
+
 import { Card } from "@/components/ui/card";
+
 import { Checkbox } from "@/components/ui/checkbox";
 import {
   Collapsible,
@@ -648,22 +651,6 @@ const BlogDisplayPage: FC = () => {
   };
 
   /**
-   * Handles the click event for a topic. Clears the current topic filters,
-   * updates the selected topics, and triggers the filter handler.
-   *
-   * @param {string} topic - The topic that was clicked.
-   */
-  const handleTopicClick = (topic: string) => {
-    clearFilters("topic");
-    setFiltersCleared(false);
-    if (!selectedTopics.includes(topic)) {
-      const updatedTopics = [...selectedTopics, topic];
-      setSelectedTopics(updatedTopics);
-      handleFilter();
-    }
-  };
-
-  /**
    * Handles the click event for selecting a reading length filter.
    * Clears the existing reading length filter, updates the selected lengths,
    * and triggers the filter handling function.
@@ -1245,100 +1232,16 @@ const BlogDisplayPage: FC = () => {
       <section className="my-8">
         <div className="flex flex-col gap-8 lg:grid lg:grid-cols-2 xl:grid-cols-3">
           {currentArticles.map((blog, index) => (
-            <Card
+            <BlogCard
+              blog={blog}
+              index={index}
               key={index}
-              className="flex flex-col justify-between shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border rounded-lg transition-shadow"
-            >
-              <div>
-                <Image
-                  src={`/images/blog_card_images/${setSlug(blog.title)}.jpg`}
-                  width={500}
-                  height={300}
-                  alt={blog.title}
-                  className="mx-auto mb-1 rounded-t-md w-full h-40 md:h-52 xl:h-64 object-cover object-center"
-                />
-                <div className="relative flex flex-col justify-between px-4 pb-2 h-fit md:h-[24rem] lg:h-[32em] 2xl:h-[35em]">
-                  <div>
-                    {blog.wordCount && blog.time && (
-                      <div className="flex justify-between mx-1 pt-5">
-                        {blog.wordCount && (
-                          <p className="mt-0 text-xs md:text-sm lg:text-md 2xl:text-lg">
-                            <strong className="text-foreground">Words:</strong>{" "}
-                            <span>~{formatNumber(blog.wordCount)}</span>
-                          </p>
-                        )}
-                        {blog.time && (
-                          <p className="mt-0 text-xs md:text-sm lg:text-md 2xl:text-lg">
-                            <strong className="text-foreground">
-                              Reading Time:
-                            </strong>{" "}
-                            <span>
-                              ~{parseReadingTimeToMinutes(blog.time)}m
-                            </span>
-                          </p>
-                        )}
-                      </div>
-                    )}
-
-                    <Button
-                      variant="ghost"
-                      className="hover:bg-transparent md:my-2 2xl:my-3 mb-2 px-0 font-bold font-SofiaSans text-left text-md text-primary text-wrap md:text-2xl 2xl:text-3xl hover:text-primary underline underline-offset-2 hover:no-underline tracking-wider"
-                      onClick={() => {
-                        router.push(`/info/blogs/${setSlug(blog.title)}`);
-                      }}
-                    >
-                      {blog.title}
-                    </Button>
-
-                    <div className="flex md:flex-row flex-col justify-between">
-                      <p className="md:my-1 mt-0.5 lg:mt-4 text-sm md:text-lg lg:text-lg">
-                        <strong>Date:</strong> {blog.date.month} /{" "}
-                        {blog.date.day} / {blog.date.year}
-                      </p>
-                    </div>
-                    <p className="pb-4 md:text-[15px] lg:text-[18px] 2xl:text-[20px] leading-6">
-                      {blog.excerpt}
-                    </p>
-                  </div>
-
-                  {isSmallDevice ? null : isLargerScreen ? (
-                    <div className="bottom-2 absolute flex flex-col mt-4">
-                      {blog.topics.length > 0 && (
-                        <div className="flex flex-wrap gap-3 mt-6">
-                          {blog.topics.sort().map((topic, index) => (
-                            <Badge
-                              key={index}
-                              variant={"secondary"}
-                              className="mr-2 xl:text-[15px] xl:leading-5 cursor-pointer"
-                              onClick={() => handleTopicClick(topic)}
-                            >
-                              {topic}
-                            </Badge>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <div className="bottom-4 absolute mt-4">
-                      {blog.topics.length > 0 && (
-                        <div className="flex flex-wrap gap-2 mt-6">
-                          {blog.topics.sort().map((topic, index) => (
-                            <Badge
-                              key={index}
-                              variant={"secondary"}
-                              className="mr-2 md:text-sm lg:text-[17px] 2xl:text-[18px] md:leading-4 lg:leading-5 cursor-pointer"
-                              onClick={() => handleTopicClick(topic)}
-                            >
-                              {topic}
-                            </Badge>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </div>
-              </div>
-            </Card>
+              clearFilters={clearFilters}
+              setFiltersCleared={setFiltersCleared}
+              selectedTopics={selectedTopics}
+              setSelectedTopics={setSelectedTopics}
+              handleFilter={handleFilter}
+            />
           ))}
         </div>
       </section>
