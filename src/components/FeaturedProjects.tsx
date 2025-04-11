@@ -1,15 +1,16 @@
-import { pastProjects } from "@/lib/constants";
-import useSmallScreen from "@/lib/useSmallScreen";
-import { useRouter } from "next/navigation";
-import { Button } from "./ui/button";
 import {
   Pagination,
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { useState } from "react";
-import { useTheme } from "next-themes";
+import { pastProjects } from "@/lib/constants";
 import { Project } from "@/lib/interfaces";
+import useSmallScreen from "@/lib/useSmallScreen";
+import { useTheme } from "next-themes";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import FeaturedProjectCard from "./cards/Project/FeaturedProjectCard";
+import { Button } from "./ui/button";
 
 const FeaturedProjects = () => {
   const isSmallScreen = useSmallScreen();
@@ -51,9 +52,9 @@ const FeaturedProjects = () => {
   const totalPages = Math.ceil(sortedProjects.length / projectsPerPage);
 
   return (
-    <section className="w-10/12 md:w-11/12 mx-auto py-6">
+    <section className="mx-auto py-6 w-10/12 md:w-11/12">
       <h2 className="text-center">Featured Projects</h2>
-      <Pagination className="gap-5 flex items-center pb-5">
+      <Pagination className="flex items-center gap-5 pb-5">
         <PaginationPrevious
           onClick={() => {
             if (currentPage > 1) {
@@ -90,32 +91,22 @@ const FeaturedProjects = () => {
           }
         />
       </Pagination>
-      <div className="w-11/12 lg:w-full mx-auto gap-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="gap-7 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto w-11/12 lg:w-full">
         {currentProjects.map(
           (project, index) =>
             project.featured && (
-              <div
+              <FeaturedProjectCard
+                project={project}
                 key={index}
-                className="rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground p-7"
-              >
-                <h3 className="font-semibold text-center text-secondary pt-1">
-                  {project.title}
-                </h3>
-                <p className="text-pretty mt-4">
-                  <span className="whitespace-nowrap text-wrap overflow-hidden text-ellipsis">
-                    {isSmallScreen
-                      ? `${project.short.substring(0, 80)}...`
-                      : project.short}
-                  </span>
-                </p>
-              </div>
+                index={index}
+              />
             )
         )}
       </div>
-      <div className="text-center mt-8">
+      <div className="mt-8 text-center">
         <Button
           variant={theme === "dark" ? "outline" : "tertiary"}
-          className="w-1/2 my-3"
+          className="my-3 w-1/2"
           onClick={navigateToPastProjects}
         >
           View Our Past Projects

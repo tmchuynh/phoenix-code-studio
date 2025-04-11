@@ -1,15 +1,14 @@
-import { useState } from "react";
 import {
   Pagination,
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { Button } from "./ui/button";
-import { useRouter } from "next/navigation";
 import { subServiceDetails } from "@/lib/sub-services";
 import { useTheme } from "next-themes";
-import Image from "next/image";
-import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import ServiceCard from "./cards/ServiceCard";
+import { Button } from "./ui/button";
 
 const ServiceHighlights = () => {
   const router = useRouter();
@@ -62,9 +61,9 @@ const ServiceHighlights = () => {
   };
 
   return (
-    <section className="w-10/12 md:w-11/12 mx-auto py-6">
+    <section className="mx-auto py-6 w-10/12 md:w-11/12">
       <h2 className="text-center">What We Do</h2>
-      <Pagination className="gap-5 flex items-center pb-5">
+      <Pagination className="flex items-center gap-5 pb-5">
         <PaginationPrevious
           onClick={() => {
             if (currentPage > 1) {
@@ -101,34 +100,15 @@ const ServiceHighlights = () => {
           }
         />
       </Pagination>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+      <div className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
         {currentServices.map((service, index) => (
-          <div
-            key={index}
-            className="p-6 rounded-lg shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border transition-shadow bg-card text-card-foreground"
-          >
-            {service.info.Icon && (
-              <Image
-                src={`/images/service_icons/${service.info.Icon}`}
-                width={500}
-                height={500}
-                alt={`${service.info.description}-Image`}
-                className={cn("w-28 lg:w-24 mx-auto mb-1")}
-              />
-            )}
-
-            <h3 className="font-semibold text-center text-secondary h-32 px-5 flex justify-center items-center">
-              {service.info.name}
-            </h3>
-
-            <p className="text-center mt-4">{service.info.short}</p>
-          </div>
+          <ServiceCard service={service} key={index} index={index} />
         ))}
       </div>
-      <div className="text-center mt-8">
+      <div className="mt-8 text-center">
         <Button
           variant={theme === "dark" ? "outline" : "tertiary"}
-          className="w-1/2 my-3"
+          className="my-3 w-1/2"
           onClick={navigateToServices}
         >
           View All Available Services
