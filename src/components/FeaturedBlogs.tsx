@@ -1,4 +1,3 @@
-import BlogCard from "@/components/cards/BlogCard";
 import {
   Pagination,
   PaginationNext,
@@ -10,6 +9,7 @@ import useSmallScreen from "@/lib/useSmallScreen";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import FeaturedBlogCard from "./cards/Blogs/FeaturedBlogCard";
 import { Button } from "./ui/button";
 
 const FeaturedBlogs = () => {
@@ -72,7 +72,7 @@ const FeaturedBlogs = () => {
       </Pagination>
       <div className="gap-6 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 w-full">
         {currentBlogs.map((blog, index) => (
-          <BlogCard key={index} blog={blog} isSmallScreen={isSmallScreen} />
+          <FeaturedBlogCard key={index} blog={blog} />
         ))}
       </div>
       <div className="mt-8 text-center">
