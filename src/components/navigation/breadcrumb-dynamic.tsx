@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/breadcrumb";
 import useSmallScreen from "@/lib/useSmallScreen";
 import { capitalize } from "@/lib/utils";
+import { ChevronRight, Home } from "lucide-react";
 import { usePathname } from "next/navigation";
 import React from "react";
 
@@ -19,11 +20,19 @@ const DynamicBreadcrumb = () => {
   const isSmallScreen = useSmallScreen();
 
   return (
-    <Breadcrumb className={isSmallScreen ? "hidden" : "my-4 w-11/12 mx-auto"}>
-      <BreadcrumbList>
-        <BreadcrumbItem>
-          <BreadcrumbLink className="bg-muted px-3 py-2 rounded-lg cursor-default">
-            Home
+    <Breadcrumb
+      className={
+        isSmallScreen ? "hidden" : "my-6 w-11/12 mx-auto font-medium text-sm"
+      }
+    >
+      <BreadcrumbList className="flex flex-wrap items-center gap-1.5">
+        <BreadcrumbItem className="transition-all duration-200 hover:scale-105">
+          <BreadcrumbLink
+            href="/"
+            className="flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Home size={16} className="mr-4 mb-1" />
+            <span>Home</span>
           </BreadcrumbLink>
         </BreadcrumbItem>
 
@@ -33,14 +42,23 @@ const DynamicBreadcrumb = () => {
 
           return (
             <React.Fragment key={href}>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
+              <BreadcrumbSeparator className="mx-1 text-muted-foreground">
+                <ChevronRight size={14} />
+              </BreadcrumbSeparator>
+              <BreadcrumbItem
+                className={`transition-all duration-200 ${
+                  !isLast && "hover:scale-105"
+                }`}
+              >
                 {isLast ? (
-                  <BreadcrumbPage className="bg-muted px-3 py-2 rounded-lg cursor-default">
+                  <BreadcrumbPage className="font-semibold text-primary">
                     {capitalize(segment)}
                   </BreadcrumbPage>
                 ) : (
-                  <BreadcrumbLink className="bg-muted px-3 py-2 rounded-lg cursor-default">
+                  <BreadcrumbLink
+                    href={href}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
                     {capitalize(segment)}
                   </BreadcrumbLink>
                 )}
