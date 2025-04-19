@@ -1,12 +1,11 @@
 "use client";
 
-import LoadingIndicator from "@/components/Loading";
+import LoadingIndicator from "@/components/states/Loading";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
 import { jobPositions } from "@/lib/constants";
-import emailjs from "@emailjs/browser";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const ApplicantSubmissionPage = () => {
   const [selectedPositions, setSelectedPositions] = useState<string[]>([]);
@@ -18,15 +17,6 @@ const ApplicantSubmissionPage = () => {
     name: "",
     email: "",
   });
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 150);
-    emailjs.init({
-      publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "",
-    });
-  }, [loading]);
 
   if (loading) {
     return <LoadingIndicator />;
@@ -117,32 +107,6 @@ const ApplicantSubmissionPage = () => {
     if (portfolioLinks.every((link) => link.trim() === "")) {
       setError("Please provide at least one portfolio link.");
       return;
-    }
-
-    if (formElement) {
-      emailjs
-        .send(
-          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
-          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
-          {
-            from_name: formData.name,
-            reply_to: formData.email,
-            from_email: formData.email,
-            user_email: formData.email,
-            positions: selectedPositions.join(", "),
-          }
-        )
-        .then(
-          (response) => {
-            console.log("Success:", response);
-          },
-          (error) => {
-            console.error("Error submitting the form:", error);
-            setError(
-              "There was an issue submitting the form. Please try again."
-            );
-          }
-        );
     }
 
     setSuccessMessage("Your application has been submitted successfully!");
@@ -278,7 +242,7 @@ const ApplicantSubmissionPage = () => {
                 onChange={(e) => handlePortfolioChange(e.target.value, index)}
                 placeholder={`Portfolio Link ${index + 1}`}
                 value={link}
-                className="mx-auto border border-border rounded w-11/12 md:w-full md:h-12 md:text-md lg:text-xl placeholder:text-accent-2"
+                className="mx-auto border border-border rounded w-11/12 md:w-full md:h-12 md:text-md lg:text-xl placeholder:text-accent"
               />
             ))}
           </div>
