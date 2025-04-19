@@ -1,40 +1,40 @@
-import { Testimonial, Project, JobPosition } from "./interfaces";
-import { Menu, FAQ } from "./types";
+import { JobPosition, Project, Testimonial } from "./interfaces";
+import { FAQ, Menu } from "./types";
 
 export const about: Menu[] = [
   {
     title: "About Us",
-    href: "/info/about-us",
+    href: "/about-us",
     description:
       "Discover our mission, values, and the story behind our brand.",
   },
   {
     title: "Careers",
-    href: "/info/careers",
+    href: "",
     description:
       "Join our team and explore exciting career opportunities with us.",
   },
   {
     title: "Blog",
-    href: "/info/blogs",
+    href: "/blogs",
     description:
       "Stay informed with expert insights, industry trends, and company updates.",
   },
   {
     title: "FAQs",
-    href: "/info/frequently-asked-questions",
+    href: "/services/frequently-asked-questions",
     description:
       "Get answers to commonly asked questions about our services and processes.",
   },
   {
     title: "Testimonials",
-    href: "/info/testimonials",
+    href: "/about-us/testimonials",
     description:
       "See what our clients say about their experiences working with us.",
   },
   {
     title: "Portfolio",
-    href: "/info/portfolio",
+    href: "/about-us/past-projects",
     description:
       "Explore our past projects and see how we bring ideas to life.",
   },

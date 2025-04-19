@@ -567,7 +567,7 @@ export const blogs: BlogPost[] = [
       "web-development-laptop-bubbles.png",
       "app-development-mobile-bubbles.png",
     ],
-    topics: ["Getting Started", "Comparison"],
+    topics: ["Learning Opportunity", "Comparison"],
     intro: [
       "Finding the right designer for your project is crucial to ensuring that the final product not only meets but exceeds your expectations. A designer plays a pivotal role in bringing your vision to life, and their work should align with your business goals and target audience. Whether you're looking for a web designer to create an engaging online presence, a graphic designer to enhance your brand identity, or a UI/UX expert to improve user interaction and experience, there are several key factors to consider before making your choice.",
       "It's important to evaluate their expertise, portfolio, and design process to ensure that they have the skills and experience to deliver the results you need. Moreover, consider their communication style and approach to collaboration—working with a designer who understands your needs and can effectively bring your ideas to life will ultimately lead to a smoother design process and a more successful final product.",
@@ -681,7 +681,7 @@ export const blogs: BlogPost[] = [
       "identity.png",
       "meeting-problem-solve.png",
     ],
-    topics: ["Getting Started"],
+    topics: ["Learning Opportunity"],
     intro: [
       "Before embarking on a web design project, it's crucial for you, as the customer, to have a basic understanding of both your industry and some key web design fundamentals. Having this knowledge allows you to approach the consultation with a clearer vision of what you want, enabling a more productive and efficient discussion. When you understand the trends, challenges, and opportunities within your industry, you'll be able to convey your specific business needs and how they align with your website’s goals.",
       "Additionally, familiarizing yourself with core design principles—such as user experience (UX), mobile responsiveness, and visual hierarchy—will empower you to make more informed decisions about the design process. This proactive approach ensures that your designer has the context they need to create a website that truly reflects your brand and objectives, ultimately leading to a better collaboration and a final product that meets or exceeds your expectations.",
@@ -780,7 +780,7 @@ export const blogs: BlogPost[] = [
       "ux-design-mobile-side.png",
       "chat-bubble-log.png",
     ],
-    topics: ["Getting Started", "Design", "UX/UI"],
+    topics: ["Learning Opportunity", "Design", "UX/UI"],
     intro: [
       "Starting a design project is exciting, but clear communication is key to making sure everything goes smoothly. Whether you’re working on a new website, a logo, or a rebranding project, there are several essential things to tell your designer before getting started. Properly setting expectations and providing the right context will help the designer understand your vision and create a design that meets your needs.",
     ],
@@ -878,7 +878,7 @@ export const blogs: BlogPost[] = [
       "cooperation-handshake.png",
       "question-mark.png",
     ],
-    topics: ["Business", "Getting Started"],
+    topics: ["Business", "Learning Opportunity"],
     intro: [
       "A consultation is an essential first step in any design project, serving as the foundation for defining your goals, expectations, and the overall scope of the project. This is your opportunity to ensure that both you and the designer are aligned on the vision and objectives before any work begins. Whether you're meeting with a designer for a website, branding, or any other digital service, asking the right questions during the consultation is crucial.",
       "By discussing the project’s goals, timeline, budget, and key deliverables upfront, you can establish a clear direction and avoid potential misunderstandings later on. Additionally, a well-conducted consultation allows you to gauge the designer’s expertise, style, and approach, ensuring that they are the right fit for your project. Ultimately, asking insightful questions helps build a strong foundation for a successful partnership and ensures that the final product aligns with your vision and business needs.",
@@ -978,8 +978,7 @@ export const blogs: BlogPost[] = [
       "user-experience-bubbles.png",
       "coding-map.png",
     ],
-    topics: ["UX/UI", "Design", "Getting Started"],
-    subtopics: ["Development"],
+    topics: ["UX/UI", "Design", "Learning Opportunity", "Development"],
     intro: [
       "Web design is the process of planning, creating, and updating websites. It involves a combination of graphic design, user experience (UX) design, and coding to build a functional and visually appealing site. Whether it’s a personal blog or an e-commerce platform, web design is crucial to establishing a strong online presence. A well-designed website not only enhances user experience but also drives business success by engaging visitors and encouraging them to take action.",
     ],
@@ -2572,8 +2571,7 @@ export const blogs: BlogPost[] = [
       "discuss.png",
       "book-stack.png",
     ],
-    topics: ["Self-Development", "Getting Started"],
-    subtopics: ["Development"],
+    topics: ["Self-Development", "Development", "Learning Opportunity"],
     intro: [
       "Choosing a career in tech means embracing a lifelong journey of learning and adaptation. The industry is constantly evolving, with new programming languages, frameworks, tools, and best practices emerging all the time. Staying ahead requires curiosity, dedication, and a willingness to continuously expand your skill set. But then again, isn’t that true for any career? Growth and improvement are essential in every field, and technology is no exception.",
       "The best developers, engineers, and tech professionals are those who actively seek out knowledge, refine their craft, and adapt to change. Whether you’re learning a new coding language, mastering a complex algorithm, or understanding better ways to collaborate with a team, improvement is the key to success. The ever-changing nature of tech might seem overwhelming, but it’s also what makes it so exciting. Every project, challenge, and breakthrough presents an opportunity to learn something new. In this dynamic field, the willingness to stay curious and continuously grow is what sets apart great professionals from the rest.",
@@ -4123,7 +4121,7 @@ export const blogs: BlogPost[] = [
       "search.png",
       "web-analytics.png",
     ],
-    topics: ["Data", "Getting Started"],
+    topics: ["Data", "Learning Opportunity"],
     intro: [
       "In today's digital age, data is more than just numbers—it’s a powerful asset that drives decision-making and fuels innovation. Data science is the art of extracting meaningful insights from raw data, using statistics, machine learning, and analytical techniques to solve complex problems across industries. From predicting customer behavior to detecting fraud and optimizing business operations, data science plays a crucial role in helping organizations make informed, data-driven decisions.",
       "By leveraging AI, big data, and predictive analytics, businesses can identify patterns, automate processes, and unlock new opportunities for growth. Understanding data science means bridging the gap between raw information and strategic action. As technology advances, the ability to harness data effectively becomes a key competitive advantage—making data science one of the most sought-after skills in today’s workforce.",
@@ -5039,7 +5037,7 @@ export const blogs: BlogPost[] = [
       "data-retrieved.png",
       "server.png",
     ],
-    topics: ["Data", "Getting Started"],
+    topics: ["Data", "Learning Opportunity"],
     intro: [
       "In the era of big data, information is one of the most valuable assets, and web scraping has become a powerful tool for gathering, analyzing, and leveraging online data. Whether for market research, competitor analysis, lead generation, or trend tracking, web scraping enables businesses and individuals to extract valuable insights from the vast digital landscape. By automating the process of collecting data from websites, web scraping eliminates manual effort and allows for real-time updates, ensuring access to the most accurate and relevant information.",
       "From tracking e-commerce pricing trends to aggregating job postings, the possibilities are endless. However, responsible data harvesting is essential—ethical web scraping practices ensure compliance with legal guidelines and respect for website policies. With the right tools and techniques, web scraping opens doors to limitless opportunities, transforming raw data into actionable intelligence that fuels business growth and innovation.",
@@ -6971,7 +6969,7 @@ export const blogs: BlogPost[] = [
       "Choosing the right business structure is essential for long-term success. LLCs, S Corps, and C Corps each offer unique benefits, from flexibility and tax advantages to growth potential and legal protection. Understanding these structures helps you make an informed decision based on your business goals, whether you're starting small or planning for future expansion.",
     featured: false,
     icons: ["economics.png", "people.png", "brain.png", "shop-local.png"],
-    topics: ["Business", "Comparison", "Career", "Getting Started"],
+    topics: ["Business", "Comparison", "Career", "Learning Opportunity"],
     intro: [
       "When it comes to structuring your business, choosing the right entity type can significantly impact your legal responsibilities, tax obligations, and growth potential. In this article, we explore the key differences between LLCs (Limited Liability Companies), S Corporations, and C Corporations. We break down each structure's advantages, disadvantages, and the situations in which one might be more beneficial than the others, helping you decide which business entity is best suited for your needs. Understanding the distinctions between these structures is essential for making informed decisions that align with your goals for business operations and long-term success. Whether you're a small business owner, an entrepreneur, or someone looking to expand your operations, the right choice can set you up for financial efficiency, legal protection, and scalability.",
       "An LLC may offer simplicity and flexibility for small businesses, whereas S Corps provide tax advantages for certain types of businesses, and C Corps open the door for larger growth opportunities and public investments. We will help clarify these options, so you can navigate the complexities of business formation with confidence.",
@@ -7194,8 +7192,12 @@ export const blogs: BlogPost[] = [
       "github.png",
       "docker.png",
     ],
-    topics: ["Business", "Getting Started", "Frameworks & Libraries"],
-    subtopics: ["Development Tools"],
+    topics: [
+      "Business",
+      "Learning Opportunity",
+      "Frameworks & Libraries",
+      "Development Tools",
+    ],
     intro: [
       "As a full-stack web developer and business owner, my day-to-day workflow involves a dynamic mix of tasks that require both technical expertise and effective business management. I rely on a wide variety of tools to keep everything running smoothly, from coding and development to content creation and business operations. Each of these tools helps me streamline my processes, manage multiple projects, and maintain a high level of productivity across all areas of my work. Whether it's handling client requests, collaborating with my team, or working on the technical aspects of a new project, these tools play a crucial role in ensuring that my work is organized and efficiently executed.",
       "From version control to project management, automation tools, and business management systems, the combination of software I use ensures that I can stay ahead of deadlines, maintain consistency across projects, and meet my clients’ needs. Whether I’m working on front-end design, building custom web applications, or running business operations like invoicing, marketing, and client communications, each tool serves a specific purpose in keeping everything streamlined.",
@@ -7997,8 +7999,7 @@ export const blogs: BlogPost[] = [
       "data-collection-files.png",
       "programming-code-screen.png",
     ],
-    topics: ["Getting Started"],
-    subtopics: ["Development Tools"],
+    topics: ["Learning Opportunity", "Development Tools"],
     intro: [
       "NPM (Node Package Manager) is a critical tool for Node.js developers, streamlining the management of dependencies, automating tasks, and sharing code. With a vast ecosystem of reusable packages, NPM simplifies development workflows, allowing developers to focus on writing code instead of managing libraries manually. NPM’s capabilities extend to version control, dependency management, scripts automation, and publishing packages, making it an indispensable tool for modern web development, particularly in JavaScript-based applications.",
       "NPM enables developers to access and integrate thousands of packages for various tasks, from performance optimization to authentication and security. These packages simplify complex operations such as API management, data manipulation, and testing, while also providing solutions for continuous integration and deployment. NPM’s functionality boosts productivity by reducing manual work, ensuring consistency across environments, and enabling quick implementation of new features.",
@@ -8554,8 +8555,7 @@ export const blogs: BlogPost[] = [
       "responsive-design.png",
       "binary-code.png",
     ],
-    topics: ["Getting Started"],
-    subtopics: ["Development Tools"],
+    topics: ["Learning Opportunity", "Development Tools"],
     intro: [
       "As a web developer, the tools you choose can make all the difference in your workflow, creativity, and overall productivity. Among the many options, Visual Studio Code (VS Code) shines as an indispensable ally for developers at every level. This fast, dynamic code editor is designed to adapt to your needs, supporting a broad array of programming languages and technologies to empower you to bring your ideas to life. With features like IntelliSense for smart code suggestions, built-in Git integration for seamless version control, and powerful debugging tools, VS Code transforms complex tasks into effortless processes.",
       "Its extensive library of extensions opens up endless possibilities for customization, ensuring your workspace fits your unique style and requirements. Whether you’re diving into front-end, back-end, or full-stack projects, VS Code not only helps you code smarter but also fosters collaboration and accelerates development. With its lightning-fast performance, limitless flexibility, and vibrant community, VS Code is the ultimate editor for developers looking to elevate their coding experience and create exceptional applications with ease.",
@@ -8780,8 +8780,7 @@ export const blogs: BlogPost[] = [
       "wix.png",
       "squarespace.png",
     ],
-    topics: ["Comparison", "Getting Started", "Business"],
-    subtopics: ["Website Builders"],
+    topics: ["Comparison", "Learning Opportunity", "Business"],
     intro: [
       "Creating a website has never been more accessible, thanks to modern website builders like Wix, Squarespace, GoDaddy, and Shopify. These platforms are designed to meet the needs of a wide range of users—from beginners who have little or no technical knowledge to entrepreneurs and small business owners eager to establish an online presence. Website builders have democratized the process of building websites, making it possible for anyone to create a polished, professional-looking site without needing to learn how to code or hire an expensive developer. Each of these website builders—Wix, Squarespace, GoDaddy, and Shopify—offers a distinct set of features and advantages, catering to different needs and preferences.",
       "Whether you’re a small business owner, artist, or entrepreneur, choosing the right website builder can make a significant difference in the speed, functionality, and overall success of your online presence. In the following sections, we’ll explore the pros and cons of each platform to help you make an informed decision.",
@@ -9094,8 +9093,7 @@ export const blogs: BlogPost[] = [
       "When choosing between website builders like Wix, Squarespace, GoDaddy, or Shopify and a custom-built website, it’s important to weigh your business needs, budget, and long-term goals. Website builders offer ease, affordability, and speed but come with limitations such as restricted customization and SEO challenges. Custom-built websites, though more expensive and time-consuming, provide full control over design, functionality, and scalability, making them ideal for businesses aiming for growth.",
     featured: false,
     icons: ["squarespace.png", "wix.png", "icons8-godaddy-256.png"],
-    topics: ["Comparison", "Business", "Getting Started"],
-    subtopics: ["Website Builders"],
+    topics: ["Comparison", "Business", "Learning Opportunity"],
     intro: [
       "Website builders like Wix, Squarespace, GoDaddy, and Shopify provide a fast, easy, and budget-friendly way to build websites without requiring any coding skills. These platforms come with a wide range of pre-designed templates, drag-and-drop tools, and customization options that allow users to create websites quickly. However, while these website builders offer a great solution for personal projects or small businesses, they come with their own set of limitations when it comes to customization, scalability, and long-term growth.",
       "Choosing between a website builder (like Wix, Squarespace, GoDaddy, or Shopify) and a custom-built website depends on your business needs, budget, and long-term goals. Website builders are user-friendly, quick, and affordable but come with limitations such as restricted customization, SEO issues, and performance concerns. They’re ideal for small businesses or personal projects that need a simple website without much investment.",
@@ -9334,7 +9332,7 @@ export const blogs: BlogPost[] = [
       "uxui-desktop-drag.png",
       "communication.png",
     ],
-    topics: ["Design", "UX/UI", "Getting Started"],
+    topics: ["Design", "UX/UI", "Learning Opportunity"],
     intro: [
       "Providing effective feedback is crucial to a successful collaboration with your designer. To ensure a smooth and productive process, it's important to be specific, clear, and actionable in your feedback. Visual references and context-driven suggestions help communicate your vision more effectively. Prioritize feedback and offer it in stages to focus on the most important elements first. Respect the designer's expertise and trust their professional judgment, while keeping the feedback focused on the work, not the individual. A positive, collaborative environment will foster better creativity and results. By following these guidelines, you'll be able to enhance the design and achieve your goals, ensuring a more successful project outcome.",
     ],
@@ -10558,8 +10556,7 @@ export const blogs: BlogPost[] = [
       "data-collection-files.png",
       "social.png",
     ],
-    topics: ["Comparison", "Getting Started"],
-    subtopics: ["Development"],
+    topics: ["Comparison", "Learning Opportunity"],
     intro: [
       "In the world of software development, Git and GitHub are two of the most widely used tools for version control and collaboration. While often mentioned together, they serve distinct purposes. Git is a distributed version control system that allows developers to track changes, manage branches, and collaborate on projects efficiently. GitHub, on the other hand, is a cloud-based hosting service that enhances Git's functionality by providing a centralized platform for code sharing, review, and team collaboration.",
       "Understanding the differences between Git and GitHub is crucial for developers, teams, and open-source contributors. Git allows you to maintain complete control over code history, revert changes, and experiment with different branches. GitHub extends these capabilities by enabling seamless collaboration, offering features like pull requests, issue tracking, and CI/CD integration.",
@@ -11217,8 +11214,7 @@ export const blogs: BlogPost[] = [
       "github.png",
       "docker.png",
     ],
-    topics: ["Frameworks & Libraries", "Getting Started"],
-    subtopics: ["Development Tools"],
+    topics: ["Frameworks & Libraries", "Learning Opportunity"],
     intro: [
       "pen-source tools have become an indispensable part of modern web development, offering developers a wealth of resources that enhance collaboration, productivity, and the overall development process. From version control and performance testing to deployment and hosting, open-source solutions provide cost-effective and flexible alternatives to proprietary software. Whether you're a beginner or an experienced developer, leveraging these tools allows you to build scalable, efficient, and high-quality applications. By embracing the power of open-source, businesses and developers can create innovative solutions, optimize workflows, and deliver exceptional digital experiences, all while staying agile and secure in an ever-evolving technology landscape.",
       "Whether you're a newcomer eager to dive into web development or an experienced professional searching for robust alternatives to proprietary software, open-source tools offer an expansive range of options to suit all needs and skill levels. These platforms are integral to the software development landscape, enabling developers to build, test, deploy, and scale applications with ease. By leveraging the right mix of open-source technologies, businesses can drive innovation, boost productivity, and deliver top-tier user experiences while maintaining a secure and agile development environment.",
@@ -11700,8 +11696,7 @@ export const blogs: BlogPost[] = [
       "vercel.png",
       "web.png",
     ],
-    topics: ["Getting Started", "Comparison"],
-    subtopics: ["Development Tools"],
+    topics: ["Development Tools", "Comparison"],
     intro: [
       "When choosing a deployment platform for web development, Vercel and Netlify are two of the top contenders, each offering unique advantages. Vercel is best suited for Next.js applications, with features like server-side rendering (SSR) and incremental static regeneration (ISR) that optimize performance. It excels in frontend performance, leveraging edge networks and seamless Git integration for preview deployments.",
       "Netlify, on the other hand, is more versatile, supporting a wide range of frameworks and static site generators. It offers powerful serverless functions, making it ideal for full-stack applications, along with tools like Netlify CMS, built-in authentication, and instant rollbacks.",
@@ -11904,8 +11899,7 @@ export const blogs: BlogPost[] = [
       "Docker and Kubernetes are essential tools for modern application development, streamlining the deployment and management of containerized applications. Understanding how these tools differ and complement each other is crucial for developers aiming to build efficient, scalable cloud-native applications.",
     featured: true,
     icons: ["docker.png", "icons8-kubernetes-480.png"],
-    topics: ["Comparison", "Getting Started"],
-    subtopics: ["Development Tools"],
+    topics: ["Comparison", "Development Tools"],
     intro: [
       "In the world of modern application development, containerization has become an essential practice for deploying and managing software in a more efficient and scalable way. Two of the most powerful tools in this domain are Docker and Kubernetes. While both play vital roles in streamlining the development and deployment processes, they serve different purposes. Docker focuses on packaging applications into lightweight, portable containers, ensuring that they run consistently across various environments. Kubernetes, on the other hand, is a container orchestration platform designed to automate the deployment, scaling, and management of containers at scale. Understanding the differences between Docker and Kubernetes is crucial for developers and teams looking to build, deploy, and manage containerized applications in the most efficient way possible.",
     ],
@@ -12088,8 +12082,7 @@ export const blogs: BlogPost[] = [
       "Choosing the right API testing tool is crucial for ensuring your APIs are reliable and efficient. This guide highlights top tools like Postman, Insomnia, Hoppscotch, and Paw, each offering unique features to match various development needs.",
     featured: true,
     icons: ["api-white-gear.png", "api-network-connect.png"],
-    topics: ["Getting Started"],
-    subtopics: ["Development Tools"],
+    topics: ["Development Tools"],
     intro: [
       "Selecting the right API testing tool is a critical decision in modern web development, as APIs play a crucial role in connecting various services and applications. Whether you're developing a RESTful API, working with GraphQL, or leveraging WebSockets, choosing the most effective tool for testing ensures that your API is reliable, secure, and performs well under real-world conditions.",
       "In today’s fast-paced development environment, the right API testing tool can significantly enhance your workflow, improve collaboration, and help you identify bugs or inefficiencies before they make it into production. With tools ranging from comprehensive, feature-packed platforms like Postman to minimalist, lightweight options like Insomnia and Hoppscotch, developers have a broad array of choices depending on their specific needs.",
@@ -12645,8 +12638,7 @@ export const blogs: BlogPost[] = [
       "ui-design-desktop-mobile.png",
       "web-development-laptop-bubbles.png",
     ],
-    topics: ["Comparison", "Getting Started"],
-    subtopics: ["Development"],
+    topics: ["Comparison", "Development"],
     intro: [
       "In the fast-paced world of web development and DevOps, the landscape is constantly evolving, with new tools, technologies, and practices emerging regularly. Whether you're a beginner just starting out or an experienced professional aiming to expand your skillset, mastering the essential technologies and methodologies is key to staying competitive and creating impactful, scalable applications. From front-end design to back-end architecture, full-stack development to deployment automation, every aspect of the development process plays a crucial role in delivering seamless, high-performing experiences.",
       "By exploring each area in depth—from foundational programming languages to the cutting-edge practices of DevOps—you'll be equipped with the knowledge to navigate the dynamic world of development, tackle complex challenges, and stay ahead of industry trends. Ready to level up your development career?",
@@ -14673,8 +14665,7 @@ export const blogs: BlogPost[] = [
       "NPM, NVM, and NPX are essential tools in the Node.js ecosystem, each serving a unique purpose. NPM is used for managing dependencies, NVM helps developers manage multiple versions of Node.js, and NPX allows for running packages without global installation. Understanding how to leverage these tools will streamline your development process and ensure efficient package management and execution.",
     featured: true,
     icons: ["nvm-logo-color-avatar.png", "icons8-npm-480.png"],
-    topics: ["Getting Started"],
-    subtopics: ["Development", "Development Tools"],
+    topics: ["Development Tools", "Development"],
     intro: [
       "In the world of JavaScript and Node.js development, managing packages, versions, and running commands efficiently is essential to a smooth development experience. This is where three critical tools—NPM, NVM, and NPX—come into play. While they are often used interchangeably, each of these tools serves a unique purpose in the Node.js ecosystem. Understanding the key differences between NPM, NVM, and NPX, and how they can be leveraged in various scenarios, is crucial for developers looking to streamline their workflows and ensure their applications are optimized for performance and scalability. In this guide, we’ll break down what each tool does, when to use it, and how it can make your development process more efficient.",
     ],
@@ -15183,8 +15174,7 @@ export const blogs: BlogPost[] = [
       "timeline-flags.png",
       "full-stack.png",
     ],
-    topics: ["Getting Started", "Career"],
-    subtopics: ["Development"],
+    topics: ["Development", "Career"],
     intro: [
       "Building a full-stack web application is a comprehensive process that combines both front-end and back-end development, database management, and deployment. It involves a diverse skill set that enables developers to create dynamic, interactive, and scalable web applications. Whether you're just starting out or are an experienced developer, understanding the entire full-stack process is essential to building robust web applications that function seamlessly from end to end.",
       "By mastering both front-end and back-end technologies, along with understanding how they interact with a database, developers can create applications that are not only visually appealing but also functional, secure, and scalable. Whether you're looking to build a simple website or a complex web application, becoming proficient in full-stack development allows you to handle all aspects of the development process, making you a more versatile and valuable developer.",
@@ -17491,8 +17481,7 @@ export const blogs: BlogPost[] = [
       "Choosing the right JavaScript framework is crucial for web development projects. Angular, React, and Vue are three popular options, each with distinct strengths and weaknesses. Understanding these differences is key to selecting the framework that best fits your project's needs.",
     featured: false,
     icons: ["angular.png", "icons8-vue-js-480.png", "science.png"],
-    topics: ["Getting Started", "Comparison"],
-    subtopics: ["Development Tools", "Development"],
+    topics: ["Development Tools", "Development"],
     intro: [
       "Choosing the right framework is crucial when developing modern web applications, as it can greatly influence both the development process and the final product. Among the leading options, React, Angular, and Vue stand out, each offering unique features, performance advantages, and different approaches to building applications. React, known for its component-based architecture, focuses on providing a high level of flexibility and scalability. Angular, with its comprehensive, opinionated structure, provides a complete framework with tools for routing, forms, and more. Vue, often praised for its simplicity, offers a lightweight yet powerful solution that strikes a balance between flexibility and convention. Regardless of your experience level, understanding these differences can significantly enhance your development workflow and decision-making.",
     ],
@@ -18616,7 +18605,7 @@ export const blogs: BlogPost[] = [
       "React Native, Ionic, and Flutter are some of the most popular frameworks for building cross-platform apps. Each framework has its unique advantages and challenges. With the right framework, you can ensure your app is built efficiently, performs well, and meets user expectations.",
     featured: false,
     icons: ["icons8-ionic-480.png", "science.png", "icons8-flutter-480.png"],
-    topics: ["Getting Started", "Comparison", "Development Tools"],
+    topics: ["Learning Opportunity", "Comparison", "Development Tools"],
     intro: [
       "Choosing the right framework for mobile app development is crucial in today’s fast-paced tech landscape. With the increasing demand for cross-platform applications, selecting a framework that aligns with your development goals is essential.",
       "React Native, Ionic, and Flutter are among the most popular frameworks for building cross-platform apps, each offering distinct advantages and challenges. React Native allows developers to use JavaScript and React to build native-like apps, while Ionic leverages web technologies for hybrid applications, and Flutter provides a high-performance solution with its own rendering engine. Understanding the strengths and limitations of each framework will help ensure you select the right one for your project.",
@@ -20481,8 +20470,7 @@ export const blogs: BlogPost[] = [
       "github.png",
       "4373267_bitbucket_logo_logos_icon.png",
     ],
-    topics: ["Getting Started", "Comparison"],
-    subtopics: ["Development Tools"],
+    topics: ["Development Tools", "Comparison"],
     intro: [
       "Version control is a critical part of modern software development, and platforms like GitHub, GitLab, and Bitbucket are at the forefront of this practice.",
       "These tools offer robust solutions for managing code, collaborating with teams, and automating workflows. But choosing the right one can be challenging, as each platform has unique features, integrations, and benefits that suit different project needs and team workflows.",
@@ -20938,8 +20926,7 @@ export const blogs: BlogPost[] = [
       "By making version control more visual and interactive, Git GUI clients help developers manage their code with greater ease and efficiency, enabling them to focus more on coding and less on the complexities of Git’s command-line interface. Whether you’re a beginner or an experienced developer, these tools enhance the user experience and make working with Git more approachable.",
     featured: false,
     icons: ["icons8-gitkraken-256.png", "github.png"],
-    topics: ["Getting Started", "Comparison"],
-    subtopics: ["Development Tools"],
+    topics: ["Development Tools", "Comparison"],
     intro: [
       "Git is an indispensable tool for modern software development, enabling developers to track changes, collaborate, and manage their codebase. However, for many developers, using Git through the command line can be challenging and intimidating, especially for those who are not as comfortable with terminal commands or who prefer a more visual approach to managing their code.",
       "This is where Git GUI clients like GitKraken and GitHub Desktop come in. These tools offer graphical user interfaces that simplify the process of interacting with Git, making version control more accessible and intuitive. GitKraken and GitHub Desktop are among the most popular Git GUI clients, both offering a range of features designed to streamline the development workflow.",
@@ -21174,8 +21161,12 @@ export const blogs: BlogPost[] = [
       "career.png",
       "code-symbol.png",
     ],
-    topics: ["Self-Development", "Getting Started", "Career"],
-    subtopics: ["Development", "Learning Strategies"],
+    topics: [
+      "Self-Development",
+      "Learning Strategies",
+      "Development",
+      "Career",
+    ],
     intro: [
       "Learning web development on your own can be a rewarding experience, but it comes with its challenges. With so many tools, technologies, and resources available, it’s easy to feel overwhelmed. However, with the right approach, you can make the process smoother and more effective. In this blog post, we’ll cover the essential do’s and don’ts of self-learning web development. Whether you’re just getting started or have been learning for a while, these tips will help you build a strong foundation and develop a sustainable learning path.",
     ],
@@ -21790,8 +21781,7 @@ export const blogs: BlogPost[] = [
       "Remix and Vite have captured significant attention within the web development community, each offering distinct benefits. Remix is a full-stack React framework designed for fast page loads, efficient data fetching, and an improved user experience. Vite, on the other hand, is a next-generation build tool that focuses on delivering ultra-fast development with a modern, optimized workflow.",
     featured: true,
     icons: ["remix-logo-icon.png", "icons8-vite-480.png", "science.png"],
-    topics: ["Getting Started", "Frameworks & Libraries", "Comparison"],
-    subtopics: ["Development"],
+    topics: ["Development", "Frameworks & Libraries", "Comparison"],
     intro: [
       "The world of web development is constantly evolving, with new tools and frameworks emerging to make development faster, more efficient, and more scalable.",
       "Remix and Vite are two tools that have gained significant attention in the web development community, each offering unique advantages. Remix is a full-stack React framework focused on fast page loads, efficient data fetching, and better user experience, while Vite is a next-generation build tool that prioritizes lightning-fast development with a modern, optimized experience.",
@@ -22166,8 +22156,7 @@ export const blogs: BlogPost[] = [
       "Choosing the right framework for your web development project can be a daunting task, especially with so many great options available today. Next.js, Astro, and Nuxt.js have quickly become popular choices for building modern web applications, each with unique features tailored to different use cases.",
     featured: true,
     icons: ["icons8-nextjs-480.png", "astro-icon-dark.png", "nuxtjs-logo.png"],
-    topics: ["Frameworks & Libraries", "Getting Started", "Comparison"],
-    subtopics: ["Development"],
+    topics: ["Frameworks & Libraries", "Development", "Comparison"],
     intro: [
       "When comparing Next.js, Astro, and Nuxt.js, the key difference lies in their focus: Next.js is best for complex, dynamic web applications with robust features, Astro shines for content-heavy, fast-loading static sites, while Nuxt.js is ideal for building Vue-based applications with a strong emphasis on server-side rendering (SSR) and a streamlined development experience;",
       "Whether you're building a static site, a dynamic web app, or a complex, full-featured enterprise solution, understanding the strengths and weaknesses of Next.js, Astro, and Nuxt.js will help you make an informed decision.",
@@ -22480,8 +22469,7 @@ export const blogs: BlogPost[] = [
       "coding-map.png",
       "data-collection-files.png",
     ],
-    topics: ["Getting Started", "Self-Development"],
-    subtopics: ["Development", "Learning Strategies"],
+    topics: ["Development", "Learning Strategies", "Self-Development"],
     intro: [
       "The 100 Days of Code challenge has become a popular way for developers and aspiring coders to level up their skills, build habits, and stay motivated throughout their learning journey.",
       "This challenge encourages participants to code for at least one hour every day for 100 days straight. The goal is to cultivate consistency, build real-world coding experience, and develop the discipline needed to succeed in the tech industry.",

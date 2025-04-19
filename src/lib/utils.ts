@@ -1,7 +1,7 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { cssUnit } from "./constants";
-import { LengthObject, BlogPost } from "./interfaces";
+import { BlogPost, LengthObject } from "./interfaces";
 import { DateObject } from "./types";
 
 export function cn(...inputs: ClassValue[]) {

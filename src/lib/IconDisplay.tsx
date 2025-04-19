@@ -20,9 +20,9 @@ export const IconDisplay: FC<{
     <div>
       {/* Render the icon */}
       {Icon ? (
-        <Icon className="text-4xl text-accent-5 mx-auto my-1" />
+        <Icon className="mx-auto my-1 text-4xl text-accent" />
       ) : (
-        <MdCheck className="text-5xl md:text-6xl my-1" />
+        <MdCheck className="my-1 text-5xl md:text-6xl" />
       )}
     </div>
   );
