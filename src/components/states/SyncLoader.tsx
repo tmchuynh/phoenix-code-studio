@@ -11,7 +11,7 @@ import { JSX } from "react";
  */
 function SyncLoader({
   loading = true,
-  color = "var(--accent-5)",
+  color = "var(--accent)",
   speedMultiplier = 1,
   cssOverride = {},
   size = 15,

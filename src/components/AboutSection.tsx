@@ -1,17 +1,17 @@
 import {
+  FaHandsHelping,
+  FaHandshake,
+  FaRecycle,
   FaRegLightbulb,
   FaSeedling,
   FaStar,
-  FaHandsHelping,
-  FaHandshake,
   FaUsers,
-  FaRecycle,
 } from "react-icons/fa";
 import { GrGrow } from "react-icons/gr";
 
 const AboutSection = () => {
   return (
-    <section className="w-10/12 md:w-11/12 mx-auto py-6">
+    <section className="mx-auto py-6 w-10/12 md:w-11/12">
       <h2>Who We Are</h2>
       <h3 className="mb-4">
         Elevating Brands with Cutting-Edge Digital Solutions
@@ -35,10 +35,10 @@ const AboutSection = () => {
         empower brands to lead, grow, and thrive in the ever-evolving digital
         landscape.
       </p>
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-7 w-full md:w-11/12 lg:w-full mx-auto">
+      <div className="gap-7 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 mx-auto w-full md:w-11/12 lg:w-full">
         {/* Creativity & Innovation */}
         <div className="text-center">
-          <FaRegLightbulb className="text-6xl text-accent-5 mx-auto mb-4" />
+          <FaRegLightbulb className="mx-auto mb-4 text-6xl text-accent" />
           <h3>Creativity & Innovation</h3>
           <p>
             We combine imagination and technology to craft unique,
@@ -50,7 +50,7 @@ const AboutSection = () => {
 
         {/* Adaptability & Growth */}
         <div className="text-center">
-          <GrGrow className="text-6xl text-accent-5 mx-auto mb-4" />
+          <GrGrow className="mx-auto mb-4 text-6xl text-accent" />
           <h3>Adaptability & Growth</h3>
           <p>
             We thrive on change and innovation, continuously evolving to stay
@@ -62,7 +62,7 @@ const AboutSection = () => {
 
         {/* Authenticity */}
         <div className="text-center">
-          <FaSeedling className="text-6xl text-accent-5 mx-auto mb-4" />
+          <FaSeedling className="mx-auto mb-4 text-6xl text-accent" />
           <h3>Authenticity</h3>
           <p>
             We craft genuine digital experiences that reflect each brand’s
@@ -73,7 +73,7 @@ const AboutSection = () => {
 
         {/* Excellence */}
         <div className="text-center">
-          <FaStar className="text-6xl text-accent-5 mx-auto mb-4" />
+          <FaStar className="mx-auto mb-4 text-6xl text-accent" />
           <h3>Excellence</h3>
           <p>
             We deliver exceptional, user-focused solutions that go beyond
@@ -84,7 +84,7 @@ const AboutSection = () => {
 
         {/* Empowerment */}
         <div className="text-center">
-          <FaHandsHelping className="text-6xl text-accent-5 mx-auto mb-4" />
+          <FaHandsHelping className="mx-auto mb-4 text-6xl text-accent" />
           <h3>Empowerment</h3>
           <p>
             We equip small businesses with the tools, resources, and support
@@ -95,7 +95,7 @@ const AboutSection = () => {
 
         {/* Collaboration & Communication */}
         <div className="text-center">
-          <FaHandshake className="text-6xl text-accent-5 mx-auto mb-4" />
+          <FaHandshake className="mx-auto mb-4 text-6xl text-accent" />
           <h3>Collaboration & Communication</h3>
           <p>
             Success starts with clear, open communication. We work closely with
@@ -106,7 +106,7 @@ const AboutSection = () => {
 
         {/* Community Impact */}
         <div className="text-center">
-          <FaUsers className="text-6xl text-accent-5 mx-auto mb-4" />
+          <FaUsers className="mx-auto mb-4 text-6xl text-accent" />
           <h3>Community Impact</h3>
           <p>
             We believe in using technology for positive change. Our work goes
@@ -117,7 +117,7 @@ const AboutSection = () => {
 
         {/* Sustainability */}
         <div className="text-center">
-          <FaRecycle className="text-6xl text-accent-5 mx-auto mb-4" />
+          <FaRecycle className="mx-auto mb-4 text-6xl text-accent" />
           <h3>Sustainability</h3>
           <p>
             We create scalable, eco-friendly, and future-proof digital solutions

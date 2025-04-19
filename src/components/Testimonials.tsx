@@ -15,7 +15,7 @@ const Testimonials = () => {
   const { theme } = useTheme();
 
   const navigateToTestimonials = () => {
-    router.push("/info/testimonials");
+    router.push("/about-us/testimonials");
   };
 
   /**

@@ -55,7 +55,7 @@ const BackToTop = (): JSX.Element => {
         <Button
           onClick={scrollToTop}
           size={"icon"}
-          className="right-4 bottom-4 fixed bg-accent-1 shadow-lg border-accent-1 rounded-full text-accent-foreground"
+          className="right-4 bottom-4 fixed bg-accent shadow-lg border-accent rounded-full text-accent-foreground"
           aria-label="Back to top"
         >
           <FaArrowUp />

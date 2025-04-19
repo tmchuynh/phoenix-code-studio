@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
-import { Star, StarHalf } from "lucide-react";
 import { StarRatingProps } from "@/lib/types";
+import { Star, StarHalf } from "lucide-react";
+import React from "react";
 
 const StarRating: React.FC<StarRatingProps> = ({ rating, maxStars = 5 }) => {
   return (
@@ -14,14 +14,14 @@ const StarRating: React.FC<StarRatingProps> = ({ rating, maxStars = 5 }) => {
           return (
             <Star
               key={index}
-              className="w-6 h-6 text-accent-5 fill-accent-5 stroke-accent-5"
+              className="w-6 h-6 text-accent fill-accent stroke-accent"
             />
           );
         } else if (rating >= starValue - 0.5) {
           return (
             <div key={index} className="relative w-6 h-6">
               <Star className="absolute w-6 h-6 text-muted stroke-muted" />
-              <StarHalf className="absolute w-6 h-6 text-accent-5" />
+              <StarHalf className="absolute w-6 h-6 text-accent" />
             </div>
           );
         } else {

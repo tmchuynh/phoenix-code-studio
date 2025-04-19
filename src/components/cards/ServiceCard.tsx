@@ -24,7 +24,7 @@ export default function ServiceCard({
         />
       )}
 
-      <h3 className="flex justify-center items-center px-5 h-32 font-semibold text-center text-secondary">
+      <h3 className="flex justify-center items-center px-5 h-32 text-center">
         {service.info.name}
       </h3>
 

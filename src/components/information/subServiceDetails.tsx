@@ -59,7 +59,7 @@ export default function SubServiceDetails({
               )}
             >
               <div>
-                <h3 className="font-semibold text-accent-5">
+                <h3 className="font-semibold text-accent">
                   {subServiceDetail.info.name}
                 </h3>
                 <p className="md:pb-10">
