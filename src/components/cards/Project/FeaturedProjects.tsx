@@ -9,8 +9,8 @@ import useSmallScreen from "@/lib/useSmallScreen";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import FeaturedProjectCard from "./cards/Project/FeaturedProjectCard";
-import { Button } from "./ui/button";
+import { Button } from "../../ui/button";
+import FeaturedProjectCard from "./FeaturedProjectCard";
 
 const FeaturedProjects = () => {
   const isSmallScreen = useSmallScreen();
@@ -18,7 +18,7 @@ const FeaturedProjects = () => {
   const { theme } = useTheme();
 
   const navigateToPastProjects = () => {
-    router.push("/info/portfolio");
+    router.push("/about-us/past-projects");
   };
 
   const [currentPage, setCurrentPage] = useState(1);

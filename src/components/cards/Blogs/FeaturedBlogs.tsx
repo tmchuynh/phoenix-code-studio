@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import {
   Pagination,
   PaginationNext,
@@ -9,8 +10,7 @@ import useSmallScreen from "@/lib/useSmallScreen";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import FeaturedBlogCard from "./cards/Blogs/FeaturedBlogCard";
-import { Button } from "./ui/button";
+import FeaturedBlogCard from "./FeaturedBlogCard";
 
 const FeaturedBlogs = () => {
   const isSmallScreen = useSmallScreen();
@@ -18,7 +18,7 @@ const FeaturedBlogs = () => {
   const { theme } = useTheme();
 
   const navigateToBlogs = () => {
-    router.push("/info/blogs");
+    router.push("/blogs");
   };
 
   const [currentPage, setCurrentPage] = useState(1);

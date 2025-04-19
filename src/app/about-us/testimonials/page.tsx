@@ -42,10 +42,10 @@ const TestimonialsPage: FC = () => {
             >
               <CardContent className="flex flex-col justify-around items-center">
                 <div className="text-center">
-                  <p className="mb-2 font-bold text-accent-3 uppercase">
+                  <p className="mb-2 font-bold text-accent uppercase">
                     {testimonial.name}
                   </p>
-                  <p className="mb-4 text-accent-1">{testimonial.position}</p>
+                  <p className="mb-4 text-accent">{testimonial.position}</p>
                 </div>
                 <div>
                   {testimonial.rating && (

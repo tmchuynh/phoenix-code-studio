@@ -168,7 +168,7 @@ const AboutUs = () => {
         </p>
         <ul className="gap-4 grid grid-cols-1 md:grid-cols-2 p-0">
           <li className="flex lg:flex-col lg:items-center lg:space-y-4 mt-2 md:p-1">
-            <FaRegLightbulb className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent-1 lg:text-accent-4 size-7 md:size-8 lg:size-24" />
+            <FaRegLightbulb className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent lg:text-accent size-7 md:size-8 lg:size-24" />
             <div>
               <strong className="font-BonaNovaSC_Bold">
                 Creativity and Innovation:{" "}
@@ -180,7 +180,7 @@ const AboutUs = () => {
             </div>
           </li>
           <li className="flex lg:flex-col lg:items-center lg:space-y-4 mt-2 md:p-1">
-            <GrGrow className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent-1 lg:text-accent-4 size-7 md:size-8 lg:size-24" />
+            <GrGrow className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent lg:text-accent size-7 md:size-8 lg:size-24" />
             <div>
               <strong className="font-BonaNovaSC_Bold">
                 Adaptability & Growth:{" "}
@@ -192,7 +192,7 @@ const AboutUs = () => {
             </div>
           </li>
           <li className="flex lg:flex-col lg:items-center lg:space-y-4 mt-2 md:p-1">
-            <FaSeedling className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent-1 lg:text-accent-4 size-7 md:size-8 lg:size-24" />
+            <FaSeedling className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent lg:text-accent size-7 md:size-8 lg:size-24" />
             <div>
               <strong className="font-BonaNovaSC_Bold">Authenticity: </strong>
               Your brand deserves to stand out with originality. We craft
@@ -202,7 +202,7 @@ const AboutUs = () => {
             </div>
           </li>
           <li className="flex lg:flex-col lg:items-center lg:space-y-4 mt-2 md:p-1">
-            <FaStar className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent-1 lg:text-accent-4 size-7 md:size-8 lg:size-24" />
+            <FaStar className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent lg:text-accent size-7 md:size-8 lg:size-24" />
             <div>
               <strong className="font-BonaNovaSC_Bold">Excellence: </strong>
               We hold ourselves to the highest standards in web design,
@@ -212,7 +212,7 @@ const AboutUs = () => {
             </div>
           </li>
           <li className="flex lg:flex-col lg:items-center lg:space-y-4 mt-2 md:p-1">
-            <FaHandsHelping className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent-1 lg:text-accent-4 size-7 md:size-8 lg:size-24" />
+            <FaHandsHelping className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent lg:text-accent size-7 md:size-8 lg:size-24" />
             <div>
               <strong className="font-BonaNovaSC_Bold">Empowerment: </strong>
               We believe in helping small businesses succeed. Through expert
@@ -222,7 +222,7 @@ const AboutUs = () => {
             </div>
           </li>
           <li className="flex lg:flex-col lg:items-center lg:space-y-4 mt-2 md:p-1">
-            <FaHandshake className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent-1 lg:text-accent-4 size-7 md:size-8 lg:size-24" />
+            <FaHandshake className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent lg:text-accent size-7 md:size-8 lg:size-24" />
             <div>
               <strong className="font-BonaNovaSC_Bold">
                 Collaboration & Communication:{" "}
@@ -234,7 +234,7 @@ const AboutUs = () => {
             </div>
           </li>
           <li className="flex lg:flex-col lg:items-center lg:space-y-4 mt-2 md:p-1">
-            <FaUsers className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent-1 lg:text-accent-4 size-7 md:size-8 lg:size-24" />
+            <FaUsers className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent lg:text-accent size-7 md:size-8 lg:size-24" />
             <div>
               <strong className="font-BonaNovaSC_Bold">
                 Community Impact:{" "}
@@ -246,7 +246,7 @@ const AboutUs = () => {
             </div>
           </li>
           <li className="flex lg:flex-col lg:items-center lg:space-y-4 mt-2 md:p-1">
-            <FaRecycle className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent-1 lg:text-accent-4 size-7 md:size-8 lg:size-24" />
+            <FaRecycle className="flex-shrink-0 lg:bg-muted mt-1 md:mt-2 mr-3 lg:p-5 lg:rounded-full text-accent lg:text-accent size-7 md:size-8 lg:size-24" />
             <div>
               <strong className="font-BonaNovaSC_Bold">Sustainability: </strong>
               We build future-proof, scalable digital solutions designed to

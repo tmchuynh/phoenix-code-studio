@@ -256,7 +256,7 @@ const PastProjectsPage: FC = () => {
           let’s discuss how we can bring your next project to life!
         </Button>
       </p>
-      <p className="text-accent-5">
+      <p className="text-accent">
         <i>Note: Click on the badges on each card to quickly filter by tag</i>
       </p>
 

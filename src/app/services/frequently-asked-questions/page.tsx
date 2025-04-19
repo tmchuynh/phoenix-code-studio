@@ -29,7 +29,7 @@ const FaqPage: FC = () => {
 
   return (
     <main className="mx-auto py-6 w-10/12 md:w-11/12">
-      <h1 className="font-bold text-2xl">Welcome to Our FAQs Page!</h1>
+      <h1>Welcome to Our FAQs Page!</h1>
       <p className="mt-4">
         Got questions? We’ve got answers! This page is your go-to resource for
         quick, clear information about our services, products, and processes.
