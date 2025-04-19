@@ -1,8 +1,8 @@
 "use client";
 import AboutSection from "@/components/AboutSection";
+import FeaturedBlogs from "@/components/cards/Blogs/FeaturedBlogs";
+import FeaturedProjects from "@/components/cards/Project/FeaturedProjects";
 import CallToAction from "@/components/CTAs/CallToAction";
-import FeaturedBlogs from "@/components/FeaturedBlogs";
-import FeaturedProjects from "@/components/FeaturedProjects";
 import ServiceHighlights from "@/components/ServiceHighlights";
 import LoadingIndicator from "@/components/states/Loading";
 import Testimonials from "@/components/Testimonials";
@@ -42,9 +42,7 @@ export default function WelcomePage() {
             <div className="mx-auto lg:mx-0 max-w-2xl">
               <div>
                 <p className="font-semibold text-md">Phoenix Code Studio</p>
-                <h1 className="mt-2 font-semibold text-4xl text-pretty sm:text-5xl tracking-wider">
-                  Turn Your Vision into Digital Excellence
-                </h1>
+                <h1>Turn Your Vision into Digital Excellence</h1>
                 <p className="mt-6">
                   Your vision is more than just an idea—it’s the foundation of
                   something extraordinary. At Phoenix Code Studio, we merge
@@ -163,9 +161,7 @@ export default function WelcomePage() {
                 />
               </div>
               <div>
-                <h2 className="mt-16 font-bold text-2xl tracking-tight">
-                  No website? No problem.
-                </h2>
+                <h3 className="mt-16">No website? No problem.</h3>
                 <p className="mt-">
                   We offer comprehensive branding services, including logo
                   design, typography selection, color palette creation, and

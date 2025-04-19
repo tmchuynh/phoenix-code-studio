@@ -1,270 +1,212 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@custom-variant dark (&:is(.dark *));
 
-body {
-  font-family: "Buda", sans-serif;
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-fancy-foreground: var(--fancy-foreground);
+  --color-fancy: var(--fancy);
+  --color-tertiary-foreground: var(--tertiary-foreground);
+  --color-tertiary: var(--tertiary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-@layer base {
-  :root {
-    --background: #ffffff;
-    --foreground: #1a1a1a;
-    --card: #f8f8f8b0;
-    --card-foreground: #1a1a1a;
-    --popover: #f5f5f5;
-    --popover-foreground: #1a1a1a;
-    --primary: #d72638;
-    --primary-foreground: #ffffff;
-    --secondary: #0815a5;
-    --secondary-foreground: #ffffff;
-    --tertiary: #357b8f;
-    --tertiary-foreground: #ffffff;
-    --muted: #e0e0e0;
-    --muted-foreground: #0b0b0b;
-    --accent-1: #fda484;
-    --accent-2: #50201c;
-    --accent-3: #355c3a;
-    --accent-4: #d88a3b;
-    --accent-5: #415a77;
-    --accent-foreground: #ffffff;
-    --destructive: #ff3e3e;
-    --destructive-foreground: #1a1a1a;
-    --border: #d1d5db;
-    --input: #f4f4f4;
-    --ring: #d726386b;
-    --radius: 0.5rem;
-    --chart-1: #d72638;
-    --chart-2: #ff6f3c;
-    --chart-3: #ffc93c;
-    --chart-4: #ff9a3c;
-    --chart-5: #d88a3b;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.875rem;
-    --h3-font-size: 1.5rem;
-    --body-font-size: 1rem;
-    --line-height: 1.5;
-    --sidebar-background: #f7f7f7;
-    --sidebar-foreground: #1a1a1a;
-    --sidebar-primary: #d72638;
-    --sidebar-primary-foreground: #ffffff;
-    --sidebar-accent: #fda484;
-    --sidebar-accent-foreground: #1a1a1a;
-    --sidebar-border: #e2e8f0;
-    --sidebar-ring: #d0cece96;
-  }
-
-  .dark {
-    --background: #0f0f0f;
-    --foreground: #f5f5f5;
-    --card: #151515d2;
-    --card-foreground: #f5f5f5;
-    --popover: #1c1c1c;
-    --popover-foreground: #f5f5f5;
-    --primary: #d72638db;
-    --primary-foreground: #ffffff;
-    --secondary: #e7feff;
-    --secondary-foreground: #0f0f0f;
-    --tertiary: #caf0f8;
-    --tertiary-foreground: #0f0f0f;
-    --muted: #1f1f1f;
-    --muted-foreground: #efefef;
-    --accent-1: #98c1d9;
-    --accent-2: #cecece;
-    --accent-3: #ddbea9;
-    --accent-4: #aa998f;
-    --accent-5: #dad2bc;
-    --accent-foreground: #040404;
-    --destructive: #ff3e3edf;
-    --destructive-foreground: #000000;
-    --border: #686262;
-    --input: #404040;
-    --ring: #d726386b;
-    --chart-1: #d72638;
-    --chart-2: #ff6f3c;
-    --chart-3: #ffc93c;
-    --chart-4: #ff9a3c;
-    --chart-5: #d88a3b;
-    --sidebar-background: #141414;
-    --sidebar-foreground: #f5f5f5;
-    --sidebar-primary: #d72638;
-    --sidebar-primary-foreground: #ffffff;
-    --sidebar-accent: #303030;
-    --sidebar-accent-foreground: #ffffff;
-    --sidebar-border: #2b2b2b;
-    --sidebar-ring: #efefef1b;
-  }
-
-  body {
-    font-family: "Inter", sans-serif;
-    font-size: var(--body-font-size);
-    line-height: var(--line-height);
-    font-weight: 400;
-    letter-spacing: -0.011em;
-  }
-
-  h1 {
-    font-family: "Playfair Display", serif;
-    font-size: var(--h1-font-size);
-    margin-bottom: 1.5rem;
-    letter-spacing: -0.022em;
-    font-weight: 600;
-    line-height: 1.2;
-    color: var(--primary);
-  }
-
-  h2 {
-    font-family: "Inter", sans-serif;
-    font-size: var(--h2-font-size);
-    margin-bottom: 1rem;
-    letter-spacing: -0.019em;
-    line-height: 1.25;
-    font-weight: 600;
-    color: var(--primary);
-  }
-
-  h3 {
-    font-family: "SofiaSans", sans-serif;
-    font-size: var(--h3-font-size);
-    font-weight: 600;
-    padding-top: 1rem;
-    margin-bottom: 0.5rem;
-    color: var(--secondary);
-  }
-
-  h4 {
-    font-family: "RedRose", sans-serif;
-    letter-spacing: -0.71px;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: var(--secondary);
-  }
-
-  p {
-    font-size: var(--body-font-size);
-    line-height: var(--line-height);
-    color: var(--foreground);
-    margin-bottom: 0.75rem;
-  }
-
-  .slogan {
-    font-family: "Ruthie", cursive;
-    font-weight: 500;
-  }
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.16 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(32.9% 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(32.9% 0 0);
+  --primary: oklch(0.37 0.1081 29.23);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.57 0.1703 40.94);
+  --secondary-foreground: oklch(0.19 0 0);
+  --tertiary: oklch(0.62 0.1278 43.07);
+  --tertiary-foreground: oklch(0.19 0 0);
+  --fancy: oklch(0.48 0.1744 30.47);
+  --fancy-foreground: oklch(0.985 0 0);
+  --muted: oklch(88.53% 0 0);
+  --muted-foreground: oklch(0.205 0 0);
+  --accent: oklch(0.31 0.1189 31.18);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.45 0.1676 25.21);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.39 0.1365 30.37);
+  --input: oklch(0.4 0.1269 34.59);
+  --ring: oklch(0.43 0.1554 32.49);
+  --chart-1: oklch(0.6 0.1842 40.46);
+  --chart-2: oklch(0.45 0.1517 36.48);
+  --chart-3: oklch(0.37 0.09 44.49);
+  --chart-4: oklch(0.59 0.1086 51.03);
+  --chart-5: oklch(0.8 0.1277 53.32);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(32.9% 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  --radius: 0.625rem;
 }
 
+.dark {
+  --background: oklch(0.16 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.19 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.19 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.34 0.0997 42.28);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.68 0.111 51.49);
+  --secondary-foreground: oklch(0.19 0 0);
+  --tertiary: oklch(0.86 0.0845 60.52);
+  --tertiary-foreground: oklch(0.19 0 0);
+  --fancy: oklch(0.79 0.1314 48.35);
+  --fancy-foreground: oklch(0.19 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.985 0 0);
+  --accent: oklch(0.57 0.1682 41.25);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.51 0.2047 27.44);
+  --destructive-foreground: oklch(0.19 0 0);
+  --border: oklch(0.32 0 none);
+  --input: oklch(0.64 0.1779 44.16);
+  --ring: oklch(0.6 0.1415 46.27);
+  --chart-1: oklch(0.62 0.2049 35.54);
+  --chart-2: oklch(0.79 0.1326 46.99);
+  --chart-3: oklch(0.7 0.1978 41.34);
+  --chart-4: oklch(0.84 0.0972 49.13);
+  --chart-5: oklch(0.72 0.1665 43.81);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.63 0.1937 39.32);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+/* 1) AlegreyaSansSC (from AlegreyaSansSC-Light.ttf) */
 @font-face {
-  font-family: "RampartOne";
-  src: url("/fonts/RampartOne-Regular.ttf") format("truetype");
-  font-weight: 400;
+  font-family: "AlegreyaSansSC";
+  src: url("/fonts/AlegreyaSansSC-Light.ttf") format("truetype");
+  font-weight: 100 200 300 400 500 600 700 800 900;
   font-style: normal;
 }
 
+/* 2) Caveat (from Caveat-Bold.ttf) */
 @font-face {
-  font-family: "SofiaSans";
-  src: url("/fonts/SofiaSansExtraCondensed-VariableFont_wght.ttf")
-    format("truetype");
-  font-weight: 400;
+  font-family: "Caveat";
+  src: url("/fonts/Caveat-Bold.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
 }
 
+/* 3) GravitasOne (from GravitasOne-Regular.ttf) */
 @font-face {
-  font-family: "Ruthie";
-  src: url("/fonts/Ruthie-Regular.ttf") format("truetype");
-  font-weight: 400;
+  font-family: "GravitasOne";
+  src: url("/fonts/GravitasOne-Regular.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
 }
 
+/* 4) MuktaMalar (from MuktaMalar-Regular.ttf) */
 @font-face {
-  font-family: "RedRose";
-  src: url("/fonts/RedRose-VariableFont_wght.ttf") format("truetype");
-  font-weight: 400;
+  font-family: "MuktaMalar";
+  src: url("/fonts/MuktaMalar-Regular.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
 }
 
+/* 5) Rokkitt (from Rokkitt-VariableFont_wght.ttf) */
 @font-face {
-  font-family: "Notable";
-  src: url("/fonts/Notable-Regular.ttf") format("truetype");
-  font-weight: 400;
+  font-family: "Rokkitt";
+  src: url("/fonts/Rokkitt-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
 }
 
+/* 6) Spectral (from Spectral-Light.ttf) */
 @font-face {
-  font-family: "Dosis";
-  src: url("/fonts/Dosis.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Corinthia";
-  src: url("/fonts/Corinthia-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Buda";
-  src: url("/fonts/Buda-Light.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "BonaNovaSC_Bold";
-  src: url("/fonts/BonaNovaSC-Bold.ttf") format("truetype");
-  font-weight: 400;
+  font-family: "Spectral";
+  src: url("/fonts/Spectral-Light.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-[Spectral];
   }
 
   h1 {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-primary;
+    @apply font-[GravitasOne] my-6 font-bold text-4xl text-fancy md:text-5xl 2xl:text-7xl tracking-tight z-20 ;
   }
 
   h2 {
-    @apply text-2xl md:text-3xl lg:text-4xl font-semibold text-secondary mb-4;
-  }
-
-  h3,
-  h4 {
-    @apply tracking-wider;
+    @apply font-[GravitasOne] my-4  text-3xl text-secondary md:text-4xl 2xl:text-5xl text-balance tracking-tight ;
   }
 
   h3 {
-    @apply text-xl lg:text-2xl 2xl:text-3xl font-semibold text-accent-2;
+    @apply font-[Rokkitt] my-2 font-semibold text-xl lg:text-2xl xl:text-3xl tracking-wide text-tertiary;
   }
 
-  h3 strong {
-    @apply uppercase;
+  h4 {
+    @apply font-[MuktaMalar] font-semibold text-sm lg:text-lg 2xl:text-xl tracking-tighter text-secondary;
   }
 
-  ul {
-    @apply list-disc pl-6 space-y-2 text-pretty my-4;
+  h5 {
+    @apply font-[AlegreyaSansSC] font-semibold text-xs xl:text-sm uppercase tracking-tighter text-secondary dark:text-fancy/80;
   }
-  li,
+
+  blockquote {
+    @apply border-l-2 border-secondary font-[Caveat] pl-4 text-lg lg:text-xl 2xl:text-2xl italic text-fancy;
+  }
   p {
-    @apply text-sm md:text-lg 2xl:text-xl;
-  }
-
-  li strong {
-    @apply text-tertiary;
-  }
-
-  li li strong {
-    @apply text-accent-5;
-  }
-
-  p {
-    @apply my-2;
+    @apply leading-7 text-pretty mt-2;
   }
 }
