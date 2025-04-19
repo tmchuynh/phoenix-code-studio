@@ -20,11 +20,10 @@ import { allServices } from "@/lib/service-categories";
 import { contractExamples } from "@/lib/sub-contracts";
 import { subServiceDetails } from "@/lib/sub-services";
 import { capitalize, cn } from "@/lib/utils";
-import emailjs from "@emailjs/browser";
 import { ChevronDown } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 
 const ContactUsPage: FC = () => {
@@ -49,14 +48,7 @@ const ContactUsPage: FC = () => {
     [key: string]: boolean;
   }>({});
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 250);
-    emailjs.init({
-      publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "",
-    });
-  }, [loading]);
+
 
   if (loading) {
     return <LoadingIndicator />;
@@ -210,27 +202,6 @@ const ContactUsPage: FC = () => {
       selectedContracts: formData.selectedContracts.join(", "), // Convert array to string
       paymentPlan: capitalize(formData.paymentPlan),
     };
-
-    // Ensure the form exists before sending the data using emailjs
-    if (formElement) {
-      emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
-        process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID || "",
-        {
-          from_name: `${formDataToSend.name}`,
-          name: `${formDataToSend.name}`,
-          email: `${formDataToSend.email}`,
-          subject: `${formDataToSend.subject}`,
-          message: `${formDataToSend.message}`,
-          selectedServices: `${formDataToSend.selectedServices}`,
-          selectedContracts: `${formDataToSend.selectedContracts}`,
-          paymentPlan: `${formDataToSend.paymentPlan}`,
-          reply_to: `${formDataToSend.email}`,
-        }
-      );
-    } else {
-      console.error("Form element not found.");
-    }
 
     // Reset form state and selections
     setSelectedServices([]);
