@@ -15,6 +15,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "allowImportingTsExtensions": true,
     "jsx": "preserve",
     "incremental": true,
     "plugins": [
@@ -22,9 +23,34 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
       "@/*": [
-        "./src/*"
+        "src/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@ui/*": [
+        "src/components/ui/*"
+      ],
+      "@lib/*": [
+        "src/lib/*"
+      ],
+      "@utils/*": [
+        "src/lib/utils/*"
+      ],
+      "@ui-screens/*": [
+        "src/lib/utils/screens/*"
+      ],
+      "@context/*": [
+        "src/context/*"
+      ],
+      "@constants/*": [
+        "src/lib/constants/*"
+      ],
+      "@hooks/*": [
+        "src/hooks/*"
       ]
     }
   },
@@ -32,8 +58,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts",
-    "src/app/api/blogs/[slug]/check-image-file"
+    ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
