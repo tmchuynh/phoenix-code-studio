@@ -1,12 +1,12 @@
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { BlogPost } from "@/lib/interfaces";
-import { Button } from "@/components/ui/button";
-import { formatNumber, parseReadingTimeToMinutes, setSlug } from "@/lib/utils";
-import { useRouter } from "next/navigation";
-import Image from "next/image";
-import useSmallScreen from "@/lib/useSmallScreen";
 import useLargeScreensOnly from "@/lib/useLargeScreensOnly";
-import { Badge } from "@/components/ui/badge";
+import useSmallScreen from "@/lib/useSmallScreen";
+import { formatNumber, parseReadingTimeToMinutes, setSlug } from "@/lib/utils";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function BlogCard({
   blog,
@@ -81,7 +81,7 @@ export default function BlogCard({
               variant="ghost"
               className="hover:bg-transparent md:my-2 2xl:my-3 mb-2 px-0 font-bold font-SofiaSans text-left text-md text-primary text-wrap md:text-2xl 2xl:text-3xl hover:text-primary underline underline-offset-2 hover:no-underline tracking-wider"
               onClick={() => {
-                router.push(`/info/blogs/${setSlug(blog.title)}`);
+                router.push(`/blogs/${setSlug(blog.title)}`);
               }}
             >
               {blog.title}
