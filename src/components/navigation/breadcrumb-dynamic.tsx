@@ -9,7 +9,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import useSmallScreen from "@/lib/useSmallScreen";
-import { capitalize } from "@/lib/utils";
+import { capitalize } from "@/lib/utils/format";
 import { ChevronRight, Home } from "lucide-react";
 import { usePathname } from "next/navigation";
 import React from "react";

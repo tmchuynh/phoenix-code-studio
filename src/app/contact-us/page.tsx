@@ -7,24 +7,17 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import subServiceDetails from "@/lib/constants/services/sub-services";
 import { allContracts } from "@/lib/constants/contract-categories";
-import { paymentPlans } from "@/lib/constants/payment-plans";
 import { allServices } from "@/lib/constants/services/service-categories";
+import { subServiceDetails } from "@/lib/constants/services/sub-services";
 import { FormDataType } from "@/lib/interfaces";
 import { contractExamples } from "@/lib/sub-contracts";
-import { capitalize, cn } from "@/lib/utils";
+import { cn } from "@/lib/utils";
+import { capitalize } from "@/lib/utils/format";
 import { ChevronDown } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
-import { FC, useState } from "react";
-import { FaChevronDown } from "react-icons/fa";
+import { FC, useEffect, useState } from "react";
 
 const ContactUsPage: FC = () => {
   const { theme } = useTheme();
@@ -48,7 +41,11 @@ const ContactUsPage: FC = () => {
     [key: string]: boolean;
   }>({});
 
-
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 250);
+  }, [loading]);
 
   if (loading) {
     return <LoadingIndicator />;
@@ -447,34 +444,6 @@ const ContactUsPage: FC = () => {
                 </Collapsible>
               </div>
             ))}
-
-            {/* Payment Plan (Dropdown) */}
-            <div className="mt-6 mb-4">
-              <DropdownMenu className="w-full">
-                <DropdownMenuTrigger asChild>
-                  <button className="flex justify-between items-center mt-2 p-3 border rounded-md focus:ring-2 focus:ring-primary w-full text-start focus:outline-none">
-                    {capitalize(formData.paymentPlan) ||
-                      "Select a Payment Plan"}
-                    <FaChevronDown />
-                  </button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-52 sm:w-64 md:w-96 lg:w-[50em] 2xl:w-[80em]">
-                  {paymentPlans.map((plan, idx) => (
-                    <DropdownMenuItem
-                      key={idx}
-                      onClick={() => {
-                        setFormData((prevState) => ({
-                          ...prevState,
-                          paymentPlan: plan.name,
-                        }));
-                      }}
-                    >
-                      {capitalize(plan.name)}
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </div>
 
             {/* Submit Button */}
             <Button type="submit" className="mx-auto w-1/2">

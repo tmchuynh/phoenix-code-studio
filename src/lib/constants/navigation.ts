@@ -8,12 +8,6 @@ export const about: Menu[] = [
       "Discover our mission, values, and the story behind our brand.",
   },
   {
-    title: "Careers",
-    href: "",
-    description:
-      "Join our team and explore exciting career opportunities with us.",
-  },
-  {
     title: "Blog",
     href: "/blogs",
     description:

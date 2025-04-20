@@ -1,13 +1,13 @@
 "use client";
 import CallToAction from "@/components/CTAs/CallToAction";
-import subServiceDetails from "@/lib/constants/services/sub-services";
 import CannotFind from "@/components/states/CannotFind";
 import LoadingIndicator from "@/components/states/Loading";
 import { Button } from "@/components/ui/button";
+import { subServiceDetails } from "@/lib/constants/services/sub-services";
 import { Category } from "@/lib/interfaces";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
-import { formatName, setSlug } from "@/lib/utils";
+import { setSlug, formatName } from "@/lib/utils/format";
 import { useTheme } from "next-themes";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";

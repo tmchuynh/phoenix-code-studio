@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { BlogPost } from "@/lib/interfaces";
+import { setSlug } from "@/lib/utils/format";
 import Image from "next/image";
 import Link from "next/link";
 

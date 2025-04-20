@@ -1,11 +1,10 @@
 "use client";
-import SubServiceDetails from "@/components/information/subServiceDetails";
 import LoadingIndicator from "@/components/states/Loading";
 import { Button } from "@/components/ui/button";
 import { allServices } from "@/lib/constants/services/service-categories";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
-import { setSlug } from "@/lib/utils";
+import { setSlug } from "@/lib/utils/format";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import { FC, useEffect, useState } from "react";
@@ -88,19 +87,8 @@ const ServicesPage: FC = () => {
               >
                 View More Details
               </Button>
-
-              <Button
-                className="mt-6 w-full self-start"
-                variant={theme === "dark" ? "accent" : "outline"}
-                size={isSmallScreen ? "sm" : "default"}
-                onClick={() => router.push("/services/pricing/payment-plans")}
-              >
-                Explore Our Payment Plans
-              </Button>
             </div>
           </div>
-
-          <SubServiceDetails service={service} index={index} />
 
           <Button
             onClick={() => router.push("/contact-us")}

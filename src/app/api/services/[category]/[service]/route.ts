@@ -1,4 +1,4 @@
-import subServiceDetails from "@/components/information/subServiceDetails";
+import { subServiceDetails } from "@/lib/constants/services/sub-services";
 import { NextRequest, NextResponse } from "next/server";
 
 /**

@@ -10,7 +10,6 @@ import {
   MenubarTrigger,
 } from "@/components/ui/menubar";
 import { about, serviceCategories } from "@/lib/constants/navigation";
-import { paymentPlans } from "@/lib/constants/payment-plans";
 import { allServices } from "@/lib/constants/services/service-categories";
 import { subServiceDetails } from "@/lib/constants/services/sub-services";
 import { useRouter } from "next/navigation";
@@ -82,58 +81,6 @@ export default function Navbar() {
                         {service.title}
                       </p>
                       <small>{service.description}</small>
-                    </MenubarItem>
-                  ))}
-                </MenubarSubContent>
-              </MenubarSub>
-              <MenubarSub>
-                <MenubarSubTrigger className="md:mr-9 w-full text-sm md:text-md lg:text-xl cursor-pointer">
-                  Flexible Payment Plans
-                </MenubarSubTrigger>
-                <MenubarSubContent className="gap-2 grid grid-cols-3 mx-4">
-                  <MenubarItem
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                      router.push("/services/pricing/payment-plans");
-                    }}
-                    className="flex flex-col items-start rounded-lg w-72 text-sm text-start md:text-md lg:text-xl cursor-pointer"
-                  >
-                    <p className="mb-0 font-semibold text-tertiary">Overview</p>
-                    <small>
-                      Browse through our variety of payment plans and choose the
-                      one that best aligns with your needs and budget.
-                    </small>
-                  </MenubarItem>
-                  <MenubarItem
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                      router.push("/services/pricing");
-                    }}
-                    className="flex flex-col items-start rounded-lg w-72 text-sm text-start md:text-md lg:text-xl cursor-pointer"
-                  >
-                    <p className="mb-0 font-semibold text-tertiary">
-                      Service Tiers & Pricing
-                    </p>
-                    <small>
-                      Compare our pricing options and service tiers to find the
-                      best fit for your budget and requirements.
-                    </small>
-                  </MenubarItem>
-                  {paymentPlans.map((plan, index) => (
-                    <MenubarItem
-                      key={`${plan.name}-${index}`}
-                      onClick={() => {
-                        setIsMenuOpen(false);
-                        router.push(
-                          `/services/pricing/payment-plans/${plan.name}`
-                        );
-                      }}
-                      className="flex flex-col items-start rounded-lg w-72 text-sm text-start md:text-md lg:text-xl cursor-pointer"
-                    >
-                      <p className="mb-0 font-semibold text-tertiary">
-                        {plan.title}
-                      </p>
-                      <small>{plan.info.short}</small>
                     </MenubarItem>
                   ))}
                 </MenubarSubContent>
@@ -281,45 +228,6 @@ export default function Navbar() {
                   ))}
                 </MenubarSubContent>
               </MenubarSub>
-              <MenubarSub>
-                <MenubarSubTrigger className="md:mr-9 w-full text-sm md:text-md lg:text-xl cursor-pointer">
-                  Flexible Payment Plans
-                </MenubarSubTrigger>
-                <MenubarSubContent className="mx-4">
-                  <MenubarItem
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                      router.push("/services/pricing/payment-plans");
-                    }}
-                    className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
-                  >
-                    Overview
-                  </MenubarItem>
-                  <MenubarItem
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                      router.push("/services/pricing");
-                    }}
-                    className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
-                  >
-                    Service Tiers & Pricing
-                  </MenubarItem>
-                  {paymentPlans.map((plan, index) => (
-                    <MenubarItem
-                      key={`${plan.name}-${index}`}
-                      onClick={() => {
-                        setIsMenuOpen(false);
-                        router.push(
-                          `/services/pricing/payment-plans/${plan.name}`
-                        );
-                      }}
-                      className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
-                    >
-                      {plan.title}
-                    </MenubarItem>
-                  ))}
-                </MenubarSubContent>
-              </MenubarSub>
               <MenubarSeparator />
               {allServices.map((serviceCategory, serviceIndex) => {
                 const triggerLabel =
@@ -449,45 +357,6 @@ export default function Navbar() {
                       className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
                     >
                       {service.title}
-                    </MenubarItem>
-                  ))}
-                </MenubarSubContent>
-              </MenubarSub>
-              <MenubarSub>
-                <MenubarSubTrigger className="md:mr-9 w-full text-sm md:text-md lg:text-xl cursor-pointer">
-                  Flexible Payment Plans
-                </MenubarSubTrigger>
-                <MenubarSubContent className="mx-4">
-                  <MenubarItem
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                      router.push("/services/pricing/payment-plans");
-                    }}
-                    className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
-                  >
-                    Overview
-                  </MenubarItem>
-                  <MenubarItem
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                      router.push("/services/pricing");
-                    }}
-                    className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
-                  >
-                    Service Tiers & Pricing
-                  </MenubarItem>
-                  {paymentPlans.map((plan, index) => (
-                    <MenubarItem
-                      key={`${plan.name}-${index}`}
-                      onClick={() => {
-                        setIsMenuOpen(false);
-                        router.push(
-                          `/services/pricing/payment-plans/${plan.name}`
-                        );
-                      }}
-                      className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
-                    >
-                      {plan.title}
                     </MenubarItem>
                   ))}
                 </MenubarSubContent>
@@ -630,45 +499,6 @@ export default function Navbar() {
                       }}
                     >
                       {services.title}
-                    </MenubarItem>
-                  ))}
-                </MenubarContent>
-              </MenubarMenu>
-              <MenubarMenu>
-                <MenubarTrigger className="flex justify-between w-full">
-                  Flexible Payment Plans
-                  <FaChevronDown />
-                </MenubarTrigger>
-                <MenubarContent className="block md:hidden -mt-2 ml-9">
-                  <MenubarItem
-                    className="h-fit"
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                      router.push("/services/pricing/payment-plans");
-                    }}
-                  >
-                    Overview
-                  </MenubarItem>
-                  <MenubarItem
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                      router.push("/services/pricing");
-                    }}
-                  >
-                    Service Tiers & Pricing
-                  </MenubarItem>
-                  {paymentPlans.map((plan, index) => (
-                    <MenubarItem
-                      key={`${plan.name}-${index}`}
-                      className="h-fit"
-                      onClick={() => {
-                        setIsMenuOpen(false);
-                        router.push(
-                          `/services/pricing/payment-plans/${plan.name}`
-                        );
-                      }}
-                    >
-                      {plan.title}
                     </MenubarItem>
                   ))}
                 </MenubarContent>
