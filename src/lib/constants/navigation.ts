@@ -2,7 +2,7 @@ import { Menu } from "../types";
 
 export const about: Menu[] = [
   {
-    title: "About Us",
+    title: "Our Story",
     href: "/about-us",
     description:
       "Discover our mission, values, and the story behind our brand.",
@@ -14,13 +14,7 @@ export const about: Menu[] = [
       "Stay informed with expert insights, industry trends, and company updates.",
   },
   {
-    title: "FAQs",
-    href: "/services/frequently-asked-questions",
-    description:
-      "Get answers to commonly asked questions about our services and processes.",
-  },
-  {
-    title: "Testimonials",
+    title: "Testimonials From Our Clients",
     href: "/about-us/testimonials",
     description:
       "See what our clients say about their experiences working with us.",
@@ -32,7 +26,7 @@ export const serviceCategories: Menu[] = [
     title: "Overview",
     href: "/services",
     description:
-      "Explore our range of flexible payment plans designed to fit your needs and budget seamlessly.",
+      "Explore our range of services geared towards your every need.",
   },
   {
     title: "Enterprise-Grade Digital Solutions",
