@@ -7,7 +7,6 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
-import { allContracts } from "@/lib/constants/contract-categories";
 import { allServices } from "@/lib/constants/services/service-categories";
 import { subServiceDetails } from "@/lib/constants/services/sub-services";
 import { FormDataType } from "@/lib/interfaces";
@@ -375,69 +374,6 @@ const ContactUsPage: FC = () => {
                             </label>
                           );
                         }
-                      })}
-                    </div>
-                  </CollapsibleContent>
-                </Collapsible>
-              </div>
-            ))}
-
-            <h2 className="mt-6 mb-2 font-semibold text-xl">
-              Select Contract Examples Interested In (if applicable)
-            </h2>
-            {allContracts.map((contract, index) => (
-              <div className="flex flex-wrap items-center" key={index}>
-                <Collapsible
-                  open={openCollapsibles[`contract-${index}`] || false}
-                  onOpenChange={() => handleOpen("contract", `${index}`)}
-                  className="space-y-2 w-full"
-                >
-                  <div className="flex justify-between items-center space-x-4">
-                    <CollapsibleTrigger asChild>
-                      <div className="flex items-center">
-                        <ChevronDown className="w-4 h-4" />
-                        <label
-                          htmlFor="contract"
-                          className="ml-2 w-full text-lg"
-                        >
-                          <p>{contract.title}</p>
-                          <span className="sr-only">Toggle Contracts</span>
-                        </label>
-                      </div>
-                    </CollapsibleTrigger>
-                  </div>
-
-                  <CollapsibleContent className="space-y-2 ml-5 pb-3">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                      {contract.info.sub.map((subContract) => {
-                        const contractDetails = contractExamples.find(
-                          (details) => details.name === subContract
-                        );
-
-                        if (contractDetails) {
-                          return (
-                            <label
-                              key={subContract}
-                              className="flex items-center my-2"
-                            >
-                              <Checkbox
-                                value={subContract}
-                                checked={selectedContracts.includes(
-                                  capitalize(subContract)
-                                )}
-                                onCheckedChange={(checked) =>
-                                  handleContractCheckboxChange(
-                                    subContract,
-                                    checked
-                                  )
-                                }
-                                className="mr-2"
-                              />
-                              {capitalize(contractDetails.info.title)}
-                            </label>
-                          );
-                        }
-                        return null; // Ensure we return null if no contractDetails are found
                       })}
                     </div>
                   </CollapsibleContent>
