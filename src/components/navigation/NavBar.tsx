@@ -9,13 +9,10 @@ import {
   MenubarSubTrigger,
   MenubarTrigger,
 } from "@/components/ui/menubar";
-import { about, serviceCategories } from "@/lib/constants";
-import { allContracts } from "@/lib/contract-categories";
-import { paymentPlans } from "@/lib/payment-plans";
-import { allServices } from "@/lib/service-categories";
-import { contractExamples } from "@/lib/sub-contracts";
-import { subServiceDetails } from "@/lib/sub-services";
-import { capitalize } from "@/lib/utils";
+import { about, serviceCategories } from "@/lib/constants/navigation";
+import { paymentPlans } from "@/lib/constants/payment-plans";
+import { allServices } from "@/lib/constants/services/service-categories";
+import { subServiceDetails } from "@/lib/constants/services/sub-services";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
@@ -23,6 +20,7 @@ import { IoMdMenu } from "react-icons/io";
 import { ModeButton } from "../buttons/ModeButton";
 import { Button } from "../ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
+import { capitalize } from "@/lib/utils/format";
 export default function Navbar() {
   const router = useRouter();
   const [_, setIsMenuOpen] = useState(false);
@@ -86,88 +84,6 @@ export default function Navbar() {
                       <small>{service.description}</small>
                     </MenubarItem>
                   ))}
-                </MenubarSubContent>
-              </MenubarSub>
-              <MenubarSub>
-                <MenubarSubTrigger className="md:mr-9 w-full text-sm md:text-md lg:text-xl cursor-pointer">
-                  Contract Templates & Examples
-                </MenubarSubTrigger>
-                <MenubarSubContent className="mx-4">
-                  <MenubarItem
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                      router.push("/services/contracts");
-                    }}
-                    className="flex flex-col items-start rounded-lg w-96 text-sm text-start md:text-md lg:text-xl cursor-pointer"
-                  >
-                    <p className="mb-0 font-semibold text-tertiary">Overview</p>
-                    <small>
-                      Explore our selection of contract templates and examples,
-                      designed to suit a variety of business needs and
-                      requirements.
-                    </small>
-                  </MenubarItem>
-                  {allContracts.map((contractCategory, categoryIndex) => {
-                    const contractDetails = contractExamples.find(
-                      (item) =>
-                        item.name === contractCategory.info.sub[categoryIndex]
-                    );
-
-                    if (contractDetails) {
-                      return (
-                        <MenubarSub
-                          key={`${contractCategory.short}-${contractCategory.name}-${categoryIndex}`}
-                        >
-                          <MenubarSubTrigger className="md:mr-9 w-full text-sm md:text-md lg:text-xl cursor-pointer">
-                            {contractCategory.title}
-                          </MenubarSubTrigger>
-                          <MenubarSubContent className="grid grid-cols-2 mx-4">
-                            <MenubarItem
-                              key={`${contractCategory.short}-${contractCategory.name}-${categoryIndex}`}
-                              onClick={() => {
-                                setIsMenuOpen(false);
-                                router.push(
-                                  `/services/contracts/${contractCategory.name}`
-                                );
-                              }}
-                              className="flex flex-col justify-center items-start w-72 text-sm text-start md:text-md lg:text-xl cursor-pointer"
-                            >
-                              <p className="mb-0 font-semibold text-tertiary">
-                                Overview
-                              </p>
-                            </MenubarItem>
-                            {contractCategory.info.sub.map(
-                              (contract, contractIndex) => {
-                                const contractDetail = contractExamples.find(
-                                  (item) => item.name === contract
-                                );
-                                if (contractDetail) {
-                                  return (
-                                    <MenubarItem
-                                      key={`${contractDetail.category}-${contractDetail.name}-${contractIndex}`}
-                                      onClick={() => {
-                                        setIsMenuOpen(false);
-                                        router.push(
-                                          `/services/contracts/${contractDetail.category}/${contractDetail.name}`
-                                        );
-                                      }}
-                                      className="flex flex-col justify-center items-start w-72 text-sm text-start md:text-md lg:text-xl cursor-pointer"
-                                    >
-                                      <p className="mb-0 font-semibold text-tertiary">
-                                        {contractDetail.info?.title ||
-                                          contractDetail.info?.name}
-                                      </p>
-                                    </MenubarItem>
-                                  );
-                                }
-                                return null;
-                              }
-                            )}
-                          </MenubarSubContent>
-                        </MenubarSub>
-                      );
-                    }
-                  })}
                 </MenubarSubContent>
               </MenubarSub>
               <MenubarSub>
@@ -463,69 +379,6 @@ export default function Navbar() {
             </MenubarContent>
           </MenubarMenu>
           <MenubarMenu>
-            <MenubarTrigger className="text-sm md:text-md lg:text-xl cursor-pointer">
-              Contract Templates
-              <FaChevronDown className="ml-3" />
-            </MenubarTrigger>
-            <MenubarContent className="md:block hidden mt-3 -ml-8 w-11/12">
-              <MenubarItem
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  router.push("/services/contracts");
-                }}
-                className="text-sm md:text-md lg:text-xl cursor-pointer"
-              >
-                Overview
-              </MenubarItem>
-              {allContracts.map((contractCategory, categoryIndex) => (
-                <MenubarSub
-                  key={`${contractCategory.short}-${contractCategory.name}-${categoryIndex}`}
-                >
-                  <MenubarSubTrigger className="md:mr-9 w-full text-sm md:text-md lg:text-xl cursor-pointer">
-                    {contractCategory.title}
-                  </MenubarSubTrigger>
-                  <MenubarSubContent className="mx-4">
-                    <MenubarItem
-                      key={`${contractCategory.name}-${contractCategory.short}`}
-                      onClick={() => {
-                        setIsMenuOpen(false);
-                        router.push(
-                          `/services/contracts/${contractCategory.name}`
-                        );
-                      }}
-                      className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
-                    >
-                      {contractCategory.short}s Overview
-                    </MenubarItem>
-                    {contractCategory.info.sub.map(
-                      (contractDetail, detailIndex) => {
-                        const details = contractExamples.find(
-                          (item) => item.name === contractDetail
-                        );
-                        if (details) {
-                          return (
-                            <MenubarItem
-                              key={`${details.category}-${details.name}-${detailIndex}`}
-                              onClick={() => {
-                                setIsMenuOpen(false);
-                                router.push(
-                                  `/services/contracts/${contractCategory.name}/${details.name}`
-                                );
-                              }}
-                              className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
-                            >
-                              {details.info.title}
-                            </MenubarItem>
-                          );
-                        }
-                      }
-                    )}
-                  </MenubarSubContent>
-                </MenubarSub>
-              ))}
-            </MenubarContent>
-          </MenubarMenu>
-          <MenubarMenu>
             <a
               onClick={() => {
                 setIsMenuOpen(false);
@@ -596,36 +449,6 @@ export default function Navbar() {
                       className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
                     >
                       {service.title}
-                    </MenubarItem>
-                  ))}
-                </MenubarSubContent>
-              </MenubarSub>
-              <MenubarSub>
-                <MenubarSubTrigger>
-                  Contract Templates & Examples
-                </MenubarSubTrigger>
-                <MenubarSubContent className="mx-4">
-                  <MenubarItem
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                      router.push("/services/contracts");
-                    }}
-                    className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
-                  >
-                    Overview
-                  </MenubarItem>
-                  {allContracts.map((contractCategory, contractIndex) => (
-                    <MenubarItem
-                      key={`${contractCategory.short}-${contractCategory.name}-${contractIndex}`}
-                      onClick={() => {
-                        setIsMenuOpen(false);
-                        router.push(
-                          `/services/contracts/${contractCategory.name}`
-                        );
-                      }}
-                      className="justify-end text-end text-sm md:text-md lg:text-xl cursor-pointer"
-                    >
-                      {contractCategory.title}
                     </MenubarItem>
                   ))}
                 </MenubarSubContent>

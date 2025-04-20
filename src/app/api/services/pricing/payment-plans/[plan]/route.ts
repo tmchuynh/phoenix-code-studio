@@ -1,7 +1,6 @@
-import { paymentPlans } from "@/lib/payment-plans";
+import { paymentPlans } from "@/lib/constants/payment-plans";
 import { setSlug } from "@/lib/utils";
-import { NextResponse } from "next/server";
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 /**
  * Handles GET requests to retrieve a specific payment plan based on the URL.

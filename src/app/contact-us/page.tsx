@@ -13,12 +13,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { allContracts } from "@/lib/contract-categories";
+import subServiceDetails from "@/lib/constants/services/sub-services";
+import { allContracts } from "@/lib/constants/contract-categories";
+import { paymentPlans } from "@/lib/constants/payment-plans";
+import { allServices } from "@/lib/constants/services/service-categories";
 import { FormDataType } from "@/lib/interfaces";
-import { paymentPlans } from "@/lib/payment-plans";
-import { allServices } from "@/lib/service-categories";
 import { contractExamples } from "@/lib/sub-contracts";
-import { subServiceDetails } from "@/lib/sub-services";
 import { capitalize, cn } from "@/lib/utils";
 import { ChevronDown } from "lucide-react";
 import { useTheme } from "next-themes";

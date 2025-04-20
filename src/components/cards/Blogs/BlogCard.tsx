@@ -1,11 +1,12 @@
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { BlogPost } from "@/lib/interfaces";
 import useLargeScreensOnly from "@/lib/useLargeScreensOnly";
 import useSmallScreen from "@/lib/useSmallScreen";
-import { formatNumber, parseReadingTimeToMinutes, setSlug } from "@/lib/utils";
+import { parseReadingTimeToMinutes } from "@/lib/utils/convert";
+import { formatNumber, setSlug } from "@/lib/utils/format";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function BlogCard({
@@ -50,7 +51,7 @@ export default function BlogCard({
       key={index}
       className="flex flex-col justify-between shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border rounded-lg transition-shadow"
     >
-      <div>
+      <Link href={`/blogs/${setSlug(blog.title)}`} className="group">
         <Image
           src={`/images/blog_card_images/${setSlug(blog.title)}.jpg`}
           width={500}
@@ -58,7 +59,7 @@ export default function BlogCard({
           alt={blog.title}
           className="mx-auto mb-1 rounded-t-md w-full h-40 md:h-52 xl:h-64 object-cover object-center"
         />
-        <div className="relative flex flex-col justify-between px-4 pb-2 h-fit md:h-[24rem] lg:h-[32em] 2xl:h-[35em]">
+        <div className="relative flex flex-col justify-between px-4 pb-2 h-fit md:h-[20rem] lg:h-[25em] 2xl:h-[35em] xl:h-[30em]">
           <div>
             {blog.wordCount && blog.time && (
               <div className="flex justify-between mx-1 pt-5">
@@ -77,15 +78,9 @@ export default function BlogCard({
               </div>
             )}
 
-            <Button
-              variant="ghost"
-              className="hover:bg-transparent md:my-2 2xl:my-3 mb-2 px-0 font-bold font-SofiaSans text-left text-md text-primary text-wrap md:text-2xl 2xl:text-3xl hover:text-primary underline underline-offset-2 hover:no-underline tracking-wider"
-              onClick={() => {
-                router.push(`/blogs/${setSlug(blog.title)}`);
-              }}
-            >
+            <h3 className="underline-offset-2 group-hover:underline decoration-1">
               {blog.title}
-            </Button>
+            </h3>
 
             <div className="flex md:flex-row flex-col justify-between">
               <p className="md:my-1 mt-0.5 lg:mt-4 text-sm md:text-lg lg:text-lg">
@@ -93,7 +88,7 @@ export default function BlogCard({
                 {blog.date.year}
               </p>
             </div>
-            <p className="pb-4 md:text-[15px] lg:text-[18px] 2xl:text-[20px] leading-6">
+            <p className="md:text-[15px] lg:text-[18px] 2xl:text-[20px] leading-6 line-clamp-4 xl:line-clamp-9">
               {blog.excerpt}
             </p>
           </div>
@@ -106,7 +101,7 @@ export default function BlogCard({
                     <Badge
                       key={index}
                       variant={"secondary"}
-                      className="mr-2 xl:text-[15px] xl:leading-5 cursor-pointer"
+                      className="mr-2 cursor-pointer"
                       onClick={() => handleTopicClick(topic)}
                     >
                       {topic}
@@ -123,7 +118,7 @@ export default function BlogCard({
                     <Badge
                       key={index}
                       variant={"secondary"}
-                      className="mr-2 md:text-sm lg:text-[17px] 2xl:text-[18px] md:leading-4 lg:leading-5 cursor-pointer"
+                      className="mr-2 cursor-pointer"
                       onClick={() => handleTopicClick(topic)}
                     >
                       {topic}
@@ -134,7 +129,7 @@ export default function BlogCard({
             </div>
           )}
         </div>
-      </div>
+      </Link>
     </Card>
   );
 }

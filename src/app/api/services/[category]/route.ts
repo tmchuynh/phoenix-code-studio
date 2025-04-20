@@ -1,5 +1,5 @@
+import { allServices } from "@/lib/constants/services/service-categories";
 import { NextRequest, NextResponse } from "next/server";
-import { allServices } from "@/lib/service-categories";
 
 /**
  * Handles GET requests to fetch a service item based on the category specified in the URL.

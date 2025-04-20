@@ -1,27 +1,31 @@
+import { Card } from "@/components/ui/card";
 import { BlogPost } from "@/lib/interfaces";
-import { setSlug } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function FeaturedBlogCard({ blog }: { blog: BlogPost }) {
   return (
-    <article className="group relative flex flex-col justify-end bg-gradient-to-t from-5% from-foreground via-15% via-foreground to-100% to-transparent pt-80 sm:pt-48 lg:pt-80 rounded-2xl w-full h-full hover:underline overflow-hidden">
-      <div className="-z-10 absolute inset-0 w-full h-full">
+    <Card className="flex flex-col justify-between shadow-lg hover:shadow-xl border-2 border-transparent dark:hover:border-border rounded-lg transition-shadow">
+      <Link href={`/blogs/${setSlug(blog.title)}`} className="group">
         <Image
           src={`/images/blog_card_images/${setSlug(blog.title)}.jpg`}
+          width={500}
+          height={300}
           alt={blog.title}
-          className="w-full h-full object-cover"
-          layout="fill"
+          className="mx-auto mb-1 rounded-t-md w-full h-40 md:h-52 xl:h-64 object-cover object-center"
         />
-      </div>
-      <div className="z-20 px-9 py-5 w-full h-full">
-        <h3 className="z-10 mt-3 font-semibold text-background text-lg underline-offset-4 group-hover:underline">
-          <a href={`/blogs/${blog.title}`}>
-            <span className="absolute inset-0" />
-            {blog.title}
-          </a>
-        </h3>
-        <p className="z-10 text-background text-sm">{blog.excerpt}</p>
-      </div>
-    </article>
+        <div className="relative flex flex-col justify-between px-4 pb-2 h-fit md:h-[20rem] lg:h-[25em]">
+          <div>
+            <h3 className="underline-offset-2 group-hover:underline decoration-1">
+              {blog.title}
+            </h3>
+
+            <p className="md:text-[15px] lg:text-[18px] 2xl:text-[20px] leading-6 line-clamp-4 xl:line-clamp-9">
+              {blog.excerpt}
+            </p>
+          </div>
+        </div>
+      </Link>
+    </Card>
   );
 }

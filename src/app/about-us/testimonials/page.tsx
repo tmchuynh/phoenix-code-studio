@@ -2,7 +2,7 @@
 import StarRating from "@/components/cards/Ratings";
 import LoadingIndicator from "@/components/states/Loading";
 import { Card, CardContent } from "@/components/ui/card";
-import { testimonials } from "@/lib/constants";
+import { testimonials } from "@/lib/constants/testimonials";
 import { splitAndTrimQuotes } from "@/lib/utils";
 import { FC, useEffect, useState } from "react";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";

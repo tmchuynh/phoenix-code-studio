@@ -3,7 +3,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { subServiceDetails } from "@/lib/sub-services";
+import { subServiceDetails } from "@/lib/constants/services/sub-services";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import { useState } from "react";

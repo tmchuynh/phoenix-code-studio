@@ -23,15 +23,17 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { blogs } from "@/lib/blog-posts";
+import { blogs } from "@/lib/constants/blog-posts";
 import { IconDisplay } from "@/lib/IconDisplay";
 import { AlertContentType } from "@/lib/types";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
-import { cn, parseReadingTimeToSeconds, sortBlogsByDate } from "@/lib/utils";
+import { cn } from "@/lib/utils";
+import { parseReadingTimeToSeconds } from "@/lib/utils/convert";
 import {
   lengthCount,
   readingLength,
+  sortBlogsByDate,
   topicCounts,
   topics,
 } from "@/lib/utils/sort";

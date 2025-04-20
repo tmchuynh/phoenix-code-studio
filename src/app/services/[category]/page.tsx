@@ -1,10 +1,10 @@
 "use client";
 import CallToAction from "@/components/CTAs/CallToAction";
+import subServiceDetails from "@/lib/constants/services/sub-services";
 import CannotFind from "@/components/states/CannotFind";
 import LoadingIndicator from "@/components/states/Loading";
 import { Button } from "@/components/ui/button";
 import { Category } from "@/lib/interfaces";
-import { subServiceDetails } from "@/lib/sub-services";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
 import { formatName, setSlug } from "@/lib/utils";

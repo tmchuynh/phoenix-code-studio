@@ -8,7 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { FAQs } from "@/lib/constants";
+import { FAQs } from "@/lib/constants/frequently_asked_questions";
 import { useRouter } from "next/navigation";
 import { FC, useEffect, useState } from "react";
 

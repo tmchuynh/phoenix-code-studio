@@ -2,7 +2,7 @@
 import SubServiceDetails from "@/components/information/subServiceDetails";
 import LoadingIndicator from "@/components/states/Loading";
 import { Button } from "@/components/ui/button";
-import { allServices } from "@/lib/service-categories";
+import { allServices } from "@/lib/constants/services/service-categories";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
 import { setSlug } from "@/lib/utils";

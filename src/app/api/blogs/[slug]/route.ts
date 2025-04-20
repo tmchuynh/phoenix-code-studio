@@ -1,7 +1,6 @@
-import { blogs } from "@/lib/blog-posts";
+import { blogs } from "@/lib/constants/blog-posts";
 import { setSlug } from "@/lib/utils";
-import { NextResponse } from "next/server";
-import { NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 /**
  * Handles GET requests to fetch a blog post by its slug.

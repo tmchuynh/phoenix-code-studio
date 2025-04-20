@@ -1,6 +1,7 @@
-import { testimonials } from "@/lib/constants";
+import { testimonials } from "@/lib/constants/testimonials";
 import { Testimonial } from "@/lib/interfaces";
 import useSmallScreen from "@/lib/useSmallScreen";
+import { featuredArray } from "@/lib/utils/sort";
 import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import "swiper/css";
@@ -18,22 +19,7 @@ const Testimonials = () => {
     router.push("/about-us/testimonials");
   };
 
-  /**
-   * Filters and sorts the testimonials to get the featured ones.
-   *
-   * This function performs the following steps:
-   * 1. Filters the testimonials to include only those marked as featured.
-   * 2. Sorts the filtered testimonials alphabetically by the name property.
-   *
-   * @constant
-   * @type {Array<Testimonial>}
-   * @returns {Array<Testimonial>} An array of featured testimonials sorted by name.
-   */
-  const featuredTestimonials: Array<Testimonial> = testimonials
-    .filter((testimonial) => testimonial.featured === true)
-    .sort((a, b) => {
-      return a.name.localeCompare(b.name);
-    });
+  const featuredTestimonials: Array<Testimonial> = featuredArray(testimonials);
 
   return (
     <>

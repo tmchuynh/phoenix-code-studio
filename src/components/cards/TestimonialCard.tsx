@@ -20,22 +20,18 @@ export default function TestimonialCard({
           <AvatarFallback>{initials}</AvatarFallback>
         </Avatar>
         <div>
-          <p className="mt-4 mb-1 font-bold text-secondary">
-            {testimonial.name}
-          </p>
-          <p className="mb-0 text-sm">{testimonial.position}</p>
+          <h5>{testimonial.name}</h5>
+          <code className="mb-0 text-sm">{testimonial.position}</code>
         </div>
       </figcaption>
-      <figure className="flex flex-col flex-auto mt-10 text-pretty">
+      <figure className="flex flex-col flex-auto mt-3 ml-4 text-pretty">
         <blockquote className="">
-          <p className="italic">
-            <span>"</span>
+          <p>
             <span className="mt-4 text-center">
               {isSmallScreen
                 ? `${testimonial.quote.substring(0, 15)}...`
                 : testimonial.quote}
             </span>
-            <span>"</span>
           </p>
         </blockquote>
       </figure>

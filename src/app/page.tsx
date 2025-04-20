@@ -1,13 +1,14 @@
 "use client";
 import AboutSection from "@/components/AboutSection";
 import FeaturedBlogs from "@/components/cards/Blogs/FeaturedBlogs";
-import FeaturedProjects from "@/components/cards/Project/FeaturedProjects";
 import CallToAction from "@/components/CTAs/CallToAction";
 import ServiceHighlights from "@/components/ServiceHighlights";
 import LoadingIndicator from "@/components/states/Loading";
 import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
+import { blogs } from "@/lib/constants/blog-posts";
 import { cn } from "@/lib/utils";
+import { featuredArray } from "@/lib/utils/sort";
 import { ServerIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -19,6 +20,8 @@ export default function WelcomePage() {
   const router = useRouter();
   const { theme } = useTheme();
   const [loading, setLoading] = useState(true);
+
+  const featuredBlogs = featuredArray(blogs);
 
   useEffect(() => {
     setTimeout(() => {
@@ -210,17 +213,14 @@ export default function WelcomePage() {
         <CallToAction />
       </div>
 
-      {/* Testimonials Section */}
-      <Testimonials />
-
       {/* About Section */}
       <AboutSection />
 
-      {/* Featured Projects Section */}
-      <FeaturedProjects />
-
       {/* Featured Blogs Section */}
       <FeaturedBlogs />
+
+      {/* Testimonials Section */}
+      <Testimonials />
     </main>
   );
 }

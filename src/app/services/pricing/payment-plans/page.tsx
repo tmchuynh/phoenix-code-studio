@@ -2,7 +2,7 @@
 import PaymentPlans from "@/components/information/paymentPlans";
 import LoadingIndicator from "@/components/states/Loading";
 import { Button } from "@/components/ui/button";
-import { paymentPlans } from "@/lib/payment-plans";
+import { paymentPlans } from "@/lib/constants/payment-plans";
 import useMediumScreen from "@/lib/useMediumScreen";
 import useSmallScreen from "@/lib/useSmallScreen";
 import { useTheme } from "next-themes";
