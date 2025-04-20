@@ -44,12 +44,12 @@ export const ModeButton = (): JSX.Element | null => {
   const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
-    <div className="flex items-center mx-4">
+    <div className="z-10 flex items-center bg-primary/50 mx-4 rounded-lg text-accent dark:text-tertiary">
       <p className="sr-only">Toggle theme</p>
       <Toggle
         aria-label="Toggle theme"
         onClick={toggleTheme}
-        className="flex justify-center items-center hover:bg-secondary p-2 rounded-lg hover:text-secondary-foreground"
+        className="flex justify-center items-center hover:bg-muted p-2 border hover:border-secondary border-transparent rounded-lg hover:text-secondary"
       >
         {currentTheme === "dark" ? (
           <>
