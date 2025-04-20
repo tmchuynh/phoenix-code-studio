@@ -1,5 +1,37 @@
-import { blogs } from "../blog-posts";
+import { blogs } from "../constants/blog-posts";
 import { BlogPost } from "../interfaces";
+import { convertToDate, compareDates } from "./convert";
+
+/**
+ * Filters an array to return only items where the 'featured' property is truthy.
+ *
+ * Note: This function uses `array.filter`, which creates a new array.
+ * For very large input arrays, this could have performance implications.
+ * Ensure the input array size is reasonable to avoid potential performance issues.
+ *
+ * @param array - The array to filter
+ * @returns A new array containing only the items where the 'featured' property is truthy
+ */
+export function featuredArray(array: any[]) {
+  return array.filter((item) => item?.featured === true);
+}
+
+/**
+ * Sorts an array of blog posts by their date in ascending order.
+ *
+ * @param array - The array of blog posts to be sorted.
+ * @returns A new array of blog posts sorted by date.
+ */
+export function sortBlogsByDate(array: BlogPost[]): BlogPost[] {
+  const newArray = array.sort((a, b) => {
+    const dateA = convertToDate(a.date);
+    const dateB = convertToDate(b.date);
+
+    return compareDates([dateA, dateB]);
+  });
+
+  return newArray;
+}
 
 /**
  * Groups blog posts by year, month, and day, and counts the number of blog posts.
@@ -117,8 +149,6 @@ export const readingLength = Array.from(
 
 // const authors = Array.from(new Set(blogs.map((blog) => blog.author)));
 
-
-
 /**
  * Calculates the count of each subtopic from a list of blogs.
  *
@@ -150,11 +180,5 @@ export const lengthCount = readingLength.reduce((acc, length) => {
   acc[length] = blogs.filter((blog) => blog.timeSpan === length).length;
   return acc;
 }, {} as Record<string, number>);
-
-
-
-
-
-
 
 
