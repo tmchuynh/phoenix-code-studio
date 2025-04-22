@@ -1,6 +1,5 @@
 "use client";
 import BackToTop from "@/components/buttons/BackToTop";
-import Navbar from "@/components/navigation/NavBar";
 import DynamicBreadcrumb from "@/components/navigation/breadcrumb-dynamic";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
