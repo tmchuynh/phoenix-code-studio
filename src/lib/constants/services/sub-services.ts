@@ -1,6 +1,6 @@
 import { SubItem } from "@/lib/interfaces";
 
-export const subServiceDetails: SubItem[] = [
+export const subServiceDetails = [
   {
     category: "scalable-corporate-digital-solutions",
     name: "authentic-brand-storytelling-that-captivates-connects",
