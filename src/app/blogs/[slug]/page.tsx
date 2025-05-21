@@ -5,7 +5,7 @@ import LoadingIndicator from "@/components/states/Loading";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BlogPost } from "@/lib/interfaces";
-import { setSlug } from "@/lib/utils";
+import { setSlug } from "@/lib/utils/format";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
