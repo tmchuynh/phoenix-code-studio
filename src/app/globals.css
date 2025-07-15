@@ -30,8 +30,12 @@
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
-  --color-fancy-foreground: var(--fancy-foreground);
-  --color-fancy: var(--fancy);
+  --color-quaternary-foreground: var(--quaternary-foreground);
+  --color-quaternary: var(--quaternary);
+  --color-quinary-foreground: var(--quinary-foreground);
+  --color-quinary: var(--quinary);
+  --color-senary-foreground: var(--senary-foreground);
+  --color-senary: var(--senary);
   --color-tertiary-foreground: var(--tertiary-foreground);
   --color-tertiary: var(--tertiary);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -49,82 +53,150 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.16 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(32.9% 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(32.9% 0 0);
-  --primary: oklch(0.37 0.1081 29.23);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.57 0.1703 40.94);
-  --secondary-foreground: oklch(0.19 0 0);
-  --tertiary: oklch(0.62 0.1278 43.07);
-  --tertiary-foreground: oklch(0.19 0 0);
-  --fancy: oklch(0.48 0.1744 30.47);
-  --fancy-foreground: oklch(0.985 0 0);
-  --muted: oklch(88.53% 0 0);
-  --muted-foreground: oklch(0.205 0 0);
-  --accent: oklch(0.31 0.1189 31.18);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.45 0.1676 25.21);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.39 0.1365 30.37);
-  --input: oklch(0.4 0.1269 34.59);
-  --ring: oklch(0.43 0.1554 32.49);
-  --chart-1: oklch(0.6 0.1842 40.46);
-  --chart-2: oklch(0.45 0.1517 36.48);
-  --chart-3: oklch(0.37 0.09 44.49);
-  --chart-4: oklch(0.59 0.1086 51.03);
-  --chart-5: oklch(0.8 0.1277 53.32);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(32.9% 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-  --radius: 0.625rem;
+  /* Royal Ivory - Elegant warm white background */
+  --background: oklch(0.98 0.01 65);
+  --foreground: oklch(0.15 0.02 275);
+  
+  /* Sophisticated card styling with subtle warmth */
+  --card: oklch(0.99 0.005 70);
+  --card-foreground: oklch(0.25 0.02 275);
+  
+  /* Popover with royal elegance */
+  --popover: oklch(0.98 0.01 65);
+  --popover-foreground: oklch(0.25 0.02 275);
+  
+  /* Deep Royal Purple - Professional and commanding */
+  --primary: oklch(0.28 0.12 275);
+  --primary-foreground: oklch(0.98 0.01 65);
+  
+  /* Sophisticated Gold - Luxurious accent */
+  --secondary: oklch(0.65 0.08 85);
+  --secondary-foreground: oklch(0.15 0.02 275);
+  
+  /* Elegant Sage - Fresh and welcoming */
+  --tertiary: oklch(0.72 0.06 150);
+  --tertiary-foreground: oklch(0.15 0.02 275);
+  
+  /* Royal Blue - Classic and trustworthy */
+  --quaternary: oklch(0.45 0.15 250);
+  --quaternary-foreground: oklch(0.98 0.01 65);
+  
+  /* Elegant Rose - Sophisticated and warm */
+  --quinary: oklch(0.68 0.08 25);
+  --quinary-foreground: oklch(0.15 0.02 275);
+  
+  /* Deep Emerald - Rich and prestigious */
+  --senary: oklch(0.42 0.12 165);
+  --senary-foreground: oklch(0.98 0.01 65);
+  
+  /* Soft pearl gray - Modern and clean */
+  --muted: oklch(0.92 0.005 70);
+  --muted-foreground: oklch(0.45 0.02 275);
+  
+  /* Refined accent - Professional highlight */
+  --accent: oklch(0.35 0.08 280);
+  --accent-foreground: oklch(0.98 0.01 65);
+  
+  /* Elegant error state */
+  --destructive: oklch(0.55 0.15 15);
+  --destructive-foreground: oklch(0.98 0.01 65);
+  
+  /* Sophisticated borders */
+  --border: oklch(0.85 0.02 275);
+  --input: oklch(0.88 0.02 275);
+  --ring: oklch(0.45 0.12 275);
+  
+  /* Professional chart colors */
+  --chart-1: oklch(0.45 0.15 250);
+  --chart-2: oklch(0.65 0.08 85);
+  --chart-3: oklch(0.72 0.06 150);
+  --chart-4: oklch(0.28 0.12 275);
+  --chart-5: oklch(0.55 0.1 200);
+  
+  /* Elegant sidebar */
+  --sidebar: oklch(0.96 0.01 65);
+  --sidebar-foreground: oklch(0.25 0.02 275);
+  --sidebar-primary: oklch(0.28 0.12 275);
+  --sidebar-primary-foreground: oklch(0.98 0.01 65);
+  --sidebar-accent: oklch(0.92 0.005 70);
+  --sidebar-accent-foreground: oklch(0.25 0.02 275);
+  --sidebar-border: oklch(0.88 0.02 275);
+  --sidebar-ring: oklch(0.65 0.04 275);
+  
+  /* Refined radius for modern elegance */
+  --radius: 0.75rem;
 }
 
 .dark {
-  --background: oklch(0.16 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.19 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.19 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.34 0.0997 42.28);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.68 0.111 51.49);
-  --secondary-foreground: oklch(0.19 0 0);
-  --tertiary: oklch(0.86 0.0845 60.52);
-  --tertiary-foreground: oklch(0.19 0 0);
-  --fancy: oklch(0.79 0.1314 48.35);
-  --fancy-foreground: oklch(0.19 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.985 0 0);
-  --accent: oklch(0.57 0.1682 41.25);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.51 0.2047 27.44);
-  --destructive-foreground: oklch(0.19 0 0);
-  --border: oklch(0.32 0 none);
-  --input: oklch(0.64 0.1779 44.16);
-  --ring: oklch(0.6 0.1415 46.27);
-  --chart-1: oklch(0.62 0.2049 35.54);
-  --chart-2: oklch(0.79 0.1326 46.99);
-  --chart-3: oklch(0.7 0.1978 41.34);
-  --chart-4: oklch(0.84 0.0972 49.13);
-  --chart-5: oklch(0.72 0.1665 43.81);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.63 0.1937 39.32);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* Rich midnight - Sophisticated dark background */
+  --background: oklch(0.08 0.02 275);
+  --foreground: oklch(0.92 0.01 65);
+  
+  /* Elevated dark cards with subtle warmth */
+  --card: oklch(0.12 0.02 275);
+  --card-foreground: oklch(0.88 0.01 65);
+  
+  /* Dark popover with royal elegance */
+  --popover: oklch(0.10 0.02 275);
+  --popover-foreground: oklch(0.88 0.01 65);
+  
+  /* Luminous Royal Purple - Elegant and refined */
+  --primary: oklch(0.62 0.15 275);
+  --primary-foreground: oklch(0.08 0.02 275);
+  
+  /* Warm Gold - Luxurious and inviting */
+  --secondary: oklch(0.78 0.12 85);
+  --secondary-foreground: oklch(0.08 0.02 275);
+  
+  /* Fresh Sage - Welcoming and natural */
+  --tertiary: oklch(0.75 0.08 150);
+  --tertiary-foreground: oklch(0.08 0.02 275);
+  
+  /* Royal Blue - Classic and trustworthy */
+  --quaternary: oklch(0.68 0.18 250);
+  --quaternary-foreground: oklch(0.08 0.02 275);
+  
+  /* Elegant Rose - Sophisticated and warm */
+  --quinary: oklch(0.72 0.12 25);
+  --quinary-foreground: oklch(0.08 0.02 275);
+  
+  /* Deep Emerald - Rich and prestigious */
+  --senary: oklch(0.65 0.15 165);
+  --senary-foreground: oklch(0.08 0.02 275);
+  
+  /* Sophisticated muted tones */
+  --muted: oklch(0.18 0.02 275);
+  --muted-foreground: oklch(0.68 0.01 65);
+  
+  /* Refined accent - Professional highlight */
+  --accent: oklch(0.58 0.12 280);
+  --accent-foreground: oklch(0.08 0.02 275);
+  
+  /* Elegant error state */
+  --destructive: oklch(0.65 0.18 15);
+  --destructive-foreground: oklch(0.08 0.02 275);
+  
+  /* Sophisticated borders */
+  --border: oklch(0.25 0.02 275);
+  --input: oklch(0.22 0.02 275);
+  --ring: oklch(0.62 0.15 275);
+  
+  /* Professional chart colors for dark mode */
+  --chart-1: oklch(0.68 0.18 250);
+  --chart-2: oklch(0.78 0.12 85);
+  --chart-3: oklch(0.75 0.08 150);
+  --chart-4: oklch(0.62 0.15 275);
+  --chart-5: oklch(0.72 0.14 200);
+  
+  /* Elegant dark sidebar */
+  --sidebar: oklch(0.10 0.02 275);
+  --sidebar-foreground: oklch(0.88 0.01 65);
+  --sidebar-primary: oklch(0.62 0.15 275);
+  --sidebar-primary-foreground: oklch(0.08 0.02 275);
+  --sidebar-accent: oklch(0.16 0.02 275);
+  --sidebar-accent-foreground: oklch(0.88 0.01 65);
+  --sidebar-border: oklch(0.20 0.02 275);
+  --sidebar-ring: oklch(0.45 0.08 275);
 }
 
 /* 1) AlegreyaSansSC (from AlegreyaSansSC-Light.ttf) */
@@ -184,27 +256,31 @@
   }
 
   h1 {
-    @apply font-[GravitasOne] my-6 font-bold text-4xl text-fancy md:text-5xl 2xl:text-7xl tracking-tight z-20 ;
+    @apply font-[GravitasOne] my-8 font-bold text-4xl text-primary md:text-5xl 2xl:text-5xl tracking-tight z-20 leading-tight;
   }
 
   h2 {
-    @apply font-[GravitasOne] my-4  text-3xl text-secondary md:text-4xl 2xl:text-5xl text-balance tracking-tight ;
+    @apply font-[GravitasOne] my-6 font-bold text-3xl text-secondary md:text-4xl 2xl:text-4xl text-balance tracking-tight leading-tight;
   }
 
   h3 {
-    @apply font-[Rokkitt] my-2 font-semibold text-xl lg:text-2xl xl:text-3xl tracking-wide text-tertiary;
+    @apply font-[Rokkitt] my-4 font-bold text-xl lg:text-2xl xl:text-3xl tracking-wide text-tertiary leading-snug;
   }
 
   h4 {
-    @apply font-[MuktaMalar] font-semibold text-sm lg:text-lg 2xl:text-xl tracking-tighter text-secondary;
+    @apply font-[MuktaMalar] my-3 font-bold text-lg lg:text-xl 2xl:text-2xl tracking-normal text-quaternary leading-snug;
   }
 
   h5 {
-    @apply font-[AlegreyaSansSC] font-semibold text-xs xl:text-sm uppercase tracking-tighter text-secondary dark:text-fancy/80;
+    @apply font-[AlegreyaSansSC] my-2 font-bold text-base xl:text-lg uppercase tracking-wide text-quinary leading-relaxed;
+  }
+
+  h6 {
+    @apply font-[Spectral] my-2 font-semibold text-sm xl:text-base tracking-normal text-senary leading-relaxed;
   }
 
   blockquote {
-    @apply border-l-2 border-secondary font-[Caveat] pl-4 text-lg lg:text-xl 2xl:text-2xl italic text-fancy;
+    @apply border-l-2 border-secondary font-[Caveat] pl-4 text-lg lg:text-xl 2xl:text-2xl italic text-quaternary;
   }
   p {
     @apply leading-7 text-pretty mt-2;
