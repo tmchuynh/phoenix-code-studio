@@ -1,6 +1,6 @@
+import { useNavigation } from "@/hooks/useNavigation";
 import { NavigationItem } from "@/lib/interfaces";
 import { cn } from "@/lib/utils";
-import { useNavigation } from "@/hooks/useNavigation";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
