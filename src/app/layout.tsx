@@ -7,7 +7,6 @@ import Head from "next/head";
 import { NotFoundProvider } from "./context/NotFoundContext";
 import "./globals.css";
 import { Providers } from "./providers";
-import FlyoutMenu from "@/components/navigation/FlyoutMenu";
 
 export default function RootLayout({
   children,
@@ -67,7 +66,6 @@ const MainContent = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <main className="mx-auto overflow-hidden">
-        <FlyoutMenu />
         <DynamicBreadcrumb />
         {children}
         <Analytics />
