@@ -57,7 +57,7 @@ export default function LayoutWrapper({
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen overflow-hidden">
       {/* Sidebar */}
       <Sidebar isOpen={sidebarOpen} onClose={closeSidebar} />
 
@@ -71,7 +71,7 @@ export default function LayoutWrapper({
         <TopNavbar onToggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} />
 
         {/* Main content */}
-        <main className="flex-1 overflow-auto">
+        <main className="flex-1">
           <div className="mx-auto px-4 lg:px-8 py-8">{children}</div>
         </main>
       </div>
