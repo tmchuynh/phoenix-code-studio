@@ -66,7 +66,7 @@ export default function RootLayout({
 const MainContent = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <main className="mx-auto overflow-hidden">
+      <main className="mx-auto overflow-x-clip">
         <LayoutWrapper>
           <DynamicBreadcrumb />
           {children}
