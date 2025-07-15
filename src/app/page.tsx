@@ -1,14 +1,7 @@
 "use client";
-import AboutSection from "@/components/AboutSection";
-import FeaturedBlogs from "@/components/cards/Blogs/FeaturedBlogs";
-import CallToAction from "@/components/CTAs/CallToAction";
-import ServiceHighlights from "@/components/ServiceHighlights";
 import LoadingIndicator from "@/components/states/Loading";
-import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
-import { blogs } from "@/lib/constants/blog-posts";
 import { cn } from "@/lib/utils";
-import { featuredArray } from "@/lib/utils/sort";
 import { ServerIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -20,8 +13,6 @@ export default function WelcomePage() {
   const router = useRouter();
   const { theme } = useTheme();
   const [loading, setLoading] = useState(true);
-
-  const featuredBlogs = featuredArray(blogs);
 
   useEffect(() => {
     setTimeout(() => {
@@ -70,7 +61,7 @@ export default function WelcomePage() {
                 </p>
               </div>
 
-              <div className="gap-x-8 gap-y-16 grid grid-cols-1 mx-auto lg:mx-0 mt-8 lg:mt-0 max-w-5xl lg:max-w-none">
+              <div className="gap-x-8 gap-y-16 grid grid-cols-1 mt-8 lg:mt-0 mx-auto lg:mx-0 max-w-5xl lg:max-w-none">
                 <div className="lg:col-span-7 max-w-xl text-base/7">
                   <ul role="list" className="space-y-8 mt-8 max-w-xl">
                     <li className="flex gap-x-3">
@@ -136,7 +127,7 @@ export default function WelcomePage() {
               </div>
             </div>
 
-            <div className="relative flex flex-col justify-start items-start lg:order-last h-full">
+            <div className="relative flex flex-col items-start justify-start lg:order-last h-full">
               <div>
                 <p>
                   We proudly serve a diverse range of industries, including
@@ -159,7 +150,7 @@ export default function WelcomePage() {
                   width={500}
                   height={500}
                   className={cn(
-                    "w-44 md:w-64 lg:w-80 rounded-t-md object-cover mx-auto mb-1"
+                    "mb-1 mx-auto rounded-t-md w-44 md:w-64 lg:w-80 object-cover"
                   )}
                 />
               </div>
@@ -204,23 +195,6 @@ export default function WelcomePage() {
           </div>
         </div>
       </div>
-
-      {/* Services Highlight Section */}
-      <ServiceHighlights />
-
-      {/* Call to Action Section */}
-      <div className="mx-auto px-12">
-        <CallToAction />
-      </div>
-
-      {/* About Section */}
-      <AboutSection />
-
-      {/* Featured Blogs Section */}
-      <FeaturedBlogs />
-
-      {/* Testimonials Section */}
-      <Testimonials />
     </main>
   );
 }
