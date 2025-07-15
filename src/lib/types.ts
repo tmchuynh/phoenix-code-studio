@@ -12,8 +12,6 @@ export type NotFoundContextType = {
 
 export type LengthType = number | string;
 
-export type ServiceTypeKeys = "service" | "contract";
-
 export type DateObject = {
   month: number;
   day: number;
@@ -31,11 +29,6 @@ export type Menu = {
   description: string;
 };
 
-export type PricingTier = {
-  name: string;
-  startingPrice: number;
-  info: string;
-};
 
 export type StarRatingProps = {
   rating: number;
