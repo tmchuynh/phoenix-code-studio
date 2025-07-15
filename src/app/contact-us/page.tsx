@@ -2,7 +2,7 @@ import ContactForm from "@/components/forms/ContactForm";
 
 export default function ContactUs() {
   return (
-    <div className="relative mx-auto sm:pt-5 w-11/12 overflow-hidden">
+    <div className="relative mx-auto sm:pt-5 w-11/12">
       <h1>Contact Us</h1>
       <p>
         Ready to start your next project or have questions about our services?
