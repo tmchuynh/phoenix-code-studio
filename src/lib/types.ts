@@ -29,8 +29,22 @@ export type Menu = {
   description: string;
 };
 
-
 export type StarRatingProps = {
   rating: number;
   maxStars?: number;
 };
+
+export type InquiryFormData = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber?: string;
+  inquiryType: InquiryTypes;
+  message: string;
+};
+
+export type InquiryTypes =
+  | "General Inquiry"
+  | "Web Design"
+  | "Custom Website Development"
+  | "Other";

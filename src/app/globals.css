@@ -142,7 +142,7 @@
   
   /* Bright Navy Blue - Strong contrast for dark mode */
   --primary: oklch(49.976% 0.19669 259.32);
-  --primary-foreground: oklch(0.08 0.02 240);
+  --primary-foreground: oklch(99.107% 0.00011 271.152);
   
   /* Medium Blue - Professional and readable */
   --secondary: oklch(72.008% 0.14215 229.135);
