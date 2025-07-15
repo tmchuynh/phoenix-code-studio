@@ -65,29 +65,29 @@
   --popover: oklch(0.98 0.01 65);
   --popover-foreground: oklch(0.25 0.02 275);
   
-  /* Deep Royal Purple - Professional and commanding */
-  --primary: oklch(0.28 0.12 275);
+  /* Royal Blue - Classic and trustworthy */
+  --primary: oklch(20.362% 0.05199 247.653);
   --primary-foreground: oklch(0.98 0.01 65);
   
-  /* Sophisticated Gold - Luxurious accent */
-  --secondary: oklch(0.65 0.08 85);
-  --secondary-foreground: oklch(0.15 0.02 275);
+  /* Deep Royal Purple - Professional and commanding */
+  --secondary: oklch(0.32 0.15 275);
+  --secondary-foreground: oklch(0.98 0.01 65);
   
-  /* Elegant Sage - Fresh and welcoming */
-  --tertiary: oklch(0.72 0.06 150);
+  /* Deeper Rose - Sophisticated and warm */
+  --tertiary: oklch(0.58 0.12 25);
   --tertiary-foreground: oklch(0.15 0.02 275);
   
-  /* Royal Blue - Classic and trustworthy */
-  --quaternary: oklch(0.45 0.15 250);
+  /* Deeper Emerald - Rich and sophisticated */
+  --quaternary: oklch(0.38 0.14 165);
   --quaternary-foreground: oklch(0.98 0.01 65);
   
-  /* Elegant Rose - Sophisticated and warm */
-  --quinary: oklch(0.68 0.08 25);
+  /* Muted Sage - Fresh and welcoming */
+  --quinary: oklch(0.68 0.08 150);
   --quinary-foreground: oklch(0.15 0.02 275);
   
-  /* Deep Emerald - Rich and prestigious */
-  --senary: oklch(0.42 0.12 165);
-  --senary-foreground: oklch(0.98 0.01 65);
+  /* Sophisticated Gold - Luxurious accent */
+  --senary: oklch(0.65 0.08 85);
+  --senary-foreground: oklch(0.15 0.02 275);
   
   /* Soft pearl gray - Modern and clean */
   --muted: oklch(0.92 0.005 70);
@@ -140,28 +140,28 @@
   --popover: oklch(0.10 0.02 275);
   --popover-foreground: oklch(0.88 0.01 65);
   
-  /* Luminous Royal Purple - Elegant and refined */
-  --primary: oklch(0.62 0.15 275);
+  /* Royal Blue - Classic and trustworthy */
+  --primary: oklch(83.157% 0.09105 243.749);
   --primary-foreground: oklch(0.08 0.02 275);
   
-  /* Warm Gold - Luxurious and inviting */
-  --secondary: oklch(0.78 0.12 85);
+  /* Rich Royal Purple - Elegant and refined */
+  --secondary: oklch(51.923% 0.26661 269.3);
   --secondary-foreground: oklch(0.08 0.02 275);
   
-  /* Fresh Sage - Welcoming and natural */
-  --tertiary: oklch(0.75 0.08 150);
+  /* Warm Rose - Sophisticated and visible */
+  --tertiary: oklch(0.68 0.15 25);
   --tertiary-foreground: oklch(0.08 0.02 275);
   
-  /* Royal Blue - Classic and trustworthy */
-  --quaternary: oklch(0.68 0.18 250);
+  /* Rich Emerald - Sophisticated and muted */
+  --quaternary: oklch(0.55 0.12 165);
   --quaternary-foreground: oklch(0.08 0.02 275);
   
-  /* Elegant Rose - Sophisticated and warm */
-  --quinary: oklch(0.72 0.12 25);
+  /* Muted Sage - Welcoming and balanced */
+  --quinary: oklch(0.68 0.10 150);
   --quinary-foreground: oklch(0.08 0.02 275);
   
-  /* Deep Emerald - Rich and prestigious */
-  --senary: oklch(0.65 0.15 165);
+  /* Warm Gold - Luxurious and inviting */
+  --senary: oklch(0.78 0.12 85);
   --senary-foreground: oklch(0.08 0.02 275);
   
   /* Sophisticated muted tones */
@@ -280,7 +280,7 @@
   }
 
   blockquote {
-    @apply border-l-2 border-secondary font-[Caveat] pl-4 text-lg lg:text-xl 2xl:text-2xl italic text-quaternary;
+    @apply border-l-4 border-secondary font-[Caveat] pl-4 my-5 ml-4 text-lg lg:text-xl 2xl:text-2xl italic text-quaternary;
   }
   p {
     @apply leading-7 text-pretty mt-2;
