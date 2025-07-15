@@ -1,6 +1,7 @@
 "use client";
 import BackToTop from "@/components/buttons/BackToTop";
 import DynamicBreadcrumb from "@/components/navigation/breadcrumb-dynamic";
+import LayoutWrapper from "@/components/navigation/LayoutWrapper";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Head from "next/head";
@@ -66,11 +67,13 @@ const MainContent = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <main className="mx-auto overflow-hidden">
-        <DynamicBreadcrumb />
-        {children}
-        <Analytics />
-        <SpeedInsights />
-        <BackToTop />
+        <LayoutWrapper>
+          <DynamicBreadcrumb />
+          {children}
+          <Analytics />
+          <SpeedInsights />
+          <BackToTop />
+        </LayoutWrapper>
       </main>
     </>
   );

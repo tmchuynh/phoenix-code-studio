@@ -1,49 +1,95 @@
-import { Menu } from "../types";
-
-export const about: Menu[] = [
+export const navigation = [
   {
-    title: "Our Story",
-    href: "/about-us",
-    description:
-      "Discover our mission, values, and the story behind our brand.",
+    title: "Home",
+    items: [
+      {
+        title: "Phoenix Code Studio",
+        href: "/",
+      },
+    ],
   },
   {
-    title: "Blog",
-    href: "/blogs",
-    description:
-      "Stay informed with expert insights, industry trends, and company updates.",
+    title: "About",
+    items: [
+      {
+        title: "Our Story",
+        href: "/about-us",
+        description:
+          "Discover our mission, values, and the story behind our brand.",
+      },
+      {
+        title: "Careers",
+        href: "/about-us/careers",
+        description:
+          "Join our team and be part of a dynamic environment where innovation thrives.",
+      },
+      {
+        title: "Privacy Policy",
+        href: "/about-us/privacy-policy",
+        description:
+          "Understand how we handle your data and privacy in accordance with regulations.",
+      },
+      {
+        title: "Terms of Service",
+        href: "/about-us/terms-of-service",
+        description:
+          "Review the terms and conditions that govern your use of our services.",
+      },
+      {
+        title: "Accessibility",
+        href: "/about-us/accessibility",
+        description:
+          "Learn about our commitment to making our services accessible to everyone.",
+      },
+      {
+        title: "Sitemap",
+        href: "/about-us/sitemap",
+        description:
+          "Explore our website structure and find what you need easily.",
+      },
+    ],
   },
   {
-    title: "Testimonials From Our Clients",
-    href: "/about-us/testimonials",
-    description:
-      "See what our clients say about their experiences working with us.",
-  },
-];
-
-export const serviceCategories: Menu[] = [
-  {
-    title: "Overview",
-    href: "/services",
-    description:
-      "Explore our range of services geared towards your every need.",
-  },
-  {
-    title: "Enterprise-Grade Digital Solutions",
-    href: "/services/scalable-corporate-digital-solutions",
-    description:
-      "Unlock powerful digital solutions tailored for corporations looking to scale and streamline operations.",
-  },
-  {
-    title: "SEO-Driven Content Strategy",
-    href: "/services/seo-optimized-content-creation",
-    description:
-      "Boost your online visibility with expertly crafted, search-optimized content that drives engagement.",
+    title: "Services",
+    items: [
+      {
+        title: "Overview",
+        href: "/services",
+        description:
+          "Explore our range of services geared towards your every need.",
+      },
+      {
+        title: "Web Design",
+        href: "/services/web-design",
+        description:
+          "Custom web design services to create visually stunning and user-friendly websites.",
+      },
+      {
+        title: "Custom Website Development",
+        href: "/services/custom-website-development",
+        description:
+          "Tailored website development solutions to meet your specific business requirements.",
+      },
+    ],
   },
   {
-    title: "End-to-End Website Development",
-    href: "/services/comprehensive-website-solutions",
-    description:
-      "From design to deployment, build and optimize a high-performing website tailored to your goals.",
+    title: "Contact",
+    items: [
+      {
+        title: "Contact Us",
+        href: "/contact-us",
+        description: "Get in touch with us for inquiries or support.",
+      },
+      {
+        title: "FAQs",
+        href: "/contact-us/faqs",
+        description: "Find answers to common questions about our services.",
+      },
+      {
+        title: "Support",
+        href: "/contact-us/support",
+        description: "Access our support resources for assistance.",
+      },
+    ],
   },
 ];

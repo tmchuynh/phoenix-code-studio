@@ -8,7 +8,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import useSmallScreen from "@/lib/useSmallScreen";
+import useSmallScreen from "@/hooks/useSmallScreen";
 import { capitalize } from "@/lib/utils/format";
 import { ChevronRight, Home } from "lucide-react";
 import { usePathname } from "next/navigation";
@@ -25,13 +25,13 @@ const DynamicBreadcrumb = () => {
         isSmallScreen ? "hidden" : "my-6 w-11/12 mx-auto font-medium text-sm"
       }
     >
-      <BreadcrumbList className="flex flex-wrap items-center gap-1.5">
-        <BreadcrumbItem className="transition-all duration-200 hover:scale-105">
+      <BreadcrumbList className="flex flex-wrap gap-1.5 items-center">
+        <BreadcrumbItem className="duration-200 transition-all hover:scale-105">
           <BreadcrumbLink
             href="/"
-            className="flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors"
+            className="flex gap-1.5 items-center text-muted-foreground hover:text-primary transition-colors"
           >
-            <Home size={16} className="mr-4 mb-1" />
+            <Home size={16} className="mb-1 mr-4" />
             <span>Home</span>
           </BreadcrumbLink>
         </BreadcrumbItem>

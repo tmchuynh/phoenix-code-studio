@@ -13,7 +13,12 @@ import { JSX, ReactNode } from "react";
  */
 export function Providers({ children }: { children: ReactNode }): JSX.Element {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      disableTransitionOnChange
+      enableSystem={true}
+    >
       {children}
     </ThemeProvider>
   );

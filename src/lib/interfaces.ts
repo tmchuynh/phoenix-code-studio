@@ -44,3 +44,39 @@ export interface Testimonial {
   rating?: number;
   quote: string;
 }
+
+
+export interface SearchResultsProps {
+  results: SearchResult[];
+  searchQuery: string;
+  onResultClick: () => void;
+}
+
+export interface SearchResult {
+  title: string;
+  href: string;
+  section: string;
+  breadcrumb: string[];
+  searchableText: string;
+}
+
+export interface NavigationSectionProps {
+  title: string;
+  items: NavigationItem[];
+  isOpen: boolean;
+  onToggle: () => void;
+}
+
+export interface NavigationItem {
+  title: string;
+  href: string;
+  children?: NavigationItem[];
+  icon?: string;
+  order?: number;
+  isExpanded?: boolean;
+}
+
+export interface NavigationSection {
+  title: string;
+  items: NavigationItem[];
+}
