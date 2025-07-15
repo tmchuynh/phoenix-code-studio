@@ -141,23 +141,17 @@ export default function TopNavbar({
           {/* Mobile logo - only visible when sidebar is closed */}
           <div className="lg:hidden ml-2">
             <div className="flex items-center space-x-2">
-              <div className="flex items-center justify-center bg-primary rounded-md h-6 w-6">
-                <span className="font-bold text-sm text-white">W</span>
-              </div>
-              <span className="font-bold text-lg">Web Design</span>
+              <span className="font-bold text-lg">Phoenix Code Studio</span>
             </div>
           </div>
 
           {/* Desktop logo - visible when sidebar is hidden */}
           {!sidebarOpen && (
             <div className="lg:flex hidden ml-2">
-              <div className="flex items-center space-x-2">
-                <div className="flex items-center justify-center bg-primary rounded-lg h-8 w-8">
-                  <span className="font-bold text-lg text-white">W</span>
-                </div>
-                <span className="font-bold text-sidebar-text text-xl">
-                  Web Design
-                </span>
+              <div className="flex items-center space-x-2 mb-1">
+                <p className="font-bold text-sidebar-text text-xl">
+                  Phoenix Code Studio
+                </p>
               </div>
             </div>
           )}

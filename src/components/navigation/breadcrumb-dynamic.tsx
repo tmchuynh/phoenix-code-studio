@@ -29,7 +29,7 @@ const DynamicBreadcrumb = () => {
         <BreadcrumbItem className="duration-200 transition-all hover:scale-105">
           <BreadcrumbLink
             href="/"
-            className="flex gap-1.5 items-center text-muted-foreground hover:text-primary transition-colors"
+            className="flex gap-1.5 items-center text-muted-foreground hover:text-senary transition-colors"
           >
             <Home size={16} className="mb-1 mr-4" />
             <span>Home</span>
@@ -51,13 +51,13 @@ const DynamicBreadcrumb = () => {
                 }`}
               >
                 {isLast ? (
-                  <BreadcrumbPage className="font-semibold text-primary">
+                  <BreadcrumbPage className="font-semibold text-senary">
                     {capitalize(segment)}
                   </BreadcrumbPage>
                 ) : (
                   <BreadcrumbLink
                     href={href}
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-senary transition-colors"
                   >
                     {capitalize(segment)}
                   </BreadcrumbLink>
