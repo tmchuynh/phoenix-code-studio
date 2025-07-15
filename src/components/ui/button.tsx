@@ -5,16 +5,22 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex justify-center items-center gap-2 disabled:opacity-50 shadow-md border-2 rounded-md focus-visible:ring-2 focus-visible:ring-ring ring-offset-background focus-visible:ring-offset-2 font-semibold lg:font-bold dark:font-extrabold text-sm md:text-md 2xl:text-xl whitespace-nowrap transition-colors [&_svg]:pointer-events-none disabled:pointer-events-none focus-visible:outline-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex gap-2 items-center justify-center disabled:opacity-50 shadow-md border-2 focus-visible:ring-2 focus-visible:ring-ring ring-offset-background focus-visible:ring-offset-2 rounded-md font-semibold lg:font-bold dark:font-extrabold text-sm md:text-md 2xl:text-xl whitespace-nowrap transition-colors [&_svg]:pointer-events-none disabled:pointer-events-none focus-visible:outline-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground hover:bg-tertiary hover:text-tertiary-foreground hover:border-tertiary border-primary",
+          "bg-primary text-primary-foreground hover:bg-secondary hover:text-secondary-foreground hover:border-secondary border-primary",
         secondary:
           "bg-secondary text-secondary-foreground opacity-90 hover:bg-transparent hover:border-secondary hover:text-secondary border-secondary",
         tertiary:
           "bg-tertiary text-tertiary-foreground hover:bg-transparent hover:border-tertiary hover:text-tertiary border-tertiary",
+        quaternary:
+          "bg-quaternary text-quaternary-foreground hover:bg-transparent hover:border-quaternary hover:text-quaternary border-quaternary",
+        quinary:
+          "bg-quinary text-quinary-foreground hover:bg-transparent hover:border-quinary hover:text-quinary border-quinary",
+        senary:
+          "bg-senary text-senary-foreground hover:bg-transparent hover:border-senary hover:text-senary border-senary",
         accent:
           "bg-accent text-accent-foreground hover:bg-transparent hover:border-accent hover:text-accent border-accent",
         destructive:
