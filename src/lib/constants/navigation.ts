@@ -1,14 +1,5 @@
 export const navigation = [
   {
-    title: "Home",
-    items: [
-      {
-        title: "Phoenix Code Studio",
-        href: "/",
-      },
-    ],
-  },
-  {
     title: "About",
     items: [
       {
