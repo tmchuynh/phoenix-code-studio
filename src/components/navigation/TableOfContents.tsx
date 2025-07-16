@@ -252,7 +252,7 @@ const extractHeadings = (
 };
 
 const TableOfContents: React.FC<TableOfContentsProps> = ({
-  maxLevel = 3,
+  maxLevel = 2,
   maxItems,
   containerSelector,
   className = "",
