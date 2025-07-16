@@ -119,8 +119,7 @@ function NavigationItem({
         <button
           onClick={onToggle}
           className={cn("", {
-            "flex justify-between items-center px-3 py-2 ml-1 max-w-full hover:bg-sidebar-hover-bg hover:text-nav-text-hover w-[95%] font-medium text-left text-sm transition-colors rounded-md":
-              true,
+            "flex justify-between items-center px-3 py-2 ml-1 max-w-full hover:bg-sidebar-hover-bg hover:text-nav-text-hover w-[95%] font-medium text-left text-sm transition-colors rounded-md": true,
             "active:bg-sidebar-active-bg":
               hasActiveChild || isActiveItem || isExpanded,
             "text-foreground ": depth >= 0,
@@ -150,7 +149,7 @@ function NavigationItem({
           }`}
         >
           <ul
-            className={`space-y-1 mt-1  border-gray-200 dark:border-gray-700 ${
+            className={`space-y-1 mt-1 ${
               isExpanded ? "pb-2" : ""
             } ${depth === 0 ? "border-l" : ""} ${
               depth > 0 ? "max-w-full w-[98%]" : ""
