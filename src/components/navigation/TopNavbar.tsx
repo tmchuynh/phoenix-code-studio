@@ -1,14 +1,10 @@
 "use client";
 
-import { useNavigation } from "@/hooks/useNavigation";
-import { SearchResult } from "@/lib/interfaces";
-import {
-  flattenNavigationForSearch,
-  searchNavigation,
-} from "@/lib/utils/search";
 import { useTheme } from "next-themes";
-import { useEffect, useMemo, useState } from "react";
-import SearchResults from "./SearchResults";
+import { useEffect, useState } from "react";
+import { Button } from "../ui/button";
+import { Input } from "../ui/input";
+import CommandSearch from "./CommandSearch";
 
 interface TopNavbarProps {
   onToggleSidebar: () => void;
@@ -19,61 +15,38 @@ export default function TopNavbar({
   onToggleSidebar,
   sidebarOpen,
 }: TopNavbarProps) {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
-  const [showResults, setShowResults] = useState(false);
+  const [commandOpen, setCommandOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
-  const { navigation } = useNavigation();
 
   // Ensure component is mounted before showing theme-dependent content
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Flatten navigation for search
-  const flattenedNavigation = useMemo(() => {
-    return flattenNavigationForSearch(navigation);
-  }, [navigation]);
-
-  // Perform search when query changes
+  // Keyboard shortcut for command palette
   useEffect(() => {
-    if (searchQuery.trim()) {
-      const results = searchNavigation(flattenedNavigation, searchQuery);
-      setSearchResults(results);
-      setShowResults(true);
-    } else {
-      setSearchResults([]);
-      setShowResults(false);
-    }
-  }, [searchQuery, flattenedNavigation]);
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+        e.preventDefault();
+        setCommandOpen(true);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
-  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(e.target.value);
-  };
-
-  const handleSearchResultClick = () => {
-    setSearchQuery("");
-    setShowResults(false);
-  };
-
-  const handleSearchBlur = () => {
-    // Delay hiding results to allow for clicks
-    setTimeout(() => setShowResults(false), 200);
-  };
-
-  const handleSearchFocus = () => {
-    if (searchQuery.trim() && searchResults.length > 0) {
-      setShowResults(true);
-    }
+  const handleSearchClick = () => {
+    setCommandOpen(true);
   };
 
   return (
-    <header className="sticky top-0 z-30 backdrop-blur-sm bg-opacity-95 dark:bg-opacity-95 border-b border-border h-16 w-full -900">
+    <header className="border-b border-border h-16 w-full">
       <div className="flex items-center justify-between px-4 lg:px-6 py-3">
         {/* Left side - Mobile menu button */}
         <div className="flex items-center">
@@ -141,7 +114,7 @@ export default function TopNavbar({
           {/* Mobile logo - only visible when sidebar is closed */}
           <div className="lg:hidden ml-2">
             <div className="flex items-center space-x-2">
-              <span className="font-bold text-lg">Phoenix Code Studio</span>
+              <span className="font-bold text-lg">PCS</span>
             </div>
           </div>
 
@@ -158,51 +131,61 @@ export default function TopNavbar({
         </div>
 
         {/* Center - Search bar */}
-        <div className="flex-1 mx-auto max-w-2xl">
-          <div className="relative">
-            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-              <svg
-                className="h-4 w-4 text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </div>
-            <input
-              type="text"
-              placeholder="Search topics, categories, and pages..."
-              value={searchQuery}
-              onChange={handleSearchChange}
-              onFocus={handleSearchFocus}
-              onBlur={handleSearchBlur}
-              className="block bg-gray-50 dark:bg-gray-800 pl-10 pr-12 py-2 border border-gray-200 dark:border-gray-700 focus:border-transparent focus:ring-2 focus:ring-emerald-500 rounded-md min-w-[20em] w-full text-gray-900 text-sm dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none"
-            />
-
-            {/* Search Results Dropdown */}
-            {showResults && (
-              <SearchResults
-                results={searchResults}
-                searchQuery={searchQuery}
-                onResultClick={handleSearchResultClick}
+        <div className="flex-1 mx-auto">
+          <div className="relative flex justify-end w-[95%]">
+            {/* Desktop search bar */}
+            <div className="md:block hidden max-w-lg w-full">
+              <Input
+                className="mx-7 w-full cursor-pointer"
+                type="text"
+                placeholder="Search topics, categories, and pages..."
+                value=""
+                readOnly
+                onClick={handleSearchClick}
               />
-            )}
+              <div className="absolute -right-5 top-1/2 text-muted-foreground text-xs -translate-y-1/2">
+                <kbd className="inline-flex gap-1 items-center bg-muted opacity-100 px-1.5 border rounded h-5 font-medium font-mono text-[10px] text-muted-foreground pointer-events-none select-none">
+                  <span className="text-xs">⌘</span>K
+                </kbd>
+              </div>
+            </div>
+
+            {/* Mobile search button */}
+            <div className="md:hidden">
+              <Button
+                onClick={handleSearchClick}
+                variant="outline"
+                size="icon"
+                className="shadow-none mx-auto"
+                aria-label="Open search"
+              >
+                <svg
+                  className="h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  />
+                </svg>
+              </Button>
+            </div>
           </div>
         </div>
 
         {/* Right side - Theme toggle */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 ml-2">
           {/* Theme toggle */}
-          <button
+          <Button
             onClick={toggleTheme}
-            className="hover:bg-gray-100 dark:hover:bg-gray-800 p-2 rounded-md text-gray-500 hover:text-gray-700 dark:hover:text-gray-200 dark:text-gray-400 transition-colors"
+            size={"icon"}
+            variant="outline"
             aria-label="Toggle theme"
+            className="shadow-none"
           >
             {!mounted ? (
               // Placeholder icon while theme is loading
@@ -236,9 +219,12 @@ export default function TopNavbar({
                 />
               </svg>
             )}
-          </button>
+          </Button>
         </div>
       </div>
+
+      {/* Command Search Dialog */}
+      <CommandSearch open={commandOpen} onOpenChange={setCommandOpen} />
     </header>
   );
 }
