@@ -43,8 +43,33 @@ export type InquiryFormData = {
   message: string;
 };
 
-export type InquiryTypes =
-  | "General Inquiry"
+export type InquiryTypes = "General Inquiry" | WorkType;
+
+export type FeedbackFormData = {
+  isAnonymous: boolean;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber?: string;
+  websiteName: string;
+  workType: WorkType;
+  rating: number;
+  feedback: string;
+  tags: string[];
+  customTags: string;
+  displayOnWebsite: boolean;
+};
+
+export type WorkType =
   | "Web Design"
   | "Custom Website Development"
+  | "E-commerce Development"
+  | "Mobile App Development"
+  | "SEO Optimization"
+  | "Website Maintenance"
+  | "Logo Design"
+  | "Branding"
+  | "Content Management"
   | "Other";
+
+export type FeedbackStep = 1 | 2 | 3;

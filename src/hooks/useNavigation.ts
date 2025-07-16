@@ -23,7 +23,7 @@ export function useNavigation() {
           // Fallback to empty navigation if API fails
           setNavigation([]);
         }
-      } catch {
+      } catch (error) {
         // Fallback to empty navigation if fetch fails
         setNavigation([]);
       } finally {
