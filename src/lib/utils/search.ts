@@ -21,13 +21,14 @@ export function flattenNavigationForSearch(
     // Add this item if it has a real href (not just "#")
     // This will now properly exclude folder-only containers
     if (item.href && item.href !== "#") {
-      results.push({
+      const searchResult = {
         title: item.title,
         href: item.href,
         section,
         breadcrumb: currentBreadcrumb,
         searchableText,
-      });
+      };
+      results.push(searchResult);
     }
 
     // Recursively process children

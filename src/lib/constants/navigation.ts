@@ -77,9 +77,10 @@ export const navigation = [
         description: "Find answers to common questions about our services.",
       },
       {
-        title: "Support",
-        href: "/contact-us/support",
-        description: "Access our support resources for assistance.",
+        title: "Provide Feedback",
+        href: "/contact-us/feedback",
+        description:
+          "Share your thoughts and suggestions to help us improve our services.",
       },
     ],
   },
