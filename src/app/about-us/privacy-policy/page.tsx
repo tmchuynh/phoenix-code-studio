@@ -26,73 +26,73 @@ export default function PrivacyPolicy() {
              href="#information-collection"
              className="block underline-offset-2 hover:underline decoration-1 decoration-accent"
            >
-             1. Information We Collect
+             I. Information We Collect
            </a>
            <a
              href="#how-we-use"
              className="block underline-offset-2 hover:underline decoration-1 decoration-accent"
            >
-             2. How We Use Your Information
+             II. How We Use Your Information
            </a>
            <a
              href="#data-sharing"
              className="block underline-offset-2 hover:underline decoration-1 decoration-accent"
            >
-             3. Data Sharing and Disclosure
+             III. Data Sharing and Disclosure
            </a>
            <a
              href="#data-security"
              className="block underline-offset-2 hover:underline decoration-1 decoration-accent"
            >
-             4. Data Security
+             IV. Data Security
            </a>
            <a
              href="#data-retention"
              className="block underline-offset-2 hover:underline decoration-1 decoration-accent"
            >
-             5. Data Retention
+             V. Data Retention
            </a>
            <a
              href="#your-rights"
              className="block underline-offset-2 hover:underline decoration-1 decoration-accent"
            >
-             6. Your Rights
+             VI. Your Rights
            </a>
            <a
              href="#cookies"
              className="block underline-offset-2 hover:underline decoration-1 decoration-accent"
            >
-             7. Cookies and Tracking
+             VII. Cookies and Tracking
            </a>
            <a
              href="#third-party"
              className="block underline-offset-2 hover:underline decoration-1 decoration-accent"
            >
-             8. Third-Party Services
+             VIII. Third-Party Services
            </a>
            <a
              href="#children"
              className="block underline-offset-2 hover:underline decoration-1 decoration-accent"
            >
-             9. Children's Privacy
+             IX. Children's Privacy
            </a>
            <a
              href="#changes"
              className="block underline-offset-2 hover:underline decoration-1 decoration-accent"
            >
-             10. Changes to This Policy
+             X. Changes to This Policy
            </a>
            <a
              href="#contact"
              className="block underline-offset-2 hover:underline decoration-1 decoration-accent"
            >
-             11. Contact Information
+             XI. Contact Information
            </a>
          </nav>
        </div>
 
        <section id="information-collection" className="mb-8">
-         <h2>1. Information We Collect</h2>
+         <h2>I. Information We Collect</h2>
          <p className="mb-4">
            We collect information that you provide directly to us, such as when
            you contact us through our website, request our services, subscribe
@@ -170,7 +170,7 @@ export default function PrivacyPolicy() {
        </section>
 
        <section id="how-we-use" className="mb-8">
-         <h2>2. How We Use Your Information</h2>
+         <h2>II. How We Use Your Information</h2>
          <p className="mb-4">
            We use the information we collect for the following purposes:
          </p>
@@ -218,7 +218,7 @@ export default function PrivacyPolicy() {
        </section>
 
        <section id="data-sharing" className="mb-8">
-         <h2>3. Data Sharing and Disclosure</h2>
+         <h2>III. Data Sharing and Disclosure</h2>
          <p className="mb-4">
            We do not sell, rent, or trade your personal information. We may
            share your information only in the following circumstances:
@@ -261,7 +261,7 @@ export default function PrivacyPolicy() {
        </section>
 
        <section id="data-security" className="mb-8">
-         <h2>4. Data Security</h2>
+         <h2>IV. Data Security</h2>
          <p className="mb-4">
            We implement comprehensive technical and organizational measures to
            protect your personal information against unauthorized access,
@@ -292,7 +292,7 @@ export default function PrivacyPolicy() {
        </section>
 
        <section id="data-retention" className="mb-8">
-         <h2>5. Data Retention</h2>
+         <h2>V. Data Retention</h2>
          <p className="mb-4">
            We retain your personal information only for as long as necessary to
            fulfill the purposes outlined in this privacy policy or as required
@@ -330,7 +330,7 @@ export default function PrivacyPolicy() {
        </section>
 
        <section id="your-rights" className="mb-8">
-         <h2>6. Your Rights</h2>
+         <h2>VI. Your Rights</h2>
          <p className="mb-4">
            Depending on your location, you may have certain rights regarding
            your personal information:
@@ -382,7 +382,7 @@ export default function PrivacyPolicy() {
        </section>
 
        <section id="cookies" className="mb-8">
-         <h2>7. Cookies and Tracking Technologies</h2>
+         <h2>VII. Cookies and Tracking Technologies</h2>
          <p className="mb-4">
            We use cookies and similar tracking technologies to enhance your
            browsing experience, analyze website traffic, and understand user
@@ -419,7 +419,7 @@ export default function PrivacyPolicy() {
        </section>
 
        <section id="third-party" className="mb-8">
-         <h2>8. Third-Party Services</h2>
+         <h2>VIII. Third-Party Services</h2>
          <p className="mb-4">
            Our website may contain links to third-party websites or integrate
            with third-party services. We work with reputable service providers
@@ -460,7 +460,7 @@ export default function PrivacyPolicy() {
        </section>
 
        <section id="children" className="mb-8">
-         <h2>9. Children's Privacy</h2>
+         <h2>IX. Children's Privacy</h2>
          <p className="mb-4">
            Our services are not intended for children under the age of 13. We do
            not knowingly collect personal information from children under 13. If
@@ -476,7 +476,7 @@ export default function PrivacyPolicy() {
        </section>
 
        <section id="changes" className="mb-8">
-         <h2>10. Changes to This Privacy Policy</h2>
+         <h2>X. Changes to This Privacy Policy</h2>
          <p className="mb-4">
            We may update this privacy policy from time to time to reflect
            changes in our practices, technology, legal requirements, or other
@@ -495,7 +495,7 @@ export default function PrivacyPolicy() {
        </section>
 
        <section id="contact" className="mb-8">
-         <h2>11. Contact Information</h2>
+         <h2>XI. Contact Information</h2>
          <p className="mb-4">
            If you have any questions about this privacy policy, your personal
            information, or how we handle your data, please contact us through
@@ -503,7 +503,7 @@ export default function PrivacyPolicy() {
          </p>
 
          <div>
-           <h3 className="mb-3 font-medium text-lg">Phoenix Code Studio</h3>
+           <h3>Phoenix Code Studio</h3>
            <p className="mb-2">
              <strong>Email:</strong> privacy@phoenixcodestudio.com
            </p>
