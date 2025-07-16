@@ -268,11 +268,11 @@
   }
 
   h4 {
-    @apply font-[MuktaMalar] my-3 font-bold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-xl text-quaternary tracking-normal leading-snug;
+    @apply font-[AlegreyaSansSC] my-3 font-semibold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-xl text-quaternary tracking-normal leading-snug;
   }
 
   h5 {
-    @apply font-[AlegreyaSansSC] my-2 font-bold text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-lg text-quinary uppercase tracking-wide leading-relaxed;
+    @apply font-[MuktaMalar] my-2 font-bold text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-lg text-quinary uppercase tracking-wide leading-relaxed;
   }
 
   h6 {
