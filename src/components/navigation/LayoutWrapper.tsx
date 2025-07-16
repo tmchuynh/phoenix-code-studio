@@ -63,8 +63,8 @@ export default function LayoutWrapper({
 
       {/* Main content area */}
       <div
-        className={`flex flex-1 flex-col min-w-0 w-full transition-all duration-300 ${
-          sidebarOpen ? "lg:ml-96" : "lg:ml-0"
+        className={`flex flex-1 flex-col min-w-0 w-full transition-all duration-500 ease-in-out ${
+          sidebarOpen ? "lg:ml-[25rem]" : "lg:ml-0"
         }`}
       >
         {/* Top navbar */}

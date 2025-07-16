@@ -112,8 +112,8 @@ export default function Sidebar({
       <aside
         id="sidebar"
         className={`
-        bg-sidebar-bg max-w-screen border-border text-sidebar-text fixed top-0 left-0 z-50 w-96 h-full border-r
-        transform transition-transform duration-300 ease-in-out overflow-hidden
+        bg-sidebar-bg max-w-screen border-border text-sidebar-text fixed top-0 left-0 z-50 w-[25rem] h-full border-r
+        transform transition-transform duration-500 ease-in-out overflow-hidden
         ${isOpen ? "translate-x-0" : "-translate-x-full"}
         lg:${isOpen ? "translate-x-0" : "-translate-x-full"}
       `}
