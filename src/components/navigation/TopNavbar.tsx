@@ -49,7 +49,7 @@ export default function TopNavbar({
   return (
     <header
       className={cn(
-        "fixed right-0 top-0 z-[60] bg-background dark:bg-background-dark shadow-sm border-b border-border h-16 transition-all duration-500 ease-in-out",
+        "fixed right-0 top-0 z-[60] bg-background dark:bg-background-dark shadow-sm border-b border-border h-16 duration-500 transition-all ease-in-out",
         {
           "w-full left-0": !sidebarOpen,
           "w-[calc(100%-25rem)] left-[25rem]": sidebarOpen,
