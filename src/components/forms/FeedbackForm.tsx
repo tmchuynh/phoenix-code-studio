@@ -18,6 +18,7 @@ import StarRatingInput from "@/components/ui/star-rating-input";
 import { Textarea } from "@/components/ui/textarea";
 import { FeedbackFormData, FeedbackStep, WorkType } from "@/lib/types";
 import { cn } from "@/lib/utils";
+import { sortByLength } from "@/lib/utils/sort";
 import {
   AlertCircle,
   ArrowLeft,
@@ -26,7 +27,7 @@ import {
   Loader2,
   X,
 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const PREDEFINED_TAGS = [
   "Professional",
@@ -59,22 +60,25 @@ const WORK_TYPES: WorkType[] = [
   "Other",
 ];
 
+const getInitialFormData = (): FeedbackFormData => ({
+  isAnonymous: false,
+  firstName: "",
+  lastName: "",
+  email: "",
+  phoneNumber: "",
+  websiteName: "",
+  workType: "Custom Website Development",
+  rating: 0,
+  feedback: "",
+  tags: [],
+  customTags: "",
+  displayOnWebsite: true,
+});
+
 export default function FeedbackForm() {
   const [currentStep, setCurrentStep] = useState<FeedbackStep>(1);
-  const [formData, setFormData] = useState<FeedbackFormData>({
-    isAnonymous: false,
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-    websiteName: "",
-    workType: "Web Design",
-    rating: 0,
-    feedback: "",
-    tags: [],
-    customTags: "",
-    displayOnWebsite: true,
-  });
+  const [formData, setFormData] =
+    useState<FeedbackFormData>(getInitialFormData());
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
@@ -84,6 +88,17 @@ export default function FeedbackForm() {
 
   const totalSteps = 3;
   const progressPercentage = (currentStep / totalSteps) * 100;
+
+  // Auto-hide alert after 5 seconds
+  useEffect(() => {
+    if (submitStatus.type) {
+      const timer = setTimeout(() => {
+        setSubmitStatus({ type: null, message: "" });
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [submitStatus.type]);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -211,20 +226,7 @@ export default function FeedbackForm() {
           message: "Thank you for your feedback! We appreciate your input.",
         });
         // Reset form
-        setFormData({
-          isAnonymous: false,
-          firstName: "",
-          lastName: "",
-          email: "",
-          phoneNumber: "",
-          websiteName: "",
-          workType: "Web Design",
-          rating: 0,
-          feedback: "",
-          tags: [],
-          customTags: "",
-          displayOnWebsite: true,
-        });
+        setFormData(getInitialFormData());
         setCurrentStep(1);
       } else {
         const errorData = await response.json();
@@ -358,7 +360,7 @@ export default function FeedbackForm() {
                   <SelectValue placeholder="Select work type" />
                 </SelectTrigger>
                 <SelectContent>
-                  {WORK_TYPES.map((type) => (
+                  {sortByLength(WORK_TYPES, false).map((type) => (
                     <SelectItem key={type} value={type}>
                       {type}
                     </SelectItem>
@@ -554,7 +556,7 @@ export default function FeedbackForm() {
           </Alert>
         )}
 
-        <div className="flex justify-between">
+        <div className="flex justify-between mt-6">
           <Button
             type="button"
             variant="outline"
