@@ -1,4 +1,4 @@
-import TableOfContents from "@/components/ui/TableOfContents";
+import TableOfContents from "@/components/navigation/TableOfContents";
 
 export default function Accessibility() {
   const currentDate = new Date().toLocaleDateString();
