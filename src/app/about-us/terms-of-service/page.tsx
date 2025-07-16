@@ -1,6 +1,6 @@
 export default function TermsOfService() {
   return (
-    <div className="relative mx-auto sm:pt-5 w-11/12 overflow-hidden">
+    <div className="relative mx-auto sm:pt-5 w-11/12">
       <h1>Terms of Service</h1>
       <p>
         These Terms of Service govern your use of Phoenix Code Studio&apos;s

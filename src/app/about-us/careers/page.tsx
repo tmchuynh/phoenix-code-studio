@@ -1,6 +1,6 @@
 export default function CareersPage() {
   return (
-    <div className="relative mx-auto sm:pt-5 w-11/12 overflow-hidden">
+    <div className="relative mx-auto sm:pt-5 w-11/12">
       <h1>Careers</h1>
       <p>
         Join our team and be part of a dynamic environment where innovation
@@ -16,7 +16,7 @@ export default function CareersPage() {
       </p>
 
       <h3>What We Offer</h3>
-      <ul>
+      <ul role="list" className="space-y-1 pl-9 list-disc list-outside">
         <li>Competitive salary and benefits</li>
         <li>Flexible work arrangements</li>
         <li>Professional development opportunities</li>
@@ -40,7 +40,7 @@ export default function CareersPage() {
       </p>
 
       <h3>Values We Share</h3>
-      <ul>
+      <ul role="list" className="space-y-1 pl-9 list-disc list-outside">
         <li>Innovation and creativity</li>
         <li>Quality and attention to detail</li>
         <li>Collaboration and teamwork</li>
@@ -77,7 +77,7 @@ export default function CareersPage() {
       <p>
         While specific requirements vary by position, we generally look for:
       </p>
-      <ul>
+      <ul role="list" className="space-y-1 pl-9 list-disc list-outside">
         <li>Relevant experience in your field</li>
         <li>Strong portfolio demonstrating your skills</li>
         <li>Excellent communication skills</li>

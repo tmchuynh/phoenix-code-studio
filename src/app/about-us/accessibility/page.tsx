@@ -1,6 +1,6 @@
 export default function Accessibility() {
   return (
-    <div className="relative mx-auto sm:pt-5 w-11/12 overflow-hidden">
+    <div className="relative mx-auto sm:pt-5 w-11/12">
       <h1>Accessibility</h1>
       <p>
         Phoenix Code Studio is committed to making our website and services
@@ -17,7 +17,7 @@ export default function Accessibility() {
 
       <h3>Accessibility Features</h3>
       <p>Our website includes the following accessibility features:</p>
-      <ul>
+      <ul role="list" className="space-y-1 pl-9 list-disc list-outside">
         <li>Keyboard navigation support</li>
         <li>Screen reader compatibility</li>
         <li>High contrast color schemes</li>
@@ -46,7 +46,7 @@ export default function Accessibility() {
         Our website is designed to work with popular assistive technologies,
         including:
       </p>
-      <ul>
+      <ul role="list" className="space-y-1 pl-9 list-disc list-outside">
         <li>Screen readers (NVDA, JAWS, VoiceOver)</li>
         <li>Voice recognition software</li>
         <li>Keyboard navigation tools</li>
@@ -59,7 +59,7 @@ export default function Accessibility() {
         encounter any barriers or have suggestions for improvement, please
         contact us:
       </p>
-      <ul>
+      <ul role="list" className="space-y-1 pl-9 list-disc list-outside">
         <li>Email us through our contact form</li>
         <li>Call our support line</li>
         <li>Send us a message through our accessible contact methods</li>

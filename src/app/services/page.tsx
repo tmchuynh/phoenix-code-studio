@@ -1,6 +1,6 @@
 export default function Services() {
   return (
-    <div className="relative mx-auto sm:pt-5 w-11/12 overflow-hidden">
+    <div className="relative mx-auto sm:pt-5 w-11/12">
       <h1>Our Services</h1>
       <p>
         Explore our comprehensive range of services designed to meet your every
@@ -35,7 +35,7 @@ export default function Services() {
         Beyond our core offerings, we provide comprehensive digital solutions
         including:
       </p>
-      <ul>
+      <ul role="list" className="space-y-1 pl-9 list-disc list-outside">
         <li>E-commerce development</li>
         <li>Content management systems</li>
         <li>Website maintenance and support</li>

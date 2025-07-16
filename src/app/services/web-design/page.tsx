@@ -1,6 +1,6 @@
 export default function WebDesign() {
   return (
-    <div className="relative mx-auto sm:pt-5 w-11/12 overflow-hidden">
+    <div className="relative mx-auto sm:pt-5 w-11/12">
       <h1>Web Design</h1>
       <p>
         Create visually stunning and user-friendly websites that captivate your
@@ -78,7 +78,7 @@ export default function WebDesign() {
       </p>
 
       <h2>Design Features</h2>
-      <ul>
+      <ul role="list" className="space-y-1 pl-9 list-disc list-outside">
         <li>Modern, clean aesthetic</li>
         <li>Brand-consistent color schemes and typography</li>
         <li>Intuitive navigation and layout</li>
@@ -94,7 +94,7 @@ export default function WebDesign() {
         We have experience designing websites for a wide range of industries,
         including:
       </p>
-      <ul>
+      <ul role="list" className="space-y-1 pl-9 list-disc list-outside">
         <li>Technology and software companies</li>
         <li>Healthcare and medical practices</li>
         <li>Professional services</li>

@@ -1,6 +1,6 @@
 export default function CustomWebsiteDevelopment() {
   return (
-    <div className="relative mx-auto sm:pt-5 w-11/12 overflow-hidden">
+    <div className="relative mx-auto sm:pt-5 w-11/12">
       <h1>Custom Website Development</h1>
       <p>
         Build robust, scalable websites tailored to your specific business
@@ -55,7 +55,7 @@ export default function CustomWebsiteDevelopment() {
       </p>
 
       <h3>Frontend Technologies</h3>
-      <ul>
+      <ul role="list" className="space-y-1 pl-9 list-disc list-outside">
         <li>React.js and Next.js</li>
         <li>TypeScript and JavaScript</li>
         <li>HTML5 and CSS3</li>
@@ -64,7 +64,7 @@ export default function CustomWebsiteDevelopment() {
       </ul>
 
       <h3>Backend Technologies</h3>
-      <ul>
+      <ul role="list" className="space-y-1 pl-9 list-disc list-outside">
         <li>Node.js and Express</li>
         <li>Python and Django</li>
         <li>PHP and Laravel</li>
@@ -99,7 +99,7 @@ export default function CustomWebsiteDevelopment() {
       </p>
 
       <h2>Key Features</h2>
-      <ul>
+      <ul role="list" className="space-y-1 pl-9 list-disc list-outside">
         <li>Custom functionality tailored to your needs</li>
         <li>Scalable architecture for future growth</li>
         <li>Security-first development approach</li>
@@ -141,7 +141,7 @@ export default function CustomWebsiteDevelopment() {
         Quality is at the heart of everything we do. Our development process
         includes:
       </p>
-      <ul>
+      <ul role="list" className="space-y-1 pl-9 list-disc list-outside">
         <li>Code reviews and best practice enforcement</li>
         <li>Automated testing and quality checks</li>
         <li>Performance optimization and monitoring</li>
@@ -158,7 +158,7 @@ export default function CustomWebsiteDevelopment() {
       </p>
 
       <h3>Maintenance Services</h3>
-      <ul>
+      <ul role="list" className="space-y-1 pl-9 list-disc list-outside">
         <li>Regular updates and security patches</li>
         <li>Performance monitoring and optimization</li>
         <li>Backup and recovery services</li>
