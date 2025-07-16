@@ -88,7 +88,10 @@ export default function ContactUs() {
               when you contact us:
             </p>
 
-            <ul className="space-y-1 pl-9 text-sm list-[upper-roman] list-outside">
+            <ul
+              role="list"
+              className="space-y-1 pl-9 text-sm list-[upper-roman] list-outside"
+            >
               <li>Brief description of your project</li>
               <li>Your business or organization name</li>
               <li>Timeline and launch date requirements</li>
