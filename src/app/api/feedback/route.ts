@@ -1,5 +1,7 @@
+import FeedbackTemplate from "@/components/email_templates/feedbackTemplate";
 import { FeedbackFormData } from "@/lib/types";
 import { NextRequest, NextResponse } from "next/server";
+import { Resend } from "resend";
 
 export async function POST(request: NextRequest) {
   try {
@@ -40,18 +42,49 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Here you would typically:
-    // 1. Save the feedback to your database
-    // 2. Send notification emails to your team
-    // 3. Store for potential display on website (if consented)
+    // Check for required environment variables
+    if (!process.env.RESEND_API_KEY) {
+      console.error("RESEND_API_KEY environment variable is not set");
+      return NextResponse.json(
+        { error: "Email service configuration error" },
+        { status: 500 }
+      );
+    }
 
-    console.log("Feedback received:", {
+    if (!process.env.FROM_FEEDBACK_EMAIL || !process.env.TO_EMAIL) {
+      console.error("Email addresses not configured");
+      return NextResponse.json(
+        { error: "Email service configuration error" },
+        { status: 500 }
+      );
+    }
+
+    // Initialize Resend with your API key
+    const resend = new Resend(process.env.RESEND_API_KEY as string);
+
+    // Create email subject based on feedback type
+    const emailSubject = data.isAnonymous
+      ? `Anonymous Feedback - ${data.websiteName} (${data.workType})`
+      : `Feedback from ${data.firstName} ${data.lastName} - ${data.websiteName} (${data.workType})`;
+
+    // Send the email with the feedback template
+    await resend.emails.send({
+      from: process.env.FROM_FEEDBACK_EMAIL as string, // Verified sender email
+      to: process.env.TO_EMAIL as string, // Recipient email
+      subject: emailSubject,
+      react: FeedbackTemplate({
+        formData: data,
+      }),
+    });
+
+    // Here you would typically also:
+    // 1. Save the feedback to your database
+    // 2. Store for potential display on website (if consented)
+
+    console.log("Feedback received and email sent:", {
       ...data,
       timestamp: new Date().toISOString(),
     });
-
-    // For now, we'll just return success
-    // In a real implementation, you'd save to database
 
     return NextResponse.json(
       { message: "Feedback submitted successfully" },
