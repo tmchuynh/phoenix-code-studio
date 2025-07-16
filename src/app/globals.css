@@ -95,7 +95,7 @@
   
   /* Refined accent - Professional highlight */
   --accent: oklch(0.58 0.12 185);
-  --accent-foreground: oklch(0.12 0.02 240);
+  --accent-foreground: oklch(99.405% 0.00011 271.152);
   
   /* Elegant error state */
   --destructive: oklch(36.897% 0.14732 22.752);
@@ -256,27 +256,27 @@
   }
 
   h1 {
-    @apply font-[GravitasOne] my-8 font-bold text-4xl text-primary md:text-5xl 2xl:text-5xl tracking-tight z-20 leading-tight;
+    @apply font-[GravitasOne] my-6 font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl 2xl:text-4xl text-primary tracking-tight z-20 leading-tight;
   }
 
   h2 {
-    @apply font-[GravitasOne] my-6 font-bold text-3xl text-secondary md:text-4xl 2xl:text-4xl text-balance tracking-tight leading-tight;
+    @apply font-[GravitasOne] my-5 font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-3xl text-secondary text-balance tracking-tight leading-tight;
   }
 
   h3 {
-    @apply font-[Rokkitt] my-4 font-bold text-xl lg:text-2xl xl:text-3xl tracking-wide text-tertiary leading-snug;
+    @apply font-[Rokkitt] my-4 font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-2xl text-tertiary tracking-wide leading-snug;
   }
 
   h4 {
-    @apply font-[MuktaMalar] my-3 font-bold text-lg lg:text-xl 2xl:text-2xl tracking-normal text-quaternary leading-snug;
+    @apply font-[MuktaMalar] my-3 font-bold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl 2xl:text-xl text-quaternary tracking-normal leading-snug;
   }
 
   h5 {
-    @apply font-[AlegreyaSansSC] my-2 font-bold text-base xl:text-lg uppercase tracking-wide text-quinary leading-relaxed;
+    @apply font-[AlegreyaSansSC] my-2 font-bold text-sm sm:text-base md:text-lg lg:text-xl xl:text-xl 2xl:text-lg text-quinary uppercase tracking-wide leading-relaxed;
   }
 
   h6 {
-    @apply font-[Spectral] my-2 font-semibold text-sm xl:text-base tracking-normal text-senary leading-relaxed;
+    @apply font-[Spectral] my-2 font-semibold text-xs sm:text-sm md:text-base lg:text-lg xl:text-lg 2xl:text-base text-senary tracking-normal leading-relaxed;
   }
 
   blockquote {
