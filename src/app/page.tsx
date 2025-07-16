@@ -164,10 +164,7 @@ export default function WelcomePage() {
               helping you build a recognizable and impactful presence.
             </p>
           </div>
-          <Button
-            className="my-2 py-3 w-2/3 md:w-1/2 font-semibold text-lg"
-            onClick={navigateToServices}
-          >
+          <Button className="my-2" onClick={navigateToServices}>
             Start Your Journey With Us
           </Button>
           <p className="mt-4">
