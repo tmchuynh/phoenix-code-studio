@@ -51,11 +51,9 @@ const WORK_TYPES: WorkType[] = [
   "Web Design",
   "Custom Website Development",
   "E-commerce Development",
-  "Mobile App Development",
   "SEO Optimization",
   "Website Maintenance",
-  "Logo Design",
-  "Branding",
+  "Company Rebranding",
   "Content Management",
   "Other",
 ];
