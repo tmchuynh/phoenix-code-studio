@@ -1,7 +1,5 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { BlogPost } from "./interfaces";
-import { DateObject } from "./types";
 import {
   convertSecondsToMinutes,
   formatSecondsToMmSs,
@@ -111,4 +109,3 @@ export function generateSecondMarkers(
 
   return markers;
 }
-
