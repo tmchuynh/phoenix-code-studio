@@ -63,7 +63,7 @@ export default function LayoutWrapper({
 
       {/* Main content area */}
       <div
-        className={`flex flex-1 flex-col min-w-0 transition-all duration-300 ${
+        className={`flex flex-1 flex-col min-w-0 w-full transition-all duration-300 ${
           sidebarOpen ? "lg:ml-96" : "lg:ml-0"
         }`}
       >
@@ -71,7 +71,7 @@ export default function LayoutWrapper({
         <TopNavbar onToggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} />
 
         {/* Main content */}
-        <main className="flex-1">
+        <main className="flex-1 pt-16">
           <div className="mx-auto px-4 lg:px-8 py-8">{children}</div>
         </main>
       </div>
