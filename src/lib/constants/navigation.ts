@@ -61,6 +61,36 @@ export const navigation = [
         description:
           "Tailored website development solutions to meet your specific business requirements.",
       },
+      {
+        title: "E-commerce Development",
+        href: "/services/e-commerce-development",
+        description:
+          "Build robust e-commerce platforms to enhance your online business presence.",
+      },
+      {
+        title: "SEO Optimization",
+        href: "/services/seo-optimization",
+        description:
+          "Improve your website's visibility and ranking on search engines.",
+      },
+      {
+        title: "Website Maintenance",
+        href: "/services/website-maintenance",
+        description:
+          "Ongoing support and maintenance to keep your website running smoothly.",
+      },
+      {
+        title: "Company Rebranding",
+        href: "/services/company-rebranding",
+        description:
+          "Revitalize your brand with our comprehensive rebranding services.",
+      },
+      {
+        title: "Content Management",
+        href: "/services/content-management",
+        description:
+          "Efficient content management solutions to streamline your digital assets.",
+      },
     ],
   },
   {
