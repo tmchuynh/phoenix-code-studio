@@ -78,6 +78,22 @@ export default function Sidebar({
     }
   }, [navigation, openSection, findSectionForPath, pathname]);
 
+  // Handle escape key to close sidebar
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && isOpen) {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("keydown", handleEscape);
+      return () => {
+        document.removeEventListener("keydown", handleEscape);
+      };
+    }
+  }, [isOpen, onClose]);
+
   const handleSectionToggle = (sectionTitle: string) => {
     setOpenSection(openSection === sectionTitle ? null : sectionTitle);
   };
@@ -96,32 +112,29 @@ export default function Sidebar({
       <aside
         id="sidebar"
         className={`
-        bg-sidebar-bg border-border text-sidebar-text fixed top-0 left-0 z-50 w-96 h-full border-r
+        bg-sidebar-bg max-w-screen border-border text-sidebar-text fixed top-0 left-0 z-50 w-96 h-full border-r
         transform transition-transform duration-300 ease-in-out overflow-hidden
         ${isOpen ? "translate-x-0" : "-translate-x-full"}
         lg:${isOpen ? "translate-x-0" : "-translate-x-full"}
       `}
       >
         <div className="flex flex-col">
-          {/* Logo */}
-          <div className="flex items-center justify-between p-4 border-b border-border h-16">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="flex items-center justify-center bg-primary rounded-lg h-8 w-8">
-                <span className="font-bold text-lg text-white">W</span>
-              </div>
-              <span className="font-bold text-sidebar-text text-xl">
-                Web Design
-              </span>
-            </Link>
+          {/* Header with close button for mobile */}
+          <div className="flex items-center justify-between lg:hidden px-4 py-3 border-b border-border">
+            <span className="font-semibold text-lg text-sidebar-text">
+              Phonenix Code Studio
+            </span>
             <button
               onClick={onClose}
-              className="lg:hidden p-1 rounded-md sidebar-text-secondary"
+              className="hover:bg-sidebar-hover-bg p-2 rounded-lg text-sidebar-text hover:text-sidebar-active-text transition-colors"
+              aria-label="Close sidebar"
             >
               <svg
-                className="h-5 w-5"
+                className="h-6 w-6"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   strokeLinecap="round"
