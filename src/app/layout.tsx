@@ -1,12 +1,13 @@
 "use client";
+import BackToTop from "@/components/buttons/BackToTop";
+import DynamicBreadcrumb from "@/components/navigation/breadcrumb-dynamic";
+import LayoutWrapper from "@/components/navigation/LayoutWrapper";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Head from "next/head";
 import { NotFoundProvider } from "./context/NotFoundContext";
 import "./globals.css";
 import { Providers } from "./providers";
-import BackToTop from "@/components/BackToTop";
-import Navbar from "@/components/NavBar";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function RootLayout({
   children,
@@ -65,12 +66,14 @@ export default function RootLayout({
 const MainContent = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <main className="mx-auto py-10 overflow-hidden">
-        <Navbar />
-        {children}
-        <Analytics />
-        <SpeedInsights />
-        <BackToTop />
+      <main className="relative mx-auto overflow-x-clip">
+        <LayoutWrapper>
+          <DynamicBreadcrumb />
+          {children}
+          <Analytics />
+          <SpeedInsights />
+          <BackToTop />
+        </LayoutWrapper>
       </main>
     </>
   );

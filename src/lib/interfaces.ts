@@ -1,16 +1,5 @@
-import { DetailedHTMLProps, HTMLAttributes, CSSProperties } from "react";
-import { DateObject, LengthType, PricingTier, ServiceTypeKeys } from "./types";
-
-export interface FormDataType {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-  paymentPlan: string;
-  selectedServices: string[];
-  selectedContracts: string[];
-  [key: string]: string[] | string;
-}
+import { CSSProperties, DetailedHTMLProps, HTMLAttributes } from "react";
+import { LengthType } from "./types";
 
 export interface CommonProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement> {
@@ -34,59 +23,6 @@ export interface LoaderSizeMarginProps extends CommonProps {
   margin?: LengthType;
 }
 
-export interface Category {
-  name: string;
-  type: ServiceTypeKeys;
-  title: string;
-  short: string;
-  info: Information;
-}
-
-export interface Information {
-  description: string[];
-  detail: string;
-  short: string;
-  intro: string;
-  sub: string[];
-}
-
-export interface SubItem {
-  category: string;
-  name: string;
-  info: SubInformation;
-  details: SubDetail[];
-  cta: CTA;
-}
-
-export interface SubInformation {
-  name: string;
-  title: string;
-  menuCaption?: string;
-  description: string;
-  startingPrice?: number;
-  info: string;
-  details: string;
-  short: string;
-  featured?: boolean;
-  Icon?: string;
-  pricingTierIntro?: {
-    title: string;
-    text: string;
-  };
-  pricingTiers?: PricingTier[];
-}
-
-export interface SubDetail {
-  title: string;
-  description?: string;
-  intro?: string[];
-  lists?: {
-    title?: string;
-    description: string;
-    info?: ListDetail[];
-  }[];
-}
-
 export interface ListDetail {
   title?: string;
   description?: string;
@@ -101,31 +37,6 @@ export interface CTA {
   afterButtonText?: string;
 }
 
-export interface PaymentDetails {
-  name: string;
-  title: string;
-  short: string;
-
-  info: {
-    intro: string[];
-    description: string;
-    short: string;
-    features: string[];
-    shortFeatures: ListDetail[];
-  };
-
-  explanation: string;
-  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-  details: ListDetail[];
-}
-
-export interface PaymentPlan {
-  title: string;
-  description: string;
-  details: string[];
-  route: string;
-}
-
 export interface Testimonial {
   name: string;
   featured: boolean;
@@ -134,58 +45,38 @@ export interface Testimonial {
   quote: string;
 }
 
-export interface BlogPost {
-  title: string;
-  author: string;
-  date: DateObject;
-  wordCount: number;
-  timeSpan: string;
-  time: string;
-  excerpt: string;
-  featured?: boolean;
-  icons?: string[];
-  topics: string[];
-  subtopics?: string[];
-  intro: string[];
-  list?: ListDetail[];
-  conclusions: string[];
+
+export interface SearchResultsProps {
+  results: SearchResult[];
+  searchQuery: string;
+  onResultClick: () => void;
 }
 
-export interface Blog {
+export interface SearchResult {
   title: string;
-  date: {
-    month: number;
-    day: number;
-    year: number;
-  };
-  excerpt: string;
-  icons: string[];
+  href: string;
+  section: string;
+  breadcrumb: string[];
+  searchableText: string;
 }
 
-export interface BlogCardProps {
-  blog: Blog;
-  isSmallScreen: boolean;
+export interface NavigationSectionProps {
+  title: string;
+  items: NavigationItem[];
+  isOpen: boolean;
+  onToggle: () => void;
 }
 
-export interface Project {
+export interface NavigationItem {
   title: string;
-  name: string;
-  featured: boolean;
-  description: string;
-  short: string;
-  tags: string[];
-  languages: string[];
-  frameworks?: string[];
-  libraries?: string[];
-  technologies?: string[];
-  githubLink?: string;
-  liveLink?: string;
+  href: string;
+  children?: NavigationItem[];
+  icon?: string;
+  order?: number;
+  isExpanded?: boolean;
 }
 
-export interface JobPosition {
+export interface NavigationSection {
   title: string;
-  description: string;
-  responsibilities: string[];
-  qualifications: string[];
-  information: string;
+  items: NavigationItem[];
 }

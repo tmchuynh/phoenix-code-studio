@@ -42,3 +42,4 @@ next-env.d.ts
 
 /src/lib/templates.ts
 .env
+src/components/temp.tsx

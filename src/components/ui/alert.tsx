@@ -1,10 +1,10 @@
-import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
+import * as React from "react";
 
 import { cn } from "@/lib/utils";
 
 const alertVariants = cva(
-  "relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground bg-background text-foreground shadow-lg dark:border-2",
+  "relative [&>svg]:top-4 [&>svg]:left-4 [&>svg]:absolute bg-background shadow-lg p-4 [&>svg~*]:pl-7 border dark:border-2 rounded-lg w-full text-foreground [&>svg]:text-foreground [&>svg+div]:translate-y-[-3px]",
   {
     variants: {
       variant: {
@@ -14,7 +14,7 @@ const alertVariants = cva(
         tertiary:
           "dark:border-tertiary bg-tertiary text-tertiary-foreground [&>svg]:text-tertiary dark:[&>svg]:text-primary",
         accent:
-          "dark:border-accent-2 bg-accent-3 text-muted dark:font-bold [&>svg]:text-accent-1",
+          "dark:border-accent bg-accent text-muted dark:font-bold [&>svg]:text-accent",
         warning:
           "dark:border-chart-4 bg-chart-2 text-foreground font-bold [&>svg]:text-destructive",
         destructive:
@@ -70,4 +70,4 @@ const AlertDescription = React.forwardRef<
 ));
 AlertDescription.displayName = "AlertDescription";
 
-export { Alert, AlertTitle, AlertDescription };
+export { Alert, AlertDescription, AlertTitle };

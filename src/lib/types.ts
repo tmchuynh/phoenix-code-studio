@@ -12,8 +12,6 @@ export type NotFoundContextType = {
 
 export type LengthType = number | string;
 
-export type ServiceTypeKeys = "service" | "contract";
-
 export type DateObject = {
   month: number;
   day: number;
@@ -31,13 +29,45 @@ export type Menu = {
   description: string;
 };
 
-export type PricingTier = {
-  name: string;
-  startingPrice: number;
-  info: string;
-};
-
 export type StarRatingProps = {
   rating: number;
   maxStars?: number;
 };
+
+export type InquiryFormData = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber?: string;
+  inquiryType: InquiryTypes;
+  message: string;
+};
+
+export type InquiryTypes = "General Inquiry" | WorkType;
+
+export type FeedbackFormData = {
+  isAnonymous: boolean;
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber?: string;
+  websiteName: string;
+  workType: WorkType;
+  rating: number;
+  feedback: string;
+  tags: string[];
+  customTags: string;
+  displayOnWebsite: boolean;
+};
+
+export type WorkType =
+  | "Web Design"
+  | "Custom Website Development"
+  | "E-commerce Development"
+  | "SEO Optimization"
+  | "Website Maintenance"
+  | "Company Rebranding"
+  | "Content Management"
+  | "Other";
+
+export type FeedbackStep = 1 | 2 | 3;
